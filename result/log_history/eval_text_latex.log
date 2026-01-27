@@ -1,0 +1,292 @@
+nohup: ignoring input
+Configuration:
+  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: latex
+  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Use Flash Attention: True
+  Temperature: 0.0
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+Falling back to default attention implementation...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:01,  1.54it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.57it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.53it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.82it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.71it/s]
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Model distributed across devices: {0}
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]
+============================================================
+Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['1953 6260']
+Answer:  ['1955 62170']
+Prediction: 1953, 6260
+Reference: 1955, 62170
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 2.17s
+Processing text modality:   0%|          | 1/3071 [00:02<1:51:07,  2.17s/it]
+============================================================
+Query ID: 2 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['1953']
+Answer:  ['1954']
+Prediction: 1953
+Reference: 1954
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+Processing text modality:   0%|          | 2/3071 [00:03<1:33:15,  1.82s/it]
+============================================================
+Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['1953']
+Answer:  ['1953']
+Prediction: 1953
+Reference: 1953
+Metrics: {'F1': 100.0, 'EM': np.float64(100.0), 'ROUGE-L': np.float64(100.0), 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+Processing text modality:   0%|          | 3/3071 [00:05<1:27:40,  1.71s/it]
+============================================================
+Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['167116 158772']
+Answer:  ['158772']
+Prediction: 167116, 158772
+Reference: 158772
+Metrics: {'F1': 66.67, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(66.67), 'SacreBLEU': 0.0}
+Processing Time: 1.93s
+Processing text modality:   0%|          | 4/3071 [00:07<1:32:04,  1.80s/it]
+============================================================
+Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['55 15']
+Answer:  ['58 16']
+Prediction: 5.50, 1.47
+Reference: 5.80, 1.62
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 1.80s
+Processing text modality:   0%|          | 5/3071 [00:09<1:32:03,  1.80s/it]
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Household Data Annual Averages, 1953–2023; Main columns include Year, Civilian noninstitutional population, Civilian labor force (Total, Percent of population), Employed (Total, Percent of population,...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 5.96s
+Processing text modality:   0%|          | 6/3071 [00:15<2:44:10,  3.21s/it]
+============================================================
+Query ID: 7 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  ['562 increasing trend']
+Answer:  ['predicted percentage for 1965 551']
+Prediction: 56.2, Increasing trend
+Reference: Predicted percentage for 1965: 55.12%
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 1.72s
+Processing text modality:   0%|          | 7/3071 [00:16<2:19:09,  2.73s/it]
+============================================================
+Query ID: 8 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.99
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': np.float64(100.0), 'ROUGE-L': np.float64(100.0), 'SacreBLEU': 100.0}
+Processing Time: 1.76s
+Processing text modality:   0%|          | 8/3071 [00:18<2:03:23,  2.42s/it]
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: 1982, 1983, 2020, 2021
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.14s
+Processing text modality:   0%|          | 9/3071 [00:20<1:58:55,  2.33s/it]
+============================================================
+Query ID: 10 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['1983']
+Answer:  ['1983']
+Prediction: 1983
+Reference: 1983
+Metrics: {'F1': 100.0, 'EM': np.float64(100.0), 'ROUGE-L': np.float64(100.0), 'SacreBLEU': 0.0}
+Processing Time: 1.69s
+Checkpoint saved: 10 queries processed
+Processing text modality:   0%|          | 10/3071 [00:22<1:48:53,  2.13s/it]
+============================================================
+Query ID: 11 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['no']
+Prediction: Yes
+Reference: No
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 1.56s
+Processing text modality:   0%|          | 11/3071 [00:23<1:39:55,  1.96s/it]
+============================================================
+Query ID: 12 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['4744 4521 4101']
+Answer:  ['39957']
+Prediction: 4744, 4521, 4101
+Reference: 3995.67
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 2.11s
+Processing text modality:   0%|          | 12/3071 [00:26<1:42:17,  2.01s/it]
+============================================================
+Query ID: 13 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing Time: 1.56s
+Processing text modality:   0%|          | 13/3071 [00:27<1:35:20,  1.87s/it]
+============================================================
+Query ID: 14 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['1986']
+Answer:  ['1986']
+Prediction: 1986
+Reference: 1986
+Metrics: {'F1': 100.0, 'EM': np.float64(100.0), 'ROUGE-L': np.float64(100.0), 'SacreBLEU': 0.0}
+Processing Time: 1.70s
+Processing text modality:   0%|          | 14/3071 [00:29<1:32:44,  1.82s/it]
+============================================================
+Query ID: 15 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Year': [1985, 1987, 1989],
+'Civilian noninstitutional population': [84469, 86899, 88762],
+'Total employed': [59891, 62107, 64315]
+}
+df = pd.DataFrame(data)
+# Create a bar chart
+plt.figure(figsize=(10, 6))
+bar_width = 0.35
+index = range(len(df))
+plt.bar(index, df['Civilian noninstitutional population'], bar_width, label='Civilian noninstitutional population', color='blue')
+plt.bar([i + bar_width for i in index], df['Total employed'], bar_width, label='Total employed', color='green')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.title('Comparison of Civilian Noninstitutional Population and Total Employed Population')
+plt.xticks([i + bar_width/2 for i in index], df['Year'])
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+Python Error: name 'bar_width' is not defined
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ # Load the data from the table
+ data = {
+    'Year': [1985, 1987, 1989],
+    'Civilian noninstitutional population': [84469, 86899, 88762],
+    ...
+Reference: [93736, 95853, 97630, 59891, 62107, 64315]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 10.19s
+Processing text modality:   0%|          | 15/3071 [00:39<3:41:08,  4.34s/it]
+============================================================
+Query ID: 16 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/mnt/data1/users/4xin/RealHiTBench/tables/employment-table02.xlsx")
+df_men = df[df['Year'].isin(df['Year'])].loc[df['Year'].isin(df['Year'])]
+df_women = df[df['Year'].isin(df['Year'])].loc[df['Year'].isin(df['Year'])]
+df_total = pd.concat([df_men, df_women], ignore_index=True)
+df_total = df_total.dropna(subset=['Total'])
+df_total = df_total.reset_index(drop=True)
+df_total['Unemployment Rate'] = df_total['Unemployed'].apply(lambda x: x / df_total['Total'] * 100)
+df_total['Total Civilian Labor Force'] = df_total['Total']
+df_total = df_total[['Year', 'Unemployment Rate', 'Total Civilian Labor Force']]
+df_total = df_total.sort_values('Year')
+plt.scatter(df_total['Total Civilian Labor Force'], df_total['Unemployment Rate'])
+plt.xlabel('Total Civilian Labor Force')
+plt.ylabel('Unemployment Rate')
+plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')
+plt.show()
+
+Python Error: ['Total']
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ df_men = df[df['Year'].isin(df['Year'])].loc[df['Year'].isin(df['Year'])]
+ df_women = df[df['Year'].isin(df['Y...
+Reference: [[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 9.89s
+Processing text modality:   1%|          | 16/3071 [00:49<5:06:04,  6.01s/it]
+============================================================
+Query ID: 17 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/mnt/data1/users/4xin/RealHiTBench/tables/employment-table02.xlsx")
+data_1984 = df[(df['Year'] == 1984) & (df['Men'] == 'Men')]
+agriculture = data_1984.iloc[0]['Civilian labor force']['Agri- culture']
+non_agriculture = data_1984.iloc[0]['Civilian labor force']['Nonagri- cultural industries']
+labels = ['Agriculture', 'Non-agriculture']
+sizes = [agriculture, non_agriculture]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title('Employment Distribution in 1984')
+plt.axis('equal')
+plt.show()
+
+Python Error: 'Men'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ data_1984 = df[(df['Year'] == 1984) & (df['Men'] == 'Men')]
+ agriculture = data_1984.iloc[0]['Civilian labor f...
+Reference: [0.05, 0.95]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.46s
+Processing text modality:   1%|          | 17/3071 [00:56<5:28:09,  6.45s/it]
+============================================================
+Query ID: 18 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/mnt/data1/users/4xin/RealHiTBench/tables/employment-table02.xlsx")
+years = df[df['Year'].isin(range(1983, 1991))]['Year']
+employed_men = df[df['Year'].isin(range(1983, 1991))]['Total'].where(df['Men'] == 'Men').dropna()
+unemployed_men = df[df['Year'].isin(range(1983, 1991))]['Number'].where(df['Men'] == 'Men').dropna()
+employed_women = df[df['Year'].isin(range(1983, 1991))]['Total'].where(df['Women'] == 'Women').dropna()
+unemployed_women = df[df['Year'].isin(range(1983, 1991))]['Number'].where(df['Women'] == 'Women').dropna()
+total_employed = employed_men + employed_women
+total_unemployed = unemployed_men + unemployed_women
+plt.figure(figsize=(10,6))
+plt.plot(years, total_employed, label='Total Employed', marker='o')
+plt.plot(years, total_unemployed, label='Total Unemployed', marker='s')
+plt.title('Trends of Total Employed and Unemployed Population (1983-1990)')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.legend()
+plt.grid(True)
+plt.xticks(years)
+plt.show()
+
+Python Error: 'Total'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ years = df[df['Year'].isin(range(1983, 1991))]['Year']
+ employed_men = df[df['Year'].isin(range(1983, 1991))][...
+Reference: [[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 30...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 12.51s
+Processing text modality:   1%|          | 18/3071 [01:09<7:00:45,  8.27s/it]
+============================================================
+Query ID: 19 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (17562 tokens)

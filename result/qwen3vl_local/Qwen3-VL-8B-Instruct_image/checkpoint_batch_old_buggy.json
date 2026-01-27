@@ -1,0 +1,57 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 61179",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.95
+    },
+    {
+      "id": 2,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the year when the unemployment rate exceeded 5%, and the total civilian labor force was below 65,000.",
+      "Reference": "1954",
+      "Prediction": "1953",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.95
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "2022, 2023",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.95
+    }
+  ],
+  "processed_ids": [
+    1,
+    2,
+    3
+  ]
+}

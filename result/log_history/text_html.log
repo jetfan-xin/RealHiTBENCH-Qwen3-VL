@@ -1,0 +1,189 @@
+nohup: ignoring input
+Configuration:
+  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: html
+  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Use Flash Attention: True
+  Temperature: 0.0
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+Falling back to default attention implementation...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.09it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.08it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.06it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.26it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.18it/s]
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Model distributed across devices: {0}
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Resuming from checkpoint with 390 processed queries
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (18088 tokens)
+Prediction: The table presents annual averages of household data from 1953 to 2023, focusing on the civilian noninstitutional population aged 16 and over. Key columns include: Year (time period), Civilian noninst...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   0%|          | 6/3071 [00:14<1:59:39,  2.34s/it]
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (18075 tokens)
+Prediction: 1982, 1983, 2009, 2010, 2011, 2020
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   0%|          | 9/3071 [00:19<1:47:36,  2.11s/it]
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (14371 tokens)
+Prediction: The Hispanic or Latino population aged 16 and over shows a high labor force participation rate (66.9%), with 31,818 thousand in the civilian labor force. Employment is highest among those aged 25-54 (...
+Reference: The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   1%|          | 30/3071 [00:28<38:30,  1.32it/s] 
+============================================================
+Query ID: 41 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11985 tokens)
+Prediction: The table presents annual employment and labor force participation data for the Hispanic or Latino population in the U.S., segmented by sex, age, and ethnic subgroup (Mexican, Puerto Rican, Cuban). Ke...
+Reference: The dataset provides statistics on the employment status of the Hispanic or Latino population segmented by gender and year (2022 and 2023). The main columns include 'Category' (e.g., population, labor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   1%|▏         | 41/3071 [00:40<44:06,  1.14it/s]
+============================================================
+Query ID: 46 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11772 tokens)
+Prediction: The table presents 2023 employment status data for the U.S. civilian noninstitutional population aged 25 and over, segmented by education level (less than high school, high school graduate, some colle...
+Reference: The table provides data on the employment status of the civilian noninstitutional population aged 25 years and over in the United States, segmented by educational attainment, sex, race, and Hispanic o...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   1%|▏         | 46/3071 [00:48<51:23,  1.02s/it]
+============================================================
+Query ID: 52 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (13903 tokens)
+Prediction: The table presents annual average employment data by occupation, race, Hispanic or Latino ethnicity, and sex for the years 2022 and 2023. Key columns include occupation categories (e.g., Management, P...
+Reference: The table provides employment distribution data by occupation, gender, and year (2022 and 2023). Key columns include 'Occupation,' 'Total 2022,' 'Total 2023,' 'Men 2022,' 'Men 2023,' 'Women 2022,' and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 52/3071 [00:57<58:10,  1.16s/it]
+============================================================
+Query ID: 61 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (20500 tokens)
+Prediction: No anomalies detected.
+Reference: No anomalies detected.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 61/3071 [01:02<46:59,  1.07it/s]
+============================================================
+Query ID: 62 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (20512 tokens)
+Prediction: The table presents 2023 annual average employment data for the U.S. by age, sex, race, and Hispanic or Latino ethnicity. Key trends include: 1) The majority of employed workers (134,056 thousand) are ...
+Reference: 2023 Employment Trends Summary
+
+The table provides data on employed individuals categorized by age, sex, race, and ethnicity for the year 2023.
+Key columns include the number of full-time workers (bot...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 62/3071 [01:20<1:32:15,  1.84s/it]
+============================================================
+Query ID: 76 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (22868 tokens)
+Prediction: The table presents annual average employment data for 2023, categorized by age, sex, race, and Hispanic or Latino ethnicity across 12 nonagricultural industries. Key demographic categories include tot...
+Reference: The table provides employment statistics across nonagricultural industries, broken down by demographic categories such as age (e.g., '16 to 19 years,' '20 years and over'), and specific industries (e....
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 76/3071 [01:33<1:07:53,  1.36s/it]
+============================================================
+Query ID: 87 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (15523 tokens)
+Prediction: The dataset presents employment distribution across nonagricultural industries in 2023, segmented by sex and worker classification (wage/salary, self-employed, unpaid family workers). Key insights inc...
+Reference: The dataset highlights the overall employment distribution across major industries, with private employment dominating and government roles contributing significantly in sectors like education and hea...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Checkpoint saved: 400 queries processed
+Processing text modality:   3%|▎         | 87/3071 [01:42<58:34,  1.18s/it]  
+============================================================
+Query ID: 95 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (31122 tokens)
+Prediction: The table presents 2023 annual average employment data by industry, sex, race, and occupation, with values in thousands. Key insights include: Education and health services is the largest sector (36,3...
+Reference: The table outlines employment statistics across various industries for 2023, highlighting categories like management, service, and sales roles. Manufacturing is the largest sector with 15,570 thousand...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   3%|▎         | 95/3071 [01:55<1:04:49,  1.31s/it]
+============================================================
+Query ID: 100 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual averages of persons working 1 to 34 hours in all and nonagricultural industries, categorized by reason for working less than 35 hours and usual full- or part-time status...
+Reference: The table summarizes the number of persons working 1 to 34 hours in 2023, categorized by reasons for working less than 35 hours and usual work status (full-time or part-time) across all industries and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   3%|▎         | 100/3071 [02:03<1:07:31,  1.36s/it]
+============================================================
+Query ID: 114 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11594 tokens)
+Prediction: The table presents 2023 annual average data on persons at work in nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include total...
+Reference: The table provides detailed employment data for nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include the total number of per...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   4%|▎         | 114/3071 [02:14<53:25,  1.08s/it]  
+============================================================
+Query ID: 130 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (9134 tokens)
+Prediction: All items index increased from 171.015 in December 2024 to 171.910 in January 2024, while Food and beverages index increased from 185.095 in December 2024 to 186.148 in January 2024.
+Reference: All items (171.01 to 171.91), Food and beverages (185.09 to 186.15)
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   4%|▍         | 130/3071 [02:18<36:39,  1.34it/s]
+============================================================
+Query ID: 148 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (39277 tokens)
+Prediction: The dataset presents fatal occupational injury statistics for civilian workers in 2022, categorized by employee status, gender, age, race, occupation, and industry. Key columns include "Total hours wo...
+Reference: The dataset presents fatal occupational injuries with key columns: 'Characteristic,' 'Total hours worked (millions),' 'Fatal injury rate,' and 'Margin of error.' It shows 293,800 million total hours w...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   5%|▍         | 148/3071 [02:40<45:09,  1.08it/s]
+============================================================
+Query ID: 170 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (9180 tokens)
+Prediction: Performing arts companies (Private Industry), Couriers and express delivery services (Private Industry), Nursing and residential care facilities (State Government), Scheduled passenger air transportat...
+Reference: 4 anomalies. Industry: Performing arts companies (Private Industry), NAICS Code: 7111, Incidence Rate: 9.00 Industry: Couriers and express delivery services (Private Industry), NAICS Code: 4921, Incid...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   6%|▌         | 170/3071 [02:50<35:27,  1.36it/s]
+============================================================
+Query ID: 171 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (9197 tokens)
+Prediction: TABLE SNR02 presents the highest incidence rates of nonfatal occupational injury and illness cases with days away from work, restricted work activity, or job transfer in 2023, categorized by industry ...
+Reference: The table outlines industries with the highest nonfatal occupational injury and illness incidence rates in 2023. The main columns are Industry, describing the type of business or service; NAICS Code, ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   6%|▌         | 171/3071 [02:58<44:54,  1.08it/s]
+============================================================
+Query ID: 176 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (25096 tokens)
+Prediction: The table presents incidence rates of nonfatal occupational injuries and illnesses by industry, employment size, and quartile distribution for 2019. Main columns include average incidence rates, 1st q...
+Reference: The table presents data on incidence rates of occupational injuries and illnesses by establishment size in 2019, showing higher mean rates for mid-sized establishments and variability in safety perfor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   6%|▌         | 176/3071 [03:09<54:09,  1.12s/it]
+============================================================
+Query ID: 200 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (54182 tokens)
+Prediction: Table A-7 presents average daily time spent by married parents on various activities, categorized by employment status of self and spouse, and age of youngest child (under 6, 6-17). Key columns includ...
+Reference: The dataset summarizes time allocation for married mothers and fathers with children under 18, categorized by employment status and age of the youngest child. Main columns include activity type, avera...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   7%|▋         | 200/3071 [03:37<55:31,  1.16s/it]
+============================================================
+Query ID: 205 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (55692 tokens)
+Prediction: No anomalies detected in sleeping time for fathers across different household scenarios.
+Reference: Anomalies detected: 1. In the 'Own household children 6-17, none younger' scenario, the value for 'Sleeping' by fathers is 82.10, which is significantly higher than the expected range of 7-9 hours.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Checkpoint saved: 410 queries processed
+Processing text modality:   7%|▋         | 205/3071 [03:57<1:13:03,  1.53s/it]
+============================================================
+Query ID: 206 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (55711 tokens)

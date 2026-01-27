@@ -1,0 +1,170 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 6260",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.17
+    },
+    {
+      "id": 2,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the year when the unemployment rate exceeded 5%, and the total civilian labor force was below 65,000.",
+      "Reference": "1954",
+      "Prediction": "1953",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.58
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "1953",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.58
+    },
+    {
+      "id": 4,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the employment in non-agricultural industries in the year with the highest civilian labor force total?",
+      "Reference": "158772",
+      "Prediction": "167116, 158772",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.93
+    },
+    {
+      "id": 5,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average unemployment rate across all years, and what is its standard deviation?",
+      "Reference": "5.80, 1.62",
+      "Prediction": "5.50, 1.47",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.8
+    },
+    {
+      "id": 6,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, highlighting the main columns, their purposes, and any basic insights or trends observed?",
+      "Reference": "The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nonagricultural Industries),' 'Unemployed (Number, Percent),' and 'Not in Labor Force.' Insights show trends in employment rates, shifts between agricultural and nonagricultural sectors, and unemployment percentages over time.",
+      "Prediction": "Household Data Annual Averages, 1953–2023; Main columns include Year, Civilian noninstitutional population, Civilian labor force (Total, Percent of population), Employed (Total, Percent of population, Agriculture, Nonagricultural industries), Unemployed (Number, Percent of labor force), Not in labor force; Trends show gradual increase in labor force participation, employment rate, and population over time, with fluctuations in unemployment rates, especially post-2020; Peak unemployment occurred in 2020 and 2021, while labor force participation peaked in 2023.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.96
+    },
+    {
+      "id": 7,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trend in the percentage of the employed population between 1953 and 1963, what is the predicted percentage for 1965?",
+      "Reference": "Predicted percentage for 1965: 55.12%",
+      "Prediction": "56.2, Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.72
+    },
+    {
+      "id": 8,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation between the total civilian labor force and the total number of employed individuals across all years? Provide the correlation coefficient.",
+      "Reference": "Strong positive correlation, 1.00",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.76
+    },
+    {
+      "id": 9,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Are there any anomalies in the unemployment rates or employment figures that deviate significantly from the general trends in the data? If so, what are the years and their characteristics?",
+      "Reference": "4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployment 9.30% or Employment 139877.00 deviates significantly, Year 2010: Unemployment 9.600% or Employment 139064.00 deviates significantly",
+      "Prediction": "1982, 1983, 2020, 2021",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 2.14
+    },
+    {
+      "id": 10,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year with the highest unemployment rate between 1983 and 1990.",
+      "Reference": "1983",
+      "Prediction": "1983",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.69
+    }
+  ],
+  "processed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

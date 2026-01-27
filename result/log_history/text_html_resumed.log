@@ -1,0 +1,115 @@
+nohup: ignoring input
+Configuration:
+  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: html
+  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Use Flash Attention: True
+  Temperature: 0.0
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+Falling back to default attention implementation...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.08it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.07it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.05it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.25it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.17it/s]
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Model distributed across devices: {0}
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Resuming from checkpoint with 390 processed queries
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (18088 tokens)
+Error processing query 6: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   0%|          | 6/3071 [00:13<1:59:00,  2.33s/it]
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (18075 tokens)
+Error processing query 9: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   0%|          | 9/3071 [00:19<1:46:59,  2.10s/it]
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (14371 tokens)
+Error processing query 30: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   1%|          | 30/3071 [00:28<38:20,  1.32it/s] 
+============================================================
+Query ID: 41 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11985 tokens)
+Error processing query 41: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   1%|▏         | 41/3071 [00:40<43:55,  1.15it/s]
+============================================================
+Query ID: 46 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11772 tokens)
+Error processing query 46: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   1%|▏         | 46/3071 [00:48<51:10,  1.02s/it]
+============================================================
+Query ID: 52 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (13903 tokens)
+Error processing query 52: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 52/3071 [00:57<57:55,  1.15s/it]
+============================================================
+Query ID: 61 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (20500 tokens)
+Error processing query 61: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 61/3071 [01:02<46:44,  1.07it/s]
+============================================================
+Query ID: 62 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (20512 tokens)
+Error processing query 62: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 62/3071 [01:20<1:31:51,  1.83s/it]
+============================================================
+Query ID: 76 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (22868 tokens)
+Error processing query 76: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 76/3071 [01:32<1:07:38,  1.36s/it]
+============================================================
+Query ID: 87 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (15523 tokens)

@@ -1,0 +1,108 @@
+{
+  "config": {
+    "model_dir": "/mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct",
+    "modality": "image",
+    "format": "html",
+    "data_path": "/mnt/data1/users/4xin/RealHiTBench",
+    "total_queries": 5,
+    "start_time": "2026-01-27T09:30:54.545557",
+    "end_time": "2026-01-27T09:34:11.612019",
+    "duration_seconds": 197.066462
+  },
+  "aggregate_metrics": {
+    "Fact Checking": {
+      "SacreBLEU": 0.0,
+      "EM": 0.0,
+      "ROUGE-L": 0.0,
+      "F1": 0.0
+    },
+    "Data Analysis": {
+      "SacreBLEU": 0.0,
+      "EM": 0.0,
+      "ROUGE-L": 0.0,
+      "F1": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 61179",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.83
+    },
+    {
+      "id": 2,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the year when the unemployment rate exceeded 5%, and the total civilian labor force was below 65,000.",
+      "Reference": "1954",
+      "Prediction": "1953",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.41
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "2023",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.4
+    },
+    {
+      "id": 4,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the employment in non-agricultural industries in the year with the highest civilian labor force total?",
+      "Reference": "158772",
+      "Prediction": "161037",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.64
+    },
+    {
+      "id": 5,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average unemployment rate across all years, and what is its standard deviation?",
+      "Reference": "5.80, 1.62",
+      "Prediction": "5.67, 1.23",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 39.02
+    }
+  ]
+}

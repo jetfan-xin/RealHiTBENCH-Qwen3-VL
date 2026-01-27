@@ -1,0 +1,315 @@
+nohup: ignoring input
+Configuration:
+  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: latex
+  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Use Flash Attention: True
+  Temperature: 0.0
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+Falling back to default attention implementation...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.46it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.46it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.44it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.69it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.59it/s]
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Model distributed across devices: {0}
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Resuming from checkpoint with 1150 processed queries
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Household Data Annual Averages, 1953–2023; Main columns include Year, Civilian noninstitutional population, Civilian labor force (Total, Percent of population), Employed (Total, Percent of population,...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   0%|          | 6/3071 [00:06<55:21,  1.08s/it]
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: 1982, 1983, 2020, 2021
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   0%|          | 9/3071 [00:08<47:46,  1.07it/s]
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The Hispanic or Latino population aged 16 and over shows a high labor force participation rate (66.9%), with 63.8% employed and 4.6% unemployed. Labor force participation decreases with age, especiall...
+Reference: The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   1%|          | 30/3071 [00:16<23:36,  2.15it/s]
+============================================================
+Query ID: 41 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual average employment status data for the Hispanic or Latino population in the U.S., segmented by sex, age, and ethnic subgroup (Mexican, Puerto Rican, Cuban), covering 2022 and...
+Reference: The dataset provides statistics on the employment status of the Hispanic or Latino population segmented by gender and year (2022 and 2023). The main columns include 'Category' (e.g., population, labor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   1%|▏         | 41/3071 [00:27<34:07,  1.48it/s]
+============================================================
+Query ID: 46 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual average employment status data for the U.S. civilian noninstitutional population aged 25 and over, segmented by education level (less than high school, high school gradu...
+Reference: The table provides data on the employment status of the civilian noninstitutional population aged 25 years and over in the United States, segmented by educational attainment, sex, race, and Hispanic o...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   1%|▏         | 46/3071 [00:34<42:26,  1.19it/s]
+============================================================
+Query ID: 52 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents the percent distribution of employed persons by occupation, race, Hispanic or Latino ethnicity, and sex for 2022 and 2023. Key columns include Occupation categories (e.g., Managemen...
+Reference: The table provides employment distribution data by occupation, gender, and year (2022 and 2023). Key columns include 'Occupation,' 'Total 2022,' 'Total 2023,' 'Men 2022,' 'Men 2023,' 'Women 2022,' and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 52/3071 [00:41<45:05,  1.12it/s]
+============================================================
+Query ID: 61 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: No anomalies detected.
+Reference: No anomalies detected.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 61/3071 [00:42<32:22,  1.55it/s]
+============================================================
+Query ID: 62 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 household employment data for the U.S., categorized by age, sex, race, and Hispanic or Latino ethnicity. Key trends include: 1) The majority of employed workers (134,056k) are ...
+Reference: 2023 Employment Trends Summary
+
+The table provides data on employed individuals categorized by age, sex, race, and ethnicity for the year 2023.
+Key columns include the number of full-time workers (bot...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 62/3071 [00:54<1:00:46,  1.21s/it]
+============================================================
+Query ID: 76 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual average employed persons in nonagricultural industries by age, sex, race, and Hispanic or Latino ethnicity in 2023, with data segmented across 12 industry sectors. Key demogr...
+Reference: The table provides employment statistics across nonagricultural industries, broken down by demographic categories such as age (e.g., '16 to 19 years,' '20 years and over'), and specific industries (e....
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   2%|▏         | 76/3071 [01:02<43:38,  1.14it/s]  
+============================================================
+Query ID: 87 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual average employment data in nonagricultural industries by sex and worker classification (wage/salary, self-employed, unpaid family workers). Key insights: Total employmen...
+Reference: The dataset highlights the overall employment distribution across major industries, with private employment dominating and government roles contributing significantly in sectors like education and hea...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Checkpoint saved: 1160 queries processed
+Processing text modality:   3%|▎         | 87/3071 [01:10<41:56,  1.19it/s]
+============================================================
+Query ID: 95 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (10111 tokens)
+Prediction: The table presents 2023 annual average employment data by industry, sex, race, and occupation, with values in thousands. Key columns include total employed, management/professional occupations, servic...
+Reference: The table outlines employment statistics across various industries for 2023, highlighting categories like management, service, and sales roles. Manufacturing is the largest sector with 15,570 thousand...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   3%|▎         | 95/3071 [01:18<43:29,  1.14it/s]
+============================================================
+Query ID: 100 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual average data on persons working 1 to 34 hours in all and nonagricultural industries, categorized by reason for working part-time (economic vs. noneconomic) and usual ful...
+Reference: The table summarizes the number of persons working 1 to 34 hours in 2023, categorized by reasons for working less than 35 hours and usual work status (full-time or part-time) across all industries and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   3%|▎         | 100/3071 [01:25<48:33,  1.02it/s]
+============================================================
+Query ID: 114 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: This table presents 2023 annual average data on persons at work in nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include tota...
+Reference: The table provides detailed employment data for nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include the total number of per...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   4%|▎         | 114/3071 [01:32<37:18,  1.32it/s]
+============================================================
+Query ID: 130 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The unadjusted index for "All items" increased from 171.015 in December 2024 to 171.910 in January 2024, reflecting a 0.5% rise. For "Food and beverages," the index rose from 185.095 in December 2024 ...
+Reference: All items (171.01 to 171.91), Food and beverages (185.09 to 186.15)
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   4%|▍         | 130/3071 [01:36<27:14,  1.80it/s]
+============================================================
+Query ID: 148 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (8849 tokens)
+Prediction: The dataset presents fatal occupational injury statistics for civilian workers in 2022, categorized by employee status, gender, age, race/ethnicity, occupation, and industry. Total hours worked in 202...
+Reference: The dataset presents fatal occupational injuries with key columns: 'Characteristic,' 'Total hours worked (millions),' 'Fatal injury rate,' and 'Margin of error.' It shows 293,800 million total hours w...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   5%|▍         | 148/3071 [01:42<22:42,  2.15it/s]
+============================================================
+Query ID: 170 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: Performing arts companies (Private Industry), Couriers and express delivery services (Private Industry), Nursing and residential care facilities (State Government), Scheduled passenger air transportat...
+Reference: 4 anomalies. Industry: Performing arts companies (Private Industry), NAICS Code: 7111, Incidence Rate: 9.00 Industry: Couriers and express delivery services (Private Industry), NAICS Code: 4921, Incid...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   6%|▌         | 170/3071 [01:51<21:19,  2.27it/s]
+============================================================
+Query ID: 171 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents the highest incidence rates of nonfatal occupational injury and illness cases with days away from work, restricted work activity, or job transfer in 2023, categorized by industry an...
+Reference: The table outlines industries with the highest nonfatal occupational injury and illness incidence rates in 2023. The main columns are Industry, describing the type of business or service; NAICS Code, ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   6%|▌         | 171/3071 [01:56<27:14,  1.77it/s]
+============================================================
+Query ID: 176 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents injury and illness incidence rates per 100 full-time equivalent workers across various U.S. industries and establishment sizes, categorized by quartiles (1st, median, 3rd). Key insi...
+Reference: The table presents data on incidence rates of occupational injuries and illnesses by establishment size in 2019, showing higher mean rates for mid-sized establishments and variability in safety perfor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   6%|▌         | 176/3071 [02:02<31:56,  1.51it/s]
+============================================================
+Query ID: 200 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents average daily time spent by married mothers and fathers in various primary activities, categorized by employment status of self and spouse, and age of youngest child (under 6, 6-17,...
+Reference: The dataset summarizes time allocation for married mothers and fathers with children under 18, categorized by employment status and age of the youngest child. Main columns include activity type, avera...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   7%|▋         | 200/3071 [02:09<22:04,  2.17it/s]
+============================================================
+Query ID: 205 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: No anomalies detected in sleeping time for fathers across different household scenarios.
+Reference: Anomalies detected: 1. In the 'Own household children 6-17, none younger' scenario, the value for 'Sleeping' by fathers is 82.10, which is significantly higher than the expected range of 7-9 hours.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Checkpoint saved: 1170 queries processed
+Processing text modality:   7%|▋         | 205/3071 [02:11<21:40,  2.20it/s]
+============================================================
+Query ID: 206 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table shows that mothers spend more time than fathers on household activities, caring for children, and leisure activities across all employment statuses. When both spouses work full time, mothers...
+Reference: The table reveals significant differences in activity times between mothers and fathers across various employment statuses. Mothers generally spend more time on household activities, caring for and he...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   7%|▋         | 206/3071 [02:18<33:21,  1.43it/s]
+============================================================
+Query ID: 214 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: Aircraft manufacturing shows a significant deviation with a -5.2 percent change in September 2022 and a 12 percent change in September 2024, contrasting sharply with other manufacturing sectors that s...
+Reference: Aircraft manufacturing, significant deviation in Sep. 2022 with -5.20% change, and Sep. 2024 with 12% change compared to other manufacturing sectors.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   7%|▋         | 214/3071 [02:21<29:16,  1.63it/s]
+============================================================
+Query ID: 220 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents the Employment Cost Index (ECI) for wages and salaries in private industry, categorized by bargaining status (union vs. nonunion) and Census region/division. It includes index value...
+Reference: The table presents the Employment Cost Index for wages and salaries for private industry workers, categorized by bargaining status and Census region and division. The main columns include indexes (wit...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   7%|▋         | 220/3071 [02:30<38:59,  1.22it/s]
+============================================================
+Query ID: 234 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The Employment Cost Index for wages and salaries shows a general upward trend across most occupational groups and industries from September 2022 to September 2024, with indexes rising from around 100 ...
+Reference: The main trends observed in the Employment Cost Index for wages and salaries from September 2022 to September 2024 show generally positive but varying rates of increase across different occupational g...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   8%|▊         | 234/3071 [02:38<34:20,  1.38it/s]
+============================================================
+Query ID: 241 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: Health care and social assistance, Public administration
+Reference: Significant deviations in the Employment Cost Index for total compensation among different industries between June 2024 and September 2024 are detected in the following industries: Health care and soc...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   8%|▊         | 241/3071 [02:39<27:33,  1.71it/s]
+============================================================
+Query ID: 257 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: Thailand, Egypt, South Korea, Vietnam, Honduras, El Salvador, Ethiopia, Nigeria, Yemen, Macau, India, Hong Kong
+Reference: China, Egypt, South Korea, Thailand
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   8%|▊         | 257/3071 [02:41<17:23,  2.70it/s]
+============================================================
+Query ID: 280 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Temperature ranges from 3.5°C to 24.3°C; pH levels vary from 6.94 to 10.48; T6log times range from 4 min to 243 min, with higher T6log times observed in lower temperature conditions and in water types...
+Reference: The table presents parameters including temperature (Temp °C, average 21.05°C), pH levels (pH before and after Cl2 addition, 9.24 and 9.33 respectively), and T6log reduction times (average 10.48 minut...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:   9%|▉         | 280/3071 [02:45<12:55,  3.60it/s]
+============================================================
+Query ID: 293 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents income-based tax support for R&D and innovation as a percentage of GDP across OECD and non-OECD economies for the years 2018, 2019, and 2021. Notable trends include high support in ...
+Reference: The table outlines income-based tax support for R&D and Innovation, listing regions and corresponding percentages of GDP. Values range from 0% to 0.13%, with most countries below 0.01%. Notable trends...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  10%|▉         | 293/3071 [02:52<16:18,  2.84it/s]
+============================================================
+Query ID: 295 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: Cyprus, Israel, United States
+Reference: Belgium, Israel, Italy, Lithuania, Netherlands, United Kingdom, United States, Cyprus
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  10%|▉         | 295/3071 [02:53<16:32,  2.80it/s]
+============================================================
+Query ID: 299 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (9845 tokens)
+Prediction: The table presents cooling and heating degree days for various Australian and Austrian regions from 2014 to 2018. Key regions include New South Wales, Victoria, Queensland, South Australia, Western Au...
+Reference: The table presents cooling degree day values for various regions, including “New South Wales, TL2” and “Victoria, TL2,” covering the years 2014 to 2018. Trends show an overall increase in values for m...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Checkpoint saved: 1180 queries processed
+Processing text modality:  10%|▉         | 299/3071 [03:01<27:35,  1.67it/s]
+============================================================
+Query ID: 305 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table lists individual employee names and their corresponding taxable benefits for personal use of a city vehicle during 2021, with a grand total of $227,963.08. Key insights include significant v...
+Reference: The table tracks employee taxable benefits for the use of company vehicles. It includes columns for employee names and their total taxable benefits. Notable patterns include significant variations in ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  10%|▉         | 305/3071 [03:06<29:34,  1.56it/s]
+============================================================
+Query ID: 309 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents areal reduction factors (ARF) for different regions in Florida across varying durations (24-hr, 3-day, 7-day) and area sizes (18.9 km² to 3196.1 km²). ARF values decrease as area si...
+Reference: The data shows ARF values vary significantly by duration and area. For durations, ARF ranges from 0.79 to 1.000 with mean values reflecting moderate variability across 24-hour, 3-day, and 7-day durati...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  10%|█         | 309/3071 [03:12<37:28,  1.23it/s]
+============================================================
+Query ID: 314 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table summarizes employee car allowances for the period January 1 to September 30, 2023, listing each employee's name and their total allowance. The main columns are "Name" and "Total". Notable tr...
+Reference: The table summarizes employee travel expenses for the period January 1 to September 30, 2023, with columns for “Name” and “Total” expenses. Most expenses range between $4,000 and $7,000, with a few ou...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  10%|█         | 314/3071 [03:19<42:55,  1.07it/s]
+============================================================
+Query ID: 324 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (9454 tokens)
+Prediction: The table presents inland fisheries catch data (in tonnes) for various countries and non-OECD economies from 2010 to 2021. Main columns include reference areas (countries) and years (2010–2021). Key p...
+Reference: The table provides data on inland fisheries live weight (in tonnes) across various reference areas (e.g., Australia, Canada) from 2010 to 2021. Main columns include “Reference area” and yearly data. N...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  11%|█         | 324/3071 [03:26<38:39,  1.18it/s]
+============================================================
+Query ID: 330 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents Pearson correlation coefficients and their statistical significance (p-values) for variables PAR, Ta, VPD, Sal, and WL with ET (evapotranspiration) as the dependent variable. Key fe...
+Reference: The table presents Pearson correlation coefficients between environmental variables like PAR, Ta, VPD, Sal, and WL. It highlights relationships such as a strong positive correlation between PAR and VP...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  11%|█         | 330/3071 [03:32<39:52,  1.15it/s]
+============================================================
+Query ID: 334 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: North America holiday visits total 4,537,000 with £6,954 million spent; air travel dominates with 2,295,000 visits and £4,144 million spent; sea travel contributes 4,000 visits and £6 million; Channel...
+Reference: The table summarizes holiday visits and spending across different travel modes in North America. Air travel dominates with the highest number of visits (2,292,000) and spending (£4,138 million). Total...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  11%|█         | 334/3071 [03:36<42:01,  1.09it/s]
+============================================================
+Query ID: 335 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: No anomalies detected in total spending for holiday-inclusive tours in North America across travel modes.
+Reference: 1 anomaly, Channel Tunnel Spending is “No contacts,” preventing proper validation of Total Spending.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  11%|█         | 335/3071 [03:38<44:00,  1.04it/s]
+============================================================
+Query ID: 344 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Trading under a different name (%) is generally low across all regions, with the highest being 6% in Sector G and the lowest being 0% in Sector S, while England and Scotland show the lowest rates at 3...
+Reference: The table provides “Trading under a different name (%)” data across regions and sectors, ranging from 0% to 6%, with an average of approximately 2.90%. The majority of regions show values clustered ar...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  11%|█         | 344/3071 [03:40<29:09,  1.56it/s]
+============================================================
+Query ID: 352 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Participation and Achievement data for 201819, with main columns including Sum of Participation (English and maths, English, Maths, ESOL) and Sum of Achievement (English and maths, English, Maths, ESO...
+Reference: The table details participation metrics for 201819, with categories like English, Maths, and ESOL. Total participation is highest in combined English and Maths (573480), followed by individual English...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing text modality:  11%|█▏        | 352/3071 [03:44<27:20,  1.66it/s]
+============================================================
+Query ID: 357 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: No anomalies detected in percentage change for total learners across the years.
+Reference: No anomalies are detected in the table
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Checkpoint saved: 1190 queries processed
+Processing text modality:  12%|█▏        | 357/3071 [03:46<24:00,  1.88it/s]
+============================================================
+Query ID: 373 | Type: Data Analysis | SubType: Summary Analysis
+============================================================

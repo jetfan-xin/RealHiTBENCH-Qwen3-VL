@@ -1,0 +1,6 @@
+,EM,F1,ROUGE-L,SacreBLEU,Pass,ECR
+Fact Checking,18.65,38.39,,,,
+Data Analysis,40.17,,24.17,,,
+Visualization,,,,,15.58,48.70
+Numerical Reasoning,5.32,19.75,,,,
+Structure Comprehending,23.48,44.81,,,,

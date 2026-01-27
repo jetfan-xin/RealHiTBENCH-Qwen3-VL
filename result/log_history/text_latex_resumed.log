@@ -1,0 +1,133 @@
+nohup: ignoring input
+Configuration:
+  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: latex
+  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Use Flash Attention: True
+  Temperature: 0.0
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+Falling back to default attention implementation...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.46it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.45it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.69it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.59it/s]
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Model distributed across devices: {0}
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Resuming from checkpoint with 1150 processed queries
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 6: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   0%|          | 6/3071 [00:06<54:56,  1.08s/it]
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Error processing query 9: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   0%|          | 9/3071 [00:08<47:29,  1.07it/s]
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 30: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   1%|          | 30/3071 [00:16<23:28,  2.16it/s]
+============================================================
+Query ID: 41 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 41: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   1%|▏         | 41/3071 [00:27<33:52,  1.49it/s]
+============================================================
+Query ID: 46 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 46: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   1%|▏         | 46/3071 [00:34<42:08,  1.20it/s]
+============================================================
+Query ID: 52 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 52: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 52/3071 [00:41<44:46,  1.12it/s]
+============================================================
+Query ID: 61 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Error processing query 61: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 61/3071 [00:42<32:09,  1.56it/s]
+============================================================
+Query ID: 62 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 62: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 62/3071 [00:53<1:00:20,  1.20s/it]
+============================================================
+Query ID: 76 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 76: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   2%|▏         | 76/3071 [01:02<44:33,  1.12it/s]  
+============================================================
+Query ID: 87 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 87: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   3%|▎         | 87/3071 [01:10<42:24,  1.17it/s]
+============================================================
+Query ID: 95 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (10111 tokens)
+Error processing query 95: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   3%|▎         | 95/3071 [01:18<43:50,  1.13it/s]
+============================================================
+Query ID: 100 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Error processing query 100: 'User_Answer'
+Traceback (most recent call last):
+  File "/ltstorage/home/4xin/image_table/RealHiTBench/inference/inference_qwen3vl_local.py", line 1225, in gen_solution
+    eval_prompt = Eval_Prompt[query['SubQType']].format_map({
+KeyError: 'User_Answer'
+Processing text modality:   3%|▎         | 100/3071 [01:25<48:45,  1.02it/s]
+============================================================
+Query ID: 114 | Type: Data Analysis | SubType: Summary Analysis
+============================================================

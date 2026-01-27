@@ -1,0 +1,43 @@
+nohup: ignoring input
+Configuration:
+  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: html
+  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Use Flash Attention: True
+  Temperature: 0.0
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+`torch_dtype` is deprecated! Use `dtype` instead!
+Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
+Falling back to default attention implementation...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.16it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.13it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.14it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.37it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.28it/s]
+Model distributed across devices: {0}
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Limited to 1 queries
+Processing text modality:   0%|          | 0/1 [00:00<?, ?it/s]
+============================================================
+Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['1953 6260']
+Answer:  ['1955 62170']
+Prediction: 1953, 6260
+Reference: 1955, 62170
+Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
+Processing text modality: 100%|██████████| 1/1 [00:04<00:00,  4.79s/it]Processing text modality: 100%|██████████| 1/1 [00:04<00:00,  4.79s/it]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+Total queries: 1
+Duration: 9.15s
+Results saved to: /ltstorage/home/4xin/image_table/RealHiTBench/result/qwen3vl_local/Qwen3-VL-8B-Instruct_text_html/results_20260126_232400.json
+
+Aggregate Metrics by Question Type:
+  Fact Checking:
+    ROUGE-L: 0.0000
+    F1: 0.0000
+    EM: 0.0000
+    SacreBLEU: 0.0000

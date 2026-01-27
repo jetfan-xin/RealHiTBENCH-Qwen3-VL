@@ -1,0 +1,37 @@
+{
+  "config": {
+    "model_dir": "/mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct",
+    "modality": "image",
+    "format": "html",
+    "data_path": "/mnt/data1/users/4xin/RealHiTBench",
+    "total_queries": 1,
+    "start_time": "2026-01-26T23:23:50.958026",
+    "end_time": "2026-01-26T23:26:47.894899",
+    "duration_seconds": 176.936873
+  },
+  "aggregate_metrics": {
+    "Fact Checking": {
+      "SacreBLEU": 0.0,
+      "EM": 0.0,
+      "ROUGE-L": 0.0,
+      "F1": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 61179",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      }
+    }
+  ]
+}
