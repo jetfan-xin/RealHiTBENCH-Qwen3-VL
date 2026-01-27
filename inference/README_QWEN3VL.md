@@ -33,7 +33,7 @@ NumPy: >=1.23,<2.0
 - datasets >= 3.6.0
 
 **其他**：
-- pillow, tqdm, PyYAML, requests, beautifulsoup4
+- pillow, tqdm, PyYAML, requests, beautifulsoup4, html5lib, openpyxl
 
 #### 依赖安装
 
@@ -65,6 +65,30 @@ pip install transformers accelerate qwen-vl-utils evaluate \
 
 # 如需 Flash Attention 2（可选，加快推理）
 pip install flash-attn --no-build-isolation
+```
+#### 下载数据集
+```
+huggingface-cli download spzy/RealHiTBench \
+  --repo-type dataset \
+  --local-dir /mnt/data1/users/4xin/RealHiTBench \
+  --local-dir-use-symlinks False
+```
+#### 下载Qwen3-vl-8B-Instruct模型
+```
+python -m pip install -U hf_transfer
+export HF_HUB_ENABLE_HF_TRANSFER=1
+python - <<'PY'
+from huggingface_hub import snapshot_download
+
+local_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
+snapshot_download(
+    repo_id="Qwen/Qwen3-VL-8B-Instruct",
+    repo_type="model",
+    local_dir=local_dir,
+    # 不写 max_workers 就是默认并发（更快）
+)
+print("✅ Downloaded to:", local_dir)
+PY
 ```
 
 ### 2. 数据集结构

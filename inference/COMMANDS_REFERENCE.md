@@ -33,6 +33,19 @@ nohup bash -c 'CUDA_VISIBLE_DEVICES=0,1,2 python inference_qwen3vl_local.py \
 
 # 查看日志
 tail -f ../result/qwen3vl_local/image_full_batch3.log
+----
+cd /ltstorage/home/4xin/image_table/RealHiTBench/inference
+
+nohup bash -c 'CUDA_VISIBLE_DEVICES=0,1,2 python inference_qwen3vl_local.py \
+    --model_dir /data/pan/4xin/models/Qwen3-VL-8B-Instruct \
+    --data_path /data/pan/4xin/datasets/RealHiTBench \
+    --qa_path /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data \
+    --modality image \
+    --batch_size 3' \
+    > ../result/qwen3vl_local/image_full_batch3.log 2>&1 &
+
+# 查看日志
+tail -f ../result/qwen3vl_local/image_full_batch3.log
 ```
 
 **预计时间**：~1小时（使用3个GPU，batch_size=3）
@@ -43,9 +56,9 @@ tail -f ../result/qwen3vl_local/image_full_batch3.log
 cd /ltstorage/home/4xin/image_table/RealHiTBench/inference
 
 nohup bash -c 'CUDA_VISIBLE_DEVICES=0 python inference_qwen3vl_local.py \
-    --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct \
-    --data_path /mnt/data1/users/4xin/RealHiTBench \
-    --qa_path /ltstorage/home/4xin/image_table/RealHiTBench/data \
+    --model_dir /data/pan/4xin/models/Qwen3-VL-8B-Instruct \
+    --data_path /data/pan/4xin/datasets/RealHiTBench \
+    --qa_path /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data \
     --modality image \
     --batch_size 1' \
     > ../result/qwen3vl_local/image_full_single.log 2>&1 &
@@ -62,6 +75,21 @@ nohup python inference_qwen3vl_local.py \
     --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct \
     --data_path /mnt/data1/users/4xin/RealHiTBench \
     --qa_path /ltstorage/home/4xin/image_table/RealHiTBench/data \
+    --modality image \
+    --batch_size 1 \
+    --max_queries 5 \
+    > ../result/qwen3vl_local/image_test_5.log 2>&1 &
+
+tail -f ../result/qwen3vl_local/image_test_5.log
+
+---
+# 在rzgpu1上
+cd /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference
+
+nohup python inference_qwen3vl_local.py \
+    --model_dir /data/pan/4xin/models/Qwen3-VL-8B-Instruct \
+    --data_path /data/pan/4xin/datasets/RealHiTBench \
+    --qa_path /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data \
     --modality image \
     --batch_size 1 \
     --max_queries 5 \
