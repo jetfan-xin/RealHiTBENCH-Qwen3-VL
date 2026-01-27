@@ -15456,6 +15456,51 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 38.46
+    },
+    {
+      "id": 1004,
+      "FileName": "sport-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which home team ranked below 20 is competing in the ARGENTINA>SUPERLIGA ARGENTINA league against a team ranked higher than 10?",
+      "Reference": "ARGENTINOS JRS",
+      "Prediction": "INDEPENDIENTE MEDELLIN",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 38.51
+    },
+    {
+      "id": 1005,
+      "FileName": "sport-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In BELARUS>DIVISION 1, is there any match where the sum of home and away team ranks is less than 10? If yes, name the teams.",
+      "Reference": "FC SLUTSK, SHAKHTER SOLIGORSK, DINAMO MINSK, BATE BORISOV",
+      "Prediction": "FC SLUTSK, DINAMO MINSK",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 16.62
+      },
+      "ProcessingTime": 38.51
+    },
+    {
+      "id": 1003,
+      "FileName": "economy-table69",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including the main columns and any notable patterns in revenue trends across accounts?",
+      "Reference": "The table provides revenue data for various accounts, including monthly revenues for April, May, and June, with corresponding trends (Incline or Decline). Key observations include consistent revenue inclines for accounts like Francois Chevalier and Global Bob across all months, while accounts such as Big Joe and Maria Calux exhibit mixed trends. Anomalies include missing data or abrupt changes in revenue for certain accounts.",
+      "Prediction": "ACCOUNT #, FULL NAME, Revenue (APR, MAY, JUN), Notable patterns include alternating incline/decline trends across months for most accounts, with some accounts showing consistent decline or incline patterns.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 39.51
     }
   ],
   "processed_ids": [
@@ -16454,6 +16499,9 @@
     999,
     1000,
     1001,
-    1002
+    1002,
+    1003,
+    1004,
+    1005
   ]
 }
