@@ -931,8 +931,14 @@ def process_batch_queries(
             reference = query['ProcessedAnswer']
             chart_type = query['SubQType'].split()[0]
             
-            python_code = re.sub(r"'[^']*\.xlsx'", f"'{table_file_path}/{query['FileName']}.xlsx'", response)
-            python_code = python_code.replace("table.xlsx", f"{table_file_path}/{query['FileName']}.xlsx")
+            # 路径替换：同时处理单引号和双引号的 .xlsx 文件路径
+            full_xlsx_path = f"{table_file_path}/{query['FileName']}.xlsx"
+            # 1. 替换单引号包裹的 .xlsx 路径
+            python_code = re.sub(r"'[^']*\.xlsx'", f"'{full_xlsx_path}'", response)
+            # 2. 替换双引号包裹的 .xlsx 路径
+            python_code = re.sub(r'"[^"]*\.xlsx"', f'"{full_xlsx_path}"', python_code)
+            # 3. 兜底：替换裸字符串 table.xlsx（处理遗漏情况）
+            python_code = python_code.replace("table.xlsx", full_xlsx_path)
             
             prediction, ecr_1 = exec_and_get_y_reference(python_code, chart_type)
             metric_scores['ECR'] = ecr_1
@@ -1263,9 +1269,14 @@ def gen_solution(opt):
                 reference = query['ProcessedAnswer']
                 chart_type = query['SubQType'].split()[0]
                 
-                # Replace table path in generated code
-                python_code = re.sub(r"'[^']*\.xlsx'", f"'{table_file_path}/{query['FileName']}.xlsx'", response)
-                python_code = python_code.replace("table.xlsx", f"{table_file_path}/{query['FileName']}.xlsx")
+                # 路径替换：同时处理单引号和双引号的 .xlsx 文件路径
+                full_xlsx_path = f"{table_file_path}/{query['FileName']}.xlsx"
+                # 1. 替换单引号包裹的 .xlsx 路径
+                python_code = re.sub(r"'[^']*\.xlsx'", f"'{full_xlsx_path}'", response)
+                # 2. 替换双引号包裹的 .xlsx 路径
+                python_code = re.sub(r'"[^"]*\.xlsx"', f'"{full_xlsx_path}"', python_code)
+                # 3. 兜底：替换裸字符串 table.xlsx（处理遗漏情况）
+                python_code = python_code.replace("table.xlsx", full_xlsx_path)
                 
                 prediction, ecr_1 = exec_and_get_y_reference(python_code, chart_type)
                 metric_scores['ECR'] = ecr_1
