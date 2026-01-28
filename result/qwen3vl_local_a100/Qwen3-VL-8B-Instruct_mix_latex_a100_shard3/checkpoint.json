@@ -6263,6 +6263,966 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 2.3
+    },
+    {
+      "id": 2705,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the mean of the time spent on 'Household activities' by married fathers across all employment categories with Own household children under 18? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "1.21, 2.34, 0.23",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.71
+    },
+    {
+      "id": 2706,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "For 'Lawn and garden care', which group of married fathers in among all categories with Own household children under 18 has the highest percentage of participation?",
+      "Reference": "",
+      "Prediction": "Not employed",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.01
+    },
+    {
+      "id": 2707,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Calculate the difference in average hours spent on household activities between not-employed married fathers and employed full-time married mothers. Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "1.04",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2708,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the average hours spent sleeping between employed part-time married mothers and employed full-time married fathers. Which group sleeps more?",
+      "Reference": "",
+      "Prediction": "8.48, 8.11",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 2709,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "For employed part-time married mothers, how many hours in total are spent on travel and household activities combined? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "3.32, 3.32",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 2710,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What are the time spent on 'Leisure and sports' by mothers and fathers when both spouses work full-time.",
+      "Reference": "",
+      "Prediction": "2.93, 3.73",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.43
+    },
+    {
+      "id": 2711,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Determine which activity shows the maximum difference in time spent between mothers and fathers with “Own household children under 18” in “Both spouses work full time”.",
+      "Reference": "",
+      "Prediction": "Working and work-related activities",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.12
+    },
+    {
+      "id": 2712,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the activity where mothers spend exactly 3 times the time compared to fathers when mothers are not employed and fathers are employed full-time.",
+      "Reference": "",
+      "Prediction": "Leisure and sports",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.03
+    },
+    {
+      "id": 2713,
+      "FileName": "activitytime-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the combined time spent by mothers and fathers with 'Own household children under 18' on 'Caring for and helping household children' activities' subcategories when both spouses work full-time? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "2.70, 1.76",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.48
+    },
+    {
+      "id": 2714,
+      "FileName": "activitytime-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Infer the activity category where fathers spend more 0.4 hours than mothers with “Own household children under 18” when mother employed part time and father employed full time.",
+      "Reference": "",
+      "Prediction": "Watching television, Leisure and sports",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.22
+    },
+    {
+      "id": 2715,
+      "FileName": "activitytime-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the activity with the lowest average hours spent by fathers with “Own household children, youngest under 6” when both spouses work full time.",
+      "Reference": "",
+      "Prediction": "Housework",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.02
+    },
+    {
+      "id": 2716,
+      "FileName": "activitytime-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the difference in average hours per day spent on leisure and sports between married mothers with children under 6 and those with children aged 6-17, both in the category where both spouses work full time? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "0.50, 0.50",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.08
+    },
+    {
+      "id": 2717,
+      "FileName": "activitytime-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "How many more hours per day do married mothers with children under 6 spend on household activities compared to fathers in the same category, when both spouses work full time? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "0.59, 0.59",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.09
+    },
+    {
+      "id": 2718,
+      "FileName": "activitytime-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Among married mothers with children aged 6-17, how many categories (both spouses work full time, mother employed part time and father employed full time, mother not employed and father employed full time) show a difference of more than 0.5 hours in time spent on watching television?",
+      "Reference": "",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 2719,
+      "FileName": "activitytime-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "How many more hours per day do married mothers spend on household activities compared to fathers when both spouses work full time with the youngest child is between 6 and 17 years old? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "0.64, 1.61",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.06
+    },
+    {
+      "id": 2720,
+      "FileName": "welfare-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which Census division had the highest 3-month percentage change for wages and salaries in the period ending June 2024?",
+      "Reference": "",
+      "Prediction": "Middle Atlantic",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2721,
+      "FileName": "welfare-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Calculate the total increase in wages and salaries for the Manufacturing sector from September 2023 to September 2024. The answer should be rounded to two decimal places.",
+      "Reference": "",
+      "Prediction": "1.10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 2722,
+      "FileName": "welfare-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "How many Census divisions experienced a 3-month change in wages and salaries of 1 or more in the period ending September 2023?",
+      "Reference": "",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2723,
+      "FileName": "welfare-table08",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which occupational group has the highest Cost Indexes in September 2023.",
+      "Reference": "",
+      "Prediction": "Service occupations",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2724,
+      "FileName": "welfare-table08",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which occupational group had the highest change in the Employment Cost Index for total compensation from September 2023 to September 2024?",
+      "Reference": "",
+      "Prediction": "Public administration",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2725,
+      "FileName": "agriculture-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total agricultural export value for July and August 2023 combined?",
+      "Reference": "",
+      "Prediction": "24655",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 2726,
+      "FileName": "agriculture-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the percentage increase in agricultural export value from July to August 2023?",
+      "Reference": "",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 2727,
+      "FileName": "agriculture-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the provided data, what is the recorded agricultural export value for October-August 2022?",
+      "Reference": "",
+      "Prediction": "182527",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.39
+    },
+    {
+      "id": 2728,
+      "FileName": "agriculture-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the average agricultural export value for July and August 2023?",
+      "Reference": "",
+      "Prediction": "12327.5",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 2729,
+      "FileName": "economy-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total export volume (in metric tons) for China during the periods Oct.-Aug. 2022 and Oct.-Aug. 2023 combined?",
+      "Reference": "",
+      "Prediction": "43190378, 37791953",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.95
+    },
+    {
+      "id": 2730,
+      "FileName": "economy-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Rank the countries based on their Oct.-Aug. 2023 export volumes for soybeans, from highest to lowest.",
+      "Reference": "",
+      "Prediction": "China, European Union-27, Mexico, Japan, Indonesia, Taiwan, Egypt, South Korea, Vietnam, Thailand",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.17
+    },
+    {
+      "id": 2731,
+      "FileName": "economy-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the Aug. 2022 and Aug. 2023 export volumes for China. Which period had a higher export volume, and by how much?",
+      "Reference": "",
+      "Prediction": "Aug. 2022, 1202067",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.78
+    },
+    {
+      "id": 2732,
+      "FileName": "agriculture-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Is the agricultural export value for the fiscal year-to-date 2024 greater than that for the fiscal year-to-date 2023?",
+      "Reference": "",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.88
+    },
+    {
+      "id": 2733,
+      "FileName": "agriculture-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What was the total value of agricultural exports and imports for the fiscal year 2022?",
+      "Reference": "",
+      "Prediction": "390.193, 392.381",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2734,
+      "FileName": "agriculture-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Match the year in which agricultural exports surpassed imports with its fiscal year value from 2020 to 2023.",
+      "Reference": "",
+      "Prediction": "2021, 2022",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 2735,
+      "FileName": "science-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the average O2 rate for the control group (0 mg/L malathion) across all measured times? ",
+      "Reference": "",
+      "Prediction": "14.845",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 2736,
+      "FileName": "science-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the O2 consumption rate at the first and last time points for both 0 mg/L and 5 mg/L malathion groups. Which group shows a larger change in O2 consumption?",
+      "Reference": "",
+      "Prediction": "5 mg/L malathion",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 2737,
+      "FileName": "science-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Rank the O2 consumption rates at the final time point for each concentration group (0 mg/L, 1 mg/L, 5 mg/L).",
+      "Reference": "",
+      "Prediction": "5 mg/L, 0 mg/L, 1 mg/L",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.45
+    },
+    {
+      "id": 2738,
+      "FileName": "biology-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which country under Great Britain had the highest number of genetically altered animal procedures in 2023?",
+      "Reference": "",
+      "Prediction": "England",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2739,
+      "FileName": "biology-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the mean number of total procedures performed across all countries under Great Britain in 2023?",
+      "Reference": "",
+      "Prediction": "2681686",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 2740,
+      "FileName": "education-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": " What is the total number of learners who participated in Skills for Life programs in General FE Colleges, Special Colleges, and Sixth Form Colleges?",
+      "Reference": "",
+      "Prediction": "702,230, 30,150, 39,820",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.08
+    },
+    {
+      "id": 2741,
+      "FileName": "education-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "How many learners achieved Skills for Life qualifications in private sector-funded institutions?",
+      "Reference": "",
+      "Prediction": "164,210",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 2742,
+      "FileName": "education-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the data, infer which type of institution had the highest achievement rate relative to its total learners.",
+      "Reference": "",
+      "Prediction": "General FE College incl Tertiary",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2743,
+      "FileName": "education-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total number of learners who participated in Skills for Life programs across all institution types?",
+      "Reference": "",
+      "Prediction": "1,297,800",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.39
+    },
+    {
+      "id": 2744,
+      "FileName": "economy-table12",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total GVA for the Creative sector in the East of England region for 2005/06 and 2007/08?",
+      "Reference": "",
+      "Prediction": "£3,173,375, £3,302,667",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.17
+    },
+    {
+      "id": 2745,
+      "FileName": "economy-table12",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which sector had the highest GVA in the East Midlands region during 2005/06?",
+      "Reference": "",
+      "Prediction": "Creative",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2746,
+      "FileName": "economy-table12",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the region with the lowest GVA contribution from the ‘MLA’ sector in 2005/06.",
+      "Reference": "",
+      "Prediction": "North East",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 2747,
+      "FileName": "economy-table14",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the table, which sector had the highest employment for England in 2008?",
+      "Reference": "",
+      "Prediction": "Software, Computer Games & Electronic Publishing",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.19
+    },
+    {
+      "id": 2748,
+      "FileName": "economy-table14",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the total employment across two specified years in South West  and identify the year with higher employment.",
+      "Reference": "",
+      "Prediction": "2006, 2008",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.33
+    },
+    {
+      "id": 2749,
+      "FileName": "economy-table14",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Using the employment trend data, infer whether employment in the creative sector is growing or declining over the last five years.",
+      "Reference": "",
+      "Prediction": "Growing",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 5.93
+    },
+    {
+      "id": 2750,
+      "FileName": "society-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which region had the highest participation in voluntary work in the “Arts” sector for the year 2007/08?",
+      "Reference": "",
+      "Prediction": "South East",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.25
+    },
+    {
+      "id": 2751,
+      "FileName": "society-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the total voluntary work participation across all sectors between 2005/06 and 2007/08. Which year had higher total participation?",
+      "Reference": "",
+      "Prediction": "2007/08, 7429",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.84
+    },
+    {
+      "id": 2752,
+      "FileName": "employment-table29",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total number of subnational public employees aggregated in Austria with State government?",
+      "Reference": "",
+      "Prediction": "192,617",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.87
+    },
+    {
+      "id": 2753,
+      "FileName": "employment-table29",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the number of male and female subnational public employees in Belgium with Intermediate government. Which category has more employees?",
+      "Reference": "",
+      "Prediction": "Male, Female",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.65
+    },
+    {
+      "id": 2754,
+      "FileName": "employment-table29",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the 2021 data, infer whether the gender distribution in subnational public employment of Austria with State government is balanced. If not, state which gender constitutes the majority.",
+      "Reference": "",
+      "Prediction": "Male, Female",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 2755,
+      "FileName": "environment-table06",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total number of dwellings for floor areas “51 to 100” in 2007 and 2008 combined?",
+      "Reference": "",
+      "Prediction": "2,926,310",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 2756,
+      "FileName": "environment-table06",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "In which year did the “50 or less” floor area category have the highest number of dwellings, and what was that number?",
+      "Reference": "",
+      "Prediction": "2017, 1667430",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.73
+    },
+    {
+      "id": 2757,
+      "FileName": "environment-table06",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What was the total number of dwellings with a floor area “51 to 100” in the year 2009?",
+      "Reference": "",
+      "Prediction": "1,612,160",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.51
+    },
+    {
+      "id": 2758,
+      "FileName": "employment-table30",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which sub-sector had the highest employment in 2009 for North East?",
+      "Reference": "",
+      "Prediction": "Publishing",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 2759,
+      "FileName": "employment-table30",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which sub-sector had the lowest employment in 2005 for North West?",
+      "Reference": "",
+      "Prediction": "Video, Film \\& Photography",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 2760,
+      "FileName": "employment-table30",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the employment trends in “Advertising” and “Art & Antiques” in North East from 2005 to 2009. Which sub-sector saw a greater absolute change?",
+      "Reference": "",
+      "Prediction": "Art & Antiques, Advertising",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.27
+    },
+    {
+      "id": 2761,
+      "FileName": "employment-table30",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Determine the region with the largest employment change from 2005 to 2009 in the “Publishing” sub-sector.",
+      "Reference": "",
+      "Prediction": "East of England",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 2762,
+      "FileName": "business-table06",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What was the total number of businesses in the “Advertising” sub-sector for all regions in 2009?",
+      "Reference": "",
+      "Prediction": "12950",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.41
+    },
+    {
+      "id": 2763,
+      "FileName": "business-table06",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the region with the highest number of businesses in the “Music & the Visual & Performing Arts” sub-sector in 2009.",
+      "Reference": "",
+      "Prediction": "London",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 2764,
+      "FileName": "sport-table02",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the match where the home team scored the highest number of goals and provide the teams involved.",
+      "Reference": "",
+      "Prediction": "Arsenal, Newcastle",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
     }
   ],
   "processed_ids": [
@@ -6665,6 +7625,66 @@
     2701,
     2702,
     2703,
-    2704
+    2704,
+    2705,
+    2706,
+    2707,
+    2708,
+    2709,
+    2710,
+    2711,
+    2712,
+    2713,
+    2714,
+    2715,
+    2716,
+    2717,
+    2718,
+    2719,
+    2720,
+    2721,
+    2722,
+    2723,
+    2724,
+    2725,
+    2726,
+    2727,
+    2728,
+    2729,
+    2730,
+    2731,
+    2732,
+    2733,
+    2734,
+    2735,
+    2736,
+    2737,
+    2738,
+    2739,
+    2740,
+    2741,
+    2742,
+    2743,
+    2744,
+    2745,
+    2746,
+    2747,
+    2748,
+    2749,
+    2750,
+    2751,
+    2752,
+    2753,
+    2754,
+    2755,
+    2756,
+    2757,
+    2758,
+    2759,
+    2760,
+    2761,
+    2762,
+    2763,
+    2764
   ]
 }

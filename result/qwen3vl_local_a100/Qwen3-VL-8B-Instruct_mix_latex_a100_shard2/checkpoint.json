@@ -3299,6 +3299,478 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 1.17
+    },
+    {
+      "id": 1747,
+      "FileName": "health-table31",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which experiment has the highest fold change in Set4 for Pr2/Oct1?",
+      "Reference": "Expt2",
+      "Prediction": "Expt2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.91
+    },
+    {
+      "id": 1748,
+      "FileName": "health-table31",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation (SD) for Set5 in Pr2/Oct1? (Accurate to two decimal places)",
+      "Reference": "0.45",
+      "Prediction": "0.45",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 1749,
+      "FileName": "health-table31",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "For Pr2/Oct1, what is the difference in mean fold change between Set2 and Set4? (Accurate to two decimal places)",
+      "Reference": "0.35",
+      "Prediction": "2.65",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1750,
+      "FileName": "health-table31",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the main insights from the health table, focusing on how different treatments affect fold change across all protocols?",
+      "Reference": "The health table outlines various treatments' impact on fold change across multiple protocols (Pr1/Oct1 and Pr2/Oct1). Key insights include significant variability in fold change depending on the presence or absence of SAG, with some treatments consistently showing higher fold changes than others. Notably, Set2 exhibits one of the highest mean fold changes in both protocols, suggesting a potentially effective treatment response. Treatments incorporating SAG tend to have lower fold changes compared to those without, indicating a possible inhibitory effect of SAG on the observed outcomes.",
+      "Prediction": "The table presents fold change data for Pr1/Oct1 and Pr2/Oct1 across six experimental sets under different treatments. For Pr1/Oct1, treatments like uinf DC + SAG show high fold changes (mean ~4.42), while DC + AG83 (24h) + SAG shows moderate changes (mean ~4.01), and DC + GE1F8R (24 h) + SAG shows the highest mean (1.70). For Pr2/Oct1, uinf DC + SAG also shows high fold changes (mean ~3.88), while DC + AG83 (24h) + SAG shows the highest mean (3.53), and DC + GE1F8R (24 h) + SAG shows the lowest mean (1.18). The data indicate that different treatments significantly influence fold change, with variations in mean and standard deviation across protocols.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.57
+    },
+    {
+      "id": 1751,
+      "FileName": "health-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average Runx1 intensity/area ratio for uninfected DC-SAG sets across all experiments? (Accurate to two decimal places)",
+      "Reference": "4094.28",
+      "Prediction": "4441.08",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.42
+    },
+    {
+      "id": 1752,
+      "FileName": "health-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest Runx3 intensity in Experiment 2?",
+      "Reference": "Set2",
+      "Prediction": "Set2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 1753,
+      "FileName": "health-table32",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of Runx1/b-actin and Runx3/b-actin?",
+      "Reference": "Positive correlation",
+      "Prediction": "Weak positive correlation, 0.78",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.47
+    },
+    {
+      "id": 1754,
+      "FileName": "health-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In Experiment 3, what is the lowest b-actin intensity observed?",
+      "Reference": "170.06",
+      "Prediction": "170.06",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 1755,
+      "FileName": "health-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How does the Runx3 intensity change when comparing uninfected DC + SAG to DC + AG83 (24h) - SAG in Experiment 1?",
+      "Reference": "Increased by 22.01",
+      "Prediction": "200.65, 204.71",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.82
+    },
+    {
+      "id": 1756,
+      "FileName": "health-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean fold change of Runx1/b-actin for 'uinf DC + SAG'?",
+      "Reference": "1.07",
+      "Prediction": "1.066842617",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 1757,
+      "FileName": "health-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set shows the highest standard deviation for Runx3/b-actin fold change?",
+      "Reference": "Set3",
+      "Prediction": "Set3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.91
+    },
+    {
+      "id": 1758,
+      "FileName": "health-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the percentage change in mean Runx3/b-actin expression from 'uinf DC + SAG' to 'DC + AG83 (24h) + SAG'? (Accurate to two decimal places, e.g -0.23%)",
+      "Reference": "-8.93%",
+      "Prediction": "-8.37%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 1759,
+      "FileName": "health-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Is the standard deviation for Runx1/b-actin fold change higher in experiments with SAG compared to those without SAG? (yes / no)",
+      "Reference": "no",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.85
+    },
+    {
+      "id": 1760,
+      "FileName": "health-table33",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the main insights from the health table, focusing on how different treatments affect fold change across all protocols?",
+      "Reference": "The main insights indicate that treatments generally lead to slight variations in fold changes for both Runx1/b-actin and Runx3/b-actin but do not significantly alter their expressions. Treatments with SAG show inconsistent effects on fold change, and the addition of AG83 or GE1F8R does not consistently increase fold change either. Notably, 'DC + GE1F8R (24 h) + SAG' exhibits the least variability in fold changes for both genes, suggesting more consistent effects. Overall, the treatments result in minor fold change variations, indicating that none strongly induce differential expression of the studied genes.",
+      "Prediction": "The table presents fold change data for Runx1 and Runx3 relative to b-actin across six experimental sets under different treatments. For Runx1, treatments like DC + AG83 (24h) - SAG show elevated fold changes (mean ~1.125), while DC + GE1F8R (24 h) + SAG shows near baseline (~1.004). For Runx3, DC + AG83 (24h) - SAG also elevates fold change (mean ~0.978), whereas DC + GE1F8R (24 h) + SAG shows a slight reduction (mean ~0.950). Overall, treatments modulate Runx1 and Runx3 expression differently, with AG83 generally increasing expression and GE1F8R maintaining or slightly decreasing it.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.82
+    },
+    {
+      "id": 1761,
+      "FileName": "health-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the MFI (actual) value for CD40 stained Set2 in Experiment 1?",
+      "Reference": "7900",
+      "Prediction": "7900",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 1762,
+      "FileName": "health-table34",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many sets show a fold change greater than 5 in Experiment 1?",
+      "Reference": "2",
+      "Prediction": "Set2, Set4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 1763,
+      "FileName": "health-table34",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'MFI' and 'MFI' in Experiment 2?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 1.00",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 1764,
+      "FileName": "health-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the highest MFI (actual) value observed in Experiment 2?",
+      "Reference": "7007",
+      "Prediction": "7007",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 1765,
+      "FileName": "health-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the highest MFI (actual) value observed in Experiment 3?",
+      "Reference": "15768",
+      "Prediction": "15768",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.4
+    },
+    {
+      "id": 1766,
+      "FileName": "health-table35",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the MFI fold change for CD40 stained Set2 in Expt1? (Accurate to two decimal places)",
+      "Reference": "6.61",
+      "Prediction": "6.61",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 1767,
+      "FileName": "health-table35",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which experiment showed the highest MFI fold change for Set4?",
+      "Reference": "Expt1",
+      "Prediction": "Expt1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.8
+    },
+    {
+      "id": 1768,
+      "FileName": "health-table35",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation (SD) for the MFI fold change of CD40 stained Set6 in Expt3? (Accurate to two decimal places)",
+      "Reference": "0.57",
+      "Prediction": "0.57",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 1769,
+      "FileName": "health-table35",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in MFI fold change mean between Set5 DC -SAG and Set5 DC + SAG? (Accurate to two decimal places)",
+      "Reference": "0.76",
+      "Prediction": "0.76",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 1770,
+      "FileName": "health-table35",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of MFI fold change mean and MFI fold change for Expt3?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 1771,
+      "FileName": "health-table36",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of infected DCs in Experiment 1 Replicate 1?",
+      "Reference": "540",
+      "Prediction": "540",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 1772,
+      "FileName": "health-table36",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many microscopic fields were observed in this experiment?",
+      "Reference": "30",
+      "Prediction": "30",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 1773,
+      "FileName": "health-table36",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which field was the maximum number of intracellular amastigotes observed in Experiment 1 Replicate 2?",
+      "Reference": "Field_19",
+      "Prediction": "Field_30",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 1774,
+      "FileName": "health-table36",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of infected DCs in Experiment 2 Replicate 2? (Accurate to two decimal places)",
+      "Reference": "86.57%",
+      "Prediction": "86.57",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 1775,
+      "FileName": "health-table36",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "Based on the table, draw a bar chart comparing the No. of infected DCs for each replicate in experiment 1.",
+      "Reference": "[13.0, 15.0, 19.0, 21.0, 16.0, 15.0, 19.0, 19.0, 15.0, 21.0, 23.0, 15.0, 17.0, 19.0, 20.0, 21.0, 18.0, 17.0, 19.0, 21.0, 15.0, 18.0, 20.0, 11.0, 19.0, 15.0, 16.0, 19.0, 21.0, 23.0, 18.0, 19.0, 18.0, 20.0, 15.0, 18.0, 18.0, 18.0, 15.0, 21.0, 21.0, 18.0, 22.0, 20.0, 17.0, 14.0, 17.0, 16.0, 24.0, 14.0, 21.0, 19.0, 14.0, 19.0, 12.0, 17.0, 19.0, 18.0, 15.0, 17.0, 18.0, 17.0, 19.0, 14.0, 15.0, 21.0, 17.0, 16.0, 21.0, 22.0, 16.0, 20.0, 21.0, 15.0, 15.0, 18.0, 22.0, 11.0, 16.0, 25.0, 21.0, 16.0, 22.0, 20.0, 16.0, 14.0, 20.0, 21.0, 16.0, 19.0]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Field': ['Field_1', 'Field_2', 'Field_3', 'Field_4', 'Field_5', 'Field_6', 'Field_7', 'Field_8', 'Field_9', 'Field_10', 'Field_11', 'Field_12', 'Field_13', 'Field_14', 'Field_15', 'Field_16', 'Field_17', 'Field_18', 'Field_19', 'Field_20', 'Field_21', 'Field_22', 'Field_23', 'Field_24', 'Field_25', 'Field_26', 'Field_27', 'Field_28', 'Field_29', 'Field_30'],\n    'Replicate_1_Infected_DC': [13, 15, 19, 21, 16, 15, 19, 19, 15, 21, 23, 15, 17, 19, 20, 21, 18, 17, 19, 21, 15, 18, 20, 11, 19, 15, 16, 19, 21, 23],\n    'Replicate_2_Infected_DC': [18, 19, 18, 20, 15, 18, 18, 18, 15, 21, 21, 18, 22, 20, 17, 14, 17, 16, 24, 14, 21, 19, 14, 19, 12, 17, 19, 18, 15, 17],\n    'Replicate_3_Infected_DC': [18, 17, 19, 14, 15, 21, 17, 16, 21, 22, 16, 20, 21, 15, 15, 18, 22, 11, 16, 25, 21, 16, 22, 20, 16, 14, 20, 21, 16, 19]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(14, 7))\nbar_width = 0.25\nindex = range(len(df))\n\n# Plot bars for each replicate\nplt.bar([i - bar_width for i in index], df['Replicate_1_Infected_DC'], width=bar_width, label='Replicate 1', color='blue')\nplt.bar([i for i in index], df['Replicate_2_Infected_DC'], width=bar_width, label='Replicate 2', color='green')\nplt.bar([i + bar_width for i in index], df['Replicate_3_Infected_DC'], width=bar_width, label='Replicate 3', color='red')\n\n# Adding labels and title\nplt.xlabel('Microscopic Field #')\nplt.ylabel('No. of infected DCs')\nplt.title('Comparison of No. of infected DCs for each replicate in Experiment 1')\nplt.xticks([i for i in range(len(df))], df['Field'], rotation=45)\nplt.legend()\n\n# Show plot\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 42.39
+    },
+    {
+      "id": 1776,
+      "FileName": "health-table37",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of infected DCs in Experiment 1 Replicate 1?",
+      "Reference": "533",
+      "Prediction": "533",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.53
     }
   ],
   "processed_ids": [
@@ -3511,6 +3983,36 @@
     1743,
     1744,
     1745,
-    1746
+    1746,
+    1747,
+    1748,
+    1749,
+    1750,
+    1751,
+    1752,
+    1753,
+    1754,
+    1755,
+    1756,
+    1757,
+    1758,
+    1759,
+    1760,
+    1761,
+    1762,
+    1763,
+    1764,
+    1765,
+    1766,
+    1767,
+    1768,
+    1769,
+    1770,
+    1771,
+    1772,
+    1773,
+    1774,
+    1775,
+    1776
   ]
 }

@@ -2678,3 +2678,350 @@ Processing Time: 1.76s
 Query ID: 182 | Type: Fact Checking | SubType: Value-Matching
 ============================================================
   Warning: Large input (8909 tokens) for image (1490, 7904)
+Processing mix modality:  24%|██▎       | 182/768 [18:09<20:20,  2.08s/it]Predictions:  ['87']
+Answer:  ['32']
+Prediction: -8.7
+Reference: -3.20%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.93s
+
+============================================================
+Query ID: 183 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (8917 tokens) for image (1490, 7904)
+Processing mix modality:  24%|██▍       | 183/768 [18:12<21:21,  2.19s/it]Predictions:  ['999 1003']
+Answer:  ['increase']
+Prediction: 99.9, 100.3
+Reference: Increase
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.44s
+
+============================================================
+Query ID: 184 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (8917 tokens) for image (1490, 7904)
+Processing mix modality:  24%|██▍       | 184/768 [18:14<21:14,  2.18s/it]Predictions:  ['977']
+Answer:  ['977']
+Prediction: 97.70
+Reference: 97.73
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.17s
+
+============================================================
+Query ID: 185 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (8909 tokens) for image (1490, 7904)
+Processing mix modality:  24%|██▍       | 185/768 [18:16<20:03,  2.07s/it]Predictions:  ['q2']
+Answer:  ['q3']
+Prediction: Q2
+Reference: Q3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.79s
+
+============================================================
+Query ID: 186 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large input (9090 tokens) for image (1490, 7904)
+Processing mix modality:  24%|██▍       | 186/768 [18:18<20:35,  2.12s/it]Predictions:  ['weak positive correlation 05']
+Answer:  ['positive correlation 07']
+Prediction: Weak positive correlation, 0.45
+Reference: Positive correlation, 0.65
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 31.95}
+Processing Time: 2.26s
+
+============================================================
+Query ID: 187 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10095 tokens) for image (2886, 6676)
+Processing mix modality:  24%|██▍       | 187/768 [18:20<21:57,  2.27s/it]Predictions:  ['81 80']
+Answer:  ['162']
+Prediction: 8.14, 8.04
+Reference: 16.18
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.61s
+
+============================================================
+Query ID: 188 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (10096 tokens) for image (2886, 6676)
+Processing mix modality:  24%|██▍       | 188/768 [18:23<21:48,  2.26s/it]Predictions:  ['01']
+Answer:  ['07']
+Prediction: 0.13
+Reference: 0.68
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.23s
+
+============================================================
+Query ID: 189 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10112 tokens) for image (2886, 6676)
+Processing mix modality:  25%|██▍       | 189/768 [18:25<22:29,  2.33s/it]Predictions:  ['notemployed fathers 02']
+Answer:  ['fulltime employed mothers 03']
+Prediction: Not-employed fathers, 0.22
+Reference: full-time employed mothers, 0.28
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.50s
+
+============================================================
+Query ID: 190 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (10102 tokens) for image (2886, 6676)
+Processing mix modality:  25%|██▍       | 190/768 [18:28<24:28,  2.54s/it]Predictions:  ['12 23 02']
+Answer:  ['18']
+Prediction: 1.21, 2.34, 0.23
+Reference: 1.78
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.02s
+Checkpoint saved: 190 queries processed
+
+============================================================
+Query ID: 191 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (10097 tokens) for image (2886, 6676)
+Processing mix modality:  25%|██▍       | 191/768 [18:30<23:02,  2.40s/it]Processing mix modality:  25%|██▌       | 192/768 [18:32<19:55,  2.08s/it]Processing mix modality:  25%|██▌       | 193/768 [18:33<18:50,  1.97s/it]Processing mix modality:  25%|██▌       | 194/768 [18:35<17:15,  1.80s/it]Processing mix modality:  25%|██▌       | 195/768 [18:42<34:27,  3.61s/it]Processing mix modality:  26%|██▌       | 196/768 [18:55<1:00:18,  6.33s/it]Predictions:  ['not employed']
+Answer:  ['not employed']
+Prediction: Not employed
+Reference: Not employed
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.06s
+
+============================================================
+Query ID: 192 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['10']
+Answer:  ['01']
+Prediction: 1.04
+Reference: 0.07
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 193 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['85 81']
+Answer:  ['employed parttime married mothers']
+Prediction: 8.48, 8.11
+Reference: Employed part-time married mothers
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.71s
+
+============================================================
+Query ID: 194 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['34']
+Answer:  ['41']
+Prediction: 3.39
+Reference: 4.12
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.43s
+
+============================================================
+Query ID: 195 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+'Employed full time': 87.6,
+'Employed part time': 92.9,
+'Not employed': 95.9
+}
+df = pd.DataFrame(data, index=['Household activities'])
+df.plot.pie(y='Employed full time', autopct='%1.1f%%', startangle=90)
+plt.title('Percentage of Participation in Household Activities for Married Mothers')
+plt.ylabel('')
+plt.show()
+
+OUTPUT VALUE: [1.0]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+data = {
+    'Employed full time': 87.6,
+    'Employed part time': 92.9,
+    'Not employed': 95.9
+}
+df = pd.DataFrame(data, index=['Household act...
+Reference: [0.33, 0.35, 0.31]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 7.82s
+
+============================================================
+Query ID: 196 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Activity': ['Household activities'],
+'Employed full time': [1.86],
+'Employed part time': [2.67],
+'Not employed': [3.60]
+}
+df = pd.DataFrame(data)
+# Plot the line chart
+plt.figure(figsize=(10, 5))
+plt.plot(df['Employed full time'], marker='o', label='Employed full time')
+plt.plot(df['Employed part time'], marker='s', label='Employed part time')
+plt.plot(df['Not employed'], marker='^', label='Not employed')
+plt.title('Average hours spent on Household activities for married mothers')
+plt.xlabel('Employment Status')
+plt.ylabel('Average hours per day')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: [[1.86], [2.67], [3.6]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ # Load the data from the table
+ data = {
+    'Activity': ['Household activities'],
+    'Employed full time': [1.86],
+    'Employed part time': [...
+Reference: [[1.86, 2.67, 3.6]]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 12.67s
+
+============================================================
+Query ID: 197 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (9023 tokens) for image (3266, 8900)
+Processing mix modality:  26%|██▌       | 197/768 [18:58<50:22,  5.29s/it]  Predictions:  ['29 37']
+Answer:  ['29 37']
+Prediction: 2.93, 3.73
+Reference: 2.93, 3.73
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.89s
+
+============================================================
+Query ID: 198 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9034 tokens) for image (3266, 8900)
+Processing mix modality:  26%|██▌       | 198/768 [19:00<41:39,  4.39s/it]Predictions:  ['working and workrelated activities working']
+Answer:  ['household activities']
+Prediction: Working and work-related activities, Working
+Reference: Household activities
+Metrics: {'F1': 28.57, 'EM': 0.0, 'ROUGE-L': 28.57, 'SacreBLEU': 10.68}
+Processing Time: 2.27s
+
+============================================================
+Query ID: 199 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (9028 tokens) for image (3266, 8900)
+Processing mix modality:  26%|██▌       | 199/768 [19:03<35:41,  3.76s/it]Predictions:  ['participating in sports exercise and recreation']
+Answer:  ['reading towith children']
+Prediction: Participating in sports, exercise, and recreation
+Reference: Reading to/with children
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.31s
+
+============================================================
+Query ID: 200 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (9018 tokens) for image (3266, 8900)
+Processing mix modality:  26%|██▌       | 200/768 [19:08<39:11,  4.14s/it]Prediction: TableA7, TimeSpentInPrimaryActivities, MarriedMothersAndFathers, HouseholdChildrenUnder18, EmploymentStatus, AgeOfYoungestChild, AverageHoursPerDay, DifferencesInTimeUse, ActivityCategories, PersonalC...
+Reference: The dataset summarizes time allocation for married mothers and fathers with children under 18, categorized by employment status and age of the youngest child. Main columns include activity type, avera...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 5.01s
+Checkpoint saved: 200 queries processed
+
+============================================================
+Query ID: 201 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large input (9211 tokens) for image (3266, 8900)
+Processing mix modality:  26%|██▌       | 201/768 [19:10<33:56,  3.59s/it]Predictions:  ['weak negative correlation 03']
+Answer:  ['strong positive correlation 09']
+Prediction: Weak negative correlation, -0.34
+Reference: Strong positive correlation, 0.92
+Metrics: {'F1': 25.0, 'EM': 0.0, 'ROUGE-L': 25.0, 'SacreBLEU': 15.97}
+Processing Time: 2.32s
+
+============================================================
+Query ID: 202 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (9362 tokens) for image (3266, 8846)
+Processing mix modality:  26%|██▋       | 202/768 [19:12<30:41,  3.25s/it]Predictions:  ['27 18']
+Answer:  ['22']
+Prediction: 2.70, 1.76
+Reference: 2.23
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.46s
+
+============================================================
+Query ID: 203 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9351 tokens) for image (3266, 8846)
+Processing mix modality:  26%|██▋       | 203/768 [19:15<27:39,  2.94s/it]Predictions:  ['watching television leisure and sports']
+Answer:  ['watching television']
+Prediction: Watching television, Leisure and sports
+Reference: Watching television
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 21.36}
+Processing Time: 2.20s
+
+============================================================
+Query ID: 204 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9344 tokens) for image (3266, 8846)
+Processing mix modality:  27%|██▋       | 204/768 [19:17<24:58,  2.66s/it]Predictions:  ['housework']
+Answer:  ['reading towith children']
+Prediction: Housework
+Reference: Reading to/with children
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.00s
+
+============================================================
+Query ID: 205 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large input (9318 tokens) for image (3266, 8846)
+Processing mix modality:  27%|██▋       | 205/768 [19:19<24:56,  2.66s/it]Prediction: No anomalies detected in the data regarding time spent on sleeping by fathers across different household scenarios.
+Reference: Anomalies detected: 1. In the 'Own household children 6-17, none younger' scenario, the value for 'Sleeping' by fathers is 82.10, which is significantly higher than the expected range of 7-9 hours.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.66s
+
+============================================================
+Query ID: 206 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (9337 tokens) for image (3266, 8846)
+Processing mix modality:  27%|██▋       | 206/768 [19:33<55:05,  5.88s/it]Prediction: The table presents average daily time spent in primary activities by married mothers and fathers with children under 18, categorized by employment status of self and spouse, and age of youngest child....
+Reference: The table reveals significant differences in activity times between mothers and fathers across various employment statuses. Mothers generally spend more time on household activities, caring for and he...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 13.40s
+
+============================================================
+Query ID: 207 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large input (8233 tokens) for image (2774, 4658)
+Processing mix modality:  27%|██▋       | 207/768 [19:35<44:13,  4.73s/it]Predictions:  ['05 05']
+Answer:  ['05']
+Prediction: 0.50, 0.50
+Reference: 0.50
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.04s
+
+============================================================
+Query ID: 208 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (8222 tokens) for image (2774, 4658)
+Processing mix modality:  27%|██▋       | 208/768 [19:37<36:37,  3.92s/it]Predictions:  ['06 06']
+Answer:  ['06']
+Prediction: 0.59, 0.59
+Reference: 0.59
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 209 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (8240 tokens) for image (2774, 4658)
+Processing mix modality:  27%|██▋       | 209/768 [19:39<30:41,  3.29s/it]Predictions:  ['2 3']
+Answer:  ['3']
+Prediction: 2, 3
+Reference: 3
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.83s
+
+============================================================
+Query ID: 210 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large input (8305 tokens) for image (2774, 4658)

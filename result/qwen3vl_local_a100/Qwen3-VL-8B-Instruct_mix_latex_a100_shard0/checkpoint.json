@@ -2773,6 +2773,319 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 1.45
+    },
+    {
+      "id": 181,
+      "FileName": "productivity-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation between the percentage change in Output per job and Output per hour worked for the Services sector from 2016 Q3 to 2021 Q2?",
+      "Reference": "Weak positive correlation",
+      "Prediction": "Strong positive correlation, 0.95",
+      "Metrics": {
+        "F1": 57.14,
+        "EM": 0.0,
+        "ROUGE-L": 57.14,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.76
+    },
+    {
+      "id": 182,
+      "FileName": "productivity-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the percentage change in output per worker from Q1 2019 to Q1 2020?",
+      "Reference": "-3.20%",
+      "Prediction": "-8.7",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.93
+    },
+    {
+      "id": 183,
+      "FileName": "productivity-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the output per hour worked in Q4 2018 and Q4 2019. Did it increase, decrease, or remain the same?",
+      "Reference": "Increase",
+      "Prediction": "99.9, 100.3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.44
+    },
+    {
+      "id": 184,
+      "FileName": "productivity-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the average output per worker index from Q1 2015 to Q4 2015. The answer should be rounded to two decimal places.",
+      "Reference": "97.73",
+      "Prediction": "97.70",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.17
+    },
+    {
+      "id": 185,
+      "FileName": "productivity-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "In which quarter of 2020 did the output per hour worked show the highest percentage change compared to the previous year?",
+      "Reference": "Q3",
+      "Prediction": "Q2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 186,
+      "FileName": "productivity-table05",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "How does the percentage change in output per worker on a quarterly basis correlate with the percentage change in output per hour worked?",
+      "Reference": "Positive correlation, 0.65",
+      "Prediction": "Weak positive correlation, 0.45",
+      "Metrics": {
+        "F1": 57.14,
+        "EM": 0.0,
+        "ROUGE-L": 57.14,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 2.26
+    },
+    {
+      "id": 187,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the combined average daily time spent on 'Sleeping' by employed full-time married mothers and fathers? Round the answer to two decimal places.",
+      "Reference": "16.18",
+      "Prediction": "8.14, 8.04",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.61
+    },
+    {
+      "id": 188,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "how many time does the part-time mothers spend more time on 'Food preparation and cleanup' than full-time fathers? Round the answer to two decimal places.",
+      "Reference": "0.68",
+      "Prediction": "0.13",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.23
+    },
+    {
+      "id": 189,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the average time spent on 'Housework' by not-employed fathers and full-time employed mothers with Own household children 6-17. Who spends more, and by how many hours? Round the answer to two decimal places.",
+      "Reference": "full-time employed mothers, 0.28",
+      "Prediction": "Not-employed fathers, 0.22",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.5
+    },
+    {
+      "id": 190,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the mean of the time spent on 'Household activities' by married fathers across all employment categories with Own household children under 18? Round the answer to two decimal places.",
+      "Reference": "1.78",
+      "Prediction": "1.21, 2.34, 0.23",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.02
+    },
+    {
+      "id": 191,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For 'Lawn and garden care', which group of married fathers in among all categories with Own household children under 18 has the highest percentage of participation?",
+      "Reference": "Not employed",
+      "Prediction": "Not employed",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.06
+    },
+    {
+      "id": 192,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the difference in average hours spent on household activities between not-employed married fathers and employed full-time married mothers. Round the answer to two decimal places.",
+      "Reference": "0.07",
+      "Prediction": "1.04",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 193,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the average hours spent sleeping between employed part-time married mothers and employed full-time married fathers. Which group sleeps more?",
+      "Reference": "Employed part-time married mothers",
+      "Prediction": "8.48, 8.11",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.71
+    },
+    {
+      "id": 194,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "For employed part-time married mothers, how many hours in total are spent on travel and household activities combined? Round the answer to two decimal places.",
+      "Reference": "4.12",
+      "Prediction": "3.39",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 195,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Based on the table, draw a pie chart to illustrate the percentage of participation in 'Household activities' across all employment statuses for married mothers.",
+      "Reference": "[0.33, 0.35, 0.31]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndata = {\n    'Employed full time': 87.6,\n    'Employed part time': 92.9,\n    'Not employed': 95.9\n}\ndf = pd.DataFrame(data, index=['Household activities'])\ndf.plot.pie(y='Employed full time', autopct='%1.1f%%', startangle=90)\nplt.title('Percentage of Participation in Household Activities for Married Mothers')\nplt.ylabel('')\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 7.82
+    },
+    {
+      "id": 196,
+      "FileName": "activitytime-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Using the data, draw a line chart that trends the average hours spent on 'Household activities' for married mothers across all employment statuses.",
+      "Reference": "[[1.86, 2.67, 3.60]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n # Load the data from the table\n data = {\n    'Activity': ['Household activities'],\n    'Employed full time': [1.86],\n    'Employed part time': [2.67],\n    'Not employed': [3.60]\n }\n df = pd.DataFrame(data)\n # Plot the line chart\n plt.figure(figsize=(10, 5))\n plt.plot(df['Employed full time'], marker='o', label='Employed full time')\n plt.plot(df['Employed part time'], marker='s', label='Employed part time')\n plt.plot(df['Not employed'], marker='^', label='Not employed')\n plt.title('Average hours spent on Household activities for married mothers')\n plt.xlabel('Employment Status')\n plt.ylabel('Average hours per day')\n plt.legend()\n plt.grid(True)\n plt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 12.67
+    },
+    {
+      "id": 197,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What are the time spent on 'Leisure and sports' by mothers and fathers when both spouses work full-time.",
+      "Reference": "2.93, 3.73",
+      "Prediction": "2.93, 3.73",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.89
+    },
+    {
+      "id": 198,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Determine which activity shows the maximum difference in time spent between mothers and fathers with “Own household children under 18” in “Both spouses work full time”.",
+      "Reference": "Household activities",
+      "Prediction": "Working and work-related activities, Working",
+      "Metrics": {
+        "F1": 28.57,
+        "EM": 0.0,
+        "ROUGE-L": 28.57,
+        "SacreBLEU": 10.68
+      },
+      "ProcessingTime": 2.27
+    },
+    {
+      "id": 199,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the activity where mothers spend exactly 3 times the time compared to fathers when mothers are not employed and fathers are employed full-time.",
+      "Reference": "Reading to/with children",
+      "Prediction": "Participating in sports, exercise, and recreation",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.31
+    },
+    {
+      "id": 200,
+      "FileName": "activitytime-table03",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a brief summary of the dataset, describing its main columns and any notable trends in time allocation.",
+      "Reference": "The dataset summarizes time allocation for married mothers and fathers with children under 18, categorized by employment status and age of the youngest child. Main columns include activity type, average hours per day for mothers and fathers, and differences in time use. Notable trends include mothers spending more time on household activities and caring for children compared to fathers, with significant differences observed across employment statuses and child age groups.",
+      "Prediction": "TableA7, TimeSpentInPrimaryActivities, MarriedMothersAndFathers, HouseholdChildrenUnder18, EmploymentStatus, AgeOfYoungestChild, AverageHoursPerDay, DifferencesInTimeUse, ActivityCategories, PersonalCare, HouseholdActivities, CaringForChildren, Working, LeisureAndSports, Travel, OtherActivities",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.01
     }
   ],
   "processed_ids": [
@@ -2955,6 +3268,26 @@
     177,
     178,
     179,
-    180
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200
   ]
 }

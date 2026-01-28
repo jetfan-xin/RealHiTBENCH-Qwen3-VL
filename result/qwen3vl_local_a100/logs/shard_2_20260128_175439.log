@@ -2393,4 +2393,424 @@ Prediction: 9.4, 2.9
 Reference: 7.00
 Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
 Processing Time: 1.05s
-Processing mix modality:  26%|██▌       | 198/768 [17:35<11:04,  1.17s/it]Processing mix modality:  26%|██▌       | 199/768 [17:36<10:44,  1.13s/it]Processing mix modality:  26%|██▌       | 200/768 [17:37<11:04,  1.17s/it]Processing mix modality:  26%|██▌       | 201/768 [17:38<11:01,  1.17s/it]Processing mix modality:  26%|██▋       | 202/768 [17:39<11:02,  1.17s/it]Processing mix modality:  26%|██▋       | 203/768 [17:40<10:42,  1.14s/it]Processing mix modality:  27%|██▋       | 204/768 [17:50<34:36,  3.68s/it]Processing mix modality:  27%|██▋       | 205/768 [17:51<27:46,  2.96s/it]Processing mix modality:  27%|██▋       | 206/768 [17:52<22:50,  2.44s/it]Processing mix modality:  27%|██▋       | 207/768 [17:54<20:05,  2.15s/it]Processing mix modality:  27%|██▋       | 208/768 [17:55<17:21,  1.86s/it]Processing mix modality:  27%|██▋       | 209/768 [17:57<16:56,  1.82s/it]Processing mix modality:  27%|██▋       | 210/768 [17:58<15:07,  1.63s/it]Processing mix modality:  27%|██▋       | 211/768 [17:59<13:05,  1.41s/it]Processing mix modality:  28%|██▊       | 212/768 [18:00<12:00,  1.30s/it]Processing mix modality:  28%|██▊       | 213/768 [18:01<11:13,  1.21s/it]
+Processing mix modality:  26%|██▌       | 198/768 [17:35<11:04,  1.17s/it]Processing mix modality:  26%|██▌       | 199/768 [17:36<10:44,  1.13s/it]Processing mix modality:  26%|██▌       | 200/768 [17:37<11:04,  1.17s/it]Processing mix modality:  26%|██▌       | 201/768 [17:38<11:01,  1.17s/it]Processing mix modality:  26%|██▋       | 202/768 [17:39<11:02,  1.17s/it]Processing mix modality:  26%|██▋       | 203/768 [17:40<10:42,  1.14s/it]Processing mix modality:  27%|██▋       | 204/768 [17:50<34:36,  3.68s/it]Processing mix modality:  27%|██▋       | 205/768 [17:51<27:46,  2.96s/it]Processing mix modality:  27%|██▋       | 206/768 [17:52<22:50,  2.44s/it]Processing mix modality:  27%|██▋       | 207/768 [17:54<20:05,  2.15s/it]Processing mix modality:  27%|██▋       | 208/768 [17:55<17:21,  1.86s/it]Processing mix modality:  27%|██▋       | 209/768 [17:57<16:56,  1.82s/it]Processing mix modality:  27%|██▋       | 210/768 [17:58<15:07,  1.63s/it]Processing mix modality:  27%|██▋       | 211/768 [17:59<13:05,  1.41s/it]Processing mix modality:  28%|██▊       | 212/768 [18:00<12:00,  1.30s/it]Processing mix modality:  28%|██▊       | 213/768 [18:01<11:13,  1.21s/it]Processing mix modality:  28%|██▊       | 214/768 [18:12<37:06,  4.02s/it]Processing mix modality:  28%|██▊       | 215/768 [18:13<29:52,  3.24s/it]Processing mix modality:  28%|██▊       | 216/768 [18:14<23:56,  2.60s/it]
+============================================================
+Query ID: 1734 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['scenario 1 scenario 2 scenario 3 scenario 5']
+Answer:  ['2']
+Prediction: Scenario 1, Scenario 2, Scenario 3, Scenario 5
+Reference: 2
+Metrics: {'F1': 22.22, 'EM': 0.0, 'ROUGE-L': 22.22, 'SacreBLEU': 5.52}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 1735 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 0.98
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.05s
+
+============================================================
+Query ID: 1736 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['121']
+Answer:  ['121']
+Prediction: 121
+Reference: 121
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+Checkpoint saved: 200 queries processed
+
+============================================================
+Query ID: 1737 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['16']
+Answer:  ['16']
+Prediction: 16
+Reference: 16
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 1738 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['19']
+Answer:  ['19']
+Prediction: 19
+Reference: 19
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 1739 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.06s
+
+============================================================
+Query ID: 1740 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+"S. no": [1, 2, 3, 4, 6, 7],
+"p-value": [0.066, 0.188, 0.148, 0.293, 0.455, 0.484]
+}
+df = pd.DataFrame(data)
+plt.plot(df["S. no"], df["p-value"], marker='o', linestyle='-', color='b')
+plt.xlabel('S. no')
+plt.ylabel('p-value')
+plt.title('p-value vs S. no')
+plt.xticks(df["S. no"], ['1', '2', '3', '4', '6', '7'])
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: [[0.066, 0.188, 0.148, 0.293, 0.455, 0.484]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+data = {
+    "S. no": [1, 2, 3, 4, 6, 7],
+    "p-value": [0.066, 0.188, 0.148, 0.293, 0.455, 0.484]
+}
+df = pd.DataFrame(data)
+plt.plot(df["S. no"...
+Reference: [[0.066, 0.188, 0.148, 0.293, 0.455, 0.484]]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 9.62s
+
+============================================================
+Query ID: 1741 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['2145']
+Answer:  ['2145']
+Prediction: 2145
+Reference: 2145
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 1742 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['set2']
+Answer:  ['set2']
+Prediction: Set2
+Reference: Set2
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+
+============================================================
+Query ID: 1743 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 0.99
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 1744 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['expt3']
+Answer:  ['expt3']
+Prediction: Expt3
+Reference: Expt3
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 1745 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['1434 44595']
+Answer:  ['increase']
+Prediction: 1434, 4459.5
+Reference: Increase
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.73s
+
+============================================================
+Query ID: 1746 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['44']
+Answer:  ['44']
+Prediction: 4.42
+Reference: 4.42
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.17s
+Checkpoint saved: 210 queries processed
+
+============================================================
+Query ID: 1747 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['expt2']
+Answer:  ['expt2']
+Prediction: Expt2
+Reference: Expt2
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.91s
+
+============================================================
+Query ID: 1748 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['05']
+Answer:  ['05']
+Prediction: 0.45
+Reference: 0.45
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 1749 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['26']
+Answer:  ['03']
+Prediction: 2.65
+Reference: 0.35
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+
+============================================================
+Query ID: 1750 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents fold change data for Pr1/Oct1 and Pr2/Oct1 across six experimental sets under different treatments. For Pr1/Oct1, treatments like uinf DC + SAG show high fold changes (mean ~4.42), ...
+Reference: The health table outlines various treatments' impact on fold change across multiple protocols (Pr1/Oct1 and Pr2/Oct1). Key insights include significant variability in fold change depending on the pres...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.57s
+
+============================================================
+Query ID: 1751 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['44411']
+Answer:  ['40943']
+Prediction: 4441.08
+Reference: 4094.28
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 1752 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['set2']
+Answer:  ['set2']
+Prediction: Set2
+Reference: Set2
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Processing mix modality:  28%|██▊       | 217/768 [18:16<20:46,  2.26s/it]Processing mix modality:  28%|██▊       | 218/768 [18:17<18:13,  1.99s/it]Processing mix modality:  29%|██▊       | 219/768 [18:19<17:42,  1.94s/it]Processing mix modality:  29%|██▊       | 220/768 [18:20<16:20,  1.79s/it]Processing mix modality:  29%|██▉       | 221/768 [18:21<13:54,  1.53s/it]Processing mix modality:  29%|██▉       | 222/768 [18:22<12:41,  1.39s/it]Processing mix modality:  29%|██▉       | 223/768 [18:23<11:10,  1.23s/it]Processing mix modality:  29%|██▉       | 224/768 [18:33<34:30,  3.81s/it]Processing mix modality:  29%|██▉       | 225/768 [18:34<27:28,  3.04s/it]Processing mix modality:  29%|██▉       | 226/768 [18:35<22:33,  2.50s/it]Processing mix modality:  30%|██▉       | 227/768 [18:37<19:42,  2.19s/it]Processing mix modality:  30%|██▉       | 228/768 [18:38<17:17,  1.92s/it]Processing mix modality:  30%|██▉       | 229/768 [18:39<15:50,  1.76s/it]Processing mix modality:  30%|██▉       | 230/768 [18:40<13:35,  1.52s/it]Processing mix modality:  30%|███       | 231/768 [18:41<11:39,  1.30s/it]Processing mix modality:  30%|███       | 232/768 [18:42<10:37,  1.19s/it]Processing mix modality:  30%|███       | 233/768 [18:43<09:54,  1.11s/it]Processing mix modality:  30%|███       | 234/768 [18:44<10:13,  1.15s/it]Processing mix modality:  31%|███       | 235/768 [18:46<11:27,  1.29s/it]Processing mix modality:  31%|███       | 236/768 [18:47<11:54,  1.34s/it]Query ID: 1753 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['weak positive correlation 08']
+Answer:  ['positive correlation']
+Prediction: Weak positive correlation, 0.78
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 1754 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['1701']
+Answer:  ['1701']
+Prediction: 170.06
+Reference: 170.06
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 1755 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['2007 2047']
+Answer:  ['increased by 220']
+Prediction: 200.65, 204.71
+Reference: Increased by 22.01
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.82s
+
+============================================================
+Query ID: 1756 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['11']
+Answer:  ['11']
+Prediction: 1.066842617
+Reference: 1.07
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.44s
+Checkpoint saved: 220 queries processed
+
+============================================================
+Query ID: 1757 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['set3']
+Answer:  ['set3']
+Prediction: Set3
+Reference: Set3
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.91s
+
+============================================================
+Query ID: 1758 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['84']
+Answer:  ['89']
+Prediction: -8.37%
+Reference: -8.93%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.09s
+
+============================================================
+Query ID: 1759 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['no']
+Prediction: Yes
+Reference: no
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.85s
+
+============================================================
+Query ID: 1760 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents fold change data for Runx1 and Runx3 relative to b-actin across six experimental sets under different treatments. For Runx1, treatments like DC + AG83 (24h) - SAG show elevated fold...
+Reference: The main insights indicate that treatments generally lead to slight variations in fold changes for both Runx1/b-actin and Runx3/b-actin but do not significantly alter their expressions. Treatments wit...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.82s
+
+============================================================
+Query ID: 1761 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['7900']
+Answer:  ['7900']
+Prediction: 7900
+Reference: 7900
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 1762 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['set2 set4']
+Answer:  ['2']
+Prediction: Set2, Set4
+Reference: 2
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 1763 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 1.00
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 1764 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['7007']
+Answer:  ['7007']
+Prediction: 7007
+Reference: 7007
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.30s
+
+============================================================
+Query ID: 1765 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['15768']
+Answer:  ['15768']
+Prediction: 15768
+Reference: 15768
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 1766 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['66']
+Answer:  ['66']
+Prediction: 6.61
+Reference: 6.61
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+Checkpoint saved: 230 queries processed
+
+============================================================
+Query ID: 1767 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['expt1']
+Answer:  ['expt1']
+Prediction: Expt1
+Reference: Expt1
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.80s
+
+============================================================
+Query ID: 1768 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['06']
+Answer:  ['06']
+Prediction: 0.57
+Reference: 0.57
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+
+============================================================
+Query ID: 1769 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['08']
+Answer:  ['08']
+Prediction: 0.76
+Reference: 0.76
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+
+============================================================
+Query ID: 1770 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 0.99
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 1771 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['540']
+Answer:  ['540']
+Prediction: 540
+Reference: 540
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.62s
+
+============================================================
+Query ID: 1772 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['30']
+Answer:  ['30']
+Prediction: 30
+Reference: 30
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 1773 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['field30']
+Answer:  ['field19']
+Prediction: Field_30
+Reference: Field_19
+Processing mix modality:  31%|███       | 237/768 [18:49<12:18,  1.39s/it]Processing mix modality:  31%|███       | 238/768 [18:50<12:51,  1.46s/it]Processing mix modality:  31%|███       | 239/768 [19:33<2:01:06, 13.74s/it]Processing mix modality:  31%|███▏      | 240/768 [19:34<1:28:40, 10.08s/it]Processing mix modality:  31%|███▏      | 241/768 [19:36<1:05:44,  7.49s/it]Processing mix modality:  32%|███▏      | 242/768 [19:37<50:00,  5.70s/it]  Processing mix modality:  32%|███▏      | 243/768 [19:39<39:05,  4.47s/it]
