@@ -12,7 +12,8 @@
 4. [测试与调试](#4-测试与调试)
 5. [批量推理 vs 单任务推理](#5-批量推理-vs-单任务推理)
 6. [恢复中断的评估](#6-恢复中断的评估)
-7. [参数说明](#7-参数说明)
+7. [多进程分片并行（推荐）](#7-多进程分片并行推荐)
+8. [参数说明](#8-参数说明)
 
 ---
 
@@ -355,9 +356,203 @@ nohup bash -c 'CUDA_VISIBLE_DEVICES=0,1,2 python inference_qwen3vl_local.py \
 
 ---
 
-## 7. 参数说明
+## 7. 多进程分片并行（推荐）
 
-### 7.1 必需参数
+### 7.1 为什么需要多进程分片？
+
+**问题**：使用 `batch_size>1` 或 `DataParallel` 时，发现只有一个GPU在计算，其他GPU只占显存不工作。
+
+**原因**：Qwen3-VL使用 `model.generate()` 进行推理，这是自回归生成过程，无法使用 PyTorch 的 `DataParallel` 实现数据并行。
+
+**解决方案**：使用多进程分片 - 每个GPU运行独立的Python进程，处理数据的不同分片。
+
+### 7.2 快速启动（推荐）
+
+```bash
+cd /ltstorage/home/4xin/image_table/RealHiTBench/inference
+
+# 使用自动化脚本启动3个GPU并行推理
+./run_multi_gpu.sh
+
+# 查看运行状态
+gpustat -i 1
+
+# 监控日志
+tail -f ../result/qwen3vl_local/logs/shard_*.log
+```
+
+### 7.3 手动启动（自定义配置）
+
+#### 步骤1: 启动各分片
+
+```bash
+cd /ltstorage/home/4xin/image_table/RealHiTBench/inference
+
+# GPU 0 - 处理 Shard 0/3
+CUDA_VISIBLE_DEVICES=0 nohup python inference_qwen3vl_local.py \
+    --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct \
+    --data_path /mnt/data1/users/4xin/RealHiTBench \
+    --qa_path /ltstorage/home/4xin/image_table/RealHiTBench/data \
+    --modality image \
+    --batch_size 1 \
+    --use_flash_attn \
+    --use_model_parallel \
+    --resume \
+    --shard_id 0 \
+    --num_shards 3 \
+    --skip_checkpoint ../result/qwen3vl_local/Qwen3-VL-8B-Instruct_image/checkpoint_batch.json \
+    > ../result/qwen3vl_local/logs/shard_0.log 2>&1 &
+
+# GPU 1 - 处理 Shard 1/3
+CUDA_VISIBLE_DEVICES=1 nohup python inference_qwen3vl_local.py \
+    --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct \
+    --data_path /mnt/data1/users/4xin/RealHiTBench \
+    --qa_path /ltstorage/home/4xin/image_table/RealHiTBench/data \
+    --modality image \
+    --batch_size 1 \
+    --use_flash_attn \
+    --use_model_parallel \
+    --resume \
+    --shard_id 1 \
+    --num_shards 3 \
+    --skip_checkpoint ../result/qwen3vl_local/Qwen3-VL-8B-Instruct_image/checkpoint_batch.json \
+    > ../result/qwen3vl_local/logs/shard_1.log 2>&1 &
+
+# GPU 2 - 处理 Shard 2/3
+CUDA_VISIBLE_DEVICES=2 nohup python inference_qwen3vl_local.py \
+    --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct \
+    --data_path /mnt/data1/users/4xin/RealHiTBench \
+    --qa_path /ltstorage/home/4xin/image_table/RealHiTBench/data \
+    --modality image \
+    --batch_size 1 \
+    --use_flash_attn \
+    --use_model_parallel \
+    --resume \
+    --shard_id 2 \
+    --num_shards 3 \
+    --skip_checkpoint ../result/qwen3vl_local/Qwen3-VL-8B-Instruct_image/checkpoint_batch.json \
+    > ../result/qwen3vl_local/logs/shard_2.log 2>&1 &
+
+echo "All shards launched! Monitor with: tail -f ../result/qwen3vl_local/logs/shard_*.log"
+```
+
+#### 步骤2: 监控进度
+
+```bash
+# 查看GPU使用情况（应该看到3个GPU都在计算）
+watch -n 1 gpustat
+
+# 查看各分片日志
+tail -f ../result/qwen3vl_local/logs/shard_0.log
+tail -f ../result/qwen3vl_local/logs/shard_1.log
+tail -f ../result/qwen3vl_local/logs/shard_2.log
+
+# 查看所有分片日志
+tail -f ../result/qwen3vl_local/logs/shard_*.log
+
+# 检查进程状态
+ps aux | grep inference_qwen3vl_local
+```
+
+#### 步骤3: 合并结果
+
+```bash
+# 等待所有分片完成后，合并结果
+cd /ltstorage/home/4xin/image_table/RealHiTBench/inference
+
+python merge_shards.py \
+    --output_dir ../result/qwen3vl_local \
+    --model_name Qwen3-VL-8B-Instruct \
+    --modality image \
+    --num_shards 3
+
+# 查看合并结果
+cat ../result/qwen3vl_local/Qwen3-VL-8B-Instruct_image_merged/checkpoint_merged.json | jq '.aggregate_metrics'
+```
+
+### 7.4 分片参数说明
+
+| 参数 | 说明 | 示例 |
+|------|------|------|
+| `--shard_id` | 当前分片ID（从0开始） | `0`, `1`, `2` |
+| `--num_shards` | 总分片数（通常等于GPU数） | `3` |
+| `--skip_checkpoint` | 已有checkpoint文件路径，跳过已处理的ID | `path/to/checkpoint_batch.json` |
+
+**分片逻辑**：
+1. 加载所有queries
+2. 从 `--skip_checkpoint` 加载已处理的IDs并过滤
+3. 将剩余queries平均分成 `num_shards` 份
+4. 当前进程只处理第 `shard_id` 份数据
+5. 结果保存到独立目录：`model_name_modality_shard{id}/`
+
+### 7.5 输出目录结构
+
+```
+result/qwen3vl_local/
+├── Qwen3-VL-8B-Instruct_image/              # 原始单进程结果（1314个已完成）
+│   └── checkpoint_batch.json
+├── Qwen3-VL-8B-Instruct_image_shard0/       # Shard 0结果
+│   └── checkpoint_batch.json
+├── Qwen3-VL-8B-Instruct_image_shard1/       # Shard 1结果
+│   └── checkpoint_batch.json
+├── Qwen3-VL-8B-Instruct_image_shard2/       # Shard 2结果
+│   └── checkpoint_batch.json
+├── Qwen3-VL-8B-Instruct_image_merged/       # 合并后的最终结果
+│   └── checkpoint_merged.json               # 包含所有3071个queries
+└── logs/
+    ├── shard_0_20260128_012440.log
+    ├── shard_1_20260128_012442.log
+    └── shard_2_20260128_012444.log
+```
+
+### 7.6 性能对比
+
+| 方式 | GPU利用 | 时间（1700 queries） | 加速比 |
+|------|---------|---------------------|--------|
+| 单GPU | 1个 @100% | ~2-3小时 | 1x |
+| batch_size=3 | 1个 @100%，2个闲置 | ~2-3小时 | ❌ 无效 |
+| DataParallel | 1个 @100%，2个闲置 | ~2-3小时 | ❌ 无效 |
+| **多进程分片** | 3个 @30-40% | **~30-45分钟** | ✅ **3x** |
+
+### 7.7 注意事项
+
+⚠️ **重要**：
+- 使用 `--skip_checkpoint` 可避免重复处理已完成的数据
+- 每个GPU需要 ~17GB 显存（模型并行模式）
+- 启动脚本 `run_multi_gpu.sh` 已自动配置conda环境
+- 确保日志目录存在：`mkdir -p ../result/qwen3vl_local/logs`
+- 分片数量建议等于可用GPU数量
+
+### 7.8 其他modality的多进程并行
+
+#### Text-HTML 模态（3个GPU并行）
+
+```bash
+# 修改 run_multi_gpu.sh 中的参数或手动启动
+CUDA_VISIBLE_DEVICES=0 python inference_qwen3vl_local.py \
+    --modality text --format html \
+    --shard_id 0 --num_shards 3 \
+    [其他参数...] &
+
+CUDA_VISIBLE_DEVICES=1 python inference_qwen3vl_local.py \
+    --modality text --format html \
+    --shard_id 1 --num_shards 3 \
+    [其他参数...] &
+
+CUDA_VISIBLE_DEVICES=2 python inference_qwen3vl_local.py \
+    --modality text --format html \
+    --shard_id 2 --num_shards 3 \
+    [其他参数...] &
+
+# 合并结果
+python merge_shards.py --modality text --format html --num_shards 3
+```
+
+---
+
+## 8. 参数说明
+
+### 8.1 必需参数
 
 | 参数 | 说明 | 示例 |
 |------|------|------|
@@ -366,21 +561,30 @@ nohup bash -c 'CUDA_VISIBLE_DEVICES=0,1,2 python inference_qwen3vl_local.py \
 | `--qa_path` | QA JSON文件目录 | `/ltstorage/home/4xin/image_table/RealHiTBench/data` |
 | `--modality` | 输入模态 | `image` / `text` / `mix` |
 
-### 7.2 模态相关参数
+### 8.2 模态相关参数
 
 | 参数 | 适用模态 | 说明 | 可选值 |
 |------|---------|------|--------|
 | `--format` | text, mix | 表格文本格式 | `html` / `latex` / `markdown` / `csv` |
 
-### 7.3 性能优化参数
+### 8.3 性能优化参数
 
 | 参数 | 默认值 | 说明 |
 |------|-------|------|
 | `--batch_size` | 1 | 批量大小（>1开启批量推理） |
 | `--use_flash_attn` | True | 使用Flash Attention 2 |
 | `--no_flash_attn` | - | 禁用Flash Attention |
+| `--use_model_parallel` | False | 使用模型并行（device_map='auto'） |
 
-### 7.4 生成参数（Qwen3-VL官方推荐）
+### 8.4 多进程分片参数（新增）
+
+| 参数 | 默认值 | 说明 |
+|------|-------|------|
+| `--shard_id` | None | 当前分片ID（0, 1, 2, ...） |
+| `--num_shards` | None | 总分片数（通常等于GPU数） |
+| `--skip_checkpoint` | None | 已有checkpoint文件路径（跳过已处理ID） |
+
+### 8.5 生成参数（Qwen3-VL官方推荐）
 
 | 参数 | 默认值 | 说明 |
 |------|-------|------|
@@ -391,7 +595,7 @@ nohup bash -c 'CUDA_VISIBLE_DEVICES=0,1,2 python inference_qwen3vl_local.py \
 | `--presence_penalty` | 1.5 | 存在惩罚 |
 | `--max_tokens` | 32768 | 最大生成token数 |
 
-### 7.5 测试与调试参数
+### 8.6 测试与调试参数
 
 | 参数 | 默认值 | 说明 |
 |------|-------|------|
@@ -637,5 +841,11 @@ result/qwen3vl_local/
 
 ---
 
-**最后更新**：2026-01-27  
-**适用版本**：修复后的inference_qwen3vl_local.py（图片格式修复 + Qwen官方推荐参数）
+**最后更新**：2026-01-28  
+**适用版本**：修复后的inference_qwen3vl_local.py  
+**新增功能**：
+- 图片格式修复（PIL大图片支持）
+- Qwen官方推荐参数
+- 多进程分片并行（`--shard_id`, `--num_shards`, `--skip_checkpoint`）
+- 自动化启动脚本（`run_multi_gpu.sh`）
+- 结果合并工具（`merge_shards.py`）

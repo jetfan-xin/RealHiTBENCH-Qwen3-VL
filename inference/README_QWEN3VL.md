@@ -628,10 +628,67 @@ EOF
 
 ### 并行加速
 
-使用多 GPU 并行评测可加速 3-4 倍：
+#### 方式一：多进程分片（推荐）⭐
+
+**每个GPU运行独立进程，真正的多GPU并行推理**
 
 ```bash
-# 同时在 4 个 GPU 上运行
+cd /ltstorage/home/4xin/image_table/RealHiTBench/inference
+
+# 使用启动脚本（推荐）
+./run_multi_gpu.sh
+
+# 或手动启动每个GPU进程
+# GPU 0 - Shard 0
+CUDA_VISIBLE_DEVICES=0 nohup python inference_qwen3vl_local.py \
+    --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct \
+    --data_path /mnt/data1/users/4xin/RealHiTBench \
+    --qa_path /ltstorage/home/4xin/image_table/RealHiTBench/data \
+    --modality image --batch_size 1 \
+    --use_flash_attn --use_model_parallel --resume \
+    --shard_id 0 --num_shards 3 \
+    --skip_checkpoint ../result/qwen3vl_local/Qwen3-VL-8B-Instruct_image/checkpoint_batch.json \
+    > ../result/qwen3vl_local/logs/shard_0.log 2>&1 &
+
+# GPU 1 - Shard 1
+CUDA_VISIBLE_DEVICES=1 nohup python inference_qwen3vl_local.py \
+    --shard_id 1 --num_shards 3 \
+    [其他参数同上] > ../result/qwen3vl_local/logs/shard_1.log 2>&1 &
+
+# GPU 2 - Shard 2
+CUDA_VISIBLE_DEVICES=2 nohup python inference_qwen3vl_local.py \
+    --shard_id 2 --num_shards 3 \
+    [其他参数同上] > ../result/qwen3vl_local/logs/shard_2.log 2>&1 &
+
+# 监控进度
+tail -f ../result/qwen3vl_local/logs/shard_*.log
+watch -n 1 gpustat
+
+# 推理完成后合并结果
+python merge_shards.py --num_shards 3
+```
+
+**优势**：
+- ✅ 真正的多GPU计算（每个GPU 30-40%利用率）
+- ✅ 3倍加速（3个GPU同时推理）
+- ✅ 自动跳过已处理数据
+- ✅ 独立进程，更稳定
+- ✅ 每个分片独立checkpoint
+
+**输出**：
+- 分片结果：`result/qwen3vl_local/Qwen3-VL-8B-Instruct_image_shard{0,1,2}/`
+- 合并结果：`result/qwen3vl_local/Qwen3-VL-8B-Instruct_image_merged/`
+
+**预计时间**：1700个queries，3个GPU并行 ≈ **30-45分钟**（单GPU要2-3小时）
+
+---
+
+#### 方式二：多任务并行
+
+同时在多个GPU上运行不同任务（如不同modality）：
+
+```bash
+# 同时在 4 个 GPU 上运行不同任务
 CUDA_VISIBLE_DEVICES=0 python ... --modality image > eval_image.log 2>&1 &
 CUDA_VISIBLE_DEVICES=1 python ... --modality text --format html > eval_html.log 2>&1 &
 CUDA_VISIBLE_DEVICES=2 python ... --modality text --format latex > eval_latex.log 2>&1 &
@@ -681,7 +738,12 @@ CUDA_VISIBLE_DEVICES=4 python ... --modality mix --format latex > eval_mix.log 2
 
 ---
 
-**最后更新**：2026-01-27
+**最后更新**：2026-01-28
 **验证环境**：PyTorch 2.9.1+cu128, Transformers 4.57.6
-**Bug 修复**：OOM 处理、评估提示关键字、依赖版本冲突
-**新增功能**：ProcessingTime 追踪、BeautifulSoup4 支持
+**Bug 修复**：OOM 处理、评估提示关键字、依赖版本冲突、PIL大图片支持
+**新增功能**：
+- ProcessingTime 追踪
+- BeautifulSoup4 支持
+- 多进程分片并行（`--shard_id`, `--num_shards`, `--skip_checkpoint`）
+- 自动化启动脚本（`run_multi_gpu.sh`）
+- 结果合并工具（`merge_shards.py`）

@@ -1,7 +1,7 @@
 """
 Local inference script for Qwen3-VL on RealHiTBench dataset.
 Supports three input modalities: image-only, text-only, and image+text (mix).
-Uses local model with multi-GPU support via device_map="auto".
+Uses DataParallel for multi-GPU data parallelism (each GPU processes different batch items simultaneously).
 
 Usage:
     # Image-only
@@ -13,12 +13,22 @@ Usage:
     # Image+Text (mix)
     python inference_qwen3vl_local.py --modality mix --model_dir /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct --format latex
 
-    # Specify GPUs
-    CUDA_VISIBLE_DEVICES=0,1 python inference_qwen3vl_local.py --modality image --model_dir /path/to/model
+    # Specify GPUs (model will be replicated across all visible GPUs)
+    CUDA_VISIBLE_DEVICES=0,1,2,3 python inference_qwen3vl_local.py --modality image --model_dir /path/to/model --batch_size 4
+    
+    # Use model parallelism instead (for models that don't fit in single GPU)
+    CUDA_VISIBLE_DEVICES=0,1 python inference_qwen3vl_local.py --modality image --model_dir /path/to/model --use_model_parallel
 """
 
 import sys
 import os
+
+# CRITICAL: Disable PIL decompression bomb check BEFORE any other imports
+# This must be done before transformers/PIL are imported anywhere
+# Some table images in RealHiTBench have 233M pixels (exceeds default 178M limit)
+from PIL import Image
+Image.MAX_IMAGE_PIXELS = None  # Allow arbitrarily large images
+
 base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(base_dir)
 
@@ -30,7 +40,6 @@ import re
 import time
 import torch
 from tqdm import tqdm
-from PIL import Image
 from matplotlib import pyplot as plt
 from concurrent.futures import ThreadPoolExecutor
 from typing import List, Dict, Any, Tuple
@@ -64,47 +73,88 @@ FILE_EXTENSIONS = {
 # Global model and processor (loaded once)
 _model = None
 _processor = None
+_use_data_parallel = False  # Track if DataParallel is used
 
 
-def load_qwen3_vl_local(model_dir, use_flash_attn=True):
+def load_qwen3_vl_local(model_dir, use_flash_attn=True, use_model_parallel=False):
     """
     Load local Qwen3-VL model with multi-GPU support.
     
     Args:
         model_dir: Path to local model directory
         use_flash_attn: Whether to use Flash Attention 2 for better memory efficiency
+        use_model_parallel: If True, use device_map="auto" (pipeline parallelism);
+                           If False (default), use DataParallel (data parallelism - all GPUs compute simultaneously)
     
     Returns:
         model, processor tuple
     """
-    global _model, _processor
+    global _model, _processor, _use_data_parallel
     
     if _model is not None and _processor is not None:
         return _model, _processor
     
     from transformers import Qwen3VLForConditionalGeneration, AutoProcessor
     
+    num_gpus = torch.cuda.device_count()
     print(f"Loading Qwen3-VL model from {model_dir}...")
-    print(f"Available GPUs: {torch.cuda.device_count()}")
+    print(f"Available GPUs: {num_gpus}")
     
-    # Load model with automatic multi-GPU distribution
     attn_impl = "flash_attention_2" if use_flash_attn else "sdpa"
-    try:
-        _model = Qwen3VLForConditionalGeneration.from_pretrained(
-            model_dir,
-            torch_dtype=torch.bfloat16,
-            attn_implementation=attn_impl,
-            device_map="auto"  # Automatically distributes across available GPUs
-        )
-        print(f"Model loaded with {attn_impl} attention")
-    except Exception as e:
-        print(f"Warning: Could not load with {attn_impl}: {e}")
-        print("Falling back to default attention implementation...")
-        _model = Qwen3VLForConditionalGeneration.from_pretrained(
-            model_dir,
-            torch_dtype=torch.bfloat16,
-            device_map="auto"
-        )
+    
+    if use_model_parallel:
+        # Model parallelism: distribute layers across GPUs (original behavior)
+        # Use this when single GPU cannot hold the model
+        print("Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs")
+        try:
+            _model = Qwen3VLForConditionalGeneration.from_pretrained(
+                model_dir,
+                torch_dtype=torch.bfloat16,
+                attn_implementation=attn_impl,
+                device_map="auto"
+            )
+            print(f"Model loaded with {attn_impl} attention")
+        except Exception as e:
+            print(f"Warning: Could not load with {attn_impl}: {e}")
+            print("Falling back to default attention implementation...")
+            _model = Qwen3VLForConditionalGeneration.from_pretrained(
+                model_dir,
+                torch_dtype=torch.bfloat16,
+                device_map="auto"
+            )
+        _use_data_parallel = False
+        if hasattr(_model, 'hf_device_map'):
+            devices = set(_model.hf_device_map.values())
+            print(f"Model distributed across devices: {devices}")
+    else:
+        # Data parallelism: replicate model on each GPU, each processes different batch items
+        # All GPUs compute simultaneously for maximum throughput
+        print("Using DATA PARALLELISM (DataParallel) - all GPUs compute simultaneously")
+        try:
+            # First load model to single GPU (cuda:0)
+            _model = Qwen3VLForConditionalGeneration.from_pretrained(
+                model_dir,
+                torch_dtype=torch.bfloat16,
+                attn_implementation=attn_impl,
+            ).cuda()  # Load to cuda:0
+            print(f"Model loaded with {attn_impl} attention on cuda:0")
+        except Exception as e:
+            print(f"Warning: Could not load with {attn_impl}: {e}")
+            print("Falling back to default attention implementation...")
+            _model = Qwen3VLForConditionalGeneration.from_pretrained(
+                model_dir,
+                torch_dtype=torch.bfloat16,
+            ).cuda()
+        
+        # Wrap with DataParallel if multiple GPUs available
+        if num_gpus > 1:
+            print(f"Wrapping model with DataParallel across {num_gpus} GPUs")
+            _model = torch.nn.DataParallel(_model)
+            _use_data_parallel = True
+            print(f"DataParallel enabled on devices: {list(range(num_gpus))}")
+        else:
+            print("Single GPU detected, DataParallel not needed")
+            _use_data_parallel = False
     
     # Configure processor with dynamic resolution settings
     # Qwen3-VL supports dynamic resolution - let it decide how to handle large images
@@ -117,12 +167,25 @@ def load_qwen3_vl_local(model_dir, use_flash_attn=True):
     )
     print(f"Processor configured with dynamic resolution: min_pixels={256*28*28}, max_pixels={2048*28*28}")
     
-    # Print model distribution info
-    if hasattr(_model, 'hf_device_map'):
-        devices = set(_model.hf_device_map.values())
-        print(f"Model distributed across devices: {devices}")
-    
     return _model, _processor
+
+
+def get_base_model(model):
+    """Get the base model from DataParallel wrapper if needed."""
+    if isinstance(model, torch.nn.DataParallel):
+        return model.module
+    return model
+
+
+def get_model_device(model):
+    """Get the device of the model (first device for DataParallel)."""
+    if isinstance(model, torch.nn.DataParallel):
+        return torch.device('cuda:0')
+    elif hasattr(model, 'device'):
+        return model.device
+    else:
+        # For models with device_map, get first parameter's device
+        return next(model.parameters()).device
 
 
 def get_text_response_local(messages_text: str, model, processor, opt, max_tokens=4096):
@@ -158,7 +221,8 @@ def get_text_response_local(messages_text: str, model, processor, opt, max_token
             return_dict=True,
             return_tensors="pt"
         )
-        inputs = inputs.to(model.device)
+        device = get_model_device(model)
+        inputs = inputs.to(device)
         
         # Log token count for debugging large inputs
         input_tokens = inputs.input_ids.shape[1]
@@ -325,16 +389,17 @@ def get_batch_image_response_local(
             image_grid_thw_list.append(inputs['image_grid_thw'])
     
     # Stack into batch tensors
+    device = get_model_device(model)
     batch_inputs = {
-        'input_ids': torch.cat(padded_input_ids, dim=0).to(model.device),
-        'attention_mask': torch.cat(padded_attention_mask, dim=0).to(model.device),
+        'input_ids': torch.cat(padded_input_ids, dim=0).to(device),
+        'attention_mask': torch.cat(padded_attention_mask, dim=0).to(device),
     }
     
     # Handle pixel values (may have different shapes per image)
     if pixel_values_list:
-        batch_inputs['pixel_values'] = torch.cat(pixel_values_list, dim=0).to(model.device)
+        batch_inputs['pixel_values'] = torch.cat(pixel_values_list, dim=0).to(device)
     if image_grid_thw_list:
-        batch_inputs['image_grid_thw'] = torch.cat(image_grid_thw_list, dim=0).to(model.device)
+        batch_inputs['image_grid_thw'] = torch.cat(image_grid_thw_list, dim=0).to(device)
     
     # Generate with Qwen3-VL recommended settings
     with torch.no_grad():
@@ -354,7 +419,9 @@ def get_batch_image_response_local(
         else:
             generate_kwargs["do_sample"] = False
         
-        generated_ids = model.generate(**generate_kwargs)
+        # Use base model for generate (unwrap DataParallel if needed)
+        base_model = get_base_model(model)
+        generated_ids = base_model.generate(**generate_kwargs)
     
     # Decode outputs
     input_lengths = [inputs['input_ids'].shape[1] + (max_len - inputs['input_ids'].shape[1]) 
@@ -437,9 +504,10 @@ def get_batch_text_response_local(
         padded_attention_mask.append(padded_mask)
     
     # Stack into batch
+    device = get_model_device(model)
     batch_inputs = {
-        'input_ids': torch.cat(padded_input_ids, dim=0).to(model.device),
-        'attention_mask': torch.cat(padded_attention_mask, dim=0).to(model.device),
+        'input_ids': torch.cat(padded_input_ids, dim=0).to(device),
+        'attention_mask': torch.cat(padded_attention_mask, dim=0).to(device),
     }
     
     # Generate with Qwen3-VL recommended settings
@@ -460,7 +528,9 @@ def get_batch_text_response_local(
         else:
             generate_kwargs["do_sample"] = False
         
-        generated_ids = model.generate(**generate_kwargs)
+        # Use base model for generate (unwrap DataParallel if needed)
+        base_model = get_base_model(model)
+        generated_ids = base_model.generate(**generate_kwargs)
     
     # Decode outputs
     output_texts = []
@@ -592,7 +662,8 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
             return_dict=True,
             return_tensors="pt"
         )
-        inputs = inputs.to(model.device)
+        device = get_model_device(model)
+        inputs = inputs.to(device)
         
         # Log token count for debugging large images
         input_tokens = inputs.input_ids.shape[1]
@@ -616,7 +687,9 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
             else:
                 generate_kwargs["do_sample"] = False
             
-            generated_ids = model.generate(**generate_kwargs)
+            # Use base model for generate (unwrap DataParallel if needed)
+            base_model = get_base_model(model)
+            generated_ids = base_model.generate(**generate_kwargs)
         
         # Decode output (remove input tokens)
         generated_ids_trimmed = [
@@ -1006,7 +1079,8 @@ def gen_solution_batch(opt):
     # Load model
     model, processor = load_qwen3_vl_local(
         opt.model_dir, 
-        use_flash_attn=opt.use_flash_attn
+        use_flash_attn=opt.use_flash_attn,
+        use_model_parallel=opt.use_model_parallel
     )
     
     # Initialize metric
@@ -1030,6 +1104,27 @@ def gen_solution_batch(opt):
         querys = querys[:opt.max_queries]
         print(f"Limited to {len(querys)} queries")
     
+    # Load IDs to skip from external checkpoint (for multi-process sharding)
+    skip_ids = set()
+    if opt.skip_checkpoint and os.path.exists(opt.skip_checkpoint):
+        with open(opt.skip_checkpoint, 'r') as f:
+            skip_data = json.load(f)
+            skip_ids = set(skip_data.get('processed_ids', []))
+        print(f"Loaded {len(skip_ids)} processed IDs to skip from: {opt.skip_checkpoint}")
+    
+    # Apply sharding if specified (for multi-process parallelism)
+    if opt.shard_id is not None and opt.num_shards is not None:
+        # First filter out already processed
+        querys = [q for q in querys if q['id'] not in skip_ids]
+        
+        # Then split into shards
+        total_queries = len(querys)
+        shard_size = (total_queries + opt.num_shards - 1) // opt.num_shards
+        shard_start = opt.shard_id * shard_size
+        shard_end = min(shard_start + shard_size, total_queries)
+        querys = querys[shard_start:shard_end]
+        print(f"Shard {opt.shard_id}/{opt.num_shards}: Processing queries {shard_start+1}-{shard_end} ({len(querys)} queries)")
+    
     # Setup output directory
     model_name = os.path.basename(opt.model_dir)
     output_base = os.path.abspath(f'../result/qwen3vl_local')
@@ -1040,7 +1135,10 @@ def gen_solution_batch(opt):
     if opt.modality != 'image':
         modality_suffix += f"_{opt.format}"
     
+    # Add shard suffix to output path for multi-process mode
     output_file_path = f'{output_base}/{model_name}_{modality_suffix}'
+    if opt.shard_id is not None:
+        output_file_path = f'{output_file_path}_shard{opt.shard_id}'
     if not os.path.exists(output_file_path):
         os.makedirs(output_file_path, exist_ok=True)
     
@@ -1061,8 +1159,9 @@ def gen_solution_batch(opt):
             processed_ids = set(checkpoint_data.get('processed_ids', []))
         print(f"Resuming from checkpoint with {len(processed_ids)} processed queries")
     
-    # Filter out already processed queries
+    # Filter out already processed queries (from own checkpoint)
     pending_queries = [q for q in querys if q['id'] not in processed_ids]
+    print(f"Pending queries after filtering: {len(pending_queries)}")
     
     # Process in batches
     total_batches = (len(pending_queries) + opt.batch_size - 1) // opt.batch_size
@@ -1175,9 +1274,8 @@ def gen_solution_batch(opt):
         for key, value in metrics.items():
             print(f"    {key}: {value:.4f}" if isinstance(value, float) else f"    {key}: {value}")
     
-    # Clean up checkpoint
-    if os.path.exists(checkpoint_file):
-        os.remove(checkpoint_file)
+    # Keep checkpoint file as backup (contains all results and processed IDs)
+    print(f"Checkpoint preserved at: {checkpoint_file}")
     
     return final_results
 
@@ -1189,7 +1287,8 @@ def gen_solution(opt):
     # Load model
     model, processor = load_qwen3_vl_local(
         opt.model_dir, 
-        use_flash_attn=opt.use_flash_attn
+        use_flash_attn=opt.use_flash_attn,
+        use_model_parallel=opt.use_model_parallel
     )
     
     # Initialize metric
@@ -1213,6 +1312,27 @@ def gen_solution(opt):
         querys = querys[:opt.max_queries]
         print(f"Limited to {len(querys)} queries")
     
+    # Load IDs to skip from external checkpoint (for multi-process sharding)
+    skip_ids = set()
+    if opt.skip_checkpoint and os.path.exists(opt.skip_checkpoint):
+        with open(opt.skip_checkpoint, 'r') as f:
+            skip_data = json.load(f)
+            skip_ids = set(skip_data.get('processed_ids', []))
+        print(f"Loaded {len(skip_ids)} processed IDs to skip from: {opt.skip_checkpoint}")
+    
+    # Apply sharding if specified (for multi-process parallelism)
+    if opt.shard_id is not None and opt.num_shards is not None:
+        # First filter out already processed
+        querys = [q for q in querys if q['id'] not in skip_ids]
+        
+        # Then split into shards
+        total_queries = len(querys)
+        shard_size = (total_queries + opt.num_shards - 1) // opt.num_shards
+        shard_start = opt.shard_id * shard_size
+        shard_end = min(shard_start + shard_size, total_queries)
+        querys = querys[shard_start:shard_end]
+        print(f"Shard {opt.shard_id}/{opt.num_shards}: Processing queries {shard_start+1}-{shard_end} ({len(querys)} queries)")
+    
     # Setup output directory
     model_name = os.path.basename(opt.model_dir)
     output_base = os.path.abspath(f'../result/qwen3vl_local')
@@ -1223,7 +1343,10 @@ def gen_solution(opt):
     if opt.modality != 'image':
         modality_suffix += f"_{opt.format}"
     
+    # Add shard suffix to output path for multi-process mode
     output_file_path = f'{output_base}/{model_name}_{modality_suffix}'
+    if opt.shard_id is not None:
+        output_file_path = f'{output_file_path}_shard{opt.shard_id}'
     if not os.path.exists(output_file_path):
         os.makedirs(output_file_path, exist_ok=True)
     
@@ -1439,9 +1562,8 @@ def gen_solution(opt):
         for key, value in metrics.items():
             print(f"    {key}: {value:.4f}" if isinstance(value, float) else f"    {key}: {value}")
     
-    # Clean up checkpoint
-    if os.path.exists(checkpoint_file):
-        os.remove(checkpoint_file)
+    # Keep checkpoint file as backup (contains all results and processed IDs)
+    print(f"Checkpoint preserved at: {checkpoint_file}")
     
     return final_results
 
@@ -1457,6 +1579,10 @@ def main():
                         help='Use Flash Attention 2 (default: True)')
     parser.add_argument('--no_flash_attn', action='store_false', dest='use_flash_attn',
                         help='Disable Flash Attention 2')
+    parser.add_argument('--use_model_parallel', action='store_true', default=False,
+                        help='Use model parallelism (device_map="auto") instead of DataParallel. '
+                             'Use this if model does not fit in single GPU memory. '
+                             'Default: False (uses DataParallel for true multi-GPU parallel compute)')
     
     # Generation settings (Qwen3-VL Instruct recommended: temp=0.7, top_p=0.8, top_k=20)
     parser.add_argument('--temperature', type=float, default=0.7,
@@ -1500,6 +1626,14 @@ def main():
     parser.add_argument('--max_queries', type=int, default=-1,
                         help='Maximum number of queries to process (-1 for all)')
     
+    # Multi-process sharding for true multi-GPU parallelism
+    parser.add_argument('--shard_id', type=int, default=None,
+                        help='Shard ID for multi-process parallel (0, 1, 2, ...). Each shard runs on separate GPU.')
+    parser.add_argument('--num_shards', type=int, default=None,
+                        help='Total number of shards for multi-process parallel')
+    parser.add_argument('--skip_checkpoint', type=str, default=None,
+                        help='Path to existing checkpoint file to load already processed IDs to skip')
+    
     # Evaluation settings
     parser.add_argument('--eval_api_key', type=str, default=None,
                         help='API key for GPT evaluation (optional)')
@@ -1514,12 +1648,23 @@ def main():
     if not os.path.exists(opt.data_path):
         raise ValueError(f"Data path not found: {opt.data_path}")
     
+    # Validate sharding parameters
+    if (opt.shard_id is not None) != (opt.num_shards is not None):
+        raise ValueError("--shard_id and --num_shards must be used together")
+    if opt.shard_id is not None and (opt.shard_id < 0 or opt.shard_id >= opt.num_shards):
+        raise ValueError(f"--shard_id must be in range [0, {opt.num_shards-1}]")
+    
     print(f"Configuration:")
     print(f"  Model: {opt.model_dir}")
     print(f"  Modality: {opt.modality}")
     print(f"  Format: {opt.format}")
     print(f"  Data path: {opt.data_path}")
     print(f"  Use Flash Attention: {opt.use_flash_attn}")
+    print(f"  Multi-GPU Mode: {'Model Parallel (device_map=auto)' if opt.use_model_parallel else 'Data Parallel (DataParallel)'}")
+    if opt.shard_id is not None:
+        print(f"  Sharding: Shard {opt.shard_id + 1}/{opt.num_shards}")
+    if opt.skip_checkpoint:
+        print(f"  Skip checkpoint: {opt.skip_checkpoint}")
     print(f"  Generation Settings (Qwen3-VL Instruct Recommended):")
     print(f"    Temperature: {opt.temperature}")
     print(f"    Top-p: {opt.top_p}")
