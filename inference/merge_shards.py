@@ -65,20 +65,52 @@ def merge_shard_results(output_base, model_name, modality, num_shards, format_ty
     merged_dir = f'{output_base}/{model_name}_{modality_suffix}_merged'
     os.makedirs(merged_dir, exist_ok=True)
     
-    # Calculate aggregate metrics
-    metric_totals = defaultdict(float)
-    metric_counts = defaultdict(int)
+    # Calculate aggregate metrics grouped by task type (QuestionType)
+    task_metric_totals = defaultdict(lambda: defaultdict(float))
+    task_metric_counts = defaultdict(lambda: defaultdict(int))
     
     for result in all_results:
+        # Get task type, default to 'Unknown' if not present
+        task_type = result.get('QuestionType', 'Unknown')
+        
+        # Process metrics from the 'Metrics' sub-dictionary if present
+        if 'Metrics' in result and isinstance(result['Metrics'], dict):
+            for metric_name, metric_value in result['Metrics'].items():
+                # Convert boolean to numeric (True->1, False->0)
+                if isinstance(metric_value, bool):
+                    metric_value = 1.0 if metric_value else 0.0
+                # Convert string 'true'/'false' to numeric
+                elif isinstance(metric_value, str):
+                    if metric_value.lower() == 'true':
+                        metric_value = 1.0
+                    elif metric_value.lower() == 'false':
+                        metric_value = 0.0
+                    else:
+                        try:
+                            metric_value = float(metric_value)
+                        except (ValueError, TypeError):
+                            continue
+                
+                if isinstance(metric_value, (int, float)):
+                    task_metric_totals[task_type][metric_name] += metric_value
+                    task_metric_counts[task_type][metric_name] += 1
+        
+        # Also process top-level numeric fields (like ProcessingTime)
         for key, value in result.items():
-            if isinstance(value, (int, float)) and key not in ['id']:
-                metric_totals[key] += value
-                metric_counts[key] += 1
+            if key in ['ProcessingTime'] and isinstance(value, (int, float)):
+                task_metric_totals[task_type][key] += value
+                task_metric_counts[task_type][key] += 1
     
+    # Calculate averages for each task type
     avg_metrics = {}
-    for key in metric_totals:
-        if metric_counts[key] > 0:
-            avg_metrics[key] = metric_totals[key] / metric_counts[key]
+    for task_type in task_metric_totals:
+        avg_metrics[task_type] = {}
+        for metric_name in task_metric_totals[task_type]:
+            if task_metric_counts[task_type][metric_name] > 0:
+                avg_metrics[task_type][metric_name] = (
+                    task_metric_totals[task_type][metric_name] / 
+                    task_metric_counts[task_type][metric_name]
+                )
     
     # Save merged checkpoint
     merged_checkpoint = {
@@ -96,9 +128,11 @@ def merge_shard_results(output_base, model_name, modality, num_shards, format_ty
     print(f"  Output: {merged_dir}/checkpoint_merged.json")
     
     if avg_metrics:
-        print(f"\nAggregate metrics:")
-        for key, value in sorted(avg_metrics.items()):
-            print(f"  {key}: {value:.4f}")
+        print(f"\nAggregate metrics by task type:")
+        for task_type in sorted(avg_metrics.keys()):
+            print(f"\n  {task_type}:")
+            for metric_name, metric_value in sorted(avg_metrics[task_type].items()):
+                print(f"    {metric_name}: {metric_value:.4f}")
     
     return merged_checkpoint
 
