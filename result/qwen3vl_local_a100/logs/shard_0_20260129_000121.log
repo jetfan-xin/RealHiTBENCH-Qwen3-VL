@@ -1,0 +1,1356 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: mix
+  Format: csv
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 1/4
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 32768
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.51s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.52s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.51s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.52s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Shard 0/4: Processing queries 1-768 (768 queries)
+Processing mix modality:   0%|          | 0/768 [00:00<?, ?it/s]Processing mix modality:   0%|          | 1/768 [00:03<42:14,  3.30s/it]Processing mix modality:   0%|          | 2/768 [00:04<28:15,  2.21s/it]Processing mix modality:   0%|          | 3/768 [00:06<23:38,  1.85s/it]Processing mix modality:   1%|          | 4/768 [00:07<22:12,  1.74s/it]Processing mix modality:   1%|          | 5/768 [00:09<22:23,  1.76s/it]Processing mix modality:   1%|          | 6/768 [00:19<58:43,  4.62s/it]Processing mix modality:   1%|          | 7/768 [00:21<46:05,  3.63s/it]Processing mix modality:   1%|          | 8/768 [00:23<38:32,  3.04s/it]Processing mix modality:   1%|          | 9/768 [00:25<36:14,  2.87s/it]Processing mix modality:   1%|▏         | 10/768 [00:27<32:37,  2.58s/it]Processing mix modality:   1%|▏         | 11/768 [00:28<27:35,  2.19s/it]Processing mix modality:   2%|▏         | 12/768 [00:30<27:01,  2.14s/it]Processing mix modality:   2%|▏         | 13/768 [00:32<23:45,  1.89s/it]Processing mix modality:   2%|▏         | 14/768 [00:33<22:11,  1.77s/it]Processing mix modality:   2%|▏         | 15/768 [00:44<54:46,  4.36s/it]
+============================================================
+Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['1953 61179']
+Answer:  ['1955 62170']
+Prediction: 1953, 61179
+Reference: 1955, 62170
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.30s
+
+============================================================
+Query ID: 2 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['1953']
+Answer:  ['1954']
+Prediction: 1953
+Reference: 1954
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['2022']
+Answer:  ['1953']
+Prediction: 2022
+Reference: 1953
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.43s
+
+============================================================
+Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['158772']
+Answer:  ['158772']
+Prediction: 158772
+Reference: 158772
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+
+============================================================
+Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['55 13']
+Answer:  ['58 16']
+Prediction: 5.55, 1.27
+Reference: 5.80, 1.62
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.79s
+
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: This table presents annual averages of the employment status of the civilian noninstitutional population from 1953 to 2023. Key columns include: "Civilian noninstitutional population" (total populatio...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.18s
+
+============================================================
+Query ID: 7 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  ['589 increasing trend']
+Answer:  ['predicted percentage for 1965 551']
+Prediction: 58.9, Increasing trend
+Reference: Predicted percentage for 1965: 55.12%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 8 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.99
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.78s
+
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: 1982, 1983, 2009, 2010, 2020
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.47s
+
+============================================================
+Query ID: 10 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['1983']
+Answer:  ['1983']
+Prediction: 1983
+Reference: 1983
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.95s
+Checkpoint saved: 10 queries processed
+
+============================================================
+Query ID: 11 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.29s
+
+============================================================
+Query ID: 12 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['4765 4765 4765']
+Answer:  ['39957']
+Prediction: 4765, 4765, 4765
+Reference: 3995.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 13 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.30s
+
+============================================================
+Query ID: 14 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['2020']
+Answer:  ['1986']
+Prediction: 2020
+Reference: 1986
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 15 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+years = [1985, 1987, 1989]
+civilian_population = [data.loc[data['Year'] == year, 'Civilian noninstitu- tional population'].iloc[0] for year in years]
+employed_population = [data.loc[data['Year'] == year, 'Employed Total'].iloc[0] for year in years]
+plt.bar(years, civilian_population, label='Civilian Population', color='blue')
+plt.bar(years, employed_population, bottom=civilian_population, label='Employed Population', color='green')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.title('Civilian Population and Employed Population (1985, 1987, 1989)')
+plt.legend()
+plt.show()
+
+Python Error: name 'data' is not defined
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ data = pd.read_excel("table.xlsx")
+ years = [1985, 1987, 1989]
+ civilian_population = [data.loc[data['Year'] == year, 'Civilian noninstitu- tion...
+Reference: [93736, 95853, 97630, 59891, 62107, 64315]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 10.39s
+
+============================================================
+Query ID: 16 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data
+df = pd.read_csv('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx')
+# Extract the relevant columns for men and women
+men_data = df[df['Men'].notna()]
+women_data = df[df['Women'].notna()]
+# Combine the data
+combined_data = pd.concat([men_data, women_data])
+# Extract the unemployment rate and total civilian labor force
+combined_data['Unemployment Rate'] = combined_data['Percent (Not in labor force)']
+combined_data['Total Civilian Labor Force'] = combined_data['Civilian labor force']
+# Create the scatter plot
+plt.scatter(combined_data['Total Civilian Labor Force'], combined_data['Unemployment Rate'])
+plt.xlabel('Total Civilian Labor Force')
+plt.ylabel('Unemployment Rate')
+plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')
+plt.show()
+
+Python Error: Processing mix modality:   2%|▏         | 16/768 [00:53<1:15:42,  6.04s/it]Processing mix modality:   2%|▏         | 17/768 [01:12<2:02:30,  9.79s/it]Processing mix modality:   2%|▏         | 18/768 [01:37<3:01:06, 14.49s/it]'utf-8' codec can't decode byte 0x87 in position 10: invalid start byte
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ # Load the data
+ df = pd.read_csv('table.xlsx')
+ # Extract the relevant columns for men and women
+ men_data = df[df['Men'].notna()]
+ women_data ...
+Reference: [[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 9.93s
+
+============================================================
+Query ID: 17 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+data = {
+"Year": ["1984"],
+"Men_Agriculture": [2668],
+"Men_Nonagricultural": [56423],
+"Women_Agriculture": [653],
+"Women_Nonagricultural": [45262]
+}
+
+df = pd.DataFrame(data)
+
+# Extract employment data for 1984
+men_agri = df.loc[0, "Men_Agriculture"]
+men_nonagri = df.loc[0, "Men_Nonagricultural"]
+women_agri = df.loc[0, "Women_Agriculture"]
+women_nonagri = df.loc[0, "Women_Nonagricultural"]
+
+# Combine data for pie chart
+employment_data = [
+{"Label": "Men - Agriculture", "Value": men_agri},
+{"Label": "Men - Nonagricultural", "Value": men_nonagri},
+{"Label": "Women - Agriculture", "Value": women_agri},
+{"Label": "Women - Nonagricultural", "Value": women_nonagri}
+]
+
+# Create pie chart
+labels = [item["Label"] for item in employment_data]
+sizes = [item["Value"] for item in employment_data]
+
+plt.figure(figsize=(8, 6))
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title('Employment Distribution by Sector in 1984')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.03, 0.54, 0.01, 0.43]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data
+data = {
+    "Year": ["1984"],
+    "Men_Agriculture": [2668],
+    "Men_Nonagricultural": [56423],
+    "Women_Agriculture": [653]...
+Reference: [0.05, 0.95]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 18.50s
+
+============================================================
+Query ID: 18 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+data = {
+'Year': [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990],
+'Total Employed (Men)': [56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104],
+'Total Employed (Women)': [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689],
+'Total Unemployed (Men)': [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906],
+'Total Unemployed (Women)': [4457, 3794, 3791, 3707, 3324, 3046, 3003, 3140]
+}
+
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(14, 7))
+plt.plot(df['Year'], df['Total Employed (Men)'], marker='o', label='Total Employed (Men)')
+plt.plot(df['Year'], df['Total Employed (Women)'], marker='s', label='Total Employed (Women)')
+plt.plot(df['Year'], df['Total Unemployed (Men)'], marker='^', label='Total Unemployed (Men)')
+plt.plot(df['Year'], df['Total Unemployed (Women)'], marker='D', label='Total Unemployed (Women)')
+
+plt.title('Trends of Total Employed and Unemployed Population from 1983 to 1990')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.legend()
+plt.grid(True)
+plt.xticks(df['Year'])
+plt.show()
+
+OUTPUT VALUE: [[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [4457, 3794, 3791, 3707, 3324, 3046, 3003, 3140]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data
+data = {
+    'Year': [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990],
+    'Total Employed (Men)': [56787, 59091, 59891, 60892, ...
+Reference: [[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 3046, 3003, 3140]]...
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 25.43s
+
+============================================================
+Query ID: 19 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (14169 tokens) for image (1490, 13664)
+Processing mix modality:   2%|▏         | 19/768 [01:41<2:21:27, 11.33s/it]Predictions:  ['161037']
+Answer:  ['161037']
+Prediction: 161037
+Reference: 161037
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.98s
+
+============================================================
+Query ID: 20 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (14165 tokens) for image (1490, 13664)
+Processing mix modality:   3%|▎         | 20/768 [01:45<1:50:44,  8.88s/it]Predictions:  ['25 to 54 years 35 to 44 years']
+Answer:  ['35 to 39 years 35 to 44 years']
+Prediction: 25 to 54 years, 35 to 44 years
+Reference: 35 to 39 years, 35 to 44 years
+Metrics: {'F1': 75.0, 'EM': 0.0, 'ROUGE-L': 75.0, 'SacreBLEU': 54.11}
+Processing Time: 3.18s
+Checkpoint saved: 20 queries processed
+
+============================================================
+Query ID: 21 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (14159 tokens) for image (1490, 13664)
+Processing mix modality:   3%|▎         | 21/768 [01:47<1:27:26,  7.02s/it]Predictions:  ['99826']
+Answer:  ['99826']
+Prediction: 99826
+Reference: 99826
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.69s
+
+============================================================
+Query ID: 22 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (14167 tokens) for image (1490, 13664)
+Processing mix modality:   3%|▎         | 22/768 [01:50<1:11:04,  5.72s/it]Predictions:  ['1000']
+Answer:  ['639']
+Prediction: 100.00
+Reference: 63.90
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.67s
+
+============================================================
+Query ID: 23 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large input (14277 tokens) for image (1490, 13664)
+Processing mix modality:   3%|▎         | 23/768 [02:00<1:28:09,  7.10s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create a DataFrame from the table data
+data = {
+'Category': ['Employed', 'Unemployed', 'Not in Labor Force'],
+'Count': [161037, 6080, 99826]
+}
+
+df = pd.DataFrame(data)
+
+# Create a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(df['Count'], labels=df['Category'], autopct='%1.1f%%', startangle=140)
+plt.title('Distribution of Civilian Non-Institutional Population (16 years and over)')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()
+
+OUTPUT VALUE: [0.6, 0.02, 0.37]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Create a DataFrame from the table data
+data = {
+    'Category': ['Employed', 'Unemployed', 'Not in Labor Force'],
+    'Count': [161037, 6080, ...
+Reference: [0.6, 0.02, 0.37]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 10.33s
+
+============================================================
+Query ID: 24 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large input (14253 tokens) for image (1490, 13664)
+Processing mix modality:   3%|▎         | 24/768 [02:15<1:56:19,  9.38s/it]Processing mix modality:   3%|▎         | 25/768 [02:17<1:28:23,  7.14s/it]Processing mix modality:   3%|▎         | 26/768 [02:24<1:27:05,  7.04s/it]Processing mix modality:   4%|▎         | 27/768 [02:34<1:39:28,  8.05s/it]Processing mix modality:   4%|▎         | 28/768 [02:35<1:14:08,  6.01s/it]Processing mix modality:   4%|▍         | 29/768 [02:37<57:31,  4.67s/it]  Processing mix modality:   4%|▍         | 30/768 [02:44<1:05:23,  5.32s/it]Processing mix modality:   4%|▍         | 31/768 [02:45<50:24,  4.10s/it]  Processing mix modality:   4%|▍         | 32/768 [02:46<40:40,  3.32s/it]Processing mix modality:   4%|▍         | 33/768 [02:48<33:50,  2.76s/it]Processing mix modality:   4%|▍         | 34/768 [02:49<27:17,  2.23s/it]Processing mix modality:   5%|▍         | 35/768 [03:00<1:00:33,  4.96s/it]Processing mix modality:   5%|▍         | 36/768 [03:01<46:36,  3.82s/it]  Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create a DataFrame from the table data
+data = {
+'Age Group': [
+'16 to 19 years', '20 to 24 years', '25 to 34 years', '35 to 44 years',
+'45 to 54 years', '55 to 64 years', '65 years and over'
+],
+'Unemployment Rate (%)': [
+11.2, 6.6, 3.9, 2.8, 2.5, 2.5, 2.8
+]
+}
+
+df = pd.DataFrame(data)
+
+# Create a bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df['Age Group'], df['Unemployment Rate (%)'], color='blue')
+plt.title('Unemployment Rates by Age Group (2023)')
+plt.xlabel('Age Group')
+plt.ylabel('Unemployment Rate (%)')
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+
+plt.show()
+
+OUTPUT VALUE: [11.2, 6.6, 3.9, 2.8, 2.5, 2.5, 2.8]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Create a DataFrame from the table data
+data = {
+    'Age Group': [
+        '16 to 19 years', '20 to 24 years', '25 to 34 years', '35 to 44 yea...
+Reference: [12.64, 12.016666666666666, 3.858333333333333, 12.0, 7.108333333333333, 4.841666666666667, 4.191666666666666, 3.341666666666667, 3.591666666666667, 3.091666666666667, 3.0416666666666665, 3.0083333333333333, 2.8166666666666664, 2.716666666666667, 2.6083333333333334, 2.6750000000000003, 2.625, 2.5749999999999997, 2.841666666666667, 2.966666666666667, 3.0083333333333333, 3.408333333333333]...
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 14.70s
+
+============================================================
+Query ID: 25 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['18 to 19 years 16 to 17 years']
+Answer:  ['16 to 17 years']
+Prediction: 18 to 19 years, 16 to 17 years
+Reference: 16 to 17 years
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 34.57}
+Processing Time: 1.91s
+
+============================================================
+Query ID: 26 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['15714 2892 1867 1026 1411 5034 1797 933 864 855 839 1543 733 810 1961 841 1119 4416 1329 1145 1942']
+Answer:  ['101529']
+Prediction: 15714, 2892, 1867, 1026, 1411, 5034, 1797, 933, 864, 855, 839, 1543, 733, 810, 1961, 841, 1119, 4416, 1329, 1145, 1942
+Reference: 101529
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 6.82s
+
+============================================================
+Query ID: 27 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['25 to 54 years 20 to 24 years 35 to 44 years 45 to 54 years 30 to 34 years 25 to 34 years 40 to 44 years 50 to 54 years 35 to 39 years 45 to 49 years 25 to 29 years 16 to 19 years 18 to 19 years 16 to 17 years 16 years and over 55 to 64 years 55 to 59 years 60 to 64 years 65 years and over 65 to 69 years 70 to 74 years 75 years and over']
+Answer:  ['45 to 49 years 40 to 44 years 35 to 39 years 35 to 44 years 25 to 54 years']
+Prediction: 25 to 54 years, 20 to 24 years, 35 to 44 years, 45 to 54 years, 30 to 34 years, 25 to 34 years, 40 to 44 years, 50 to 54 years, 35 to 39 years, 45 to 49 years, 25 to 29 years, 16 to 19 years, 18 to 19...
+Reference: 45 to 49 years, 40 to 44 years, 35 to 39 years, 35 to 44 years, 25 to 54 years
+Metrics: {'F1': 37.04, 'EM': 0.0, 'ROUGE-L': 29.63, 'SacreBLEU': 16.61}
+Processing Time: 10.41s
+
+============================================================
+Query ID: 28 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['68']
+Answer:  ['66']
+Prediction: 6.8
+Reference: 6.60
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 29 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['188 126']
+Answer:  ['188 126']
+Prediction: 188, 12.6
+Reference: 188, 12.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The Hispanic or Latino population aged 16 years and over shows a high labor force participation rate (66.9%), with a significant portion employed (63.8% of the civilian labor force). The unemployment ...
+Reference: The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.82s
+Checkpoint saved: 30 queries processed
+
+============================================================
+Query ID: 31 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['164287']
+Answer:  ['164287']
+Prediction: 164287
+Reference: 164287
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 32 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['2023 2022']
+Answer:  ['2023']
+Prediction: 2023, 2022
+Reference: 2023
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 33 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['2829 2829']
+Answer:  ['2829']
+Prediction: 2829, 2829
+Reference: 2829
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 34 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.99s
+
+============================================================
+Query ID: 35 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data
+data = {
+"Year": [2022, 2023],
+"Total": [263973, 266942],
+"White": [203214, 204515],
+"Black or African American": [34131, 34667],
+"Asian": [16933, 17591]
+}
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.plot(df['Year'], df['Total'], marker='o', label='Total Civilian Noninstitutional Population')
+plt.title('Trend in Total Civilian Noninstitutional Population from 2022 to 2023')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.legend()
+plt.grid(True)
+plt.xticks(df['Year'])
+plt.show()
+
+OUTPUT VALUE: [[263973, 266942]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data
+data = {
+    "Year": [2022, 2023],
+    "Total": [263973, 266942],
+    "White": [203214, 204515],
+    "Black or African American":...
+Reference: [[263973.0, 266942.0]]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 11.32s
+
+============================================================
+Query ID: 36 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['543']
+Answer:  ['543']
+Prediction: 543
+Reference: 543
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.17s
+
+============================================================
+Query ID: 37 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['men 16 years and over women 16 years and over']
+Answer:  ['men women']
+Prediction: Men, 16 years and over, Women, 16 years and over
+Reference: Men, Women
+Processing mix modality:   5%|▍         | 37/768 [03:03<39:06,  3.21s/it]Processing mix modality:   5%|▍         | 38/768 [03:05<32:14,  2.65s/it]Processing mix modality:   5%|▌         | 39/768 [03:06<28:20,  2.33s/it]Processing mix modality:   5%|▌         | 40/768 [03:08<25:38,  2.11s/it]Processing mix modality:   5%|▌         | 41/768 [03:21<1:04:29,  5.32s/it]Processing mix modality:   5%|▌         | 42/768 [03:22<50:53,  4.21s/it]  Processing mix modality:   6%|▌         | 43/768 [03:23<40:18,  3.34s/it]Processing mix modality:   6%|▌         | 44/768 [03:25<33:48,  2.80s/it]Processing mix modality:   6%|▌         | 45/768 [03:26<27:39,  2.29s/it]Processing mix modality:   6%|▌         | 46/768 [03:37<59:17,  4.93s/it]Processing mix modality:   6%|▌         | 47/768 [03:38<45:40,  3.80s/it]Processing mix modality:   6%|▋         | 48/768 [03:39<36:02,  3.00s/it]Processing mix modality:   6%|▋         | 49/768 [03:41<29:39,  2.47s/it]Processing mix modality:   7%|▋         | 50/768 [03:42<25:03,  2.09s/it]Processing mix modality:   7%|▋         | 51/768 [03:44<23:43,  1.99s/it]Processing mix modality:   7%|▋         | 52/768 [03:51<44:34,  3.74s/it]Processing mix modality:   7%|▋         | 53/768 [03:53<37:10,  3.12s/it]Processing mix modality:   7%|▋         | 54/768 [03:55<30:59,  2.60s/it]Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 4.99}
+Processing Time: 1.79s
+
+============================================================
+Query ID: 38 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['4135 0']
+Answer:  ['4135']
+Prediction: 4135, 0
+Reference: 4135
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 39 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['1332 1341']
+Answer:  ['1332']
+Prediction: 133.2, 134.1
+Reference: 133.2
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 40 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['574 574']
+Answer:  ['mean 2022 622 median 2022 629 mean 2023 628 median 2023 640']
+Prediction: 57.35, 57.35
+Reference: Mean 2022: 62.25, Median 2022: 62.85, Mean 2023: 62.77, Median 2023: 64.00
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.60s
+Checkpoint saved: 40 queries processed
+
+============================================================
+Query ID: 41 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual averages of employment status for the Hispanic or Latino population by sex, age, and detailed ethnic group (Total, Mexican, Puerto Rican, Cuban) for 2022 and 2023. Main colum...
+Reference: The dataset provides statistics on the employment status of the Hispanic or Latino population segmented by gender and year (2022 and 2023). The main columns include 'Category' (e.g., population, labor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 12.81s
+
+============================================================
+Query ID: 42 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['39357 24720']
+Answer:  ['39357']
+Prediction: 39357, 24720
+Reference: 39357
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.60s
+
+============================================================
+Query ID: 43 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['bachelors degree only associate degree']
+Answer:  ['associate degree']
+Prediction: Bachelor's degree only, Associate degree
+Reference: Associate degree
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 21.36}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 44 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['16796 9128']
+Answer:  ['7668']
+Prediction: 16796, 9128
+Reference: 7668
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.55s
+
+============================================================
+Query ID: 45 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['women men']
+Answer:  ['women']
+Prediction: Women, Men
+Reference: Women
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 46 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual employment data for the civilian noninstitutional population aged 25 and over, segmented by educational attainment (less than high school, high school graduate, some col...
+Reference: The table provides data on the employment status of the civilian noninstitutional population aged 25 years and over in the United States, segmented by educational attainment, sex, race, and Hispanic o...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 11.07s
+
+============================================================
+Query ID: 47 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  ['increasing trend']
+Answer:  ['increasing trend']
+Prediction: Increasing trend
+Reference: Increasing trend
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 48 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['men women']
+Answer:  ['men']
+Prediction: Men, Women
+Reference: Men
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+
+============================================================
+Query ID: 49 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['436']
+Answer:  ['436']
+Prediction: 43.6
+Reference: 43.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 50 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['04']
+Answer:  ['07']
+Prediction: 0.4
+Reference: 0.70
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+Checkpoint saved: 50 queries processed
+
+============================================================
+Query ID: 51 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['478 495']
+Answer:  ['478']
+Prediction: 47.80, 49.50
+Reference: 47.80
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.73s
+
+============================================================
+Query ID: 52 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual average percent distribution of employed persons by occupation, race, Hispanic or Latino ethnicity, and sex for the years 2022 and 2023. Key columns include Total, Men, and W...
+Reference: The table provides employment distribution data by occupation, gender, and year (2022 and 2023). Key columns include 'Occupation,' 'Total 2022,' 'Total 2023,' 'Men 2022,' 'Men 2023,' 'Women 2022,' and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.82s
+
+============================================================
+Query ID: 53 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['management professional and related occupations management occupations business and financial operations occupations']
+Answer:  ['management professional and related occupations management occupations business and financial operations occupations']
+Prediction: Management, professional, and related occupations, Management occupations, Business and financial operations occupations
+Reference: Management, professional, and related occupations, Management occupations, Business and financial operations occupations
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.68s
+
+============================================================
+Query ID: 54 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['2067 2067']
+Answer:  ['2067']
+Prediction: 2067, 2067
+Reference: 2067
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 55 | Type: Visualization | SubType: ScatterChart Generation
+Processing mix modality:   7%|▋         | 55/768 [04:32<2:36:43, 13.19s/it]Processing mix modality:   7%|▋         | 56/768 [04:42<2:24:51, 12.21s/it]Processing mix modality:   7%|▋         | 57/768 [04:44<1:46:41,  9.00s/it]Processing mix modality:   8%|▊         | 58/768 [04:46<1:21:25,  6.88s/it]Processing mix modality:   8%|▊         | 59/768 [04:47<1:02:10,  5.26s/it]Processing mix modality:   8%|▊         | 60/768 [04:49<49:44,  4.21s/it]  Processing mix modality:   8%|▊         | 61/768 [04:50<39:24,  3.34s/it]Processing mix modality:   8%|▊         | 62/768 [05:04<1:15:12,  6.39s/it]Processing mix modality:   8%|▊         | 63/768 [05:05<56:46,  4.83s/it]  Processing mix modality:   8%|▊         | 64/768 [05:06<43:32,  3.71s/it]Processing mix modality:   8%|▊         | 65/768 [05:07<34:38,  2.96s/it]============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+"Occupation": [
+"Total", "Management, professional, and related occupations", "Management, business, and financial operations occupations",
+"Management occupations", "Business and financial operations occupations", "Professional and related occupations",
+"Computer and mathematical occupations", "Architecture and engineering occupations", "Life, physical, and social science occupations",
+"Community and social service occupations", "Legal occupations", "Education, training, and library occupations",
+"Arts, design, entertainment, sports, and media occupations", "Healthcare practitioners and technical occupations",
+"Service occupations", "Healthcare support occupations", "Protective service occupations", "Food preparation and serving related occupations",
+"Building and grounds cleaning and maintenance occupations", "Personal care and service occupations",
+"Sales and office occupations", "Sales and related occupations", "Office and administrative support occupations",
+"Natural resources, construction, and maintenance occupations", "Farming, fishing, and forestry occupations",
+"Construction and extraction occupations", "Installation, maintenance, and repair occupations",
+"Production, transportation, and material moving occupations", "Production occupations", "Transportation and material moving occupations"
+],
+"Men_2023": [
+85500, 33856, 16574, 12139, 4435, 17282, 4754, 3001, 939, 874, 910, 2560, 1808, 2437,
+11206, 806, 2357, 3775, 3206, 1062, 11942, 7352, 4590, 13492, 720, 8093, 4679, 15004, 5800, 9203
+],
+"Women_2023": [
+75537, 36419, 13971, 8767, 5204, 22449, 1748, 602, 932, 2004, 988, 6842, 1670, 7663,
+14965, 4317, 748, 4414, 2328, 3158, 18337, 6972, 11364, 834, 267, 364, 203, 14435, 2479, 8760
+]
+}
+
+df = pd.DataFrame(data)
+
+# Create a scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(df["Men_2023"], df["Women_2023"], alpha=0.7)
+plt.title('Relationship between Total Employment in 2023 for Men and Women across All Listed Occupations')
+plt.xlabel('Men Employment (2023)')
+plt.ylabel('Women Employment (2023)')
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: [[75537.0, 36419.0, 13971.0, 8767.0, 5204.0, 22449.0, 1748.0, 602.0, 932.0, 2004.0, 988.0, 6842.0, 1670.0, 7663.0, 14965.0, 4317.0, 748.0, 4414.0, 2328.0, 3158.0, 18337.0, 6972.0, 11364.0, 834.0, 267.0, 364.0, 203.0, 14435.0, 2479.0, 8760.0]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    "Occupation": [
+        "Total", "Management, professional, and related occupations", "Management, b...
+Reference: [[2987.0, 1769.0, 3063.0, 4414.0, 863.0, 4729.0, 7881.0, 2528.0, 658.0, 3021.0, 2426.0, 783.0, 4571.0, 909.0, 934.0, 12104.0, 16518.0, 33663.0, 13111.0, 4400.0, 961.0, 5675.0, 14435.0, 17145.0, 2306.0, 11355.0, 6955.0, 10134.0, 82698.0, 8760.0]]...
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 37.89s
+
+============================================================
+Query ID: 56 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Occupation': ['Management occupations', 'Business and financial operations occupations', 'Management, professional, and related occupations'],
+'2023': [20906, 9638, 70275]
+}
+
+df = pd.DataFrame(data)
+
+# Extract the 2023 data for the specified occupations
+values = df['2023'].values
+
+# Create a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(values, labels=df['Occupation'], autopct='%1.1f%%', startangle=140)
+plt.title('Proportion of Total Employment in 2023')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.21, 0.1, 0.7]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Occupation': ['Management occupations', 'Business and financial operations occupations', 'Managemen...
+Reference: [0.53, 0.23, 0.16, 0.07]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 9.92s
+
+============================================================
+Query ID: 57 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['24052 24273']
+Answer:  ['24165']
+Prediction: 24052, 24273
+Reference: 24165
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.53s
+
+============================================================
+Query ID: 58 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['134056 26981']
+Answer:  ['134056 26981']
+Prediction: 134056, 26981
+Reference: 134056, 26981
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.92s
+
+============================================================
+Query ID: 59 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['3610']
+Answer:  ['3810']
+Prediction: 3610
+Reference: 3810
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 60 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['parttime workers unemployed looking for fulltime work']
+Answer:  ['parttime workers']
+Prediction: Part-time workers, Unemployed looking for full-time work
+Reference: Part-time workers
+Metrics: {'F1': 44.44, 'EM': 0.0, 'ROUGE-L': 44.44, 'SacreBLEU': 13.13}
+Processing Time: 1.77s
+Checkpoint saved: 60 queries processed
+
+============================================================
+Query ID: 61 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: No anomalies detected.
+Reference: No anomalies detected.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 62 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual averages of employed and unemployed full- and part-time workers in the U.S., categorized by age, sex, race, and Hispanic or Latino ethnicity. Key trends include: 1) The ...
+Reference: 2023 Employment Trends Summary
+
+The table provides data on employed individuals categorized by age, sex, race, and ethnicity for the year 2023.
+Key columns include the number of full-time workers (bot...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 13.50s
+
+============================================================
+Query ID: 63 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['5243']
+Answer:  ['5243']
+Prediction: 5243
+Reference: 5243
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 64 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['white black']
+Answer:  ['white']
+Prediction: White, Black
+Reference: White
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 65 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['17']
+Answer:  ['17']
+Prediction: 1.73
+Reference: 1.73
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 66 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  Processing mix modality:   9%|▊         | 66/768 [05:08<27:54,  2.39s/it]Processing mix modality:   9%|▊         | 67/768 [05:10<25:00,  2.14s/it]Processing mix modality:   9%|▉         | 68/768 [05:11<21:27,  1.84s/it]Processing mix modality:   9%|▉         | 69/768 [05:12<18:57,  1.63s/it]Processing mix modality:   9%|▉         | 70/768 [05:13<17:20,  1.49s/it]Processing mix modality:   9%|▉         | 71/768 [05:27<58:29,  5.04s/it]Processing mix modality:   9%|▉         | 72/768 [05:42<1:34:25,  8.14s/it]Processing mix modality:  10%|▉         | 73/768 [05:44<1:12:23,  6.25s/it]Processing mix modality:  10%|▉         | 74/768 [05:45<55:40,  4.81s/it]  Processing mix modality:  10%|▉         | 75/768 [05:47<43:27,  3.76s/it]Processing mix modality:  10%|▉         | 76/768 [05:58<1:08:10,  5.91s/it]Processing mix modality:  10%|█         | 77/768 [05:59<53:36,  4.65s/it]  Processing mix modality:  10%|█         | 78/768 [06:01<41:46,  3.63s/it]Processing mix modality:  10%|█         | 79/768 [06:02<32:45,  2.85s/it]['increasing trend']
+Answer:  ['stabilize']
+Prediction: Increasing trend
+Reference: Stabilize
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+
+============================================================
+Query ID: 67 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['79146 79146']
+Answer:  ['79146']
+Prediction: 79146, 79146
+Reference: 79146
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+
+============================================================
+Query ID: 68 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['3800']
+Answer:  ['3800']
+Prediction: 3800
+Reference: 3800
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+
+============================================================
+Query ID: 69 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['7414']
+Answer:  ['7414']
+Prediction: 7414
+Reference: 7414
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 70 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['mexican puerto rican cuban']
+Answer:  ['mexican puerto rican cuban']
+Prediction: Mexican, Puerto Rican, Cuban
+Reference: Mexican, Puerto Rican, Cuban
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.17s
+Checkpoint saved: 70 queries processed
+
+============================================================
+Query ID: 71 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Category': ['Men', 'Women'],
+'Total(1) 2022': [16654, 12646],
+'Total(1) 2023': [17071, 13271]
+}
+df = pd.DataFrame(data)
+# Plotting the bar chart
+plt.figure(figsize=(10,6))
+bar_width = 0.35
+index = range(len(df))
+plt.bar(index, df['Total(1) 2022'], bar_width, label='2022', color='blue')
+plt.bar([i + bar_width for i in index], df['Total(1) 2023'], bar_width, label='2023', color='green')
+plt.xlabel('Gender')
+plt.ylabel('Total Employment Numbers')
+plt.title('Total Employment Numbers for Men and Women among Hispanic or Latino Workers (2022-2023)')
+plt.xticks([i + bar_width/2 for i in index], df['Category'])
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+Python Error: name 'bar_width' is not defined
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ # Load the data from the table
+ data = {
+    'Category': ['Men', 'Women'],
+    'Total(1) 2022': [16654, 12646],
+    'Total(1) 2023': [17071, 132...
+Reference: [16654.0, 17071.0, 12646.0, 13271.0]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 13.31s
+
+============================================================
+Query ID: 72 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table14.xlsx")
+
+# Extract the relevant data for 'Management, professional, and related occupations' for men and women
+data = {
+'Year': ['2022', '2023'],
+'Men': [df.loc[df['Category'] == 'Management, professional, and related occupations', 'Men'].iloc[0],
+df.loc[df['Category'] == 'Management, professional, and related occupations', 'Men'].iloc[1]],
+'Women': [df.loc[df['Category'] == 'Management, professional, and related occupations', 'Women'].iloc[0],
+df.loc[df['Category'] == 'Management, professional, and related occupations', 'Women'].iloc[1]]
+}
+
+# Create a DataFrame
+df_plot = pd.DataFrame(data)
+
+# Plot the data
+plt.figure(figsize=(10, 6))
+plt.plot(df_plot['Year'], df_plot['Men'], marker='o', label='Men')
+plt.plot(df_plot['Year'], df_plot['Women'], marker='s', label='Women')
+plt.title('Trend of Employment Numbers in Management, Professional, and Related Occupations (2022-2023)')
+plt.xlabel('Year')
+plt.ylabel('Employment Numbers')
+plt.legend()
+plt.grid(True)
+plt.xticks(df_plot['Year'])
+plt.show()
+
+Python Error: 'Men'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data
+df = pd.read_excel("table.xlsx")
+
+# Extract the relevant data for 'Management, professional, and related occupations' for men an...
+Reference: [[4027.0, 4245.0], [773.0, 874.0]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 15.38s
+
+============================================================
+Query ID: 73 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['2255 2115']
+Answer:  ['2218']
+Prediction: 2255, 2115
+Reference: 2218
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 74 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['wholesale and retail trade']
+Answer:  ['leisure and hospitality']
+Prediction: Wholesale and retail trade
+Reference: Leisure and hospitality
+Metrics: {'F1': 28.57, 'EM': 0.0, 'ROUGE-L': 28.57, 'SacreBLEU': 15.97}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 75 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 76 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual average employment data for nonagricultural industries in 2023, categorized by age, sex, race, and Hispanic or Latino ethnicity. Primary columns include industry sectors such...
+Reference: The table provides employment statistics across nonagricultural industries, broken down by demographic categories such as age (e.g., '16 to 19 years,' '20 years and over'), and specific industries (e....
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.92s
+
+============================================================
+Query ID: 77 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.98
+Reference: Strong positive correlation, 0.99
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.72s
+
+============================================================
+Query ID: 78 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['67 16']
+Answer:  ['65']
+Prediction: 67, 16
+Reference: 65
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 79 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['35']
+Answer:  ['35']
+Prediction: 35
+Reference: 35
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 80 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['128154 21538']
+Answer:  ['128154 21538']
+Prediction: 128154, 21538
+Reference: 128154, 21538
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+Processing mix modality:  10%|█         | 80/768 [06:03<28:21,  2.47s/it]Processing mix modality:  11%|█         | 81/768 [06:48<2:54:26, 15.24s/it]Processing mix modality:  11%|█         | 82/768 [06:57<2:31:11, 13.22s/it]Processing mix modality:  11%|█         | 83/768 [06:58<1:49:59,  9.63s/it]Processing mix modality:  11%|█         | 84/768 [06:59<1:21:07,  7.12s/it]Processing mix modality:  11%|█         | 85/768 [07:01<1:01:27,  5.40s/it]Processing mix modality:  11%|█         | 86/768 [07:02<48:12,  4.24s/it]  Processing mix modality:  11%|█▏        | 87/768 [07:15<1:18:31,  6.92s/it]Checkpoint saved: 80 queries processed
+
+============================================================
+Query ID: 81 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+"Age Group": [
+"Total, 16 years and over", "16 to 19 years", "16 to 17 years", "18 to 19 years",
+"20 to 24 years", "25 to 34 years", "35 to 44 years", "45 to 54 years",
+"55 to 64 years", "65 years and over",
+"Men, 16 years and over", "16 to 19 years", "16 to 17 years", "18 to 19 years",
+"20 to 24 years", "25 to 34 years", "35 to 44 years", "45 to 54 years",
+"55 to 64 years", "65 years and over",
+"Women, 16 years and over", "16 to 19 years", "16 to 17 years", "18 to 19 years",
+"20 to 24 years", "25 to 34 years", "35 to 44 years", "45 to 54 years",
+"55 to 64 years", "65 years and over"
+],
+"Wage and Salary Workers (Nonagricultural)": [
+149692, 5443, 2086, 3357, 14239, 34038, 32962, 29525, 24332, 9154,
+78523, 2673, 973, 1700, 7139, 18008, 17582, 15497, 12782, 4842,
+71169, 2770, 1113, 1657, 7100, 16030, 15379, 14027, 11551, 4312
+],
+"Self-Employed Workers (Nonagricultural)": [
+673, 29, 14, 15, 75, 109, 118, 135, 133, 74,
+54, 2, 2, 0, 3, 11, 11, 10, 11, 6,
+619, 26, 11, 15, 72, 98, 108, 125, 123, 68
+]
+}
+
+df = pd.DataFrame(data)
+
+# Filter out the "Total, 16 years and over" row for age group analysis
+df = df[df["Age Group"] != "Total, 16 years and over"]
+
+# Extract age groups from the "Age Group" column
+df["Age Group"] = df["Age Group"].str.replace(" years and over", "").str.replace(" to ", "-").str.replace(" years", "").str.replace(" and over", "").str.replace(" to ", "-")
+
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(df["Wage and Salary Workers (Nonagricultural)"], df["Self-Employed Workers (Nonagricultural)"], alpha=0.7)
+plt.title('Relationship between Wage and Salary Workers and Self-Employed Workers (Nonagricultural) by Age Group')
+plt.xlabel('Wage and Salary Workers (Nonagricultural)')
+plt.ylabel('Self-Employed Workers (Nonagricultural)')
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: [[29.0, 14.0, 15.0, 75.0, 109.0, 118.0, 135.0, 133.0, 74.0, 54.0, 2.0, 2.0, 0.0, 3.0, 11.0, 11.0, 10.0, 11.0, 6.0, 619.0, 26.0, 11.0, 15.0, 72.0, 98.0, 108.0, 125.0, 123.0, 68.0]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    "Age Group": [
+        "Total, 16 years and over", "16 to 19 years", "16 to 17 years", "18 to 19 yea...
+Reference: [[128154.0, 5197.0, 2012.0, 3185.0, 13053.0, 29697.0, 27781.0, 24341.0, 20263.0, 7822.0, 69190.0, 2562.0, 936.0, 1626.0, 6670.0, 16054.0, 15279.0, 13339.0, 11045.0, 4241.0, 58964.0, 2634.0, 1076.0, 1559.0, 6384.0, 13644.0, 12502.0, 11002.0, 9218.0, 3581.0]]...
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 45.01s
+
+============================================================
+Query ID: 82 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+"Category": ["Private Industry", "Government", "Unpaid Family Workers"],
+"Count": [128154, 21538, 9030]
+}
+
+df = pd.DataFrame(data)
+
+# Create a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(df['Count'], labels=df['Category'], autopct='%1.1f%%', startangle=140)
+plt.title('Proportion of Workers by Category (Aged 16 and Over)')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.81, 0.14, 0.06]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    "Category": ["Private Industry", "Government", "Unpaid Family Workers"],
+    "Count": [128154, 21538...
+Reference: [0.68, 0.31, 0.01]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 8.53s
+
+============================================================
+Query ID: 83 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['590']
+Answer:  ['590']
+Prediction: 590
+Reference: 590
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.26s
+
+============================================================
+Query ID: 84 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['education and health services']
+Answer:  ['education and health services']
+Prediction: Education and health services
+Reference: Education and health services
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 85 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['13']
+Answer:  ['01']
+Prediction: 1.31
+Reference: 0.07%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.39s
+
+============================================================
+Query ID: 86 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.98
+Reference: Strong positive correlation, 1.00.
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 87 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The dataset presents employment distribution across nonagricultural industries in 2023, segmented by sex and worker classification (wage/salary, private/self-employed, government, unpaid family worker...
+Reference: The dataset highlights the overall employment distribution across major industries, with private employment dominating and government roles contributing significantly in sectors like education and hea...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 13.17s
+
+============================================================
+Query ID: 88 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (12610 tokens) for image (1166, 16112)
+Processing mix modality:  11%|█▏        | 88/768 [07:18<1:03:15,  5.58s/it]Predictions:  ['161037']
+Answer:  ['145345']
+Prediction: 161037
+Reference: 145345
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.46s
+
+============================================================
+Query ID: 89 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (12613 tokens) for image (1166, 16112)
+Processing mix modality:  12%|█▏        | 89/768 [07:20<52:19,  4.62s/it]  Predictions:  ['other personal services private households']
+Answer:  ['child day care services']
+Prediction: Other personal services, private households
+Reference: Child day care services
+Metrics: {'F1': 22.22, 'EM': 0.0, 'ROUGE-L': 22.22, 'SacreBLEU': 10.68}
+Processing Time: 2.39s
+
+============================================================
+Query ID: 90 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (12629 tokens) for image (1166, 16112)
+Processing mix modality:  12%|█▏        | 90/768 [07:23<45:06,  3.99s/it]Predictions:  ['crop production forestry except logging']
+Answer:  ['crop production']
+Prediction: Crop production, Forestry, except logging
+Reference: Crop production
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 21.36}
+Processing Time: 2.51s
+Checkpoint saved: 90 queries processed
+
+============================================================
+Query ID: 91 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (12703 tokens) for image (1166, 16112)

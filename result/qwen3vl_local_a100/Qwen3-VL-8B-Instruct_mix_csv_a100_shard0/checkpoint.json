@@ -1,0 +1,1480 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 61179",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.3
+    },
+    {
+      "id": 2,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the year when the unemployment rate exceeded 5%, and the total civilian labor force was below 65,000.",
+      "Reference": "1954",
+      "Prediction": "1953",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.45
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "2022",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 4,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the employment in non-agricultural industries in the year with the highest civilian labor force total?",
+      "Reference": "158772",
+      "Prediction": "158772",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.58
+    },
+    {
+      "id": 5,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average unemployment rate across all years, and what is its standard deviation?",
+      "Reference": "5.80, 1.62",
+      "Prediction": "5.55, 1.27",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 6,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, highlighting the main columns, their purposes, and any basic insights or trends observed?",
+      "Reference": "The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nonagricultural Industries),' 'Unemployed (Number, Percent),' and 'Not in Labor Force.' Insights show trends in employment rates, shifts between agricultural and nonagricultural sectors, and unemployment percentages over time.",
+      "Prediction": "This table presents annual averages of the employment status of the civilian noninstitutional population from 1953 to 2023. Key columns include: \"Civilian noninstitutional population\" (total population 16+), \"Civilian labor force\" (total employed + unemployed), \"Employed\" (broken down by agriculture and nonagricultural industries), \"Unemployed\" (number and percent of labor force), and \"Not in labor force\". Trends show a steady increase in the civilian population and labor force over time, with employment rates fluctuating but generally hovering around 60-65% of the population. Unemployment rates have generally declined since the early 2000s, while the proportion of the population not in the labor force has remained relatively stable. The labor force participation rate has shown some decline in recent years, particularly post-2020.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.18
+    },
+    {
+      "id": 7,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trend in the percentage of the employed population between 1953 and 1963, what is the predicted percentage for 1965?",
+      "Reference": "Predicted percentage for 1965: 55.12%",
+      "Prediction": "58.9, Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 8,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation between the total civilian labor force and the total number of employed individuals across all years? Provide the correlation coefficient.",
+      "Reference": "Strong positive correlation, 1.00",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.78
+    },
+    {
+      "id": 9,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Are there any anomalies in the unemployment rates or employment figures that deviate significantly from the general trends in the data? If so, what are the years and their characteristics?",
+      "Reference": "4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployment 9.30% or Employment 139877.00 deviates significantly, Year 2010: Unemployment 9.600% or Employment 139064.00 deviates significantly",
+      "Prediction": "1982, 1983, 2009, 2010, 2020",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 2.47
+    },
+    {
+      "id": 10,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year with the highest unemployment rate between 1983 and 1990.",
+      "Reference": "1983",
+      "Prediction": "1983",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.95
+    },
+    {
+      "id": 11,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify whether the percentage of the civilian labor force employed in 1987 was greater than in 1983 with simply yse/no.",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 12,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Determine the average number of unemployed individuals from 1985 to 1987.",
+      "Reference": "3995.67",
+      "Prediction": "4765, 4765, 4765",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.05
+    },
+    {
+      "id": 13,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Was the proportion of the population employed in agriculture in 1984 greater than 5% of the total employed population?",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 14,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year when the civilian noninstitutional population crossed 85,000,000 for the first time.",
+      "Reference": "1986",
+      "Prediction": "2020",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 15,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "According to the table, draw a bar chart comparing the total civilian population and the total employed population for the years 1985, 1987, and 1989.",
+      "Reference": "[93736, 95853, 97630, 59891, 62107, 64315]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n data = pd.read_excel(\"table.xlsx\")\n years = [1985, 1987, 1989]\n civilian_population = [data.loc[data['Year'] == year, 'Civilian noninstitu- tional population'].iloc[0] for year in years]\n employed_population = [data.loc[data['Year'] == year, 'Employed Total'].iloc[0] for year in years]\n plt.bar(years, civilian_population, label='Civilian Population', color='blue')\n plt.bar(years, employed_population, bottom=civilian_population, label='Employed Population', color='green')\n plt.xlabel('Year')\n plt.ylabel('Population')\n plt.title('Civilian Population and Employed Population (1985, 1987, 1989)')\n plt.legend()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 10.39
+    },
+    {
+      "id": 16,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to visualize the relationship between the unemployment rate and the total civilian labor force for all years in the dataset.",
+      "Reference": "[[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3.7, 3.8, 9.2, 7.6, 7.4, 7.1, 6.2, 5.6, 5.4, 5.5, 6.4, 7.0, 6.6, 6.0, 5.6, 5.4, 5.0, 4.6, 4.3, 4.1, 4.7, 5.6, 5.7, 5.4, 5.1, 4.6, 4.5, 5.4, 8.1, 8.6, 8.5, 7.9, 7.1, 6.1, 5.2, 4.8, 4.3, 3.8, 3.6, 8.3, 5.2, 3.6, 3.5]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n # Load the data\n df = pd.read_csv('table.xlsx')\n # Extract the relevant columns for men and women\n men_data = df[df['Men'].notna()]\n women_data = df[df['Women'].notna()]\n # Combine the data\n combined_data = pd.concat([men_data, women_data])\n # Extract the unemployment rate and total civilian labor force\n combined_data['Unemployment Rate'] = combined_data['Percent (Not in labor force)']\n combined_data['Total Civilian Labor Force'] = combined_data['Civilian labor force']\n # Create the scatter plot\n plt.scatter(combined_data['Total Civilian Labor Force'], combined_data['Unemployment Rate'])\n plt.xlabel('Total Civilian Labor Force')\n plt.ylabel('Unemployment Rate')\n plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 9.93
+    },
+    {
+      "id": 17,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Using the data, draw a pie chart to illustrate the distribution of employment between agriculture and non-agriculture sectors in 1984.",
+      "Reference": "[0.05, 0.95]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data\ndata = {\n    \"Year\": [\"1984\"],\n    \"Men_Agriculture\": [2668],\n    \"Men_Nonagricultural\": [56423],\n    \"Women_Agriculture\": [653],\n    \"Women_Nonagricultural\": [45262]\n}\n\ndf = pd.DataFrame(data)\n\n# Extract employment data for 1984\nmen_agri = df.loc[0, \"Men_Agriculture\"]\nmen_nonagri = df.loc[0, \"Men_Nonagricultural\"]\nwomen_agri = df.loc[0, \"Women_Agriculture\"]\nwomen_nonagri = df.loc[0, \"Women_Nonagricultural\"]\n\n# Combine data for pie chart\nemployment_data = [\n    {\"Label\": \"Men - Agriculture\", \"Value\": men_agri},\n    {\"Label\": \"Men - Nonagricultural\", \"Value\": men_nonagri},\n    {\"Label\": \"Women - Agriculture\", \"Value\": women_agri},\n    {\"Label\": \"Women - Nonagricultural\", \"Value\": women_nonagri}\n]\n\n# Create pie chart\nlabels = [item[\"Label\"] for item in employment_data]\nsizes = [item[\"Value\"] for item in employment_data]\n\nplt.figure(figsize=(8, 6))\nplt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)\nplt.title('Employment Distribution by Sector in 1984')\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 18.5
+    },
+    {
+      "id": 18,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me create a line chart to compare the trends of total employed population and total unemployed population from 1983 to 1990.",
+      "Reference": "[[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 3046, 3003, 3140]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data\ndata = {\n    'Year': [1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990],\n    'Total Employed (Men)': [56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104],\n    'Total Employed (Women)': [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689],\n    'Total Unemployed (Men)': [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906],\n    'Total Unemployed (Women)': [4457, 3794, 3791, 3707, 3324, 3046, 3003, 3140]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(14, 7))\nplt.plot(df['Year'], df['Total Employed (Men)'], marker='o', label='Total Employed (Men)')\nplt.plot(df['Year'], df['Total Employed (Women)'], marker='s', label='Total Employed (Women)')\nplt.plot(df['Year'], df['Total Unemployed (Men)'], marker='^', label='Total Unemployed (Men)')\nplt.plot(df['Year'], df['Total Unemployed (Women)'], marker='D', label='Total Unemployed (Women)')\n\nplt.title('Trends of Total Employed and Unemployed Population from 1983 to 1990')\nplt.xlabel('Year')\nplt.ylabel('Population')\nplt.legend()\nplt.grid(True)\nplt.xticks(df['Year'])\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 25.43
+    },
+    {
+      "id": 19,
+      "FileName": "employment-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Based on the data, what is the total number of individuals aged 16 years and over in the civilian labor force who are employed?",
+      "Reference": "161037",
+      "Prediction": "161037",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.98
+    },
+    {
+      "id": 20,
+      "FileName": "employment-table03",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the age groups by the percentage of their population employed, starting from the highest percentage. Provide the top two age groups.",
+      "Reference": "35 to 39 years, 35 to 44 years",
+      "Prediction": "25 to 54 years, 35 to 44 years",
+      "Metrics": {
+        "F1": 75.0,
+        "EM": 0.0,
+        "ROUGE-L": 75.0,
+        "SacreBLEU": 54.11
+      },
+      "ProcessingTime": 3.18
+    },
+    {
+      "id": 21,
+      "FileName": "employment-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total people not in the labor force across 16 years and over?",
+      "Reference": "99826",
+      "Prediction": "99826",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.69
+    },
+    {
+      "id": 22,
+      "FileName": "employment-table03",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Considering individuals aged 16 years and over, calculate the total percentage of the civilian non-institutional population either employed or unemployed.",
+      "Reference": "63.90",
+      "Prediction": "100.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.67
+    },
+    {
+      "id": 23,
+      "FileName": "employment-table03",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Based on the data, draw a pie chart to show the distribution of the civilian non-institutional population into the categories 'employed,' 'unemployed,' and 'not in the labor force' for the '16 years and over' age group.",
+      "Reference": "[0.6, 0.02, 0.37]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Create a DataFrame from the table data\ndata = {\n    'Category': ['Employed', 'Unemployed', 'Not in Labor Force'],\n    'Count': [161037, 6080, 99826]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a pie chart\nplt.figure(figsize=(8, 8))\nplt.pie(df['Count'], labels=df['Category'], autopct='%1.1f%%', startangle=140)\nplt.title('Distribution of Civilian Non-Institutional Population (16 years and over)')\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\n\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 10.33
+    },
+    {
+      "id": 24,
+      "FileName": "employment-table03",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "Generate a bar chart to compare the unemployment rates (percentage of the labor force unemployed) between different age groups as shown in the data.",
+      "Reference": "[12.64, 12.016666666666666, 3.858333333333333, 12.0, 7.108333333333333, 4.841666666666667, 4.191666666666666, 3.341666666666667, 3.591666666666667, 3.091666666666667, 3.0416666666666665, 3.0083333333333333, 2.8166666666666664, 2.716666666666667, 2.6083333333333334, 2.6750000000000003, 2.625, 2.5749999999999997, 2.841666666666667, 2.966666666666667, 3.0083333333333333, 3.408333333333333]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Create a DataFrame from the table data\ndata = {\n    'Age Group': [\n        '16 to 19 years', '20 to 24 years', '25 to 34 years', '35 to 44 years', \n        '45 to 54 years', '55 to 64 years', '65 years and over'\n    ],\n    'Unemployment Rate (%)': [\n        11.2, 6.6, 3.9, 2.8, 2.5, 2.5, 2.8\n    ]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a bar chart\nplt.figure(figsize=(10, 6))\nplt.bar(df['Age Group'], df['Unemployment Rate (%)'], color='blue')\nplt.title('Unemployment Rates by Age Group (2023)')\nplt.xlabel('Age Group')\nplt.ylabel('Unemployment Rate (%)')\nplt.xticks(rotation=45)\nplt.grid(axis='y', linestyle='--', alpha=0.7)\nplt.tight_layout()\n\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 14.7
+    },
+    {
+      "id": 25,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the unemployment rates for individuals aged 16 to 17 years and 18 to 19 years. Which group has a higher unemployment rate?",
+      "Reference": "16 to 17 years",
+      "Prediction": "18 to 19 years, 16 to 17 years",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 34.57
+      },
+      "ProcessingTime": 1.91
+    },
+    {
+      "id": 26,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of individuals not in the labor force among all age groups combined?",
+      "Reference": "101529",
+      "Prediction": "15714, 2892, 1867, 1026, 1411, 5034, 1797, 933, 864, 855, 839, 1543, 733, 810, 1961, 841, 1119, 4416, 1329, 1145, 1942",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.82
+    },
+    {
+      "id": 27,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the age groups by their employment rate (percent of employed individuals within the labor force). List them in descending order.",
+      "Reference": "45 to 49 years, 40 to 44 years, 35 to 39 years, 35 to 44 years, 25 to 54 years",
+      "Prediction": "25 to 54 years, 20 to 24 years, 35 to 44 years, 45 to 54 years, 30 to 34 years, 25 to 34 years, 40 to 44 years, 50 to 54 years, 35 to 39 years, 45 to 49 years, 25 to 29 years, 16 to 19 years, 18 to 19 years, 16 to 17 years, 16 years and over, 55 to 64 years, 55 to 59 years, 60 to 64 years, 65 years and over, 65 to 69 years, 70 to 74 years, 75 years and over",
+      "Metrics": {
+        "F1": 37.04,
+        "EM": 0.0,
+        "ROUGE-L": 29.63,
+        "SacreBLEU": 16.61
+      },
+      "ProcessingTime": 10.41
+    },
+    {
+      "id": 28,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "If the unemployment rate for the 16 years and over group increases by 2 percentage points, what will be the new unemployment percentage?",
+      "Reference": "6.60",
+      "Prediction": "6.8",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 29,
+      "FileName": "employment-table04",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of unemployed individuals aged 16 to 19 years, and what percentage do they represent of the labor force in this age group?",
+      "Reference": "188, 12.60",
+      "Prediction": "188, 12.6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 30,
+      "FileName": "employment-table04",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the main trends in employment status for the Hispanic or Latino population aged 16 years and over, including the key metrics from the dataset.",
+      "Reference": "The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' 'Employed (thousands) and (%),' 'Unemployed (thousands) and (%),' and 'Not in Labor Force (thousands).' Insights reveal an overall labor force participation rate of 66.90%, an employment rate of 63.80%, and an unemployment rate of 4.60%. The dataset also highlights variations by age, with younger groups (16–19 years) showing lower participation and higher unemployment compared to the total population.",
+      "Prediction": "The Hispanic or Latino population aged 16 years and over shows a high labor force participation rate (66.9%), with a significant portion employed (63.8% of the civilian labor force). The unemployment rate is relatively low (4.6%), and the majority of those not in the labor force (15,714 thousand) are outside the labor market. The data is further segmented by sex, revealing higher labor force participation and employment rates among men compared to women, with men showing higher unemployment rates in younger age groups and women showing higher unemployment rates in older age groups.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.82
+    },
+    {
+      "id": 31,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total civilian labor force for the year 2022, combining all demographic categories?",
+      "Reference": "164287",
+      "Prediction": "164287",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 32,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the participation rates for 2022 and 2023 and identify the year with the higher rate.",
+      "Reference": "2023",
+      "Prediction": "2023, 2022",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 33,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference in the civilian labor force between 2022 and 2023 for the total population.",
+      "Reference": "2829",
+      "Prediction": "2829, 2829",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.47
+    },
+    {
+      "id": 34,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Based on participation rates, infer whether the labor force's growth from 2022 to 2023 aligns with the trend in the total civilian population.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 35,
+      "FileName": "employment-table05",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please generate a line chart to illustrate the trend in the total civilian noninstitutional population from 2022 to 2023.",
+      "Reference": "[[263973.0, 266942.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data\ndata = {\n    \"Year\": [2022, 2023],\n    \"Total\": [263973, 266942],\n    \"White\": [203214, 204515],\n    \"Black or African American\": [34131, 34667],\n    \"Asian\": [16933, 17591]\n}\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.plot(df['Year'], df['Total'], marker='o', label='Total Civilian Noninstitutional Population')\nplt.title('Trend in Total Civilian Noninstitutional Population from 2022 to 2023')\nplt.xlabel('Year')\nplt.ylabel('Population')\nplt.legend()\nplt.grid(True)\nplt.xticks(df['Year'])\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 11.32
+    },
+    {
+      "id": 36,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference between the total civilian labor force of men for “16 years and over” in 2023 and 2022?",
+      "Reference": "543",
+      "Prediction": "543",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 37,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the civilian noninstitutional population of men and women for “16 years and over” in 2023. Provide the order from highest to lowest.",
+      "Reference": "Men, Women",
+      "Prediction": "Men, 16 years and over, Women, 16 years and over",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 4.99
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 38,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "How many more men were in the civilian labor force compared to women aged 16 years and over in 2022?",
+      "Reference": "4135",
+      "Prediction": "4135, 0",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.34
+    },
+    {
+      "id": 39,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of participation rates for total Civilian labor force in 2022 and 2023.",
+      "Reference": "133.2",
+      "Prediction": "133.2, 134.1",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 40,
+      "FileName": "employment-table06",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the mean and median of the civilian labor force participation rate for women in 2022 and 2023?",
+      "Reference": "Mean 2022: 62.25, Median 2022: 62.85, Mean 2023: 62.77, Median 2023: 64.00",
+      "Prediction": "57.35, 57.35",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 41,
+      "FileName": "employment-table06",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the data, including its main columns, and highlight any noticeable trends or significant differences in participation rates across genders.",
+      "Reference": "The dataset provides statistics on the employment status of the Hispanic or Latino population segmented by gender and year (2022 and 2023). The main columns include 'Category' (e.g., population, labor force, participation rate), and data for total, male, and female populations in both years. Key trends indicate that participation rates increased slightly from 2022 to 2023 across genders, with males consistently having higher rates than females.",
+      "Prediction": "The table presents annual averages of employment status for the Hispanic or Latino population by sex, age, and detailed ethnic group (Total, Mexican, Puerto Rican, Cuban) for 2022 and 2023. Main columns include Civilian noninstitutional population, Civilian labor force, Participation rate, Employed, Employment-population ratio, Unemployed, Unemployment rate, and Not in labor force. Notable trends include higher participation rates for men (75.2% for 16+ years, 79.5% for 20+ years) compared to women (57.3% for 16+ years, 59.9% for 20+ years), with participation rates increasing slightly for both genders from 2022 to 2023. The participation rate for men aged 20+ (79.5% in 2022, 79.2% in 2023) remains significantly higher than for women aged 20+ (59.9% in 2022, 61.3% in 2023).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 12.81
+    },
+    {
+      "id": 42,
+      "FileName": "employment-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total number of people in the civilian labor force with a bachelor's degree only and an advanced degree?",
+      "Reference": "39357",
+      "Prediction": "39357, 24720",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 43,
+      "FileName": "employment-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the group in Men with the higher participation rate among individuals with 'Associate degree' and 'Bachelor's degree only'",
+      "Reference": "Associate degree",
+      "Prediction": "Bachelor's degree only, Associate degree",
+      "Metrics": {
+        "F1": 57.14,
+        "EM": 0.0,
+        "ROUGE-L": 57.14,
+        "SacreBLEU": 21.36
+      },
+      "ProcessingTime": 1.31
+    },
+    {
+      "id": 44,
+      "FileName": "employment-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the difference between civilian noninstitutional population and civilian labor force for women with 'Some college, no degree'?",
+      "Reference": "7668",
+      "Prediction": "16796, 9128",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.55
+    },
+    {
+      "id": 45,
+      "FileName": "employment-table07",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare men and women to determine which one has the lower participation rate in “Less than a high school diploma”?",
+      "Reference": "Women",
+      "Prediction": "Women, Men",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 46,
+      "FileName": "employment-table07",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, including its main columns, the demographics it represents, and any noticeable trends in employment status by education level.",
+      "Reference": "The table provides data on the employment status of the civilian noninstitutional population aged 25 years and over in the United States, segmented by educational attainment, sex, race, and Hispanic or Latino ethnicity. The main columns include:\n\nCivilian noninstitutional population: The total number of individuals in each demographic group.\n\nCivilian labor force: The number of individuals in the labor force, including both employed and unemployed.\n\nParticipation rate: The percentage of the population that is part of the labor force.\n\nEmployed: The number of individuals who are employed.\n\nEmployment-population ratio: The percentage of the population that is employed.\n\nUnemployed: The number of individuals who are unemployed.\n\nUnemployment rate: The percentage of the labor force that is unemployed.\n\nThe demographics represented include:\n\nSex: Men and Women\n\nRace: White, Black or African American, Asian\n\nHispanic or Latino ethnicity: Hispanic or Latino ethnicity\n\nNotable trends in employment status by education level include:\n\nHigher education levels generally correlate with higher participation rates, employment-population ratios, and lower unemployment rates.\n\nFor example, individuals with a Bachelor's degree or higher have the highest employment-population ratios and the lowest unemployment rates across all demographic groups.\n\nConversely, those with less than a high school diploma have the lowest employment-population ratios and the highest unemployment rates.\n\nOverall, the data suggests a strong positive relationship between educational attainment and employment outcomes.",
+      "Prediction": "The table presents 2023 annual employment data for the civilian noninstitutional population aged 25 and over, segmented by educational attainment (less than high school, high school graduate, some college, associate degree, bachelor’s degree, and advanced degree), sex (men and women), and race/ethnicity (White, Black or African American, Asian, Hispanic or Latino). Key trends include higher employment participation and lower unemployment rates for those with higher education levels. For example, the participation rate for those with a bachelor’s degree or higher is 73% (total), compared to 47% for those with less than a high school diploma. Additionally, unemployment rates decrease significantly with higher education: 1.8% for those with advanced degrees versus 5.6% for those with less than a high school diploma. Men generally have higher participation and employment rates than women across all education levels, while Hispanic or Latino populations show notably high participation and employment rates, especially among those with bachelor’s degrees or higher.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 11.07
+    },
+    {
+      "id": 47,
+      "FileName": "employment-table07",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the participation rate across educational levels, what trend is observed as the level of education increases?",
+      "Reference": "Increasing trend",
+      "Prediction": "Increasing trend",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 48,
+      "FileName": "employment-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the total number of employed men and women in 2023 and determine which group is larger.",
+      "Reference": "Men",
+      "Prediction": "Men, Women",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 49,
+      "FileName": "employment-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What percentage of the total employed in 2023 belonged to management, professional, and related occupations?",
+      "Reference": "43.60",
+      "Prediction": "43.6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 50,
+      "FileName": "employment-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference in the percentage of employed persons in management, business, and financial operations occupations between 2022 and 2023 for women.",
+      "Reference": "0.70",
+      "Prediction": "0.4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 51,
+      "FileName": "employment-table10",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the mean percentage of women employed in management, professional, and related occupations across 2022 and 2023?",
+      "Reference": "47.80",
+      "Prediction": "47.80, 49.50",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.73
+    },
+    {
+      "id": 52,
+      "FileName": "employment-table10",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including its key columns and any notable trends in employment distribution between 2022 and 2023.",
+      "Reference": "The table provides employment distribution data by occupation, gender, and year (2022 and 2023). Key columns include 'Occupation,' 'Total 2022,' 'Total 2023,' 'Men 2022,' 'Men 2023,' 'Women 2022,' and 'Women 2023.' Notable trends include a slight overall increase in total employment from 158,291,000 in 2022 to 161,037,000 in 2023 and a rise in professional occupations. Employment for both men and women increased slightly across most sectors.",
+      "Prediction": "The table presents annual average percent distribution of employed persons by occupation, race, Hispanic or Latino ethnicity, and sex for the years 2022 and 2023. Key columns include Total, Men, and Women employment percentages across various occupational categories. Notable trends show slight shifts in occupational distribution: management and professional roles saw minor increases for most groups, while service and sales occupations experienced slight declines. Women consistently dominate service and office support roles, whereas men are more prevalent in natural resources, construction, and production occupations. Hispanic or Latino individuals show higher representation in service and sales roles compared to other groups. Overall, employment distribution trends reflect subtle shifts in workforce composition across different demographic segments.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.82
+    },
+    {
+      "id": 53,
+      "FileName": "employment-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the following occupations based on their total employment in 2023: 'Management occupations,' 'Business and financial operations occupations,' and 'Management, professional, and related occupations.'",
+      "Reference": "Management, professional, and related occupations, Management occupations, Business and financial operations occupations",
+      "Prediction": "Management, professional, and related occupations, Management occupations, Business and financial operations occupations",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.68
+    },
+    {
+      "id": 54,
+      "FileName": "employment-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "How many more women than men for “16 years and over” were employed in 'Management, professional, and related occupations' in 2022?",
+      "Reference": "2067",
+      "Prediction": "2067, 2067",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.4
+    },
+    {
+      "id": 55,
+      "FileName": "employment-table09",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to visualize the relationship between total employment in 2023 for men and women across all listed occupations.",
+      "Reference": "[[2987.0, 1769.0, 3063.0, 4414.0, 863.0, 4729.0, 7881.0, 2528.0, 658.0, 3021.0, 2426.0, 783.0, 4571.0, 909.0, 934.0, 12104.0, 16518.0, 33663.0, 13111.0, 4400.0, 961.0, 5675.0, 14435.0, 17145.0, 2306.0, 11355.0, 6955.0, 10134.0, 82698.0, 8760.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    \"Occupation\": [\n        \"Total\", \"Management, professional, and related occupations\", \"Management, business, and financial operations occupations\",\n        \"Management occupations\", \"Business and financial operations occupations\", \"Professional and related occupations\",\n        \"Computer and mathematical occupations\", \"Architecture and engineering occupations\", \"Life, physical, and social science occupations\",\n        \"Community and social service occupations\", \"Legal occupations\", \"Education, training, and library occupations\",\n        \"Arts, design, entertainment, sports, and media occupations\", \"Healthcare practitioners and technical occupations\",\n        \"Service occupations\", \"Healthcare support occupations\", \"Protective service occupations\", \"Food preparation and serving related occupations\",\n        \"Building and grounds cleaning and maintenance occupations\", \"Personal care and service occupations\",\n        \"Sales and office occupations\", \"Sales and related occupations\", \"Office and administrative support occupations\",\n        \"Natural resources, construction, and maintenance occupations\", \"Farming, fishing, and forestry occupations\",\n        \"Construction and extraction occupations\", \"Installation, maintenance, and repair occupations\",\n        \"Production, transportation, and material moving occupations\", \"Production occupations\", \"Transportation and material moving occupations\"\n    ],\n    \"Men_2023\": [\n        85500, 33856, 16574, 12139, 4435, 17282, 4754, 3001, 939, 874, 910, 2560, 1808, 2437,\n        11206, 806, 2357, 3775, 3206, 1062, 11942, 7352, 4590, 13492, 720, 8093, 4679, 15004, 5800, 9203\n    ],\n    \"Women_2023\": [\n        75537, 36419, 13971, 8767, 5204, 22449, 1748, 602, 932, 2004, 988, 6842, 1670, 7663,\n        14965, 4317, 748, 4414, 2328, 3158, 18337, 6972, 11364, 834, 267, 364, 203, 14435, 2479, 8760\n    ]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a scatter plot\nplt.figure(figsize=(10, 6))\nplt.scatter(df[\"Men_2023\"], df[\"Women_2023\"], alpha=0.7)\nplt.title('Relationship between Total Employment in 2023 for Men and Women across All Listed Occupations')\nplt.xlabel('Men Employment (2023)')\nplt.ylabel('Women Employment (2023)')\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 37.89
+    },
+    {
+      "id": 56,
+      "FileName": "employment-table09",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Using the 2023 data, draw a pie chart showing the proportion of total employment for 'Management occupations,' 'Business and financial operations occupations,' and 'Management, professional, and related occupations.'",
+      "Reference": "[0.53, 0.23, 0.16, 0.07]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Occupation': ['Management occupations', 'Business and financial operations occupations', 'Management, professional, and related occupations'],\n    '2023': [20906, 9638, 70275]\n}\n\ndf = pd.DataFrame(data)\n\n# Extract the 2023 data for the specified occupations\nvalues = df['2023'].values\n\n# Create a pie chart\nplt.figure(figsize=(8, 8))\nplt.pie(values, labels=df['Occupation'], autopct='%1.1f%%', startangle=140)\nplt.title('Proportion of Total Employment in 2023')\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 9.92
+    },
+    {
+      "id": 57,
+      "FileName": "employment-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "For the occupation 'Management occupations,' what is the combined total employment of men for “16 years and over” in 2022 and 2023?",
+      "Reference": "24165",
+      "Prediction": "24052, 24273",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.53
+    },
+    {
+      "id": 58,
+      "FileName": "employment-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How does the number of full-time workers compare to part-time workers for the 'Total, 16 years and over' category?",
+      "Reference": "134056, 26981",
+      "Prediction": "134056, 26981",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.92
+    },
+    {
+      "id": 59,
+      "FileName": "employment-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the difference between the number of unemployed individuals looking for full-time work and those looking for part-time work for the 'Total, 16 years and over' category?",
+      "Reference": "3810",
+      "Prediction": "3610",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 60,
+      "FileName": "employment-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Is there a higher number of part-time workers or unemployed individuals looking for full-time work in the 'Black or African American, Men, 16 years and over' category?",
+      "Reference": "Part-time workers",
+      "Prediction": "Part-time workers, Unemployed looking for full-time work",
+      "Metrics": {
+        "F1": 44.44,
+        "EM": 0.0,
+        "ROUGE-L": 44.44,
+        "SacreBLEU": 13.13
+      },
+      "ProcessingTime": 1.77
+    },
+    {
+      "id": 61,
+      "FileName": "employment-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Are there any anomalies in the number of workers employed part-time for economic reasons in 2023? If not, simply state 'No anomalies detected.'",
+      "Reference": "No anomalies detected.",
+      "Prediction": "No anomalies detected.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 1.31
+    },
+    {
+      "id": 62,
+      "FileName": "employment-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the table and highlight any key trends or patterns in the employment data for 2023?",
+      "Reference": "2023 Employment Trends Summary\n\nThe table provides data on employed individuals categorized by age, sex, race, and ethnicity for the year 2023.\nKey columns include the number of full-time workers (both at work and not at work), part-time workers (including those working for economic or noneconomic reasons), and the unemployed individuals, split into those looking for full-time or part-time work.",
+      "Prediction": "The table presents 2023 annual averages of employed and unemployed full- and part-time workers in the U.S., categorized by age, sex, race, and Hispanic or Latino ethnicity. Key trends include: 1) The majority of employed workers (134,056 thousand) are full-time, with part-time workers making up a smaller portion (26,981 thousand). 2) Employment rates decline with age, with the highest employment among 25-54 year-olds and the lowest among 16-19 year-olds. 3) Men have higher employment rates than women across all age groups and racial/ethnic categories. 4) White workers constitute the largest employment group, followed by Hispanic or Latino workers. 5) Unemployment rates are highest among younger workers (16-19 years) and those aged 20-24, and lower among older workers (55+). 6) Part-time employment is more prevalent among younger workers and those aged 20-24. 7) The data shows significant disparities in employment and unemployment rates across racial and ethnic groups, with Black or African American workers having higher unemployment rates compared to White and Asian workers.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 13.5
+    },
+    {
+      "id": 63,
+      "FileName": "employment-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total employment of Asian women in 2023 across all occupations?",
+      "Reference": "5243",
+      "Prediction": "5243",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 64,
+      "FileName": "employment-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Compare the employment numbers of Black men and White men in 2022 within management occupations. Which group has higher employment?",
+      "Reference": "White",
+      "Prediction": "White, Black",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 65,
+      "FileName": "employment-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Calculate the percentage growth in total employment from 2022 to 2023 for all racial groups combined. The answer should be rounded to two decimal places.",
+      "Reference": "1.73",
+      "Prediction": "1.73",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 66,
+      "FileName": "employment-table13",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on employment trends, predict whether total employment for women will continue to increase, decrease, or stabilize beyond 2023.",
+      "Reference": "Stabilize",
+      "Prediction": "Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 67,
+      "FileName": "employment-table13",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average total employment for men and women in 2022?",
+      "Reference": "79146",
+      "Prediction": "79146, 79146",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.57
+    },
+    {
+      "id": 68,
+      "FileName": "employment-table14",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "What was the difference in the number of employed men and women in 2023?",
+      "Reference": "3800",
+      "Prediction": "3800",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 69,
+      "FileName": "employment-table14",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of employed workers in the 'Management, professional, and related occupations' category for 2022.",
+      "Reference": "7414",
+      "Prediction": "7414",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 70,
+      "FileName": "employment-table14",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the ethnic groups by their total employment in 2023 from highest to lowest.",
+      "Reference": "Mexican, Puerto Rican, Cuban",
+      "Prediction": "Mexican, Puerto Rican, Cuban",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 71,
+      "FileName": "employment-table14",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "According to the table, draw a bar chart showing the total employment numbers for men and women among Hispanic or Latino workers for 2022 and 2023.",
+      "Reference": "[16654.0, 17071.0, 12646.0, 13271.0]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n # Load the data from the table\n data = {\n    'Category': ['Men', 'Women'],\n    'Total(1) 2022': [16654, 12646],\n    'Total(1) 2023': [17071, 13271]\n }\n df = pd.DataFrame(data)\n # Plotting the bar chart\n plt.figure(figsize=(10,6))\n bar_width = 0.35\n index = range(len(df))\n plt.bar(index, df['Total(1) 2022'], bar_width, label='2022', color='blue')\n plt.bar([i + bar_width for i in index], df['Total(1) 2023'], bar_width, label='2023', color='green')\n plt.xlabel('Gender')\n plt.ylabel('Total Employment Numbers')\n plt.title('Total Employment Numbers for Men and Women among Hispanic or Latino Workers (2022-2023)')\n plt.xticks([i + bar_width/2 for i in index], df['Category'])\n plt.legend()\n plt.tight_layout()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 13.31
+    },
+    {
+      "id": 72,
+      "FileName": "employment-table14",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me draw a line chart showing the trend of employment numbers in the 'Management, professional, and related occupations' category for men and women from 2022 to 2023.",
+      "Reference": "[[4027.0, 4245.0], [773.0, 874.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data\ndf = pd.read_excel(\"table.xlsx\")\n\n# Extract the relevant data for 'Management, professional, and related occupations' for men and women\ndata = {\n    'Year': ['2022', '2023'],\n    'Men': [df.loc[df['Category'] == 'Management, professional, and related occupations', 'Men'].iloc[0],\n            df.loc[df['Category'] == 'Management, professional, and related occupations', 'Men'].iloc[1]],\n    'Women': [df.loc[df['Category'] == 'Management, professional, and related occupations', 'Women'].iloc[0],\n              df.loc[df['Category'] == 'Management, professional, and related occupations', 'Women'].iloc[1]]\n}\n\n# Create a DataFrame\ndf_plot = pd.DataFrame(data)\n\n# Plot the data\nplt.figure(figsize=(10, 6))\nplt.plot(df_plot['Year'], df_plot['Men'], marker='o', label='Men')\nplt.plot(df_plot['Year'], df_plot['Women'], marker='s', label='Women')\nplt.title('Trend of Employment Numbers in Management, Professional, and Related Occupations (2022-2023)')\nplt.xlabel('Year')\nplt.ylabel('Employment Numbers')\nplt.legend()\nplt.grid(True)\nplt.xticks(df_plot['Year'])\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 15.38
+    },
+    {
+      "id": 73,
+      "FileName": "employment-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total number of employed persons aged 20 to 24 years in the Construction and Manufacturing industries combined?",
+      "Reference": "2218",
+      "Prediction": "2255, 2115",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.84
+    },
+    {
+      "id": 74,
+      "FileName": "employment-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the industry with the highest number of employed persons aged 16 to 19 years.",
+      "Reference": "Leisure and hospitality",
+      "Prediction": "Wholesale and retail trade",
+      "Metrics": {
+        "F1": 28.57,
+        "EM": 0.0,
+        "ROUGE-L": 28.57,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 75,
+      "FileName": "employment-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For persons aged 20 years and over, does employment in Financial Activities exceed that in Transportation and Utilities? Provide 'Yes' or 'No'.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.31
+    },
+    {
+      "id": 76,
+      "FileName": "employment-table15",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, describing its primary columns, demographic categories, and any noticeable trends in employment across industries.",
+      "Reference": "The table provides employment statistics across nonagricultural industries, broken down by demographic categories such as age (e.g., '16 to 19 years,' '20 years and over'), and specific industries (e.g., 'Manufacturing,' 'Construction'). Key columns represent employment figures for various sectors and demographic groups. Notable trends include higher employment in sectors such as 'Education and Health Services' and 'Professional and Business Services,' with lower figures in sectors like 'Mining, Quarrying, and Oil and Gas Extraction.'",
+      "Prediction": "The table presents annual average employment data for nonagricultural industries in 2023, categorized by age, sex, race, and Hispanic or Latino ethnicity. Primary columns include industry sectors such as Mining, Construction, Manufacturing, Wholesale and Retail Trade, Transportation and Utilities, Information, Financial Activities, Professional and Business Services, Education and Health Services, Leisure and Hospitality, Other Services, and Public Administration. Demographic categories include Total, Men, Women, White, Black or African American, Asian, and Hispanic or Latino. Notable trends include higher employment in Professional and Business Services and Education and Health Services across most demographics, with Manufacturing and Wholesale and Retail Trade showing significant employment for men aged 25 to 54. Hispanic or Latino men dominate employment in Construction and Manufacturing, while White women show higher employment in Education and Health Services. Employment generally declines with age, with the largest workforce in the 25 to 54 age group across all categories.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.92
+    },
+    {
+      "id": 77,
+      "FileName": "employment-table15",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation coefficient between employment in Manufacturing and Transportation for individuals aged 20 to 24 years? The answer should be rounded to two decimal places.",
+      "Reference": "Strong positive correlation, 0.99",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.72
+    },
+    {
+      "id": 78,
+      "FileName": "employment-table16",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total number of wage and salary workers aged 16 to 19 years with the self-employed workers in the same age group. What is the difference between these numbers?",
+      "Reference": "65",
+      "Prediction": "67, 16",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 79,
+      "FileName": "employment-table16",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the total number of unpaid family workers across all age groups in the agricultural sector. What is the final sum?",
+      "Reference": "35",
+      "Prediction": "35",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 80,
+      "FileName": "employment-table16",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What are the number of private industry workers and government workers for individuals aged 16 years and older?",
+      "Reference": "128154, 21538",
+      "Prediction": "128154, 21538",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.58
+    },
+    {
+      "id": 81,
+      "FileName": "employment-table16",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Generate a scatter plot to visualize the relationship between the number of wage and salary workers and the number of self-employed workers in non-agricultural industries for each age group.",
+      "Reference": "[[128154.0, 5197.0, 2012.0, 3185.0, 13053.0, 29697.0, 27781.0, 24341.0, 20263.0, 7822.0, 69190.0, 2562.0, 936.0, 1626.0, 6670.0, 16054.0, 15279.0, 13339.0, 11045.0, 4241.0, 58964.0, 2634.0, 1076.0, 1559.0, 6384.0, 13644.0, 12502.0, 11002.0, 9218.0, 3581.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    \"Age Group\": [\n        \"Total, 16 years and over\", \"16 to 19 years\", \"16 to 17 years\", \"18 to 19 years\",\n        \"20 to 24 years\", \"25 to 34 years\", \"35 to 44 years\", \"45 to 54 years\",\n        \"55 to 64 years\", \"65 years and over\",\n        \"Men, 16 years and over\", \"16 to 19 years\", \"16 to 17 years\", \"18 to 19 years\",\n        \"20 to 24 years\", \"25 to 34 years\", \"35 to 44 years\", \"45 to 54 years\",\n        \"55 to 64 years\", \"65 years and over\",\n        \"Women, 16 years and over\", \"16 to 19 years\", \"16 to 17 years\", \"18 to 19 years\",\n        \"20 to 24 years\", \"25 to 34 years\", \"35 to 44 years\", \"45 to 54 years\",\n        \"55 to 64 years\", \"65 years and over\"\n    ],\n    \"Wage and Salary Workers (Nonagricultural)\": [\n        149692, 5443, 2086, 3357, 14239, 34038, 32962, 29525, 24332, 9154,\n        78523, 2673, 973, 1700, 7139, 18008, 17582, 15497, 12782, 4842,\n        71169, 2770, 1113, 1657, 7100, 16030, 15379, 14027, 11551, 4312\n    ],\n    \"Self-Employed Workers (Nonagricultural)\": [\n        673, 29, 14, 15, 75, 109, 118, 135, 133, 74,\n        54, 2, 2, 0, 3, 11, 11, 10, 11, 6,\n        619, 26, 11, 15, 72, 98, 108, 125, 123, 68\n    ]\n}\n\ndf = pd.DataFrame(data)\n\n# Filter out the \"Total, 16 years and over\" row for age group analysis\ndf = df[df[\"Age Group\"] != \"Total, 16 years and over\"]\n\n# Extract age groups from the \"Age Group\" column\ndf[\"Age Group\"] = df[\"Age Group\"].str.replace(\" years and over\", \"\").str.replace(\" to \", \"-\").str.replace(\" years\", \"\").str.replace(\" and over\", \"\").str.replace(\" to \", \"-\")\n\n# Create scatter plot\nplt.figure(figsize=(10, 6))\nplt.scatter(df[\"Wage and Salary Workers (Nonagricultural)\"], df[\"Self-Employed Workers (Nonagricultural)\"], alpha=0.7)\nplt.title('Relationship between Wage and Salary Workers and Self-Employed Workers (Nonagricultural) by Age Group')\nplt.xlabel('Wage and Salary Workers (Nonagricultural)')\nplt.ylabel('Self-Employed Workers (Nonagricultural)')\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 45.01
+    },
+    {
+      "id": 82,
+      "FileName": "employment-table16",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Create a pie chart to illustrate the proportion of private industry workers, government workers, and unpaid family workers for individuals aged 16 years and older.",
+      "Reference": "[0.68, 0.31, 0.01]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    \"Category\": [\"Private Industry\", \"Government\", \"Unpaid Family Workers\"],\n    \"Count\": [128154, 21538, 9030]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a pie chart\nplt.figure(figsize=(8, 8))\nplt.pie(df['Count'], labels=df['Category'], autopct='%1.1f%%', startangle=140)\nplt.title('Proportion of Workers by Category (Aged 16 and Over)')\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 8.53
+    },
+    {
+      "id": 83,
+      "FileName": "employment-table17",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total number of employed persons in the mining, quarrying, and oil and gas extraction industries, combining both wage and salary workers and self-employed workers?",
+      "Reference": "590",
+      "Prediction": "590",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 84,
+      "FileName": "employment-table17",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the industry with the highest number of government-employed workers.",
+      "Reference": "Education and health services",
+      "Prediction": "Education and health services",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 85,
+      "FileName": "employment-table17",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Calculate the percentage of unpaid family workers relative to the total number of employed persons in the construction industry. Round the answer to two decimal places.",
+      "Reference": "0.07%",
+      "Prediction": "1.31",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.39
+    },
+    {
+      "id": 86,
+      "FileName": "employment-table17",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Based on the data for nonagricultural industries, what is the correlation coefficient between total employment and the number of private industry workers? Provide the answer rounded to two decimal places.",
+      "Reference": "Strong positive correlation, 1.00.",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 87,
+      "FileName": "employment-table17",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the key insights from the dataset, focusing on employment distribution across industries and notable differences in worker classifications.",
+      "Reference": "The dataset highlights the overall employment distribution across major industries, with private employment dominating and government roles contributing significantly in sectors like education and health services, showing a total employment of 877,513. Self-employment and unpaid family work form a smaller fraction, while nonagricultural industries stand out as the largest contributors to both private and government employment. Key worker classifications include 778,543 in private industries, 98,976 in government roles, 52,322 self-employed, and 295 unpaid family workers. Top government-employed industries include Educational services (8,710) and Health services (10,400), while private employment is dominated by Health care and social assistance (19,856) and nonagricultural industries (128,154).",
+      "Prediction": "The dataset presents employment distribution across nonagricultural industries in 2023, segmented by sex and worker classification (wage/salary, private/self-employed, government, unpaid family workers). Key insights include: total employment of 158,772 thousand, with wage and salary workers dominating (149,692 thousand), followed by self-employed (9,030 thousand). The largest employment sectors are Education and Health Services (36,378 thousand), followed by Professional and Business Services (20,735 thousand) and Retail Trade (16,528 thousand). Notable differences by sex show women heavily concentrated in Education and Health Services (27,056 thousand) and Leisure and Hospitality (7,261 thousand), while men dominate in Construction (10,610 thousand) and Transportation and Utilities (7,530 thousand). Self-employed workers are most prevalent in Construction (1,562 thousand) and Professional and Business Services (1,923 thousand). Unpaid family workers are minimal (50 thousand total), with most concentrated in Wholesale and Retail Trade (9 thousand).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 13.17
+    },
+    {
+      "id": 88,
+      "FileName": "employment-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the total number of employed individuals in all industries?",
+      "Reference": "145345",
+      "Prediction": "161037",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.46
+    },
+    {
+      "id": 89,
+      "FileName": "employment-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the industry with the highest percentage of women among the listed categories.",
+      "Reference": "Child day care services",
+      "Prediction": "Other personal services, private households",
+      "Metrics": {
+        "F1": 22.22,
+        "EM": 0.0,
+        "ROUGE-L": 22.22,
+        "SacreBLEU": 10.68
+      },
+      "ProcessingTime": 2.39
+    },
+    {
+      "id": 90,
+      "FileName": "employment-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the representation of Black or African American workers in 'Crop production' and 'Forestry, except logging' industries. Which one has a higher percentage?",
+      "Reference": "Crop production",
+      "Prediction": "Crop production, Forestry, except logging",
+      "Metrics": {
+        "F1": 57.14,
+        "EM": 0.0,
+        "ROUGE-L": 57.14,
+        "SacreBLEU": 21.36
+      },
+      "ProcessingTime": 2.51
+    }
+  ],
+  "processed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+  ]
+}

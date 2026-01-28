@@ -1,0 +1,2153 @@
+{
+  "results": [
+    {
+      "id": 2305,
+      "FileName": "agriculture-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the Producer Support Estimate (PSE) for agriculture in 2019 in US dollars (Millions)?",
+      "Reference": "225693.78",
+      "Prediction": "225,693.78",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 4.22
+    },
+    {
+      "id": 2306,
+      "FileName": "agriculture-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What was the change in Market Price Support (MPS) from 2018 to 2020 in US dollars (Millions)?",
+      "Reference": "1914.9769",
+      "Prediction": "10423.58",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.19
+    },
+    {
+      "id": 2307,
+      "FileName": "agriculture-table09",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "According to the table, draw a bar chart to illustrate the Producer Support Estimate (PSE) for agriculture from 2014 to 2020.",
+      "Reference": "[231646.1458, 212232.8219, 215113.116, 212095.2705, 230575.045, 225693.7759, 232827.0016]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data\ndata = {\n    'Year': ['2014', '2015', '2016', '2017', '2018', '2019', '2020'],\n    'PSE': [231646.15, 212232.82, 215113.12, 212095.27, 230575.05, 225693.78, 232827.00]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.bar(df['Year'], df['PSE'], color='blue')\nplt.title('Producer Support Estimate (PSE) for Agriculture from 2014 to 2020')\nplt.xlabel('Year')\nplt.ylabel('PSE (US dollar, Millions)')\nplt.xticks(rotation=45)\nplt.grid(axis='y', linestyle='--', alpha=0.7)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 14.34
+    },
+    {
+      "id": 2308,
+      "FileName": "agriculture-table09",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me draw a line chart showing the change in Market Price Support (MPS) from 2014 to 2020.",
+      "Reference": "[[92752.9205, 94167.6954, 97052.1359, 93371.5051, 93170.5861, 88759.7753, 91255.6092]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    \"Year\": [2014, 2015, 2016, 2017, 2018, 2019, 2020],\n    \"MPS\": [92752.92, 89736.62, 94167.70, 93371.51, 93170.59, 88759.78, 87353.90]\n}\n\ndf = pd.DataFrame(data)\n\n# Plot the line chart\nplt.figure(figsize=(10, 6))\nplt.plot(df['Year'], df['MPS'], marker='o', linestyle='-', color='blue')\nplt.title('Change in Market Price Support (MPS) from 2014 to 2020')\nplt.xlabel('Year')\nplt.ylabel('Market Price Support (MPS) in US dollar, Millions')\nplt.grid(True)\nplt.xticks(df['Year'])\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 13.72
+    },
+    {
+      "id": 2309,
+      "FileName": "society-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the infant mortality rate in Australia for the year 2014?",
+      "Reference": "3.4",
+      "Prediction": "3.4",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 2310,
+      "FileName": "society-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "If the infant mortality rate in Belgium in 2021 is projected to decrease by 5%, what would the new rate be based on the data trend from 2010 to 2020?",
+      "Reference": "3.135",
+      "Prediction": "3.3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 2311,
+      "FileName": "society-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which year had the highest infant mortality rate in Australia, and what was the rate? ",
+      "Reference": "2010, 4.1",
+      "Prediction": "2010, 4.1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.8
+    },
+    {
+      "id": 2312,
+      "FileName": "society-table67",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average infant mortality rate in Australia from 2010 to 2020?",
+      "Reference": "3.31",
+      "Prediction": "3.55",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 2313,
+      "FileName": "society-table67",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the historical data from 2010 to 2020, what could be the projected infant mortality rate for Australia in 2025, assuming the trend continues?",
+      "Reference": "3.09",
+      "Prediction": "3.20, Decreasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.74
+    },
+    {
+      "id": 2314,
+      "FileName": "society-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the number of “Adverse decisions” in “Birmingham and Solihull” with “Black Country”. Which region had more adverse decisions, and by how many?",
+      "Reference": "Black Country, 13",
+      "Prediction": "Black Country, 225",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.95
+    },
+    {
+      "id": 2315,
+      "FileName": "society-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Based on the data, what is the total number of decisions (adverse, non-adverse, reserved, and cancelled) recorded in “GREAT BRITAIN”?",
+      "Reference": "396769",
+      "Prediction": "1234463, 1234463",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.54
+    },
+    {
+      "id": 2316,
+      "FileName": "society-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the proportion of “Reserved decisions” compared to the total number of decisions in “Central England”?",
+      "Reference": "0.11",
+      "Prediction": "65267, 1234463",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.45
+    },
+    {
+      "id": 2317,
+      "FileName": "society-table69",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many different reasons for “Adverse decisions” are listed in the table for the period between October 2012 and September 2013?",
+      "Reference": "18",
+      "Prediction": "Voluntarily leaves a place on a training scheme or employment programme without good reason, Losing through misconduct a place on a training scheme or employment programme, Refusal of a place on a training scheme or employment programme without good reason, Neglect to avail themselves of a reasonable opportunity of a place on a training scheme or employment programme without good reason, Failure to attend a place on a training scheme or employment programme without good reason, Failure to attend or failure to participate in an Adviser interview without good reason, Refusal or failure to comply with a Jobseeker's Direction without good reason, Failure to participate in a scheme for assisting person to obtain employment without good reason - Work Programme, Failure to participate in a scheme for assisting person to obtain employment without good reason - Skills Conditionality, Failure to participate in a scheme for assisting person to obtain employment without good reason - other scheme, Failure to participate in a scheme for assisting person to obtain employment without good reason - Work Experience, Not actively seeking employment, Not being available for work, Left employment voluntarily without good reason, Losing employment through misconduct, Neglect to avail themselves of a reasonable opportunity of employment without good reason, Refusal or failure to apply for, or accept if offered, a job which an employment officer has informed him/her is vacant or about to become vacant without good reason, Failure to participate in Mandatory Work Activity without good reason",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 14.82
+    },
+    {
+      "id": 2318,
+      "FileName": "society-table69",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Based on the data, what is the average number of “Adverse decisions” per month for the year 2012?",
+      "Reference": "30789",
+      "Prediction": "439317, 304634, 72908, 684, 817541",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.77
+    },
+    {
+      "id": 2319,
+      "FileName": "society-table69",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of “Adverse decisions” recorded for “GREAT BRITAIN” in the month of October 2012?",
+      "Reference": "16294",
+      "Prediction": "28,250",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.41
+    },
+    {
+      "id": 2320,
+      "FileName": "society-table69",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of sanctions recorded for “Voluntarily leaves a place on a training scheme” during October 2012, and how does it compare to the sanctions for “Losing through misconduct”?",
+      "Reference": "11972, 10334",
+      "Prediction": "0, 0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 2321,
+      "FileName": "society-table69",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trends from October 2012 to September 2013, can we predict the total sanctions for the “Voluntarily leaves a place on a training scheme” category for October 2013?",
+      "Reference": "11972",
+      "Prediction": "No clear trend, Cannot predict",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.27
+    },
+    {
+      "id": 2322,
+      "FileName": "society-table70",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Based on the data, what is the difference in the number of sanctions for “Non-adverse decisions” and “Adverse decisions” for the age group 18-24?",
+      "Reference": "74883",
+      "Prediction": "126646, 201529",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.22
+    },
+    {
+      "id": 2323,
+      "FileName": "society-table70",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many total sanctions were issued in the “Low” sanction decision level for “Great Britain” during the provided period?",
+      "Reference": "342027",
+      "Prediction": "1,234,463",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.07
+    },
+    {
+      "id": 2324,
+      "FileName": "society-table70",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of adverse JSA sanction decisions for the “Great Britain” region between October 2012 and September 2013?",
+      "Reference": "439317",
+      "Prediction": "439317,304634,72908,684",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.63
+    },
+    {
+      "id": 2325,
+      "FileName": "society-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of sanctions for the “High” decision level in the given year",
+      "Reference": "66786",
+      "Prediction": "62,186, 3,638, 962",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.91
+    },
+    {
+      "id": 2326,
+      "FileName": "society-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Verify if the total number of sanctions for the “High” decision level in the table is accurate based on the sum of individual values across all periods.",
+      "Reference": "Yes",
+      "Prediction": "62,186,3,638,962",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.83
+    },
+    {
+      "id": 2327,
+      "FileName": "society-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Check if the number of sanctions for the “Medium” decision level is greater than that for the “Low” decision level in the same period.",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2328,
+      "FileName": "society-table71",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average number of sanctions for the “Low” decision level across all periods in the table?",
+      "Reference": "98626.67",
+      "Prediction": "218366, 46915, 30599",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.19
+    },
+    {
+      "id": 2329,
+      "FileName": "society-table72",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many frozen shrimp imports are listed under “Lone Parent - Yes”?",
+      "Reference": "36188",
+      "Prediction": "36,188",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 2330,
+      "FileName": "society-table72",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the import value for frozen shrimp from “Lone Parent - No”?",
+      "Reference": "493143",
+      "Prediction": "493,143",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2331,
+      "FileName": "society-table72",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": " What is the sum of frozen shrimp imports from “Lone Parent - Yes” and “Other countries”?",
+      "Reference": "529331",
+      "Prediction": "36188, 0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 2332,
+      "FileName": "society-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the total number of decisions made in January 2009, considering both non-adverse and adverse decisions?",
+      "Reference": "26",
+      "Prediction": "57",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2333,
+      "FileName": "society-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many adverse decisions were made in March 2009?",
+      "Reference": "491",
+      "Prediction": "491",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2334,
+      "FileName": "society-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Can you calculate the average number of non-adverse decisions made per month for the year 2009, based on the data provided?",
+      "Reference": "287.25",
+      "Prediction": "333.5",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 2335,
+      "FileName": "society-table73",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of non-adverse decisions made in 2009, based on the data provided?",
+      "Reference": "3447",
+      "Prediction": "2,523",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 2336,
+      "FileName": "society-table73",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a descriptive summary of the table, including the main columns, and any notable trends in decision types across different months?",
+      "Reference": "The table presents monthly data on decisions made, including non-adverse, adverse, and cancelled decisions, as well as total decisions for each month. A notable trend is that the number of non-adverse decisions is relatively low compared to the other decision types, with higher numbers of cancelled decisions seen in some months. The data spans across years, showing fluctuations in the types of decisions each month.",
+      "Prediction": "The table records monthly decisions from 2008 to 2013, categorized into Non-adverse, Adverse, Cancelled, and Total decisions. Notable trends include a significant increase in adverse decisions over time, peaking in 2013, while non-adverse decisions also rose substantially. Cancelled decisions show a general upward trend, especially in later years. Total decisions exhibit a strong growth trajectory, with 2013 showing the highest monthly totals. The data suggests a growing volume of decisions overall, with adverse decisions consistently dominating the total.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.7
+    },
+    {
+      "id": 2337,
+      "FileName": "society-table74",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of non-adverse decisions made in Great Britain, based on the data provided?",
+      "Reference": "20376",
+      "Prediction": "20,376",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 2338,
+      "FileName": "society-table74",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which region had the highest number of total decisions, and what was the value?",
+      "Reference": "GREAT BRITAIN, 76324",
+      "Prediction": "GREAT BRITAIN, 76324",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 2339,
+      "FileName": "society-table74",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many regions reported fewer than 300 total decisions, based on the provided data?",
+      "Reference": "3",
+      "Prediction": "South West Wales, North and Mid Wales, Thames Valley, West of Scotland, North of Scotland, Merseyside, South Yorkshire, West Yorkshire, Northumberland, Tyne and Wear, Durham and Tees Valley, Black Country, Derbyshire, Birmingham and Solihull",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.74
+    },
+    {
+      "id": 2340,
+      "FileName": "society-table74",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the data, including the key columns and any notable trends in the distribution of decisions across different regions?",
+      "Reference": "The table presents data on sanction decisions across various regions, with columns detailing non-adverse, adverse, and cancelled decisions, as well as total decisions. Notable trends include variations in the number of decisions, with some regions reporting higher total decisions than others. The data shows that regions like Great Britain have higher decision counts compared to smaller regions. ",
+      "Prediction": "GREAT BRITAIN, Non-adverse decisions, Adverse decisions, Cancelled decisions, Total decisions, CENTRAL ENGLAND, LONDON AND THE HOME COUNTIES, NORTH EAST, NORTH WEST, SCOTLAND, SOUTHERN ENGLAND, WALES, UNKNOWN, Adverse decisions dominate in most regions, London and the Home Counties have the highest total decisions, North West has the highest adverse decisions, Scotland has the lowest total decisions, Unknown category has the lowest total decisions.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.76
+    },
+    {
+      "id": 2341,
+      "FileName": "society-table74",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Are there any regions with a total number of decisions exceeding 50,000, based on the data?",
+      "Reference": "GREAT BRITAIN",
+      "Prediction": "GREAT BRITAIN",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 2342,
+      "FileName": "society-table75",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of decisions in January 2013, based on the data provided?",
+      "Reference": "1466",
+      "Prediction": "1,466",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 2343,
+      "FileName": "society-table75",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many months reported fewer than 500 “Failure to attend” decisions?",
+      "Reference": "7",
+      "Prediction": "5",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2344,
+      "FileName": "society-table75",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which month had the highest number of “Failure to participate” decisions, and what was the value?",
+      "Reference": "September, 2627",
+      "Prediction": "September, 2627",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2345,
+      "FileName": "society-table76",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of individuals receiving an adverse ESA sanction in “GREAT BRITAIN” during the period from 3rd December 2012 to 30th September 2013?",
+      "Reference": "14601",
+      "Prediction": "14,601",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 2346,
+      "FileName": "society-table76",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How many individuals from the age group “16-17 years of age” received an adverse ESA sanction, and how does this number compare to those in the “18-24 years of age” group? ,",
+      "Reference": " -, 1649",
+      "Prediction": "0, 1649",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2347,
+      "FileName": "society-table76",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Based on the data, did the number of adverse sanctions in the “GREAT BRITAIN” region exceed 10,000 individuals during the provided time period? ",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.85
+    },
+    {
+      "id": 2348,
+      "FileName": "society-table76",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the mean and standard deviation of the number of individuals in each age group who received an adverse ESA sanction?",
+      "Reference": "1470.7, 714.26",
+      "Prediction": "1660.1, 546.73",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.53
+    },
+    {
+      "id": 2349,
+      "FileName": "society-table76",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed description of the table, including explanations for each main column and highlight any notable trends or insights from the data?",
+      "Reference": "The table presents data on individuals receiving an adverse ESA sanction across different age groups, regions, and ethnic categories. The age groups show high sanction numbers for individuals aged 18-34, with “GREAT BRITAIN” reporting the highest total. Ethnic groups like “White” also show significant numbers. Notably, the “16-17 years of age” group has no recorded data.",
+      "Prediction": "The table presents a demographic breakdown of 14,601 individuals in Great Britain who received an adverse sanction decision since December 3, 2012. It categorizes the data by Age Group, Ethnicity, Gender, Disability status, and Regional Group. Notable trends include: the largest age group is 40-44 years old (2,271 individuals), followed by 35-39 years old (1,903); the majority ethnic group is White (11,458 individuals); males outnumber females (7,939 vs. 6,656); a significant majority have a disability (11,491 individuals); and London and the Home Counties have the highest regional count (4,022 individuals). The data has been adjusted to protect confidentiality, and totals may not sum exactly due to these adjustments.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.88
+    },
+    {
+      "id": 2350,
+      "FileName": "society-table77",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of “Adverse” decisions recorded across all levels for the time period from 3rd December 2012 to 30th September 2013? ",
+      "Reference": "11845",
+      "Prediction": "356, 34",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2351,
+      "FileName": "society-table77",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Based on the data, how do the total numbers of “Adverse” decisions compare with “Non-adverse” decisions for the same time period? ",
+      "Reference": "11815, 11845",
+      "Prediction": "3127, 4951",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 2352,
+      "FileName": "society-table77",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Are there any anomalies in the “Reconsidered Decision” category, such as unusually low or high values in any specific outcome? ",
+      "Reference": "No anomalies are detected in the table.",
+      "Prediction": "Cancelled, Non-adverse",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 0.82
+    },
+    {
+      "id": 2353,
+      "FileName": "sport-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does Al Woods have a higher batting average than Rick Bosetti in any single game listed in the table?",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2354,
+      "FileName": "sport-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "How many total runs did both Rick Bosetti and Al Woods score combined in their games against the “Tigers” opponent?",
+      "Reference": "10",
+      "Prediction": "10, 1",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2355,
+      "FileName": "sport-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Count how many games Rick Bosetti had a batting average above 0.300.",
+      "Reference": "5",
+      "Prediction": "4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2356,
+      "FileName": "sport-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Which player scored more total runs across all their games, and by how many runs?",
+      "Reference": "Rick Bosetti, 33",
+      "Prediction": "Rick Bosetti, 33",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 2357,
+      "FileName": "sport-table13",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including the main columns and highlight any noticeable trends or insights from Rick Bosetti and Al Woods’ performance?",
+      "Reference": "The table provides performance data for Rick Bosetti and Al Woods in their games against various opponents. The key columns are games played (G), at-bats (AB), runs (R), hits (H), and batting average (Avg.). Rick Bosetti performed consistently with a higher batting average and more home runs compared to Al Woods, although Al Woods had some standout performances in individual games.",
+      "Prediction": "1978 Toronto Blue Jays Batting Statistics table includes columns for Number, Name, Opponent, G (Games), AB (At Bats), R (Runs), H (Hits), RBI (Runs Batted In), Avg. (Batting Average), 2B (Doubles), 3B (Triples), and HR (Home Runs). Rick Bosetti showed strong performance against the Rangers (0.433 avg., 13 H, 2 RBI) and Tigers (0.340 avg., 18 H, 3 RBI), with overall totals of 451 AB, 121 H, 54 R, 38 RBI, and a .268 batting average. Al Woods had a standout performance against the Royals (0.417 avg., 10 H, 1 RBI) and Twins (0.367 avg., 11 H, 7 RBI), with overall totals of 232 AB, 58 H, 21 R, 23 RBI, and a .250 batting average. Both players contributed significantly to the team’s offense, with Bosetti being more consistent in production and Woods showing higher peak performance in key matchups.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 13.68
+    },
+    {
+      "id": 2358,
+      "FileName": "productivity-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What does the “Criticality Rating (CR)” include, and how is it assessed in the table?",
+      "Reference": "Severe, High, Moderate, Low, Negligible",
+      "Prediction": "Severe, High, Moderate, Low, Negligible",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.67
+    },
+    {
+      "id": 2359,
+      "FileName": "productivity-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the criticality rating for \"Fatigue Loading\" under the \"High\" risk category.",
+      "Reference": "7",
+      "Prediction": "7",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 2360,
+      "FileName": "productivity-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the weightage factors of \"In-Service Defect\" and \"Last Inspection\" and state which has a higher value.",
+      "Reference": "In-Service Defect",
+      "Prediction": "In-Service Defect, Last Inspection",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 2361,
+      "FileName": "productivity-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Count the number of categories where the criticality rating for \"Coating Defect\" is equal to or greater than 5.",
+      "Reference": "3",
+      "Prediction": "Severe, High, Moderate, Low, Negligible",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.53
+    },
+    {
+      "id": 2362,
+      "FileName": "productivity-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including its main columns and any notable patterns or trends observed in the criticality ratings.",
+      "Reference": "The table presents criticality ratings for various risk categories, including \"Fatigue Loading,\" \"Corrosion,\" and \"Coating Defect,\" with columns detailing weightage factors and ratings across severity levels like Severe, High, Moderate, Low, and Negligible. Notable trends include consistently higher criticality ratings for Severe levels and decreasing ratings for less critical levels. Weightage factors also vary slightly among categories, influencing their overall impact.",
+      "Prediction": "The table assesses Probability of Failure based on Criticality, with main columns including Criticality (Fatigue Loading, Corrosion, Coating Defect, In-Service Defect, In-Service Loading, Last Inspection), Weightage Factor, and Criticality Rating (Severe, High, Moderate, Low, Negligible). Notable patterns show that higher criticality ratings (Severe) correspond to higher numerical values (10) across all categories, while lower ratings (Negligible) consistently assign the lowest value (1). Weightage factors vary by category, with In-Service Defect having the highest (0.25) and In-Service Loading and Last Inspection having the lowest (0.10). Each criticality rating is further subdivided into specific failure conditions or time-based thresholds, indicating a structured risk assessment framework.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.23
+    },
+    {
+      "id": 2363,
+      "FileName": "productivity-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What qualitative descriptions are associated with the different rankings of \"Environmental Impact\" in the table?",
+      "Reference": "Catastrophic leak, Major leak, Localised leak, Minor leak, Slight leak, Negligible",
+      "Prediction": "Catastrophic leak, Major leak, Localised leak, Minor leak, Slight leak, Negligible",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.93
+    },
+    {
+      "id": 2364,
+      "FileName": "productivity-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the range of the quantitative impact for \"Asset Impact\" ranked as \"Medium.\"",
+      "Reference": "45≤x<75",
+      "Prediction": "45≤x<75",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 2365,
+      "FileName": "productivity-table07",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of rankings under \"Environmental Impact\" where the quantitative impact is greater than or equal to 500?",
+      "Reference": "3",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2366,
+      "FileName": "productivity-table07",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the quantitative ranges for the highest ranking of “Asset Impact” and “People Safety.” Which has the greater minimum value?",
+      "Reference": "Asset Impact",
+      "Prediction": "Asset Impact, People Safety",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 2367,
+      "FileName": "productivity-table07",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the main columns of the table and highlight any notable trends or insights from the ranking data across all categories?",
+      "Reference": "The table categorizes “Environmental Impact,” “Asset Impact,” and “People Safety” by rankings (5 to 0), qualitative descriptions, and quantitative ranges. Rankings represent severity levels, with higher values indicating more significant impacts (e.g., Catastrophic, x \\geq 50,000 for Environmental Impact) and lower values reflecting minimal impacts (e.g., Negligible, x = 0). Notable trends include consistent decreases in quantitative thresholds with lower rankings and qualitative descriptions that align proportionally with the rankings across all categories.",
+      "Prediction": "The table categorizes consequences of failure into Environmental Impact, Asset Impact, and People Safety, each with Ranking, Qualitative, and Quantitative columns. Notable trends include: higher rankings (5) correspond to more severe qualitative impacts (e.g., Catastrophic leak, Very High, Catastrophic) and higher quantitative thresholds (e.g., x≥50,000, x≥100, x≥10), while lower rankings (0) indicate negligible impacts with quantitative values of 0.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.83
+    },
+    {
+      "id": 2368,
+      "FileName": "labor-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Extract the EMPNAME(s) involved in the earliest instance of “SMSBOLI BRANDED” in the table.",
+      "Reference": "A. RAUF DALAL",
+      "Prediction": "A. RAUF DALAL",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 2369,
+      "FileName": "labor-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Find the EMPNAME(s) who were involved in multiple calls on the same date.",
+      "Reference": "A. RAUF DALAL, AMBER HAMILTON",
+      "Prediction": "A. RAUF DALAL, AMANDA CERRONI, AMBER HAMILTON",
+      "Metrics": {
+        "F1": 80.0,
+        "EM": 0.0,
+        "ROUGE-L": 80.0,
+        "SacreBLEU": 22.96
+      },
+      "ProcessingTime": 2.02
+    },
+    {
+      "id": 2370,
+      "FileName": "labor-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which EMPNAME is associated with the highest number of calls in the table?",
+      "Reference": "AMBER HAMILTON",
+      "Prediction": "AMBER HAMILTON",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 2371,
+      "FileName": "labor-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Identify the EMPNAME(s) involved in both the earliest and latest calls in the table.",
+      "Reference": "None",
+      "Prediction": "A. RAUF DALAL, AMBER HAMILTON",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.55
+    },
+    {
+      "id": 2372,
+      "FileName": "labor-table42",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including the main columns, key EMPNAME(s), and a brief description of the most active and least active individuals.",
+      "Reference": "The table tracks call activity across employees through columns such as EMPNAME (employee name), CALL ID (unique identifier for each call), and Date. Key EMPNAMEs include A. RAUF DALAL, AMANDA CERRONI, and AMBER HAMILTON. AMBER HAMILTON is the most active individual with the highest number of calls, while AMANDA CERRONI appears less active, with fewer calls recorded.",
+      "Prediction": "EMPNAME, CALL ID, Date, ACCOUNT ID, Product, Exception - Key EMPNAMEs: A. RAUF DALAL, AMANDA CERRONI, AMBER HAMILTON - Most active: AMBER HAMILTON with 14 entries - Least active: A. RAUF DALAL with 5 entries",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 4.12
+    },
+    {
+      "id": 2373,
+      "FileName": "labor-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Are there any individuals in the table listed under both “Manchester” and “Burnley”?",
+      "Reference": "demo name 10, demo name 13, demo name 14, demo name 21, demo name 34, demo name 39, demo name 37",
+      "Prediction": "demo name 10, demo name 13, demo name 14, demo name 21, demo name 26, demo name 34, demo name 37, demo name 39, demo name 40",
+      "Metrics": {
+        "F1": 87.5,
+        "EM": 0.0,
+        "ROUGE-L": 83.33,
+        "SacreBLEU": 73.01
+      },
+      "ProcessingTime": 3.41
+    },
+    {
+      "id": 2374,
+      "FileName": "labor-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which companies have employees listed with the skill “Gas engineer”?",
+      "Reference": "Hak Gas, Plumb It Right, Pristine Carpets",
+      "Prediction": "Hak Gas, Plumb It Right, Pristine Carpets, Cash & Carry",
+      "Metrics": {
+        "F1": 87.5,
+        "EM": 0.0,
+        "ROUGE-L": 87.5,
+        "SacreBLEU": 72.6
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 2375,
+      "FileName": "labor-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which company has the highest number of employees working in “Manchester”?",
+      "Reference": "Cash & Carry",
+      "Prediction": "Cash & Carry",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2376,
+      "FileName": "labor-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Calculate the number of unique skills associated with the employees in “Manchester”.",
+      "Reference": "17",
+      "Prediction": "Gas engineer, Intercom Specialist, Plasterer, Plumber, electrician, Carpet fitter, Roofer, General, Surveyor, Builder, Joiner, Decorator, Gardener, Carpet cleaning, Window fitter, Locksmith, damp specialist, Rubbish removal, Cleaning, general",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.94
+    },
+    {
+      "id": 2377,
+      "FileName": "labor-table43",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed summary of the table, including the company names, employee skills, and the regions they work in? Highlight any trends or notable patterns in the data.",
+      "Reference": "The table provides details about employees working for different companies, with their corresponding skills and regions. Key companies include “Hak Gas,” “Pipe Wise,” “Pristine Carpets,” and “Cash & Carry,” among others. The employees possess various skills such as Gas engineer, Plumber, Roofer, Surveyor, and more. The majority of employees are listed under “Manchester,” with some appearing in both “Manchester” and “Burnley” regions. “Pristine Carpets” and “Cash & Carry” have notable representations in Manchester, with a variety of skills ranging from carpet fitting to general work. Several companies like “Hak Gas” and “Pini With A Van” show a pattern of employees with specialized skills working across multiple locations. A notable trend is the concentration of employees with diverse skills in Manchester, especially in fields like Gas engineering and Surveying. Some companies, such as “Elite Carpets” and “Assured Advanced Access,” have a higher presence of employees working in “Burnley.” There is an overall trend of a variety of skills spread across different regions, with a higher density in Manchester.",
+      "Prediction": "Hak Gas, Pipe Wise, Plumb It Right, Pristine Carpets, Cash & Carry, Elite Carpets, Assured Advanced Access, Pini With A Van, Stardrops, Bens Locksmith, Lawrence & Carl (Royton); Skills include Gas engineer, Intercom Specialist, Plasterer, Plumber, electrician, Carpet fitter, Roofer, General, Surveyor, Builder, Decorator, Gardener, Carpet cleaning, Window fitter, Locksmith, damp specialist, Rubbish removal, Joiner, Cleaning; Regions include Manchester and Burnley; Notable patterns: Multiple companies operate in both areas, Gas engineer and electrician are common skills, Roofer and Builder skills appear frequently, and some employees have dual skills or serve multiple regions.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.39
+    },
+    {
+      "id": 2378,
+      "FileName": "manufacture-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How many unique ItemNo values exist in the “Planers” Category?",
+      "Reference": "5",
+      "Prediction": "6661408, 6905178, 6905404, 6906320, 6958266",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.89
+    },
+    {
+      "id": 2379,
+      "FileName": "manufacture-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "List all unique Categories present in Group 2.",
+      "Reference": "Planers, Landscape Rakes",
+      "Prediction": "Planers, Landscape Rakes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.01
+    },
+    {
+      "id": 2380,
+      "FileName": "manufacture-table19",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Identify the Group with the highest count of rows where the BU is “BMK Kit” and the Category is “Planers.”",
+      "Reference": "Group 2",
+      "Prediction": "Group 2, Group 3",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 2381,
+      "FileName": "manufacture-table19",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the total count of items in the Category “Snow Blades” across all rows.",
+      "Reference": "3",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.84
+    },
+    {
+      "id": 2382,
+      "FileName": "manufacture-table19",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, including the main columns, their purpose, and any notable trends or group-level insights.",
+      "Reference": "The table organizes manufacturing data by Group, SupplyOrg, BU, WeldLine, Category, SubCategory, ItemNo, and ItemDesc. Each row represents a specific item, detailing its associated organizational attributes and descriptive information. Notable patterns include the grouping of similar categories like “Snow Blades” and “Planers” under different WeldLines and Groups, with “BMK Kit” frequently associated with Planers.",
+      "Prediction": "The table categorizes items by SupplyOrg (all LAT), BU (MA2, MA1, BMK Kit, MA), WeldLine (BMK Weld 2, BMK Weld 1, BMK NA), Category (Snow Blades, Angle Brooms, Planers, Landscape Rakes, Soil Conditioners), and SubCategory (SSB, Abroom, Pdrum, Lrake, Sconditioner). Group 1 includes snow blades and an angle broom; Group 2 includes planers, landscape rakes, and a slot cutting planer; Group 3 includes larger planers and a soil conditioner. Notable trends: BMK Kit and MA are frequently associated with planers; BMK Weld 1 hosts multiple categories; planer items dominate Group 2 and 3 with varying sizes.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.73
+    },
+    {
+      "id": 2383,
+      "FileName": "labor-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which team under the agent code “CCL” has the most staff members listed?",
+      "Reference": "SALES",
+      "Prediction": "SALES",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.79
+    },
+    {
+      "id": 2384,
+      "FileName": "labor-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does the team “SALES” include “HEP” under any agent code?",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.75
+    },
+    {
+      "id": 2385,
+      "FileName": "labor-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does the agent code “TAB” have any staff listed under the “SALES” team?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.75
+    },
+    {
+      "id": 2386,
+      "FileName": "labor-table44",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "For the agent code “CCL,” what is the percentage of rows assigned to the “SALES” team compared to all rows for “CCL”?",
+      "Reference": "0.6",
+      "Prediction": "60, 40",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 2387,
+      "FileName": "labor-table44",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed description of the table, including the main columns, their purpose, and any observable trends or patterns?",
+      "Reference": "The table provides an overview of agent codes, their associated teams, and the staff or summary entries under each team. The main columns are “Agent Code,” which categorizes organizational units; “Team,” which specifies functional groupings like “SALES” or “UNASSGN”; and “Staff Initials & Name,” which lists individual staff members or subtotal markers. Notable patterns include the grouping of staff under specific teams, with subtotal markers summarizing each team and agent code. The agent code “CCL” has the most detailed entries, with staff distributed across multiple teams, while “TAB” is focused on subtotal markers.",
+      "Prediction": "The table categorizes staff by Agent Code (CCL and TAB), Team (SALES and UNASSGN), and Staff Initials & Name. It includes subtotals for teams and agent codes, indicating aggregated data. Trends show CCL has 5 SALES team members and 3 UNASSGN members, while TAB has 3 sub-agents (TAB, UNASSGN, WEB) with a team subtotal. The structure suggests a hierarchical reporting format with summary rows for aggregation.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.28
+    },
+    {
+      "id": 2388,
+      "FileName": "labor-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "List all types of plants mentioned in the project description.",
+      "Reference": "Sulphuric acid plant, Urea plant, NP complex fertilizer plant, SSP plant, Ammonia-urea complex",
+      "Prediction": "sulphuric acid plant, urea plant, NP complex fertilizer plant, SSP plant, ammonia-urea complex",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.84
+    },
+    {
+      "id": 2389,
+      "FileName": "labor-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify all the company codes associated with a “Statistical Quantity” greater than 50.",
+      "Reference": "0I79, 0I82",
+      "Prediction": "0I79, 0I82, 0I83, 0I84",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.87
+    },
+    {
+      "id": 2390,
+      "FileName": "labor-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total duration of the project in months based on the provided start and end dates?",
+      "Reference": "3.02",
+      "Prediction": "3.00",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 2391,
+      "FileName": "labor-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Based on the “Statistical Quantity” and “Average” columns, which company code demonstrates the highest efficiency (highest ratio of Average to Statistical Quantity)?",
+      "Reference": "0I84",
+      "Prediction": "0I84",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2392,
+      "FileName": "labor-table45",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the key features of the table, including the purpose of each column and any notable trends or patterns observed in the data?",
+      "Reference": "The table provides an overview of projects managed by L&T, focusing on company codes, cost centers, intercompany entities, line descriptions, statistical quantities, and performance averages. The “Company Code” identifies unique project entities, while the “Cost Center” specifies regional locations. The “Intercompany Name” lists stakeholders involved, and “Line Description” details project activities. The “Statistical Quantity” column tracks numerical measures, and “Average” represents efficiency percentages. Notable trends include high statistical quantities for specific projects, such as 85 for 0I82, and varying efficiency rates, with the highest at 90.00% for 0I84. The table highlights diverse projects across regions and industries.",
+      "Prediction": "L&T ISSUE MANAGEMENT REPORTS, Project details including period, duration, end date, manager, and description, Company Codes, Cost Centers, Intercompany Names, Line Descriptions, Statistical Quantities, and Average percentages; notable trends: HPCL (0I79) has highest statistical quantity (55) and average (82.76%), NPTL (0I84) has highest average (90.00%) but lowest quantity (11), MARG (0I82) has highest quantity (85) but lowest average (51.00%)",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.58
+    },
+    {
+      "id": 2393,
+      "FileName": "economy-table119",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which day of the week had the lowest number of orders, and how many orders were placed?",
+      "Reference": "Sunday, 0",
+      "Prediction": "Sunday, 0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 2394,
+      "FileName": "economy-table119",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What are the components included in the “Sales Performance” section of the table?",
+      "Reference": "Total Orders, Staff Orders, Clients Orders, Operating Days, Avg Orders / day, Gross Revenues, Avg Spend per order.",
+      "Prediction": "Total Orders, Staff Orders, Clients Orders, Operating days, Avg Orders / day, Gross Revenues, Avg Spend per order",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.92
+    },
+    {
+      "id": 2395,
+      "FileName": "economy-table119",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What percentage of the total orders in the “Sales Performance” section were client orders?",
+      "Reference": "1",
+      "Prediction": "100",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 2396,
+      "FileName": "economy-table119",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Based on the number of orders placed each day, what is the average number of orders placed on weekdays (Monday to Friday)?",
+      "Reference": "3.6",
+      "Prediction": "3.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.91
+    },
+    {
+      "id": 2397,
+      "FileName": "economy-table119",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "According to the table, draw a bar chart to show the number of orders placed on each day of the week,",
+      "Reference": "[3, 5, 5, 3, 2, 2, 0]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data\ndata = {\n    \"Day\": [\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\", \"Saturday\", \"Sunday\"],\n    \"Orders\": [3, 5, 5, 3, 2, 2, 0]\n}\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.bar(df['Day'], df['Orders'], color='skyblue')\nplt.title('Number of Orders Placed on Each Day of the Week')\nplt.xlabel('Day of the Week')\nplt.ylabel('Number of Orders')\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 7.88
+    },
+    {
+      "id": 2398,
+      "FileName": "economy-table120",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Based on the given table, verify if the total number of orders for the week (7 days) matches the total number of commissionable orders in the “Commissionable” column.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2399,
+      "FileName": "economy-table120",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total revenue generated between 2015-09-21 and 2015-09-28 according to the table?",
+      "Reference": "£411.50",
+      "Prediction": "£411.50",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 2400,
+      "FileName": "economy-table120",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total revenue generated on Monday with that of Tuesday, and determine the day with higher revenue.",
+      "Reference": "Tuesday, £97.00",
+      "Prediction": "Tuesday, £68.00",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 2401,
+      "FileName": "economy-table120",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the average commission per order during the period from 2015-09-21 to 2015-09-28.",
+      "Reference": "£1.03",
+      "Prediction": "1.05",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 2402,
+      "FileName": "economy-table120",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the data in the table, including the main columns and any notable trends in the commission amounts over the week? ",
+      "Reference": "The table details orders placed between 2015-09-21 and 2015-09-28. The main columns include “Invoice Total”, “Day”, and “Commission Amount”. Commission amounts show a slight variation across the week, with the highest commission observed on Thursday (£1.53), while some days like Tuesday and Wednesday show more consistency in lower values (£0.65 - £1.20). The total commission for the week is £20.58 from 20 orders.",
+      "Prediction": "Customer Invoice Report for Room Seasons Ltd. from 2015-09-21 to 2015-09-28, detailing invoices from Holiday Inn Docklands with columns for Reference, To, Invoice Number, Date, Invoice Total, Day, Commissionable, and Commission Amount. Total invoice amount is £411.50 with total commission £20.58. Commission amounts vary daily, with the highest commission on Thursday (£1.53) and the lowest on Tuesday (£0.80), showing a general upward trend in commission from Monday to Friday.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.8
+    },
+    {
+      "id": 2403,
+      "FileName": "economy-table121",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the transaction date listed in the table?",
+      "Reference": "42074",
+      "Prediction": "11-Mar-15",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2404,
+      "FileName": "economy-table121",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the total quantity of products listed in the table, and does it match the summation provided in the “Quantity” column?",
+      "Reference": "22, Yes",
+      "Prediction": "22, Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 2405,
+      "FileName": "economy-table121",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the products in descending order based on their quantities and identify the product with the highest quantity.",
+      "Reference": "Product 7, 6",
+      "Prediction": "Product 7, Product 6, Product 5, Product 4, Product 3, Product 2, Product 1",
+      "Metrics": {
+        "F1": 35.29,
+        "EM": 0.0,
+        "ROUGE-L": 35.29,
+        "SacreBLEU": 6.29
+      },
+      "ProcessingTime": 2.02
+    },
+    {
+      "id": 2406,
+      "FileName": "economy-table121",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many products have a total value greater than or equal to £10 in the “Total” column? ",
+      "Reference": "4",
+      "Prediction": "Product 3, Product 4, Product 5, Product 6",
+      "Metrics": {
+        "F1": 22.22,
+        "EM": 0.0,
+        "ROUGE-L": 22.22,
+        "SacreBLEU": 5.52
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 2407,
+      "FileName": "economy-table121",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including the total number of products, their cumulative quantity, and the overall total value?",
+      "Reference": "The table is an invoice ledger dated 11-Mar-15, listing transactions for Customer ID 12 under Invoice No. 1001. It contains 7 products, with columns for description, quantity, rate, and total value. The cumulative quantity of products is 22, and the overall total value is £63.",
+      "Prediction": "Total number of products: 7, Cumulative quantity: 22, Overall total value: 63",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 1.72
+    },
+    {
+      "id": 2408,
+      "FileName": "manufacture-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Based on the table, which store had the earliest reshipment date for product SKU 945DU2869, and what was the date of reshipment?",
+      "Reference": "SHOP RITE, 2015/11/4",
+      "Prediction": "641 Hamburg TPKE, 2015/11/4",
+      "Metrics": {
+        "F1": 28.57,
+        "EM": 0.0,
+        "ROUGE-L": 28.57,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 1.69
+    },
+    {
+      "id": 2409,
+      "FileName": "manufacture-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the SKU 945DU2870, is there any store that requested a replacement for damaged goods? If so, which store and when was the reshipment sent?",
+      "Reference": "Kroger, 2015/11/20",
+      "Prediction": "J918, 2015/11/20",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 2410,
+      "FileName": "manufacture-table20",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of products with a reshipment date in 2015, and how many of them have a reshipment date after November 10th?",
+      "Reference": "9, 4",
+      "Prediction": "9, 5",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 2411,
+      "FileName": "manufacture-table20",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "For SKU 945DU2870, calculate the average number of days between the date the product was entered and the date it was reshipped across all entries for this product.",
+      "Reference": "0",
+      "Prediction": "3, 0",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2412,
+      "FileName": "manufacture-table20",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the table, including the main columns like SKU, store names, reshipment dates, and any notable trends or insights about the reshipment process?",
+      "Reference": "The table contains reshipment data for various products, including the SKU, store names, reshipment dates, and issues related to damaged products or replacements. The main columns include SKU, store names, reshipment tracking numbers, and reshipment dates. Notable insights include multiple reshipments for products like SKU 945DU2869, with several stores (e.g., Shop Rite, Walmart, and Kroger) requesting replacements for damaged goods. The reshipment dates span from November 4 to November 24, 2015, with a clear trend of quick action in reshipping after the issue was reported.",
+      "Prediction": "SKU #, Store Names, Reshipment Dates, Notable Trends: Most reshipments occurred within 1-2 days of entry, with Kroger and Walmart having multiple entries; damage issues were common, often requiring third-party or store-level replacements.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 3.25
+    },
+    {
+      "id": 2413,
+      "FileName": "labor-table46",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How many tasks were completed on January 14, 2016, for the property at Bold St 21, Bacup, LANCS, OL13 9QR?",
+      "Reference": "6",
+      "Prediction": "7",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 2414,
+      "FileName": "labor-table46",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the property at Altham St 6, Padiham, BB12 8QR, how many different types of repair services were assigned, and which type was the most frequently assigned? ",
+      "Reference": "6, Roofer",
+      "Prediction": "5, Roofer",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 2415,
+      "FileName": "labor-table46",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "For Bold St 21, Bacup, LANCS, OL13 9QR, compare the number of “Complete” tasks on January 13, 2016 to the number of “Complete” tasks on January 14, 2016. Which date had more tasks completed?",
+      "Reference": "42383",
+      "Prediction": "2016/1/14, 2016/1/13",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.35
+    },
+    {
+      "id": 2416,
+      "FileName": "labor-table46",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Rank the properties by the number of “Contractor Assigned” tasks. Which property had the highest number of assigned contractors?",
+      "Reference": "Altham St 6, Padiham, BB12 8QR",
+      "Prediction": "Albert Terrace 15, Bacup, OL13 8BJ, Altham St 6, Padiham, BB12 8QR, Bold St 21, Bacup, LANCS, OL13 9QR",
+      "Metrics": {
+        "F1": 48.0,
+        "EM": 0.0,
+        "ROUGE-L": 48.0,
+        "SacreBLEU": 24.94
+      },
+      "ProcessingTime": 3.85
+    },
+    {
+      "id": 2417,
+      "FileName": "labor-table46",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a brief summary of the table, including key columns and any noticeable trends in the data related to task status and properties?",
+      "Reference": "The table provides data on various properties and the statuses of tasks associated with them. Key columns include property names, task statuses (e.g., “Contractor Assigned,” “Complete,” “Work Commenced”), and dates. The table shows that certain properties, such as Bold St 21, Bacup, consistently have higher numbers of tasks assigned, while others show fluctuations in task status over time. Notable trends include an increase in task completions towards the later months and a regular assignment of contractors to specific properties.",
+      "Prediction": "The table summarizes maintenance and repair tasks across multiple properties, detailing their status (e.g., \"Contractor Assigned,\" \"Complete,\" \"Rejected\"), addresses, job descriptions, purposes, types, and assigned managers. Key trends include a high concentration of tasks at \"Altham St 6, Padiham\" and \"Bold St 21, Bacup,\" with many entries marked as \"Complete\" or \"Contractor Assigned.\" Notable recurring issues involve damp, roofing, and general repairs, with a significant number of tasks requiring monitoring or further inspection. Most tasks are managed by \"managar 1,\" indicating centralized oversight. The data spans two dates (2016/1/13 and 2016/1/14), showing ongoing property maintenance efforts.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.96
+    },
+    {
+      "id": 2418,
+      "FileName": "economy-table122",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the combined total quantity of parts in categories “A1” and “A2” across all system sizes and currencies?",
+      "Reference": "27",
+      "Prediction": "102, 102",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 2419,
+      "FileName": "economy-table122",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the part number with the highest cost in the “A3” category for the “BERLN1-0001-15” case, considering only the $ currency.",
+      "Reference": "ABC-125",
+      "Prediction": "ABC-125",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 2420,
+      "FileName": "economy-table122",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "How many total items are there in the “A2” category across all rows of the table?",
+      "Reference": "12",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2421,
+      "FileName": "economy-table122",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the average cost of parts in the “A3” category for the “BERLN1-0001-15” case with the $ currency.",
+      "Reference": "2.67",
+      "Prediction": "4.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 2422,
+      "FileName": "economy-table122",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the table by describing its main columns, including categories, part numbers, costs, and quantities. Highlight any notable trends or patterns.",
+      "Reference": "The table provides details on various parts categorized by “Category” and identified by unique “Part Numbers.” Each part is described with “System Size,” “Unit,” “Currency,” “Cost,” and “Quantity” across different columns. Notable trends include higher quantities in categories like “A7” and cost variations within categories such as “A1” and “A2” across system sizes and currencies.",
+      "Prediction": "The table details parts for two case numbers (BERLN1-0001-15 and BERLN8-0001-15) across three operational phases (OP1, OP2, OP3), each with System Size, Unit, Currency, Category, Part Number, Cost, and QTY. Notable trends: OP3 uses inch units, OP2 uses inch for some entries and mm for others, OP1 exclusively uses mm. Cost and QTY vary by category and part number, with OP2 showing higher QTY for A7 (FGT-462, 45) and OP1 showing zero QTY for A5 (GKL-460). Part numbers follow consistent naming (ABC, FGT, GKL, CLK, DSG) with incremental suffixes. Categories A1 to A11 are uniformly distributed.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.52
+    },
+    {
+      "id": 2423,
+      "FileName": "education-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Compare the average “Math” scores of boys and girls in the “1st Term” across all categories. Which gender scored higher?",
+      "Reference": "Boys",
+      "Prediction": "BOY, GIRL",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.8
+    },
+    {
+      "id": 2424,
+      "FileName": "education-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the name of the student with the highest “Grand Total” score in the “GEN” category.",
+      "Reference": "Munni",
+      "Prediction": "MUNNI",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.71
+    },
+    {
+      "id": 2425,
+      "FileName": "education-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the top three students with the highest “Grand Total” scores, regardless of category. Provide their names in descending order of scores.",
+      "Reference": "Rahul Kumar, Riya, Munni",
+      "Prediction": "MUNNI, RAHUL KUMAR, PRIYANKA KUMARI",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 44.44,
+        "SacreBLEU": 23.64
+      },
+      "ProcessingTime": 2.45
+    },
+    {
+      "id": 2426,
+      "FileName": "education-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What are the subcategories included under the “Math” column, and how are they structured?",
+      "Reference": "1ST TERM, 2ND TERM, FINAL, TOTAL",
+      "Prediction": "1ST TERM, 2ND TERM, FINAL, TOTAL",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 2.23
+    },
+    {
+      "id": 2427,
+      "FileName": "education-table32",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including its main columns, such as student names, categories, scores, and attendance? Highlight any notable patterns or trends.",
+      "Reference": "The table provides detailed information about students, including their “NAME,” “CATEGORY” (e.g., GEN, OBC), “SCORES” in various subjects and terms (e.g., Math, Science), and “ATTENDANCE.” Notable patterns include higher “Grand Total” scores for students with consistent term performance and variations in scores across categories, with “GEN” students showing relatively higher averages.",
+      "Prediction": "M.C.P. Co-Ed. School Annual Result 200..., Student Names, Categories, Scores, Attendance, Notable Patterns: High Pass Rates, Majority Hindu, Predominantly Boys, Varied Performance Across Subjects, Consistent Attendance, Top Performer: Rahul Kumar with 111 marks, Lowest: Tanzeer with 75 marks, Most Common Grade: D, Majority Absent: NO, Majority Residential Address: Shivpuri Colony, Narela, Most Common Mother's Name: Sunita Devi, Most Common Father's Name: Ram Bilas Sharma, Most Common Category: GEN, Most Common Result: PASS, Most Common % Marks: 15, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Date of Birth: 2003/2004, Most Common Admission Number: 2945, Most Common Final Term Math Score: 9, Most Common Final Term Hindi Score: 9, Most Common Final Term S.S. Score: 9, Most Common Final Term Science Score: 9, Most Common Final Term English Score: 9, Most Common Final Term Drawing Score: 9, Most Common Grand Total: 101, Most Common Result: PASS, Most Common % Marks: 17, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name: Sunita Devi, Most Common Date of Birth: 2003/2004, Most Common Residential Address: G.N.3,PIYAU MANIYARI,SNP.HR, Most Common Hindu/Muslim: HINDU, Most Common Attendance: 15, Most Common Final Term Scores: 9, Most Common Total Scores: 17, Most Common Grand Total: 101, Most Common Grade: D, Most Common Boy/Girl: BOY, Most Common Mother's Name",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 205.17
+    },
+    {
+      "id": 2428,
+      "FileName": "education-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which subject did Amarjeet score the highest marks in during the 2nd Monthly Test?",
+      "Reference": "Hindi",
+      "Prediction": "SCIENCE",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 2429,
+      "FileName": "education-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What information is provided in the table header, and how does it describe the context of the data?",
+      "Reference": "The table provides details about a student named Amarjeet, including their “NAME,” “FATHER’S NAME,” “CLASS” (3RD B), and “ROLL NO.” (1). It outlines academic performance in various tests across subjects.",
+      "Prediction": "SESSION-2014-15, NAME, FATHER'S NAME, CLASS, ROLL NO.",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 27.78,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.96
+    },
+    {
+      "id": 2430,
+      "FileName": "education-table33",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many subjects did Amarjeet score above 5 in the 1st Monthly Test?",
+      "Reference": "5",
+      "Prediction": "5",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 2431,
+      "FileName": "education-table33",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Compare the total marks obtained by Amarjeet in Science and Math across all tests. Which subject had higher marks?",
+      "Reference": "Science",
+      "Prediction": "Science, Math",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 2432,
+      "FileName": "education-table33",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of Amarjeet’s academic performance, including test scores, total marks, percentage, and attendance? Highlight any notable trends or observations.",
+      "Reference": "The table summarizes Amarjeet’s academic performance across multiple tests in subjects like Hindi, English, Math, Science, Social Study, and Drawing. Scores include 42 in the 1st Monthly Test, 47 in the 2nd Monthly Test, and 0 in the Annual Exam, with a total of 89 marks out of 600, resulting in a 15% score. Notable trends include consistent performance in Science and Social Study and zero marks in the Annual Exam across all subjects. Attendance and discipline are noted under “OTHER DESCRIPTION.”",
+      "Prediction": "Amarjeet's academic performance in Session-2014-15 shows a total of 600 marks out of 600, with 89 marks obtained, resulting in a 15% percentage. His test scores vary across subjects: 1st Monthly Test scores range from 5 to 9, 2nd Monthly Test scores from 6 to 9, and Annual Exam scores are uniformly 0. Notable trends include strong performance in Science (17 marks) and Social Study (17 marks), and consistent discipline and punctuality as noted in the other description column. Attendance is not quantified in the table, but the result is marked as \"PASS\".",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.0
+    },
+    {
+      "id": 2433,
+      "FileName": "labor-table47",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which personnel worked the highest “Actual Hour” on 2015-02-28, and how many hours did they work?",
+      "Reference": "Eric, 50",
+      "Prediction": "Eric, 50",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 2434,
+      "FileName": "labor-table47",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the “Plan Hour” and “Actual Hour” for Indranil on 2015-02-21. Did Indranil exceed the planned hours?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.76
+    }
+  ],
+  "processed_ids": [
+    2305,
+    2306,
+    2307,
+    2308,
+    2309,
+    2310,
+    2311,
+    2312,
+    2313,
+    2314,
+    2315,
+    2316,
+    2317,
+    2318,
+    2319,
+    2320,
+    2321,
+    2322,
+    2323,
+    2324,
+    2325,
+    2326,
+    2327,
+    2328,
+    2329,
+    2330,
+    2331,
+    2332,
+    2333,
+    2334,
+    2335,
+    2336,
+    2337,
+    2338,
+    2339,
+    2340,
+    2341,
+    2342,
+    2343,
+    2344,
+    2345,
+    2346,
+    2347,
+    2348,
+    2349,
+    2350,
+    2351,
+    2352,
+    2353,
+    2354,
+    2355,
+    2356,
+    2357,
+    2358,
+    2359,
+    2360,
+    2361,
+    2362,
+    2363,
+    2364,
+    2365,
+    2366,
+    2367,
+    2368,
+    2369,
+    2370,
+    2371,
+    2372,
+    2373,
+    2374,
+    2375,
+    2376,
+    2377,
+    2378,
+    2379,
+    2380,
+    2381,
+    2382,
+    2383,
+    2384,
+    2385,
+    2386,
+    2387,
+    2388,
+    2389,
+    2390,
+    2391,
+    2392,
+    2393,
+    2394,
+    2395,
+    2396,
+    2397,
+    2398,
+    2399,
+    2400,
+    2401,
+    2402,
+    2403,
+    2404,
+    2405,
+    2406,
+    2407,
+    2408,
+    2409,
+    2410,
+    2411,
+    2412,
+    2413,
+    2414,
+    2415,
+    2416,
+    2417,
+    2418,
+    2419,
+    2420,
+    2421,
+    2422,
+    2423,
+    2424,
+    2425,
+    2426,
+    2427,
+    2428,
+    2429,
+    2430,
+    2431,
+    2432,
+    2433,
+    2434
+  ]
+}
