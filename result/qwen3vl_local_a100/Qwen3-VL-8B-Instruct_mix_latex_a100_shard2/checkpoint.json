@@ -1,0 +1,2517 @@
+{
+  "results": [
+    {
+      "id": 1537,
+      "FileName": "medical-table05",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "When Vv=0.15, what is the mean value of Y? (Accurate to two decimal places)",
+      "Reference": "1.05",
+      "Prediction": "0.91",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.13
+    },
+    {
+      "id": 1538,
+      "FileName": "medical-table05",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the difference between the maximum value of Y for Vv=0.1 and the maximum value of Y for Vv=0.05? (Accurate to two decimal places)",
+      "Reference": "0.75",
+      "Prediction": "0.75, 0.75",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 1539,
+      "FileName": "medical-table05",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the difference between the maximum and minimum capsule size for Vv=0.15? (Accurate to two decimal places)",
+      "Reference": "1.49",
+      "Prediction": "4.70, 1.61",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 1540,
+      "FileName": "medical-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "At which capsule size does Y reach 0.676589986 for Vv=0.1? (Accurate to two decimal places)",
+      "Reference": "2.50",
+      "Prediction": "2.49",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.88
+    },
+    {
+      "id": 1541,
+      "FileName": "environment-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average time immobile for the Control group treated with Vehicle?",
+      "Reference": "51.20",
+      "Prediction": "51.2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.7
+    },
+    {
+      "id": 1542,
+      "FileName": "environment-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of latency to immobility for the Stress group treated with Fluoxetine? (Accurate to two decimal places)",
+      "Reference": "47.76",
+      "Prediction": "47.76",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.69
+    },
+    {
+      "id": 1543,
+      "FileName": "environment-table40",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many animals in the FGF2KO Stress group treated with Vehicle have a time immobile greater than 250 seconds?",
+      "Reference": "5",
+      "Prediction": "5",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.31
+    },
+    {
+      "id": 1544,
+      "FileName": "environment-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which treatment has a higher average latency to immobility for the Stress group?",
+      "Reference": "Fluoxetine",
+      "Prediction": "Fluoxetine",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 1545,
+      "FileName": "environment-table40",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the time immobile of Control group treated with Vehicle with that of Control group treated with Fluoxetine.",
+      "Reference": "[[10.0, 19.0, 20.0, 30.0, 33.0, 37.0, 56.0, 76.0, 111.0, 120.0], [66.0, 85.0, 104.0, 110.0, 133.0, 159.0, 161.0, 166.0, 172.0, 175.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Group': ['Control', 'Control'],\n    'Treatment': ['Vehicle', 'Fluoxetine'],\n    'Time Immobile (s) Average': [51.2, 133.1]\n}\n\ndf = pd.DataFrame(data)\n\n# Create the plot\nplt.figure(figsize=(10, 6))\nplt.plot(df['Treatment'], df['Time Immobile (s) Average'], marker='o', linestyle='-', color='blue', label='Time Immobile (s)')\n\n# Add titles and labels\nplt.title('Comparison of Time Immobile between Control Groups')\nplt.xlabel('Treatment')\nplt.ylabel('Time Immobile (s)')\nplt.legend()\nplt.grid(True)\n\n# Show the plot\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 9.68
+    },
+    {
+      "id": 1546,
+      "FileName": "environment-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average time animals in the Control group spent in the open arms when treated with Vehicle?",
+      "Reference": "109.83",
+      "Prediction": "109.83",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.75
+    },
+    {
+      "id": 1547,
+      "FileName": "environment-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of the total distance traveled by animals in the Stress group treated with Fluoxetine? (Accurate to two decimal places)",
+      "Reference": "2.91",
+      "Prediction": "2.91",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 1548,
+      "FileName": "environment-table41",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many animals in the Stress group treated with Fluoxetine had a time in the open arms greater than 100 seconds?",
+      "Reference": "3",
+      "Prediction": "4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 1549,
+      "FileName": "environment-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which treatment (Vehicle or Fluoxetine) results in a higher average time spent in the open arms for the Stress group?",
+      "Reference": "Fluoxetine",
+      "Prediction": "Fluoxetine",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 1550,
+      "FileName": "environment-table41",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the total distance of Control group treated with Vehicle with that of Control group treated with Fluoxetine.",
+      "Reference": "[[2.519, 4.212, 5.399, 6.172, 7.345, 7.399, 8.089, 8.548, 12.2, 12.275], [7.65, 7.968, 7.991, 8.772, 8.918, 8.966, 9.235, 9.261, 10.766, 12.848]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load data from table\ndata = {\n    'Group': ['Control', 'Control'],\n    'Treatment': ['Vehicle', 'Fluoxetine'],\n    'Total Distance (m)': [7.4158, 9.2375]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.bar(df['Treatment'], df['Total Distance (m)'], color=['blue', 'green'])\nplt.title('Total Distance Comparison: Control Group (Vehicle vs Fluoxetine)')\nplt.xlabel('Treatment')\nplt.ylabel('Total Distance (m)')\nplt.xticks(rotation=45)\nplt.grid(axis='y', linestyle='--', alpha=0.7)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 9.7
+    },
+    {
+      "id": 1551,
+      "FileName": "environment-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average time center for the Control group treated with Vehicle?",
+      "Reference": "37.24",
+      "Prediction": "37.24",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 1552,
+      "FileName": "environment-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of the time center for the FGF2KO Stress group treated with Vehicle? (Accurate to two decimal places)",
+      "Reference": "6.47",
+      "Prediction": "6.47, 6.47",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.7
+    },
+    {
+      "id": 1553,
+      "FileName": "environment-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many animals in the Stress group treated with Fluoxetine have a latency center of 0 seconds?",
+      "Reference": "3",
+      "Prediction": "5",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 1554,
+      "FileName": "environment-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the FGF2KO Stress group, which treatment results in a lower average latency center?",
+      "Reference": "Fluoxetine",
+      "Prediction": "Fluoxetine",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 1555,
+      "FileName": "environment-table42",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the time centre of Control group treated with Vehicle with that of Control group treated with Fluoxetine.",
+      "Reference": "[[11.0, 22.0, 29.5, 32.0, 35.0, 40.3, 43.3, 49.0, 51.9, 58.4], [23.5, 25.5, 25.7, 30.0, 30.2, 32.0, 32.1, 34.5, 36.3, 39.5]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Group': ['Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', 'Control', '",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 210.95
+    },
+    {
+      "id": 1556,
+      "FileName": "environment-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average Emotionality Index of the Control group treated with Vehicle?",
+      "Reference": "0.12",
+      "Prediction": "0.116",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 1557,
+      "FileName": "environment-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of the emotionality index for the FGF2KO Stress group treated with Vehicle? (Accurate to two decimal places)",
+      "Reference": "0.81",
+      "Prediction": "0.81",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 1558,
+      "FileName": "environment-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many animals in the WT Stress group treated with Fluoxetine have a emotionality index lower than 1?",
+      "Reference": "3",
+      "Prediction": "E6, E9, E10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.71
+    },
+    {
+      "id": 1559,
+      "FileName": "environment-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the FGF2KO Stress group, which treatment results in a lower average emotionality index?",
+      "Reference": "Fluoxetine",
+      "Prediction": "Vehicle, Fluoxetine",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.38
+    },
+    {
+      "id": 1560,
+      "FileName": "environment-table43",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the emotionality index of Control group treated with Vehicle with that of Control group treated with Fluoxetine.",
+      "Reference": "[[-1.54, -0.68, -0.54, -0.29, -0.26, -0.14, 0.3, 0.52, 1.81, 1.98], [0.39, 1.1, 1.88, 2.14, 2.21, 2.42, 2.48, 2.84, 3.72, 3.74]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data\ndata = {\n    'Group': ['Control', 'Control'],\n    'Treatment': ['Vehicle', 'Fluoxetine'],\n    'Emotionality Index': [0.116, 2.292]\n}\n\ndf = pd.DataFrame(data)\n\n# Create the plot\nplt.figure(figsize=(10, 6))\nplt.plot(df['Treatment'], df['Emotionality Index'], marker='o', linestyle='-', color='blue', label='Emotionality Index')\n\n# Add title and labels\nplt.title('Comparison of Emotionality Index: Control Group (Vehicle vs Fluoxetine)')\nplt.xlabel('Treatment')\nplt.ylabel('Emotionality Index')\nplt.legend()\nplt.grid(True)\n\n# Show the plot\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 11.53
+    },
+    {
+      "id": 1561,
+      "FileName": "environment-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average GR Fold Change of the Control group treated with Vehicle?",
+      "Reference": "1.89",
+      "Prediction": "1.89337",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.66
+    },
+    {
+      "id": 1562,
+      "FileName": "environment-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of the GR Fold Change for the FGF2KO Stress group treated with Vehicle? (Accurate to two decimal places)",
+      "Reference": "0.07",
+      "Prediction": "0.07, 0.21",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.82
+    },
+    {
+      "id": 1563,
+      "FileName": "environment-table44",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many animals in the WT Stress group treated with Fluoxetine have a FGF2 Fold Change greater than 1?",
+      "Reference": "1",
+      "Prediction": "E7, E9",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.45
+    },
+    {
+      "id": 1564,
+      "FileName": "environment-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the FGF2KO Stress group, which treatment results in a lower average FGF2 Fold Change ?",
+      "Reference": "Vehicle",
+      "Prediction": "Fluoxetine, Vehicle",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.39
+    },
+    {
+      "id": 1565,
+      "FileName": "science-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of cells for Mouse 1 Luminal at 14 days?",
+      "Reference": "115",
+      "Prediction": "115",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 1566,
+      "FileName": "science-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many transformed cells were there for Mouse 2 Basal at 64 days?",
+      "Reference": "0",
+      "Prediction": "0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 1567,
+      "FileName": "science-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of transformed cells for Mouse 2 Luminal at 120 days?",
+      "Reference": "5%",
+      "Prediction": "5",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 1568,
+      "FileName": "science-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "At which time point did the total number of cells for Mouse 1 Luminal reach its maximum?",
+      "Reference": "14 days",
+      "Prediction": "120 days",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 1569,
+      "FileName": "science-table20",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a detailed description of the trends in the total number of cells for Mouse 1 Basal from 14 days to 225 days. Highlight significant changes.",
+      "Reference": "The table shows the following values for the total of Mouse 1 Basal: 14 days (46), 64 days (12), 120 days (8), and 225 days (7). There is a consistent decrease in the number of basal cells from 14 days to 225 days, with the most significant drop occurring between 14 days and 64 days. The decrease continues at a slower rate thereafter.",
+      "Prediction": "The total number of basal cells for Mouse 1 decreases from 46 at 14 days to 12 at 64 days, then increases to 8 at 120 days, and finally drops to 7 at 225 days. The most significant change is the sharp decline from 46 at 14 days to 12 at 64 days, followed by a smaller increase to 8 at 120 days and a slight decrease to 7 at 225 days.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.71
+    },
+    {
+      "id": 1570,
+      "FileName": "science-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of cells for Mouse 1 Luminal at 14 days?",
+      "Reference": "286",
+      "Prediction": "286",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 1571,
+      "FileName": "science-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many transformed cells were there for Mouse 2 Basal at 64 days?",
+      "Reference": "0",
+      "Prediction": "0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 1572,
+      "FileName": "science-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of transformed cells for Mouse 2 Luminal at 120 days?",
+      "Reference": "0%",
+      "Prediction": "0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 1573,
+      "FileName": "science-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "At which time point did the total number of cells for Mouse 1 Luminal reach its maximum?",
+      "Reference": "120 days",
+      "Prediction": "120 days",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 1574,
+      "FileName": "science-table21",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a detailed description of the trends in the total number of cells for Mouse 1 Basal from 14 days to 225 days. Highlight significant changes.",
+      "Reference": "The table shows the following values for the total of Mouse 1 Basal: 14 days (91), 64 days (28), 120 days (44), and 225 days (62). First, there is a drop from 14 days to 64 days. Then, there is a consistent increase from 64 days to 225 days.",
+      "Prediction": "The total number of cells for Mouse 1 Basal decreases from 91 at 14 days to 28 at 64 days, then increases to 44 at 120 days, and finally decreases to 62 at 225 days. The most significant change is the increase from 28 at 64 days to 44 at 120 days, followed by a decrease to 62 at 225 days.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.33
+    },
+    {
+      "id": 1575,
+      "FileName": "society-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the overall women to men rate ratio for musculoskeletal disorders mortality in Asia?",
+      "Reference": "1.50",
+      "Prediction": "1.50",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.48
+    },
+    {
+      "id": 1576,
+      "FileName": "society-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which country has the highest women to men rate ratio in Eastern Europe?",
+      "Reference": "Poland",
+      "Prediction": "Poland",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 1577,
+      "FileName": "society-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the lower bound of the women to men rate ratio for Japan?",
+      "Reference": "1.57",
+      "Prediction": "1.57",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.99
+    },
+    {
+      "id": 1578,
+      "FileName": "society-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which region has the lowest musculoskeletal disorders mortality rate for men in Western Europe?",
+      "Reference": "Austria",
+      "Prediction": "Austria",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.71
+    },
+    {
+      "id": 1579,
+      "FileName": "society-table53",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of women's musculoskeletal disorders mortality lower bound and men's musculoskeletal disorders mortality lower bound?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.92",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 3.27
+    },
+    {
+      "id": 1580,
+      "FileName": "society-table54",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "What was the trend for age-standardized MSD mortality rates in Japan for men during the period 1992-1996?",
+      "Reference": "Increase",
+      "Prediction": "7.0*, Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.87
+    },
+    {
+      "id": 1581,
+      "FileName": "society-table54",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which country in Asia had the highest increase in age-standardized MSD mortality rates for women during any period from 1986 to 2011?",
+      "Reference": "Republic of Korea",
+      "Prediction": "Republic of Korea",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.27
+    },
+    {
+      "id": 1582,
+      "FileName": "society-table54",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "How did the age-standardized MSD mortality rates for men in Eastern Europe change from 1993 to 2011?",
+      "Reference": "Decrease",
+      "Prediction": "-1.8*, Decreasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.59
+    },
+    {
+      "id": 1583,
+      "FileName": "society-table54",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which country in South America had the most significant decrease in age-standardized MSD mortality rates for men during any period from 1986 to 2011?",
+      "Reference": "Ecuador",
+      "Prediction": "Ecuador",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.07
+    },
+    {
+      "id": 1584,
+      "FileName": "society-table54",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of APC values for men and women in Asia?",
+      "Reference": "Positive correlation",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.87
+    },
+    {
+      "id": 1585,
+      "FileName": "society-table55",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total number of deaths due to musculoskeletal disorders in all countries in 1986 and 2011?",
+      "Reference": "107118",
+      "Prediction": "40098, 67020",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.94
+    },
+    {
+      "id": 1586,
+      "FileName": "society-table55",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "How many countries in Asia experienced a decrease in the number of deaths due to musculoskeletal disorders from 1986 to 2011?",
+      "Reference": "1",
+      "Prediction": "Kazakhstan, Kyrgyzstan",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 1587,
+      "FileName": "society-table55",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How many countries in Asia experienced an increase in deaths due to musculoskeletal disorders greater than 50%?",
+      "Reference": "5",
+      "Prediction": "Israel, Japan, Republic of Korea, Singapore",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.72
+    },
+    {
+      "id": 1588,
+      "FileName": "society-table55",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which country in Northern Europe had the smallest percentage change due to population aging?",
+      "Reference": "Norway",
+      "Prediction": "Denmark",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 1589,
+      "FileName": "science-table22",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the value of item2 for Neutral luminal at Day 64? (Accurate to two decimal places)",
+      "Reference": "0.16",
+      "Prediction": "0.16",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1590,
+      "FileName": "science-table22",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total sum of item3 for Neutral luminal over all days?",
+      "Reference": "0.22",
+      "Prediction": "0.212403247",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.4
+    },
+    {
+      "id": 1591,
+      "FileName": "science-table22",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At which day does the value of item4 for Brca1;Trp53 - basal first become non-zero?",
+      "Reference": "Day 64",
+      "Prediction": "120",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 1592,
+      "FileName": "science-table22",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average value of item3 for Brca1;Trp53 - luminal over the recorded days?",
+      "Reference": "0.18",
+      "Prediction": "0.22, 0.21, 0.14, 0.09",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 1.98
+    },
+    {
+      "id": 1593,
+      "FileName": "science-table22",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the main trends observed in the values of item4 across all categories and days?",
+      "Reference": "The values of item4 show a general decreasing trend for all categories over time, with the most pronounced decline in Brca1;Trp53 - luminal and Brca1;Trp53 - basal. Neutral luminal and Neutral basal exhibit less variability, with Neutral basal showing relatively stable values.",
+      "Prediction": "item4 values show a general decline over time in all categories, with notable drops from day 64 to 120 and further decreases by day 225, particularly in Neutral luminal and Brca1;Trp53 - basal categories.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 3.34
+    },
+    {
+      "id": 1594,
+      "FileName": "science-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the cumulative probability of clone sizes being 1 at day 64? (Accurate to two decimal places)",
+      "Reference": "0.67",
+      "Prediction": "0.67",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 1595,
+      "FileName": "science-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the largest clone size recorded on day 225? (Accurate to two decimal places)",
+      "Reference": "546.55",
+      "Prediction": "426.84",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 1596,
+      "FileName": "science-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At what day does the cumulative probability for a clone size of 1 reach 0.95?",
+      "Reference": "Day 225",
+      "Prediction": "day 225",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.53
+    },
+    {
+      "id": 1597,
+      "FileName": "science-table23",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many days show a cumulative probability of 0 for the largest clone size?",
+      "Reference": "3",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.39
+    },
+    {
+      "id": 1598,
+      "FileName": "science-table23",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of clone size and cumulative probability for day 120?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong negative correlation, -0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.85
+    },
+    {
+      "id": 1599,
+      "FileName": "science-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the cumulative probability of clone sizes being 1 at day 64? (Accurate to two decimal places)",
+      "Reference": "0.74",
+      "Prediction": "0.92",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 1600,
+      "FileName": "science-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the largest clone size recorded on day 225? (Accurate to two decimal places)",
+      "Reference": "10273.40",
+      "Prediction": "10273.40",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.77
+    },
+    {
+      "id": 1601,
+      "FileName": "science-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At what day does the cumulative probability for a clone size of 1 reach 0.9?",
+      "Reference": "Day 64",
+      "Prediction": "day 64",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.51
+    },
+    {
+      "id": 1602,
+      "FileName": "science-table24",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many days show a cumulative probability of 0 for the largest clone size?",
+      "Reference": "2",
+      "Prediction": "day 14, day 64, day 120, day 225",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.38
+    },
+    {
+      "id": 1603,
+      "FileName": "science-table24",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of clone size and cumulative probability for day 225?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong negative correlation, -0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 1604,
+      "FileName": "science-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the cumulative probability of scaled clone sizes being 0.124005859568117 at day 64? (Accurate to two decimal places)",
+      "Reference": "0.27",
+      "Prediction": "0.27, 0.27",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.95
+    },
+    {
+      "id": 1605,
+      "FileName": "science-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the largest scaled clone size recorded on day 225? (Accurate to two decimal places)",
+      "Reference": "2.84",
+      "Prediction": "2.84",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.65
+    },
+    {
+      "id": 1606,
+      "FileName": "science-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At what day does the cumulative probability for the smallest clone size reach 0.9?",
+      "Reference": "Day 120",
+      "Prediction": "day 225",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.64
+    },
+    {
+      "id": 1607,
+      "FileName": "science-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many days show a cumulative probability of 0 for the largest clone size?",
+      "Reference": "3",
+      "Prediction": "day 120, day 225, day 550",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.25
+    },
+    {
+      "id": 1608,
+      "FileName": "science-table25",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of scaled clone size and cumulative probability for day 550?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong negative correlation, -0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.85
+    },
+    {
+      "id": 1609,
+      "FileName": "science-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the cumulative probability at a scaled clone size of -1.2175313244 on day 14? (Accurate to two decimal places)",
+      "Reference": "0.74",
+      "Prediction": "0.74",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.66
+    },
+    {
+      "id": 1610,
+      "FileName": "science-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At what scaled clone size does the cumulative probability drop below 0.5 for the first time on day 225? (Accurate to two decimal places)",
+      "Reference": "-0.11",
+      "Prediction": "0.53",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.65
+    },
+    {
+      "id": 1611,
+      "FileName": "science-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For which day does the smallest scaled clone size have the highest cumulative probability?",
+      "Reference": "Day 225",
+      "Prediction": "day 14",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 1612,
+      "FileName": "science-table26",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many days show a cumulative probability of 0 at the largest scaled clone size?",
+      "Reference": "2",
+      "Prediction": "day 14, day 64, day 120, day 225",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.47
+    },
+    {
+      "id": 1613,
+      "FileName": "science-table26",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of scaled clone size and cumulative probability for day 225?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong negative correlation, -0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.89
+    },
+    {
+      "id": 1614,
+      "FileName": "science-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the variance of the logarithm of wild-type confetti clone size for luminal cells with an estrous cycle number of 27.5449058454? (Accurate to two decimal places)",
+      "Reference": "0.97",
+      "Prediction": "0.97",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 1615,
+      "FileName": "science-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the error bar for basal cells with an estrous cycle number of 45.8034152672? (Accurate to two decimal places)",
+      "Reference": "0.74",
+      "Prediction": "0.74",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 1616,
+      "FileName": "science-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which estrous cycle number for luminal cells has the highest variance?",
+      "Reference": "128.82",
+      "Prediction": "128.815623315356",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 1617,
+      "FileName": "science-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many entries have a variance greater than 2 for basal cells?",
+      "Reference": "4",
+      "Prediction": "4",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 1618,
+      "FileName": "science-table27",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to explore the potential correlation between the estrous cycle number and the variance for luminal cells. Include a trendline to indicate the direction of the relationship.",
+      "Reference": "[[0.57986904926417, 0.752559919630072, 0.573218460499345, 0.707963356750625, 0.967269851565251, 1.7961072689209, 1.36628574653696, 1.80280766420988, 2.15193142951528, 2.06626342820971, 2.68506941863691, 2.21366483157202, 4.07958634426828, 6.25043933679038]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndf = pd.read_excel(\"table.xlsx\")\nluminal_data = df[df.columns[0:3]].dropna()\nx = luminal_data.iloc[:, 0]\ny = luminal_data.iloc[:, 1]\nplt.scatter(x, y)\nz = np.polyfit(x, y, 1)\np = np.poly1d(z)\nplt.plot(x, p(x), \"r--\")\nplt.xlabel(\"estrous cycle no.\")\nplt.ylabel(\"variance\")\nplt.title(\"Scatter plot of estrous cycle number vs variance for luminal cells\")\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 6.99
+    },
+    {
+      "id": 1619,
+      "FileName": "science-table28",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the variance of the logarithm of Brca1;Trp53 confetti clone size for luminal cells with an estrous cycle number of 5.98347392937109? (Accurate to two decimal places)",
+      "Reference": "0.66",
+      "Prediction": "0.66",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 1620,
+      "FileName": "science-table28",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the error bar for basal cells with an estrous cycle number of 4.8412599520656? (Accurate to two decimal places)",
+      "Reference": "0.03",
+      "Prediction": "0.03",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.08
+    },
+    {
+      "id": 1621,
+      "FileName": "science-table28",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which estrous cycle number for luminal cells has the highest variance?",
+      "Reference": "53.67",
+      "Prediction": "53.670181539805",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 1622,
+      "FileName": "science-table28",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many entries have a variance greater than 2 for basal cells?",
+      "Reference": "4",
+      "Prediction": "7",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 1623,
+      "FileName": "science-table28",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to explore the potential correlation between the estrous cycle number and the variance for luminal cells. Include a trendline to indicate the direction of the relationship.",
+      "Reference": "[[0.266435764115108, 0.685492618120263, 0.656888254968209, 0.778748832453182, 1.9353991757376, 3.01411114543522, 2.26523790586271, 3.64909427253731, 4.37519816254014, 3.98110378234064, 2.70670330885256, 4.9059592329623, 3.20373924383049, 5.2075221485367, 4.73691158866282, 6.69068446393762, 7.39528237876219, 6.59945699199146]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n # Load the data\n df = pd.read_excel(\"table.xlsx\")\n # Extract the relevant columns for luminal cells\n estrous_cycle_no_luminal = df['estrous cycle no.'].iloc[0:18]\n variance_luminal = df['variance'].iloc[0:18]\n # Create the scatter plot\n plt.scatter(estrous_cycle_no_luminal, variance_luminal, label='Luminal')\n # Add a trendline\n z = np.polyfit(estrous_cycle_no_luminal, variance_luminal, 1)\n p = np.poly1d(z)\n plt.plot(estrous_cycle_no_luminal, p(estrous_cycle_no_luminal), \"r--\", label='Trendline')\n # Add labels and title\n plt.xlabel('Estrous Cycle No.')\n plt.ylabel('Variance')\n plt.title('Scatter plot of Estrous Cycle No. vs Variance for Luminal Cells')\n plt.legend()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 11.13
+    },
+    {
+      "id": 1624,
+      "FileName": "science-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average of the logarithm of wild-type confetti clone size for luminal cells with an estrous cycle number of 27.5449058454? (Accurate to two decimal places)",
+      "Reference": "1.87",
+      "Prediction": "1.87",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.01
+    },
+    {
+      "id": 1625,
+      "FileName": "science-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the error bar for basal cells with an estrous cycle number of 45.8034152672? (Accurate to two decimal places)",
+      "Reference": "0.10",
+      "Prediction": "0.34",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 1626,
+      "FileName": "science-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which estrous cycle number for luminal cells has the highest average?",
+      "Reference": "128.82",
+      "Prediction": "128.815623315356",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.58
+    },
+    {
+      "id": 1627,
+      "FileName": "science-table29",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many entries have a average greater than 2 for basal cells?",
+      "Reference": "4",
+      "Prediction": "5",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.84
+    },
+    {
+      "id": 1628,
+      "FileName": "science-table29",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to explore the potential correlation between the estrous cycle number and the average for luminal cells. Include a trendline to indicate the direction of the relationship.",
+      "Reference": "[[0.832673933731035, 0.992233079795733, 1.76006964186088, 1.77409361694327, 1.86759058972311, 1.85915014252898, 2.93613137291489, 2.48963820959682, 3.00881573022339, 3.41708976223374, 3.62849063617173, 4.36444633037798, 2.79216894887089, 4.6498182019661]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndf = pd.read_excel('table.xlsx')\nluminal_data = df[df.columns[0:3]].dropna()\nx = luminal_data.iloc[:, 0]\ny = luminal_data.iloc[:, 1]\nplt.scatter(x, y)\nz = np.polyfit(x, y, 1)\np = np.poly1d(z)\nplt.plot(x, p(x), \"r--\")\nplt.xlabel('estrous cycle no.')\nplt.ylabel('average')\nplt.title('Scatter plot of estrous cycle number vs average for luminal cells')\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 6.86
+    },
+    {
+      "id": 1629,
+      "FileName": "science-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average of the logarithm of Brca1;Trp53 confetti clone size for luminal cells with an estrous cycle number of 5.98347392937109? (Accurate to two decimal places)",
+      "Reference": "0.99",
+      "Prediction": "0.99",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 1630,
+      "FileName": "science-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the error bar for basal cells with an estrous cycle number of 4.8412599520656? (Accurate to two decimal places)",
+      "Reference": "0.07",
+      "Prediction": "0.07",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 1631,
+      "FileName": "science-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which estrous cycle number for luminal cells has the highest average?",
+      "Reference": "38.39",
+      "Prediction": "38.3859770649492",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.64
+    },
+    {
+      "id": 1632,
+      "FileName": "science-table30",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many entries have a average greater than 2 for basal cells?",
+      "Reference": "11",
+      "Prediction": "10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 1633,
+      "FileName": "science-table30",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to explore the potential correlation between the estrous cycle number and the variance for luminal cells. Include a trendline to indicate the direction of the relationship.",
+      "Reference": "[[0.466054858951652, 0.607751394572716, 0.98679261785114, 1.21665224741536, 2.52737647594474, 2.25000376723449, 4.60680931797503, 2.7017198471637, 2.68146190432253, 3.47128404172, 5.96476496048588, 2.81823645268289, 6.29491631501545, 3.33625840809266, 4.59374087752269, 2.28627950450347, 3.9509564133288, 5.46221575631395]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n # Load the data from the table\n data = {\n    'estrous_cycle_no': [7.451034435, 5.983473929, 4.841259952, 2.022066365, 23.44218493, 28.52778471, 18.38990101, 33.01821659, 39.38145682, 27.36569009, 35.92417733, 32.50008248, 44.03236408, 41.0793782, 53.67018154, 54.4291405, 34.48565273, 38.3859770649492],\n    'average_luminal': [1.216652247, 0.98679261785114, 0.607751395, 0.466054859, 2.250003767, 2.701719847, 2.527376476, 3.471284042, 3.336258408, 4.606809318, 2.818236453, 2.681461904, 2.286279505, 4.593740878, 3.950956413, 5.462215756, 5.96476496, 6.294916315],\n    'error_bar_luminal': [0.082290516, 0.053793874, 0.087273047, 0.042718877, 0.199146572, 0.172242367, 0.145835945, 0.212696534, 0.248986568, 0.345286906, 0.204771276, 0.279514827, 0.265383228, 0.367886302, 0.702152993, 0.45412887, 0.367879281, 0.5166994]\n}\n\ndf = pd.DataFrame(data)\n\n# Calculate variance for luminal cells (squared error bar)\ndf['variance_luminal'] = df['error_bar_luminal'] ** 2\n\n# Create scatter plot\nplt.figure(figsize=(10, 6))\nplt.scatter(df['estrous_cycle_no'], df['variance_luminal'], alpha=0.7)\n\n# Add trendline\nz = np.polyfit(df['estrous_cycle_no'], df['variance_luminal'], 1)\np = np.poly1d(z)\nplt.plot(df['estrous_cycle_no'], p(df['estrous_cycle_no']), \"r--\")\n\n# Labels and title\nplt.xlabel('Estrous Cycle Number')\nplt.ylabel('Variance (Luminal)')\nplt.title('Scatter Plot of Estrous Cycle Number vs Variance for Luminal Cells')\nplt.grid(True)\n\n# Show plot\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 46.88
+    },
+    {
+      "id": 1634,
+      "FileName": "science-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average interductal segment length for Mouse #1 at 3 months of age? (Accurate to two decimal places)",
+      "Reference": "1339.22",
+      "Prediction": "1148.50",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 1635,
+      "FileName": "science-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How does the mean of interductal segment length change from 3 to 6 months in Mouse #3?",
+      "Reference": "Increase",
+      "Prediction": "333, 390",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 1636,
+      "FileName": "science-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in the maximum interductal segment length between Mouse #1 and Mouse #3 at 3 months?",
+      "Reference": "759",
+      "Prediction": "1376, 333",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1637,
+      "FileName": "science-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At 6 months, which mouse exhibits the shortest interductal segment length?",
+      "Reference": "Mouse #3",
+      "Prediction": "Mouse #3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.68
+    },
+    {
+      "id": 1638,
+      "FileName": "science-table32",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me draw a line chart showing the interductal segment lengths of 3 month and 6 month for Mouse #2. Label the x-axis with the indices and the y-axis with the segment lengths.",
+      "Reference": "[[1376, 739, 333, 949, 1352], [1267.0, 822.0, 380.0, 871.0, 1500.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Age (months)': [3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6],\n    'Mouse #1': [633, 552, 2102, 1163, 1056, 961, 2387, 2063, 1563, 2372, 876, 789, 1713, 1782, 463, 382, 1260, 1129],\n    'Mouse #2': [1376, 1267, 739, 822, 333, 380, 949, 871, 1352, 1500, 691, 1249, 1260, 1231, 178, 199, 155, 183, 1221, 1325, 985, 1095],\n    'Mouse #3': [333, 390, 1628, 1932, 671, 781, 931, 593, 746, 829, 439, 555, 178, 199, 155, 183, 1221, 1325, 985, 1095]\n}\ndf = pd.DataFrame(data)\n\n# Extract data for Mouse #2 at 3 and 6 months\nmouse2_3m = df[df['Age (months)'] == 3]['Mouse #2'].dropna().tolist()\nmouse2_6m = df[df['Age (months)'] == 6]['Mouse #2'].dropna().tolist()\n\n# Create the line chart\nplt.figure(figsize=(10, 6))\nindices = range(len(mouse2_3m))\nplt.plot(indices, mouse2_3m, marker='o', label='3 months')\nplt.plot(indices, mouse2_6m, marker='s', label='6 months')\nplt.xlabel('Index')\nplt.ylabel('Interductal segment length (µm)')\nplt.title('Interductal segment lengths for Mouse #2 at 3 and 6 months')\nplt.legend()\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 29.63
+    },
+    {
+      "id": 1639,
+      "FileName": "science-table33",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average tertiary branch length for Mouse #1 at 3 months of age?",
+      "Reference": "194.80",
+      "Prediction": "275.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 1640,
+      "FileName": "science-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How does the mean of tertiary branch length change from 3 to 6 months in Mouse #3?",
+      "Reference": "Increase",
+      "Prediction": "624, 559",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 1641,
+      "FileName": "science-table33",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in the maximum tertiary branch length between Mouse #1 and Mouse #3 at 3 months?",
+      "Reference": "36",
+      "Prediction": "599",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.82
+    },
+    {
+      "id": 1642,
+      "FileName": "science-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At 6 months, which mouse exhibits the shortest tertiary branch length?",
+      "Reference": "Mouse #2",
+      "Prediction": "Mouse #2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.76
+    },
+    {
+      "id": 1643,
+      "FileName": "science-table33",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me draw a line chart showing the tertiary branch lengths of 3 month and 6 month for Mouse #2. Label the x-axis with the indices and the y-axis with the segment lengths.",
+      "Reference": "[[31, 36, 216, 108, 789], [39.0, 26.0, 209.0, 84.0, 643.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndata = {\n    \"Age (months)\": [3, 6],\n    \"Mouse #2 3\": [31, 0],\n    \"Mouse #2 6\": [39, 49]\n}\ndf = pd.DataFrame(data)\nplt.plot(df[\"Age (months)\"], df[\"Mouse #2 3\"], marker='o', label='3 months')\nplt.plot(df[\"Age (months)\"], df[\"Mouse #2 6\"], marker='s', label='6 months')\nplt.xlabel('Index')\nplt.ylabel('Segment Lengths')\nplt.title('Tertiary Branch Lengths for Mouse #2')\nplt.legend()\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 8.02
+    },
+    {
+      "id": 1644,
+      "FileName": "science-table34",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average tertiary branch complexity for Mouse #1 at 3 months of age? (Accurate to two decimal places)",
+      "Reference": "1.57",
+      "Prediction": "1.80",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 1645,
+      "FileName": "science-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How does the mean of tertiary branch complexity change from 3 to 6 months in Mouse #3?",
+      "Reference": "Increase",
+      "Prediction": "7.0, 10.0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 1646,
+      "FileName": "science-table34",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in the maximum tertiary branch complexity between Mouse #1 and Mouse #3 at 3 months?",
+      "Reference": "0",
+      "Prediction": "0, 0",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.85
+    },
+    {
+      "id": 1647,
+      "FileName": "science-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At 6 months, which mouse exhibits the maximum tertiary branch complexity?",
+      "Reference": "Mouse #3",
+      "Prediction": "Mouse #3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.77
+    },
+    {
+      "id": 1648,
+      "FileName": "science-table34",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me draw a line chart showing the tertiary branch complexity of 3 month and 6 month for Mouse #2. Label the x-axis with the indices and the y-axis with the segment complexity.",
+      "Reference": "[[1.0, 2.0, 2.0, 1.0, 2.0], [5, 7, 1, 2, 1]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Age (months)': [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],\n    'Mouse #1 (3)': [1, 1, 1, 1, 4, 1, 2, 0, 5, 1],\n    'Mouse #1 (6)': [5, 1, 1, 1, 4, 1, 2, 1, 6, 1],\n    'Mouse #2 (3)': [1, 1, 1, 1, 0, 5, 1, 1, 5, 1],\n    'Mouse #2 (6)': [1, 2, 2, 1, 2, 6, 1, 1, 5, 5],\n    'Mouse #3 (3)': [5, 7, 1, 2, 1, 1, 13, 12, 6, 14],\n    'Mouse #3 (6)': [7, 9, 2, 2, 1, 1, 13, 14, 5, 16]\n}\ndf = pd.DataFrame(data)\n\n# Extract data for Mouse #2 at 3 and 6 months\nmouse2_3 = df['Mouse #2 (3)'].dropna().tolist()\nmouse2_6 = df['Mouse #2 (6)'].dropna().tolist()\n\n# Create the line chart\nplt.figure(figsize=(10, 6))\nplt.plot(range(1, len(mouse2_3) + 1), mouse2_3, marker='o', label='Mouse #2 (3 months)')\nplt.plot(range(1, len(mouse2_6) + 1), mouse2_6, marker='s', label='Mouse #2 (6 months)')\n\n# Label the axes\nplt.xlabel('Index')\nplt.ylabel('Tertiary branch complexity')\nplt.title('Tertiary branch complexity of Mouse #2 at 3 and 6 months')\nplt.legend()\nplt.grid(True)\n\n# Show the plot\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 24.78
+    },
+    {
+      "id": 1649,
+      "FileName": "science-table35",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total number of clones for both luminal and basal types across all mice at 14 days?",
+      "Reference": "707",
+      "Prediction": "578, 129",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 1650,
+      "FileName": "science-table35",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many more luminal type clones are there compared to basal type clones in mouse 4 at 64 days?",
+      "Reference": "89",
+      "Prediction": "89",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 1651,
+      "FileName": "science-table35",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At 225 days, how many mice have more luminal than basal type clones?",
+      "Reference": "6",
+      "Prediction": "mouse 1, mouse 2, mouse 3, mouse 4, mouse 5, mouse 6",
+      "Metrics": {
+        "F1": 15.38,
+        "EM": 0.0,
+        "ROUGE-L": 15.38,
+        "SacreBLEU": 3.39
+      },
+      "ProcessingTime": 1.96
+    },
+    {
+      "id": 1652,
+      "FileName": "science-table35",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "By what factor does the total number of basal clones increase from 64 to 225 days? (Accurate to two decimal places)",
+      "Reference": "0.49",
+      "Prediction": "0.48",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 1653,
+      "FileName": "science-table35",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed description of the table, including explanations for each main column and highlight any notable trends or insights from the data across different time points?",
+      "Reference": "The table tracks the number of luminal and basal cell clones in several mice over four time points (14, 64, 120, and 225 days). Each row represents a specific mouse, with separate columns for luminal and basal clone counts. The 'TOTAL luminal' and 'TOTAL basal' columns summarize the overall counts for each type at each time point. Notable trends include a general decrease in the total number of luminal clones over time, while basal clones show a more variable pattern. Mouse 3 exhibits the highest total basal clone count at 120 days, and there is a significant reduction in both luminal and basal clone totals by 225 days.",
+      "Prediction": "The table records luminal and basal clone numbers for multiple mice across four time points (14, 64, 120, and 225 days). Each mouse has separate luminal and basal values, with totals aggregated per time point. Notable trends include a significant decrease in total luminal clones from 578 at 14 days to 135 at 225 days, and a corresponding decrease in total basal clones from 129 to 28. Luminal clone numbers generally decline over time across all mice, while basal clone numbers also decrease, though less dramatically. Mouse 3 shows a high luminal count at 120 days (129) but a drop to 5 at 225 days. Mouse 5 contributes to the total luminal count at 120 days (97) and 225 days (24), and Mouse 6 appears only at 225 days with a luminal count of 14 and basal count of 0.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 11.52
+    },
+    {
+      "id": 1654,
+      "FileName": "science-table38",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average surviving luminal clone fraction in ovariectomized wild-type mice at day 64? (Accurate to two decimal places)",
+      "Reference": "0.27",
+      "Prediction": "0.32, 0.34, 0.38, 0.31",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 1.94
+    },
+    {
+      "id": 1655,
+      "FileName": "science-table38",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the highest surviving clone fraction observed in the ovariectomy Brca1;Trp53 luminal category (Accurate to two decimal places), and on which day was it recorded?",
+      "Reference": "0.86, Day 120",
+      "Prediction": "0.86, 120",
+      "Metrics": {
+        "F1": 80.0,
+        "EM": 0.0,
+        "ROUGE-L": 80.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 1656,
+      "FileName": "science-table38",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which group showed the most stable clone fraction over the entire observation period",
+      "Reference": "Ovariectomy wild-type luminal",
+      "Prediction": "Ovariectomy wild-type basal",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.08
+    },
+    {
+      "id": 1657,
+      "FileName": "science-table38",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "On which day did the basal clone fraction for ovariectomy wild-type mice first drop below 0.5?",
+      "Reference": "Day 120",
+      "Prediction": "64",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 1658,
+      "FileName": "science-table38",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the luminal clone fraction for Ovariectomy wild-type mice over time?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong negative correlation, -0.95",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.53
+    },
+    {
+      "id": 1659,
+      "FileName": "science-table39",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average number of total cells across all glands for the basal type after tamoxifen treatment? (Accurate to two decimal places)",
+      "Reference": "836.44",
+      "Prediction": "856.50",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 1660,
+      "FileName": "science-table39",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which gland has the highest labelling density in the luminal type after tamoxifen treatment?",
+      "Reference": "Gland 4",
+      "Prediction": "Gland 2",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1661,
+      "FileName": "science-table39",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How does the average labelling density of the basal type compare to that of the luminal type after tamoxifen treatment? (higher / lower)",
+      "Reference": "lower",
+      "Prediction": "lower",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 1662,
+      "FileName": "science-table39",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in labelling density between the most and least dense glands in the TAT-Cre group? (Accurate to two decimal places)",
+      "Reference": "0.01",
+      "Prediction": "0.01, 0.00",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 1663,
+      "FileName": "science-table39",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'Total number of cells' and 'Number of labelled cells' for the TAT-Cre method?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 1664,
+      "FileName": "science-table40",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average size of luminal confetti clones during estrus? (Accurate to two decimal places)",
+      "Reference": "9.44",
+      "Prediction": "12.50",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.53
+    },
+    {
+      "id": 1665,
+      "FileName": "science-table40",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many basal clone sizes are greater than 50 during diestrus?",
+      "Reference": "4",
+      "Prediction": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 21, 23, 26, 38, 40",
+      "Metrics": {
+        "F1": 8.33,
+        "EM": 0.0,
+        "ROUGE-L": 8.33,
+        "SacreBLEU": 1.65
+      },
+      "ProcessingTime": 6.28
+    },
+    {
+      "id": 1666,
+      "FileName": "science-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the maximum size of a basal confetti clone during estrus?",
+      "Reference": "33",
+      "Prediction": "203",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.44
+    },
+    {
+      "id": 1667,
+      "FileName": "science-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the range of luminal clone sizes during diestrus?",
+      "Reference": "From 1 to 483.",
+      "Prediction": "2, 483",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.58
+    },
+    {
+      "id": 1668,
+      "FileName": "science-table41",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total number of clones for all luminal and basal types across all time points?",
+      "Reference": "1745",
+      "Prediction": "135, 28",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 1669,
+      "FileName": "science-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How does the clone number change in mouse 1 from 14 days to 225 days for luminal type?",
+      "Reference": "Decrease from 115 to 38.",
+      "Prediction": "115, 76, 87, 38",
+      "Metrics": {
+        "F1": 44.44,
+        "EM": 0.0,
+        "ROUGE-L": 44.44,
+        "SacreBLEU": 14.79
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 1670,
+      "FileName": "science-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which mouse had the highest increase in the number of luminal clones from 14 days to 64 days?",
+      "Reference": "Mouse 3",
+      "Prediction": "mouse 2",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 1671,
+      "FileName": "science-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At which time point was the lowest total number of basal clones observed?",
+      "Reference": "225 days",
+      "Prediction": "225 days",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 1672,
+      "FileName": "science-table41",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please create a line chart using Python that visualizes the change in TOTAL luminal clone numbers over time, based on the data provided.",
+      "Reference": "[[578, 387, 392, 135]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndata = {\n    'time point': [14, 64, 120, 225],\n    'TOTAL luminal': [578, 387, 392, 135]\n}\ndf = pd.DataFrame(data)\nplt.plot(df['time point'], df['TOTAL luminal'], marker='o')\nplt.title('Change in TOTAL luminal clone numbers over time')\nplt.xlabel('Time point (days)')\nplt.ylabel('TOTAL luminal')\nplt.xticks(df['time point'])\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 7.09
+    },
+    {
+      "id": 1673,
+      "FileName": "science-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which type (WT, TYPE1, or TYPE2) has the most consistent Ki67/CC3 fraction values?",
+      "Reference": "WT",
+      "Prediction": "WT",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 1674,
+      "FileName": "science-table42",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Can you identify outlierS in the WT column, and if so, what is it?",
+      "Reference": "6.25 and 7.17",
+      "Prediction": "6.25",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 1675,
+      "FileName": "science-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many times does the Ki67/CC3 fraction exceed 5.0 in the TYPE1 column?",
+      "Reference": "4",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 1676,
+      "FileName": "science-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the average Ki67/CC3 fraction for TYPE2 organoids, and how does it compare to the average of WT organoids?",
+      "Reference": "The average for TYPE2 is 2.80, which is higher than the WT average of 1.22.",
+      "Prediction": "2.74, 1.27",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.38
+    },
+    {
+      "id": 1677,
+      "FileName": "science-table42",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the highest value in the WT column?",
+      "Reference": "7.17",
+      "Prediction": "6.25",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.08
+    },
+    {
+      "id": 1678,
+      "FileName": "science-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the maximum clone size observed for the luminal cell type during estrus?",
+      "Reference": "70",
+      "Prediction": "483",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.4
+    },
+    {
+      "id": 1679,
+      "FileName": "science-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many times was a clone size of 1 recorded for the luminal cell type during diestrus?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.32
+    },
+    {
+      "id": 1680,
+      "FileName": "science-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average clone size for the luminal cell type during diestrus? (Accurate to two decimal places)",
+      "Reference": "108.79",
+      "Prediction": "107.57",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.56
+    },
+    {
+      "id": 1681,
+      "FileName": "science-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "During which phase (estrus or diestrus) does the basal cell type have a larger range of clone sizes?",
+      "Reference": "Diestrus",
+      "Prediction": "Diestrus",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.37
+    },
+    {
+      "id": 1682,
+      "FileName": "science-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average percentage of transformed luminal clones in the side branches across all mice? (Accurate to two decimal places)",
+      "Reference": "48.61%",
+      "Prediction": "33.33",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 1683,
+      "FileName": "science-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which mouse has the highest percentage of transformed basal clones in the ducts?",
+      "Reference": "Mouse 5",
+      "Prediction": "Mouse 5",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.85
+    },
+    {
+      "id": 1684,
+      "FileName": "science-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many mice have zero transformed basal clones in both ducts and side branches?",
+      "Reference": "5",
+      "Prediction": "Mouse1, Mouse2, Mouse3, Mouse4, Mouse5, Mouse6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 1685,
+      "FileName": "science-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Which mouse shows the most significant difference between the percentage of transformed luminal clones in the ducts versus side branches?",
+      "Reference": "Mouse 6",
+      "Prediction": "Mouse 2",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 1686,
+      "FileName": "science-table46",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which color category has the highest cumulative probability at the lowest scaled clone size?",
+      "Reference": "Black",
+      "Prediction": "red",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    }
+  ],
+  "processed_ids": [
+    1537,
+    1538,
+    1539,
+    1540,
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546,
+    1547,
+    1548,
+    1549,
+    1550,
+    1551,
+    1552,
+    1553,
+    1554,
+    1555,
+    1556,
+    1557,
+    1558,
+    1559,
+    1560,
+    1561,
+    1562,
+    1563,
+    1564,
+    1565,
+    1566,
+    1567,
+    1568,
+    1569,
+    1570,
+    1571,
+    1572,
+    1573,
+    1574,
+    1575,
+    1576,
+    1577,
+    1578,
+    1579,
+    1580,
+    1581,
+    1582,
+    1583,
+    1584,
+    1585,
+    1586,
+    1587,
+    1588,
+    1589,
+    1590,
+    1591,
+    1592,
+    1593,
+    1594,
+    1595,
+    1596,
+    1597,
+    1598,
+    1599,
+    1600,
+    1601,
+    1602,
+    1603,
+    1604,
+    1605,
+    1606,
+    1607,
+    1608,
+    1609,
+    1610,
+    1611,
+    1612,
+    1613,
+    1614,
+    1615,
+    1616,
+    1617,
+    1618,
+    1619,
+    1620,
+    1621,
+    1622,
+    1623,
+    1624,
+    1625,
+    1626,
+    1627,
+    1628,
+    1629,
+    1630,
+    1631,
+    1632,
+    1633,
+    1634,
+    1635,
+    1636,
+    1637,
+    1638,
+    1639,
+    1640,
+    1641,
+    1642,
+    1643,
+    1644,
+    1645,
+    1646,
+    1647,
+    1648,
+    1649,
+    1650,
+    1651,
+    1652,
+    1653,
+    1654,
+    1655,
+    1656,
+    1657,
+    1658,
+    1659,
+    1660,
+    1661,
+    1662,
+    1663,
+    1664,
+    1665,
+    1666,
+    1667,
+    1668,
+    1669,
+    1670,
+    1671,
+    1672,
+    1673,
+    1674,
+    1675,
+    1676,
+    1677,
+    1678,
+    1679,
+    1680,
+    1681,
+    1682,
+    1683,
+    1684,
+    1685,
+    1686
+  ]
+}

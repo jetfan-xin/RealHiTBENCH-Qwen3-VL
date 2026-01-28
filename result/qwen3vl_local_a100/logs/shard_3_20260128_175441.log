@@ -1,0 +1,2200 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: mix
+  Format: latex
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 4/4
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 32768
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:05,  1.68s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.62s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.61s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.78s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.72s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Shard 3/4: Processing queries 2305-3071 (767 queries)
+Processing mix modality:   0%|          | 0/767 [00:00<?, ?it/s]
+============================================================
+Query ID: 2305 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (9976 tokens) for image (5324, 3252)
+Processing mix modality:   0%|          | 1/767 [00:04<1:01:38,  4.83s/it]Predictions:  ['2256938']
+Answer:  ['2256938']
+Prediction: 225,693.78
+Reference: 225693.78
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 4.83s
+
+============================================================
+Query ID: 2306 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9982 tokens) for image (5324, 3252)
+Processing mix modality:   0%|          | 2/767 [00:07<42:07,  3.30s/it]  Predictions:  ['98286']
+Answer:  ['19150']
+Prediction: 9828.57
+Reference: 1914.9769
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.24s
+
+============================================================
+Query ID: 2307 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large input (10070 tokens) for image (5324, 3252)
+Processing mix modality:   0%|          | 3/767 [00:23<1:57:29,  9.23s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+'PSE': [231646.15, 212232.82, 215113.12, 212095.27, 230575.05, 225693.78, 232827.00]
+}
+
+df = pd.DataFrame(data)
+
+# Create a bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df['Year'], df['PSE'], color='blue')
+plt.title('Producer Support Estimate (PSE) for Agriculture from 2014 to 2020')
+plt.xlabel('Year')
+plt.ylabel('PSE (US dollar, Millions)')
+plt.xticks(df['Year'])
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: [231646.15, 212232.82, 215113.12, 212095.27, 230575.05, 225693.78, 232827.0]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    'PSE': [231646.15, 212232.82, 215113.12, 212...
+Reference: [231646.1458, 212232.8219, 215113.116, 212095.2705, 230575.045, 225693.7759, 232827.0016]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 16.28s
+
+============================================================
+Query ID: 2308 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (10067 tokens) for image (5324, 3252)
+Processing mix modality:   1%|          | 4/767 [00:37<2:23:39, 11.30s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create a DataFrame from the table data
+data = {
+'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+'Market Price Support (MPS)': [92752.92, 89736.62, 94167.70, 93371.51, 93170.59, 88759.78, 87353.90]
+}
+
+df = pd.DataFrame(data)
+
+# Plot the line chart
+plt.figure(figsize=(10, 6))
+plt.plot(df['Year'], df['Market Price Support (MPS)'], marker='o', linestyle='-', color='blue')
+plt.title('Change in Market Price Support (MPS) from 2014 to 2020')
+plt.xlabel('Year')
+plt.ylabel('Market Price Support (MPS) in US dollars, Millions')
+plt.grid(True)
+plt.xticks(df['Year'])
+plt.show()
+
+OUTPUT VALUE: [[92752.92, 89736.62, 94167.7, 93371.51, 93170.59, 88759.78, 87353.9]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Create a DataFrame from the table data
+data = {
+    'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    'Market Price Support (MPS)': [927...
+Reference: [[92752.9205, 94167.6954, 97052.1359, 93371.5051, 93170.5861, 88759.7753, 91255.6092]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 14.47s
+
+============================================================
+Query ID: 2309 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (9749 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 5/767 [00:39<1:41:06,  7.96s/it]Predictions:  ['34']
+Answer:  ['34']
+Prediction: 3.4
+Reference: 3.4
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 2310 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9777 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 6/767 [00:41<1:15:07,  5.92s/it]Predictions:  ['28']
+Answer:  ['31']
+Prediction: 2.75
+Reference: 3.135
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.97s
+
+============================================================
+Query ID: 2311 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (9750 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 7/767 [00:44<59:34,  4.70s/it]  Predictions:  ['2010 41']
+Answer:  ['2010 41']
+Prediction: 2010, 4.1
+Reference: 2010, 4.1
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.19s
+
+============================================================
+Query ID: 2312 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large input (9778 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 8/767 [00:48<1:00:35,  4.79s/it]Predictions:  ['35 35 35 35 35 35 35 35 35 35 35']
+Answer:  ['33']
+Prediction: 3.45, 3.45, 3.45, 3.45, 3.45, 3.45, 3.45, 3.45, 3.45, 3.45, 3.45
+Reference: 3.31
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.98s
+
+============================================================
+Query ID: 2313 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large input (9825 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 9/767 [00:51<50:05,  3.96s/it]  Predictions:  ['32 decreasing trend']
+Answer:  ['31']
+Prediction: 3.2, Decreasing trend
+Reference: 3.09
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.15s
+
+============================================================
+Query ID: 2314 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large input (11583 tokens) for image (5896, 3002)
+Processing mix modality:   1%|▏         | 10/767 [00:54<46:05,  3.65s/it]Predictions:  ['birmingham and solihull 12938 10773']
+Answer:  ['black country 13']
+Prediction: Birmingham and Solihull, 12938, 10773
+Reference: Black Country, 13
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.95s
+Checkpoint saved: 10 queries processed
+
+============================================================
+Query ID: 2315 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (11583 tokens) for image (5896, 3002)
+Processing mix modality:   1%|▏         | 11/767 [00:57<45:48,  3.64s/it]Predictions:  ['1234463 405085 281852 9119']
+Answer:  ['396769']
+Prediction: 1234463, 405085, 281852, 9119
+Reference: 396769
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.60s
+
+============================================================
+Query ID: 2316 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (11570 tokens) for image (5896, 3002)
+Processing mix modality:   2%|▏         | 12/767 [01:00<42:29,  3.38s/it]Processing mix modality:   2%|▏         | 13/767 [01:15<1:27:23,  6.95s/it]Processing mix modality:   2%|▏         | 14/767 [01:18<1:10:52,  5.65s/it]Processing mix modality:   2%|▏         | 15/767 [01:19<55:40,  4.44s/it]  Processing mix modality:   2%|▏         | 16/767 [01:21<44:39,  3.57s/it]Processing mix modality:   2%|▏         | 17/767 [01:23<37:10,  2.97s/it]Predictions:  ['65267 1234463']
+Answer:  ['01']
+Prediction: 65267, 1234463
+Reference: 0.11
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.79s
+
+============================================================
+Query ID: 2317 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['voluntarily leaves place on training scheme or employment programme without good reason losing through misconduct place on training scheme or employment programme refusal of place on training scheme or employment programme without good reason neglect to avail themselves of reasonable opportunity of place on training scheme or employment programme without good reason failure to attend place on training scheme or employment programme without good reason failure to attend or failure to participate in adviser interview without good reason refusal or failure to comply with jobseekers direction without good reason failure to participate in scheme for assisting person to obtain employment without good reason work programme failure to participate in scheme for assisting person to obtain employment without good reason skills conditionality failure to participate in scheme for assisting person to obtain employment without good reason other scheme failure to participate in scheme for assisting person to obtain employment without good reason work experience not actively seeking employment not being available for work left employment voluntarily without good reason losing employment through misconduct neglect to avail themselves of reasonable opportunity of employment without good reason refusal or failure to apply for or accept if offered job which employment officer has informed himher is vacant or about to become vacant without good reason failure to participate in mandatory work activity without good reason']
+Answer:  ['18']
+Prediction: Voluntarily leaves a place on a training scheme or employment programme without good reason, Losing through misconduct a place on a training scheme or employment programme, Refusal of a place on a tra...
+Reference: 18
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 15.18s
+
+============================================================
+Query ID: 2318 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['28250 75592 58538 74712']
+Answer:  ['30789']
+Prediction: 28250, 75592, 58538, 74712
+Reference: 30789
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.63s
+
+============================================================
+Query ID: 2319 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['28250']
+Answer:  ['16294']
+Prediction: 28,250
+Reference: 16294
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.65s
+
+============================================================
+Query ID: 2320 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['0 0']
+Answer:  ['11972 10334']
+Prediction: 0, 0
+Reference: 11972, 10334
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 2321 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  ['no clear trend cannot predict']
+Answer:  ['11972']
+Prediction: No clear trend, Cannot predict
+Reference: 11972
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 2322 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (11076 tokens) for image (5812, 2370)
+Processing mix modality:   2%|▏         | 18/767 [01:25<35:49,  2.87s/it]Predictions:  ['149393 175485']
+Answer:  ['74883']
+Prediction: 149393, 175485
+Reference: 74883
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.63s
+
+============================================================
+Query ID: 2323 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (11062 tokens) for image (5812, 2370)
+Processing mix modality:   2%|▏         | 19/767 [01:28<33:49,  2.71s/it]Predictions:  ['1234463']
+Answer:  ['342027']
+Prediction: 1,234,463
+Reference: 342027
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.35s
+
+============================================================
+Query ID: 2324 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (11071 tokens) for image (5812, 2370)
+Processing mix modality:   3%|▎         | 20/767 [01:31<35:35,  2.86s/it]Processing mix modality:   3%|▎         | 21/767 [01:33<32:19,  2.60s/it]Processing mix modality:   3%|▎         | 22/767 [01:35<30:13,  2.43s/it]Processing mix modality:   3%|▎         | 23/767 [01:36<25:38,  2.07s/it]Processing mix modality:   3%|▎         | 24/767 [01:38<26:04,  2.11s/it]Processing mix modality:   3%|▎         | 25/767 [01:39<22:41,  1.83s/it]Processing mix modality:   3%|▎         | 26/767 [01:41<20:30,  1.66s/it]Processing mix modality:   4%|▎         | 27/767 [01:42<19:04,  1.55s/it]Processing mix modality:   4%|▎         | 28/767 [01:43<18:00,  1.46s/it]Processing mix modality:   4%|▍         | 29/767 [01:44<17:16,  1.41s/it]Processing mix modality:   4%|▍         | 30/767 [01:46<17:07,  1.39s/it]Processing mix modality:   4%|▍         | 31/767 [01:47<17:00,  1.39s/it]Processing mix modality:   4%|▍         | 32/767 [01:56<45:27,  3.71s/it]Processing mix modality:   4%|▍         | 33/767 [01:58<37:10,  3.04s/it]Processing mix modality:   4%|▍         | 34/767 [01:59<32:04,  2.63s/it]Processing mix modality:   5%|▍         | 35/767 [02:06<45:55,  3.76s/it]Processing mix modality:   5%|▍         | 36/767 [02:09<43:46,  3.59s/it]Processing mix modality:   5%|▍         | 37/767 [02:10<35:38,  2.93s/it]Processing mix modality:   5%|▍         | 38/767 [02:12<28:53,  2.38s/it]Predictions:  ['439317 304634 72908 684']
+Answer:  ['439317']
+Prediction: 439317, 304634, 72908, 684
+Reference: 439317
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 15.97}
+Processing Time: 3.20s
+Checkpoint saved: 20 queries processed
+
+============================================================
+Query ID: 2325 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['62186 3638 962']
+Answer:  ['66786']
+Prediction: 62186, 3638, 962
+Reference: 66786
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.00s
+
+============================================================
+Query ID: 2326 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['62186 3638 962']
+Answer:  ['yes']
+Prediction: 62186, 3638, 962
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.04s
+
+============================================================
+Query ID: 2327 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2328 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['218366 46915 30599']
+Answer:  ['986267']
+Prediction: 218366, 46915, 30599
+Reference: 98626.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.20s
+
+============================================================
+Query ID: 2329 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['36188']
+Answer:  ['36188']
+Prediction: 36,188
+Reference: 36188
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 2330 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['493143']
+Answer:  ['493143']
+Prediction: 493,143
+Reference: 493143
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.26s
+
+============================================================
+Query ID: 2331 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['36188 0']
+Answer:  ['529331']
+Prediction: 36188, 0
+Reference: 529331
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 2332 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['57']
+Answer:  ['26']
+Prediction: 57
+Reference: 26
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2333 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['491']
+Answer:  ['491']
+Prediction: 491
+Reference: 491
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2334 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['3035']
+Answer:  ['2872']
+Prediction: 303.5
+Reference: 287.25
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+Checkpoint saved: 30 queries processed
+
+============================================================
+Query ID: 2335 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['2376']
+Answer:  ['3447']
+Prediction: 2,376
+Reference: 3447
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 2336 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table summarizes monthly decisions from 2008 to 2013, categorized into Non-adverse, Adverse, Cancelled, and Total decisions. Notable trends include a sharp increase in adverse decisions starting i...
+Reference: The table presents monthly data on decisions made, including non-adverse, adverse, and cancelled decisions, as well as total decisions for each month. A notable trend is that the number of non-adverse...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.13s
+
+============================================================
+Query ID: 2337 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['20376']
+Answer:  ['20376']
+Prediction: 20,376
+Reference: 20376
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 2338 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['great britain 76324']
+Answer:  ['great britain 76324']
+Prediction: GREAT BRITAIN, 76324
+Reference: GREAT BRITAIN, 76324
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.66s
+
+============================================================
+Query ID: 2339 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['birmingham and solihull black country derbyshire mercia staffordshire and shropshire northumberland tyne and wear south yorkshire west yorkshire cumbria and lancashire greater manchester central and cheshire greater manchester east and west merseyside east and south east scotland north of scotland west of scotland devon cornwall and somerset gloucester and west of england surrey and sussex thames valley north and mid wales south east wales south west wales']
+Answer:  ['3']
+Prediction: Birmingham and Solihull, Black Country, Derbyshire, Mercia, Staffordshire and Shropshire, Northumberland, Tyne and Wear, South Yorkshire, West Yorkshire, Cumbria and Lancashire, Greater Manchester Cen...
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 6.42s
+
+============================================================
+Query ID: 2340 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: GREAT BRITAIN, Non-adverse decisions, Adverse decisions, Cancelled decisions, Total decisions, Central England, London and the Home Counties, North East, North West, Scotland, Southern England, Wales,...
+Reference: The table presents data on sanction decisions across various regions, with columns detailing non-adverse, adverse, and cancelled decisions, as well as total decisions. Notable trends include variation...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 3.19s
+
+============================================================
+Query ID: 2341 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['great britain']
+Answer:  ['great britain']
+Prediction: GREAT BRITAIN
+Reference: GREAT BRITAIN
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.38s
+
+============================================================
+Query ID: 2342 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['1466']
+Answer:  ['1466']
+Prediction: 1,466
+Reference: 1466
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.09s
+Processing mix modality:   5%|▌         | 39/767 [02:12<23:23,  1.93s/it]Processing mix modality:   5%|▌         | 40/767 [02:14<20:25,  1.69s/it]Processing mix modality:   5%|▌         | 41/767 [02:15<18:29,  1.53s/it]Processing mix modality:   5%|▌         | 42/767 [02:16<17:18,  1.43s/it]Processing mix modality:   6%|▌         | 43/767 [02:17<15:13,  1.26s/it]Processing mix modality:   6%|▌         | 44/767 [02:18<16:28,  1.37s/it]Processing mix modality:   6%|▌         | 45/767 [02:27<42:21,  3.52s/it]Processing mix modality:   6%|▌         | 46/767 [02:28<32:44,  2.73s/it]Processing mix modality:   6%|▌         | 47/767 [02:29<27:21,  2.28s/it]Processing mix modality:   6%|▋         | 48/767 [02:30<23:28,  1.96s/it]
+============================================================
+Query ID: 2343 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['5']
+Answer:  ['7']
+Prediction: 5
+Reference: 7
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.88s
+
+============================================================
+Query ID: 2344 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['september 2627']
+Answer:  ['september 2627']
+Prediction: September, 2627
+Reference: September, 2627
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.12s
+Checkpoint saved: 40 queries processed
+
+============================================================
+Query ID: 2345 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['14601']
+Answer:  ['14601']
+Prediction: 14,601
+Reference: 14601
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 2346 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['0 1649']
+Answer:  ['1649']
+Prediction: 0, 1649
+Reference:  -, 1649
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2347 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.86s
+
+============================================================
+Query ID: 2348 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['16490 4388']
+Answer:  ['14707 7143']
+Prediction: 1649.00, 438.78
+Reference: 1470.7, 714.26
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 2349 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents demographic breakdowns of 14,601 individuals in Great Britain who received an adverse sanction decision. It includes data segmented by Age Group, Ethnicity, Gender, Disability, and ...
+Reference: The table presents data on individuals receiving an adverse ESA sanction across different age groups, regions, and ethnic categories. The age groups show high sanction numbers for individuals aged 18-...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.54s
+
+============================================================
+Query ID: 2350 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['411']
+Answer:  ['11845']
+Prediction: 411
+Reference: 11845
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.87s
+
+============================================================
+Query ID: 2351 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['3127 4951']
+Answer:  ['11815 11845']
+Prediction: 3127, 4951
+Reference: 11815, 11845
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 2352 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: No anomalies detected in the “Reconsidered Decision” category.
+Reference: No anomalies are detected in the table.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2353 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (11092 tokens) for image (3380, 2336)
+Processing mix modality:   6%|▋         | 49/767 [02:32<22:53,  1.91s/it]Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.81s
+
+============================================================
+Query ID: 2354 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (11095 tokens) for image (3380, 2336)
+Processing mix modality:   7%|▋         | 50/767 [02:34<23:22,  1.96s/it]Predictions:  ['10 1']
+Answer:  ['10']
+Prediction: 10, 1
+Reference: 10
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+Checkpoint saved: 50 queries processed
+
+============================================================
+Query ID: 2355 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (11089 tokens) for image (3380, 2336)
+Processing mix modality:   7%|▋         | 51/767 [02:36<22:55,  1.92s/it]Predictions:  ['4']
+Answer:  ['5']
+Prediction: 4
+Reference: 5
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 2356 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large input (11087 tokens) for image (3380, 2336)
+Processing mix modality:   7%|▋         | 52/767 [02:38<23:34,  1.98s/it]Predictions:  ['rick bosetti 33']
+Answer:  ['rick bosetti 33']
+Prediction: Rick Bosetti, 33
+Reference: Rick Bosetti, 33
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.11s
+
+============================================================
+Query ID: 2357 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (11099 tokens) for image (3380, 2336)
+Processing mix modality:   7%|▋         | 53/767 [02:45<40:35,  3.41s/it]Processing mix modality:   7%|▋         | 54/767 [02:47<35:09,  2.96s/it]Processing mix modality:   7%|▋         | 55/767 [02:48<29:32,  2.49s/it]Processing mix modality:   7%|▋         | 56/767 [02:50<26:42,  2.25s/it]Processing mix modality:   7%|▋         | 57/767 [02:52<25:31,  2.16s/it]Processing mix modality:   8%|▊         | 58/767 [03:03<56:38,  4.79s/it]Processing mix modality:   8%|▊         | 59/767 [03:05<48:00,  4.07s/it]Processing mix modality:   8%|▊         | 60/767 [03:07<39:06,  3.32s/it]Processing mix modality:   8%|▊         | 61/767 [03:08<31:51,  2.71s/it]Processing mix modality:   8%|▊         | 62/767 [03:09<27:16,  2.32s/it]Processing mix modality:   8%|▊         | 63/767 [03:12<26:51,  2.29s/it]Prediction: 1978 Toronto Blue Jays Batting Statistics, Rick Bosetti: 451 AB, 121 H, .268 Avg., 38 RBI, 5 HR; Al Woods: 232 AB, 58 H, .250 Avg., 23 RBI, 2 HR; Bosetti had higher overall performance with more hits,...
+Reference: The table provides performance data for Rick Bosetti and Al Woods in their games against various opponents. The key columns are games played (G), at-bats (AB), runs (R), hits (H), and batting average ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.75s
+
+============================================================
+Query ID: 2358 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['severe high moderate low negligible']
+Answer:  ['severe high moderate low negligible']
+Prediction: Severe, High, Moderate, Low, Negligible
+Reference: Severe, High, Moderate, Low, Negligible
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.90s
+
+============================================================
+Query ID: 2359 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['7']
+Answer:  ['7']
+Prediction: 7
+Reference: 7
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 2360 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['inservice defect last inspection']
+Answer:  ['inservice defect']
+Prediction: In-Service Defect, Last Inspection
+Reference: In-Service Defect
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.70s
+
+============================================================
+Query ID: 2361 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['severe high moderate low negligible']
+Answer:  ['3']
+Prediction: Severe, High, Moderate, Low, Negligible
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.93s
+
+============================================================
+Query ID: 2362 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents a risk assessment matrix for probability of failure based on criticality ratings across various factors including Fatigue Loading, Corrosion, Coating Defect, In-Service Defect, In-S...
+Reference: The table presents criticality ratings for various risk categories, including "Fatigue Loading," "Corrosion," and "Coating Defect," with columns detailing weightage factors and ratings across severity...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.95s
+
+============================================================
+Query ID: 2363 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['catastrophic leak major leak localised leak minor leak slight leak negligible']
+Answer:  ['catastrophic leak major leak localised leak minor leak slight leak negligible']
+Prediction: Catastrophic leak, Major leak, Localised leak, Minor leak, Slight leak, Negligible
+Reference: Catastrophic leak, Major leak, Localised leak, Minor leak, Slight leak, Negligible
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.38s
+
+============================================================
+Query ID: 2364 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['45≤x75']
+Answer:  ['45≤x75']
+Prediction: 45≤x<75
+Reference: 45≤x<75
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+Checkpoint saved: 60 queries processed
+
+============================================================
+Query ID: 2365 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['3']
+Answer:  ['3']
+Prediction: 3
+Reference: 3
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 2366 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['asset impact people safety']
+Answer:  ['asset impact']
+Prediction: Asset Impact, People Safety
+Reference: Asset Impact
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 2367 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Consequence of Failure Justification, Ranking, Qualitative, Quantitative, Environmental Impact, Asset Impact, People Safety
+Reference: The table categorizes “Environmental Impact,” “Asset Impact,” and “People Safety” by rankings (5 to 0), qualitative descriptions, and quantitative ranges. Rankings represent severity levels, with high...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.21s
+
+============================================================
+Query ID: 2368 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (8273 tokens) for image (3948, 1600)
+Processing mix modality:   8%|▊         | 64/767 [03:13<24:46,  2.11s/it]Predictions:  ['rauf dalal']
+Answer:  ['rauf dalal']
+Prediction: A. RAUF DALAL
+Reference: A. RAUF DALAL
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.71s
+
+============================================================
+Query ID: 2369 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (8265 tokens) for image (3948, 1600)
+Processing mix modality:   8%|▊         | 65/767 [03:16<25:49,  2.21s/it]Predictions:  ['rauf dalal amanda cerroni amber hamilton']
+Answer:  ['rauf dalal amber hamilton']
+Prediction: A. RAUF DALAL, AMANDA CERRONI, AMBER HAMILTON
+Reference: A. RAUF DALAL, AMBER HAMILTON
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 22.96}
+Processing Time: 2.43s
+
+============================================================
+Query ID: 2370 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (8262 tokens) for image (3948, 1600)
+Processing mix modality:   9%|▊         | 66/767 [03:17<23:50,  2.04s/it]Predictions:  ['amber hamilton']
+Answer:  ['amber hamilton']
+Prediction: AMBER HAMILTON
+Reference: AMBER HAMILTON
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.65s
+
+============================================================
+Query ID: 2371 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (8266 tokens) for image (3948, 1600)
+Processing mix modality:   9%|▊         | 67/767 [03:19<23:33,  2.02s/it]Predictions:  ['rauf dalal amber hamilton']
+Answer:  ['none']
+Prediction: A. RAUF DALAL, AMBER HAMILTON
+Reference: None
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.97s
+
+============================================================
+Query ID: 2372 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (8276 tokens) for image (3948, 1600)
+Processing mix modality:   9%|▉         | 68/767 [03:24<31:49,  2.73s/it]Prediction: EMPNAME, CALL ID, Date, ACCOUNT ID, Product, Exception; A. RAUF DALAL, AMANDA CERRONI, AMBER HAMILTON; Most active: AMBER HAMILTON with 14 records; Least active: A. RAUF DALAL with 5 records
+Reference: The table tracks call activity across employees through columns such as EMPNAME (employee name), CALL ID (unique identifier for each call), and Date. Key EMPNAMEs include A. RAUF DALAL, AMANDA CERRONI...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 4.39s
+
+============================================================
+Query ID: 2373 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (8507 tokens) for image (2588, 2820)
+Processing mix modality:   9%|▉         | 69/767 [03:27<34:20,  2.95s/it]Predictions:  ['demo name 10 demo name 13 demo name 14 demo name 21 demo name 34 demo name 37 demo name 39']
+Answer:  ['demo name 10 demo name 13 demo name 14 demo name 21 demo name 34 demo name 39 demo name 37']
+Prediction: demo name 10, demo name 13, demo name 14, demo name 21, demo name 34, demo name 37, demo name 39
+Reference: demo name 10, demo name 13, demo name 14, demo name 21, demo name 34, demo name 39, demo name 37
+Metrics: {'F1': 100.0, 'EM': 0.0, 'ROUGE-L': 90.48, 'SacreBLEU': 90.17}
+Processing Time: 3.47s
+
+============================================================
+Query ID: 2374 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (8501 tokens) for image (2588, 2820)
+Processing mix modality:   9%|▉         | 70/767 [03:29<31:47,  2.74s/it]Predictions:  ['hak gas plumb it right pristine carpets cash carry']
+Answer:  ['hak gas plumb it right pristine carpets']
+Prediction: Hak Gas, Plumb It Right, Pristine Carpets, Cash & Carry
+Reference: Hak Gas, Plumb It Right, Pristine Carpets
+Metrics: {'F1': 87.5, 'EM': 0.0, 'ROUGE-L': 87.5, 'SacreBLEU': 72.6}
+Processing Time: 2.23s
+Checkpoint saved: 70 queries processed
+
+============================================================
+Query ID: 2375 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (8501 tokens) for image (2588, 2820)
+Processing mix modality:   9%|▉         | 71/767 [03:31<27:43,  2.39s/it]Predictions:  ['cash carry']
+Answer:  ['cash carry']
+Prediction: Cash & Carry
+Reference: Cash & Carry
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+
+============================================================
+Query ID: 2376 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (8502 tokens) for image (2588, 2820)
+Processing mix modality:   9%|▉         | 72/767 [03:36<37:24,  3.23s/it]Predictions:  ['gas engineer intercom specialist plasterer plumber electrician carpet fitter roofer general surveyor builder joiner decorator gardener carpet cleaning decorator rubbish removal window fitter carpet cleaning locksmith damp specialist damp specialist cleaning general locksmith roofer']
+Answer:  ['17']
+Prediction: Gas engineer, Intercom Specialist, Plasterer, Plumber, electrician, Carpet fitter, Roofer, General, Surveyor, Builder, Joiner, Decorator, Gardener, Carpet cleaning, decorator, Rubbish removal, Window ...
+Reference: 17
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 5.19s
+
+============================================================
+Query ID: 2377 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (8521 tokens) for image (2588, 2820)
+Processing mix modality:  10%|▉         | 73/767 [03:46<58:38,  5.07s/it]Processing mix modality:  10%|▉         | 74/767 [03:49<51:55,  4.50s/it]Processing mix modality:  10%|▉         | 75/767 [03:50<40:28,  3.51s/it]Processing mix modality:  10%|▉         | 76/767 [03:51<31:56,  2.77s/it]Processing mix modality:  10%|█         | 77/767 [03:52<25:51,  2.25s/it]Processing mix modality:  10%|█         | 78/767 [04:01<49:53,  4.34s/it]Processing mix modality:  10%|█         | 79/767 [04:02<38:33,  3.36s/it]Processing mix modality:  10%|█         | 80/767 [04:03<30:33,  2.67s/it]Processing mix modality:  11%|█         | 81/767 [04:04<25:02,  2.19s/it]Processing mix modality:  11%|█         | 82/767 [04:06<22:20,  1.96s/it]Processing mix modality:  11%|█         | 83/767 [04:07<20:17,  1.78s/it]Processing mix modality:  11%|█         | 84/767 [04:09<21:21,  1.88s/it]Processing mix modality:  11%|█         | 85/767 [04:11<21:07,  1.86s/it]Processing mix modality:  11%|█         | 86/767 [04:12<18:51,  1.66s/it]Processing mix modality:  11%|█▏        | 87/767 [04:14<17:28,  1.54s/it]Processing mix modality:  11%|█▏        | 88/767 [04:23<43:11,  3.82s/it]Processing mix modality:  12%|█▏        | 89/767 [04:24<34:23,  3.04s/it]Prediction: Hak Gas, Pipe Wise, Plumb It Right, Pristine Carpets, Cash & Carry, Elite Carpets, Assured Advanced Access, Pini With A Van, Stardrops, Bens Locksmith, Lawrence & Carl (Royton); Skills include Gas eng...
+Reference: The table provides details about employees working for different companies, with their corresponding skills and regions. Key companies include “Hak Gas,” “Pipe Wise,” “Pristine Carpets,” and “Cash & C...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.37s
+
+============================================================
+Query ID: 2378 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['6661408 6905178 6905404 6906320 6958266']
+Answer:  ['5']
+Prediction: 6661408, 6905178, 6905404, 6906320, 6958266
+Reference: 5
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.15s
+
+============================================================
+Query ID: 2379 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['planers landscape rakes']
+Answer:  ['planers landscape rakes']
+Prediction: Planers, Landscape Rakes
+Reference: Planers, Landscape Rakes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2380 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['group 2']
+Answer:  ['group 2']
+Prediction: Group 2
+Reference: Group 2
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+
+============================================================
+Query ID: 2381 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['3']
+Answer:  ['3']
+Prediction: 3
+Reference: 3
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 2382 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table categorizes items by Group (Group 1, Group 2, Group 3), listing SupplyOrg (all LAT), BU (MA2, MA1, BMK Kit, MA), WeldLine (BMK Weld 2, BMK Weld 1, BMK NA), Category (Snow Blades, Angle Broom...
+Reference: The table organizes manufacturing data by Group, SupplyOrg, BU, WeldLine, Category, SubCategory, ItemNo, and ItemDesc. Each row represents a specific item, detailing its associated organizational attr...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.23s
+
+============================================================
+Query ID: 2383 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['sales']
+Answer:  ['sales']
+Prediction: SALES
+Reference: SALES
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 2384 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+Checkpoint saved: 80 queries processed
+
+============================================================
+Query ID: 2385 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 2386 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['50 50']
+Answer:  ['06']
+Prediction: 50, 50
+Reference: 0.6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.41s
+
+============================================================
+Query ID: 2387 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Agent Code, Team, Staff Initials & Name
+Reference: The table provides an overview of agent codes, their associated teams, and the staff or summary entries under each team. The main columns are “Agent Code,” which categorizes organizational units; “Tea...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 2388 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['sulphuric acid plant urea plant np complex fertilizer plant ssp plant ammoniaurea complex']
+Answer:  ['sulphuric acid plant urea plant np complex fertilizer plant ssp plant ammoniaurea complex']
+Prediction: sulphuric acid plant, urea plant, NP complex fertilizer plant, SSP plant, ammonia-urea complex
+Reference: Sulphuric acid plant, Urea plant, NP complex fertilizer plant, SSP plant, Ammonia-urea complex
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.10s
+
+============================================================
+Query ID: 2389 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['0i79 0i82 0i83']
+Answer:  ['0i79 0i82']
+Prediction: 0I79, 0I82, 0I83
+Reference: 0I79, 0I82
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 0.0}
+Processing Time: 1.81s
+
+============================================================
+Query ID: 2390 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['3 3']
+Answer:  ['30']
+Prediction: 3, 3
+Reference: 3.02
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 2391 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['0i84']
+Answer:  ['0i84']
+Prediction: 0I84
+Reference: 0I84
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2392 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: L&T Issue Management Reports for FACT's Kerala Chemical Plant, covering project period 04-Aug-15 to 31-Oct-15, managed by JAGAN in MUMBAI; includes Company Code, Cost Center, Intercompany Name, Line D...
+Reference: The table provides an overview of projects managed by L&T, focusing on company codes, cost centers, intercompany entities, line descriptions, statistical quantities, and performance averages. The “Com...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.12s
+
+============================================================
+Query ID: 2393 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['sunday 0']
+Answer:  ['sunday 0']
+Prediction: Sunday, 0
+Reference: Sunday, 0
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 2394 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['total orders staff orders clients orders operating days avg orders day gross revenues avg spend per order']
+Answer:  ['total orders staff orders clients orders operating days avg orders day gross revenues avg spend per order']
+Processing mix modality:  12%|█▏        | 90/767 [04:26<31:48,  2.82s/it]Processing mix modality:  12%|█▏        | 91/767 [04:27<26:19,  2.34s/it]Processing mix modality:  12%|█▏        | 92/767 [04:29<22:37,  2.01s/it]Processing mix modality:  12%|█▏        | 93/767 [04:39<49:08,  4.37s/it]Processing mix modality:  12%|█▏        | 94/767 [04:40<38:50,  3.46s/it]Processing mix modality:  12%|█▏        | 95/767 [04:42<32:49,  2.93s/it]Processing mix modality:  13%|█▎        | 96/767 [04:43<27:34,  2.47s/it]Processing mix modality:  13%|█▎        | 97/767 [04:45<24:40,  2.21s/it]Processing mix modality:  13%|█▎        | 98/767 [04:53<44:10,  3.96s/it]Processing mix modality:  13%|█▎        | 99/767 [04:54<35:41,  3.21s/it]Processing mix modality:  13%|█▎        | 100/767 [04:55<29:24,  2.65s/it]Processing mix modality:  13%|█▎        | 101/767 [04:58<28:44,  2.59s/it]Processing mix modality:  13%|█▎        | 102/767 [05:00<26:13,  2.37s/it]Processing mix modality:  13%|█▎        | 103/767 [05:02<24:51,  2.25s/it]Processing mix modality:  14%|█▎        | 104/767 [05:04<24:03,  2.18s/it]Processing mix modality:  14%|█▎        | 105/767 [05:06<22:59,  2.08s/it]Processing mix modality:  14%|█▍        | 106/767 [05:07<20:26,  1.86s/it]Prediction: Total Orders, Staff Orders, Clients Orders, Operating days, Avg Orders / day, Gross Revenues, Avg Spend per order
+Reference: Total Orders, Staff Orders, Clients Orders, Operating Days, Avg Orders / day, Gross Revenues, Avg Spend per order.
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.29s
+Checkpoint saved: 90 queries processed
+
+============================================================
+Query ID: 2395 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['100']
+Answer:  ['1']
+Prediction: 100
+Reference: 1
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2396 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['30']
+Answer:  ['36']
+Prediction: 3.00
+Reference: 3.6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2397 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Day': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+'Orders': [3, 5, 5, 3, 2, 2, 0]
+}
+df = pd.DataFrame(data)
+# Plot the bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df['Day'], df['Orders'], color='skyblue')
+plt.title('Number of Orders Placed on Each Day of the Week')
+plt.xlabel('Day of the Week')
+plt.ylabel('Number of Orders')
+plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
+plt.tight_layout()  # Adjust layout to prevent clipping of labels
+plt.show()
+
+OUTPUT VALUE: [3, 5, 5, 3, 2, 2, 0]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ # Load the data from the table
+ data = {
+     'Day': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+     'Order...
+Reference: [3, 5, 5, 3, 2, 2, 0]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 9.89s
+
+============================================================
+Query ID: 2398 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2399 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['£4115']
+Answer:  ['£4115']
+Prediction: £411.50
+Reference: £411.50
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.69s
+
+============================================================
+Query ID: 2400 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['monday tuesday']
+Answer:  ['tuesday £970']
+Prediction: Monday, Tuesday
+Reference: Tuesday, £97.00
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.38s
+
+============================================================
+Query ID: 2401 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['10']
+Answer:  ['£10']
+Prediction: 1.03
+Reference: £1.03
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 2402 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Customer Invoice Report for Room Seasons Ltd. from 2015-09-21 to 2015-09-28, detailing invoices from Holiday Inn Docklands with columns for Reference, To, Invoice Number, Date, Invoice Total, Day, Com...
+Reference: The table details orders placed between 2015-09-21 and 2015-09-28. The main columns include “Invoice Total”, “Day”, and “Commission Amount”. Commission amounts show a slight variation across the week,...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.05s
+
+============================================================
+Query ID: 2403 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['11mar15']
+Answer:  ['42074']
+Prediction: 11-Mar-15
+Reference: 42074
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.44s
+
+============================================================
+Query ID: 2404 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['22 yes']
+Answer:  ['22 yes']
+Prediction: 22, Yes
+Reference: 22, Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+Checkpoint saved: 100 queries processed
+
+============================================================
+Query ID: 2405 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['product 7 product 6 product 5 product 4 product 3 product 2 product 1']
+Answer:  ['product 7 6']
+Prediction: Product 7, Product 6, Product 5, Product 4, Product 3, Product 2, Product 1
+Reference: Product 7, 6
+Metrics: {'F1': 35.29, 'EM': 0.0, 'ROUGE-L': 35.29, 'SacreBLEU': 6.29}
+Processing Time: 2.46s
+
+============================================================
+Query ID: 2406 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['product 3 product 4 product 5 product 6']
+Answer:  ['4']
+Prediction: Product 3, Product 4, Product 5, Product 6
+Reference: 4
+Metrics: {'F1': 22.22, 'EM': 0.0, 'ROUGE-L': 22.22, 'SacreBLEU': 5.52}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 2407 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Office Copy Ledger, 7 products, cumulative quantity 22, overall total value 63
+Reference: The table is an invoice ledger dated 11-Mar-15, listing transactions for Customer ID 12 under Invoice No. 1001. It contains 7 products, with columns for description, quantity, rate, and total value. T...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 1.97s
+
+============================================================
+Query ID: 2408 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['628 2015119']
+Answer:  ['shop rite 2015114']
+Prediction: 628, 2015/11/9
+Reference: SHOP RITE, 2015/11/4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.01s
+
+============================================================
+Query ID: 2409 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['j918 20151120']
+Answer:  ['kroger 20151120']
+Prediction: J918, 2015/11/20
+Reference: Kroger, 2015/11/20
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.87s
+
+============================================================
+Query ID: 2410 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['8 5']
+Answer:  ['9 4']
+Prediction: 8, 5
+Reference: 9, 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2411 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['3 3']
+Answer:  ['0']
+Prediction: 3, 3
+Reference: 0
+Processing mix modality:  14%|█▍        | 107/767 [05:08<18:38,  1.70s/it]Processing mix modality:  14%|█▍        | 108/767 [05:11<23:31,  2.14s/it]Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2412 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: SKU #, Store Names, Reshipment Dates, Notable Trends: Most reshipments occurred within days of entry, with Kroger and Walmart being frequent store chains, and issues often involving damage or replacem...
+Reference: The table contains reshipment data for various products, including the SKU, store names, reshipment dates, and issues related to damaged products or replacements. The main columns include SKU, store n...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 3.18s
+
+============================================================
+Query ID: 2413 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (9867 tokens) for image (4080, 6572)
+Processing mix modality:  14%|█▍        | 109/767 [05:14<23:20,  2.13s/it]Predictions:  ['8']
+Answer:  ['6']
+Prediction: 8
+Reference: 6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.10s
+
+============================================================
+Query ID: 2414 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (9869 tokens) for image (4080, 6572)
+Processing mix modality:  14%|█▍        | 110/767 [05:16<23:44,  2.17s/it]Predictions:  ['6 roofer']
+Answer:  ['6 roofer']
+Prediction: 6, Roofer
+Reference: 6, Roofer
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.26s
+Checkpoint saved: 110 queries processed
+
+============================================================
+Query ID: 2415 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large input (9892 tokens) for image (4080, 6572)
+Processing mix modality:  14%|█▍        | 111/767 [05:19<26:34,  2.43s/it]Predictions:  ['2016113 2016114']
+Answer:  ['42383']
+Prediction: 2016/1/13, 2016/1/14
+Reference: 42383
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.04s
+
+============================================================
+Query ID: 2416 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (9850 tokens) for image (4080, 6572)
+Processing mix modality:  15%|█▍        | 112/767 [05:23<33:31,  3.07s/it]Predictions:  ['albert terrace 15 bacup ol13 8bj altham st 6 padiham bb12 8qr bold st 21 bacup lancs ol13 9qr']
+Answer:  ['altham st 6 padiham bb12 8qr']
+Prediction: Albert Terrace 15, Bacup, OL13 8BJ, Altham St 6, Padiham, BB12 8QR, Bold St 21, Bacup, LANCS, OL13 9QR
+Reference: Altham St 6, Padiham, BB12 8QR
+Metrics: {'F1': 48.0, 'EM': 0.0, 'ROUGE-L': 48.0, 'SacreBLEU': 24.94}
+Processing Time: 4.57s
+
+============================================================
+Query ID: 2417 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (9852 tokens) for image (4080, 6572)
+Processing mix modality:  15%|█▍        | 113/767 [05:34<56:43,  5.20s/it]Processing mix modality:  15%|█▍        | 114/767 [05:35<45:10,  4.15s/it]Processing mix modality:  15%|█▍        | 115/767 [05:37<36:22,  3.35s/it]Processing mix modality:  15%|█▌        | 116/767 [05:38<29:54,  2.76s/it]Processing mix modality:  15%|█▌        | 117/767 [05:40<26:13,  2.42s/it]Processing mix modality:  15%|█▌        | 118/767 [05:51<54:12,  5.01s/it]Prediction: The table summarizes maintenance and repair tasks across multiple properties, detailing their status (e.g., "Contractor Assigned," "Complete"), addresses, job descriptions, purpose, type, and assigned...
+Reference: The table provides data on various properties and the statuses of tasks associated with them. Key columns include property names, task statuses (e.g., “Contractor Assigned,” “Complete,” “Work Commence...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.18s
+
+============================================================
+Query ID: 2418 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['105 105']
+Answer:  ['27']
+Prediction: 105, 105
+Reference: 27
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.70s
+
+============================================================
+Query ID: 2419 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['abc125']
+Answer:  ['abc125']
+Prediction: ABC-125
+Reference: ABC-125
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 2420 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['6']
+Answer:  ['12']
+Prediction: 6
+Reference: 12
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.38s
+
+============================================================
+Query ID: 2421 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['40']
+Answer:  ['27']
+Prediction: 4.00
+Reference: 2.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.63s
+
+============================================================
+Query ID: 2422 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents detailed cost and quantity data for parts across three operational processes (OP1, OP2, OP3) for two case numbers (BERLN1-0001-15 and BERLN8-0001-15). Each section includes columns ...
+Reference: The table provides details on various parts categorized by “Category” and identified by unique “Part Numbers.” Each part is described with “System Size,” “Unit,” “Currency,” “Cost,” and “Quantity” acr...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 11.06s
+
+============================================================
+Query ID: 2423 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (22792 tokens) for image (6832, 4048)
+Processing mix modality:  16%|█▌        | 119/767 [05:55<51:53,  4.80s/it]Predictions:  ['boys girls']
+Answer:  ['boys']
+Prediction: Boys, Girls
+Reference: Boys
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 4.32s
+
+============================================================
+Query ID: 2424 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (22787 tokens) for image (6832, 4048)
+Processing mix modality:  16%|█▌        | 120/767 [05:59<49:41,  4.61s/it]Predictions:  ['priyanka kumari']
+Answer:  ['munni']
+Prediction: PRIYANKA KUMARI
+Reference: Munni
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.15s
+Checkpoint saved: 120 queries processed
+
+============================================================
+Query ID: 2425 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (22791 tokens) for image (6832, 4048)
+Processing mix modality:  16%|█▌        | 121/767 [06:04<50:01,  4.65s/it]Predictions:  ['priyanka kumari rahul kumar arjun']
+Answer:  ['rahul kumar riya munni']
+Prediction: PRIYANKA KUMARI, RAHUL KUMAR, ARJUN
+Reference: Rahul Kumar, Riya, Munni
+Metrics: {'F1': 44.44, 'EM': 0.0, 'ROUGE-L': 44.44, 'SacreBLEU': 21.36}
+Processing Time: 4.74s
+
+============================================================
+Query ID: 2426 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (22784 tokens) for image (6832, 4048)
+Processing mix modality:  16%|█▌        | 122/767 [06:08<49:20,  4.59s/it]Predictions:  ['1st term 2nd term final total']
+Answer:  ['1st term 2nd term final total']
+Prediction: 1ST TERM, 2ND TERM, FINAL, TOTAL
+Reference: 1ST TERM, 2ND TERM, FINAL, TOTAL
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 4.46s
+
+============================================================
+Query ID: 2427 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (22796 tokens) for image (6832, 4048)
+Processing mix modality:  16%|█▌        | 123/767 [06:24<1:25:31,  7.97s/it]Processing mix modality:  16%|█▌        | 124/767 [06:26<1:04:22,  6.01s/it]Processing mix modality:  16%|█▋        | 125/767 [06:28<53:08,  4.97s/it]  Processing mix modality:  16%|█▋        | 126/767 [06:30<41:56,  3.93s/it]Processing mix modality:  17%|█▋        | 127/767 [06:31<34:04,  3.20s/it]Processing mix modality:  17%|█▋        | 128/767 [06:40<50:40,  4.76s/it]Processing mix modality:  17%|█▋        | 129/767 [06:41<39:13,  3.69s/it]Processing mix modality:  17%|█▋        | 130/767 [06:42<30:28,  2.87s/it]Processing mix modality:  17%|█▋        | 131/767 [06:43<26:26,  2.49s/it]Processing mix modality:  17%|█▋        | 132/767 [06:45<22:30,  2.13s/it]Processing mix modality:  17%|█▋        | 133/767 [06:55<48:03,  4.55s/it]Prediction: S.N., ADM. N., NAME, FATHER NAME, CATEGORY, ATTENDANCE, MATH (1ST TERM, 2ND TERM, FINAL, TOTAL), HINDI (1ST TERM, 2ND TERM, FINAL, TOTAL), S.S. (1ST TERM, 2ND TERM, FINAL, TOTAL), SCIENCE (1ST TERM, 2...
+Reference: The table provides detailed information about students, including their “NAME,” “CATEGORY” (e.g., GEN, OBC), “SCORES” in various subjects and terms (e.g., Math, Science), and “ATTENDANCE.” Notable pat...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 15.85s
+
+============================================================
+Query ID: 2428 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['science']
+Answer:  ['hindi']
+Prediction: SCIENCE
+Reference: Hindi
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.43s
+
+============================================================
+Query ID: 2429 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['session201415 name fathers name class roll no']
+Answer:  ['table provides details about student named amarjeet including their “name” “father’s name” “class” 3rd b and “roll no” 1 it outlines academic performance in various tests across subjects']
+Prediction: SESSION-2014-15, NAME, FATHER'S NAME, CLASS, ROLL NO.
+Reference: The table provides details about a student named Amarjeet, including their “NAME,” “FATHER’S NAME,” “CLASS” (3RD B), and “ROLL NO.” (1). It outlines academic performance in various tests across subjec...
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 27.78, 'SacreBLEU': 0.0}
+Processing Time: 2.54s
+
+============================================================
+Query ID: 2430 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['4']
+Answer:  ['5']
+Prediction: 4
+Reference: 5
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 2431 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['science math']
+Answer:  ['science']
+Prediction: Science, Math
+Reference: Science
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 2432 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Amarjeet's academic performance in Session-2014-15 shows consistent scores across subjects with a total of 89 out of 600 marks, translating to a 15% percentage. His scores were 42 out of 60 in the fir...
+Reference: The table summarizes Amarjeet’s academic performance across multiple tests in subjects like Hindi, English, Math, Science, Social Study, and Drawing. Scores include 42 in the 1st Monthly Test, 47 in t...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.40s
+
+============================================================
+Query ID: 2433 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['andrew 20']
+Answer:  ['eric 50']
+Prediction: Andrew, 20
+Reference: Eric, 50
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 2434 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['no']
+Prediction: Yes
+Reference: No
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+Checkpoint saved: 130 queries processed
+
+============================================================
+Query ID: 2435 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['andrew ali eric indranil vikas kevin']
+Answer:  ['eric ali indranil andrew vikas']
+Prediction: Andrew, Ali, Eric, Indranil, Vikas, Kevin
+Reference:  Eric, Ali, Indranil, Andrew, Vikas
+Metrics: {'F1': 90.91, 'EM': 0.0, 'ROUGE-L': 54.55, 'SacreBLEU': 12.14}
+Processing Time: 1.62s
+
+============================================================
+Query ID: 2436 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['75 95']
+Answer:  ['yes']
+Prediction: 75, 95
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2437 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table details personnel hours across three dates (2015/2/14, 2015/2/21, 2015/2/28) for roles including Director, Manager, Consultant PC, and Employees. Key columns show Budget Hour, Plan Hour, and...
+Reference: The table provides time tracking data for personnel, including “Plan Hour,” “Actual Hour,” and “Budget Hour,” across multiple dates (e.g., 2015/2/14, 2015/2/21, 2015/2/28). Key personnel include Kevin...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.20s
+
+============================================================
+Query ID: 2438 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (11732 tokens) for image (3112, 3136)
+Processing mix modality:  17%|█▋        | 134/767 [06:57<40:54,  3.88s/it]Predictions:  ['23may15 saturday']
+Answer:  ['20150504 000000']
+Prediction: 23-May-15, Saturday
+Reference: 2015-05-04 00:00:00
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.31s
+
+============================================================
+Query ID: 2439 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (11760 tokens) for image (3112, 3136)
+Processing mix modality:  18%|█▊        | 135/767 [06:59<34:47,  3.30s/it]Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.96s
+
+============================================================
+Query ID: 2440 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large input (11783 tokens) for image (3112, 3136)
+Processing mix modality:  18%|█▊        | 136/767 [07:03<37:32,  3.57s/it]Predictions:  ['ford pickup n 20522one36l 7727 hw gmc ambulance s 6007 mcn11l 7926 ys']
+Answer:  ['ford pickup n 20522one36l 7727 hw']
+Prediction: Ford Pickup N 20522-ONE/36L (7727 HW), GMC Ambulance S 6007 MCN/11L (7926 YS)
+Reference: Ford Pickup N 20522-ONE/36L (7727 HW)
+Metrics: {'F1': 63.16, 'EM': 0.0, 'ROUGE-L': 63.16, 'SacreBLEU': 38.06}
+Processing Time: 4.19s
+
+============================================================
+Query ID: 2441 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (11735 tokens) for image (3112, 3136)
+Processing mix modality:  18%|█▊        | 137/767 [07:08<39:17,  3.74s/it]Predictions:  ['ford pickup n 20524ono421l 7312 ml ford pickup n 20522one36l 7727 hw']
+Answer:  ['ford pickup n 20522one36l 7727 hw ford pickup n 20524ono421l 7312 ml']
+Prediction: Ford Pickup N 20524-ONO/421L (7312 ML), Ford Pickup N 20522-ONE/36L (7727 HW)
+Reference: Ford Pickup N 20522-ONE/36L (7727 HW), Ford Pickup N 20524-ONO/421L (7312 ML)
+Metrics: {'F1': 100.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 83.45}
+Processing Time: 4.14s
+
+============================================================
+Query ID: 2442 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (11743 tokens) for image (3112, 3136)
+Processing mix modality:  18%|█▊        | 138/767 [07:23<1:17:33,  7.40s/it]Processing mix modality:  18%|█▊        | 139/767 [07:25<58:23,  5.58s/it]  Processing mix modality:  18%|█▊        | 140/767 [07:26<44:44,  4.28s/it]Processing mix modality:  18%|█▊        | 141/767 [07:27<35:26,  3.40s/it]Processing mix modality:  19%|█▊        | 142/767 [07:31<37:19,  3.58s/it]Processing mix modality:  19%|█▊        | 143/767 [07:38<47:21,  4.55s/it]Processing mix modality:  19%|█▉        | 144/767 [07:39<35:58,  3.47s/it]Processing mix modality:  19%|█▉        | 145/767 [07:41<29:31,  2.85s/it]Processing mix modality:  19%|█▉        | 146/767 [07:43<26:48,  2.59s/it]Processing mix modality:  19%|█▉        | 147/767 [07:52<49:20,  4.77s/it]Processing mix modality:  19%|█▉        | 148/767 [08:05<1:14:32,  7.22s/it]Processing mix modality:  19%|█▉        | 149/767 [08:07<56:43,  5.51s/it]  Processing mix modality:  20%|█▉        | 150/767 [08:09<45:03,  4.38s/it]Processing mix modality:  20%|█▉        | 151/767 [08:10<36:23,  3.55s/it]Processing mix modality:  20%|█▉        | 152/767 [08:12<31:04,  3.03s/it]Prediction: The table records vehicle usage logs for three different vehicles (Ford Pickup N 20522-ONE/36L, Ford Pickup N 20524-ONO/421L, and GMC Ambulance S 6007 MCN/11L) from May 1-31, 2015. Key columns include...
+Reference: The table details vehicle activity data, including driving and idle times, distances, and odometer readings across multiple dates. Notable patterns include significant variations in distances covered ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 15.93s
+
+============================================================
+Query ID: 2443 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['q4 external']
+Answer:  ['q4']
+Prediction: Q4, External
+Reference: Q4
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2444 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['internal external']
+Answer:  ['internal external total']
+Prediction: Internal, External
+Reference: Internal, External, TOTAL
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+Checkpoint saved: 140 queries processed
+
+============================================================
+Query ID: 2445 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['salary transport']
+Answer:  ['transport']
+Prediction: Salary, Transport
+Reference: Transport
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2446 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['jun14 jul14 aug14 feb14 mar14 apr14 may14 jan14 sep14 nov14 oct14 dec14']
+Answer:  ['june july august october november january february march april may september december']
+Prediction: Jun-14, Jul-14, Aug-14, Feb-14, Mar-14, Apr-14, May-14, Jan-14, Sep-14, Nov-14, Oct-14, Dec-14
+Reference: June, July, August, October, November, January, February, March, April, May, September, December
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.02s
+
+============================================================
+Query ID: 2447 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Sales totaled $1,180.00 with internal and external components showing consistent monthly performance until June, then declining. Costs amounted to $440.00, with external costs significantly higher tha...
+Reference: The table summarizes financial data, including Sales, Costs, and Gross Profit, broken into Internal and External categories across months. Patterns include steady monthly Sales, notable increases in C...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.82s
+
+============================================================
+Query ID: 2448 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 2449 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['p0004 p0003']
+Answer:  ['p0004']
+Prediction: P0004, P0003
+Reference: P0004
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.41s
+
+============================================================
+Query ID: 2450 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['p0001 p0002 p0004 p0003']
+Answer:  ['p0001 p0002 p0003 p0004']
+Prediction: P0001, P0002, P0004, P0003
+Reference: P0001, P0002, P0003, P0004
+Metrics: {'F1': 100.0, 'EM': 0.0, 'ROUGE-L': 75.0, 'SacreBLEU': 37.99}
+Processing Time: 1.99s
+
+============================================================
+Query ID: 2451 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data
+data = {
+'Week': [1, 2, 3, 4, 5, 6, 7],
+'RPH': [0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47]
+}
+df = pd.DataFrame(data)
+
+# Plot the line chart
+plt.figure(figsize=(10, 6))
+plt.plot(df['Week'], df['RPH'], marker='o', linestyle='-', color='blue')
+plt.title('Trend of RPH for Queue P0003 across all 7 weeks')
+plt.xlabel('Week')
+plt.ylabel('RPH')
+plt.grid(True)
+plt.xticks(df['Week'])
+plt.show()
+
+OUTPUT VALUE: [[0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data
+data = {
+    'Week': [1, 2, 3, 4, 5, 6, 7],
+    'RPH': [0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47]
+}
+df = pd.DataFrame(data)
+
+# Pl...
+Reference: [[0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47]]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 9.87s
+
+============================================================
+Query ID: 2452 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table tracks RPH (Requests Per Hour) and Quality metrics for four queues (P0001, P0002, P0003, P0004) over seven weeks. RPH shows consistent growth for all queues, with P0001 and P0002 increasing ...
+Reference: The table tracks weekly performance metrics for four queues (P0001, P0002, P0003, P0004) over 7 weeks, detailing RPH (Rate Per Hour) and Quality percentages. RPH generally increases across weeks for a...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 12.94s
+
+============================================================
+Query ID: 2453 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['history pstisl']
+Answer:  ['history pstisl']
+Prediction: History, Pst/Isl
+Reference: History, Pst/Isl
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 2454 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['6th 7th 8th']
+Answer:  ['6th 8th']
+Prediction: 6th, 7th, 8th
+Reference: 6th, 8th
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 0.0}
+Processing Time: 1.75s
+Checkpoint saved: 150 queries processed
+
+============================================================
+Query ID: 2455 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['physics eng computer electric wiring']
+Answer:  ['3']
+Prediction: Physics, Eng, Computer, Electric Wiring
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 2456 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['10th b 10th']
+Answer:  ['10thb']
+Prediction: 10th - B, 10th - A
+Reference: 10th-B
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.83s
+
+============================================================
+Query ID: 2457 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: High School - Time Table: Key subjects include Science, Biology, English, Chemistry, History, Urdu, Physics, Physical Education, Computer Science, and Electric Wiring. Each class has 8 periods per day...
+Processing mix modality:  20%|█▉        | 153/767 [08:19<43:03,  4.21s/it]Processing mix modality:  20%|██        | 154/767 [08:26<52:43,  5.16s/it]Processing mix modality:  20%|██        | 155/767 [08:28<40:48,  4.00s/it]Processing mix modality:  20%|██        | 156/767 [08:31<39:28,  3.88s/it]Processing mix modality:  20%|██        | 157/767 [08:35<39:19,  3.87s/it]Processing mix modality:  21%|██        | 158/767 [08:43<50:59,  5.02s/it]Processing mix modality:  21%|██        | 159/767 [08:44<39:18,  3.88s/it]Processing mix modality:  21%|██        | 160/767 [08:46<32:55,  3.25s/it]Processing mix modality:  21%|██        | 161/767 [08:48<28:05,  2.78s/it]Processing mix modality:  21%|██        | 162/767 [08:49<23:41,  2.35s/it]Processing mix modality:  21%|██▏       | 163/767 [08:57<42:11,  4.19s/it]Reference: The table presents the timetable for multiple classes (10th-A, 10th-B, 9th-A, 9th-B) detailing subjects taught in each period. Key subjects include Science, Mathematics, English, Urdu, Physics, and el...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.96s
+
+============================================================
+Query ID: 2458 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['step flashing aluminum sidewallendwall flashing mill finish counterflashing apron flashing rr chimney flashing small 24 x 24 rr chimney flashing average 32 x 36 rr chimney flashing large 32 x 60 detach reset skylight dome style fixed 4 9 sf detach reset skylight dome style fixed 91 155 sf rr skylight cladding preformed aluminum velux style']
+Answer:  ['step flashing aluminum sidewallendwall flashing mill finish counterflashing apron flashing rr chimney flashing small 24” x 24” rr chimney flashing average 32” x 36” rr chimney flashing large 32” x 60” detach reset skylight dome style fixed 4 9 sf detach reset skylight dome style fixed 91 155 sf rr skylight cladding preformed aluminum velux style']
+Prediction: Step flashing, Aluminum sidewall/endwall flashing - mill finish, Counterflashing - Apron flashing, R&R Chimney flashing - small (24" x 24"), R&R Chimney flashing - average (32" x 36"), R&R Chimney fla...
+Reference: Step flashing, Aluminum sidewall/endwall flashing - mill finish, Counterflashing - Apron flashing, R&R Chimney flashing - small (24” x 24”), R&R Chimney flashing - average (32” x 36”), R&R Chimney fla...
+Metrics: {'F1': 89.29, 'EM': 0.0, 'ROUGE-L': 100.0, 'SacreBLEU': 75.96}
+Processing Time: 7.38s
+
+============================================================
+Query ID: 2459 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['flashing']
+Answer:  ['flashing']
+Prediction: Flashing
+Reference: Flashing
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.30s
+
+============================================================
+Query ID: 2460 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['rr chimney flashing small 24 x 24 rr chimney flashing average 32 x 36 rr chimney flashing large 32 x 60']
+Answer:  ['9']
+Prediction: R&R Chimney flashing - small (24" x 24"), R&R Chimney flashing - average (32" x 36"), R&R Chimney flashing - large (32" x 60")
+Reference: 9
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.58s
+
+============================================================
+Query ID: 2461 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['rr chimney flashing large 32 x 60 rr chimney flashing average 32 x 36 rr chimney flashing small 24 x 24']
+Answer:  ['rr chimney flashing large 32” x 60” rr chimney flashing average 32” x 36” rr chimney flashing small 24” x 24”']
+Prediction: R\&R Chimney flashing - large (32" x 60"), R\&R Chimney flashing - average (32" x 36"), R\&R Chimney flashing - small (24" x 24")
+Reference: R&R Chimney flashing - large (32” x 60”), R&R Chimney flashing - average (32” x 36”), R&R Chimney flashing - small (24” x 24”)
+Metrics: {'F1': 71.43, 'EM': 0.0, 'ROUGE-L': 100.0, 'SacreBLEU': 36.06}
+Processing Time: 3.85s
+
+============================================================
+Query ID: 2462 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table categorizes roofing materials into three main groups: Flashing, Underlayment, and Edge/Valley Metal. Each item lists its unit of measurement (e.g., LF, SQ, SF, EA), unit cost, tax amount (5%...
+Reference: The table presents data on various construction materials and their associated costs and taxes. The key columns include “Category” (grouping items like Flashing, Underlayment, and Edge/Valley Metal), ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.72s
+
+============================================================
+Query ID: 2463 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['section category']
+Answer:  ['flashing underlayment edge']
+Prediction: Section, Category
+Reference: Flashing, Underlayment, Edge
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2464 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['ice water shield roofing felt 15 lb']
+Answer:  ['ice water shield roofing felt 15 lb']
+Prediction: Ice \& water shield, Roofing felt - 15 lb.
+Reference: Ice & water shield, Roofing felt - 15 lb
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.79s
+Checkpoint saved: 160 queries processed
+
+============================================================
+Query ID: 2465 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['step flashing 15 step flashing 23']
+Answer:  ['step flashing 15 rr chimney flashing small 24” x 24” 2']
+Prediction: Step flashing, 15; Step flashing, 23
+Reference: Step flashing 15, R&R Chimney flashing - small (24” x 24”) 2
+Metrics: {'F1': 47.06, 'EM': 0.0, 'ROUGE-L': 47.06, 'SacreBLEU': 14.11}
+Processing Time: 1.68s
+
+============================================================
+Query ID: 2466 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['945']
+Answer:  ['945']
+Prediction: 94.50
+Reference: 94.51
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2467 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Line Item': ['Valley metal', 'Gravel stop', 'Rake Edge'],
+'Total': [111.26, 25.24, 2.82]
+}
+df = pd.DataFrame(data)
+
+# Create a bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df['Line Item'], df['Total'], color='skyblue')
+plt.title('Total Cost of Each Line Item in the "Edge" Category')
+plt.xlabel('Line Item')
+plt.ylabel('Total Cost')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: [111.26, 25.24, 2.82]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data from the table
+data = {
+    'Line Item': ['Valley metal', 'Gravel stop', 'Rake Edge'],
+    'Total': [111.26, 25.24, 2.82]
+}
+df = ...
+Reference: [25.24, 2.82, 111.26]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 8.49s
+
+============================================================
+Query ID: 2468 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (13229 tokens) for image (2828, 2612)
+Processing mix modality:  21%|██▏       | 164/767 [09:00<36:57,  3.68s/it]Predictions:  ['2625']
+Answer:  ['2625']
+Prediction: 262.50
+Reference: 262.5
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.48s
+
+============================================================
+Query ID: 2469 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (13234 tokens) for image (2828, 2612)
+Processing mix modality:  22%|██▏       | 165/767 [09:02<33:15,  3.32s/it]Predictions:  ['150 250']
+Answer:  ['wild 2830 mongoose 850']
+Prediction: 150, 250
+Reference: Wild 2830, Mongoose 850
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.47s
+
+============================================================
+Query ID: 2470 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (13227 tokens) for image (2828, 2612)
+Processing mix modality:  22%|██▏       | 166/767 [09:04<29:34,  2.95s/it]Predictions:  ['7']
+Answer:  ['7']
+Prediction: 7
+Reference: 7
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.11s
+
+============================================================
+Query ID: 2471 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (13246 tokens) for image (2828, 2612)
+Processing mix modality:  22%|██▏       | 167/767 [09:07<28:58,  2.90s/it]Predictions:  ['3000 3000']
+Answer:  ['710']
+Prediction: 300.00, 300.00
+Reference: 710
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.77s
+
+============================================================
+Query ID: 2472 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (13244 tokens) for image (2828, 2612)
+Processing mix modality:  22%|██▏       | 168/767 [09:16<45:28,  4.56s/it]Processing mix modality:  22%|██▏       | 169/767 [09:17<35:03,  3.52s/it]Processing mix modality:  22%|██▏       | 170/767 [09:19<30:59,  3.12s/it]Processing mix modality:  22%|██▏       | 171/767 [09:20<25:58,  2.62s/it]Processing mix modality:  22%|██▏       | 172/767 [09:22<22:35,  2.28s/it]Processing mix modality:  23%|██▎       | 173/767 [09:28<32:52,  3.32s/it]Processing mix modality:  23%|██▎       | 174/767 [09:29<27:30,  2.78s/it]Processing mix modality:  23%|██▎       | 175/767 [09:30<22:43,  2.30s/it]Processing mix modality:  23%|██▎       | 176/767 [09:32<21:30,  2.18s/it]Processing mix modality:  23%|██▎       | 177/767 [09:34<19:30,  1.98s/it]Processing mix modality:  23%|██▎       | 178/767 [09:43<40:32,  4.13s/it]Processing mix modality:  23%|██▎       | 179/767 [09:44<31:09,  3.18s/it]Processing mix modality:  23%|██▎       | 180/767 [09:45<24:37,  2.52s/it]Processing mix modality:  24%|██▎       | 181/767 [09:46<21:06,  2.16s/it]Processing mix modality:  24%|██▎       | 182/767 [09:48<19:06,  1.96s/it]Processing mix modality:  24%|██▍       | 183/767 [10:00<50:34,  5.20s/it]Prediction: DRL Construction records for employee MBurger from Feb 1-7, 2015, detailing transactions with companies Wild and Mongoose, primarily involving Production % and Flow Back products, with consistent quan...
+Reference: The table details ticket information for two companies, “Wild” and “Mongoose,” with key columns such as Date, Ticket Number, Company, Product, and Quantity. “Wild” consistently shows higher quantities...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.43s
+
+============================================================
+Query ID: 2473 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 2474 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['accounting afrikaans 1st add language computer applic technology life orientation mathematics physical sciences']
+Answer:  ['chemistry mechanics materials science workshop practice accounting afrikaans 1st add language computer application technology life orientation mathematics physical sciences']
+Prediction: Accounting, Afrikaans 1st Add Language, Computer Applic Technology, Life Orientation, Mathematics, Physical Sciences
+Reference: Chemistry, Mechanics, Materials Science, Workshop Practice, Accounting, Afrikaans 1st Add Language, Computer Application Technology, Life Orientation, Mathematics, Physical Sciences
+Metrics: {'F1': 75.0, 'EM': 0.0, 'ROUGE-L': 75.0, 'SacreBLEU': 47.98}
+Processing Time: 2.17s
+Checkpoint saved: 170 queries processed
+
+============================================================
+Query ID: 2475 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['603 429']
+Answer:  ['629 472']
+Prediction: 603, 429
+Reference: 629, 472
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 2476 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['14 720']
+Answer:  ['10 629']
+Prediction: 14, 72.00
+Reference: 10, 62.9
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 2477 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Student performance data for two students (2346756 and 4737888) across school and university subjects, showing marks in subjects like Accounting, Mathematics, Chemistry, and Calculus; Student 4737888 ...
+Reference: The table provides data on students’ marks in various subjects, including both school and university subjects. The data reveals that students have a wide range of marks across subjects like Chemistry,...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 5.75s
+
+============================================================
+Query ID: 2478 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['dec 2012 june 2014']
+Answer:  ['dec 2011 dec 2013 june 2014']
+Prediction: DEC 2012, June 2014
+Reference: DEC 2011, DEC 2013, June 2014
+Metrics: {'F1': 60.0, 'EM': 0.0, 'ROUGE-L': 60.0, 'SacreBLEU': 21.44}
+Processing Time: 1.53s
+
+============================================================
+Query ID: 2479 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['dec 2011']
+Answer:  ['dec 2011']
+Prediction: DEC 2011
+Reference: DEC 2011
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 2480 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['dec 2012 dec 2013 june 2014']
+Answer:  ['2']
+Prediction: DEC 2012, DEC 2013, June 2014
+Reference: 2
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.90s
+
+============================================================
+Query ID: 2481 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['260 june 2014']
+Answer:  ['1']
+Prediction: 26.00, June 2014
+Reference: 1
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.52s
+
+============================================================
+Query ID: 2482 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents financial performance data for the Showroom: Metropolitan from December 2011 to June 2014, segmented into Q1, Q2, and Q3. Each quarter includes Budget, Actual, and Growth columns. K...
+Reference: The table provides financial data for Q1, Q2, and Q3 over four periods (DEC 2011, DEC 2012, DEC 2013, and June 2014), showing budget, actual values, and growth (numerical differences). In Q1, actuals ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.14s
+
+============================================================
+Query ID: 2483 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['register']
+Answer:  ['register']
+Prediction: Register
+Reference: Register
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+
+============================================================
+Query ID: 2484 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['mobile department']
+Answer:  ['mobile department']
+Prediction: Mobile Department
+Reference: Mobile Department
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.97s
+Checkpoint saved: 180 queries processed
+
+============================================================
+Query ID: 2485 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['mobile department register other department register']
+Answer:  ['mobile department register']
+Prediction: Mobile Department, Register, Other Department, Register
+Reference: Mobile Department Register
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 30.21}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2486 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['141 1065']
+Answer:  ['141']
+Prediction: 141, 1065
+Reference: 141
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 2487 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents device performance data across two departments: Mobile Department and Other Department. Key columns include Source, Device (Workstation or Register), Activation Count, Restart Count...
+Reference: The table provides performance data for devices in the Mobile and Other Departments. It includes key columns like "Activation Count," "Restart Count," "Crash Count," "% Crash," and "% Restart." Notabl...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 12.75s
+
+============================================================
+Query ID: 2488 | Type: Fact Checking | SubType: Inference-based Fact Checking
+Processing mix modality:  24%|██▍       | 184/767 [10:02<39:18,  4.05s/it]Processing mix modality:  24%|██▍       | 185/767 [10:04<32:49,  3.38s/it]Processing mix modality:  24%|██▍       | 186/767 [10:05<26:38,  2.75s/it]Processing mix modality:  24%|██▍       | 187/767 [10:09<31:07,  3.22s/it]Processing mix modality:  25%|██▍       | 188/767 [10:12<28:43,  2.98s/it]============================================================
+Predictions:  ['feb14']
+Answer:  ['february april may july august october november']
+Prediction: Feb-14
+Reference: February, April, May, July, August, October, November
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.36s
+
+============================================================
+Query ID: 2489 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['royalties interest income salary transport repairs maintenance']
+Answer:  ['royalties 0 interest income 0 salary 185 transport 390 repairs maintenance 120']
+Prediction: Royalties, Interest Income, Salary, Transport, Repairs & Maintenance
+Reference: Royalties 0, Interest Income 0, Salary 185, Transport 390, Repairs & Maintenance 120
+Metrics: {'F1': 73.68, 'EM': 0.0, 'ROUGE-L': 73.68, 'SacreBLEU': 10.46}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 2490 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['internal external']
+Answer:  ['internal external total']
+Prediction: Internal, External
+Reference: Internal, External, TOTAL
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 2491 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['feb14 apr14 may14 jul14 aug14 oct14 nov14 dec14 jan14 mar14 jun14 sep14']
+Answer:  ['february april may july august october november march june september december january']
+Prediction: Feb-14, Apr-14, May-14, Jul-14, Aug-14, Oct-14, Nov-14, Dec-14, Jan-14, Mar-14, Jun-14, Sep-14
+Reference: February, April, May, July, August, October, November, March, June, September, December, January
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.31s
+
+============================================================
+Query ID: 2492 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Sales and Costs Analysis for 2014, with Gross Profit and Net Profit before Tax, showing consistent monthly patterns and overall profitability.
+Reference: The table details financial metrics including Sales, Costs, Gross Profit, Other Expenses, and Income over 2014. Sales reveal consistent internal-external monthly patterns, with internal sales higher. ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.41s
+
+============================================================
+Query ID: 2493 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (11206 tokens) for image (792, 4800)
+Processing mix modality:  25%|██▍       | 189/767 [10:13<25:34,  2.65s/it]Predictions:  ['spain']
+Answer:  ['spain']
+Prediction: Spain
+Reference: Spain
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.90s
+
+============================================================
+Query ID: 2494 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (11212 tokens) for image (792, 4800)
+Processing mix modality:  25%|██▍       | 190/767 [10:15<23:07,  2.40s/it]Predictions:  ['1']
+Answer:  ['1']
+Prediction: 1
+Reference: 1
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.82s
+Checkpoint saved: 190 queries processed
+
+============================================================
+Query ID: 2495 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (11204 tokens) for image (792, 4800)
+Processing mix modality:  25%|██▍       | 191/767 [10:18<22:41,  2.36s/it]Predictions:  ['finance hr it legal sales travel']
+Answer:  ['finance hr it legal sales travel']
+Prediction: Finance, HR, IT, Legal, Sales, Travel
+Reference: Finance, HR, IT, Legal, Sales, Travel
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.27s
+
+============================================================
+Query ID: 2496 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (11209 tokens) for image (792, 4800)
+Processing mix modality:  25%|██▌       | 192/767 [10:19<21:13,  2.22s/it]Predictions:  ['20']
+Answer:  ['16']
+Prediction: 20
+Reference: 16
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.87s
+
+============================================================
+Query ID: 2497 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (11321 tokens) for image (792, 4800)
+Processing mix modality:  25%|██▌       | 193/767 [10:32<51:12,  5.35s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the Excel file
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/labor-table49.xlsx")
+
+# Extract country names and their total employees
+countries = df[df['Country'].isin(['Australia Total', 'Brazil Total', 'Cannada Total', 'China Total', 'Germany Total', 'India Total', 'Russia Total', 'Spain Total', 'UK Total', 'USA Total'])]['Country']
+totals = df[df['Country'].isin(['Australia Total', 'Brazil Total', 'Cannada Total', 'China Total', 'Germany Total', 'India Total', 'Russia Total', 'Spain Total', 'UK Total', 'USA Total'])]['Total']
+
+# Create a line chart
+plt.figure(figsize=(10, 6))
+plt.plot(countries, totals, marker='o', linestyle='-', color='blue')
+plt.title('Total Number of Employees by Country')
+plt.xlabel('Country')
+plt.ylabel('Total Employees')
+plt.xticks(rotation=45)
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+Python Error: 'Country'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the Excel file
+df = pd.read_excel("table.xlsx")
+
+# Extract country names and their total employees
+countries = df[df['Count...
+Reference: [[20, 17, 15, 7, 19, 7, 12, 22, 20, 11]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 12.67s
+
+============================================================
+Query ID: 2498 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9549 tokens) for image (6068, 948)
+Processing mix modality:  25%|██▌       | 194/767 [10:34<40:25,  4.23s/it]Predictions:  ['improvement']
+Answer:  ['decline']
+Prediction: Improvement
+Reference: Decline
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.62s
+
+============================================================
+Query ID: 2499 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (9540 tokens) for image (6068, 948)
+Processing mix modality:  25%|██▌       | 195/767 [10:35<33:22,  3.50s/it]Predictions:  ['fitch sp']
+Answer:  ['sp']
+Prediction: Fitch, S&P
+Reference: S&P
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.80s
+
+============================================================
+Query ID: 2500 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (9529 tokens) for image (6068, 948)
+Processing mix modality:  26%|██▌       | 196/767 [10:37<28:57,  3.04s/it]Predictions:  ['3 2 1']
+Answer:  ['1']
+Prediction: 3, 2, 1
+Reference: 1
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.97s
+
+============================================================
+Query ID: 2501 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (9530 tokens) for image (6068, 948)
+Processing mix modality:  26%|██▌       | 197/767 [10:41<30:00,  3.16s/it]Predictions:  ['company 1 company 2 company 3 company 4 company 5 company 7 company 8 company 9 company 10']
+Answer:  ['5']
+Prediction: Company 1, Company 2, Company 3, Company 4, Company 5, Company 7, Company 8, Company 9, Company 10
+Reference: 5
+Metrics: {'F1': 10.53, 'EM': 0.0, 'ROUGE-L': 10.53, 'SacreBLEU': 2.15}
+Processing Time: 3.43s
+
+============================================================
+Query ID: 2502 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (9542 tokens) for image (6068, 948)
+Processing mix modality:  26%|██▌       | 198/767 [10:54<58:18,  6.15s/it]Prediction: Company 1: Fitch (March, Normal), S&P (July, Bad), Moody's (May, Good); Company 2: Fitch (August, Good), S&P (No audit), Moody's (No audit); Company 3: Fitch (February, Normal), S&P (July, Normal), Mo...
+Reference: The table summarizes the ratings and audit details for 2012 across Fitch, S&P, and Moody's. It includes audit types (FULL or SPOT), months (e.g., JANUARY, JULY), and ratings (GOOD, NORMAL, BAD) for 10...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 13.12s
+
+============================================================
+Query ID: 2503 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (11177 tokens) for image (2160, 3132)
+Processing mix modality:  26%|██▌       | 199/767 [10:57<50:20,  5.32s/it]Predictions:  ['microsoft access microsoft outlook microsoft excel microsoft word microsoft powerpoint argos sql programming any language graphic design application development typing']
+Answer:  ['microsoft access microsoft outlook microsoft excel microsoft word microsoft powerpoint argos sql programming any language graphic design application development typing']
+Prediction: Microsoft Access, Microsoft Outlook, Microsoft Excel, Microsoft Word, Microsoft PowerPoint, ARGOS, SQL, Programming (any language), Graphic design, Application development, Typing
+Reference: Microsoft Access, Microsoft Outlook, Microsoft Excel, Microsoft Word, Microsoft PowerPoint, ARGOS, SQL, Programming (any language), Graphic design, Application development, Typing
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 3.38s
+
+============================================================
+Query ID: 2504 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (11178 tokens) for image (2160, 3132)

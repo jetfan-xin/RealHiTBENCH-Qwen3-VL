@@ -1,0 +1,3635 @@
+{
+  "results": [
+    {
+      "id": 769,
+      "FileName": "economy-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many times did the actual sales exceed the budgeted sales by more than 4 units in the UK?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.25
+    },
+    {
+      "id": 770,
+      "FileName": "economy-table42",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a descriptive summary of the table, including the main columns and key insights such as total sales per country and the differences between actual and budgeted sales?",
+      "Reference": "The table provides sales data for various countries, detailing actual and budgeted sales for different items. It includes columns for the country, item, budgeted sales, actual sales, and the variance between actual and budgeted sales. Notable insights include the USA and UK showing significant differences between actual and budgeted sales for some items, with the USA generally having a mix of both positive and negative variances, while the UK shows a more consistent pattern of actual sales exceeding budgeted sales. The largest variance appears to be in items with over-performance in actual sales, especially in the UK.",
+      "Prediction": "Sales Report detailing budget vs actual sales for Pen, Pencil, and Ruler items across various countries, including variance and absolute variance; key insights show France had the largest negative variance (-65) for Pens and Ukraine had the largest negative variance (-24) for Pencils, while Spain had the highest positive variance (38) for Rulers.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 4.23
+    },
+    {
+      "id": 771,
+      "FileName": "economy-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How many more short sleeves are needed than long sleeves for the \"IMD\" branch?",
+      "Reference": "False",
+      "Prediction": "0, 1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 772,
+      "FileName": "economy-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of items (both long sleeves and short sleeves) needed across all branches?",
+      "Reference": "43",
+      "Prediction": "25, 18",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 773,
+      "FileName": "economy-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the difference between the total number of long sleeves owned and the number of long sleeves needed for the \"PSC\" branch?",
+      "Reference": "2",
+      "Prediction": "17, 10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 774,
+      "FileName": "economy-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many branches need exactly 2 long sleeves?",
+      "Reference": "2",
+      "Prediction": "DOM, PSC",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 775,
+      "FileName": "economy-table43",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of short sleeves needed across all branches?",
+      "Reference": "18",
+      "Prediction": "18",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 776,
+      "FileName": "sport-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How many times did the predicted winner match the actual winner for the teams in the first 3 rows?",
+      "Reference": "2",
+      "Prediction": "1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.95
+    },
+    {
+      "id": 777,
+      "FileName": "sport-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many matches resulted in a tie according to the actual results column?",
+      "Reference": "5",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 778,
+      "FileName": "sport-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the total number of goals scored by Brazil in the matches listed.",
+      "Reference": "5",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.91
+    },
+    {
+      "id": 779,
+      "FileName": "sport-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": " Identify the team with the highest goals scored in a single match and specify the number of goals.",
+      "Reference": "4",
+      "Prediction": "Venezuela, 4",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 780,
+      "FileName": "sport-table06",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the match results, what trend can be observed in the performance of Mexico across the games?",
+      "Reference": "Increasing trend",
+      "Prediction": "Increasing trend",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 781,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What was the total planned production for U19.3 and U36 on 2017-01-30?",
+      "Reference": "21.25",
+      "Prediction": "21.25",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 782,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Based on actual production data, determine whether the actual production total on 2017-02-01 exceeded the planned total for that day.",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 783,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference between planned and actual production totals for U42 on 2017-02-05.",
+      "Reference": "0.42",
+      "Prediction": "-0.58",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.55
+    },
+    {
+      "id": 784,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "On which date was the actual production total for U42 the highest, and what was its value?",
+      "Reference": "2017-02-06, 25.62",
+      "Prediction": "2017/2/6, 25.62",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.08
+    },
+    {
+      "id": 785,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a brief summary of the table, highlighting its key columns and any notable trends in the planned and actual production totals.",
+      "Reference": "The table provides data on planned and actual production metrics across different units (U19.30, U36, U42) and their totals over various dates. Key observations include generally lower actual totals compared to planned totals and minor fluctuations in actual values across the recorded period, with U42 showing the highest actual production variability.",
+      "Prediction": "The table details daily planned and actual production (in MBPD) for three units (U19.3, U36, U42) from January 30, 2017, to March 30, 2017. Planned totals remained constant at 46.25 MBPD until February 23, then dropped to 21.83 MBPD, then 12.83 MBPD, and finally rose to 31.83 MBPD, 36.33 MBPD, and 36.52 MBPD. Actual production totals varied, starting at 43.63 MBPD, peaking at 46.15 MBPD on February 6, then missing data until March 18, after which actual production data is not available. The planned production shows a clear reduction in later dates, while actual production data is only available for the first part of the period.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 11.23
+    },
+    {
+      "id": 786,
+      "FileName": "labor-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of calls marked as “Abandon” in the N91 campaign?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 787,
+      "FileName": "labor-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Is the number of calls marked as “Hangup” greater than the calls marked as “Abandon” for the N91 campaign?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 788,
+      "FileName": "labor-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Verify if the total number of calls for all dispositions under the N91 campaign exceeds 200.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 789,
+      "FileName": "labor-table11",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many dispositions have a call count exceeding 50 in the N91 campaign?",
+      "Reference": "No Answer, Answering Machine, Call Completed, Busy, Dial Error, Callback, Operator Intercept, Do not call, Abandon, Hangup, Regret",
+      "Prediction": "No Answer",
+      "Metrics": {
+        "F1": 20.0,
+        "EM": 0.0,
+        "ROUGE-L": 20.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 790,
+      "FileName": "labor-table11",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of calls recorded for the ‘Answering Machine' disposition in the table?",
+      "Reference": "265",
+      "Prediction": "136, 129",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 791,
+      "FileName": "labor-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Is the sum of ‘Yes' and ‘No' responses for the question “Does your organisation have a Knowledge and Information Management (KIM) strategy?” equal to 40?",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.95
+    },
+    {
+      "id": 792,
+      "FileName": "labor-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the ratio of ‘Yes' to ‘No' responses for the question “If there is a strategy, is it integrated within other business functions?”",
+      "Reference": "39:1",
+      "Prediction": "39, 1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 793,
+      "FileName": "labor-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify if the combined ‘Yes' responses for all questions exceed 200 in total.",
+      "Reference": "Yes",
+      "Prediction": "386",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 794,
+      "FileName": "labor-table10",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the survey questions based on the number of ‘Yes' responses, listing the top three questions with the highest counts.",
+      "Reference": "1. Strategic Management: “Does your organisation have a Knowledge and Information Management (KIM) strategy?”\n 2. Business Objectives: “Are there performance measures for KIM?”\n 3. Business Objectives: “If so, has business critical information been included in a business continuity plan?”",
+      "Prediction": "Does your organisation have a Knowledge and Information Management (KIM) strategy?, Are there performance measures for KIM?, If so, has business critical information been included in a business continuity plan?",
+      "Metrics": {
+        "F1": 67.69,
+        "EM": 0.0,
+        "ROUGE-L": 86.15,
+        "SacreBLEU": 47.03
+      },
+      "ProcessingTime": 2.89
+    },
+    {
+      "id": 795,
+      "FileName": "labor-table10",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the key categories represented in the table, including their respective response distributions and any notable patterns?",
+      "Reference": "The table categorizes survey questions related to organizational strategies, with ‘Yes' and ‘No' responses defining the outcomes. Key categories include “Knowledge and Information Management (KIM)” and “Business Objectives,” among others. Response distributions show consistently high ‘Yes' counts, often exceeding ‘No' by large margins, indicating overall positive alignment with the survey goals. Notable patterns include near-complete agreement on questions like strategy integration and performance measurement for KIM.",
+      "Prediction": "Strategic Management, Business Objectives, Management support and controls",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 796,
+      "FileName": "economy-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the “Ordered Product Sales” for SKU “bis-fba-64” between Period 1 and Period 2. Are they the same?",
+      "Reference": "Yes",
+      "Prediction": "$8.00, $63.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 797,
+      "FileName": "economy-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the SKU with the highest “Ordered Product Sales” in Period 2 and provide its sales value.",
+      "Reference": "7",
+      "Prediction": "bis-pureo-perfsmduo-fba, $300.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.94
+    },
+    {
+      "id": 798,
+      "FileName": "economy-table44",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total number of units ordered in Period 1 for all listed SKUs?",
+      "Reference": "1002",
+      "Prediction": "129, 123, 107, 88, 64, 71, 51, 43, 38, 37, 37, 31, 29, 19, 15, 13, 13, 13, 12, 11, 10, 10, 10, 9, 9, 9, 10, 10, 10, 9, 9",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 6.94
+    },
+    {
+      "id": 799,
+      "FileName": "economy-table44",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trend in “Units Ordered” from Period 1 to Period 2, what is the predicted total for Period 3 if a 10% increase is observed?",
+      "Reference": "947.10",
+      "Prediction": "1064.00, Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 800,
+      "FileName": "economy-table44",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the key patterns in the “Ordered Product Sales” across Period 1 and Period 2, highlighting any notable changes or trends?",
+      "Reference": "The table highlights “Ordered Product Sales” for various SKUs across Period 1 and Period 2. Notable patterns include a general consistency in sales across periods, with some SKUs showing significant differences, such as SKU “bis-fba-64,” which maintained consistent sales of $3.00 in both periods, while others like “FBA-41868” showed no variation. Overall, sales trends remain stable with no drastic fluctuations observed.",
+      "Prediction": "Period 1 and Period 2 show consistent SKU-level sales data with calculated totals in columns B+F or F and C+G or G. Notable trends include recurring SKUs across periods with varying sales volumes and prices, such as NJ-7HP9-MTHK and bis-fba-64 appearing in both periods with adjusted totals. Sales figures often increase in Period 2, indicating higher demand or inventory adjustments. Some SKUs like FBA-47672 and bis-pmteatree-spec33-fba2 show significant increases in ordered units and sales in Period 2.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.09
+    },
+    {
+      "id": 801,
+      "FileName": "labor-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the “Customer Name” with the longest “DurationMinutes” on 2016-06-20. Provide the final answer.",
+      "Reference": "WAL-MART 3141 SUPERCENTER",
+      "Prediction": "WAL-MART 3141 SUPERCENTER",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.46
+    },
+    {
+      "id": 802,
+      "FileName": "labor-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify if “WAL-MART 3141 SUPERCENTER” and “FORTINOS 77” were visited on the same day. Provide the final answer.Answer Yes or No.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.18
+    },
+    {
+      "id": 803,
+      "FileName": "labor-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total “DurationMinutes” for all visits under the territory “C051_42537”? Provide the final answer.",
+      "Reference": "273",
+      "Prediction": "166",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.31
+    },
+    {
+      "id": 804,
+      "FileName": "labor-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the “Customer Name” entries based on their “DurationMinutes” on 2016-06-15, from highest to lowest. Provide the top three names.",
+      "Reference": "WAL-MART 1107 SUPERCENTRE, FORTINOS 58, FORTINOS 81",
+      "Prediction": "FORTINOS 58, FOOD BASICS 976, SOBEYS 6730",
+      "Metrics": {
+        "F1": 28.57,
+        "EM": 0.0,
+        "ROUGE-L": 28.57,
+        "SacreBLEU": 13.13
+      },
+      "ProcessingTime": 3.32
+    },
+    {
+      "id": 805,
+      "FileName": "labor-table12",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns, their purpose, and any notable patterns or trends?",
+      "Reference": "The table details customer visit data, including columns such as “ID” (unique identifier for visits), “Customer Name” (name of the business visited), “Created Date” (date of the visit), and “DurationMinutes” (time spent on each visit). Notable trends include “Jill Fuller” consistently visiting multiple customers in the “CHOCONT” region on specific dates, with the “DurationMinutes” varying significantly across visits, highlighting differences in engagement levels. Total values are also provided for aggregated durations under specific territories.",
+      "Prediction": "The table records customer visit data for a sales representative, Jill Fuller, across multiple dates in 2016. Main columns include ID, Customer ID, Region, Area, Area Manager, Territory, Rep Name, Customer Name, Created Date, Start Date, Start Time, DurationMinutes, End Date, and End Time. Notable patterns show consistent activity in the CHOCONT region, with frequent visits to stores like WAL-MART, FORTINOS, and SOBEYS. Duration of visits varies, with some lasting over 2 hours. The data is grouped by ID (e.g., C051_42541, C051_42537), each summarizing multiple customer visits with a total duration. The most active period appears to be mid-2016, with high visit counts and durations.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.8
+    },
+    {
+      "id": 806,
+      "FileName": "economy-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does “ABB Industries FZ Discrete” have the same “Country Code” as “ABB Industries FZ Low Voltage”?",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 807,
+      "FileName": "economy-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the “Reporting unit ABACUS BU” values for “CHABB” and “AEFLC”. Which has a higher average?",
+      "Reference": "AEFLC",
+      "Prediction": "CHABB, AEFLC",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.75
+    },
+    {
+      "id": 808,
+      "FileName": "economy-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Are there any “IGAccount” values associated with more than one unique “Country Code”?",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 809,
+      "FileName": "economy-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the “Cus/ven name” entries by their “Reporting unit ABACUS BU” values, from highest to lowest. Provide the top one name.",
+      "Reference": "ABB Industries FZ Discrete",
+      "Prediction": "ABB Schweiz AG",
+      "Metrics": {
+        "F1": 28.57,
+        "EM": 0.0,
+        "ROUGE-L": 28.57,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.7
+    },
+    {
+      "id": 810,
+      "FileName": "economy-table45",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, detailing its main columns, their purpose, and any notable trends or patterns observed?",
+      "Reference": "The table contains detailed financial and operational data, with columns such as “IGAccount” (internal account identifier), “Profit Center” (organizational unit tracking profit), “Cus/ven name” (customer or vendor name), and “Country Code” (geographic identifier). Additional columns, like “Reporting unit ABACUS BU” and “PG Code As per New ICV,” provide financial or reporting metrics. Notable trends include recurring entries for certain “Cus/ven names” across different “Profit Centers,” and a consistent correlation between “Reporting unit ABACUS BU” and “Country Code,” reflecting geographic and operational alignments.",
+      "Prediction": "IGAccount, Profit Center, Glaccount, Cus/ven num, Cus/ven name, Country Code, Reporting unit ABACUS BA, Reporting unit ABACUS BU, IgCode, Counterparty ABACUS BA Code, Usgpnode, Doc.Number, Item, Reference No., Doc. Date, Invoice Due Date, Posting Date, Doc.Type, Currency Type, Amt in local curr, Revenue Amt Cumulative In DC, Ex. Rate, Translated Amt, SO/PO Date, SO/PO Number, Item, Order No., Sales Person, CIT No., Cust PO or Ven Ref no., ABACUS CIT Code as per ICV, ABACUS BU Code as per ICV, ABACUS PG Code as per ICV, ABACUS Code As per New ICV, CIT Code As per New ICV, BU Code As per New ICV, PG Code As per New ICV",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 11.01
+    },
+    {
+      "id": 811,
+      "FileName": "labor-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the member with the highest total attendance for operations (Ops) during the month.",
+      "Reference": "Kurtz",
+      "Prediction": "Ryan",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.08
+    },
+    {
+      "id": 812,
+      "FileName": "labor-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify if “A. Gray” attended on Tu1, W1, and Th1 in the first week of the month.",
+      "Reference": "No",
+      "Prediction": "No, No, No",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.26
+    },
+    {
+      "id": 813,
+      "FileName": "labor-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many members have zero attendance for operations (Ops) during the month?",
+      "Reference": "18",
+      "Prediction": "A. Gray, Canuck, Choboe, Crane, Diehard, Dom, Drakkhan, Inquisitor, J. Araj, J. Sparks, Joe, Johnson, Kurewe, Kurtz, Lekner, Lincoln, Lou, M. Baker, M. Tolbert, Metal, Miyoka, N. Brenner, Nara, Nicholsen, NoNeck, Phillips, Price, RagtagGuy, Riker, Spud, Svendor, Tally, Toxic, Waverly, Welsh",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 7.57
+    },
+    {
+      "id": 814,
+      "FileName": "labor-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total attendance for operations (Ops) in the first week and the last week of the month. Which week has the higher total?",
+      "Reference": "First Week",
+      "Prediction": "First Week, Last Week",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 2.26
+    },
+    {
+      "id": 815,
+      "FileName": "labor-table13",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, detailing its main columns, their purpose, and any notable trends or anomalies observed in the attendance data?",
+      "Reference": "The table records monthly attendance data for members, with columns detailing daily attendance (e.g., “Tu1,” “W1”), weekly summaries, and totals for operations (Ops) and training (Training). Notable trends include consistent attendance patterns for some members and significant variability in training participation across individuals. Anomalies include multiple members with zero attendance in either Ops or Training, which could indicate data entry gaps or non-participation.",
+      "Prediction": "Monthly Attendance for March 2016, tracking operations (O) and training (T) for each member across daily slots (Tu1 to Th5), with totals for operations and training per member; notable trends include high attendance for members like Kurewe (20 ops, 2 trainings), Ryan (19 ops, 2 trainings), and Seer (16 ops, 1 training), while members like A. Gray and B. Konopka show minimal or no attendance.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.17
+    },
+    {
+      "id": 816,
+      "FileName": "manufacture-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total num of Polo Shirts and Fleece for size ‘M' items on February 25, 2016?",
+      "Reference": "1",
+      "Prediction": "3, 3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.95
+    },
+    {
+      "id": 817,
+      "FileName": "manufacture-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which category has the highest total inventory of size ‘XL' items on February 25, 2016?",
+      "Reference": "Polo Shirts",
+      "Prediction": "Fleece",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.83
+    },
+    {
+      "id": 818,
+      "FileName": "manufacture-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank all the categories by their total inventory across all sizes on February 5, 2016.",
+      "Reference": "Polo Shirts, Fleece, Safety Shoes, Safety Boots",
+      "Prediction": "Fleece, Safety Boots, Polo Shirts, Safety Shoes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 57.14,
+        "SacreBLEU": 25.41
+      },
+      "ProcessingTime": 2.33
+    },
+    {
+      "id": 819,
+      "FileName": "manufacture-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many sizes of Polo Shirts had zero inventory on February 25, 2016?",
+      "Reference": "Yes",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 820,
+      "FileName": "manufacture-table09",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the table content by describing the main categories (e.g., Polo Shirts, Fleece, Safety Boots, Safety Shoes) and highlighting any notable trends in their total inventory values.",
+      "Reference": "The table presents inventory data for categories like Polo Shirts, Fleece, Safety Boots, and Safety Shoes, with total inventory values provided for each. Notable trends include Polo Shirts consistently having the highest totals across dates, while Safety Boots and Safety Shoes exhibit significantly lower total values, indicating differing inventory strategies for these categories.",
+      "Prediction": "Polo Shirts, Fleece, Safety Boots, Safety Shoes",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 2.2
+    },
+    {
+      "id": 821,
+      "FileName": "economy-table47",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the average “PRICE” for all rows associated with the street “COLWYN”.",
+      "Reference": "2.86",
+      "Prediction": "£3.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.98
+    },
+    {
+      "id": 822,
+      "FileName": "economy-table47",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the total “OWE” values for streets “COLWYN” and “STAPLEHURST” Which street has a higher total?",
+      "Reference": "COLWYN",
+      "Prediction": "COLWYN, STAPLEHURST",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.24
+    },
+    {
+      "id": 823,
+      "FileName": "economy-table47",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many rows in the table have a “PRICE” value greater than £2.50 for the street “AYLESBURY”?",
+      "Reference": "3",
+      "Prediction": "1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.84
+    },
+    {
+      "id": 824,
+      "FileName": "economy-table47",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank all streets by their total “OWE” values and provide the top two streets.",
+      "Reference": "BEXHILL, COLWYN",
+      "Prediction": "CAMBOURNE, BEXHILL",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.17
+    },
+    {
+      "id": 825,
+      "FileName": "economy-table47",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including its main columns and notable trends, such as variations in “OWE” values among streets.",
+      "Reference": "The table includes key columns like STREET (listing street names), OWE (amount owed), PRICE (per-unit price), and TOTAL PAID (amount paid). Streets such as BEXHILL and COLWYN exhibit higher OWE values compared to others. The table highlights variability in owed amounts among streets and demonstrates some rows with no values in OWE, indicating a potential difference in transactional activity.",
+      "Prediction": "The table lists transactions across various streets, including COLWYN, AYLESBURY, CAMBOURNE, ATHERTON ROAD, THOMAS ST, HANCOCK, SARAH ST, CAR COMMON, HEATH GDNS, PEMBROKE, BEXHILL, POLEGATE, STAPLEHURST, MAIDSTONE, and HARBROOK. Main columns include STREET, No, DONE, OWE, PRICE, TOTAL, PAID, IN THE BAG, and NOTES. Notable trends include frequent \"OWE\" values of 0, with exceptions like 1 in CAMBOURNE (No 11) and BEXHILL (No 67). Some streets show recurring \"4 FOR £10\" deals, and MAIDSTONE has a PayPal note for JUNE WILKINSON. The \"PAID\" column often shows \"y\" or \"N\" indicating payment status, and \"IN THE BAG\" reflects amounts in transit or already paid.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 12.1
+    },
+    {
+      "id": 826,
+      "FileName": "economy-table49",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which stock code has the highest average cost, and what is its value?",
+      "Reference": "146, 16.74",
+      "Prediction": "146, 1004.4",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.42
+    },
+    {
+      "id": 827,
+      "FileName": "economy-table49",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the cumulative value of all items whose total mass exceeds 30,000.",
+      "Reference": "47784.96",
+      "Prediction": "51313.2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 828,
+      "FileName": "economy-table49",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the stock codes based on their value in descending order. What is the stock code with the second-highest value?",
+      "Reference": "144",
+      "Prediction": "142, 144",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 829,
+      "FileName": "economy-table49",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many rows in the table have a total mass greater than 10,000?",
+      "Reference": "3",
+      "Prediction": "142, 144",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 830,
+      "FileName": "economy-table49",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the content of the table, including the main columns and any notable insights about the distribution of “Total mass”?",
+      "Reference": "The table provides detailed information on stock codes, descriptions, classifications, warehouse bins, inventory levels, average costs, and values. The “Total mass” column reflects the mass of items per stock code and bin, with notable variations across categories. Significant insights include a wide range of “Total mass” values, with higher values observed in bins with larger “On hand” quantities, suggesting a direct relationship between stock levels and total mass.",
+      "Prediction": "The table summarizes inventory data for products categorized by stock codes (142, 144, 145, 146, 147), detailing their descriptions, supplier classes, unit of measure, warehouse bins, on-hand quantities, average cost, value, and total mass. Notable insights about “Total mass” distribution: Stock code 142 has the highest total mass at 72,728.75, followed by 144 at 17,554.5, 145 at 1,844.5, 146 at 930, and 147 at 1,023. The Grand Total for “Total mass” is 94,080.75.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.12
+    },
+    {
+      "id": 831,
+      "FileName": "economy-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the invoice with the largest negative “Amount” and report the corresponding “InvoiceNumber” and “SellerRu.”",
+      "Reference": "1400156613, CHABB",
+      "Prediction": "1405000888, DMDR",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.78
+    },
+    {
+      "id": 832,
+      "FileName": "economy-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Verify whether any invoices in the table have a missing or null “DueDate.” If so, provide the count of such invoices.",
+      "Reference": "12",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 833,
+      "FileName": "economy-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique “SellerRu” entities are present in the table?",
+      "Reference": "3",
+      "Prediction": "CZABB, CHABB, AEFLC",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 834,
+      "FileName": "economy-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total amounts invoiced by “CHABB” and “CZABB.” Which seller has the higher total, and by how much?",
+      "Reference": "CZABB, 503881.70",
+      "Prediction": "CZABB, 2332.45",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.52
+    },
+    {
+      "id": 835,
+      "FileName": "economy-table32",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the main components of the table, describing the key columns and any observed trends in total invoice amounts across different “SellerRu” entities?",
+      "Reference": "The table details invoices with columns for “SellerRu” (indicating the seller), “InvoiceNumber”, “Amount” (representing the transaction value), and “DueDate” (the deadline for payment). Significant trends include CZABB having higher total invoiced amounts compared to other sellers, while CHABB shows large negative transactions, suggesting potential adjustments or reversals. Notable anomalies include extreme negative values for CHABB and high positive invoices for CZABB.",
+      "Prediction": "SellerRu, SellerBu, SellerCitCode, SellerPg, CpRu, CpBu, CpCitCode, CpPg, IgAccount, InvoiceNumber, InvoiceDate, PoReferenceNumber, Currency, Amount, Comment, DueDate, ProjectName, Poc, ProjectContractValue, AmountLocalCurrency, LoadDate, ReportingPeriod, Item; Total invoice amounts vary significantly across SellerRu entities, with AEFLC showing the highest total positive amount (75170.92) and the largest negative amount (-348484.37), while CZABB and CHABB have smaller, mixed positive and negative totals.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.27
+    },
+    {
+      "id": 836,
+      "FileName": "labor-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "On how many days did the employee work overtime, and what is the sum of all “Overtime Hours”?",
+      "Reference": "5, 16",
+      "Prediction": "5, 16",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 837,
+      "FileName": "labor-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the day(s) where the employee worked both “Overtime Hours” and “Double Overtime Hours”.",
+      "Reference": "Monday",
+      "Prediction": "Monday",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.84
+    },
+    {
+      "id": 838,
+      "FileName": "labor-table15",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "On how many days did the employee work more than 8 hours in “Total Hours Worked”?",
+      "Reference": "4",
+      "Prediction": "3, 4, 5",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 839,
+      "FileName": "labor-table15",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the “Overtime Hours” of Monday in Week 1 and Monday in Week 2. Which one is greater?",
+      "Reference": "Week 1",
+      "Prediction": "4, 0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 840,
+      "FileName": "labor-table15",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including its main columns and any notable trends in “Overtime Hours” and “Total Hours Worked”?",
+      "Reference": "The table summarizes daily work metrics, including “Total Hours Worked,” “Overtime Hours,” and “Double Overtime Hours.” Key trends include consistent regular hours with sporadic spikes in “Overtime Hours,” primarily on weekdays, and “Total Hours Worked” reaching above 8 primarily due to overtime on select days. Summative rows provide weekly totals, highlighting notable workload differences between the weeks.",
+      "Prediction": "The table records weekly work hours from January 31 to February 6, 2016, and February 7 to February 13, 2016, detailing Time In, Lunch Start/End, Time Out, Total Hours Worked, Total Regular Hours, Overtime Hours, and Double Overtime Hours. Notable trends include a higher total weekly hours (59) in the first week compared to the second week (47), with significantly more overtime hours (13) in the first week versus (3) in the second, indicating a more intensive work period in the first week.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.96
+    },
+    {
+      "id": 841,
+      "FileName": "labor-table16",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What period of time is the reservation data recorded in this table?",
+      "Reference": "2016/10/03, 2016/10/09",
+      "Prediction": "2016/10/03-2016/10/09",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.16
+    },
+    {
+      "id": 842,
+      "FileName": "labor-table16",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "On which day was the maximum number of bookings made for time slot “10.00am”?",
+      "Reference": "Tuesday",
+      "Prediction": "Wednesday",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 843,
+      "FileName": "labor-table16",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which time slot had the least number of bookings recorded on “Thursday”?",
+      "Reference": "8.00pm",
+      "Prediction": "10.00am",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 844,
+      "FileName": "labor-table16",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total bookings for the 12.15pm time slot across all days. Which day had the most bookings for this slot?",
+      "Reference": "Thursday, 6",
+      "Prediction": "Wednesday",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 845,
+      "FileName": "labor-table16",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including its main columns, key time slots, and any notable patterns in booking numbers?",
+      "Reference": "The table displays booking data across multiple days, organized by time slots such as 10.000am, 12.15pm, and 5.40pm. Main columns include dates, categories, and numerical bookings. Key patterns observed are consistent high bookings in morning slots like 10.000am, moderate afternoon bookings at 12.15pm, and variable evening activity, with occasional empty time slots indicating no bookings.",
+      "Prediction": "Ice Booking Sheet for Waterfront Leisure Complex covering Monday to Sunday from 10.00am to 8.00pm, detailing bookings per sheet (A-D) across various time slots, with notable patterns including high demand on Wednesday evenings (Sheet A: 15 bookings at 8.00pm) and varying usage across days and times, highlighted by color coding for different booking levels.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.01
+    },
+    {
+      "id": 846,
+      "FileName": "labor-table17",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "On which day and shift did GV8 record its highest value during the week, and what was the value?",
+      "Reference": "Thursday, N, 0.78",
+      "Prediction": "Mon, 71%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.51
+    },
+    {
+      "id": 847,
+      "FileName": "labor-table17",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "If the “N” shift percentage on Tuesday increased by 20%, what would be the new weekly average for the “N” shift?",
+      "Reference": "55.32",
+      "Prediction": "65%, 65%, 65%, 65%, 65%, 65%, 65%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.53
+    },
+    {
+      "id": 848,
+      "FileName": "labor-table17",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many shifts across the week for GV12 exceeded the “Target” percentage of 61.30%?",
+      "Reference": "2",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 849,
+      "FileName": "labor-table17",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average percentage for all shifts of GV12 across the week, and what is the standard deviation?",
+      "Reference": "56.33, 16.79",
+      "Prediction": "56.00%, 17.00%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.84
+    },
+    {
+      "id": 850,
+      "FileName": "labor-table17",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including its main rows and columns, and highlight any notable trends in “Target” and “all shifts” percentages?",
+      "Reference": "The table contains weekly data for GV8, GV9, GV11, GV12, and “All,” segmented into shifts (“E,” “L,” “N”), “Target,” and “all shifts.” Percentages are provided for Monday to Sunday. GV8 shows higher “all shifts” averages compared to other categories, while GV9 exhibits notable variability. GV11 demonstrates moderate consistency, and GV12 highlights significant deviations in “N” shift values. “Target” values remain constant across all GVs. Key trends include higher percentages earlier in the week, with gradual declines toward the weekend.",
+      "Prediction": "GV8, GV9, GV11, GV12, Overall; Mon, Tue, Wed, Thu, Fri, Sat, Sun, Week; Target percentages range from 48.30% to 74.0%, all shifts percentages range from 29% to 74%, with overall target at 55% and actual overall performance at 56%.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.02
+    },
+    {
+      "id": 851,
+      "FileName": "labor-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Verify if the sum of “Data 1” values for the first quarter (January to March) in Bay 1 is greater than in Bay 3.",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 852,
+      "FileName": "labor-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Determine if “Data 2” in Bay 3 exceeds “Data 2” in Bay 1 for any month in the second quarter (April to June).",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 853,
+      "FileName": "labor-table19",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Check if the “Data 8” values are consistent across all months in Bay 2.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 854,
+      "FileName": "labor-table19",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Count how many months in Bay 2 have “Data 2” values greater than 100.",
+      "Reference": "6",
+      "Prediction": "1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 855,
+      "FileName": "labor-table19",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average value of “Data 6” across all months for Bay 1, and what is its standard deviation?",
+      "Reference": "57.63, 1.42",
+      "Prediction": "57.00, 2.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 856,
+      "FileName": "labor-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the purpose of the rows in the first column with a red background in the table?",
+      "Reference": "WeekSeparator",
+      "Prediction": "Highlighting specific weeks or periods in the schedule",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.37
+    },
+    {
+      "id": 857,
+      "FileName": "labor-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Verify if Crew A worked all “D” shifts from Monday to Wednesday during the week.",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.96
+    },
+    {
+      "id": 858,
+      "FileName": "labor-table20",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify if any crew was assigned no shifts on Wednesday.",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.97
+    },
+    {
+      "id": 859,
+      "FileName": "labor-table20",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Calculate the total number of shifts assigned to Crew A and Crew C during the first two weeks, and compare which crew has more shifts.",
+      "Reference": "Crew C",
+      "Prediction": "14, 14",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.25
+    },
+    {
+      "id": 860,
+      "FileName": "labor-table20",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "Calculate the total number of “D” shifts assigned to Crew A and Crew C across all days in the table. Which crew has more?",
+      "Reference": "Crew A",
+      "Prediction": "12, 10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.27
+    },
+    {
+      "id": 861,
+      "FileName": "education-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the student with the highest average score across Maths, English, and Science,give the corresponding score of these three subjects.",
+      "Reference": "Moore, 95.00, 89.00, 84.00",
+      "Prediction": "Brown, 95, 67, 87",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.74
+    },
+    {
+      "id": 862,
+      "FileName": "education-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which student had the highest combined score across all subjects in 2013?",
+      "Reference": "Johnson, 335.00",
+      "Prediction": "Johnson",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 55.21
+    },
+    {
+      "id": 863,
+      "FileName": "education-table15",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many students scored above 70 in Maths in the year 2012?",
+      "Reference": "10",
+      "Prediction": "Moore, Johnson, Smith, Jones, White, Johnson, Jackson, Brown, Harris, Smith, Smith, Brown, Taylor, Brown, Thomas, Miller, Davis, Moore, Johnson, Thomas, Anderson, White, Johnson, White, Harris, Anderson, Jackson, Davis, Moore, Anderson, Davis, Taylor, Anderson, Brown, Thomas, Anderson, Smith, Taylor, Brown, Davis, Jackson, White",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 5.06
+    },
+    {
+      "id": 864,
+      "FileName": "education-table15",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference between the highest and lowest Maths scores in the year 2012?",
+      "Reference": "75",
+      "Prediction": "55, 24",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 865,
+      "FileName": "education-table15",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, including a description of its main columns and any notable trends observed in the scores for different subjects.",
+      "Reference": "The table presents student performance data across multiple years, with columns detailing student names, scores in subjects like Maths, English, Science, and History, and the corresponding year. Notable trends include fluctuations in subject scores across students, with some achieving consistently high scores in Maths and English, while Science and History exhibit more varied performances.",
+      "Prediction": "The table records student scores in four subjects—Maths, English, Science, and History—for four consecutive years (2012–2015). Notable trends include significant year-over-year fluctuations in scores, with some students showing consistent improvement (e.g., Moore in Maths) while others exhibit decline or variability (e.g., White in Science). Science scores generally show higher variability, and History scores often display the most dramatic changes. Overall, performance trends vary widely by student and subject.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.84
+    },
+    {
+      "id": 866,
+      "FileName": "food-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the ingredients shared between the Baked Caprese Chicken and Turkey Tacos recipes.",
+      "Reference": "cherry tomatoes",
+      "Prediction": "cherry tomatoes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.62
+    },
+    {
+      "id": 867,
+      "FileName": "food-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total quantity of butter required for the Baked Caprese Chicken recipe?",
+      "Reference": "4",
+      "Prediction": "4.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.78
+    },
+    {
+      "id": 868,
+      "FileName": "food-table01",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many ingredients in the Turkey Tacos recipe require a quantity greater than 1?",
+      "Reference": "1",
+      "Prediction": "shredded cheese",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.61
+    },
+    {
+      "id": 869,
+      "FileName": "food-table01",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the top three ingredients with the highest quantities in the Baked Caprese Chicken recipe.",
+      "Reference": "basil, butter, mozzarella",
+      "Prediction": "basil, mozzarella, butter",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.8
+    },
+    {
+      "id": 870,
+      "FileName": "food-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the key components of the table, including the structure of each recipe's data and any notable patterns or insights observed?",
+      "Reference": "The table presents detailed ingredient lists for two recipes: Baked Caprese Chicken and Turkey Tacos. Each recipe includes columns for ingredient quantities, units, and names. Notable patterns include the use of fresh ingredients like garlic, cherry tomatoes, and basil in Baked Caprese Chicken, and packaged ingredients like taco shells and taco seasoning in Turkey Tacos. Quantities vary significantly, with Baked Caprese Chicken requiring precise measurements of spices, while Turkey Tacos emphasizes bulk ingredients like ground turkey and shredded cheese.",
+      "Prediction": "Baked Caprese Chicken and Turkey Tacos recipes; each recipe lists ingredients with quantity and unit; both recipes include cherry tomatoes and use similar measurements for some ingredients; Baked Caprese Chicken uses more herbs and dairy, while Turkey Tacos use more meat and seasoning.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 3.02
+    },
+    {
+      "id": 871,
+      "FileName": "economy-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which row in the first sub-table has the highest “Sales” value?",
+      "Reference": "RV63625",
+      "Prediction": "RV63640",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 872,
+      "FileName": "economy-table33",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the “Gross %” of row RV63766 from the first sub-table with row RV63769 from the second sub-table. Which one is higher?",
+      "Reference": "RV63766",
+      "Prediction": "RV63766, RV63769",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 873,
+      "FileName": "economy-table33",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many rows in the second sub-table have a “Gross %” value above 80?",
+      "Reference": "3",
+      "Prediction": "7",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 874,
+      "FileName": "economy-table33",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the rows in the first sub-table by their “Effective” rates in descending order and provide the top two “R/O” values.",
+      "Reference": "RV63696, RV63625",
+      "Prediction": "RV63625, RV63607",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.8
+    },
+    {
+      "id": 875,
+      "FileName": "economy-table33",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including the main columns and any notable trends in the “Tech” values across both sub-tables.",
+      "Reference": "The table presents two sub-tables containing metrics on labor performance, including columns for “R/O” (row identifiers), “Sales” (sales amounts), “Hours” (hours charged), “Effective” (calculated rates), “Tech” (technology metrics), and “Gross %” (percentage metric). The “Tech” values show notable variability, with higher values concentrated in the second sub-table (e.g., 187) compared to the first, which has a mix of medium to high values (e.g., 148, 176). Both sub-tables demonstrate fluctuations rather than consistent trends in “Tech” values.",
+      "Prediction": "The table presents labor data for two sets of repair orders (R/Os), each with columns for R/O Number, Sales Amount, Hours Charged, Effective Rate, Tech (technician identifier), and Gross percentage. The left sub-table covers 10 R/Os with a total sales amount of $4,210.38, 48.8 hours charged, and an average effective rate of $86.28, with a gross percentage of 75%. The right sub-table covers 7 R/Os with a total sales amount of $1,754.63, 19.4 hours charged, and an average effective rate of $90.44, with a gross percentage of 79%. Notable trends in the \"Tech\" values show that technicians 148, 176, and 187 are frequently assigned across both sub-tables, with 148 appearing most often (10 times in left, 6 times in right), followed by 176 (6 times in left, 4 times in right), and 187 (4 times in left, 3 times in right). Technician 92 appears less frequently (2 times in left, 2 times in right), and 185 appears 3 times in left and 2 times in right. The overall technician distribution suggests a concentration of work among a few key technicians.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 15.59
+    },
+    {
+      "id": 876,
+      "FileName": "labor-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total “RECVD” value for Friday?",
+      "Reference": "1269",
+      "Prediction": "1000, 123, 146",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.78
+    },
+    {
+      "id": 877,
+      "FileName": "labor-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "On which day was the maximum “COMP” value recorded across all rows?",
+      "Reference": "2015-11-05 00:00:00",
+      "Prediction": "Sun 11/8",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 878,
+      "FileName": "labor-table21",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "On which day was the highest “INCOMP” value recorded in a single row, and what is that value?",
+      "Reference": "2015-11-03, 2403",
+      "Prediction": "Tue 11/3, 2403",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 879,
+      "FileName": "labor-table21",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Calculate the number of days when the RECVD value exceeds 100,000.",
+      "Reference": "5",
+      "Prediction": "4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 880,
+      "FileName": "labor-table21",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, describing the main columns, their contents, and any basic patterns or insights observed.",
+      "Reference": "The table records daily metrics (e.g., RECVD, COMP, INCOMP) for each day from November 2 to November 8. Key columns include daily categories repeated across rows. Notable insights are the significant daily totals for RECVD and a high COMP value anomaly on November 5.",
+      "Prediction": "The table presents daily data from Monday, November 2, to Sunday, November 8, organized by day with three metrics: RECVD, COMP, and INCOMP. Each day has corresponding values for these metrics, showing patterns such as high RECVD and COMP values on certain days (e.g., 15000 on Mon and Sat, 452403 on Tue and Sun), and recurring small INCOMP values (often 0 or low single digits). Notable entries include a large 572748 on Thursday and a consistent 87452 on Thursday and Sunday. The data suggests daily operational metrics with some days showing significantly higher activity than others.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.02
+    },
+    {
+      "id": 881,
+      "FileName": "economy-table59",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does “Olive Drab” have a higher “Months Left” value than “Black”?",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 882,
+      "FileName": "economy-table59",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which item has the highest value in June, and what is that value?",
+      "Reference": "Black, 33.00",
+      "Prediction": "Black, 33",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 883,
+      "FileName": "economy-table59",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many items have a “Ship Time” less than 50?",
+      "Reference": "5",
+      "Prediction": "Safety Orange, Evergreen",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 884,
+      "FileName": "economy-table59",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the “6 Month” value for “Black” and “Safety Green.” Which item has a higher value?",
+      "Reference": "Black, 504.00",
+      "Prediction": "Black, Safety Green",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 885,
+      "FileName": "economy-table59",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed description of the table, including the main columns and notable insights such as trends in “6 Month” and “Record” values?",
+      "Reference": "The table details inventory and performance metrics for various items, including columns like “CA4000” (item name), “6 Month” (6-month forecast), and “Record” (historical sales data). Notable insights include consistently high “6 Month” values for “Black” and “Navy,” while “Record” values suggest “Black” dominates past performance. Some items show low “6 Month” and “Record” values, indicating reduced demand or inventory turnover.",
+      "Prediction": "CA4000 sales and inventory analysis by color and month, showing monthly sales, purchases, stock left, and key metrics like 6-month and 3-month records, months left, and status; Black dominates sales (44%) and has the highest 6-month record (170), while Safety Orange has the highest stock left (349) and negative ship time (-82.8), indicating potential overstock or forecasting issues.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.37
+    },
+    {
+      "id": 886,
+      "FileName": "sport-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the time recorded for the 1st Male participant, and which club do they represent?",
+      "Reference": "38.40, Stoke AC",
+      "Prediction": "38.4, Stoke AC",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 887,
+      "FileName": "sport-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Match the position and time for “Michael Keedy” in the table.",
+      "Reference": "5.00, 41.27",
+      "Prediction": "5, 41.27",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 888,
+      "FileName": "sport-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How many participants belong to the “Barlick Fellrunners” club?",
+      "Reference": "3",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.83
+    },
+    {
+      "id": 889,
+      "FileName": "sport-table07",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Calculate the total number of participants across all events with a “Time” below 42 minutes.",
+      "Reference": "5",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.85
+    },
+    {
+      "id": 890,
+      "FileName": "sport-table07",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed summary of the table, describing the main columns, event categories, and notable patterns in participants' times and club affiliations?",
+      "Reference": "The table records participants across various events, with key columns including “Time” (performance duration), “Club” (affiliation), “Forename,” and “Surname” (participant names).  Clubs such as “Barlick Fellrunners” and “Stoke AC” have strong representation, with notable variation in times reflecting diverse performance levels.  The data showcases trends in participant affiliations and competitive timings across different events.",
+      "Prediction": "The table summarizes race results across multiple categories (Male, Female, and age-specific categories M40, M45, M50, M55, F40, F45). Main columns include Category position, participant number, forename, surname, category (Cat), club, time, and overall position (Pos). Notable patterns: the fastest overall time (38.4) belongs to Marc Hartley (Stoke AC) in the 1st Male category. Times increase with age categories (e.g., M55 at 44.57). Female participants show slower times than males (e.g., 1st Female at 44.16). Club affiliations vary, with Barlick Fellrunners appearing multiple times (e.g., Jimmy Craig, Nick Treitl, Andy Berry). Lorraine Redman (Trawden AC) appears in both 3rd Female and 1st F40 categories with the same time (44.45), indicating possible category overlap or error. John Lloyd (Salford Harriers) in 1st F45 has a relatively fast time (42.43) among females.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 12.76
+    },
+    {
+      "id": 891,
+      "FileName": "labor-table22",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the “Sum of CALLS” value for “Inbound” during Week 1?",
+      "Reference": "1943",
+      "Prediction": "1943",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 892,
+      "FileName": "labor-table22",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the “Occupancy %” between “Schedule Week 2” and “Inbound Week 2.” Which has a higher value?",
+      "Reference": "Schedule Week 2, 69.42%",
+      "Prediction": "Inbound Week 2, Schedule Week 2",
+      "Metrics": {
+        "F1": 60.0,
+        "EM": 0.0,
+        "ROUGE-L": 60.0,
+        "SacreBLEU": 30.21
+      },
+      "ProcessingTime": 1.45
+    },
+    {
+      "id": 893,
+      "FileName": "labor-table22",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many departments recorded an “Occupancy %” greater than 70% in Week 1?",
+      "Reference": "3",
+      "Prediction": "Inbound, FC Followup, CWR Followup, Expert Helpdesk, Outbond",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.88
+    },
+    {
+      "id": 894,
+      "FileName": "labor-table22",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the “Utilization %” between “FC Followup Week 1” and “Outbond Week 2.” Which has a higher value?",
+      "Reference": "Outbond Week 2, 0.47",
+      "Prediction": "Outbond Week 2, FC Followup Week 1",
+      "Metrics": {
+        "F1": 54.55,
+        "EM": 0.0,
+        "ROUGE-L": 54.55,
+        "SacreBLEU": 24.45
+      },
+      "ProcessingTime": 1.58
+    },
+    {
+      "id": 895,
+      "FileName": "labor-table22",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a detailed summary of the table, describing the key columns, department-wise trends, and notable patterns in time metrics across both weeks?",
+      "Reference": "The table details operational performance metrics for multiple departments across Week 1 and Week 2. Key columns include ‘Sum of CALLS,' ‘Login Time,' ‘Talk Time,' ‘Idle Time,' ‘Occupancy %,' and ‘Utilization %.' Each department exhibits distinct trends, such as consistently high ‘Sum of CALLS' for ‘Inbound' and ‘Schedule' compared to others. Notable patterns include ‘Outbond' showing a steady increase in ‘Utilization %' from Week 1 to Week 2, and ‘Idle Time' being inversely correlated with ‘Occupancy %.' ‘FC Followup' and ‘Outbond' stand out for their long ‘Talk Time,' highlighting higher engagement per call.",
+      "Prediction": "The table presents operational metrics for various departments over two weeks, including total calls, ACHT (Average Call Handling Time), staff time, login time, talk time, pause time, idle time, wait time, dispo time, idle percentage, occupancy percentage, utilization percentage, number of days, and sum of CPA. Key trends show that Inbound and FC Followup departments have high call volumes and relatively high idle percentages, while Ref Genration and Library show lower call volumes but higher idle percentages. Outbond has the highest utilization percentage (47.13%) and the highest occupancy percentage (61.90%) in Week 2. The Grand Total reveals an overall idle percentage of 58.22% and utilization of 23.87%. Notable patterns include a general decrease in calls and staff time from Week 1 to Week 2 for most departments, with corresponding changes in time metrics such as increased talk time and decreased idle time in some departments.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.7
+    },
+    {
+      "id": 896,
+      "FileName": "economy-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the year in which Product 1 had the highest Mg/$ value?",
+      "Reference": "2011",
+      "Prediction": "2011",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 897,
+      "FileName": "economy-table34",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the year when the total weight (Mg) of all products exceeded 20 for the first time.",
+      "Reference": "1989",
+      "Prediction": "1996",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 898,
+      "FileName": "economy-table34",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the difference in total weight (Mg) between Product 1 and Product 2 for the year 1996.",
+      "Reference": "36",
+      "Prediction": "36, 0",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 899,
+      "FileName": "economy-table34",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Identify the year when the total value ($) of Product 3 first exceeded the combined value ($) of Product 1 and Product 2.",
+      "Reference": "1992",
+      "Prediction": "2010",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 900,
+      "FileName": "economy-table34",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including a description of its main columns and any key insights about the trends in product values or weights.",
+      "Reference": "The table details yearly metrics for four products, including their weights (Mg), values ($), and ratios (Mg/$). Notable trends include fluctuations in weights and values across years, with some products exhibiting high weight but low Mg/$ ratios, indicating lower efficiency. Certain years, such as 1996 and 2011, stand out for significant values or ratios, showcasing anomalies or peak performances.",
+      "Prediction": "The table presents annual data for Belgium from 1988 to 2012, detailing four products (Product 1 to Product 4) with columns for Weight (Mg), Value ($), and the ratio Mg/$. Key insights include: Product 1 shows high variability in weight and value, with notable spikes in 2010 (Weight: 6, Value: 85) and 2011 (Weight: 52, Value: 4). Product 2 exhibits negative values in some years (e.g., 1996, 2002) and fluctuating Mg/$ ratios. Product 3 generally shows positive values with stable Mg/$ ratios, except for 2011 where value drops to 0 and Mg/$ becomes 0. Product 4 consistently shows positive values and Mg/$ ratios, with a significant increase in 2010 (Weight: 480, Value: 559) and 2012 (Weight: 62, Value: 72). Overall, Product 4 demonstrates the most stable and positive trend across the years.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 12.56
+    },
+    {
+      "id": 901,
+      "FileName": "economy-table60",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the date range covered by the table for DRL Construction's records under “MBurger”?",
+      "Reference": "Feb-01-15 - Feb-07-15",
+      "Prediction": "Feb-01-15, Feb-07-15",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.99
+    },
+    {
+      "id": 902,
+      "FileName": "economy-table60",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the average “Time (hrs)” recorded for all transactions from 2015-02-01 to 2015-02-07 for “Truck Number DRL11”?",
+      "Reference": "1.26",
+      "Prediction": "3.75",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 903,
+      "FileName": "economy-table60",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the companies by their total “Quantity (bbls)” from highest to lowest for transactions recorded between 2015-02-01 and 2015-02-07.",
+      "Reference": "Wild, Mongoose",
+      "Prediction": "Mongoose, Wild",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 904,
+      "FileName": "economy-table60",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the total “Amount Billed” for all transactions involving “Truck Number DRL11” during the date range 2015-02-01 to 2015-02-05?",
+      "Reference": "4327.50",
+      "Prediction": "9727.50, 2279.83",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.07
+    },
+    {
+      "id": 905,
+      "FileName": "economy-table60",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including its main columns and any notable trends in “Amount Billed” for DRL Construction during the specified date range?",
+      "Reference": "The table presents transaction records for DRL Construction from 2015-02-01 to 2015-02-07, detailing key metrics such as dates, truck and trailer details, company names, product quantities, and financial metrics like “Amount Billed” and “Employee Take.” Notable trends in “Amount Billed” include consistently high values linked to larger “Quantity (bbls)” for the company “Wild,” with minor fluctuations observed based on individual transaction details.",
+      "Prediction": "DRL Construction billing summary for Feb 01-07, 2015, showing 21 entries with consistent truck/trailer (DRL11/T11), varying quantities and rates, totaling $9,727.50 billed and $2,279.83 employee take; notable trend: high billed amounts for \"Mongoose Flow Back\" entries (e.g., $1,500, $1,000) versus consistent $262.50 for \"Wild Production %\" entries.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.8
+    },
+    {
+      "id": 906,
+      "FileName": "economy-table61",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the “Product” type associated with the lowest “Employee Take” for transactions involving “Truck Number DRL11.”",
+      "Reference": "Chain Up",
+      "Prediction": "Chain Up",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 907,
+      "FileName": "economy-table61",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the name of the employee responsible for the transactions recorded in this table?",
+      "Reference": "MBurger",
+      "Prediction": "MBurger",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 908,
+      "FileName": "economy-table61",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the companies by their total “Quantity (bbls)” from highest to lowest for transactions recorded in the table.",
+      "Reference": "EBT, Wild",
+      "Prediction": "EBT, Wild",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 909,
+      "FileName": "economy-table61",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many transactions were recorded for the “Product” type “Service Work” during the specified date range?",
+      "Reference": "10",
+      "Prediction": "7",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 910,
+      "FileName": "economy-table61",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns, their significance, and any notable trends in “Amount Billed” and “Quantity (bbls)”?",
+      "Reference": "The table presents transaction records for DRL Construction, detailing key metrics such as dates, ticket numbers, truck and trailer information, company names, product types, quantities, time, rates, charges, billed amounts, and employee earnings. Notable trends in “Amount Billed” show a strong correlation with larger “Quantity (bbls)” for specific product types like “Service Work,” with “Company” EBT recording the highest overall values.",
+      "Prediction": "DRL Construction employee MBurger's billing summary from Feb 7-16, 2015, showing daily ticketed work with columns for Date, Ticket Number, Truck/Trailer, Company, Product, Quantity (bbls), Time (hrs), Rate ($/hr $/BBLS), Water Charge, Amount Billed, and Employee Take. Notable trends: \"Amount Billed\" totals $17,635.00 ₽, with high values from EBT Service Work (e.g., $1,680.00, $1,440.00) and Production % (e.g., $1,980.00). \"Quantity (bbls)\" varies widely (0 to 1300 bbls), correlating with billing amounts, especially for EBT Service Work.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.99
+    },
+    {
+      "id": 911,
+      "FileName": "economy-table63",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": " If the weekly target for “Other Income” is increased by 20%, how much will the total target change for the week ending 04/01?",
+      "Reference": "104400",
+      "Prediction": "1000, 50000, 1000, 35000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.77
+    },
+    {
+      "id": 912,
+      "FileName": "economy-table63",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total weekly target for all entries under the “Baker & Spice” category across all weeks?",
+      "Reference": "546800",
+      "Prediction": "114600",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 913,
+      "FileName": "economy-table63",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many subcategories under “Baker & Spice” have an average weekly target exceeding 20,000?",
+      "Reference": "3",
+      "Prediction": "Belgravia, Chelsea, Selfridge's",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.97
+    },
+    {
+      "id": 914,
+      "FileName": "economy-table63",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total targets for “Chelsea” and “Maida Vale” across all weeks; which subcategory has a higher total?",
+      "Reference": "Chelsea",
+      "Prediction": "Chelsea, Maida Vale",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.76
+    },
+    {
+      "id": 915,
+      "FileName": "economy-table63",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the mean weekly target for “LEAMINGTON” across the given weeks?",
+      "Reference": "10733.33",
+      "Prediction": "11833.33",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.96
+    },
+    {
+      "id": 916,
+      "FileName": "labor-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify all individuals whose comments column mentions “replaced” and provide their names.",
+      "Reference": "Arthur Horton, Rogelio Melf, Randy Torres, Jessi Staples, John Cambra, Randy Boyd",
+      "Prediction": "RIBLET, HORTON, MELF, TORRES, STAPLES, CAMBRA, SEGADA",
+      "Metrics": {
+        "F1": 52.63,
+        "EM": 0.0,
+        "ROUGE-L": 52.63,
+        "SacreBLEU": 4.81
+      },
+      "ProcessingTime": 2.07
+    },
+    {
+      "id": 917,
+      "FileName": "labor-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "For all individuals in department 558, what is the average shift value?",
+      "Reference": "1.25",
+      "Prediction": "1.25",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 918,
+      "FileName": "labor-table23",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank all individuals by their shift value in descending order. Who is ranked first?",
+      "Reference": "Shane Hewitt",
+      "Prediction": "HEWITT, SHANE",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 919,
+      "FileName": "labor-table23",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Identify all individuals associated with the stamp “CW” whose “COMMENTS” column contains the word “worn.”",
+      "Reference": "Arthur Horton",
+      "Prediction": "HORTON, ARTHUR",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 920,
+      "FileName": "labor-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify all individuals whose comments column mentions “replaced” and provide their names.",
+      "Reference": "Arthur Horton, Rogelio Melf, Randy Torres, Jessi Staples, John Cambra, Randy Boyd",
+      "Prediction": "RIBLET, HORTON, MELF, TORRES, STAPLES, CAMBRA, SEGADA",
+      "Metrics": {
+        "F1": 52.63,
+        "EM": 0.0,
+        "ROUGE-L": 52.63,
+        "SacreBLEU": 4.81
+      },
+      "ProcessingTime": 2.05
+    },
+    {
+      "id": 921,
+      "FileName": "labor-table23",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Identify any rows in the table where the “COMMENTS” column mentions “lost” but no replacement action is noted. Are these anomalies frequent?",
+      "Reference": "No anomalies are detected in the table",
+      "Prediction": "LOST 08/28/14, replaced, replaced 06/09/14, replaced 06/06/14, replaced 06/09/14, replaced 06/09/14, replaced 06/09/14, replaced 06/09/14, replaced 06/09/14, replaced 06/09/14, replaced 06/09/14",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.14
+    },
+    {
+      "id": 922,
+      "FileName": "labor-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the employee “Alfred Adams,” verify if all e-learning tasks in the “E-Learning” section are marked as “Done.”",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.77
+    },
+    {
+      "id": 923,
+      "FileName": "labor-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which employee under the “Finance” department has the most incomplete e-learning tasks?",
+      "Reference": "Bill Billings",
+      "Prediction": "Bill Billings",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.87
+    },
+    {
+      "id": 924,
+      "FileName": "labor-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the number of “Done” versus “In Progress” tasks in the “Impact” column across all employees. Which status is more frequent?",
+      "Reference": "Done",
+      "Prediction": "Done, In Progress",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 925,
+      "FileName": "labor-table24",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank all employees based on the number of tasks marked as “Done” in the “E-Learning” section. Who is ranked first?",
+      "Reference": "Bill Billings",
+      "Prediction": "Charlie Cadsworth",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 926,
+      "FileName": "labor-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "For the employee “Alfred Adams,” verify if all e-learning tasks in the “E-Learning” section are marked as “Done.”",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.77
+    },
+    {
+      "id": 927,
+      "FileName": "labor-table24",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, highlighting the main columns, their significance, and any notable patterns observed in task progress across employees.",
+      "Reference": "The table details employee information and task progress, including columns such as “Name,” “Position,” “E-Learning,” and “Impact.” Key observations include variations in task progress, with some employees having all tasks marked as “Done,” while others show a mix of “In Progress” and “Done” statuses, indicating differing completion rates across employees.",
+      "Prediction": "The table summarizes E-Learning progress for Finance department employees, with columns for Employee ID, Name, Position, Class Room, and various E-Learning modules (Check-in, Foundations, Our Brand, Welcome SPG, Be memorable, Impact, Recover, LSC). Notable patterns: Most employees have completed the \"Check-in,\" \"Foundations,\" \"Our Brand,\" \"Impact,\" and \"Recover\" modules; \"Welcome SPG\" and \"Be memorable\" modules are mostly \"In Progress\" or \"Done\" for some, indicating varying completion rates. The \"Class Room\" column shows a green \"Done\" status for all employees, suggesting successful attendance or completion of in-person sessions.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.48
+    },
+    {
+      "id": 928,
+      "FileName": "economy-table64",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the total revenue generated in February 2014 to January 2014. Which month had higher revenue?",
+      "Reference": "February",
+      "Prediction": "FEB2014, JAN2014",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.23
+    },
+    {
+      "id": 929,
+      "FileName": "economy-table64",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Identify the month with the highest revenue for “3-month” memberships across 2013 and 2014.",
+      "Reference": "OCT 2014",
+      "Prediction": "NOV, 2014",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.03
+    },
+    {
+      "id": 930,
+      "FileName": "economy-table64",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the total revenue for “3-month” and “12-month” memberships combined in the second quarter of 2014 (April to June).",
+      "Reference": "366.67",
+      "Prediction": "480.00, 200.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.37
+    },
+    {
+      "id": 931,
+      "FileName": "economy-table64",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the average revenue per month for “12-month” memberships across 2014.",
+      "Reference": "184.67",
+      "Prediction": "250.00, 250.00, 280.00, 200.00, 166.67, 283.33, 166.66, 83.34, 83.34, 125.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 5.39
+    },
+    {
+      "id": 932,
+      "FileName": "economy-table64",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including key columns such as membership type, revenue, and notable trends in monthly performance.",
+      "Reference": "The table outlines membership data, including “Membership Type,” “Month Sold,” “Revenue,” and financial metrics such as “Opening Balance” and “Closing Balance.” Key insights include revenue variations between “3-month” and “12-month” memberships, with notable fluctuations in monthly performance, such as high revenues in October for “3-month” memberships and consistent contributions from “12-month” memberships throughout the year.",
+      "Prediction": "Fitness Membership Sales Summary for 2013-2014, with Revenue Trends and Monthly Performance Highlights",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 2.64
+    },
+    {
+      "id": 933,
+      "FileName": "economy-table64",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the total revenue generated in February 2014 to January 2014. Which month had higher revenue?",
+      "Reference": "February",
+      "Prediction": "FEB2014, JAN2014",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.24
+    },
+    {
+      "id": 934,
+      "FileName": "labor-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "On which date did the employee log the least “Total Hours” greater than 0 in the provided records?",
+      "Reference": "2014-12-06",
+      "Prediction": "2014/12/7, 2014/12/14",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.13
+    },
+    {
+      "id": 935,
+      "FileName": "labor-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Verify if the employee worked overtime (greater than 8 hours) on any day. If so, list the dates.",
+      "Reference": "No",
+      "Prediction": "2014/12/10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 936,
+      "FileName": "labor-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the total “Total Hours” worked by the employee during the first week of December 2014.",
+      "Reference": "43",
+      "Prediction": "40.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.34
+    },
+    {
+      "id": 937,
+      "FileName": "labor-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": " Identify the number of days where the employee worked less than 4 hours in total.",
+      "Reference": "5",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 938,
+      "FileName": "labor-table25",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including key columns such as “Date,” “Total Hours,” and “Lunch Duration,” and highlight any patterns or insights?",
+      "Reference": "The table records employee work data, including “Date,” “Total Hours” worked, and “Lunch Duration” (calculated as the difference between “Lunch Starts” and “Lunch Ends”). Notable patterns include fluctuations in “Total Hours” across weekdays and weekends, with some dates showing reduced hours. “Lunch Duration” data is incomplete, with missing values on certain dates, which limits deeper analysis.",
+      "Prediction": "The table records employee work hours from 12/01/2014 to 12/15/2014, with key columns including Date, Total Hours, and Lunch Duration. Each week totals 40.00 hours. Lunch duration varies, with some days having no lunch break (e.g., Thursday 12/4, 12/11, 12/18) and others having longer breaks (e.g., Wednesday 12/3, 12/10). Patterns show consistent 8-hour workdays for most weekdays, with some overtime or early log-ins (e.g., Monday 12/1, 12/8, 12/15). Weekend work hours are irregular, with Saturday 12/6 having 3.00 hours and 12/13 having 7.00 hours. Sunday work hours are consistently zero.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.78
+    },
+    {
+      "id": 939,
+      "FileName": "labor-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "On which date did the employee log the least “Total Hours” greater than 0 in the provided records?",
+      "Reference": "2014-12-06",
+      "Prediction": "2014/12/7, 2014/12/14",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.14
+    },
+    {
+      "id": 940,
+      "FileName": "manufacture-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the date range covered in the records of this table?",
+      "Reference": "2012-02-01, 2014-05-01",
+      "Prediction": "2012/2/1, 2014/5/1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 941,
+      "FileName": "manufacture-table11",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total sales of components “a” and “b.” Which component recorded higher sales?",
+      "Reference": "a",
+      "Prediction": "a, b",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 942,
+      "FileName": "manufacture-table11",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank all components based on the “Pending” column in descending order. Which component ranks first?",
+      "Reference": "b",
+      "Prediction": "c",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.95
+    },
+    {
+      "id": 943,
+      "FileName": "manufacture-table11",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many components have a “Purchase” value greater than 300 units in the table?",
+      "Reference": "4",
+      "Prediction": "c, f",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 944,
+      "FileName": "manufacture-table11",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a descriptive summary of the table, including the main columns and any observed trends or outliers in the “Pending” and “Purchase” columns.",
+      "Reference": "The table provides data on various components, including details like codes, descriptions, stock levels, purchases, sales, and pending orders. The “Pending” column shows instances of both significantly negative and high positive values, indicating potential order mismatches or adjustments. The “Purchase” column exhibits variability across components, with certain entries showing high volumes, such as those exceeding 300 units, while others remain minimal or zero. Notable trends include discrepancies in pending values and a concentration of purchases among specific components.",
+      "Prediction": "EM Fittings Master inventory report from 2012/2/1 to 2014/5/1, detailing Stock Opening, Total Purchase, Total Sales, Total Stock, Total Order, and Total Pending for 11 items (a to k). Key trends: High Total Purchase for item 'c' (4140) and significant Total Pending (-4090) for item 'c'. Item 'b' shows a negative Total Stock (-150) and positive Total Pending (10), indicating potential stock shortage or pending orders fulfilled. Items 'h', 'i', 'j', 'k' show zero values across all metrics, indicating no activity. Outliers: Item 'c' with highest purchase and pending, item 'b' with negative stock and positive pending, item 'e' with zero sales but high pending (-500).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.84
+    },
+    {
+      "id": 945,
+      "FileName": "sport-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which team scored the highest total goals across all matches?If there are many equal total goals, list them all.",
+      "Reference": "Sp. Braga, V. Guimarães, Belenenses, F.F.C. Porto, Rio Ave, Moreirense",
+      "Prediction": "Sp. Braga",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 30.77,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 946,
+      "FileName": "sport-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which team scored the second-highest number of goals in the Total Goals For (GF) column?",
+      "Reference": "Benfica, F.C. Porto, Rio Ave",
+      "Prediction": "Sp. Braga, Benfica, F.C. Porto, Rio Ave",
+      "Metrics": {
+        "F1": 83.33,
+        "EM": 0.0,
+        "ROUGE-L": 83.33,
+        "SacreBLEU": 61.48
+      },
+      "ProcessingTime": 1.81
+    },
+    {
+      "id": 947,
+      "FileName": "sport-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many teams have scored at least 2 goals in the Total Goals For (GF) column?",
+      "Reference": "6",
+      "Prediction": "Sp. Braga, Benfica, F.C. Porto, Rio Ave",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 948,
+      "FileName": "sport-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which team scored the highest total goals across all matches?If there are many equal total goals, list them all.",
+      "Reference": "Sp. Braga, V. Guimarães, Belenenses",
+      "Prediction": "Sp. Braga",
+      "Metrics": {
+        "F1": 57.14,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 949,
+      "FileName": "sport-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the table, describing its main columns and highlighting any basic insights, such as which team scored the most goals?",
+      "Reference": "The table presents football teams' performance metrics, including games played, wins, losses, goals scored (GF), goals conceded (GA), and total points. The team that scored the most goals is Sp. Braga.",
+      "Prediction": "The table summarizes football team performance across Home, Away, and Total statistics, including Games (G), Wins (W), Ties (T), Losses (L), Goals For (GF), Goals Against (GA), and Points. Sp. Braga scored the most goals (3) in total, while Boavista conceded the most goals (-3). Teams 1-7 have 3 points each, indicating strong performance, while teams 8-18 have lower points, with some teams (e.g., Boavista) showing negative goal difference.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.5
+    },
+    {
+      "id": 950,
+      "FileName": "economy-table65",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total outstanding balance amount for all invoices issued by “DRAGON PVT LTD”?",
+      "Reference": "-240.56",
+      "Prediction": "-240.559",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.51
+    },
+    {
+      "id": 951,
+      "FileName": "economy-table65",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the invoice with the earliest due date among those issued by “DRAGON PVT LTD” and provide its voucher number.",
+      "Reference": "SiVe:2024CBO-31768",
+      "Prediction": "SiVe:2024CBO-31768",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.88
+    },
+    {
+      "id": 952,
+      "FileName": "economy-table65",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique branches are listed in the table, and what are their names?",
+      "Reference": "4, CENTERAL BRANCH O, LOWER BRANCH I, GROUND BRANCH H, INTER BRANCH A",
+      "Prediction": "CBO, LBI, GBH, IBA",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.65
+    },
+    {
+      "id": 953,
+      "FileName": "economy-table65",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the average balance amounts for “DRAGON PVT LTD” and “G CO PVT ” and determine which entity has the higher average.",
+      "Reference": "G CO PVT",
+      "Prediction": "DRAGON PVT LTD, G CO PVT",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 30.21
+      },
+      "ProcessingTime": 2.61
+    },
+    {
+      "id": 954,
+      "FileName": "economy-table65",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including its main columns, key insights about the invoice amounts, and any notable trends in the balance amounts.",
+      "Reference": "The table contains financial transaction details, including columns for “Voucher,” “Date,” “Particulars,” “Invoice Amount,” “Balance Amount,” “Due Date,” and branch information. The “Invoice Amount” column shows varying transaction sizes, with some negative values indicating payments or refunds. The “Balance Amount” column reveals fluctuations in outstanding amounts, with notable trends such as higher balances for certain entities like “DRAGON PVT LTD.” Periodic payments appear to reduce balances, and branches show consistent credit limits, reflecting uniform policies.",
+      "Prediction": "CAPIK GROUP Customer listing of outstanding bills, main columns include Voucher, Date, Particulars, Invoice Amount, Balance Amount, Due Date, Outlet Code, Branch Code, Branch Name, Sales Type Name, Employee Name, Account Credit Days, Account Credit Limit, CUSTOMER NAME, and DAYS. Key insights show negative invoice amounts indicating credit usage, with DRAGON PVT LTD having the highest total balance amount of -240.559 and G CO PVT -IBA showing the largest total balance amount of -628.817. Notable trends in balance amounts reveal consistent negative balances across customers, indicating ongoing credit usage, with some customers like MY COMPUTER showing multiple entries with varying balance amounts, suggesting recurring transactions.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.58
+    },
+    {
+      "id": 955,
+      "FileName": "economy-table66",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the date mentioned in the header of the table, and how does it relate to the events listed in the table?",
+      "Reference": "2014-07-24, Contextual Date",
+      "Prediction": "24-Jul-14, Reference Date",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.88
+    },
+    {
+      "id": 956,
+      "FileName": "economy-table66",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the event with the highest cost and provide its “Job #” and “Artist” details.",
+      "Reference": "EM2058, Corona Sunsets",
+      "Prediction": "EM2058, Corona Sunsets",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.82
+    },
+    {
+      "id": 957,
+      "FileName": "economy-table66",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total cost of all events held at “Sherbourne Common”?",
+      "Reference": "139.07",
+      "Prediction": "139.08",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.99
+    },
+    {
+      "id": 958,
+      "FileName": "economy-table66",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the date mentioned in the header of the table, and how does it relate to the events listed in the table?",
+      "Reference": "2014-07-24, Contextual Date",
+      "Prediction": "24-Jul-14, Reference Date",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 959,
+      "FileName": "economy-table66",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the average cost of events held in August 2014 and September 2014 and identify the month with the higher average.",
+      "Reference": "August 2014",
+      "Prediction": "August 2014, September 2014",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 2.05
+    },
+    {
+      "id": 960,
+      "FileName": "economy-table66",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including its main columns, key features, and any noticeable trends in event costs or dates?",
+      "Reference": "The table provides data on events, including columns for “Job #,” “Artist,” “Venue,” “Date,” “Share,” and “Cost.” Key features include varying costs across events and notable venues like “Sherbourne Common.” A trend is observed in event clustering within specific months, such as August 2014, which has higher average costs compared to September 2014. The share values generally correlate with event prominence, with higher costs linked to larger venues.",
+      "Prediction": "NOW Magazine Advertisements for 24-Jul-14, listing artists, venues, dates, column and height measurements, page size, share percentage, and individual costs; total cost is $1,720.00 with 100.00% share; most events cost $11.82, with notable higher costs for Corona Sunsets ($517.18) and Electric Island ($316.22); events span from late July to late November 2014, with most concentrated in September and October.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.15
+    },
+    {
+      "id": 961,
+      "FileName": "manufacture-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Based on the header information, in which month and year was this table generated?",
+      "Reference": "04, 2014",
+      "Prediction": "04, 2014",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 962,
+      "FileName": "manufacture-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the products that were exported in quantities greater than 100 units.",
+      "Reference": "Efavirenz 600mg, Lamivudine 150mg, Lamivudine-Tenofovir-Efavirenz 300/300/600mg, Lamivudine-Zidovudine 150/300mg, Nevirapine 200mg, Tenofovir 300mg",
+      "Prediction": "Efavirenz 600mg, Lamivudine 150mg, Lamivudine-Tenofovir-Efavirenz 300/300/600mg, Lamivudine-Zidovudine 150/300mg, Nevirapine 200mg, Tenofovir 300mg",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 5.21
+    },
+    {
+      "id": 963,
+      "FileName": "manufacture-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which product has the highest beginning stock value, and what is that value?",
+      "Reference": "Lamivudine-Zidovudine 150/300mg, 8400",
+      "Prediction": "Lamivudine-Zidovudine 150/300mg, 8400",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.22
+    },
+    {
+      "id": 964,
+      "FileName": "manufacture-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Count the number of products with an ending stock greater than 500 units.",
+      "Reference": "10",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 965,
+      "FileName": "manufacture-table12",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including the main columns, their purpose, and any notable trends or key insights derived from the data.",
+      "Reference": "The table tracks pharmaceutical product metrics, detailing product names, production lots, expiry dates, and operational metrics such as beginning stock, imports, exports, damages, and ending stock. Notable trends include significant variations in export quantities and consistently high ending stocks for certain products, indicating potential inventory surpluses.",
+      "Prediction": "The table summarizes inventory data for various antiretroviral drugs in April 2014, including product names, production lots, expiration dates, beginning stock, import/export quantities, damaged units, and ending stock. Notable trends include high stock levels for Lamivudine and Lamivudine-Zidovudine combinations, significant exports of Nevirapine 200mg, and minimal damage reported across most products. Key insights reveal that some products like Efavirenz 600mg and Tenofovir 300mg have substantial stock levels with varying expiration dates, while others like Zidovudine 10mg/ml show minimal stock turnover.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.05
+    },
+    {
+      "id": 966,
+      "FileName": "manufacture-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Based on the header information, in which month and year was this table generated?",
+      "Reference": "04, 2014",
+      "Prediction": "04, 2014",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 967,
+      "FileName": "labor-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total volume of emails delivered across all dates listed in the table?",
+      "Reference": "214942",
+      "Prediction": "261832",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 968,
+      "FileName": "labor-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Match the date with the highest unsubscribed volume and identify its corresponding percentage.",
+      "Reference": "2014-07-16, 1.19%",
+      "Prediction": "2014/7/16, 593",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 969,
+      "FileName": "labor-table26",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many rows have a “Click Through Vol” value greater than 100?",
+      "Reference": "1",
+      "Prediction": "1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 970,
+      "FileName": "labor-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Match the date with the highest unsubscribed volume and identify its corresponding percentage.",
+      "Reference": "2014-07-16, 1.19%",
+      "Prediction": "2014/7/16, 593",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.55
+    },
+    {
+      "id": 971,
+      "FileName": "labor-table26",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the “Bounced %” values for the first and last rows in the table. Which row has a higher bounce rate?",
+      "Reference": "Last Row",
+      "Prediction": "First Row, Last Row",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 972,
+      "FileName": "labor-table26",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the key insights from the data, focusing on delivery rates, bounce rates, and unsubscribing trends?",
+      "Reference": "The table provides performance metrics for email delivery campaigns. Key columns include delivery rates (percentage of delivered emails), bounce rates (emails not delivered), and unsubscribe rates (percentage of users unsubscribing). Notable trends are consistently high delivery rates exceeding 85%, moderate bounce rates around 10%, and unsubscribe rates remaining below 2%, indicating stable audience engagement.",
+      "Prediction": "Delivery rates are generally high (86.66% to 93.37%), bounce rates vary (6.62% to 13.33%), and unsubscribing rates are low (0.38% to 2.20%).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 3.51
+    },
+    {
+      "id": 973,
+      "FileName": "economy-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the annual total for the HRA and BASIC SALARY combined?",
+      "Reference": "336000",
+      "Prediction": "144000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 974,
+      "FileName": "economy-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What are the components listed in the “Employer's Contribution” section of the table?",
+      "Reference": "Gratuity, Employer's Provident Fund Contribution, Employer's ESI Contribution, Medical Insurance, Performance Incentive",
+      "Prediction": "Gratuity, Employer's Provident Fund Contribution, Employer's ESI Contribution, Medical Insurance, Peformance Incentive",
+      "Metrics": {
+        "F1": 91.67,
+        "EM": 0.0,
+        "ROUGE-L": 91.67,
+        "SacreBLEU": 82.65
+      },
+      "ProcessingTime": 1.91
+    },
+    {
+      "id": 975,
+      "FileName": "economy-table67",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the components of “Earnings” by their monthly values in descending order.",
+      "Reference": "BASIC SALARY, SPECIAL ALLOWANCE, HRA, MEDICAL REIMBURSEMENT, TRANSPORT ALLOWANCE",
+      "Prediction": "BASIC SALARY, HRA, SPECIAL ALLOWANCE, MEDICAL REIMBURSEMENT, TRANSPORT ALLOWANCE",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 88.89,
+        "SacreBLEU": 41.54
+      },
+      "ProcessingTime": 1.87
+    },
+    {
+      "id": 976,
+      "FileName": "economy-table67",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the Annual “Medical Reimbursement” value to the Annual “Medical Insurance” value. Which is higher?",
+      "Reference": "Medical Reimbursement",
+      "Prediction": "Medical Insurance, Medical Reimbursement",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 977,
+      "FileName": "economy-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the annual total for the HRA and BASIC SALARY combined?",
+      "Reference": "336000",
+      "Prediction": "156000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 978,
+      "FileName": "economy-table67",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a descriptive summary of the table, highlighting the main sections, key columns, and any notable trends or patterns in the data?",
+      "Reference": "The table outlines a salary package with two main sections: ‘Earnings' and ‘Employer's Contribution.' The ‘Earnings' section includes components like BASIC SALARY, HRA, TRANSPORT ALLOWANCE, and SPECIAL ALLOWANCE, with details provided in both monthly and annual values. The ‘Employer's Contribution' section lists additional benefits like Gratuity and Medical Insurance. Notable trends include BASIC SALARY as the largest component in ‘Earnings' and a balanced distribution of contributions in the employer section.",
+      "Prediction": "Package Details, Monthly and Annual columns, CTC of 50,000 monthly (600,000 annually), Earnings including Basic Salary, HRA, Transport Allowance, Medical Reimbursement, and Special Allowance, Employer's Contribution including Gratuity, Provident Fund, Medical Insurance, and Performance Incentive, Total CTC cross-verified as 50,000 monthly (600,005 annually) with minor discrepancy in annual total.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.73
+    },
+    {
+      "id": 979,
+      "FileName": "labor-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of activations for all departments combined?",
+      "Reference": "13557",
+      "Prediction": "13557",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 980,
+      "FileName": "labor-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the crash count between “Mobile Department” and “Other Department.” Which has the higher value?",
+      "Reference": "Mobile Department",
+      "Prediction": "Mobile Department, Other Department",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 981,
+      "FileName": "labor-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique device types are listed under the “Device” column in the table?",
+      "Reference": "2",
+      "Prediction": "Workstation, Register",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.79
+    },
+    {
+      "id": 982,
+      "FileName": "labor-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the proportion of the restart count to the activation count for “Mobile Department” and express it as a percentage rounded to two decimals.",
+      "Reference": "9.43%",
+      "Prediction": "9.42%",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 983,
+      "FileName": "labor-table27",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the main sections of the table, describe the key columns, and highlight any notable trends or patterns in the data?",
+      "Reference": "The table presents performance metrics across departments and devices, detailing activation counts, restart counts, crash counts, and percentages. Key observations include significantly higher activation counts for the ‘Mobile Department' compared to the ‘Other Department' and relatively low crash rates across all devices, with ‘Register' showing higher restart percentages compared to ‘Workstation.'",
+      "Prediction": "The table summarizes device performance metrics across two departments: Mobile Department and Other Department. Key columns include Activation Count, Restart Count, Crash Count, % Crash, and % Restart. Notable trends: The Other Department has significantly higher % Restart rates (140.13% total) compared to the Mobile Department (9.42%), despite fewer activations. The Mobile Department has a lower crash rate (0.18%) compared to the Other Department (0.26%). Workstations in the Other Department have an exceptionally high % Restart rate (70.83%) and no crashes, while Registers in the Other Department show a high % Restart rate (150.15%) and a low crash rate (0.30%). The Grand Total shows an overall % Restart of 16.75% and % Crash of 0.18%.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.25
+    },
+    {
+      "id": 984,
+      "FileName": "economy-table68",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the local price of a $10 Load Card in Europe to a $10 Load Card in Australia. Which one costs more in local currency?",
+      "Reference": "Australia",
+      "Prediction": "EUR, AUD",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 985,
+      "FileName": "economy-table68",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the product code for the 1-Month Premium Subscription in Japan?",
+      "Reference": "MG",
+      "Prediction": "MG",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 986,
+      "FileName": "economy-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the products in North America by their local price in descending order. What is the name of the product with the second-highest price?",
+      "Reference": "1-Month Premium Subscription",
+      "Prediction": "3-Month Premium Subscription, 1-Month Premium Subscription",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 30.21
+      },
+      "ProcessingTime": 1.96
+    },
+    {
+      "id": 987,
+      "FileName": "economy-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the local price of a 3-Month Premium Subscription in Canada to that in Japan. Which country has a higher price?",
+      "Reference": "Canada",
+      "Prediction": "Japan, Canada",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.47
+    },
+    {
+      "id": 988,
+      "FileName": "economy-table68",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, including the key columns, the primary focus of the data, and any notable patterns or trends observed.",
+      "Reference": "The table provides regional pricing data for subscription and load card products in different currencies, detailing product names, codes, and local prices. Key columns include “Currency,” “Product Name,” “Product Code,” and “Local Price.” Notable trends include consistent pricing patterns within each region but variations across regions, highlighting differences in currency value and market positioning.",
+      "Prediction": "The table details pricing for various subscription and load card products across multiple regions and currencies. Key columns include Currency, Product Name, Product Code, and Local Price. The primary focus is on regional pricing variations for standardized products. Notable patterns include consistent pricing for $5 and $10 Load Cards across regions (e.g., USD $5, CAD $5, EUR €5, GBP GBP 5, CHF CHF 5, DKK DKK 30.00, SEK SEK 40.00, NOK NOK 30.00, ILS ILS 20.00, SAR SAR 20, AED AED 20, JPY JPY 650, TWD TWD 150, KRW KRW 5,300, HKD HKD 40, SGD SGD 6, MYR MYR 15, AUD AUD $5.50, NZD NZD $6.50, PHP PHP Php250), while subscription prices vary significantly by region and duration (e.g., 1-Month Premium Subscription ranges from USD $12.95 to JPY JPY 1,400 to KRW KRW 13,700). The table also includes a unique 30-Day Free Trial - Lite offer in Asia Pacific 1 with a TWD 0 price.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 16.0
+    }
+  ],
+  "processed_ids": [
+    769,
+    770,
+    771,
+    772,
+    773,
+    774,
+    775,
+    776,
+    777,
+    778,
+    779,
+    780,
+    781,
+    782,
+    783,
+    784,
+    785,
+    786,
+    787,
+    788,
+    789,
+    790,
+    791,
+    792,
+    793,
+    794,
+    795,
+    796,
+    797,
+    798,
+    799,
+    800,
+    801,
+    802,
+    803,
+    804,
+    805,
+    806,
+    807,
+    808,
+    809,
+    810,
+    811,
+    812,
+    813,
+    814,
+    815,
+    816,
+    817,
+    818,
+    819,
+    820,
+    821,
+    822,
+    823,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    830,
+    831,
+    832,
+    833,
+    834,
+    835,
+    836,
+    837,
+    838,
+    839,
+    840,
+    841,
+    842,
+    843,
+    844,
+    845,
+    846,
+    847,
+    848,
+    849,
+    850,
+    851,
+    852,
+    853,
+    854,
+    855,
+    856,
+    857,
+    858,
+    859,
+    860,
+    861,
+    862,
+    863,
+    864,
+    865,
+    866,
+    867,
+    868,
+    869,
+    870,
+    871,
+    872,
+    873,
+    874,
+    875,
+    876,
+    877,
+    878,
+    879,
+    880,
+    881,
+    882,
+    883,
+    884,
+    885,
+    886,
+    887,
+    888,
+    889,
+    890,
+    891,
+    892,
+    893,
+    894,
+    895,
+    896,
+    897,
+    898,
+    899,
+    900,
+    901,
+    902,
+    903,
+    904,
+    905,
+    906,
+    907,
+    908,
+    909,
+    910,
+    911,
+    912,
+    913,
+    914,
+    915,
+    916,
+    917,
+    918,
+    919,
+    920,
+    921,
+    922,
+    923,
+    924,
+    925,
+    926,
+    927,
+    928,
+    929,
+    930,
+    931,
+    932,
+    933,
+    934,
+    935,
+    936,
+    937,
+    938,
+    939,
+    940,
+    941,
+    942,
+    943,
+    944,
+    945,
+    946,
+    947,
+    948,
+    949,
+    950,
+    951,
+    952,
+    953,
+    954,
+    955,
+    956,
+    957,
+    958,
+    959,
+    960,
+    961,
+    962,
+    963,
+    964,
+    965,
+    966,
+    967,
+    968,
+    969,
+    970,
+    971,
+    972,
+    973,
+    974,
+    975,
+    976,
+    977,
+    978,
+    979,
+    980,
+    981,
+    982,
+    983,
+    984,
+    985,
+    986,
+    987,
+    988
+  ]
+}
