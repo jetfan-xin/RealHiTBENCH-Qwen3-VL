@@ -76,7 +76,7 @@ kiwisolver==1.4.7
 lark==1.2.2
 latex2mathml==3.78.0
 llguidance==0.7.30
-llvmlite==0.43.0
+llvmlite>=0.44.dev0
 lm-format-enforcer==0.10.12
 lxml==5.4.0
 markdown-it-py==3.0.0
@@ -209,3 +209,20 @@ xgrammar==0.1.21
 xxhash==3.5.0
 yarl==1.20.0
 zipp==3.22.0
+bert-score
+pillow
+tqdm
+PyYAML
+requests
+beautifulsoup4
+html5lib
+openpyxl
+huggingface_hub
+# python -m pip install -U \
+#   "huggingface_hub<1.0" \
+#   "transformers>=4.56,<5" \
+#   "tokenizers>=0.22,<0.24" \
+#   "accelerate<2" \
+#   "safetensors>=0.4"
+# python -m pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.7cxx11abiTRUE-cp310-cp310-linux_x86_64.whl"
+# python -m pip install -U hf_transfer

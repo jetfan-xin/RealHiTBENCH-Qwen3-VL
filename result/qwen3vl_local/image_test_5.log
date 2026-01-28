@@ -1,9 +1,10 @@
+nohup: ignoring input
 `torch_dtype` is deprecated! Use `dtype` instead!
 Configuration:
-  Model: /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
   Modality: image
   Format: html
-  Data path: /mnt/data1/users/4xin/RealHiTBench
+  Data path: /data/pan/4xin/datasets/RealHiTBench
   Use Flash Attention: True
   Generation Settings (Qwen3-VL Instruct Recommended):
     Temperature: 0.7
@@ -14,16 +15,15 @@ Configuration:
     Max Tokens: 32768
   Batch size: 1
 
-Loading Qwen3-VL model from /mnt/data1/users/4xin/qwen/Qwen3-VL-8B-Instruct...
-Available GPUs: 1
-Warning: Could not load with flash_attention_2: /mnt/data1/users/4xin/conda_envs/HIT/lib/python3.10/site-packages/flash_attn_2_cuda.cpython-310-x86_64-linux-gnu.so: undefined symbol: _ZN3c105ErrorC2ENS_14SourceLocationESs
-Falling back to default attention implementation...
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.45it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.45it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.43it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.68it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.58it/s]
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 5
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:07<00:23,  7.87s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:08,  4.31s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:11<00:03,  3.13s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:12<00:00,  2.43s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:12<00:00,  3.19s/it]
+Model loaded with flash_attention_2 attention
 Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
-Model distributed across devices: {0}
+Model distributed across devices: {0, 1, 2, 3, 4}
 Successfully loaded F1, EM, ROUGE, SacreBLEU
 Limited to 5 queries
-Processing image modality:   0%|          | 0/5 [00:00<?, ?it/s]Processing image modality:  20%|██        | 1/5 [00:38<02:35, 38.83s/it]Processing image modality:  40%|████      | 2/5 [01:17<01:55, 38.59s/it]Processing image modality:  60%|██████    | 3/5 [01:55<01:16, 38.50s/it]Processing image modality:  80%|████████  | 4/5 [02:34<00:38, 38.55s/it]Processing image modality: 100%|██████████| 5/5 [03:13<00:00, 38.72s/it]Processing image modality: 100%|██████████| 5/5 [03:13<00:00, 38.66s/it]
+Processing image modality:   0%|          | 0/5 [00:00<?, ?it/s]Processing image modality:  20%|██        | 1/5 [00:15<01:00, 15.12s/it]Processing image modality:  40%|████      | 2/5 [00:19<00:26,  8.97s/it]Processing image modality:  60%|██████    | 3/5 [00:24<00:14,  7.01s/it]Processing image modality:  80%|████████  | 4/5 [00:29<00:06,  6.38s/it]Processing image modality: 100%|██████████| 5/5 [00:36<00:00,  6.55s/it]Processing image modality: 100%|██████████| 5/5 [00:36<00:00,  7.34s/it]
 
 ============================================================
 Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
@@ -32,8 +32,8 @@ Predictions:  ['1953 61179']
 Answer:  ['1955 62170']
 Prediction: 1953, 61179
 Reference: 1955, 62170
-Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
-Processing Time: 38.83s
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 15.12s
 
 ============================================================
 Query ID: 2 | Type: Fact Checking | SubType: Inference-based Fact Checking
@@ -42,8 +42,8 @@ Predictions:  ['1953']
 Answer:  ['1954']
 Prediction: 1953
 Reference: 1954
-Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
-Processing Time: 38.41s
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.66s
 
 ============================================================
 Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
@@ -52,8 +52,8 @@ Predictions:  ['2023']
 Answer:  ['1953']
 Prediction: 2023
 Reference: 1953
-Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
-Processing Time: 38.40s
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.69s
 
 ============================================================
 Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
@@ -62,34 +62,34 @@ Predictions:  ['161037']
 Answer:  ['158772']
 Prediction: 161037
 Reference: 158772
-Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
-Processing Time: 38.64s
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 5.40s
 
 ============================================================
 Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
 ============================================================
-Predictions:  ['57 12']
+Predictions:  ['56 13']
 Answer:  ['58 16']
-Prediction: 5.67, 1.23
+Prediction: 5.64, 1.33
 Reference: 5.80, 1.62
-Metrics: {'F1': 0.0, 'EM': np.float64(0.0), 'ROUGE-L': np.float64(0.0), 'SacreBLEU': 0.0}
-Processing Time: 39.02s
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 6.85s
 
 ============================================================
 EVALUATION COMPLETE
 ============================================================
 Total queries: 5
-Duration: 197.07s
-Results saved to: /ltstorage/home/4xin/image_table/RealHiTBench/result/qwen3vl_local/Qwen3-VL-8B-Instruct_image/results_20260127_093411.json
+Duration: 56.04s
+Results saved to: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local/Qwen3-VL-8B-Instruct_image/results_20260127_223309.json
 
 Aggregate Metrics by Question Type:
   Fact Checking:
-    SacreBLEU: 0.0000
-    ROUGE-L: 0.0000
-    EM: 0.0000
     F1: 0.0000
+    EM: 0.0000
+    ROUGE-L: 0.0000
+    SacreBLEU: 0.0000
   Data Analysis:
-    SacreBLEU: 0.0000
-    ROUGE-L: 0.0000
-    EM: 0.0000
     F1: 0.0000
+    EM: 0.0000
+    ROUGE-L: 0.0000
+    SacreBLEU: 0.0000
