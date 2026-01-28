@@ -4197,24 +4197,2075 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 1.2
+    },
+    {
+      "id": 2575,
+      "FileName": "science-table58",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the maximum CT value observed for CD40 in Experiment 3 across all sets? (Accurate to two decimal places)",
+      "Reference": "23.96",
+      "Prediction": "23.82",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 2576,
+      "FileName": "science-table58",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which set shows the lowest CT value for b-actin in Experiment 2, and what is that value? (Accurate to two decimal places)",
+      "Reference": "Set4, 14.55",
+      "Prediction": "Set4, 14.55",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 2577,
+      "FileName": "science-table58",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please draw a line chart to compare the CD values of CD40 in the repli1 and repli2 columns of Expt1.",
+      "Reference": "[[23.2116527557, 19.4689064026, 23.3507347107, 19.4528656006, 23.1822853088, 21.9313316345, 23.1458015442, 21.9330348969, 23.1368350983, 22.6286048889], [23.2006320953, 19.3367061615, 23.2638473511, 19.2212486267, 23.2993602753, 21.3368148804, 23.1565036774, 21.8321475983, 23.6158905029, 22.7265548706]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Set': ['Set1', 'Set2', 'Set3', 'Set4', 'Set5', 'Set6', 'Set7', 'Set8', 'Set9', 'Set10'],\n    'CD40_Expt1_repli1': [23.21165276, 19.4689064, 23.35073471, 19.4528656, 23.18228531, 21.93133163, 23.14580154, 21.9330349, 23.1368351, 22.62860489],\n    'CD40_Expt1_repli2': [23.2006321, 19.33670616, 23.26384735, 19.22124863, 23.29936028, 21.33681488, 23.15650368, 21.8321476, 23.6158905, 22.72655487]\n}\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10,6))\nplt.plot(df['Set'], df['CD40_Expt1_repli1'], marker='o', label='repli1')\nplt.plot(df['Set'], df['CD40_Expt1_repli2'], marker='s', label='repli2')\nplt.title('CD40 CD values in Expt1 for repli1 and repli2')\nplt.xlabel('Set')\nplt.ylabel('CD Value')\nplt.legend()\nplt.grid(True)\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 24.69
+    },
+    {
+      "id": 2578,
+      "FileName": "science-table59",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average CT value for Experiment 1 of CD40 in Set1? (Accurate to two decimal places)",
+      "Reference": "23.03",
+      "Prediction": "22.98, 23.07",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2579,
+      "FileName": "science-table59",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the CT value for b-actin in the second replication of Experiment 1 for Set5? (Accurate to two decimal places)",
+      "Reference": "15.76",
+      "Prediction": "15.88",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2580,
+      "FileName": "science-table59",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the maximum CT value observed for CD40 in Experiment 3 across all sets? (Accurate to two decimal places)",
+      "Reference": "23.61",
+      "Prediction": "23.61",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2581,
+      "FileName": "science-table59",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which set shows the lowest CT value for b-actin in Experiment 2, and what is that value? (Accurate to two decimal places)",
+      "Reference": "Set8, 15.45",
+      "Prediction": "Set8, 15.45",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 2582,
+      "FileName": "science-table59",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please draw a line chart to compare the CD values of CD40 in the repli1 and repli2 columns of Expt1.",
+      "Reference": "[[22.986497879, 18.4517688751, 22.9587059021, 20.3123626709, 22.940076828, 20.4028625488, 22.8883495331, 18.1444606781], [23.0753498077, 18.3848190308, 22.7224674225, 20.3976631165, 22.7805767059, 20.2786560059, 22.9476661682, 17.9722309113]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Set': ['Set1', 'Set2', 'Set3', 'Set4', 'Set5', 'Set6', 'Set7', 'Set8'],\n    'Condition': ['uninf', 'uninf', 'LD Infected', 'LD Infected', 'LD Infected', 'LD Infected', 'LD Infected', 'LD Infected'],\n    'Treatment': ['DC -siRNA - LPS', 'DC -siRNA + LPS', 'DC -siRNA - LPS', 'DC -siRNA +LPS', 'DC + Ctrl siRNA -LPS', 'DC + Ctrl siRNA+LPS', 'DC+ SHP-1 siRNA-LPS', 'DC+ SHP-1 siRNA + LPS'],\n    'CD40_Expt1_repli1': [22.98649788, 18.45176888, 22.9587059, 20.31236267, 22.94007683, 20.40286255, 22.88834953, 18.14446068],\n    'CD40_Expt1_repli2': [23.07534981, 18.38481903, 22.72246742, 20.39766312, 22.78057671, 20.27865601, 22.94766617, 17.97223091]\n}\ndf = pd.DataFrame(data)\n\n# Create the line chart\nplt.figure(figsize=(10, 6))\nplt.plot(df['Set'], df['CD40_Expt1_repli1'], marker='o', label='repli1')\nplt.plot(df['Set'], df['CD40_Expt1_repli2'], marker='s', label='repli2')\nplt.title('CD40 CD Values in Expt1 (repli1 vs repli2)')\nplt.xlabel('Set')\nplt.ylabel('CD Value')\nplt.legend()\nplt.grid(True)\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 28.49
+    },
+    {
+      "id": 2583,
+      "FileName": "science-table60",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average CT value for Experiment 1 of CD40 in Set1? (Accurate to two decimal places)",
+      "Reference": "20.51",
+      "Prediction": "20.51, 20.71",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.55
+    },
+    {
+      "id": 2584,
+      "FileName": "science-table60",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the CT value for b-actin in the second replication of Experiment 2 for Set5? (Accurate to two decimal places)",
+      "Reference": "13.72",
+      "Prediction": "13.72",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2585,
+      "FileName": "science-table60",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the maximum CT value observed for CD40 in Experiment 3 across all sets? (Accurate to two decimal places)",
+      "Reference": "24.95",
+      "Prediction": "24.95",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2586,
+      "FileName": "science-table60",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which set shows the lowest CT value for b-actin in Experiment 2, and what is that value? (Accurate to two decimal places)",
+      "Reference": "Set3, 13.31",
+      "Prediction": "Set7, 13.49",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.36
+    },
+    {
+      "id": 2587,
+      "FileName": "science-table60",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please draw a line chart to compare the CD values of CD40 in the repli1 and repli2 columns of Expt1.",
+      "Reference": "[[20.3074092865, 16.9443378448, 20.3596305847, 19.8758468628, 21.0556240082, 19.9157752991, 20.3062515259, 16.9124774933], [20.7081680298, 16.9541606903, 20.9206008911, 19.8993682861, 21.1028785706, 19.5545768738, 20.3690299988, 16.9343242645]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Condition': ['uninf', 'uninf', 'LD Infected', 'LD Infected', 'LD Infected', 'LD Infected', 'LD Infected', 'LD Infected'],\n    'Treatment': ['DC -siRNA - TNF', 'DC -siRNA + TNF', 'DC-siRNA - TNF', 'DC-siRNA + TNF', 'DC+ Ctrl siRNA -TNF', 'DC+ Ctrl siRNA + TNF', 'DC+SHP-1 siRNA - TNF', 'DC+SHP-1 siRNA + TNF'],\n    'Expt1_repli1': [20.30740929, 16.94433784, 20.35963058, 19.87584686, 21.05562401, 19.9157753, 20.30625153, 16.91247749],\n    'Expt1_repli2': [20.70816803, 16.95416069, 20.92060089, 19.89936829, 21.10287857, 19.55457687, 20.36903, 16.93432426]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10,6))\nplt.plot(df['Condition'], df['Expt1_repli1'], marker='o', label='repli1', color='blue')\nplt.plot(df['Condition'], df['Expt1_repli2'], marker='s', label='repli2', color='red')\n\n# Adding titles and labels\nplt.title('CD40 CD values in Expt1 for repli1 and repli2')\nplt.xlabel('Condition')\nplt.ylabel('CD value')\nplt.legend()\nplt.grid(True)\n\n# Show plot\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 26.18
+    },
+    {
+      "id": 2588,
+      "FileName": "science-table61",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average CT value for Experiment 1 of CD40 in Set1? (Accurate to two decimal places)",
+      "Reference": "23.37",
+      "Prediction": "23.37, 23.37",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.53
+    },
+    {
+      "id": 2589,
+      "FileName": "science-table61",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the CT value for b-actin in the second replication of Experiment 2 for Set5? (Accurate to two decimal places)",
+      "Reference": "16.81",
+      "Prediction": "16.81",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2590,
+      "FileName": "science-table61",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the maximum CT value observed for CD40 in Experiment 3 across all sets? (Accurate to two decimal places)",
+      "Reference": "23.94",
+      "Prediction": "23.62",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2591,
+      "FileName": "science-table61",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which set shows the lowest CT value for b-actin in Experiment 2, and what is that value? (Accurate to two decimal places)",
+      "Reference": "Set10, 16.23",
+      "Prediction": "Set8, 16.61",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.34
+    },
+    {
+      "id": 2592,
+      "FileName": "science-table61",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please draw a line chart to compare the CD values of CD40 in the repli1 and repli2 columns of Expt1.",
+      "Reference": "[[23.4657554626, 20.686794281, 23.2029571533, 20.8197860718, 23.2579116821, 21.2530326843, 23.2483062744, 21.0089817047, 23.1040992737, 22.6474704742], [23.2778282166, 20.8684120178, 23.0843296051, 20.9738998413, 23.2252044678, 21.208026886, 23.1112766266, 20.9931335449, 23.0615386963, 22.8045501709]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Set': ['Set1', 'Set2', 'Set3', 'Set4', 'Set5', 'Set6', 'Set7', 'Set8', 'Set9', 'Set10'],\n    'CD40_Expt1_repli1': [23.46575546, 20.68679428, 23.20295715, 20.81978607, 23.25791168, 21.25303268, 23.24830627, 21.0089817, 23.10409927, 22.64747047],\n    'CD40_Expt1_repli2': [23.27782822, 20.86841202, 23.08432961, 20.97389984, 23.22520447, 21.20802689, 23.11127663, 20.99313354, 23.0615387, 22.80455017]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.plot(df['Set'], df['CD40_Expt1_repli1'], marker='o', label='repli1')\nplt.plot(df['Set'], df['CD40_Expt1_repli2'], marker='s', label='repli2')\nplt.title('CD40 CD values in Expt1 (repli1 vs repli2)')\nplt.xlabel('Set')\nplt.ylabel('CD value')\nplt.legend()\nplt.grid(True)\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 25.58
+    },
+    {
+      "id": 2593,
+      "FileName": "science-table62",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average spleen weight of uninfected mice without dendritic cell transfer in Set1? (Accurate to two decimal places)",
+      "Reference": "107.07",
+      "Prediction": "107.07",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 2594,
+      "FileName": "science-table62",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest mean spleen weight?",
+      "Reference": "Set7",
+      "Prediction": "Set7",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 2595,
+      "FileName": "science-table62",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of spleen weight for infected mice treated with DCs and PBS? (Accurate to two decimal places)",
+      "Reference": "83.11",
+      "Prediction": "83.11",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2596,
+      "FileName": "science-table62",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which experiment shows the least variability in spleen weight for infected mice treated with DCs and SAG?",
+      "Reference": "Set8",
+      "Prediction": "Expt-2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2597,
+      "FileName": "science-table62",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of Infected mice (no DC trnf) and Infected mice [DC (Runx1+3 siRNA + CD40) + SAG] in Expt-2?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong positive correlation, 0.92",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 2598,
+      "FileName": "science-table63",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average liver weight of uninfected mice without dendritic cell transfer? (Accurate to two decimal places)",
+      "Reference": "1396.91",
+      "Prediction": "1396.91",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2599,
+      "FileName": "science-table63",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest standard deviation in liver weight?",
+      "Reference": "Set6",
+      "Prediction": "Set6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.88
+    },
+    {
+      "id": 2600,
+      "FileName": "science-table63",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in mean liver weight between Set4 and Set5? (Accurate to two decimal places)",
+      "Reference": "45.09",
+      "Prediction": "144.91",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 2601,
+      "FileName": "science-table63",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set shows the lowest liver weight mean among infected mice treated with SAG?",
+      "Reference": "Set8",
+      "Prediction": "Set4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 2602,
+      "FileName": "science-table63",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of liver weight and infection status?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.95",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 2603,
+      "FileName": "science-table64",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean LDU value for spleen in Set3 (Inf mice (DC + SAG))? (Accurate to two decimal places)",
+      "Reference": "291.17",
+      "Prediction": "291.17",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 2604,
+      "FileName": "science-table64",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest standard deviation (SD) in LDU values for the spleen?",
+      "Reference": "Set6",
+      "Prediction": "Set6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 2605,
+      "FileName": "science-table64",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in mean LDU values between Set1 and Set2 for Infected mice treated with PBS via DCs? (Accurate to two decimal places)",
+      "Reference": "11.18",
+      "Prediction": "11.18",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2606,
+      "FileName": "science-table64",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In Expt-2, which replicate of Set7 has the highest LDU value?",
+      "Reference": "Replicate3",
+      "Prediction": "Replicate3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 2607,
+      "FileName": "science-table64",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of Replicate1 and Replicate2 for Expt-1?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.95",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 2608,
+      "FileName": "science-table65",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean LDU value for Set3? (Accurate to two decimal places)",
+      "Reference": "2442.52",
+      "Prediction": "2442.52",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 2609,
+      "FileName": "science-table65",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest standard deviation (SD)?",
+      "Reference": "Set6",
+      "Prediction": "Set6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 2610,
+      "FileName": "science-table65",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in mean LDU between Set1 and Set2? (Accurate to two decimal places)",
+      "Reference": "128.79",
+      "Prediction": "128.79",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2611,
+      "FileName": "science-table65",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which experiment shows lower overall variability as indicated by the SD for Set5?",
+      "Reference": "Expt-2",
+      "Prediction": "Expt-2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 2612,
+      "FileName": "science-table65",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of Replicate1 and Replicate2 for Expt-1?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.97",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 2613,
+      "FileName": "science-table66",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for 'Uninfected no DC Trnf' across all replicates in Expt-1 and Expt-2? (Accurate to two decimal places)",
+      "Reference": "1.04",
+      "Prediction": "1.04, 1.25",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 2614,
+      "FileName": "science-table66",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Which treatment shows the highest mean value between 'DC + SAG' and 'DC (Runx1+3 siRNA) + SAG'?",
+      "Reference": "DC + SAG",
+      "Prediction": "DC + SAG, DC (Runx1+3 siRNA) + SAG",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 16.23
+      },
+      "ProcessingTime": 1.76
+    },
+    {
+      "id": 2615,
+      "FileName": "science-table66",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many conditions show a mean value greater than 5?",
+      "Reference": "2",
+      "Prediction": "DC + SAG, DC (Runx1+3 siRNA + CD40) + SAG",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.89
+    },
+    {
+      "id": 2616,
+      "FileName": "science-table66",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Expt-1 has the lowest value for 'DC + PBS'?",
+      "Reference": "Replicate2",
+      "Prediction": "Replicate1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2617,
+      "FileName": "science-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for 'Uninfected no DC Trnf' across all replicates in Expt-1 and Expt-2? (Accurate to two decimal places)",
+      "Reference": "0.18",
+      "Prediction": "0.18, 0.18",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 2618,
+      "FileName": "science-table67",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Which treatment shows the highest mean value between 'DC + SAG' and 'DC (Runx1+3 siRNA) + SAG'?",
+      "Reference": "DC (Runx1+3 siRNA) + SAG",
+      "Prediction": "DC (Runx1+3 siRNA) + SAG",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 2619,
+      "FileName": "science-table67",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many conditions show a mean value greater than 0.5?",
+      "Reference": "4",
+      "Prediction": "Set2, Set6, Set7",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 2620,
+      "FileName": "science-table67",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Expt-1 has the lowest value for 'DC + PBS'?",
+      "Reference": "Replicate3",
+      "Prediction": "Replicate3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 2621,
+      "FileName": "science-table68",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for 'Uninfected no DC Trnf' across all replicates in Expt-1 and Expt-2? (Accurate to two decimal places)",
+      "Reference": "0.30",
+      "Prediction": "0.30, 0.38",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.42
+    },
+    {
+      "id": 2622,
+      "FileName": "science-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Which treatment shows the highest mean value between 'DC (Runx1+3 siRNA + Vec) + SAG' and 'DC (Runx1+3 siRNA) + SAG'?",
+      "Reference": "DC (Runx1+3 siRNA + Vec) + SAG",
+      "Prediction": "DC (Runx1+3 siRNA) + SAG, DC (Runx1+3 siRNA + Vec) + SAG",
+      "Metrics": {
+        "F1": 71.43,
+        "EM": 0.0,
+        "ROUGE-L": 71.43,
+        "SacreBLEU": 44.63
+      },
+      "ProcessingTime": 2.34
+    },
+    {
+      "id": 2623,
+      "FileName": "science-table68",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many conditions show a mean value greater than 0.5?",
+      "Reference": "3",
+      "Prediction": "DC + SAG, DC (Ctrl siRNA) + SAG, DC (Runx1+3 siRNA) + SAG, DC (Runx1+3 siRNA + Vec) + SAG, DC (Runx1+3 siRNA + CD40) + SAG",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.86
+    },
+    {
+      "id": 2624,
+      "FileName": "science-table68",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Expt-1 has the lowest value for 'DC + PBS'?",
+      "Reference": "Replicate2",
+      "Prediction": "Replicate2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2625,
+      "FileName": "science-table69",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for 'Infected no DC Trnf' across all replicates in Expt-1 and Expt-2? (Accurate to two decimal places)",
+      "Reference": "2.99",
+      "Prediction": "2.99",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2626,
+      "FileName": "science-table69",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Which treatment shows the highest mean value between 'DC (Runx1+3 siRNA + Vec) + SAG' and 'DC (Runx1+3 siRNA) + SAG'?",
+      "Reference": "DC (Runx1+3 siRNA) + SAG",
+      "Prediction": "DC (Runx1+3 siRNA) + SAG, DC (Runx1+3 siRNA + Vec) + SAG",
+      "Metrics": {
+        "F1": 61.54,
+        "EM": 0.0,
+        "ROUGE-L": 61.54,
+        "SacreBLEU": 29.85
+      },
+      "ProcessingTime": 2.22
+    },
+    {
+      "id": 2627,
+      "FileName": "science-table69",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many conditions show a mean value greater than 3?",
+      "Reference": "1",
+      "Prediction": "DC (Runx1+3 siRNA) + SAG",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 2628,
+      "FileName": "science-table69",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Expt-1 has the highest value for 'DC + PBS'?",
+      "Reference": "Replicate1",
+      "Prediction": "Replicate2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 2629,
+      "FileName": "science-table70",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the intensity of Pr1 at LPS 0h?",
+      "Reference": "39.59",
+      "Prediction": "39.59",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2630,
+      "FileName": "science-table70",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest Intensity for Pr2?",
+      "Reference": "Set 3",
+      "Prediction": "Set 2",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.91
+    },
+    {
+      "id": 2631,
+      "FileName": "science-table70",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in the Intensity of Pr2 between LPS 24h and LPS 0h?",
+      "Reference": "2.7",
+      "Prediction": "14.66",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 2632,
+      "FileName": "science-table70",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average Intensity/area for Pr1 across all sets? (Accurate to two decimal places)",
+      "Reference": "5262.86",
+      "Prediction": "5247.86",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 2633,
+      "FileName": "science-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the intensity of Pr1 at LPS 0h?",
+      "Reference": "40.62",
+      "Prediction": "40.62",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2634,
+      "FileName": "science-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest Intensity for Pr2?",
+      "Reference": "Set 2",
+      "Prediction": "Set 2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 2635,
+      "FileName": "science-table71",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in the Intensity of Pr2 between LPS 24h and LPS 0h?",
+      "Reference": "10.59",
+      "Prediction": "28.18",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2636,
+      "FileName": "science-table71",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average Intensity/area for Pr1 across all sets? (Accurate to two decimal places)",
+      "Reference": "2463.91",
+      "Prediction": "2923.43",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2637,
+      "FileName": "science-table72",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the intensity of Pr1 at LPS 0h?",
+      "Reference": "34.23",
+      "Prediction": "34.23",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 2638,
+      "FileName": "science-table72",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest Intensity for Pr2?",
+      "Reference": "Set 3",
+      "Prediction": "Set 2",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 2639,
+      "FileName": "science-table72",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in the Intensity of Pr2 between LPS 0h and LPS 24h?",
+      "Reference": "0.46",
+      "Prediction": "1.46",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 2640,
+      "FileName": "science-table72",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average Intensity/area for Pr1 across all sets? (Accurate to two decimal places)",
+      "Reference": "1960.91",
+      "Prediction": "2426.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2641,
+      "FileName": "science-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the fold change of Pr1/Oct-1 at TNF 0.5h in Experiment 2? (Accurate to two decimal places)",
+      "Reference": "3.02",
+      "Prediction": "3.02",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 2642,
+      "FileName": "science-table73",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Which experiment shows the highest mean fold change across all time points?",
+      "Reference": "Exp1",
+      "Prediction": "Set 2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.78
+    },
+    {
+      "id": 2643,
+      "FileName": "science-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "At what time point does the fold change first drop below 3 in Experiment 1? (except TNF 0h)",
+      "Reference": "TNF 24h",
+      "Prediction": "TNF 12h",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2644,
+      "FileName": "science-table73",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How does the fold change of Pr1/Oct-1 at TNF 1h compare to TNF 0h in terms of percentage increase in Experiment 3? (Accurate to two decimal places)",
+      "Reference": "285.84%",
+      "Prediction": "162.41%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2645,
+      "FileName": "science-table73",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Summarize the key differences between Set3 and Set4 in terms of their mean and standard deviation LDU values for spleen, highlighting any insights into the variability of responses.",
+      "Reference": "Set3 exhibits a lower mean LDU value of 291.17 compared to Set4's 608.64, indicating a higher average response level in Set4. The standard deviation is 105.5 for Set3 and 268.6 for Set4, suggesting greater variability in Set4's responses.",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2646,
+      "FileName": "science-table74",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the fold change of TNF 0.5h in Experiment 2? (Accurate to two decimal places)",
+      "Reference": "4.29",
+      "Prediction": "4.29",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 2647,
+      "FileName": "science-table74",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which time point shows the highest mean fold change?",
+      "Reference": "TNF 0.5h",
+      "Prediction": "TNF 0.5 h",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 2648,
+      "FileName": "science-table74",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "At which time points is the fold change less than 2 across all experiments? (except TNF 0h)",
+      "Reference": "TNF 24h",
+      "Prediction": "TNF 12h, TNF 24h",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.27
+    },
+    {
+      "id": 2649,
+      "FileName": "science-table74",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How does the fold change of TNF 1h compare to TNF 3h in Experiment 1? (higher/lower/equal)",
+      "Reference": "Higher",
+      "Prediction": "higher",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.69
+    },
+    {
+      "id": 2650,
+      "FileName": "science-table74",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, focusing on the time points with the highest and lowest mean fold changes and any trends observed in the TNF response over time.",
+      "Reference": "The table outlines TNF response across various time points with mean fold changes indicating gene expression levels. The highest mean fold change is observed at TNF 0.5h, signaling an immediate strong reaction. The lowest is at TNF 24h, suggesting a decline in response over time. Trends show an initial spike followed by a gradual decrease.",
+      "Prediction": "The table shows fold change data for Pr2/Oct-1 expression under TNF stimulation at different time points (0h, 0.5h, 1h, 3h, 6h, 12h, 24h) across three experiments (Expt1, Expt2, Exp3), with mean and standard deviation. The highest mean fold change occurs at 0.5h (mean = 3.74775167), while the lowest is at 24h (mean = 1.549126337). A clear downward trend is observed in mean fold change over time, indicating a decrease in Pr2/Oct-1 expression as TNF stimulation duration increases.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.29
+    },
+    {
+      "id": 2651,
+      "FileName": "science-table75",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Experiment 2 has the highest percentage of infected DCs?",
+      "Reference": "Replicate 1",
+      "Prediction": "Replicate 2",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 2652,
+      "FileName": "science-table75",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many more total DCs does Field_10 have compared to Field_1 in Experiment 1?",
+      "Reference": "7",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.52
+    },
+    {
+      "id": 2653,
+      "FileName": "science-table75",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In Experiment 2, what is the lowest number of intracellular amastigotes found in any field?",
+      "Reference": "57",
+      "Prediction": "57",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 2654,
+      "FileName": "science-table75",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which field shows the highest number of intracellular amastigotes in Experiment 1 Replicate 3?",
+      "Reference": "Field_23",
+      "Prediction": "Field_30",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 2655,
+      "FileName": "science-table75",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'No. of total DCs' and 'No. of infected DCs'?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.89
+    },
+    {
+      "id": 2656,
+      "FileName": "science-table76",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Experiment 2 has the lowest percentage of infected DCs?",
+      "Reference": "Replicate 3",
+      "Prediction": "Replicate 3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2657,
+      "FileName": "science-table76",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many more total DCs does Field_4 have compared to Field_1 in Replicate 1 of Experiment 1?",
+      "Reference": "11",
+      "Prediction": "7, 17",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.7
+    },
+    {
+      "id": 2658,
+      "FileName": "science-table76",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In Experiment 2, what is the highest number of intracellular amastigotes found in any field?",
+      "Reference": "114",
+      "Prediction": "112",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2659,
+      "FileName": "science-table76",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which field shows the highest number of intracellular amastigotes in Experiment 1 Replicate 2?",
+      "Reference": "Field_16",
+      "Prediction": "Field_8",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.55
+    },
+    {
+      "id": 2660,
+      "FileName": "science-table76",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'No. of total DCs' and 'No. of intracellular amastgotes'?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.95",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.87
+    },
+    {
+      "id": 2661,
+      "FileName": "science-table77",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which replicate in Experiment 1 has the lowest percentage of infected DCs?",
+      "Reference": "Replicate 2",
+      "Prediction": "Replicate 3",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2662,
+      "FileName": "science-table77",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How many more total DCs does Field_4 have compared to Field_1 in Replicate 2 of Experiment 1?",
+      "Reference": "5",
+      "Prediction": "9",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.57
+    },
+    {
+      "id": 2663,
+      "FileName": "science-table77",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In Experiment 2, what is the highest number of intracellular amastigotes found in any field?",
+      "Reference": "113",
+      "Prediction": "113",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2664,
+      "FileName": "science-table77",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which field shows the highest number of intracellular amastigotes in Experiment 1 Replicate 2?",
+      "Reference": "Field_4",
+      "Prediction": "Field_17",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 2665,
+      "FileName": "science-table77",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'No. of infected DCs' and 'No. of intracellular amastgotes'?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.92",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.92
+    },
+    {
+      "id": 2666,
+      "FileName": "science-table78",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average MFI fold change for DC + SAG across all experiments? (Accurate to two decimal places)",
+      "Reference": "3.75",
+      "Prediction": "3.75, 3.92",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 2667,
+      "FileName": "science-table78",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which experiment shows the highest standard deviation (SD) in MFI fold change?",
+      "Reference": "DC + SAG",
+      "Prediction": "Uninf, DC + SAG",
+      "Metrics": {
+        "F1": 80.0,
+        "EM": 0.0,
+        "ROUGE-L": 80.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 2668,
+      "FileName": "science-table78",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average MFI fold change for the LDPm (24h) condition in Expt1? (Accurate to two decimal places)",
+      "Reference": "2.33",
+      "Prediction": "0.75",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.8
+    },
+    {
+      "id": 2669,
+      "FileName": "science-table78",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the ratio of mean MFI fold change between 'DC + SAG' and 'DC - SAG' for the LDPm (24h) condition? (Accurate to two decimal places)",
+      "Reference": "4.90",
+      "Prediction": "4.88, 4.88",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 2670,
+      "FileName": "science-table78",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'Expt1' and 'Expt2'?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2671,
+      "FileName": "science-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the MFI fold change for Uninf DC- siRNA + TNF in Expt2? (Accurate to two decimal places)",
+      "Reference": "7.43",
+      "Prediction": "7.43",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 2672,
+      "FileName": "science-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation (SD) of MFI fold change for LDPm (24h) DC- siRNA -TNF? (Accurate to two decimal places)",
+      "Reference": "0.58",
+      "Prediction": "0.58",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 2673,
+      "FileName": "science-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which treatment has the lowest MFI fold change mean among all treatments?",
+      "Reference": "DC + SHP1 siRNA -TNF",
+      "Prediction": "DC- siRNA -TNF",
+      "Metrics": {
+        "F1": 85.71,
+        "EM": 0.0,
+        "ROUGE-L": 85.71,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2674,
+      "FileName": "science-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the minimum MFI fold change value for LDPm (24h) condition in Expt1? (Accurate to two decimal places)",
+      "Reference": "0.06",
+      "Prediction": "0.34",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 2675,
+      "FileName": "science-table79",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the table's key insights, focusing on how TNF presence affects MFI fold changes across different treatments and experiments?",
+      "Reference": "The table details MFI fold changes for various DC treatments with or without TNF across three experiments. Key insights show that TNF presence generally increases MFI fold changes. Notable exceptions exist, indicating treatment-specific responses. Trends suggest TNF has a positive impact on MFI fold changes but effects vary by treatment type and experiment.",
+      "Prediction": "The table shows MFI fold changes under different treatments (DC- siRNA, DC + Ctrl siRNA, DC + SHP1 siRNA) with or without TNF across three experiments. TNF presence generally increases MFI fold changes, especially in DC + SHP1 siRNA + TNF (mean 9.109) and DC- siRNA + TNF (mean 8.038), while its absence leads to lower values (e.g., DC + SHP1 siRNA -TNF mean 0.760). Variability (SD) is higher in treatments with TNF, indicating more experimental fluctuation.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.33
+    },
+    {
+      "id": 2676,
+      "FileName": "employment-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total civilian labor force for the year 2022, combining all demographic categories?",
+      "Reference": "",
+      "Prediction": "164287",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.41
+    },
+    {
+      "id": 2677,
+      "FileName": "employment-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the participation rates for 2022 and 2023 and identify the year with the higher rate.",
+      "Reference": "",
+      "Prediction": "2023, 2022",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 2678,
+      "FileName": "employment-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Calculate the difference in the civilian labor force between 2022 and 2023 for the total population.",
+      "Reference": "",
+      "Prediction": "2829, 2829",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 2679,
+      "FileName": "employment-table05",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on participation rates, infer whether the labor force's growth from 2022 to 2023 aligns with the trend in the total civilian population.",
+      "Reference": "",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 2680,
+      "FileName": "employment-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total number of people in the civilian labor force with a bachelor's degree only and an advanced degree?",
+      "Reference": "",
+      "Prediction": "39357, 24720",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 2681,
+      "FileName": "employment-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the group in Men with the higher participation rate among individuals with 'Associate degree' and 'Bachelor's degree only'",
+      "Reference": "",
+      "Prediction": "Bachelor's degree only, Associate degree",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 2682,
+      "FileName": "employment-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the difference between civilian noninstitutional population and civilian labor force for women with 'Some college, no degree'?",
+      "Reference": "",
+      "Prediction": "16796, 9128",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.7
+    },
+    {
+      "id": 2683,
+      "FileName": "employment-table07",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare men and women to determine which one has the lower participation rate in “Less than a high school diploma”?",
+      "Reference": "",
+      "Prediction": "Women, Men",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.27
+    },
+    {
+      "id": 2684,
+      "FileName": "employment-table13",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the total employment of Asian women in 2023 across all occupations?",
+      "Reference": "",
+      "Prediction": "5243",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 2685,
+      "FileName": "employment-table13",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the employment numbers of Black men and White men in 2022 within management occupations. Which group has higher employment?",
+      "Reference": "",
+      "Prediction": "White, Black",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.09
+    },
+    {
+      "id": 2686,
+      "FileName": "employment-table13",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Calculate the percentage growth in total employment from 2022 to 2023 for all racial groups combined. The answer should be rounded to two decimal places.",
+      "Reference": "",
+      "Prediction": "1.73",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 2687,
+      "FileName": "employment-table16",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the total number of wage and salary workers aged 16 to 19 years with the self-employed workers in the same age group. What is the difference between these numbers?",
+      "Reference": "",
+      "Prediction": "25, 10",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 2688,
+      "FileName": "employment-table16",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Calculate the total number of unpaid family workers across all age groups in the agricultural sector. What is the final sum?",
+      "Reference": "",
+      "Prediction": "35",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2689,
+      "FileName": "employment-table16",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What are the number of private industry workers and government workers for individuals aged 16 years and older?",
+      "Reference": "",
+      "Prediction": "128154, 21538",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.77
+    },
+    {
+      "id": 2690,
+      "FileName": "employment-table21",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Considering data for persons working 1-34 hours, what is the difference between the totals for agricultural and non-agricultural industries? Round the answer to the nearest whole number.",
+      "Reference": "",
+      "Prediction": "33545",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 2691,
+      "FileName": "employment-table21",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the number of persons at work in all industries who work 5-14 hours and in agriculture?",
+      "Reference": "",
+      "Prediction": "134",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 2692,
+      "FileName": "employment-table21",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which hour range has the highest proportion of workers in non-agricultural industries?",
+      "Reference": "",
+      "Prediction": "35 hours and over",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 2693,
+      "FileName": "employment-table23",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the difference in the total number of people working in Manufacturing and Construction industries in 2023?",
+      "Reference": "",
+      "Prediction": "4826",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 2694,
+      "FileName": "employment-table23",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the data, how many industries catagory report more than 10,000 total workers in 2023?",
+      "Reference": "",
+      "Prediction": "Wage and salary workers, Education and health services",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 2695,
+      "FileName": "employment-table23",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Rank the “Industry and class of worker” by the number of workers who usually work part-time for “Worked 1 to 34 hours” in descending order, listing the last three industries.",
+      "Reference": "",
+      "Prediction": "Leisure and hospitality, Other services, Education and health services",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.41
+    },
+    {
+      "id": 2696,
+      "FileName": "employment-table27",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the difference in total unemployment between 2022 and 2023 for Management occupations? Provide the numerical result.",
+      "Reference": "",
+      "Prediction": "36",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 2697,
+      "FileName": "employment-table27",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the unemployment rate between men and women for Business and financial operations occupations in 2023. Which is higher, and by how much?",
+      "Reference": "",
+      "Prediction": "Men, 0.6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.31
+    },
+    {
+      "id": 2698,
+      "FileName": "employment-table27",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Calculate the unemployment number change in Computer and mathematical occupations from 2022 to 2023.",
+      "Reference": "",
+      "Prediction": "20, 20",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 2699,
+      "FileName": "injuries-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the difference between the total fatalities due to 'Transportation Incidents' and 'Violence and Other Injuries'?",
+      "Reference": "",
+      "Prediction": "1217, 692",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 2700,
+      "FileName": "injuries-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "If the total number of fatalities from 'Self-employed' workers were doubled, what would be the total for 'Falls, Slips, Trips' within this category?",
+      "Reference": "",
+      "Prediction": "304",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 2701,
+      "FileName": "injuries-table04",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Rank the following events from highest to lowest based on the total fatalities: 'Falls, Slips, Trips,' 'Harmful Substances Exposure,' and 'Fires and Explosions.'",
+      "Reference": "",
+      "Prediction": "Falls, slips, trips, Exposure to harmful substances or environments, Fires and explosions",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.73
+    },
+    {
+      "id": 2702,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the combined average daily time spent on 'Sleeping' by employed full-time married mothers and fathers? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "8.14, 8.04",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.39
+    },
+    {
+      "id": 2703,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "how many time does the part-time mothers spend more time on 'Food preparation and cleanup' than full-time fathers? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "0.13",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.2
+    },
+    {
+      "id": 2704,
+      "FileName": "activitytime-table01",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the average time spent on 'Housework' by not-employed fathers and full-time employed mothers with Own household children 6-17. Who spends more, and by how many hours? Round the answer to two decimal places.",
+      "Reference": "",
+      "Prediction": "Not-employed fathers, 0.43",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.3
     }
   ],
   "processed_ids": [
-    2560,
-    2561,
-    2562,
-    2563,
-    2564,
-    2565,
-    2566,
-    2567,
-    2568,
-    2569,
-    2570,
-    2571,
-    2572,
-    2573,
-    2574,
     2305,
     2306,
     2307,
@@ -4469,6 +6520,151 @@
     2556,
     2557,
     2558,
-    2559
+    2559,
+    2560,
+    2561,
+    2562,
+    2563,
+    2564,
+    2565,
+    2566,
+    2567,
+    2568,
+    2569,
+    2570,
+    2571,
+    2572,
+    2573,
+    2574,
+    2575,
+    2576,
+    2577,
+    2578,
+    2579,
+    2580,
+    2581,
+    2582,
+    2583,
+    2584,
+    2585,
+    2586,
+    2587,
+    2588,
+    2589,
+    2590,
+    2591,
+    2592,
+    2593,
+    2594,
+    2595,
+    2596,
+    2597,
+    2598,
+    2599,
+    2600,
+    2601,
+    2602,
+    2603,
+    2604,
+    2605,
+    2606,
+    2607,
+    2608,
+    2609,
+    2610,
+    2611,
+    2612,
+    2613,
+    2614,
+    2615,
+    2616,
+    2617,
+    2618,
+    2619,
+    2620,
+    2621,
+    2622,
+    2623,
+    2624,
+    2625,
+    2626,
+    2627,
+    2628,
+    2629,
+    2630,
+    2631,
+    2632,
+    2633,
+    2634,
+    2635,
+    2636,
+    2637,
+    2638,
+    2639,
+    2640,
+    2641,
+    2642,
+    2643,
+    2644,
+    2645,
+    2646,
+    2647,
+    2648,
+    2649,
+    2650,
+    2651,
+    2652,
+    2653,
+    2654,
+    2655,
+    2656,
+    2657,
+    2658,
+    2659,
+    2660,
+    2661,
+    2662,
+    2663,
+    2664,
+    2665,
+    2666,
+    2667,
+    2668,
+    2669,
+    2670,
+    2671,
+    2672,
+    2673,
+    2674,
+    2675,
+    2676,
+    2677,
+    2678,
+    2679,
+    2680,
+    2681,
+    2682,
+    2683,
+    2684,
+    2685,
+    2686,
+    2687,
+    2688,
+    2689,
+    2690,
+    2691,
+    2692,
+    2693,
+    2694,
+    2695,
+    2696,
+    2697,
+    2698,
+    2699,
+    2700,
+    2701,
+    2702,
+    2703,
+    2704
   ]
 }

@@ -1898,3 +1898,499 @@ Processing Time: 2.08s
 Query ID: 1688 | Type: Numerical Reasoning | SubType: Calculation
 ============================================================
   Warning: Large input (8818 tokens) for image (2612, 4764)
+Processing mix modality:  20%|█▉        | 152/768 [13:42<10:47:41, 63.09s/it]Predictions:  ['06 03 02 01 01 01 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00']
+Answer:  ['17']
+Prediction: 0.57, 0.3, 0.22, 0.12, 0.09, 0.06, 0.05, 0.05, 0.04, 0.04, 0.03, 0.03, 0.02, 0.02, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.0...
+Reference: 1.68
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 206.52s
+
+============================================================
+Query ID: 1689 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large input (9004 tokens) for image (2612, 4764)
+Processing mix modality:  20%|█▉        | 153/768 [13:44<7:39:28, 44.83s/it] Predictions:  ['strong negative correlation 10']
+Answer:  ['negative correlation']
+Prediction: Strong negative correlation, -0.99
+Reference: Negative correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 2.22s
+
+============================================================
+Query ID: 1690 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (8820 tokens) for image (2612, 4764)
+Processing mix modality:  20%|██        | 154/768 [13:46<5:25:59, 31.86s/it]Processing mix modality:  20%|██        | 155/768 [13:48<3:53:02, 22.81s/it]Processing mix modality:  20%|██        | 156/768 [13:49<2:47:09, 16.39s/it]Processing mix modality:  20%|██        | 157/768 [13:51<2:04:07, 12.19s/it]Processing mix modality:  21%|██        | 158/768 [13:53<1:31:31,  9.00s/it]Processing mix modality:  21%|██        | 159/768 [15:05<4:42:34, 27.84s/it]Processing mix modality:  21%|██        | 160/768 [15:06<3:21:40, 19.90s/it]Processing mix modality:  21%|██        | 161/768 [15:08<2:25:05, 14.34s/it]Processing mix modality:  21%|██        | 162/768 [15:09<1:47:01, 10.60s/it]Processing mix modality:  21%|██        | 163/768 [15:11<1:18:56,  7.83s/it]Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 1691 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['12 14']
+Answer:  ['17']
+Prediction: 1.19, 1.43
+Reference: 1.71
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.71s
+
+============================================================
+Query ID: 1692 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['08']
+Answer:  ['08']
+Prediction: 0.76
+Reference: 0.76
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 1693 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['08 08']
+Answer:  ['decrease by 00']
+Prediction: 0.836956522, 0.826086957
+Reference: Decrease by 0.01.
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.39s
+
+============================================================
+Query ID: 1694 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['11']
+Answer:  ['92']
+Prediction: 1.15
+Reference: 9.20
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.56s
+
+============================================================
+Query ID: 1695 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data into a DataFrame
+data = {
+'clone_size': [1, 1.195538427, 1.429312129, 1.70879757421078, 2.042933163, 2.442405099, 2.91998915, 3.490959234, 4.173575909, 4.989670376, 5.96534267, 7.131796389, 8.526336634, 10.19356308, 12.18679637, 14.56978336, 17.41873587, 20.82476807, 24.89681046, 29.7650936, 35.58531317, 42.54360931, 50.86251974, 60.80809682, 72.6984164, 86.91375035, 103.9087283, 124.2268776, 148.5180058, 177.5589829, 212.2785871, 253.787208, 303.4123593, 362.7411346, 433.6709654, 518.4703036, 619.8511709, 741.0558936, 885.960797, 1059.200177, 1266.314513, 1513.927661, 1809.958694, 2163.875169, 2586.995914, 3092.853025, 3697.624639, 4420.652343, 5285.059746, 6318.492013, 7554, 9031.097274],
+'cumulative_probability': [0.967213115, 0.967213115, 0.967213115, 0.967213115, 0.967213115, 0.950819672, 0.950819672, 0.950819672, 0.950819672, 0.950819672, 0.918032787, 0.918032787, 0.918032787, 0.918032787, 0.918032787, 0.901639344, 0.901639344, 0.885245902, 0.885245902, 0.885245902, 0.885245902, 0.868852459, 0.836065574, 0.836065574, 0.819672131, 0.803278689, 0.786885246, 0.754098361, 0.737704918, 0.704918033, 0.655737705, 0.62295082, 0.606557377, 0.557377049, 0.508196721, 0.426229508, 0.393442623, 0.344262295, 0.262295082, 0.213114754, 0.163934426, 0.131147541, 0.06557377, 0.06557377, 0.06557377, 0.049180328, 0.032786885, 0.032786885, 0.032786885, 0.016393443, 0.016393443, 0, 0]
+}
+df = pd.DataFrame(data)
+
+# Plot the cumulative probabilities
+plt.figure(figsize=(10, 6))
+plt.plot(df['clone_size'], df['cumulative_probability'], marker='o', linestyle='-', color='purple')
+plt.title('Cumulative Probabilities of Purple Category for Different Clone Sizes')
+plt.xlabel('Clone Size')
+plt.ylabel('Cumulative Probability')
+plt.grid(True)
+plt.show()
+
+Python Error: All arrays must be of the same length
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data into a DataFrame
+data = {
+    'clone_size': [1, 1.195538427, 1.429312129, 1.70879757421078, 2.042933163, 2.442405099, 2.91998915,...
+Reference: [[0.967213114754098, 0.967213114754098, 0.967213114754098, 0.967213114754098, 0.967213114754098, 0.950819672131147, 0.950819672131147, 0.950819672131147, 0.950819672131147, 0.950819672131147, 0.918032...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 71.80s
+
+============================================================
+Query ID: 1696 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['11']
+Answer:  ['20']
+Prediction: 1.12
+Reference: 1.97
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.38s
+Checkpoint saved: 160 queries processed
+
+============================================================
+Query ID: 1697 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['07']
+Answer:  ['07']
+Prediction: 0.68
+Reference: 0.68
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 1698 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['06 06']
+Answer:  ['decrease by 00']
+Prediction: 0.6374, 0.6044
+Reference: Decrease by 0.03.
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.86s
+
+============================================================
+Query ID: 1699 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['11']
+Answer:  ['30']
+Prediction: 1.15
+Reference: 2.97
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 1700 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data
+data = {
+'clone_size': [1, 1.119291384, 1.252813202, 1.402263022, 1.569540919, 1.756773627, 1.966341584, 2.200909193, 2.463458696, 2.757328093, 3.086253577, 3.454417037, 3.866499226, 4.327739269, 4.844001275, 5.42184889, 6.068628747, 6.792563869, 7.602858212, 8.509813689, 9.524961141, 10.66120694, 11.93299706, 13.3565008, 14.94981626, 16.73320053, 18.72932718, 20.96357454, 23.46434835, 26.26344294, 29.39644539, 32.90318804, 36.82825487, 41.22154836, 46.13892391, 51.64289999, 57.80345299, 64.69890689, 72.41692903, 81.0556447, 90.72488473, 101.5475818, 113.6613333, 127.2201511, 142.3964189, 159.3830848, 178.3961136, 199.6772328, 223.4970062, 250.1582734, 280, 313.4015875],
+'cumulative_probability_red': [0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.818181818, 0.818181818, 0.784090909, 0.784090909, 0.772727273, 0.761363636, 0.761363636, 0.761363636, 0.75, 0.738636364, 0.715909091, 0.715909091, 0.693181818, 0.693181818, 0.681818182, 0.670454545, 0.647727273, 0.636363636, 0.613636364, 0.613636364, 0.568181818, 0.522727273, 0.488636364, 0.454545455, 0.386363636, 0.363636364, 0.340909091, 0.318181818, 0.272727273, 0.25, 0.204545455, 0.181818182, 0.159090909, 0.136363636, 0.125, 0.113636364, 0.113636364, 0.113636364, 0.090909091, 0.090909091, 0.068181818, 0.045454545, 0.022727273, 0.011363636, 2.98372E-16]
+}
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(12, 6))
+plt.plot(df['clone_size'], df['cumulative_probability_red'], marker='o', linestyle='-', color='red')
+plt.title('Cumulative Probabilities of Red Category for Different Clone Sizes')
+plt.xlabel('Clone Size')
+plt.ylabel('Cumulative Probability')
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: Processing mix modality:  21%|██▏       | 164/768 [16:23<4:34:00, 27.22s/it]Processing mix modality:  21%|██▏       | 165/768 [16:25<3:15:28, 19.45s/it]Processing mix modality:  22%|██▏       | 166/768 [16:25<2:19:07, 13.87s/it]Processing mix modality:  22%|██▏       | 167/768 [16:27<1:40:50, 10.07s/it]Processing mix modality:  22%|██▏       | 168/768 [16:28<1:14:18,  7.43s/it]Processing mix modality:  22%|██▏       | 169/768 [16:37<1:18:22,  7.85s/it]Processing mix modality:  22%|██▏       | 170/768 [16:38<58:45,  5.90s/it]  Processing mix modality:  22%|██▏       | 171/768 [16:39<43:29,  4.37s/it]Processing mix modality:  22%|██▏       | 172/768 [16:40<33:07,  3.33s/it]Processing mix modality:  23%|██▎       | 173/768 [16:41<26:29,  2.67s/it]Processing mix modality:  23%|██▎       | 174/768 [16:49<42:41,  4.31s/it]Processing mix modality:  23%|██▎       | 175/768 [16:50<32:49,  3.32s/it]Processing mix modality:  23%|██▎       | 176/768 [16:51<25:56,  2.63s/it]Processing mix modality:  23%|██▎       | 177/768 [16:52<21:17,  2.16s/it][[0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.818181818, 0.818181818, 0.784090909, 0.784090909, 0.772727273, 0.761363636, 0.761363636, 0.761363636, 0.75, 0.738636364, 0.715909091, 0.715909091, 0.693181818, 0.693181818, 0.681818182, 0.670454545, 0.647727273, 0.636363636, 0.613636364, 0.613636364, 0.568181818, 0.522727273, 0.488636364, 0.454545455, 0.386363636, 0.363636364, 0.340909091, 0.318181818, 0.272727273, 0.25, 0.204545455, 0.181818182, 0.159090909, 0.136363636, 0.125, 0.113636364, 0.113636364, 0.113636364, 0.090909091, 0.090909091, 0.068181818, 0.045454545, 0.022727273, 0.011363636, 2.98372e-16]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data
+data = {
+    'clone_size': [1, 1.119291384, 1.252813202, 1.402263022, 1.569540919, 1.756773627, 1.966341584, 2.200909193, 2.46345...
+Reference: [[0.886363636363636, 0.886363636363636, 0.886363636363636, 0.886363636363636, 0.886363636363636, 0.886363636363636, 0.818181818181818, 0.818181818181818, 0.818181818181818, 0.784090909090909, 0.784090909090909, 0.772727272727273, 0.761363636363636, 0.761363636363636, 0.761363636363636, 0.75, 0.738636363636364, 0.715909090909091, 0.715909090909091, 0.693181818181818, 0.693181818181818, 0.681818181818182, 0.670454545454546, 0.647727272727273, 0.636363636363636, 0.613636363636364, 0.613636363636364, 0.568181818181818, 0.522727272727273, 0.488636363636364, 0.454545454545455, 0.386363636363637, 0.363636363636364, 0.340909090909091, 0.318181818181819, 0.272727272727273, 0.25, 0.204545454545455, 0.181818181818182, 0.159090909090909, 0.136363636363637, 0.125, 0.113636363636364, 0.113636363636364, 0.113636363636364, 0.0909090909090912, 0.0909090909090912, 0.0681818181818185, 0.0454545454545458, 0.022727272727273, 0.0113636363636367, 2.98372437868011e-16]]...
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 72.46s
+
+============================================================
+Query ID: 1701 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['756 303']
+Answer:  ['756 of sample is in 60 to 64 years age group with 303 achieving optimal condition']
+Prediction: 75.6, 30.3
+Reference: 75.60% of the sample is in the 60 to 64 years age group, with 30.30% achieving the optimal condition.
+Metrics: {'F1': 22.22, 'EM': 0.0, 'ROUGE-L': 22.22, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 1702 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.83s
+
+============================================================
+Query ID: 1703 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no 00']
+Answer:  ['yes']
+Prediction: No, 0.034*
+Reference: yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 1704 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['031096']
+Answer:  ['0310']
+Prediction: 0,31-0,96
+Reference: 0.31-0.96
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 1705 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents univariate analysis results for different demographic variables (Age Group, Gender, Marital Status, Skin Color, Education Level, Family Income) in relation to Optimal CT. It include...
+Reference: The table summarizes a univariate analysis of factors affecting the Optimal CT rate, covering demographic and socioeconomic variables. Key insights reveal a significantly lower Optimal CT rate for fem...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.83s
+
+============================================================
+Query ID: 1706 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['880 282']
+Answer:  ['88 are nonsmokers with 282 best ct rate 12 are smokers with 355 best ct rate']
+Prediction: 88.0, 28.2
+Reference: 88% are non-smokers with a 28.20% Best CT rate; 12% are smokers with a 35.50% Best CT rate.
+Metrics: {'F1': 11.11, 'EM': 0.0, 'ROUGE-L': 11.11, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+Checkpoint saved: 170 queries processed
+
+============================================================
+Query ID: 1707 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: no
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.81s
+
+============================================================
+Query ID: 1708 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['community association membership']
+Answer:  ['community association membership']
+Prediction: Community Association Membership
+Reference: Community Association Membership
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 1709 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['physical activity activevery active']
+Answer:  ['alcohol consumptionat risk']
+Prediction: Physical Activity, Active-Very Active
+Reference: Alcohol Consumption(At Risk)
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.12s
+
+============================================================
+Query ID: 1710 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents a univariate analysis of various lifestyle factors (Smoking, Alcohol Consumption, Social Activity, Community Association Membership, Attends Religious Services, Physical Activity) i...
+Reference: The table examines the association between various health-related factors and the best Computed Tomography (CT) outcomes. It includes columns for the number of individuals (n), percentages (%), best C...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.14s
+
+============================================================
+Query ID: 1711 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['628']
+Answer:  ['628']
+Prediction: 62,8
+Reference: 62.80%
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.01s
+
+============================================================
+Query ID: 1712 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['032']
+Answer:  ['03']
+Prediction: 0,32
+Reference: 0.32
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+
+============================================================
+Query ID: 1713 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['961']
+Answer:  ['961']
+Prediction: 96,1
+Reference: 96.10%
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 1714 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['039115']
+Answer:  ['0216']
+Prediction: 0,39-1,15
+Reference: 0.16-1.59
+Processing mix modality:  23%|██▎       | 178/768 [16:53<18:36,  1.89s/it]Processing mix modality:  23%|██▎       | 179/768 [17:03<41:31,  4.23s/it]Processing mix modality:  23%|██▎       | 180/768 [17:04<31:37,  3.23s/it]Processing mix modality:  24%|██▎       | 181/768 [17:05<25:14,  2.58s/it]Processing mix modality:  24%|██▎       | 182/768 [17:06<20:38,  2.11s/it]Processing mix modality:  24%|██▍       | 183/768 [17:07<18:17,  1.88s/it]Processing mix modality:  24%|██▍       | 184/768 [17:16<36:37,  3.76s/it]Processing mix modality:  24%|██▍       | 185/768 [17:16<28:11,  2.90s/it]Processing mix modality:  24%|██▍       | 186/768 [17:18<23:01,  2.37s/it]Processing mix modality:  24%|██▍       | 187/768 [17:19<19:03,  1.97s/it]Processing mix modality:  24%|██▍       | 188/768 [17:20<17:30,  1.81s/it]Processing mix modality:  25%|██▍       | 189/768 [17:26<29:02,  3.01s/it]Processing mix modality:  25%|██▍       | 190/768 [17:27<22:53,  2.38s/it]Processing mix modality:  25%|██▍       | 191/768 [17:27<18:01,  1.87s/it]Processing mix modality:  25%|██▌       | 192/768 [17:29<15:45,  1.64s/it]Processing mix modality:  25%|██▌       | 193/768 [17:29<13:36,  1.42s/it]Processing mix modality:  25%|██▌       | 194/768 [17:31<12:42,  1.33s/it]Processing mix modality:  25%|██▌       | 195/768 [17:31<11:09,  1.17s/it]Processing mix modality:  26%|██▌       | 196/768 [17:32<09:56,  1.04s/it]Processing mix modality:  26%|██▌       | 197/768 [17:33<09:56,  1.05s/it]Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.26s
+
+============================================================
+Query ID: 1715 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents a univariate analysis of various workplace factors (Job Demand, Time of Work, Working Hours per Week, Hazardous and Risky Work Allowance, Night or Shift Work) on the best CT outcome...
+Reference: The table examines various job and work conditions, including job demand, time of work, working hours per week, hazardous and risky work allowance, and night or shift work, and their impact on being i...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.69s
+
+============================================================
+Query ID: 1716 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: no
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.88s
+Checkpoint saved: 180 queries processed
+
+============================================================
+Query ID: 1717 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['171']
+Answer:  ['171']
+Prediction: 17,1
+Reference: 17.10%
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 1718 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['78']
+Answer:  ['78']
+Prediction: 7,8
+Reference: 7.80%
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 1719 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['012067']
+Answer:  ['0107']
+Prediction: 0,12-0,67
+Reference: 0.12-0.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 1720 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents a univariate analysis of various health-related variables (Self-perceived Health, Depressive Symptoms, Sleep Difficulties, BMI, Falls, Daily Medication Use, Hospitalization, Musculo...
+Reference: The table presents a univariate analysis of various health factors, including self-perceived health, depressive symptoms, sleep difficulties, BMI, falls, daily medication use, hospitalization, and mus...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.16s
+
+============================================================
+Query ID: 1721 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['039']
+Answer:  ['04']
+Prediction: 0,39
+Reference: 0.39
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.89s
+
+============================================================
+Query ID: 1722 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['016084']
+Answer:  ['0208']
+Prediction: 0,16-0,84
+Reference: 0.16-0.84
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+
+============================================================
+Query ID: 1723 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['0042']
+Answer:  ['00']
+Prediction: 0,042*
+Reference: 0.04
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+
+============================================================
+Query ID: 1724 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['no complaints last 12 months last 7 days work impairment']
+Answer:  ['4']
+Prediction: No complaints, Last 12 months, Last 7 days, Work impairment
+Reference: 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.44s
+
+============================================================
+Query ID: 1725 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Multivariate Analysis table showing Odds Ratios (OR), 95% Confidence Intervals (IC95%), and p-values for various variables including Gender, Skin color, Job Requirements, Hospitalization, Difficulty S...
+Reference: The table provides multivariate analysis results for various health-related variables. The main columns include 'Variable', 'Multivariate Analysis: OR', 'IC95%', and 'p'. The 'Variable' column lists d...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 5.81s
+
+============================================================
+Query ID: 1726 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['330']
+Answer:  ['330']
+Prediction: 33.0
+Reference: 33.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.89s
+Checkpoint saved: 190 queries processed
+
+============================================================
+Query ID: 1727 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: no
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.70s
+
+============================================================
+Query ID: 1728 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['11 12']
+Answer:  ['2118']
+Prediction: 1.1, 1.2
+Reference: 2.10/1.80
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 1729 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['51']
+Answer:  ['51']
+Prediction: 5.10
+Reference: 5.10
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.90s
+
+============================================================
+Query ID: 1730 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 0.99
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 1731 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['27']
+Answer:  ['27']
+Prediction: 2.7
+Reference: 2.70
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.79s
+
+============================================================
+Query ID: 1732 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['scenario 3']
+Answer:  ['scenario 3']
+Prediction: Scenario 3
+Reference: Scenario 3
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.75s
+
+============================================================
+Query ID: 1733 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['94 29']
+Answer:  ['70']
+Prediction: 9.4, 2.9
+Reference: 7.00
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+Processing mix modality:  26%|██▌       | 198/768 [17:35<11:04,  1.17s/it]Processing mix modality:  26%|██▌       | 199/768 [17:36<10:44,  1.13s/it]Processing mix modality:  26%|██▌       | 200/768 [17:37<11:04,  1.17s/it]Processing mix modality:  26%|██▌       | 201/768 [17:38<11:01,  1.17s/it]Processing mix modality:  26%|██▋       | 202/768 [17:39<11:02,  1.17s/it]Processing mix modality:  26%|██▋       | 203/768 [17:40<10:42,  1.14s/it]Processing mix modality:  27%|██▋       | 204/768 [17:50<34:36,  3.68s/it]Processing mix modality:  27%|██▋       | 205/768 [17:51<27:46,  2.96s/it]Processing mix modality:  27%|██▋       | 206/768 [17:52<22:50,  2.44s/it]Processing mix modality:  27%|██▋       | 207/768 [17:54<20:05,  2.15s/it]Processing mix modality:  27%|██▋       | 208/768 [17:55<17:21,  1.86s/it]Processing mix modality:  27%|██▋       | 209/768 [17:57<16:56,  1.82s/it]Processing mix modality:  27%|██▋       | 210/768 [17:58<15:07,  1.63s/it]Processing mix modality:  27%|██▋       | 211/768 [17:59<13:05,  1.41s/it]Processing mix modality:  28%|██▊       | 212/768 [18:00<12:00,  1.30s/it]Processing mix modality:  28%|██▊       | 213/768 [18:01<11:13,  1.21s/it]

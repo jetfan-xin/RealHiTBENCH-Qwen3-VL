@@ -1535,6 +1535,1244 @@
         "GPT_EVAL": "N/A (no eval_api_key)"
       },
       "ProcessingTime": 10.22
+    },
+    {
+      "id": 101,
+      "FileName": "employment-table22",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Based on the data, calculate the number of people working less than 35 hours in all industries for economic reasons if it increase by 20%.",
+      "Reference": "4882.80",
+      "Prediction": "4882.8, 4882.8",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 102,
+      "FileName": "employment-table21",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Considering data for persons working 1-34 hours, what is the difference between the totals for agricultural and non-agricultural industries? Round the answer to the nearest whole number.",
+      "Reference": "33695",
+      "Prediction": "33455",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 103,
+      "FileName": "employment-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the number of persons at work in all industries who work 5-14 hours and in agriculture?",
+      "Reference": "134",
+      "Prediction": "134",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.88
+    },
+    {
+      "id": 104,
+      "FileName": "employment-table21",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which hour range has the highest proportion of workers in non-agricultural industries?",
+      "Reference": "35 hours and over",
+      "Prediction": "35 hours and over",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 105,
+      "FileName": "employment-table21",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter chart illustrating the relationship between the number of persons working in agriculture and those in non-agricultural industries across all rows.",
+      "Reference": "[[3.5, 11.0, 6.9, 77.5, 6.1, 49.3, 22.1, 7.9, 8.7, 5.6]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Hours of work': [\n        'Total, persons at work',\n        '1 to 34 hours',\n        '1 to 4 hours',\n        '5 to 14 hours',\n        '15 to 29 hours',\n        '30 to 34 hours',\n        '35 hours and over',\n        '35 to 39 hours',\n        '40 hours',\n        '41 hours and over',\n        '41 to 48 hours',\n        '49 to 59 hours',\n        '60 hours and over',\n        'Average hours, total at work',\n        'Average hours, persons who usually work full time'\n    ],\n    'Agriculture': [\n        155167, 34869, 1613, 5475, 17082, 10699, 120298, 9390, 76549, 34359, 12184, 13453, 8722, 38.5, 41.9\n    ],\n    'Nonagricultural': [\n        2179, 587, 42, 134, 269, 142, 1592, 97, 737, 758, 141, 247, 370, 41, 46.7\n    ]\n}\ndf = pd.DataFrame(data)\n\n# Create scatter plot\nplt.figure(figsize=(10, 6))\nplt.scatter(df['Agriculture'], df['Nonagricultural'], color='blue', label='Agriculture vs Nonagricultural')\nplt.title('Relationship between Persons Working in Agriculture and Non-Agricultural Industries')\nplt.xlabel('Persons at Work (Agriculture)')\nplt.ylabel('Persons at Work (Nonagricultural)')\nplt.legend()\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 23.23
+    },
+    {
+      "id": 106,
+      "FileName": "employment-table23",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "What is the difference in the total number of people working in Manufacturing and Construction industries in 2023?",
+      "Reference": "4826",
+      "Prediction": "4826",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 107,
+      "FileName": "employment-table23",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Based on the data, how many industries catagory report more than 10,000 total workers in 2023?",
+      "Reference": "7",
+      "Prediction": "Wage and salary workers, Education and health services",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 108,
+      "FileName": "employment-table23",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the “Industry and class of worker” by the number of workers who usually work part-time for “Worked 1 to 34 hours” in descending order, listing the last three industries.",
+      "Reference": "Mining, quarrying, and oil and gas extraction, Unpaid family workers, Information",
+      "Prediction": "Leisure and hospitality, Other services, Education and health services",
+      "Metrics": {
+        "F1": 20.0,
+        "EM": 0.0,
+        "ROUGE-L": 20.0,
+        "SacreBLEU": 4.54
+      },
+      "ProcessingTime": 1.38
+    },
+    {
+      "id": 109,
+      "FileName": "employment-table23",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Based on the table, draw a pie chart showing the proportion in 'Manufacturing' and 'Construction' industries in 2023.",
+      "Reference": "[0.4, 0.6]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n # Load the data from the table\n data = {\n    'Industry': ['Manufacturing', 'Construction'],\n    'Total at work': [14880, 10054],\n    'Worked 1 to 34 hours': [1538, 1380],\n    'For economic reasons': [170, 358],\n    'For noneconomic reasons - Usually work full time': [791, 558],\n    'For noneconomic reasons - Usually work part time': [577, 464],\n    'Worked 35 hours or more': [13342, 8674],\n    'Average hours - Total at work': [41.5, 40.7],\n    'Average hours - Persons who usually work full time': [42.5, 41.9]\n }\n df = pd.DataFrame(data)\n \n # Create a pie chart\n plt.figure(figsize=(8, 8))\n plt.pie(df['Total at work'], labels=df['Industry'], autopct='%1.1f%%', startangle=140)\n plt.title('Proportion in Manufacturing and Construction Industries in 2023')\n plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\n plt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 15.21
+    },
+    {
+      "id": 110,
+      "FileName": "employment-table23",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Using the data, create a line chart illustrating the average hours worked by workers in the 'Manufacturing' industry for full-time and part-time categories in “Worked 1 to 34 hours”.",
+      "Reference": "[[791, 577]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Industry': ['Manufacturing'],\n    'Average hours (Full-time)': [41.5],\n    'Average hours (Part-time)': [42.5]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a line chart\nplt.figure(figsize=(10, 6))\nplt.plot(df['Industry'], df['Average hours (Full-time)'], marker='o', label='Full-time')\nplt.plot(df['Industry'], df['Average hours (Part-time)'], marker='s', label='Part-time')\n\n# Customize the plot\nplt.title('Average Hours Worked by Workers in the Manufacturing Industry')\nplt.xlabel('Industry')\nplt.ylabel('Average Hours')\nplt.legend()\nplt.grid(True)\n\n# Show the plot\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 9.21
+    },
+    {
+      "id": 111,
+      "FileName": "employment-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Match the category in “MARITAL STATUS” with the highest 'Average hours' worked with its respective value from the dataset.",
+      "Reference": "Men, 16 years and over, Married, spouse present(1), 43.30",
+      "Prediction": "Married, spouse present, 41.8",
+      "Metrics": {
+        "F1": 30.77,
+        "EM": 0.0,
+        "ROUGE-L": 30.77,
+        "SacreBLEU": 9.15
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 112,
+      "FileName": "employment-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Based on the dataset, what are number of people who worked 1 to 34 hours and worked 35 hours or more.",
+      "Reference": "34282, 118705",
+      "Prediction": "34282, 118705",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.77
+    },
+    {
+      "id": 113,
+      "FileName": "employment-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What are the “Average hours” of worked by persons who are widowed, divorced, or separated among men and women aged 16 years and over?",
+      "Reference": "40.60, 37.60",
+      "Prediction": "40.6, 37.6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 114,
+      "FileName": "employment-table24",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including a brief explanation of its main columns and any notable insights or trends observed?",
+      "Reference": "The table provides detailed employment data for nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include the total number of persons at work, the breakdown of hours worked, and the reasons for working fewer hours. Notable trends include higher average hours worked among men compared to women and a general increase in average hours with age. The data also shows that married individuals, particularly those with a spouse present, tend to work more hours and are more likely to work full-time.",
+      "Prediction": "The table presents annual averages for persons aged 16 and over in nonagricultural industries in 2023, categorized by age, sex, race/ethnicity, and marital status. Key columns include total persons at work, those working 1–34 hours (further divided by economic vs. noneconomic reasons), those working 35+ hours, and average hours worked. Notable trends include higher average hours for men (40.3) vs. women (36.4), and higher full-time participation among married individuals. The data also shows that the 25–54 age group has the highest average hours worked (40 hours) and largest workforce participation.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.91
+    },
+    {
+      "id": 115,
+      "FileName": "employment-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the number of worker in “Total, 16 years and over” ",
+      "Reference": "152987",
+      "Prediction": "152987",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 116,
+      "FileName": "employment-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Calculate the difference in the total number of workers (in thousands) between 'Service occupations' and 'Professional and related occupations.'",
+      "Reference": "12587",
+      "Prediction": "10859, 37780",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.64
+    },
+    {
+      "id": 117,
+      "FileName": "employment-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many workers (in thousands) worked 35+ hours in 'Professional and related occupations'?",
+      "Reference": "30091",
+      "Prediction": "30091",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 118,
+      "FileName": "employment-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Count the number of occupations with an average work hour under 39 hours.",
+      "Reference": "6",
+      "Prediction": "Service occupations, Sales and office occupations, Sales and related occupations, Office and administrative support occupations, Natural resources, construction, and maintenance occupations(1), Construction and extraction occupations, Installation, maintenance, and repair occupations, Production, transportation, and material moving occupations, Production occupations, Transportation and material moving occupations",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.91
+    },
+    {
+      "id": 119,
+      "FileName": "employment-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What are the unemployment rate for men and women in 2023 for widowed, divorced, or separated individuals?",
+      "Reference": "4.10, 3.50",
+      "Prediction": "4.1, 4.7",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 120,
+      "FileName": "employment-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the total unemployment figures for men and women in 2022 and identify which group had a higher number of unemployed individuals.",
+      "Reference": "Men",
+      "Prediction": "Men, Women",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 121,
+      "FileName": "employment-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Determine the change in the number of unemployed men categorized as 'Never married' from 2022 to 2023.",
+      "Reference": "135",
+      "Prediction": "135",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 122,
+      "FileName": "employment-table26",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the unemployment trends from 2022 to 2023, predict whether the unemployment rate for 'Never married' individuals is likely to increase, decrease, or remain stable in 2024.",
+      "Reference": "Increasing trend",
+      "Prediction": "Decreasing trend",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    },
+    {
+      "id": 123,
+      "FileName": "employment-table26",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "How does the unemployment rate for widowed, divorced, or separated individuals correlate with the rates for never-married individuals from 2022 to 2023? Provide the correlation coefficient rounded to two decimal places as evidence.",
+      "Reference": "Strong positive correlation, 1.00",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 124,
+      "FileName": "employment-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What are the unemployment number of men and women in 2023 for widowed, divorced, or separated individuals?",
+      "Reference": "418, 472",
+      "Prediction": "418, 472",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 125,
+      "FileName": "employment-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference in total unemployment between 2022 and 2023 for Management occupations? Provide the numerical result.",
+      "Reference": "31",
+      "Prediction": "36, 36",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 126,
+      "FileName": "employment-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the unemployment rate between men and women for Business and financial operations occupations in 2023. Which is higher, and by how much?",
+      "Reference": "Men, 0.10%",
+      "Prediction": "Men, 0.6",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 127,
+      "FileName": "employment-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the unemployment number change in Computer and mathematical occupations from 2022 to 2023.",
+      "Reference": "20",
+      "Prediction": "20, 20",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 128,
+      "FileName": "employment-table27",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Draw a scatter plot to visualize the correlation between the unemployment rate for men and women in 2023 across all occupations.",
+      "Reference": "[[3.5, 2.0, 2.0, 1.7, 2.4, 2.0, 2.1, 3.1, 1.5, 2.1, 1.4, 2.3, 3.6, 1.4, 4.4, 3.5, 4.0, 5.6, 5.1, 3.6, 3.6, 4.4, 3.1, 6.1, 7.4, 7.1, 2.5, 5.4, 4.6, 6.2]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Occupation': [\n        'Total, 16 years and over',\n        'Management, professional, and related occupations',\n        'Management, business, and financial operations occupations',\n        'Management occupations',\n        'Business and financial operations occupations',\n        'Professional and related occupations',\n        'Computer and mathematical occupations',\n        'Architecture and engineering occupations',\n        'Life, physical, and social science occupations',\n        'Community and social service occupations',\n        'Legal occupations',\n        'Education, training, and library occupations',\n        'Arts, design, entertainment, sports, and media occupations',\n        'Healthcare practitioners and technical occupations',\n        'Service occupations',\n        'Healthcare support occupations',\n        'Protective service occupations',\n        'Food preparation and serving related occupations',\n        'Building and grounds cleaning and maintenance occupations',\n        'Personal care and service occupations',\n        'Sales and office occupations',\n        'Sales and related occupations',\n        'Office and administrative support occupations',\n        'Natural resources, construction, and maintenance occupations',\n        'Farming, fishing, and forestry occupations',\n        'Construction and extraction occupations',\n        'Installation, maintenance, and repair occupations',\n        'Production, transportation, and material moving occupations',\n        'Production occupations',\n        'Transportation and material moving occupations',\n        'No previous work experience',\n        '16 to 19 years',\n        '20 to 24 years',\n        '25 years and over'\n    ],\n    'Men_2023': [\n        3.8, 2, 1.9, 1.7, 2.5, 2, 2, 1.5, 1.8, 2.7, 1, 3, 3.6, 1.2, 4.7, 3.4, 2.6, 5.8, 5.4, 3.9, 3.7, 3.4, 4.3, 6.8, 5.3, 2.1, 4.7, 3.5, 5.5, -, -, -, -\n    ],\n    'Women_2023': [\n        3.5, 2, 2, 1.7, 2.4, 2, 2.1, 3.1, 1.5, 2.1, 1.4, 2.3, 3.6, 1.4, 4.4, 3.5, 4, 5.6, 5.1, 3.6, 3.6, 3.1, 6.1, 7.4, 7.1, 2.5, 5.4, 4.6, 6.2, -, -, -, -\n    ]\n}\n\ndf = pd.DataFrame(data)\n\n# Filter out rows with missing data for 2023\ndf = df[df['Men_2023'] != -].dropna(subset=['Men_2023', 'Women_2023'])\n\n# Create scatter plot\nplt.figure(figsize=(10, 6))\nplt.scatter(df['Men_2023'], df['Women_2023'], alpha=0.7)\nplt.title('Correlation between Unemployment Rates for Men and Women in 2023')\nplt.xlabel('Unemployment Rate for Men (2023)')\nplt.ylabel('Unemployment Rate for Women (2023)')\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 38.31
+    },
+    {
+      "id": 129,
+      "FileName": "economy-table132",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the relative importance of the “Food and beverages” category in 2022? (Answer to two decimal places)",
+      "Reference": "14.17",
+      "Prediction": "14.17",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 130,
+      "FileName": "economy-table132",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the primary trends observed in the unadjusted indexes for \"All items\" and \"Food and beverages\" between December 2024 and January 2024.",
+      "Reference": "All items (171.01 to 171.91), Food and beverages (185.09 to 186.15)",
+      "Prediction": "The unadjusted index for \"All items\" increased from 171.015 in December 2024 to 171.910 in January 2024, showing a 0.5% rise. For \"Food and beverages,\" the index rose from 185.095 in December 2024 to 186.148 in January 2024, indicating a 0.6% increase.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.86
+    },
+    {
+      "id": 131,
+      "FileName": "economy-table132",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the categorie under “Housing” by their unadjusted percent change to Jan. 2024 from Jan. 2023, listing them in descending order.",
+      "Reference": "Shelter, Household furnishings and operations, Fuels and utilities",
+      "Prediction": "Shelter, Fuels and utilities, Household furnishings and operations",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 0.0,
+        "ROUGE-L": 62.5,
+        "SacreBLEU": 51.7
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 132,
+      "FileName": "economy-table132",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "If the “Unadjusted indexes” of “Food and beverages” increased by 0.6 in Dec. 2024, what is its new index value? (Answer to two decimal places)",
+      "Reference": "185.70",
+      "Prediction": "185.69",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.36
+    },
+    {
+      "id": 133,
+      "FileName": "economy-table132",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the relative importance of the “Food and beverages” category in 2022?",
+      "Reference": "14.166",
+      "Prediction": "14.166",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 134,
+      "FileName": "economy-table132",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare “Housing” and “Food and beverages” to determine which one has a higher unadjusted index value in Jan. 2024?",
+      "Reference": "Housing",
+      "Prediction": "Housing, Food and beverages",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 135,
+      "FileName": "economy-table137",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For “Cereals and bakery products”, is the unadjusted index for April 2023 higher than the corresponding March 2023 value?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 136,
+      "FileName": "economy-table137",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the category under “Food at home” with the largest unadjusted percentage increase from April 2022 to April 2023 in the data.",
+      "Reference": "Cereals and bakery products",
+      "Prediction": "Cereals and bakery products",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 137,
+      "FileName": "economy-table137",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Calculate the relative importance of \"Food\" compared to \"All items\" for March 2023.",
+      "Reference": "13.47",
+      "Prediction": "13.474, 100.000",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.98
+    },
+    {
+      "id": 138,
+      "FileName": "economy-table137",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Plot a line chart to show the trend in \"Unadjusted Indexes\" for \"All items\" over April 2022, March 2023, and April 2023.",
+      "Reference": "[[289.11, 301.84, 303.36]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndata = pd.read_excel(\"table.xlsx\")\nsubset = data[data['Expenditure category'] == 'All items']\nx = subset['Expenditure category'].unique()\ny = subset[['Unadjusted indexes (Apr. 2022)', 'Unadjusted indexes (Mar. 2023)', 'Unadjusted indexes (Apr. 2023)']].values.flatten()\nplt.plot(x, y, marker='o')\nplt.title('Trend in Unadjusted Indexes for All Items')\nplt.xlabel('Time')\nplt.ylabel('Unadjusted Indexes')\nplt.xticks(rotation=45)\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 8.05
+    },
+    {
+      "id": 139,
+      "FileName": "economy-table137",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Using the \"Unadjusted Percent Change\" data, generate a scatter plot to visualize the relationship between changes over \"April 2022-April 2023\" and \"March 2023-April 2023\" across all categories.",
+      "Reference": "[[1.5, 1.7, 2.0, 1.8, 1.6]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndf = pd.read_excel(\"table.xlsx\")\nunadjusted_percent_change_apr2022_apr2023 = df['Unadjusted percent change'].iloc[1:]  # Skip the 'All items' row\nunadjusted_percent_change_mar2023_apr2023 = df['Unadjusted percent change'].iloc[1:]  # Skip the 'All items' row\nplt.scatter(unadjusted_percent_change_apr2022_apr2023, unadjusted_percent_change_mar2023_apr2023)\nplt.xlabel('April 2022 - April 2023')\nplt.ylabel('March 2023 - April 2023')\nplt.title('Relationship between Unadjusted Percent Changes')\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": "False"
+      },
+      "ProcessingTime": 10.01
+    },
+    {
+      "id": 140,
+      "FileName": "economy-table136",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the “Unadjusted indexes” for October 2023 and October 2024. Which expenditure category under “Energy services” had the greatest percentage increase?",
+      "Reference": "Electricity",
+      "Prediction": "Electricity",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 141,
+      "FileName": "economy-table136",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the expenditure category that had a “Seasonally adjusted percent change” of 3.2 from August 2024 to September 2024 and also 3.2 from September 2024 to October 2024.",
+      "Reference": "Airline fares",
+      "Prediction": "Airline fares",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 142,
+      "FileName": "economy-table136",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Considering all categories, infer which category experienced a highest change (absolute value) in the “Unadjusted percent change” between September 2024 and October 2024.",
+      "Reference": "Airline fares",
+      "Prediction": "Motor vehicle insurance",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 143,
+      "FileName": "economy-table136",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "Based on the table, draw a bar chart showing the relative importance of different expenditure categories under “Food at home” as of September 2024.",
+      "Reference": "[1.044, 1.741, 0.732, 1.385, 1.016, 2.153]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    \"Expenditure category\": [\n        \"Cereals and bakery products\",\n        \"Meats, poultry, fish, and eggs\",\n        \"Dairy and related products\",\n        \"Fruits and vegetables\",\n        \"Nonalcoholic beverages and beverage materials\",\n        \"Other food at home\"\n    ],\n    \"Relative importance Sep. 2024\": [\n        1.044,\n        1.741,\n        0.732,\n        1.385,\n        1.016,\n        2.153\n    ]\n}\ndf = pd.DataFrame(data)\n\n# Plotting the bar chart\nplt.figure(figsize=(10, 6))\nplt.bar(df[\"Expenditure category\"], df[\"Relative importance Sep. 2024\"], color='skyblue')\nplt.title(\"Relative Importance of Expenditure Categories under 'Food at home' as of September 2024\")\nplt.xlabel(\"Expenditure Category\")\nplt.ylabel(\"Relative Importance (Sep. 2024)\")\nplt.xticks(rotation=45, ha='right')\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 13.9
+    },
+    {
+      "id": 144,
+      "FileName": "economy-table136",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Using the data, create a pie chart to represent the proportion of different expenditure categories under “Food at home” as of September 2024.",
+      "Reference": "[0.8, 0.11, 0.06, 0.01, 0.01]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    \"Expenditure category\": [\n        \"Cereals and bakery products\",\n        \"Meats, poultry, fish, and eggs\",\n        \"Dairy and related products\",\n        \"Fruits and vegetables\",\n        \"Nonalcoholic beverages and beverage materials\",\n        \"Other food at home\"\n    ],\n    \"Relative importance Sep. 2024\": [\n        1.044,\n        1.741,\n        0.732,\n        1.385,\n        1.016,\n        2.153\n    ]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a pie chart\nplt.figure(figsize=(8, 8))\nplt.pie(df[\"Relative importance Sep. 2024\"], labels=df[\"Expenditure category\"], autopct='%1.1f%%', startangle=140)\nplt.title(\"Proportion of different expenditure categories under 'Food at home' as of September 2024\")\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 13.51
+    },
+    {
+      "id": 145,
+      "FileName": "injuries-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total fatal injury rate for self-employed individuals and wage and salary workers? The answer is rounded to two decimal place.",
+      "Reference": "13.90",
+      "Prediction": "6.45",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.36
+    },
+    {
+      "id": 146,
+      "FileName": "injuries-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which category has the highest fatal injury rate among all the characteristics listed?",
+      "Reference": "Logging workers",
+      "Prediction": "Construction, Logging",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.08
+    },
+    {
+      "id": 147,
+      "FileName": "injuries-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Is the fatal injury rate of men and women workers with total hours worked above 100000 million consistently below 5?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.98
+    },
+    {
+      "id": 148,
+      "FileName": "injuries-table03",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a brief summary of the dataset, including the main columns, total hours worked, and any noticeable trends in fatal injury rates across employee statuses.",
+      "Reference": "The dataset presents fatal occupational injuries with key columns: 'Characteristic,' 'Total hours worked (millions),' 'Fatal injury rate,' and 'Margin of error.' It shows 293,800 million total hours worked. Notable trends include a lower fatal injury rate for wage and salary workers (3.20) compared to self-employed individuals (10.70), indicating higher risk in self-employment.",
+      "Prediction": "Total hours worked, fatal injury rates, and margins of error for civilian workers in 2022; wage and salary workers (3.2 rate) have lower fatal injury rates than self-employed workers (10.7 rate).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 4.12
+    },
+    {
+      "id": 149,
+      "FileName": "injuries-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total hours worked for self-employed individuals?",
+      "Reference": "16400",
+      "Prediction": "16400",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.23
+    },
+    {
+      "id": 150,
+      "FileName": "injuries-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total number of fatal occupational injuries recorded in Alabama and Florida combined for the years 1998 and 2001?",
+      "Reference": "1025",
+      "Prediction": "519, 448",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.75
+    },
+    {
+      "id": 151,
+      "FileName": "injuries-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which state recorded the highest number of fatalities in 1994, and what was the number?",
+      "Reference": "California, 639",
+      "Prediction": "California, 646",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.54
+    },
+    {
+      "id": 152,
+      "FileName": "injuries-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the total fatalities for Kentucky and Illinois in 2002, and identify which state had fewer fatalities.",
+      "Reference": "Kentucky",
+      "Prediction": "Kentucky, Illinois",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.39
+    },
+    {
+      "id": 153,
+      "FileName": "injuries-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation coefficient between fatal occupational injuries in California and Florida from 1992 to 2002? Provide evidence for the relationship. The answer is rounded to two decimal places.",
+      "Reference": "Weak positive correlation, 0.05",
+      "Prediction": "Strong negative correlation, -0.85",
+      "Metrics": {
+        "F1": 25.0,
+        "EM": 0.0,
+        "ROUGE-L": 25.0,
+        "SacreBLEU": 15.97
+      },
+      "ProcessingTime": 2.71
+    },
+    {
+      "id": 154,
+      "FileName": "injuries-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trend in total fatalities across all states from 1992 to 2002, what is the projected total for 2005?",
+      "Reference": "5557",
+      "Prediction": "No clear trend, Cannot project",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.56
+    },
+    {
+      "id": 155,
+      "FileName": "injuries-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "What is the difference between the total fatalities due to 'Transportation Incidents' and 'Violence and Other Injuries'?",
+      "Reference": "1217",
+      "Prediction": "1217, 692",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.41
+    },
+    {
+      "id": 156,
+      "FileName": "injuries-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "If the total number of fatalities from 'Self-employed' workers were doubled, what would be the total for 'Falls, Slips, Trips' within this category?",
+      "Reference": "304",
+      "Prediction": "304",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 157,
+      "FileName": "injuries-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the following events from highest to lowest based on the total fatalities: 'Falls, Slips, Trips,' 'Harmful Substances Exposure,' and 'Fires and Explosions.'",
+      "Reference": "Falls, Slips, Trips, Exposure to harmful substances or environments, Fires and Explosions",
+      "Prediction": "Falls, slips, trips, Exposure to harmful substances or environments, Fires and explosions",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.72
+    },
+    {
+      "id": 158,
+      "FileName": "injuries-table04",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "According to the table, draw a pie chart to illustrate the proportion of total fatalities among the categories 'Transportation Incidents,' 'Violence and Other Injuries,' 'Falls, Slips, Trips,' and 'Harmful Substances Exposure.'",
+      "Reference": "[0.45, 0.18, 0.19, 0.18]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndata = {\n    'Category': ['Transportation Incidents', 'Violence and Other Injuries', 'Falls, Slips, Trips', 'Harmful Substances Exposure'],\n    'Fatalities': [2066, 849, 738, 839]\n}\ndf = pd.DataFrame(data)\nplt.pie(df['Fatalities'], labels=df['Category'], autopct='%1.1f%%', startangle=140)\nplt.title('Proportion of Total Fatalities by Category')\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 7.87
+    },
+    {
+      "id": 159,
+      "FileName": "injuries-table04",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "Create a bar chart to compare the total fatalities for 'Wage and Salary' workers and 'Self-employed' workers across the event categories 'Transportation Incidents' and 'Falls, Slips, Trips.'",
+      "Reference": "[1775.0, 291.0, 713.0, 152.0]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Worker Characteristics': ['Wage and salary', 'Self-employed'],\n    'Transportation incidents': [1775, 291],\n    'Falls, slips, trips': [713, 152]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a bar chart\nfig, ax = plt.subplots(figsize=(10, 6))\nbar_width = 0.35\nindex = range(len(df['Worker Characteristics']))\n\n# Plot bars for Transportation incidents\nax.bar([i - bar_width/2 for i in index], df['Transportation incidents'], bar_width, label='Transportation incidents', color='blue')\n\n# Plot bars for Falls, slips, trips\nax.bar([i + bar_width/2 for i in index], df['Falls, slips, trips'], bar_width, label='Falls, slips, trips', color='green')\n\n# Set labels and title\nax.set_xlabel('Worker Characteristics')\nax.set_ylabel('Total Fatalities')\nax.set_title('Comparison of Total Fatalities by Worker Characteristics')\nax.set_xticks([i for i in range(len(df['Worker Characteristics']))])\nax.set_xticklabels(df['Worker Characteristics'])\nax.legend()\n\n# Show the plot\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 14.26
+    },
+    {
+      "id": 160,
+      "FileName": "injuries-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which industry has the highest incidence rate, and what is the corresponding NAICS code?",
+      "Reference": "Couriers and express delivery services (Private Industry), 4921",
+      "Prediction": "Couriers and express delivery services (Private Industry), 4921",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.67
+    },
+    {
+      "id": 161,
+      "FileName": "injuries-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many industries have an incidence rate greater than 3.0?",
+      "Reference": "3",
+      "Prediction": "Couriers and express delivery services (Private Industry), Spectator sports (Private Industry), Light truck and utility vehicle manufacturing (Private Industry)",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.27
+    },
+    {
+      "id": 162,
+      "FileName": "injuries-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the average incidence rate of all industries? The answer is rounded to two decimal places.",
+      "Reference": "2.34",
+      "Prediction": "2.35",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 163,
+      "FileName": "injuries-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which industries have an incidence rate higher than 5.0? Provide their names.",
+      "Reference": "Performing arts companies (Private Industry), Nursing and residential care facilities (State Government)",
+      "Prediction": "Performing arts companies (Private Industry), Nursing and residential care facilities (State Government), Siding contractors (Private Industry), Scheduled passenger air transportation (Private Industry), Local messengers and local delivery (Private Industry), Couriers and express delivery services (Private Industry), Urban transit systems (Private Industry), Correctional institutions (State Government)",
+      "Metrics": {
+        "F1": 42.11,
+        "EM": 0.0,
+        "ROUGE-L": 42.11,
+        "SacreBLEU": 24.01
+      },
+      "ProcessingTime": 3.94
+    },
+    {
+      "id": 164,
+      "FileName": "injuries-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the incidence rate of 'Nursing and residential care facilities (State Government)' with 'Scheduled passenger air transportation (Private Industry)' and determine which has the higher rate. Provide the industry name.",
+      "Reference": "Nursing and residential care facilities (State Government)",
+      "Prediction": "Nursing and residential care facilities (State Government), Scheduled passenger air transportation (Private Industry)",
+      "Metrics": {
+        "F1": 70.0,
+        "EM": 0.0,
+        "ROUGE-L": 70.0,
+        "SacreBLEU": 47.04
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 165,
+      "FileName": "injuries-table07",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Using the table data, draw a pie chart showing the proportion of incidence rates for the top five industries with the highest rates.",
+      "Reference": "[0.3, 0.24, 0.17, 0.16, 0.15]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndf = pd.read_excel(\"table.xlsx\")\ntop_five = df.nlargest(5, 'Incidence Rate')\nplt.figure(figsize=(8, 8))\nplt.pie(top_five['Incidence Rate'], labels=top_five['Industry3'], autopct='%1.1f%%', startangle=140)\nplt.title('Proportion of Incidence Rates for Top Five Industries')\nplt.axis('equal')\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 5.5
+    },
+    {
+      "id": 166,
+      "FileName": "injuries-table07",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "Generate a bar chart comparing the incidence rates of industries categorized by their NAICS codes. Use only industries with rates above 4.0.",
+      "Reference": "[4.8, 4.5, 4.1, 4.2, 6.8, 8.5]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n filtered_df = df[df['Incidence Rate'] > 4.0]\n plt.bar(filtered_df['NAICS Code4'], filtered_df['Incidence Rate'])\n plt.xlabel('NAICS Code')\n plt.ylabel('Incidence Rate')\n plt.title('Incidence Rates of Industries (Above 4.0)')\n plt.xticks(rotation=45)\n plt.tight_layout()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 5.45
+    },
+    {
+      "id": 167,
+      "FileName": "injuries-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the combined incidence rate of 'Couriers and express delivery services' and 'Scheduled passenger air transportation'? The answer is rounded to two decimal place.",
+      "Reference": "14.20",
+      "Prediction": "14.20",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 168,
+      "FileName": "injuries-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the following industries by their incidence rates from highest to lowest: 'Performing arts companies,' 'Nursing and residential care facilities,' and 'Spectator sports.'",
+      "Reference": "Performing arts companies, Nursing and residential care facilities, Spectator sports",
+      "Prediction": "Performing arts companies, Nursing and residential care facilities, Spectator sports",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.68
+    },
+    {
+      "id": 169,
+      "FileName": "injuries-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Identify the fifth industry with a blue background color.",
+      "Reference": "Nursing care facilities (skilled nursing facilities) (Private Industry)",
+      "Prediction": "Skiing facilities (Private Industry)",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 21.87
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 170,
+      "FileName": "injuries-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Identify the rows with NAICS codes that significantly deviate from the average incidence rate. How many anomalies exist?",
+      "Reference": "4 anomalies. Industry: Performing arts companies (Private Industry), NAICS Code: 7111, Incidence Rate: 9.00 Industry: Couriers and express delivery services (Private Industry), NAICS Code: 4921, Incidence Rate: 8.00 Industry: Nursing and residential care facilities (State Industry), NAICS Code: 623, Incidence Rate: 7.50 Industry: Scheduled passenger air transportation (Private Industry), NAICS Code: 481111, Incidence Rate: 6.20",
+      "Prediction": "Performing arts companies (Private Industry), Couriers and express delivery services (Private Industry)",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 1.75
+    },
+    {
+      "id": 171,
+      "FileName": "injuries-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including the main columns and any notable patterns or trends observed.",
+      "Reference": "The table outlines industries with the highest nonfatal occupational injury and illness incidence rates in 2023. The main columns are Industry, describing the type of business or service; NAICS Code, providing classification codes; and Incidence Rate, quantifying the frequency of cases. Notable trends include high incidence rates in performing arts companies, couriers, and nursing facilities, indicating sectors with elevated risks for workplace injuries.",
+      "Prediction": "TABLE SNR02 presents the highest incidence rates of nonfatal occupational injury and illness cases with days away from work, restricted work activity, or job transfer for various industries in the United States in 2023. The table includes three main columns: Industry (with NAICS codes), NAICS Code, and Incidence Rate. Notable patterns include industries such as Performing arts companies (9.0) and Couriers and express delivery services (8.0) having the highest rates, while industries like Aluminum foundries (4.0) and Seafood product preparation and packaging (4.0) have the lowest among the listed high-rate industries. The overall average rate across all ownerships combined is 1.5.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.11
+    },
+    {
+      "id": 172,
+      "FileName": "injuries-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the industry with the highest average incidence rate among establishments in size “250-999” with non-missing data?",
+      "Reference": "Sports teams and clubs (NAICS 711211)",
+      "Prediction": "Sports teams and clubs (NAICS 711211)",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.93
+    },
+    {
+      "id": 173,
+      "FileName": "injuries-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference between the median and the 3rd quartile for establishments in the '250 - 999' employment size category in Crop production industry. The answer is rounded to two decimal place.",
+      "Reference": "3.00",
+      "Prediction": "0.40",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 174,
+      "FileName": "injuries-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Within the Machinery Manufacturing (NAICS 333000) industry, identify if the 3rd quartile incidence rate for the 11-49 employment size category exceeds 5.0. The answer is of type Yes/No.",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 175,
+      "FileName": "injuries-table10",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the mean incidence rates of establishments with sizes '50 - 249' and '250 - 999' in “All industries including state and local government”. Which size group has a higher mean rate?",
+      "Reference": "50 - 249",
+      "Prediction": "50 - 249, 250 - 999",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 2.06
+    },
+    {
+      "id": 176,
+      "FileName": "injuries-table10",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a brief description of the table, including the main columns, and highlight any notable trends or key insights from the data?",
+      "Reference": "The table presents data on incidence rates of occupational injuries and illnesses by establishment size in 2019, showing higher mean rates for mid-sized establishments and variability in safety performance across different quartiles. The main columns include the industry, NAICS code, establishment employment size, average incidence rates, and quartile distributions (1st quartile, median, 3rd quartile). Notable trends include higher incidence rates in industries like Agriculture, Forestry, Fishing and Hunting and lower rates in industries like Oil and Gas Extraction. Key insights highlight the variation in injury rates across different employment sizes and industries, with smaller establishments generally showing lower rates compared to larger ones.",
+      "Prediction": "The table presents average incidence rates for injuries and illnesses per 100 full-time equivalent workers across various industries and employment size categories in the U.S., along with quartile data. Main columns include average incidence rates (mean), 1st quartile, median, and 3rd quartile. Notable trends include higher incidence rates in agriculture, forestry, fishing, and hunting (up to 25.3 for 250-999 employees), and sports teams and clubs (25.3 for 250-999 employees). Public administration also shows high rates (up to 7.7 for 1,000+ employees). Conversely, private industry and machinery manufacturing show lower rates, especially for larger establishments. The data also indicates that incidence rates generally increase with employment size in many sectors, while some sectors like agriculture show consistently high rates regardless of size.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 10.91
+    },
+    {
+      "id": 177,
+      "FileName": "productivity-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the percentage change in Output per hour worked for the whole economy in 2020 Q4 compared to the previous quarter? The answer should be rounded to two decimal place.",
+      "Reference": "0.40%",
+      "Prediction": "0.20",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 178,
+      "FileName": "productivity-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which quarter between 2016 Q3 and 2021 Q2 did the Output per job in Manufacturing show the largest negative percentage change on the previous quarter?",
+      "Reference": "2020 Q3",
+      "Prediction": "2020 Q3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.61
+    },
+    {
+      "id": 179,
+      "FileName": "productivity-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What was the combined percentage change in Output per worker and Output per hour worked for the whole economy in 2021 Q1 compared to the same quarter a year ago? The answer should be rounded to two decimal place.",
+      "Reference": "1.50%",
+      "Prediction": "1.50",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 180,
+      "FileName": "productivity-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which sector (Whole economy, Manufacturing, or Services) had the highest percentage change in Output per hour worked in 2020 Q2?",
+      "Reference": "Whole economy",
+      "Prediction": "Whole economy, Manufacturing",
+      "Metrics": {
+        "F1": 80.0,
+        "EM": 0.0,
+        "ROUGE-L": 80.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.45
     }
   ],
   "processed_ids": [
@@ -1637,6 +2875,86 @@
     97,
     98,
     99,
-    100
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180
   ]
 }

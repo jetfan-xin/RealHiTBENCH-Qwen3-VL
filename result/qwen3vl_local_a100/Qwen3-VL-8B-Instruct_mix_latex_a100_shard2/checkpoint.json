@@ -2360,6 +2360,945 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 1.6
+    },
+    {
+      "id": 1687,
+      "FileName": "science-table46",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average cumulative probability for green category? (Accurate to two decimal places)",
+      "Reference": "0.03",
+      "Prediction": "0.38, 0.38",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.08
+    },
+    {
+      "id": 1688,
+      "FileName": "science-table46",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the sum cumulative probability for red category? (Accurate to two decimal places)",
+      "Reference": "1.68",
+      "Prediction": "0.57, 0.3, 0.22, 0.12, 0.09, 0.06, 0.05, 0.05, 0.04, 0.04, 0.03, 0.03, 0.02, 0.02, 0.02, 0.02, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 0.01,",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 206.52
+    },
+    {
+      "id": 1689,
+      "FileName": "science-table46",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'scaled clone size' and 'cumulative probability'?",
+      "Reference": "Negative correlation",
+      "Prediction": "Strong negative correlation, -0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 2.22
+    },
+    {
+      "id": 1690,
+      "FileName": "science-table46",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Is there a difference in the cumulative probability patterns between the color categories? (yes / no)",
+      "Reference": "yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 1691,
+      "FileName": "science-table48",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the highest clone size with a cumulative probability above 0.9 for the black color? (Accurate to two decimal places)",
+      "Reference": "1.71",
+      "Prediction": "1.19, 1.43",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.71
+    },
+    {
+      "id": 1692,
+      "FileName": "science-table48",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the dashed line value for a clone size approximately 10 in the black category? (Accurate to two decimal places)",
+      "Reference": "0.76",
+      "Prediction": "0.76",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.4
+    },
+    {
+      "id": 1693,
+      "FileName": "science-table48",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How does the cumulative probability change from clone size approximately 4.99 to clone size approximately 5.97 in the black category? (Accurate to two decimal places)",
+      "Reference": "Decrease by 0.01.",
+      "Prediction": "0.836956522, 0.826086957",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.39
+    },
+    {
+      "id": 1694,
+      "FileName": "science-table48",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the smallest clone size for which the cumulative probability in the purple category is greater than 0.9? (Accurate to two decimal places)",
+      "Reference": "9.20",
+      "Prediction": "1.15",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.56
+    },
+    {
+      "id": 1695,
+      "FileName": "science-table48",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the cumulative probabilities of purple category for different clone sizes.",
+      "Reference": "[[0.967213114754098, 0.967213114754098, 0.967213114754098, 0.967213114754098, 0.967213114754098, 0.950819672131147, 0.950819672131147, 0.950819672131147, 0.950819672131147, 0.950819672131147, 0.918032786885246, 0.918032786885246, 0.918032786885246, 0.918032786885246, 0.918032786885246, 0.901639344262295, 0.901639344262295, 0.885245901639344, 0.885245901639344, 0.885245901639344, 0.885245901639344, 0.868852459016393, 0.836065573770492, 0.836065573770492, 0.819672131147541, 0.80327868852459, 0.786885245901639, 0.754098360655737, 0.737704918032787, 0.704918032786885, 0.655737704918032, 0.622950819672131, 0.60655737704918, 0.557377049180327, 0.508196721311475, 0.426229508196721, 0.393442622950819, 0.344262295081967, 0.262295081967213, 0.21311475409836, 0.163934426229508, 0.131147540983606, 0.0655737704918028, 0.0655737704918028, 0.0655737704918028, 0.049180327868852, 0.0327868852459011, 0.0327868852459011, 0.0327868852459011, 0.0163934426229503, 0.0163934426229503, 0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data into a DataFrame\ndata = {\n    'clone_size': [1, 1.195538427, 1.429312129, 1.70879757421078, 2.042933163, 2.442405099, 2.91998915, 3.490959234, 4.173575909, 4.989670376, 5.96534267, 7.131796389, 8.526336634, 10.19356308, 12.18679637, 14.56978336, 17.41873587, 20.82476807, 24.89681046, 29.7650936, 35.58531317, 42.54360931, 50.86251974, 60.80809682, 72.6984164, 86.91375035, 103.9087283, 124.2268776, 148.5180058, 177.5589829, 212.2785871, 253.787208, 303.4123593, 362.7411346, 433.6709654, 518.4703036, 619.8511709, 741.0558936, 885.960797, 1059.200177, 1266.314513, 1513.927661, 1809.958694, 2163.875169, 2586.995914, 3092.853025, 3697.624639, 4420.652343, 5285.059746, 6318.492013, 7554, 9031.097274],\n    'cumulative_probability': [0.967213115, 0.967213115, 0.967213115, 0.967213115, 0.967213115, 0.950819672, 0.950819672, 0.950819672, 0.950819672, 0.950819672, 0.918032787, 0.918032787, 0.918032787, 0.918032787, 0.918032787, 0.901639344, 0.901639344, 0.885245902, 0.885245902, 0.885245902, 0.885245902, 0.868852459, 0.836065574, 0.836065574, 0.819672131, 0.803278689, 0.786885246, 0.754098361, 0.737704918, 0.704918033, 0.655737705, 0.62295082, 0.606557377, 0.557377049, 0.508196721, 0.426229508, 0.393442623, 0.344262295, 0.262295082, 0.213114754, 0.163934426, 0.131147541, 0.06557377, 0.06557377, 0.06557377, 0.049180328, 0.032786885, 0.032786885, 0.032786885, 0.016393443, 0.016393443, 0, 0]\n}\ndf = pd.DataFrame(data)\n\n# Plot the cumulative probabilities\nplt.figure(figsize=(10, 6))\nplt.plot(df['clone_size'], df['cumulative_probability'], marker='o', linestyle='-', color='purple')\nplt.title('Cumulative Probabilities of Purple Category for Different Clone Sizes')\nplt.xlabel('Clone Size')\nplt.ylabel('Cumulative Probability')\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 71.8
+    },
+    {
+      "id": 1696,
+      "FileName": "science-table49",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the highest clone size with a cumulative probability above 0.9 for the green color? (Accurate to two decimal places)",
+      "Reference": "1.97",
+      "Prediction": "1.12",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.38
+    },
+    {
+      "id": 1697,
+      "FileName": "science-table49",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the dashed line value for a clone size approximately 6 in the green category? (Accurate to two decimal places)",
+      "Reference": "0.68",
+      "Prediction": "0.68",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 1698,
+      "FileName": "science-table49",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How does the cumulative probability change from clone size approximately 7.60 to clone size approximately 8.51 in the green category? (Accurate to two decimal places)",
+      "Reference": "Decrease by 0.03.",
+      "Prediction": "0.6374, 0.6044",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 1699,
+      "FileName": "science-table49",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the smallest clone size for which the cumulative probability in the red category is greater than 0.8? (Accurate to two decimal places)",
+      "Reference": "2.97",
+      "Prediction": "1.15",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 1700,
+      "FileName": "science-table49",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the cumulative probabilities of red category for different clone sizes.",
+      "Reference": "[[0.886363636363636, 0.886363636363636, 0.886363636363636, 0.886363636363636, 0.886363636363636, 0.886363636363636, 0.818181818181818, 0.818181818181818, 0.818181818181818, 0.784090909090909, 0.784090909090909, 0.772727272727273, 0.761363636363636, 0.761363636363636, 0.761363636363636, 0.75, 0.738636363636364, 0.715909090909091, 0.715909090909091, 0.693181818181818, 0.693181818181818, 0.681818181818182, 0.670454545454546, 0.647727272727273, 0.636363636363636, 0.613636363636364, 0.613636363636364, 0.568181818181818, 0.522727272727273, 0.488636363636364, 0.454545454545455, 0.386363636363637, 0.363636363636364, 0.340909090909091, 0.318181818181819, 0.272727272727273, 0.25, 0.204545454545455, 0.181818181818182, 0.159090909090909, 0.136363636363637, 0.125, 0.113636363636364, 0.113636363636364, 0.113636363636364, 0.0909090909090912, 0.0909090909090912, 0.0681818181818185, 0.0454545454545458, 0.022727272727273, 0.0113636363636367, 2.98372437868011e-16]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data\ndata = {\n    'clone_size': [1, 1.119291384, 1.252813202, 1.402263022, 1.569540919, 1.756773627, 1.966341584, 2.200909193, 2.463458696, 2.757328093, 3.086253577, 3.454417037, 3.866499226, 4.327739269, 4.844001275, 5.42184889, 6.068628747, 6.792563869, 7.602858212, 8.509813689, 9.524961141, 10.66120694, 11.93299706, 13.3565008, 14.94981626, 16.73320053, 18.72932718, 20.96357454, 23.46434835, 26.26344294, 29.39644539, 32.90318804, 36.82825487, 41.22154836, 46.13892391, 51.64289999, 57.80345299, 64.69890689, 72.41692903, 81.0556447, 90.72488473, 101.5475818, 113.6613333, 127.2201511, 142.3964189, 159.3830848, 178.3961136, 199.6772328, 223.4970062, 250.1582734, 280, 313.4015875],\n    'cumulative_probability_red': [0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.886363636, 0.818181818, 0.818181818, 0.784090909, 0.784090909, 0.772727273, 0.761363636, 0.761363636, 0.761363636, 0.75, 0.738636364, 0.715909091, 0.715909091, 0.693181818, 0.693181818, 0.681818182, 0.670454545, 0.647727273, 0.636363636, 0.613636364, 0.613636364, 0.568181818, 0.522727273, 0.488636364, 0.454545455, 0.386363636, 0.363636364, 0.340909091, 0.318181818, 0.272727273, 0.25, 0.204545455, 0.181818182, 0.159090909, 0.136363636, 0.125, 0.113636364, 0.113636364, 0.113636364, 0.090909091, 0.090909091, 0.068181818, 0.045454545, 0.022727273, 0.011363636, 2.98372E-16]\n}\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(12, 6))\nplt.plot(df['clone_size'], df['cumulative_probability_red'], marker='o', linestyle='-', color='red')\nplt.title('Cumulative Probabilities of Red Category for Different Clone Sizes')\nplt.xlabel('Clone Size')\nplt.ylabel('Cumulative Probability')\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 72.46
+    },
+    {
+      "id": 1701,
+      "FileName": "health-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the percentage of individuals in the 60 to 64 years age group, and what proportion of them achieved the optimal condition?",
+      "Reference": "75.60% of the sample is in the 60 to 64 years age group, with 30.30% achieving the optimal condition.",
+      "Prediction": "75.6, 30.3",
+      "Metrics": {
+        "F1": 22.22,
+        "EM": 0.0,
+        "ROUGE-L": 22.22,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 1702,
+      "FileName": "health-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Is there a statistically significant difference in the likelihood of achieving the optimal condition between males and females? (yes / no)",
+      "Reference": "yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.83
+    },
+    {
+      "id": 1703,
+      "FileName": "health-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does higher education level correlate with a greater chance of achieving the optimal condition, and is this correlation statistically significant? (yes / no)",
+      "Reference": "yes",
+      "Prediction": "No, 0.034*",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 1704,
+      "FileName": "health-table23",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the 95% confidence interval (IC95%) for the education level's impact on achieving an optimal CT, when comparing up to high school to higher education?",
+      "Reference": "0.31-0.96",
+      "Prediction": "0,31-0,96",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 1705,
+      "FileName": "health-table23",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns and any basic insights derived from the data?",
+      "Reference": "The table summarizes a univariate analysis of factors affecting the Optimal CT rate, covering demographic and socioeconomic variables. Key insights reveal a significantly lower Optimal CT rate for females and those without a spouse, while higher education and family income levels are associated with a higher Optimal CT rate.",
+      "Prediction": "The table presents univariate analysis results for different demographic variables (Age Group, Gender, Marital Status, Skin Color, Education Level, Family Income) in relation to Optimal CT. It includes sample size (n), percentage (%), Odds Ratio (OR), 95% Confidence Interval (IC95%), and p-value. Key insights: Female gender (p=0.001), being without a spouse (p=0.040), having up to high school education (p=0.034), and having up to 4 salaries (p=0.021) show statistically significant associations with lower Optimal CT rates. Age group (p=0.461) and skin color (p=0.119) show non-significant associations.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.83
+    },
+    {
+      "id": 1706,
+      "FileName": "health-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the percentage of non-smokers, and how does their Best CT rate compare to smokers?",
+      "Reference": "88% are non-smokers with a 28.20% Best CT rate; 12% are smokers with a 35.50% Best CT rate.",
+      "Prediction": "88.0, 28.2",
+      "Metrics": {
+        "F1": 11.11,
+        "EM": 0.0,
+        "ROUGE-L": 11.11,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 1707,
+      "FileName": "health-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Does alcohol consumption at risk level significantly affect the Best CT outcome compared to no risk? (yes / no)",
+      "Reference": "no",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.81
+    },
+    {
+      "id": 1708,
+      "FileName": "health-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which lifestyle factor shows the most significant positive association with the best CT outcome, based on the p-value?",
+      "Reference": "Community Association Membership",
+      "Prediction": "Community Association Membership",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 1709,
+      "FileName": "health-table24",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which variable has the lowest percentage of the best CT outcome?",
+      "Reference": "Alcohol Consumption(At Risk)",
+      "Prediction": "Physical Activity, Active-Very Active",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 1710,
+      "FileName": "health-table24",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns and any basic insights derived from the data?",
+      "Reference": "The table examines the association between various health-related factors and the best Computed Tomography (CT) outcomes. It includes columns for the number of individuals (n), percentages (%), best CT outcomes, odds ratios (OR), 95% confidence intervals (IC95%), and p-values. Community Association Membership shows a statistically significant positive association with the best CT outcomes, while other factors like smoking, alcohol consumption, social activity, attending religious services, and physical activity do not show a significant correlation.",
+      "Prediction": "The table presents a univariate analysis of various lifestyle factors (Smoking, Alcohol Consumption, Social Activity, Community Association Membership, Attends Religious Services, Physical Activity) in relation to \"Best CT\" outcomes. It includes counts (n) and percentages (%) for each category, along with odds ratios (OR), 95% confidence intervals (IC95%), and p-values for statistical significance. Key insights include that membership in a community association is significantly associated with a lower odds of \"Best CT\" (OR=0.44, p=0.029*), while other factors like smoking, alcohol consumption, social activity, religious service attendance, and physical activity show non-significant associations (p > 0.05).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.14
+    },
+    {
+      "id": 1711,
+      "FileName": "health-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of employees with mental job demands?",
+      "Reference": "62.80%",
+      "Prediction": "62,8",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.01
+    },
+    {
+      "id": 1712,
+      "FileName": "health-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the odds ratio (OR) for physical job demands compared to mental job demands?",
+      "Reference": "0.32",
+      "Prediction": "0,32",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1713,
+      "FileName": "health-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of employees working more than 30 hours per week?",
+      "Reference": "96.10%",
+      "Prediction": "96,1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 1714,
+      "FileName": "health-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the confidence interval (CI) for the odds ratio of employees working more than 27 years?",
+      "Reference": "0.16-1.59",
+      "Prediction": "0,39-1,15",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 1715,
+      "FileName": "health-table25",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns and any basic insights derived from the data?",
+      "Reference": "The table examines various job and work conditions, including job demand, time of work, working hours per week, hazardous and risky work allowance, and night or shift work, and their impact on being in the 'best CT' group. Key insights show that physical job demand has a significantly lower odds ratio (0.32, p=0.00) for being in the best CT group, while other factors do not show a significant association.",
+      "Prediction": "The table presents a univariate analysis of various workplace factors (Job Demand, Time of Work, Working Hours per Week, Hazardous and Risky Work Allowance, Night or Shift Work) on the best CT outcome. It includes sample size (n), percentage (%), and for univariate analysis, odds ratio (OR), 95% confidence interval (IC95%), and p-value. Key insights: Physical job demand has the lowest best CT percentage (15.3%) and is significantly associated with best CT (p=0.002). Working more than 30 hours/week is associated with a higher OR (1.67) but not statistically significant (p=0.524). Night or shift work shows a slight increase in best CT (OR=1.16, p=0.597), but it is not statistically significant.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.69
+    },
+    {
+      "id": 1716,
+      "FileName": "health-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Is there a significant difference in the odds of achieving the best CT result between eutrophic and overweight individuals? (yes / no)",
+      "Reference": "no",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.88
+    },
+    {
+      "id": 1717,
+      "FileName": "health-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of individuals who perceive their health as excellent?",
+      "Reference": "17.10%",
+      "Prediction": "17,1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 1718,
+      "FileName": "health-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the percentage of individuals who have experienced depressive symptoms?",
+      "Reference": "7.80%",
+      "Prediction": "7,8",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 1719,
+      "FileName": "health-table26",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the confidence interval for the odds ratio of individuals who have fallen in the last 12 months?",
+      "Reference": "0.12-0.67",
+      "Prediction": "0,12-0,67",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 1720,
+      "FileName": "health-table26",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns and any basic insights derived from the data?",
+      "Reference": "The table presents a univariate analysis of various health factors, including self-perceived health, depressive symptoms, sleep difficulties, BMI, falls, daily medication use, hospitalization, and musculoskeletal symptoms, in relation to achieving the best CT result. It includes columns for the number of cases (n), percentage of total (%), number with the best outcome (Best CT), odds ratio (OR), 95% confidence interval (IC95%), and p-value. Notable insights include a significantly lower likelihood of the best CT result for those with poor self-perceived health, sleep difficulties, recent hospitalizations, and musculoskeletal symptoms, particularly work impairment.",
+      "Prediction": "The table presents a univariate analysis of various health-related variables (Self-perceived Health, Depressive Symptoms, Sleep Difficulties, BMI, Falls, Daily Medication Use, Hospitalization, Musculoskeletal Symptoms) in relation to \"Best CT\" outcomes. It includes columns for sample size (n), percentage (%), Best CT n and %, Odds Ratio (OR), 95% Confidence Interval (IC95%), and p-value. Key insights include: poor self-perceived health, sleep difficulties, recent falls, hospitalization, and recent musculoskeletal symptoms are significantly associated with lower odds of Best CT (p<0.001 or p=0.004). BMI categories and medication use show no significant association.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.16
+    },
+    {
+      "id": 1721,
+      "FileName": "health-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the odds ratio for gender being female in the multivariate analysis?",
+      "Reference": "0.39",
+      "Prediction": "0,39",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 1722,
+      "FileName": "health-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the confidence interval for skin color being white in the multivariate analysis?",
+      "Reference": "0.16-0.84",
+      "Prediction": "0,16-0,84",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 1723,
+      "FileName": "health-table27",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the p-value for physical job requirements in the multivariate analysis?",
+      "Reference": "0.04",
+      "Prediction": "0,042*",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1724,
+      "FileName": "health-table27",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many categories are there for Musculoskeletal Symptoms in the multivariate analysis?",
+      "Reference": "4",
+      "Prediction": "No complaints, Last 12 months, Last 7 days, Work impairment",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.44
+    },
+    {
+      "id": 1725,
+      "FileName": "health-table27",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including the main columns and any basic insights derived from the data?",
+      "Reference": "The table provides multivariate analysis results for various health-related variables. The main columns include 'Variable', 'Multivariate Analysis: OR', 'IC95%', and 'p'. The 'Variable' column lists different health aspects such as Gender, Skin color, Job Requirements, Hospitalization, Difficulty Sleeping, Self-perceived Health, and Musculoskeletal Symptoms. The 'Multivariate Analysis: OR' column presents the odds ratios, 'IC95%' gives the confidence intervals, and the 'p' column indicates the statistical significance of each variable. Basic insights include the identification of factors with significant odds ratios and p-values, highlighting the impact of variables like gender, skin color, job requirements, and self-perceived health on the outcomes. Notable trends are observed in the odds ratios and their statistical significance, which can inform further health-related research and interventions.",
+      "Prediction": "Multivariate Analysis table showing Odds Ratios (OR), 95% Confidence Intervals (IC95%), and p-values for various variables including Gender, Skin color, Job Requirements, Hospitalization, Difficulty Sleeping, Self-perceived Health, and Musculoskeletal Symptoms. Key insights: Female gender and white skin color are significantly associated with lower odds; Physical job requirements, no hospitalization, no difficulty sleeping, poor self-perceived health, and work impairment due to musculoskeletal symptoms show significant associations with lower odds.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.81
+    },
+    {
+      "id": 1726,
+      "FileName": "health-table28",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average condition percentage for males with a body length of 2.15 meters after a 120-day fast?",
+      "Reference": "33.00",
+      "Prediction": "33.0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 1727,
+      "FileName": "health-table28",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Does the table provide information on the poor condition weight for females with a body length of 1.85m after a 120 Day Fast? (yes / no)",
+      "Reference": "no",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.7
+    },
+    {
+      "id": 1728,
+      "FileName": "health-table28",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "For females, what is the change in average condition weight going from 2.00m to 2.10m body length after a 180 Day Fast?",
+      "Reference": "2.10/1.80",
+      "Prediction": "1.1, 1.2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 1729,
+      "FileName": "health-table28",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How much does the average condition weight for males increase when their body length goes from 2.15m to 2.45m, after a 120 Day Fast?",
+      "Reference": "5.10",
+      "Prediction": "5.10",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 1730,
+      "FileName": "health-table28",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of PoorCondition and ExcellentCondition for males after an 180 Day Fast?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 1731,
+      "FileName": "health-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average value for males at 230 cm in Scenario 3?",
+      "Reference": "2.70",
+      "Prediction": "2.7",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.79
+    },
+    {
+      "id": 1732,
+      "FileName": "health-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which scenario does the female group at 210 cm have the highest extreme value?",
+      "Reference": "Scenario 3",
+      "Prediction": "Scenario 3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.75
+    },
+    {
+      "id": 1733,
+      "FileName": "health-table29",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "For males, what is the difference between the highest and lowest extreme values at 215 cm?",
+      "Reference": "7.00",
+      "Prediction": "9.4, 2.9",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 1734,
+      "FileName": "health-table29",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many scenarios have a non-empty average for males at 245 cm?",
+      "Reference": "2",
+      "Prediction": "Scenario 1, Scenario 2, Scenario 3, Scenario 5",
+      "Metrics": {
+        "F1": 22.22,
+        "EM": 0.0,
+        "ROUGE-L": 22.22,
+        "SacreBLEU": 5.52
+      },
+      "ProcessingTime": 1.45
+    },
+    {
+      "id": 1735,
+      "FileName": "health-table29",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of Males 245 cm and Females 200 cm extreme values?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 1736,
+      "FileName": "society-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of individuals who faced violence in the age group <30?",
+      "Reference": "121",
+      "Prediction": "121",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 1737,
+      "FileName": "society-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many individuals aged 41-50 did not face violence in the private sector?",
+      "Reference": "16",
+      "Prediction": "16",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 1738,
+      "FileName": "society-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many individuals with more than 20 years of experience faced violence in both government and private sectors combined?",
+      "Reference": "19",
+      "Prediction": "19",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 1739,
+      "FileName": "society-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Is there a significant difference in violence faced by males and females as indicated by the p-value? (yes / no)",
+      "Reference": "yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 1740,
+      "FileName": "society-table56",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the p-value of different S.no.",
+      "Reference": "[[0.066, 0.188, 0.148, 0.293, 0.455, 0.484]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \ndata = {\n    \"S. no\": [1, 2, 3, 4, 6, 7],\n    \"p-value\": [0.066, 0.188, 0.148, 0.293, 0.455, 0.484]\n}\ndf = pd.DataFrame(data)\nplt.plot(df[\"S. no\"], df[\"p-value\"], marker='o', linestyle='-', color='b')\nplt.xlabel('S. no')\nplt.ylabel('p-value')\nplt.title('p-value vs S. no')\nplt.xticks(df[\"S. no\"], ['1', '2', '3', '4', '6', '7'])\nplt.grid(True)\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 9.62
+    },
+    {
+      "id": 1741,
+      "FileName": "health-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the intensity/area ratio for Pr1 in Set1 of Experiment 1?",
+      "Reference": "2145",
+      "Prediction": "2145",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 1742,
+      "FileName": "health-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which set has the highest intensity for Oct1 probe in Experiment 2?",
+      "Reference": "Set2",
+      "Prediction": "Set2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 1743,
+      "FileName": "health-table30",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of intensity and intensity/area for Pr1 in Experiment 3?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.47
+    },
+    {
+      "id": 1744,
+      "FileName": "health-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which experiment does Set5 have the lowest Pr1/Oct1 for the Oct1 probe?",
+      "Reference": "Expt3",
+      "Prediction": "Expt3",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.18
+    },
+    {
+      "id": 1745,
+      "FileName": "health-table30",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "How does the intensity/area ratio for Pr2 change from uninfected DC-SAG to uinf DC + SAG in Experiment 1?",
+      "Reference": "Increase",
+      "Prediction": "1434, 4459.5",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.73
+    },
+    {
+      "id": 1746,
+      "FileName": "health-table31",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean fold change for Set2 in Pr1/Oct1? (Accurate to two decimal places)",
+      "Reference": "4.42",
+      "Prediction": "4.42",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
     }
   ],
   "processed_ids": [
@@ -2512,6 +3451,66 @@
     1683,
     1684,
     1685,
-    1686
+    1686,
+    1687,
+    1688,
+    1689,
+    1690,
+    1691,
+    1692,
+    1693,
+    1694,
+    1695,
+    1696,
+    1697,
+    1698,
+    1699,
+    1700,
+    1701,
+    1702,
+    1703,
+    1704,
+    1705,
+    1706,
+    1707,
+    1708,
+    1709,
+    1710,
+    1711,
+    1712,
+    1713,
+    1714,
+    1715,
+    1716,
+    1717,
+    1718,
+    1719,
+    1720,
+    1721,
+    1722,
+    1723,
+    1724,
+    1725,
+    1726,
+    1727,
+    1728,
+    1729,
+    1730,
+    1731,
+    1732,
+    1733,
+    1734,
+    1735,
+    1736,
+    1737,
+    1738,
+    1739,
+    1740,
+    1741,
+    1742,
+    1743,
+    1744,
+    1745,
+    1746
   ]
 }

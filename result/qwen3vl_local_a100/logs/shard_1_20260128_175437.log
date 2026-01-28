@@ -2732,3 +2732,123 @@ Processing Time: 1.75s
 Query ID: 1040 | Type: Fact Checking | SubType: Multi-hop Fact Checking
 ============================================================
   Warning: Large input (10811 tokens) for image (3520, 1572)
+Processing mix modality:  35%|███▌      | 272/768 [13:22<19:52,  2.40s/it]Predictions:  ['30 30']
+Answer:  ['675']
+Prediction: 30, 30
+Reference: 67.50
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.04s
+
+============================================================
+Query ID: 1041 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (10811 tokens) for image (3520, 1572)
+Processing mix modality:  36%|███▌      | 273/768 [13:24<18:41,  2.27s/it]Predictions:  ['3 3']
+Answer:  ['1 3']
+Prediction: 3, 3
+Reference: 1, 3
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.94s
+
+============================================================
+Query ID: 1042 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large input (10819 tokens) for image (3520, 1572)
+Processing mix modality:  36%|███▌      | 274/768 [13:26<18:13,  2.21s/it]Predictions:  ['mar 04 43']
+Answer:  ['mar 4 53']
+Prediction: Mar 04, 43
+Reference: Mar 4, 53
+Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 0.0}
+Processing Time: 2.09s
+
+============================================================
+Query ID: 1043 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (10901 tokens) for image (3520, 1572)
+Processing mix modality:  36%|███▌      | 275/768 [13:36<35:34,  4.33s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Date': ['Thu, Mar 02', 'Fri, Mar 03', 'Sat, Mar 04'],
+'Total Calories': [2800, 810, 6180]
+}
+
+df = pd.DataFrame(data)
+
+# Create a line chart
+plt.figure(figsize=(10, 5))
+plt.plot(df['Date'], df['Total Calories'], marker='o', linestyle='-', color='blue')
+plt.title('Total Calories Consumed Per Day')
+plt.xlabel('Date')
+plt.ylabel('Total Calories')
+plt.grid(True)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: [[2800, 810, 6180]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Date': ['Thu, Mar 02', 'Fri, Mar 03', 'Sat, Mar 04'],
+    'Total Calories': [2800, 810, 6180]
+}
+
+df...
+Reference: [[2800, 810, 6180]]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 9.27s
+
+============================================================
+Query ID: 1044 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10029 tokens) for image (3518, 2252)
+Processing mix modality:  36%|███▌      | 276/768 [13:37<29:23,  3.58s/it]Predictions:  ['dot clark yes']
+Answer:  ['steve griggs yes']
+Prediction: Dot Clark, Yes
+Reference: Steve Griggs, Yes
+Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 1045 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (10014 tokens) for image (3518, 2252)
+Processing mix modality:  36%|███▌      | 277/768 [13:39<24:48,  3.03s/it]Predictions:  ['3']
+Answer:  ['4']
+Prediction: 3
+Reference: 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.74s
+
+============================================================
+Query ID: 1046 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (10010 tokens) for image (3518, 2252)
+Processing mix modality:  36%|███▌      | 278/768 [13:49<41:00,  5.02s/it]Predictions:  ['dot clark steve griggs steph mullard andy marsden roger stroud brian thomas del hopkins bill hopkins neil allen mick clark dan calver jody holgarth craig mansfield darren kerrigan richard griggs craig mechan mick salmon matt heskett marc witherden paul marshall susanne roalf richard holloway rosemary rose jason halmshaw dave holt carlos hinds steve aimable dan drake david brown johnny fung julie zhu luke heskett ben rayner scott merry allen mevo nick page darren ball mike blackburn jim doyle adam stavrou ross oneil jo luck steve childs brendan fitzpatrick']
+Answer:  ['14']
+Prediction: Dot Clark, Steve Griggs, Steph Mullard, Andy Marsden, Roger Stroud, Brian Thomas, Del Hopkins, Bill Hopkins, Neil Allen, Mick Clark, Dan Calver, Jody Holgarth, Craig Mansfield, Darren Kerrigan, Richar...
+Reference: 14
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 9.67s
+
+============================================================
+Query ID: 1047 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (10016 tokens) for image (3518, 2252)
+Processing mix modality:  36%|███▋      | 279/768 [17:15<8:52:10, 65.30s/it]Predictions:  ['167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 167 1']
+Answer:  ['60546']
+Prediction: 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, ...
+Reference: 6054.59
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 205.94s
+
+============================================================
+Query ID: 1048 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (10015 tokens) for image (3518, 2252)
+Processing mix modality:  36%|███▋      | 280/768 [17:24<6:33:16, 48.35s/it]Processing mix modality:  37%|███▋      | 281/768 [17:25<4:38:07, 34.27s/it]Processing mix modality:  37%|███▋      | 282/768 [17:26<3:17:25, 24.37s/it]Processing mix modality:  37%|███▋      | 283/768 [17:29<2:24:00, 17.82s/it]Processing mix modality:  37%|███▋      | 284/768 [17:31<1:44:54, 13.01s/it]Processing mix modality:  37%|███▋      | 285/768 [17:36<1:26:50, 10.79s/it]Processing mix modality:  37%|███▋      | 286/768 [17:37<1:02:43,  7.81s/it]Processing mix modality:  37%|███▋      | 287/768 [17:38<45:51,  5.72s/it]  Processing mix modality:  38%|███▊      | 288/768 [17:39<34:06,  4.26s/it]Processing mix modality:  38%|███▊      | 289/768 [17:40<26:20,  3.30s/it]Processing mix modality:  38%|███▊      | 290/768 [17:51<44:44,  5.62s/it]Processing mix modality:  38%|███▊      | 291/768 [17:54<39:10,  4.93s/it]Processing mix modality:  38%|███▊      | 292/768 [17:55<29:04,  3.67s/it]Processing mix modality:  38%|███▊      | 293/768 [17:58<28:34,  3.61s/it]Processing mix modality:  38%|███▊      | 294/768 [17:59<22:08,  2.80s/it]

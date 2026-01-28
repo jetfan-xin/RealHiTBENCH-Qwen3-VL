@@ -4178,6 +4178,315 @@
         "GPT_EVAL": "N/A (no eval_api_key)"
       },
       "ProcessingTime": 4.02
+    },
+    {
+      "id": 1039,
+      "FileName": "health-table14",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Was the total calorie intake on Mar 3 higher than the total on Mar 2?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.75
+    },
+    {
+      "id": 1040,
+      "FileName": "health-table14",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What was the average duration of all physical activities across Mar 2 and Mar 3?",
+      "Reference": "67.50",
+      "Prediction": "30, 30",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.04
+    },
+    {
+      "id": 1041,
+      "FileName": "health-table14",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique activities were recorded on Mar 2, and how many on Mar 3?",
+      "Reference": "1, 3",
+      "Prediction": "3, 3",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.94
+    },
+    {
+      "id": 1042,
+      "FileName": "health-table14",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total protein intake between Mar 2 and Mar 4. Which date had a higher protein intake, and by how much?",
+      "Reference": "Mar 4, 53",
+      "Prediction": "Mar 04, 43",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.09
+    },
+    {
+      "id": 1043,
+      "FileName": "health-table14",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Using the table, create a line chart to show the trend of total calories consumed per day over the recorded dates.",
+      "Reference": "[[2800, 810, 6180]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Date': ['Thu, Mar 02', 'Fri, Mar 03', 'Sat, Mar 04'],\n    'Total Calories': [2800, 810, 6180]\n}\n\ndf = pd.DataFrame(data)\n\n# Create a line chart\nplt.figure(figsize=(10, 5))\nplt.plot(df['Date'], df['Total Calories'], marker='o', linestyle='-', color='blue')\nplt.title('Total Calories Consumed Per Day')\nplt.xlabel('Date')\nplt.ylabel('Total Calories')\nplt.grid(True)\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 9.27
+    },
+    {
+      "id": 1044,
+      "FileName": "sport-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Find the player who achieved a first-place finish in the week of 2013-09-16 and check if they were in the top 5 overall.",
+      "Reference": "Steve Griggs, Yes",
+      "Prediction": "Dot Clark, Yes",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.84
+    },
+    {
+      "id": 1045,
+      "FileName": "sport-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Determine the total number of weeks where “Mick Clark” scored over 200 points.",
+      "Reference": "4",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.74
+    },
+    {
+      "id": 1046,
+      "FileName": "sport-table10",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many players scored over 500 points in any single week across all weeks?",
+      "Reference": "14",
+      "Prediction": "Dot Clark, Steve Griggs, Steph Mullard, Andy Marsden, Roger Stroud, Brian Thomas, Del Hopkins, Bill Hopkins, Neil Allen, Mick Clark, Dan Calver, Jody Holgarth, Craig Mansfield, Darren Kerrigan, Richard Griggs, Craig Mechan, Mick Salmon, Matt Heskett, Marc Witherden, Paul Marshall, Susanne Roalf, Richard Holloway, Rosemary Rose, Jason Halmshaw, Dave Holt, Carlos Hinds, Steve Aimable, Dan Drake, David Brown, Johnny Fung, Julie Zhu, Luke Heskett, Ben Rayner, Scott Merry, Allen Mevo, Nick Page, Darren Ball, Mike Blackburn, Jim Doyle, Adam Stavrou, Ross O'Neil, Jo Luck, Steve Childs, Brendan Fitzpatrick",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 9.67
+    },
+    {
+      "id": 1047,
+      "FileName": "sport-table10",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the total points scored by all players in the week of 2013-10-28.",
+      "Reference": "6054.59",
+      "Prediction": "167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 167, 1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 205.94
+    },
+    {
+      "id": 1048,
+      "FileName": "sport-table10",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the table, including the main columns and any notable trends or insights about player performance over the weeks.",
+      "Reference": "The table summarizes the performance of 44 players across multiple weeks in a competitive points-based event. Key columns include “Place” (overall ranking), “Points” (cumulative points), “Name” (player identifiers), “Earnt” (monetary earnings), “Played” (weeks participated), and detailed weekly performance scores (“points” for each week). Notable trends include high variability in weekly scores, with certain players like Dot Clark and Steve Griggs achieving consistently high weekly and cumulative points. A significant number of players scored over 500 points in specific weeks, while others showed inconsistent participation.",
+      "Prediction": "The table tracks player rankings, points, earnings, and played games across multiple dates (16/09/13 to 04/11/13). Key columns include Place, Points, Name, Earnt, Played, and weekly performance (Place and Points for each date). Notable trends: Dot Clark leads with 2,543 points and consistent top placements; Steve Griggs and Steph Mullard show strong performances with high points and top placements. Players like Andy Marsden and Neil Allen show significant point gains in later weeks. Several players, such as Craig Mansfield and Darren Kerrigan, have fluctuating performances. The table highlights competitive dynamics, with top players maintaining dominance while others show improvement or decline.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.81
+    },
+    {
+      "id": 1049,
+      "FileName": "economy-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Who received the highest amount of payment in a single transaction, and what was the total payment amount (GST inclusive)?",
+      "Reference": "Jane Doe, 80",
+      "Prediction": "Jane Doe, 80.00",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.4
+    },
+    {
+      "id": 1050,
+      "FileName": "economy-table73",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the total amount received via Cheque across all transactions.",
+      "Reference": "159",
+      "Prediction": "149.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.29
+    },
+    {
+      "id": 1051,
+      "FileName": "economy-table73",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the payment methods (EFTPOS, Cheque, Cash) based on the total amount received through each method. Provide the rank and the total for each method.",
+      "Reference": "Cheque, 159; EFTPOS, 146; Cash, 100",
+      "Prediction": "Cash, 160.00, Cheque, 169.00, EFTPOS, 176.00",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 10.68
+      },
+      "ProcessingTime": 2.51
+    },
+    {
+      "id": 1052,
+      "FileName": "economy-table73",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What allocation categories are included under the GST Exclusive Amount Only section, and how do codes like N00 and S10 differentiate them?",
+      "Reference": "Check(N00), Permit (N00), Licence (N00), Reports (S10), Services (S10), Reports (N00)",
+      "Prediction": "Check, Permit, Licence, Reports, Services, N00, S10",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 55.56,
+        "SacreBLEU": 5.8
+      },
+      "ProcessingTime": 1.78
+    },
+    {
+      "id": 1053,
+      "FileName": "economy-table73",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, detailing its main columns, their significance, and any notable trends observed in the transaction data?",
+      "Reference": "The table provides a detailed log of financial transactions, including columns for payment method, date, receipt number, payer name, GST-inclusive amounts, and GST-exclusive allocations categorized as Permit, Licence, Reports, and Services. Notable trends include a wide use of Cheque, EFTPOS, and Cash for payments, with Cheque transactions contributing the highest total amount. GST is consistently applied at 10% to some categories, while others are exempt. Allocations to Reports (S10) and Services (S10) dominate overall, reflecting the most common services transacted.",
+      "Prediction": "CASH BOOK - DO NOT PRINT, Payment Method, Date, Receipt #, Name, Amount Received (GST Inc), GST @ 10%, Check, Permit, Licence, Reports, Services, Reports, GST, Total Amount 405.00, Total GST 15.00, Notable Trends: EFTPOS and Cheque are primary payment methods, Reports and Services generate significant revenue, GST is consistently 10% of the GST-exclusive amount.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.61
+    },
+    {
+      "id": 1054,
+      "FileName": "manufacture-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the product with the smallest beginning inventory in Period 4.",
+      "Reference": "E",
+      "Prediction": "C",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 1055,
+      "FileName": "manufacture-table15",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify if the sum of beginning inventory and production equals the sum of shipping and ending inventory for Product F in Period 1.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.85
+    },
+    {
+      "id": 1056,
+      "FileName": "manufacture-table15",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which product has the largest ending inventory in Period 3?",
+      "Reference": "A",
+      "Prediction": "A",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.86
+    },
+    {
+      "id": 1057,
+      "FileName": "manufacture-table15",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total shipping quantities of Product A and Product F across all periods. Which product shipped more?",
+      "Reference": "F",
+      "Prediction": "Product F, Product A",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 1058,
+      "FileName": "manufacture-table15",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the table by describing the main columns, their content, and any notable trends in inventory or production values?",
+      "Reference": "The table details inventory and production metrics for multiple products (A to G) across four periods. Key columns include Beginning Inventory, Production, Shipping, and Ending Inventory. Notable trends include consistent fluctuations in production and shipping values and instances where ending inventory is closely aligned with shipping totals, reflecting operational efficiency.",
+      "Prediction": "The table tracks inventory and production for seven products (A-G) across four periods. Each period includes columns for Beginning Inventory, Production, Shipping, and Ending Inventory. Notable trends include: Product A consistently has high production (3000, 600, 4800, 600) and moderate shipping; Product B shows zero production in Period 1 but high production (4200) in Period 2; Product F has significant production (2400, 4200, 5400, 3000) and high shipping in early periods; Product G has zero production in Period 1 but substantial production (3000, 4200) in later periods. Ending inventories generally decrease over time for most products, except Product F which shows a significant increase in ending inventory in Period 4 (1788).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 11.01
     }
   ],
   "processed_ids": [
@@ -4196,6 +4505,26 @@
     1036,
     1037,
     1038,
+    1039,
+    1040,
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1049,
+    1050,
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056,
+    1057,
+    1058,
     769,
     770,
     771,

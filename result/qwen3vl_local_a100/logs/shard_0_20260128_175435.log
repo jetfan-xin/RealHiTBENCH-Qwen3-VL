@@ -1437,4 +1437,1244 @@ Processing Time: 10.32s
 Query ID: 96 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
 ============================================================
   Warning: Large input (11615 tokens) for image (2138, 6464)
-Processing mix modality:  12%|█▎        | 96/768 [12:44<2:49:55, 15.17s/it]Processing mix modality:  13%|█▎        | 97/768 [12:46<2:03:51, 11.08s/it]Processing mix modality:  13%|█▎        | 98/768 [12:47<1:30:38,  8.12s/it]Processing mix modality:  13%|█▎        | 99/768 [12:49<1:11:48,  6.44s/it]Processing mix modality:  13%|█▎        | 100/768 [13:00<1:24:19,  7.57s/it]Processing mix modality:  13%|█▎        | 101/768 [13:01<1:04:03,  5.76s/it]Processing mix modality:  13%|█▎        | 102/768 [13:02<48:29,  4.37s/it]  Processing mix modality:  13%|█▎        | 103/768 [13:03<36:48,  3.32s/it]Processing mix modality:  14%|█▎        | 104/768 [13:04<28:58,  2.62s/it]
+Processing mix modality:  12%|█▎        | 96/768 [12:44<2:49:55, 15.17s/it]Processing mix modality:  13%|█▎        | 97/768 [12:46<2:03:51, 11.08s/it]Processing mix modality:  13%|█▎        | 98/768 [12:47<1:30:38,  8.12s/it]Processing mix modality:  13%|█▎        | 99/768 [12:49<1:11:48,  6.44s/it]Processing mix modality:  13%|█▎        | 100/768 [13:00<1:24:19,  7.57s/it]Processing mix modality:  13%|█▎        | 101/768 [13:01<1:04:03,  5.76s/it]Processing mix modality:  13%|█▎        | 102/768 [13:02<48:29,  4.37s/it]  Processing mix modality:  13%|█▎        | 103/768 [13:03<36:48,  3.32s/it]Processing mix modality:  14%|█▎        | 104/768 [13:04<28:58,  2.62s/it]Processing mix modality:  14%|█▎        | 105/768 [13:27<1:37:15,  8.80s/it]Processing mix modality:  14%|█▍        | 106/768 [13:29<1:12:10,  6.54s/it]Processing mix modality:  14%|█▍        | 107/768 [13:30<54:40,  4.96s/it]  Processing mix modality:  14%|█▍        | 108/768 [13:31<42:45,  3.89s/it]Predictions:  ['14775 wholesale and retail trade']
+Answer:  ['15825 leisure and hospitality']
+Prediction: 1477.5, Wholesale and retail trade
+Reference: 1582.47, Leisure and hospitality
+Metrics: {'F1': 22.22, 'EM': 0.0, 'ROUGE-L': 22.22, 'SacreBLEU': 10.68}
+Processing Time: 2.53s
+
+============================================================
+Query ID: 97 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['24492 24062']
+Answer:  ['24492 24062']
+Prediction: 24492, 24062
+Reference: 24492, 24062
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.52s
+
+============================================================
+Query ID: 98 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['377102']
+Answer:  ['377102']
+Prediction: 37710.2
+Reference: 37710.20
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 99 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['economic reasons slack work or business conditions noneconomic reasons in school or training vacation or personal day holiday legal or religious all other reasons']
+Answer:  ['4']
+Prediction: Economic reasons, Slack work or business conditions, Noneconomic reasons, In school or training, Vacation or personal day, Holiday, legal or religious, All other reasons
+Reference: 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.53s
+
+============================================================
+Query ID: 100 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual averages for persons working 1 to 34 hours in 2023, categorized by reason for working part-time and usual full- or part-time status, across all industries and nonagricultural...
+Reference: The table summarizes the number of persons working 1 to 34 hours in 2023, categorized by reasons for working less than 35 hours and usual work status (full-time or part-time) across all industries and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.22s
+Checkpoint saved: 100 queries processed
+
+============================================================
+Query ID: 101 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['48828 48828']
+Answer:  ['48828']
+Prediction: 4882.8, 4882.8
+Reference: 4882.80
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 102 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['33455']
+Answer:  ['33695']
+Prediction: 33455
+Reference: 33695
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.12s
+
+============================================================
+Query ID: 103 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['134']
+Answer:  ['134']
+Prediction: 134
+Reference: 134
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.88s
+
+============================================================
+Query ID: 104 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['35 hours and over']
+Answer:  ['35 hours and over']
+Prediction: 35 hours and over
+Reference: 35 hours and over
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 0.98s
+
+============================================================
+Query ID: 105 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Hours of work': [
+'Total, persons at work',
+'1 to 34 hours',
+'1 to 4 hours',
+'5 to 14 hours',
+'15 to 29 hours',
+'30 to 34 hours',
+'35 hours and over',
+'35 to 39 hours',
+'40 hours',
+'41 hours and over',
+'41 to 48 hours',
+'49 to 59 hours',
+'60 hours and over',
+'Average hours, total at work',
+'Average hours, persons who usually work full time'
+],
+'Agriculture': [
+155167, 34869, 1613, 5475, 17082, 10699, 120298, 9390, 76549, 34359, 12184, 13453, 8722, 38.5, 41.9
+],
+'Nonagricultural': [
+2179, 587, 42, 134, 269, 142, 1592, 97, 737, 758, 141, 247, 370, 41, 46.7
+]
+}
+df = pd.DataFrame(data)
+
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(df['Agriculture'], df['Nonagricultural'], color='blue', label='Agriculture vs Nonagricultural')
+plt.title('Relationship between Persons Working in Agriculture and Non-Agricultural Industries')
+plt.xlabel('Persons at Work (Agriculture)')
+plt.ylabel('Persons at Work (Nonagricultural)')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: [[2179.0, 587.0, 42.0, 134.0, 269.0, 142.0, 1592.0, 97.0, 737.0, 758.0, 141.0, 247.0, 370.0, 41.0, 46.7]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data from the table
+data = {
+    'Hours of work': [
+        'Total, persons at work',
+        '1 to 34 hours',
+        '1 to 4 hours',...
+Reference: [[3.5, 11.0, 6.9, 77.5, 6.1, 49.3, 22.1, 7.9, 8.7, 5.6]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 23.23s
+
+============================================================
+Query ID: 106 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['4826']
+Answer:  ['4826']
+Prediction: 4826
+Reference: 4826
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.26s
+
+============================================================
+Query ID: 107 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['wage and salary workers education and health services']
+Answer:  ['7']
+Prediction: Wage and salary workers, Education and health services
+Reference: 7
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 108 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['leisure and hospitality other services education and health services']
+Answer:  ['mining quarrying and oil and gas extraction unpaid family workers information']
+Prediction: Leisure and hospitality, Other services, Education and health services
+Reference: Mining, quarrying, and oil and gas extraction, Unpaid family workers, Information
+Metrics: {'F1': 20.0, 'EM': 0.0, 'ROUGE-L': 20.0, 'SacreBLEU': 4.54}
+Processing Time: 1.38s
+
+============================================================
+Query ID: 109 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Industry': ['Manufacturing', 'Construction'],
+'Total at work': [14880, 10054],
+'Worked 1 to 34 hours': [1538, 1380],
+'For economic reasons': [170, 358],
+'For noneconomic reasons - Usually work full time': [791, 558],
+'For noneconomic reasons - Usually work part time': [577, 464],
+'Worked 35 hours or more': [13342, 8674],
+'Average hours - Total at work': [41.5, 40.7],
+'Average hours - Persons who usually work full time': [42.5, 41.9]
+}
+df = pd.DataFrame(data)
+
+# Create a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(df['Total at work'], labels=df['Industry'], autopct='%1.1f%%', startangle=140)
+plt.title('Proportion in Manufacturing and Construction Industries in 2023')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.6, 0.4]
+
+Processing mix modality:  14%|█▍        | 109/768 [13:46<1:19:59,  7.28s/it]Processing mix modality:  14%|█▍        | 110/768 [13:56<1:26:13,  7.86s/it]Processing mix modality:  14%|█▍        | 111/768 [13:57<1:06:23,  6.06s/it]Processing mix modality:  15%|█▍        | 112/768 [13:59<52:12,  4.77s/it]  Processing mix modality:  15%|█▍        | 113/768 [14:01<41:46,  3.83s/it]Processing mix modality:  15%|█▍        | 114/768 [14:09<55:03,  5.05s/it]Processing mix modality:  15%|█▍        | 115/768 [14:10<43:08,  3.96s/it]Processing mix modality:  15%|█▌        | 116/768 [14:12<35:29,  3.27s/it]Processing mix modality:  15%|█▌        | 117/768 [14:13<29:01,  2.67s/it]Processing mix modality:  15%|█▌        | 118/768 [14:17<32:59,  3.05s/it]Processing mix modality:  15%|█▌        | 119/768 [14:18<27:46,  2.57s/it]Processing mix modality:  16%|█▌        | 120/768 [14:20<23:09,  2.14s/it]Processing mix modality:  16%|█▌        | 121/768 [14:21<20:02,  1.86s/it]Processing mix modality:  16%|█▌        | 122/768 [14:22<17:43,  1.65s/it]Processing mix modality:  16%|█▌        | 123/768 [14:23<17:08,  1.60s/it]Processing mix modality:  16%|█▌        | 124/768 [14:25<16:36,  1.55s/it]Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ # Load the data from the table
+ data = {
+    'Industry': ['Manufacturing', 'Construction'],
+    'Total at work': [14880, 10054],
+    'Worked 1 t...
+Reference: [0.4, 0.6]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 15.21s
+
+============================================================
+Query ID: 110 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Industry': ['Manufacturing'],
+'Average hours (Full-time)': [41.5],
+'Average hours (Part-time)': [42.5]
+}
+
+df = pd.DataFrame(data)
+
+# Create a line chart
+plt.figure(figsize=(10, 6))
+plt.plot(df['Industry'], df['Average hours (Full-time)'], marker='o', label='Full-time')
+plt.plot(df['Industry'], df['Average hours (Part-time)'], marker='s', label='Part-time')
+
+# Customize the plot
+plt.title('Average Hours Worked by Workers in the Manufacturing Industry')
+plt.xlabel('Industry')
+plt.ylabel('Average Hours')
+plt.legend()
+plt.grid(True)
+
+# Show the plot
+plt.show()
+
+OUTPUT VALUE: [[41.5], [42.5]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Industry': ['Manufacturing'],
+    'Average hours (Full-time)': [41.5],
+    'Average hours (Part-tim...
+Reference: [[791, 577]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 9.21s
+Checkpoint saved: 110 queries processed
+
+============================================================
+Query ID: 111 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['married spouse present 418']
+Answer:  ['men 16 years and over married spouse present1 433']
+Prediction: Married, spouse present, 41.8
+Reference: Men, 16 years and over, Married, spouse present(1), 43.30
+Metrics: {'F1': 30.77, 'EM': 0.0, 'ROUGE-L': 30.77, 'SacreBLEU': 9.15}
+Processing Time: 1.86s
+
+============================================================
+Query ID: 112 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['34282 118705']
+Answer:  ['34282 118705']
+Prediction: 34282, 118705
+Reference: 34282, 118705
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.77s
+
+============================================================
+Query ID: 113 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['406 376']
+Answer:  ['406 376']
+Prediction: 40.6, 37.6
+Reference: 40.60, 37.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 114 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual averages for persons aged 16 and over in nonagricultural industries in 2023, categorized by age, sex, race/ethnicity, and marital status. Key columns include total persons at...
+Reference: The table provides detailed employment data for nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include the total number of per...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.91s
+
+============================================================
+Query ID: 115 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['152987']
+Answer:  ['152987']
+Prediction: 152987
+Reference: 152987
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.43s
+
+============================================================
+Query ID: 116 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['10859 37780']
+Answer:  ['12587']
+Prediction: 10859, 37780
+Reference: 12587
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.64s
+
+============================================================
+Query ID: 117 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['30091']
+Answer:  ['30091']
+Prediction: 30091
+Reference: 30091
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.29s
+
+============================================================
+Query ID: 118 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['service occupations sales and office occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production transportation and material moving occupations production occupations transportation and material moving occupations']
+Answer:  ['6']
+Prediction: Service occupations, Sales and office occupations, Sales and related occupations, Office and administrative support occupations, Natural resources, construction, and maintenance occupations(1), Constr...
+Reference: 6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.91s
+
+============================================================
+Query ID: 119 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['41 47']
+Answer:  ['41 35']
+Prediction: 4.1, 4.7
+Reference: 4.10, 3.50
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 120 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['men women']
+Answer:  ['men']
+Prediction: Men, Women
+Reference: Men
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+Checkpoint saved: 120 queries processed
+
+============================================================
+Query ID: 121 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['135']
+Answer:  ['135']
+Prediction: 135
+Reference: 135
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 122 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  ['decreasing trend']
+Answer:  ['increasing trend']
+Prediction: Decreasing trend
+Reference: Increasing trend
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+
+============================================================
+Query ID: 123 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.98
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 124 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['418 472']
+Answer:  ['418 472']
+Prediction: 418, 472
+Reference: 418, 472
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.44s
+
+============================================================
+Query ID: 125 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['36 36']
+Answer:  ['31']
+Prediction: 36, 36
+Reference: 31
+Processing mix modality:  16%|█▋        | 125/768 [14:26<15:35,  1.46s/it]Processing mix modality:  16%|█▋        | 126/768 [14:27<14:42,  1.37s/it]Processing mix modality:  17%|█▋        | 127/768 [14:29<14:13,  1.33s/it]Processing mix modality:  17%|█▋        | 128/768 [15:07<2:12:32, 12.43s/it]Processing mix modality:  17%|█▋        | 129/768 [15:08<1:36:52,  9.10s/it]Processing mix modality:  17%|█▋        | 130/768 [15:14<1:26:24,  8.13s/it]Processing mix modality:  17%|█▋        | 131/768 [15:16<1:05:22,  6.16s/it]Processing mix modality:  17%|█▋        | 132/768 [15:17<50:01,  4.72s/it]  Processing mix modality:  17%|█▋        | 133/768 [15:18<39:18,  3.71s/it]Processing mix modality:  17%|█▋        | 134/768 [15:20<31:32,  2.99s/it]Processing mix modality:  18%|█▊        | 135/768 [15:21<26:00,  2.46s/it]Processing mix modality:  18%|█▊        | 136/768 [15:22<22:51,  2.17s/it]Processing mix modality:  18%|█▊        | 137/768 [15:24<22:13,  2.11s/it]Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 126 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['men 06']
+Answer:  ['men 01']
+Prediction: Men, 0.6
+Reference: Men, 0.10%
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 127 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['20 20']
+Answer:  ['20']
+Prediction: 20, 20
+Reference: 20
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 128 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+'Occupation': [
+'Total, 16 years and over',
+'Management, professional, and related occupations',
+'Management, business, and financial operations occupations',
+'Management occupations',
+'Business and financial operations occupations',
+'Professional and related occupations',
+'Computer and mathematical occupations',
+'Architecture and engineering occupations',
+'Life, physical, and social science occupations',
+'Community and social service occupations',
+'Legal occupations',
+'Education, training, and library occupations',
+'Arts, design, entertainment, sports, and media occupations',
+'Healthcare practitioners and technical occupations',
+'Service occupations',
+'Healthcare support occupations',
+'Protective service occupations',
+'Food preparation and serving related occupations',
+'Building and grounds cleaning and maintenance occupations',
+'Personal care and service occupations',
+'Sales and office occupations',
+'Sales and related occupations',
+'Office and administrative support occupations',
+'Natural resources, construction, and maintenance occupations',
+'Farming, fishing, and forestry occupations',
+'Construction and extraction occupations',
+'Installation, maintenance, and repair occupations',
+'Production, transportation, and material moving occupations',
+'Production occupations',
+'Transportation and material moving occupations',
+'No previous work experience',
+'16 to 19 years',
+'20 to 24 years',
+'25 years and over'
+],
+'Men_2023': [
+3.8, 2, 1.9, 1.7, 2.5, 2, 2, 1.5, 1.8, 2.7, 1, 3, 3.6, 1.2, 4.7, 3.4, 2.6, 5.8, 5.4, 3.9, 3.7, 3.4, 4.3, 6.8, 5.3, 2.1, 4.7, 3.5, 5.5, -, -, -, -
+],
+'Women_2023': [
+3.5, 2, 2, 1.7, 2.4, 2, 2.1, 3.1, 1.5, 2.1, 1.4, 2.3, 3.6, 1.4, 4.4, 3.5, 4, 5.6, 5.1, 3.6, 3.6, 3.1, 6.1, 7.4, 7.1, 2.5, 5.4, 4.6, 6.2, -, -, -, -
+]
+}
+
+df = pd.DataFrame(data)
+
+# Filter out rows with missing data for 2023
+df = df[df['Men_2023'] != -].dropna(subset=['Men_2023', 'Women_2023'])
+
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(df['Men_2023'], df['Women_2023'], alpha=0.7)
+plt.title('Correlation between Unemployment Rates for Men and Women in 2023')
+plt.xlabel('Unemployment Rate for Men (2023)')
+plt.ylabel('Unemployment Rate for Women (2023)')
+plt.grid(True)
+plt.show()
+
+Python Error: invalid syntax (<string>, line 44)
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data from the table
+data = {
+    'Occupation': [
+        'Total, 16 years and over',
+        'Management, professional, and related oc...
+Reference: [[3.5, 2.0, 2.0, 1.7, 2.4, 2.0, 2.1, 3.1, 1.5, 2.1, 1.4, 2.3, 3.6, 1.4, 4.4, 3.5, 4.0, 5.6, 5.1, 3.6, 3.6, 4.4, 3.1, 6.1, 7.4, 7.1, 2.5, 5.4, 4.6, 6.2]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 38.31s
+
+============================================================
+Query ID: 129 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['142']
+Answer:  ['142']
+Prediction: 14.17
+Reference: 14.17
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 130 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The unadjusted index for "All items" increased from 171.015 in December 2024 to 171.910 in January 2024, showing a 0.5% rise. For "Food and beverages," the index rose from 185.095 in December 2024 to ...
+Reference: All items (171.01 to 171.91), Food and beverages (185.09 to 186.15)
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 5.86s
+Checkpoint saved: 130 queries processed
+
+============================================================
+Query ID: 131 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['shelter fuels and utilities household furnishings and operations']
+Answer:  ['shelter household furnishings and operations fuels and utilities']
+Prediction: Shelter, Fuels and utilities, Household furnishings and operations
+Reference: Shelter, Household furnishings and operations, Fuels and utilities
+Metrics: {'F1': 100.0, 'EM': 0.0, 'ROUGE-L': 62.5, 'SacreBLEU': 51.7}
+Processing Time: 1.56s
+
+============================================================
+Query ID: 132 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['1857']
+Answer:  ['1857']
+Prediction: 185.69
+Reference: 185.70
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.36s
+
+============================================================
+Query ID: 133 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['142']
+Answer:  ['142']
+Prediction: 14.166
+Reference: 14.166
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 134 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['housing food and beverages']
+Answer:  ['housing']
+Prediction: Housing, Food and beverages
+Reference: Housing
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 15.97}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 135 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 136 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['cereals and bakery products']
+Answer:  ['cereals and bakery products']
+Prediction: Cereals and bakery products
+Reference: Cereals and bakery products
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 137 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['135 1000']
+Answer:  ['135']
+Prediction: 13.474, 100.000
+Reference: 13.47
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.98s
+
+============================================================
+Query ID: 138 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: Processing mix modality:  18%|█▊        | 138/768 [15:32<40:53,  3.90s/it]Processing mix modality:  18%|█▊        | 139/768 [15:42<1:00:04,  5.73s/it]Processing mix modality:  18%|█▊        | 140/768 [15:44<46:05,  4.40s/it]  Processing mix modality:  18%|█▊        | 141/768 [15:45<36:27,  3.49s/it]Processing mix modality:  18%|█▊        | 142/768 [15:46<29:38,  2.84s/it]Processing mix modality:  19%|█▊        | 143/768 [16:00<1:04:09,  6.16s/it]Processing mix modality:  19%|█▉        | 144/768 [16:14<1:26:58,  8.36s/it]import pandas as pd
+import matplotlib.pyplot as plt
+data = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/economy-table137.xlsx")
+subset = data[data['Expenditure category'] == 'All items']
+x = subset['Expenditure category'].unique()
+y = subset[['Unadjusted indexes (Apr. 2022)', 'Unadjusted indexes (Mar. 2023)', 'Unadjusted indexes (Apr. 2023)']].values.flatten()
+plt.plot(x, y, marker='o')
+plt.title('Trend in Unadjusted Indexes for All Items')
+plt.xlabel('Time')
+plt.ylabel('Unadjusted Indexes')
+plt.xticks(rotation=45)
+plt.show()
+
+Python Error: "None of [Index(['Unadjusted indexes (Apr. 2022)', 'Unadjusted indexes (Mar. 2023)',\n       'Unadjusted indexes (Apr. 2023)'],\n      dtype='object')] are in the [columns]"
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+data = pd.read_excel("table.xlsx")
+subset = data[data['Expenditure category'] == 'All items']
+x = subset['Expenditure category'].unique()
+y = sub...
+Reference: [[289.11, 301.84, 303.36]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 8.05s
+
+============================================================
+Query ID: 139 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/economy-table137.xlsx")
+unadjusted_percent_change_apr2022_apr2023 = df['Unadjusted percent change'].iloc[1:]  # Skip the 'All items' row
+unadjusted_percent_change_mar2023_apr2023 = df['Unadjusted percent change'].iloc[1:]  # Skip the 'All items' row
+plt.scatter(unadjusted_percent_change_apr2022_apr2023, unadjusted_percent_change_mar2023_apr2023)
+plt.xlabel('April 2022 - April 2023')
+plt.ylabel('March 2023 - April 2023')
+plt.title('Relationship between Unadjusted Percent Changes')
+plt.grid(True)
+plt.show()
+
+OUTPUT VALUE: [[nan, 4.9, 7.7, 7.1, 12.4, 2.8, 8.0, 2.0, 9.5, 10.4, 8.6, nan, -5.1, -12.6, -20.2, -12.4, -12.2, 5.9, 8.4, -2.1, nan, 5.5, 2.0, 3.6, 5.4, -6.6, 4.0, 4.6, 6.6, 6.8, 8.1, 8.8, 8.1, 0.4, 0.3, 2.9, 11.0, 13.3, 15.5, -0.9]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+df = pd.read_excel("table.xlsx")
+unadjusted_percent_change_apr2022_apr2023 = df['Unadjusted percent change'].iloc[1:]  # Skip the 'All items' row...
+Reference: [[1.5, 1.7, 2.0, 1.8, 1.6]]
+
+Metrics: {'ECR': True, 'Pass': 'False'}
+Processing Time: 10.01s
+
+============================================================
+Query ID: 140 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['electricity']
+Answer:  ['electricity']
+Prediction: Electricity
+Reference: Electricity
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.30s
+Checkpoint saved: 140 queries processed
+
+============================================================
+Query ID: 141 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['airline fares']
+Answer:  ['airline fares']
+Prediction: Airline fares
+Reference: Airline fares
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 142 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['motor vehicle insurance']
+Answer:  ['airline fares']
+Prediction: Motor vehicle insurance
+Reference: Airline fares
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 143 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+"Expenditure category": [
+"Cereals and bakery products",
+"Meats, poultry, fish, and eggs",
+"Dairy and related products",
+"Fruits and vegetables",
+"Nonalcoholic beverages and beverage materials",
+"Other food at home"
+],
+"Relative importance Sep. 2024": [
+1.044,
+1.741,
+0.732,
+1.385,
+1.016,
+2.153
+]
+}
+df = pd.DataFrame(data)
+
+# Plotting the bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df["Expenditure category"], df["Relative importance Sep. 2024"], color='skyblue')
+plt.title("Relative Importance of Expenditure Categories under 'Food at home' as of September 2024")
+plt.xlabel("Expenditure Category")
+plt.ylabel("Relative Importance (Sep. 2024)")
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: [1.044, 1.741, 0.732, 1.385, 1.016, 2.153]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data from the table
+data = {
+    "Expenditure category": [
+        "Cereals and bakery products",
+        "Meats, poultry, fish, and e...
+Reference: [1.044, 1.741, 0.732, 1.385, 1.016, 2.153]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 13.90s
+
+============================================================
+Query ID: 144 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+# Load the data from the table
+data = {
+"Expenditure category": [
+"Cereals and bakery products",
+"Meats, poultry, fish, and eggs",
+"Dairy and related products",
+"Fruits and vegetables",
+"Nonalcoholic beverages and beverage materials",
+"Other food at home"
+],
+"Relative importance Sep. 2024": [
+1.044,
+1.741,
+0.732,
+1.385,
+1.016,
+2.153
+]
+}
+
+df = pd.DataFrame(data)
+
+# Create a pie chart
+plt.figure(figsize=(8, 8))
+plt.pie(df["Relative importance Sep. 2024"], labels=df["Expenditure category"], autopct='%1.1f%%', startangle=140)
+plt.title("Proportion of different expenditure categories under 'Food at home' as of September 2024")
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.13, 0.22, 0.09, 0.17, 0.13, 0.27]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+# Load the data from the table
+data = {
+    "Expenditure category": [
+        "Cereals and bakery products",
+        "Meats, poultry, fish, and e...
+Reference: [0.8, 0.11, 0.06, 0.01, 0.01]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 13.51s
+
+============================================================
+Query ID: 145 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (10366 tokens) for image (2284, 10352)
+Processing mix modality:  19%|█▉        | 145/768 [16:16<1:08:07,  6.56s/it]Predictions:  ['65']
+Answer:  ['139']
+Prediction: 6.45
+Reference: 13.90
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.36s
+
+============================================================
+Query ID: 146 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10354 tokens) for image (2284, 10352)
+Processing mix modality:  19%|█▉        | 146/768 [16:18<54:05,  5.22s/it]  Predictions:  ['construction logging']
+Answer:  ['logging workers']
+Prediction: Construction, Logging
+Reference: Logging workers
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 2.08s
+
+============================================================
+Query ID: 147 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (10368 tokens) for image (2284, 10352)
+Processing mix modality:  19%|█▉        | 147/768 [16:20<43:57,  4.25s/it]Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.98s
+
+============================================================
+Query ID: 148 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (10367 tokens) for image (2284, 10352)
+Processing mix modality:  19%|█▉        | 148/768 [16:24<43:30,  4.21s/it]Prediction: Total hours worked, fatal injury rates, and margins of error for civilian workers in 2022; wage and salary workers (3.2 rate) have lower fatal injury rates than self-employed workers (10.7 rate).
+Reference: The dataset presents fatal occupational injuries with key columns: 'Characteristic,' 'Total hours worked (millions),' 'Fatal injury rate,' and 'Margin of error.' It shows 293,800 million total hours w...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 4.12s
+
+============================================================
+Query ID: 149 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10351 tokens) for image (2284, 10352)
+Processing mix modality:  19%|█▉        | 149/768 [16:27<37:18,  3.62s/it]Predictions:  ['16400']
+Answer:  ['16400']
+Prediction: 16400
+Reference: 16400
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.23s
+
+============================================================
+Query ID: 150 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (12771 tokens) for image (2724, 9236)
+Processing mix modality:  20%|█▉        | 150/768 [16:29<34:34,  3.36s/it]Predictions:  ['519 448']
+Answer:  ['1025']
+Prediction: 519, 448
+Reference: 1025
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.75s
+Checkpoint saved: 150 queries processed
+
+============================================================
+Query ID: 151 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (12762 tokens) for image (2724, 9236)
+Processing mix modality:  20%|█▉        | 151/768 [16:32<32:00,  3.11s/it]Predictions:  ['california 646']
+Answer:  ['california 639']
+Prediction: California, 646
+Reference: California, 639
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 2.54s
+
+============================================================
+Query ID: 152 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (12764 tokens) for image (2724, 9236)
+Processing mix modality:  20%|█▉        | 152/768 [16:34<29:43,  2.90s/it]Predictions:  ['kentucky illinois']
+Answer:  ['kentucky']
+Prediction: Kentucky, Illinois
+Reference: Kentucky
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.39s
+
+============================================================
+Query ID: 153 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large input (12965 tokens) for image (2724, 9236)
+Processing mix modality:  20%|█▉        | 153/768 [16:37<29:07,  2.84s/it]Predictions:  ['strong negative correlation 08']
+Answer:  ['weak positive correlation 01']
+Prediction: Strong negative correlation, -0.85
+Reference: Weak positive correlation, 0.05
+Metrics: {'F1': 25.0, 'EM': 0.0, 'ROUGE-L': 25.0, 'SacreBLEU': 15.97}
+Processing Time: 2.71s
+
+============================================================
+Query ID: 154 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large input (12829 tokens) for image (2724, 9236)
+Processing mix modality:  20%|██        | 154/768 [16:40<28:12,  2.76s/it]Processing mix modality:  20%|██        | 155/768 [16:41<24:02,  2.35s/it]Processing mix modality:  20%|██        | 156/768 [16:42<20:14,  1.98s/it]Processing mix modality:  20%|██        | 157/768 [16:44<19:23,  1.90s/it]Processing mix modality:  21%|██        | 158/768 [16:52<37:33,  3.69s/it]Processing mix modality:  21%|██        | 159/768 [17:06<1:09:40,  6.86s/it]Processing mix modality:  21%|██        | 160/768 [17:08<53:46,  5.31s/it]  Processing mix modality:  21%|██        | 161/768 [17:10<44:28,  4.40s/it]Processing mix modality:  21%|██        | 162/768 [17:11<34:40,  3.43s/it]Processing mix modality:  21%|██        | 163/768 [17:15<36:09,  3.59s/it]Processing mix modality:  21%|██▏       | 164/768 [17:17<30:11,  3.00s/it]Predictions:  ['no clear trend cannot project']
+Answer:  ['5557']
+Prediction: No clear trend, Cannot project
+Reference: 5557
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.56s
+
+============================================================
+Query ID: 155 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['1217 692']
+Answer:  ['1217']
+Prediction: 1217, 692
+Reference: 1217
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.41s
+
+============================================================
+Query ID: 156 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['304']
+Answer:  ['304']
+Prediction: 304
+Reference: 304
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 157 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['falls slips trips exposure to harmful substances or environments fires and explosions']
+Answer:  ['falls slips trips exposure to harmful substances or environments fires and explosions']
+Prediction: Falls, slips, trips, Exposure to harmful substances or environments, Fires and explosions
+Reference: Falls, Slips, Trips, Exposure to harmful substances or environments, Fires and Explosions
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.72s
+
+============================================================
+Query ID: 158 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+data = {
+'Category': ['Transportation Incidents', 'Violence and Other Injuries', 'Falls, Slips, Trips', 'Harmful Substances Exposure'],
+'Fatalities': [2066, 849, 738, 839]
+}
+df = pd.DataFrame(data)
+plt.pie(df['Fatalities'], labels=df['Category'], autopct='%1.1f%%', startangle=140)
+plt.title('Proportion of Total Fatalities by Category')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.46, 0.19, 0.16, 0.19]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+data = {
+    'Category': ['Transportation Incidents', 'Violence and Other Injuries', 'Falls, Slips, Trips', 'Harmful Substances Exposure'],
+    '...
+Reference: [0.45, 0.18, 0.19, 0.18]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 7.87s
+
+============================================================
+Query ID: 159 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Worker Characteristics': ['Wage and salary', 'Self-employed'],
+'Transportation incidents': [1775, 291],
+'Falls, slips, trips': [713, 152]
+}
+
+df = pd.DataFrame(data)
+
+# Create a bar chart
+fig, ax = plt.subplots(figsize=(10, 6))
+bar_width = 0.35
+index = range(len(df['Worker Characteristics']))
+
+# Plot bars for Transportation incidents
+ax.bar([i - bar_width/2 for i in index], df['Transportation incidents'], bar_width, label='Transportation incidents', color='blue')
+
+# Plot bars for Falls, slips, trips
+ax.bar([i + bar_width/2 for i in index], df['Falls, slips, trips'], bar_width, label='Falls, slips, trips', color='green')
+
+# Set labels and title
+ax.set_xlabel('Worker Characteristics')
+ax.set_ylabel('Total Fatalities')
+ax.set_title('Comparison of Total Fatalities by Worker Characteristics')
+ax.set_xticks([i for i in range(len(df['Worker Characteristics']))])
+ax.set_xticklabels(df['Worker Characteristics'])
+ax.legend()
+
+# Show the plot
+plt.show()
+
+Python Error: name 'bar_width' is not defined
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Worker Characteristics': ['Wage and salary', 'Self-employed'],
+    'Transportation incidents': [177...
+Reference: [1775.0, 291.0, 713.0, 152.0]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 14.26s
+
+============================================================
+Query ID: 160 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['couriers and express delivery services private industry 4921']
+Answer:  ['couriers and express delivery services private industry 4921']
+Prediction: Couriers and express delivery services (Private Industry), 4921
+Reference: Couriers and express delivery services (Private Industry), 4921
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.67s
+Checkpoint saved: 160 queries processed
+
+============================================================
+Query ID: 161 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['couriers and express delivery services private industry spectator sports private industry light truck and utility vehicle manufacturing private industry']
+Answer:  ['3']
+Prediction: Couriers and express delivery services (Private Industry), Spectator sports (Private Industry), Light truck and utility vehicle manufacturing (Private Industry)
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.27s
+
+============================================================
+Query ID: 162 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['24']
+Answer:  ['23']
+Prediction: 2.35
+Reference: 2.34
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 163 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['performing arts companies private industry nursing and residential care facilities state government siding contractors private industry scheduled passenger air transportation private industry local messengers and local delivery private industry couriers and express delivery services private industry urban transit systems private industry correctional institutions state government']
+Answer:  ['performing arts companies private industry nursing and residential care facilities state government']
+Prediction: Performing arts companies (Private Industry), Nursing and residential care facilities (State Government), Siding contractors (Private Industry), Scheduled passenger air transportation (Private Industr...
+Reference: Performing arts companies (Private Industry), Nursing and residential care facilities (State Government)
+Metrics: {'F1': 42.11, 'EM': 0.0, 'ROUGE-L': 42.11, 'SacreBLEU': 24.01}
+Processing Time: 3.94s
+
+============================================================
+Query ID: 164 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['nursing and residential care facilities state government scheduled passenger air transportation private industry']
+Answer:  ['nursing and residential care facilities state government']
+Prediction: Nursing and residential care facilities (State Government), Scheduled passenger air transportation (Private Industry)
+Reference: Nursing and residential care facilities (State Government)
+Metrics: {'F1': 70.0, 'EM': 0.0, 'ROUGE-L': 70.0, 'SacreBLEU': 47.04}
+Processing Time: 1.63s
+
+============================================================
+Query ID: 165 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: Processing mix modality:  21%|██▏       | 165/768 [17:22<37:40,  3.75s/it]Processing mix modality:  22%|██▏       | 166/768 [17:28<42:43,  4.26s/it]Processing mix modality:  22%|██▏       | 167/768 [17:29<33:37,  3.36s/it]Processing mix modality:  22%|██▏       | 168/768 [17:31<28:32,  2.85s/it]Processing mix modality:  22%|██▏       | 169/768 [17:32<23:50,  2.39s/it]Processing mix modality:  22%|██▏       | 170/768 [17:34<21:54,  2.20s/it]Processing mix modality:  22%|██▏       | 171/768 [17:42<39:30,  3.97s/it]Processing mix modality:  22%|██▏       | 172/768 [17:44<33:22,  3.36s/it]Processing mix modality:  23%|██▎       | 173/768 [17:45<27:46,  2.80s/it]Processing mix modality:  23%|██▎       | 174/768 [17:46<23:06,  2.33s/it]Processing mix modality:  23%|██▎       | 175/768 [17:48<22:15,  2.25s/it]Processing mix modality:  23%|██▎       | 176/768 [17:59<47:50,  4.85s/it]Processing mix modality:  23%|██▎       | 177/768 [18:01<37:59,  3.86s/it]Processing mix modality:  23%|██▎       | 178/768 [18:02<31:18,  3.18s/it]Processing mix modality:  23%|██▎       | 179/768 [18:04<26:18,  2.68s/it]import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/injuries-table07.xlsx")
+top_five = df.nlargest(5, 'Incidence Rate')
+plt.figure(figsize=(8, 8))
+plt.pie(top_five['Incidence Rate'], labels=top_five['Industry3'], autopct='%1.1f%%', startangle=140)
+plt.title('Proportion of Incidence Rates for Top Five Industries')
+plt.axis('equal')
+plt.show()
+
+Python Error: 'Industry3'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+df = pd.read_excel("table.xlsx")
+top_five = df.nlargest(5, 'Incidence Rate')
+plt.figure(figsize=(8, 8))
+plt.pie(top_five['Incidence Rate'], label...
+Reference: [0.3, 0.24, 0.17, 0.16, 0.15]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 5.50s
+
+============================================================
+Query ID: 166 | Type: Visualization | SubType: BarChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/injuries-table07.xlsx")
+filtered_df = df[df['Incidence Rate'] > 4.0]
+plt.bar(filtered_df['NAICS Code4'], filtered_df['Incidence Rate'])
+plt.xlabel('NAICS Code')
+plt.ylabel('Incidence Rate')
+plt.title('Incidence Rates of Industries (Above 4.0)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+Python Error: 'NAICS Code4'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ filtered_df = df[df['Incidence Rate'] > 4.0]
+ plt.bar(filtered_df['NAICS Code4'], filtered_df['Incidence Rate'...
+Reference: [4.8, 4.5, 4.1, 4.2, 6.8, 8.5]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 5.45s
+
+============================================================
+Query ID: 167 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['142']
+Answer:  ['142']
+Prediction: 14.20
+Reference: 14.20
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 168 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['performing arts companies nursing and residential care facilities spectator sports']
+Answer:  ['performing arts companies nursing and residential care facilities spectator sports']
+Prediction: Performing arts companies, Nursing and residential care facilities, Spectator sports
+Reference: Performing arts companies, Nursing and residential care facilities, Spectator sports
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.68s
+
+============================================================
+Query ID: 169 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['skiing facilities private industry']
+Answer:  ['nursing care facilities skilled nursing facilities private industry']
+Prediction: Skiing facilities (Private Industry)
+Reference: Nursing care facilities (skilled nursing facilities) (Private Industry)
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 21.87}
+Processing Time: 1.30s
+
+============================================================
+Query ID: 170 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: Performing arts companies (Private Industry), Couriers and express delivery services (Private Industry)
+Reference: 4 anomalies. Industry: Performing arts companies (Private Industry), NAICS Code: 7111, Incidence Rate: 9.00 Industry: Couriers and express delivery services (Private Industry), NAICS Code: 4921, Incid...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 1.75s
+Checkpoint saved: 170 queries processed
+
+============================================================
+Query ID: 171 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: TABLE SNR02 presents the highest incidence rates of nonfatal occupational injury and illness cases with days away from work, restricted work activity, or job transfer for various industries in the Uni...
+Reference: The table outlines industries with the highest nonfatal occupational injury and illness incidence rates in 2023. The main columns are Industry, describing the type of business or service; NAICS Code, ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.11s
+
+============================================================
+Query ID: 172 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['sports teams and clubs naics 711211']
+Answer:  ['sports teams and clubs naics 711211']
+Prediction: Sports teams and clubs (NAICS 711211)
+Reference: Sports teams and clubs (NAICS 711211)
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.93s
+
+============================================================
+Query ID: 173 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['04']
+Answer:  ['30']
+Prediction: 0.40
+Reference: 3.00
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 174 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 175 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['50 249 250 999']
+Answer:  ['50 249']
+Prediction: 50 - 249, 250 - 999
+Reference: 50 - 249
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 2.06s
+
+============================================================
+Query ID: 176 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents average incidence rates for injuries and illnesses per 100 full-time equivalent workers across various industries and employment size categories in the U.S., along with quartile dat...
+Reference: The table presents data on incidence rates of occupational injuries and illnesses by establishment size in 2019, showing higher mean rates for mid-sized establishments and variability in safety perfor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.91s
+
+============================================================
+Query ID: 177 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['02']
+Answer:  ['04']
+Prediction: 0.20
+Reference: 0.40%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 178 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['2020 q3']
+Answer:  ['2020 q3']
+Prediction: 2020 Q3
+Reference: 2020 Q3
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 179 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['15']
+Answer:  ['15']
+Prediction: 1.50
+Reference: 1.50%
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 180 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  Processing mix modality:  23%|██▎       | 180/768 [18:05<22:40,  2.31s/it]Processing mix modality:  24%|██▎       | 181/768 [18:07<21:01,  2.15s/it]['whole economy manufacturing']
+Answer:  ['whole economy']
+Prediction: Whole economy, Manufacturing
+Reference: Whole economy
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+Checkpoint saved: 180 queries processed
+
+============================================================
+Query ID: 181 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 09']
+Answer:  ['weak positive correlation']
+Prediction: Strong positive correlation, 0.95
+Reference: Weak positive correlation
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 31.95}
+Processing Time: 1.76s
+
+============================================================
+Query ID: 182 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (8909 tokens) for image (1490, 7904)
