@@ -4952,4 +4952,3198 @@ Prediction: East of England
 Reference: 
 Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
 Processing Time: 1.06s
-Processing mix modality:  60%|█████▉    | 458/767 [19:41<06:55,  1.34s/it]Processing mix modality:  60%|█████▉    | 459/767 [19:42<06:35,  1.28s/it]Processing mix modality:  60%|█████▉    | 460/767 [19:43<06:13,  1.22s/it]Processing mix modality:  60%|██████    | 461/767 [19:44<05:54,  1.16s/it]
+Processing mix modality:  60%|█████▉    | 458/767 [19:41<06:55,  1.34s/it]Processing mix modality:  60%|█████▉    | 459/767 [19:42<06:35,  1.28s/it]Processing mix modality:  60%|█████▉    | 460/767 [19:43<06:13,  1.22s/it]Processing mix modality:  60%|██████    | 461/767 [19:44<05:54,  1.16s/it]Processing mix modality:  60%|██████    | 462/767 [19:45<05:42,  1.12s/it]Processing mix modality:  60%|██████    | 463/767 [19:46<05:27,  1.08s/it]Processing mix modality:  60%|██████    | 464/767 [19:47<05:07,  1.02s/it]Processing mix modality:  61%|██████    | 465/767 [19:48<05:11,  1.03s/it]Processing mix modality:  61%|██████    | 466/767 [19:49<05:43,  1.14s/it]Processing mix modality:  61%|██████    | 467/767 [19:51<06:05,  1.22s/it]Processing mix modality:  61%|██████    | 468/767 [19:53<07:48,  1.57s/it]Processing mix modality:  61%|██████    | 469/767 [19:54<07:18,  1.47s/it]Processing mix modality:  61%|██████▏   | 470/767 [19:55<06:50,  1.38s/it]Processing mix modality:  61%|██████▏   | 471/767 [19:56<06:02,  1.22s/it]Processing mix modality:  62%|██████▏   | 472/767 [19:59<08:21,  1.70s/it]Processing mix modality:  62%|██████▏   | 473/767 [20:01<08:02,  1.64s/it]Processing mix modality:  62%|██████▏   | 474/767 [20:02<07:52,  1.61s/it]Processing mix modality:  62%|██████▏   | 475/767 [20:07<12:45,  2.62s/it]Processing mix modality:  62%|██████▏   | 476/767 [20:09<11:04,  2.28s/it]Processing mix modality:  62%|██████▏   | 477/767 [20:09<08:49,  1.83s/it]
+============================================================
+Query ID: 2762 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['12950']
+Answer:  ['']
+Prediction: 12950
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.41s
+
+============================================================
+Query ID: 2763 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['london']
+Answer:  ['']
+Prediction: London
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+
+============================================================
+Query ID: 2764 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['arsenal newcastle']
+Answer:  ['']
+Prediction: Arsenal, Newcastle
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+Checkpoint saved: 460 queries processed
+
+============================================================
+Query ID: 2765 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['47']
+Answer:  ['']
+Prediction: 47
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 2766 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['away home']
+Answer:  ['']
+Prediction: Away, Home
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2767 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['152']
+Answer:  ['']
+Prediction: 15.21
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.98s
+
+============================================================
+Query ID: 2768 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['butter m eggs']
+Answer:  ['']
+Prediction: Butter M, Eggs
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.87s
+
+============================================================
+Query ID: 2769 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['butter t 00']
+Answer:  ['']
+Prediction: Butter T, 0.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 2770 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1178']
+Answer:  ['']
+Prediction: 117.75
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 2771 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['578 eclaire']
+Answer:  ['']
+Prediction: 578 Eclaire
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.39s
+
+============================================================
+Query ID: 2772 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['373 diamo 597moisant 433 mosaic meemo sparrow']
+Answer:  ['']
+Prediction: 373 Diamo, 597Moisant, 433 Mosaic, Meemo, Sparrow
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.39s
+
+============================================================
+Query ID: 2773 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['51492']
+Answer:  ['']
+Prediction: -5,149.23
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2774 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['product 1 product 8']
+Answer:  ['']
+Prediction: Product 1, Product 8
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+Checkpoint saved: 470 queries processed
+
+============================================================
+Query ID: 2775 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.86s
+
+============================================================
+Query ID: 2776 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['product 2 product 8 product 4 product 5 product 7 product 10 product 3 product 6 product 9 product 1']
+Answer:  ['']
+Prediction: Product 2, Product 8, Product 4, Product 5, Product 7, Product 10, Product 3, Product 6, Product 9, Product 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.81s
+
+============================================================
+Query ID: 2777 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['john cross 2']
+Answer:  ['']
+Prediction: JOHN CROSS, 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.51s
+
+============================================================
+Query ID: 2778 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['18 8']
+Answer:  ['']
+Prediction: 18, 8
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.55s
+
+============================================================
+Query ID: 2779 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['john cross carl mackinson barry travis marc hilton dave griffiths james dake dean richards kevin riley daniel hudspeth callum ashcroft jeff lynch mark evans kev thompson']
+Answer:  ['']
+Prediction: JOHN CROSS, CARL MACKINSON, BARRY TRAVIS, MARC HILTON, DAVE GRIFFITHS, JAMES DAKE, DEAN RICHARDS, KEVIN RILEY, DANIEL HUDSPETH, CALLUM ASHCROFT, JEFF LYNCH, MARK EVANS, KEV THOMPSON
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.97s
+
+============================================================
+Query ID: 2780 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2 0']
+Answer:  ['']
+Prediction: 2, 0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 2781 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['rome']
+Answer:  ['']
+Prediction: Rome
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.76s
+
+============================================================
+Processing mix modality:  62%|██████▏   | 478/767 [20:10<07:10,  1.49s/it]Processing mix modality:  62%|██████▏   | 479/767 [20:11<06:10,  1.29s/it]Processing mix modality:  63%|██████▎   | 480/767 [20:12<05:37,  1.18s/it]Processing mix modality:  63%|██████▎   | 481/767 [20:13<05:17,  1.11s/it]Processing mix modality:  63%|██████▎   | 482/767 [20:14<05:43,  1.20s/it]Processing mix modality:  63%|██████▎   | 483/767 [20:15<05:50,  1.24s/it]Processing mix modality:  63%|██████▎   | 484/767 [20:17<06:31,  1.38s/it]Processing mix modality:  63%|██████▎   | 485/767 [20:18<05:45,  1.22s/it]Processing mix modality:  63%|██████▎   | 486/767 [20:19<05:11,  1.11s/it]Processing mix modality:  63%|██████▎   | 487/767 [20:20<05:22,  1.15s/it]Processing mix modality:  64%|██████▎   | 488/767 [20:21<05:09,  1.11s/it]Processing mix modality:  64%|██████▍   | 489/767 [20:22<05:12,  1.12s/it]Processing mix modality:  64%|██████▍   | 490/767 [20:24<05:20,  1.16s/it]Processing mix modality:  64%|██████▍   | 491/767 [20:25<05:17,  1.15s/it]Processing mix modality:  64%|██████▍   | 492/767 [20:26<05:10,  1.13s/it]Processing mix modality:  64%|██████▍   | 493/767 [20:27<04:50,  1.06s/it]Processing mix modality:  64%|██████▍   | 494/767 [20:28<04:33,  1.00s/it]Processing mix modality:  65%|██████▍   | 495/767 [20:28<04:20,  1.04it/s]Processing mix modality:  65%|██████▍   | 496/767 [20:29<04:15,  1.06it/s]Query ID: 2782 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.71s
+
+============================================================
+Query ID: 2783 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['taylor drew']
+Answer:  ['']
+Prediction: Taylor, Drew
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.81s
+
+============================================================
+Query ID: 2784 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['taylor drew morgan']
+Answer:  ['']
+Prediction: Taylor, Drew, Morgan
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.91s
+Checkpoint saved: 480 queries processed
+
+============================================================
+Query ID: 2785 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes 250']
+Answer:  ['']
+Prediction: Yes, $25.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.95s
+
+============================================================
+Query ID: 2786 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['cpp7892531 11000']
+Answer:  ['']
+Prediction: CPP7892531, $1,100.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 2787 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['qr9785666 2235']
+Answer:  ['']
+Prediction: QR9785666, 223.50
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 2788 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['cpp7892531 kp78952 qr9785666']
+Answer:  ['']
+Prediction: CPP7892531, KP78952, QR9785666
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.72s
+
+============================================================
+Query ID: 2789 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.85s
+
+============================================================
+Query ID: 2790 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.84s
+
+============================================================
+Query ID: 2791 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2 8 32']
+Answer:  ['']
+Prediction: -2, -8, -32
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2792 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2']
+Answer:  ['']
+Prediction: 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+
+============================================================
+Query ID: 2793 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2 1']
+Answer:  ['']
+Prediction: 2, 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 2794 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['25 18']
+Answer:  ['']
+Prediction: 25, 18
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+Checkpoint saved: 490 queries processed
+
+============================================================
+Query ID: 2795 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2 2']
+Answer:  ['']
+Prediction: 2, 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 2796 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['dom psc']
+Answer:  ['']
+Prediction: DOM, PSC
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 2797 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2']
+Answer:  ['']
+Prediction: 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.91s
+
+============================================================
+Query ID: 2798 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.86s
+
+============================================================
+Query ID: 2799 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.86s
+
+============================================================
+Query ID: 2800 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no answer']
+Answer:  ['']
+Prediction: No Answer
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.91s
+
+============================================================
+Query ID: 2801 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10211 tokens) for image (2058, 5506)
+Processing mix modality:  65%|██████▍   | 497/767 [20:31<05:35,  1.24s/it]Predictions:  ['£30']
+Answer:  ['']
+Prediction: £3.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.94s
+
+============================================================
+Query ID: 2802 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10223 tokens) for image (2058, 5506)
+Processing mix modality:  65%|██████▍   | 498/767 [20:33<06:51,  1.53s/it]Predictions:  ['colwyn staplehurst']
+Answer:  ['']
+Prediction: COLWYN, STAPLEHURST
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.20s
+
+============================================================
+Query ID: 2803 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10221 tokens) for image (2058, 5506)
+Processing mix modality:  65%|██████▌   | 499/767 [20:35<07:09,  1.60s/it]Predictions:  ['1']
+Answer:  ['']
+Prediction: 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.77s
+
+============================================================
+Query ID: 2804 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10210 tokens) for image (2058, 5506)
+Processing mix modality:  65%|██████▌   | 500/767 [20:37<07:49,  1.76s/it]Processing mix modality:  65%|██████▌   | 501/767 [20:39<08:09,  1.84s/it]Processing mix modality:  65%|██████▌   | 502/767 [20:40<07:07,  1.61s/it]Processing mix modality:  66%|██████▌   | 503/767 [20:42<06:26,  1.47s/it]Processing mix modality:  66%|██████▌   | 504/767 [20:43<06:01,  1.38s/it]Processing mix modality:  66%|██████▌   | 505/767 [20:45<06:52,  1.57s/it]Predictions:  ['cambourne bexhill']
+Answer:  ['']
+Prediction: CAMBOURNE, BEXHILL
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.11s
+Checkpoint saved: 500 queries processed
+
+============================================================
+Query ID: 2805 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['riblet horton melf torres staples cambra segada']
+Answer:  ['']
+Prediction: RIBLET, HORTON, MELF, TORRES, STAPLES, CAMBRA, SEGADA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.04s
+
+============================================================
+Query ID: 2806 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['12']
+Answer:  ['']
+Prediction: 1.25
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 2807 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['hewitt shane']
+Answer:  ['']
+Prediction: HEWITT, SHANE
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.12s
+
+============================================================
+Query ID: 2808 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['horton arthur']
+Answer:  ['']
+Prediction: HORTON, ARTHUR
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 2809 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['riblet horton melf torres staples cambra segada']
+Answer:  ['']
+Prediction: RIBLET, HORTON, MELF, TORRES, STAPLES, CAMBRA, SEGADA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.04s
+
+============================================================
+Query ID: 2810 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (12318 tokens) for image (5388, 3252)
+Processing mix modality:  66%|██████▌   | 506/767 [20:47<08:00,  1.84s/it]Predictions:  ['2406']
+Answer:  ['']
+Prediction: -240.559
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.46s
+
+============================================================
+Query ID: 2811 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (12324 tokens) for image (5388, 3252)
+Processing mix modality:  66%|██████▌   | 507/767 [20:50<09:13,  2.13s/it]Predictions:  ['sive2024cbo31768']
+Answer:  ['']
+Prediction: SiVe:2024CBO-31768
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.80s
+
+============================================================
+Query ID: 2812 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (12314 tokens) for image (5388, 3252)
+Processing mix modality:  66%|██████▌   | 508/767 [20:53<09:51,  2.29s/it]Predictions:  ['cbo lbi gbh iba']
+Answer:  ['']
+Prediction: CBO, LBI, GBH, IBA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.65s
+
+============================================================
+Query ID: 2813 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (12327 tokens) for image (5388, 3252)
+Processing mix modality:  66%|██████▋   | 509/767 [20:55<10:10,  2.37s/it]Processing mix modality:  66%|██████▋   | 510/767 [20:56<08:14,  1.92s/it]Processing mix modality:  67%|██████▋   | 511/767 [20:57<06:50,  1.60s/it]Processing mix modality:  67%|██████▋   | 512/767 [20:58<05:46,  1.36s/it]Processing mix modality:  67%|██████▋   | 513/767 [20:59<05:04,  1.20s/it]Processing mix modality:  67%|██████▋   | 514/767 [21:00<05:21,  1.27s/it]Processing mix modality:  67%|██████▋   | 515/767 [21:01<05:25,  1.29s/it]Processing mix modality:  67%|██████▋   | 516/767 [21:03<06:12,  1.48s/it]Processing mix modality:  67%|██████▋   | 517/767 [21:05<06:08,  1.48s/it]Processing mix modality:  68%|██████▊   | 518/767 [21:06<05:59,  1.45s/it]Processing mix modality:  68%|██████▊   | 519/767 [21:08<06:16,  1.52s/it]Processing mix modality:  68%|██████▊   | 520/767 [21:09<05:33,  1.35s/it]Processing mix modality:  68%|██████▊   | 521/767 [21:10<05:31,  1.35s/it]Processing mix modality:  68%|██████▊   | 522/767 [21:12<05:38,  1.38s/it]Processing mix modality:  68%|██████▊   | 523/767 [21:15<08:18,  2.04s/it]Processing mix modality:  68%|██████▊   | 524/767 [21:19<10:40,  2.64s/it]Processing mix modality:  68%|██████▊   | 525/767 [21:21<09:23,  2.33s/it]Processing mix modality:  69%|██████▊   | 526/767 [21:23<08:41,  2.16s/it]Processing mix modality:  69%|██████▊   | 527/767 [21:25<08:36,  2.15s/it]Predictions:  ['dragon pvt ltd g co pvt']
+Answer:  ['']
+Prediction: DRAGON PVT LTD, G CO PVT
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.56s
+
+============================================================
+Query ID: 2814 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['13557']
+Answer:  ['']
+Prediction: 13557
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.88s
+Checkpoint saved: 510 queries processed
+
+============================================================
+Query ID: 2815 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mobile department other department']
+Answer:  ['']
+Prediction: Mobile Department, Other Department
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.86s
+
+============================================================
+Query ID: 2816 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['workstation register']
+Answer:  ['']
+Prediction: Workstation, Register
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.78s
+
+============================================================
+Query ID: 2817 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['94']
+Answer:  ['']
+Prediction: 9.42
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.83s
+
+============================================================
+Query ID: 2818 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['eur aud']
+Answer:  ['']
+Prediction: EUR, AUD
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.44s
+
+============================================================
+Query ID: 2819 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mg']
+Answer:  ['']
+Prediction: MG
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2820 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['3month premium subscription 1month premium subscription']
+Answer:  ['']
+Prediction: 3-Month Premium Subscription, 1-Month Premium Subscription
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.94s
+
+============================================================
+Query ID: 2821 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['japan canada']
+Answer:  ['']
+Prediction: Japan, Canada
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 2822 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['new activation add line plan change upgrade']
+Answer:  ['']
+Prediction: NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 2823 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1804 450 1946 3169']
+Answer:  ['']
+Prediction: 1804, 450, 1946, 3169
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.69s
+
+============================================================
+Query ID: 2824 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['spr 206']
+Answer:  ['']
+Prediction: SPR, 20.6
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.95s
+Checkpoint saved: 520 queries processed
+
+============================================================
+Query ID: 2825 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['115 115']
+Answer:  ['']
+Prediction: 11.515, 11.515
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2826 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['26227642']
+Answer:  ['']
+Prediction: 2622764.25
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 2827 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['maria calux giorgio armani francois chevalier mia martina tia carrera feliciano di venturi global bob vincenzo fertino bob bobitt ken cascaval giuseppe von firenze']
+Answer:  ['']
+Prediction: Maria Calux, Giorgio Armani, Francois Chevalier, Mia Martina, Tia Carrera, Feliciano Di Venturi, Global Bob, Vincenzo Fertino, Bob Bobitt, Ken Cascaval, Giuseppe Von Firenze
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.59s
+
+============================================================
+Query ID: 2828 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['big joe maria calux giorgio armani francois chevalier mia martina tia carrera feliciano di venturi global bob vincenzo fertino bob bobitt ken cascaval billy joe giuseppe von firenze']
+Answer:  ['']
+Prediction: Big Joe, Maria Calux, Giorgio Armani, Francois Chevalier, Mia Martina, Tia Carrera, Feliciano Di Venturi, Global Bob, Vincenzo Fertino, Bob Bobitt, Ken Cascaval, Billy Joe, Giuseppe Von Firenze
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.02s
+
+============================================================
+Query ID: 2829 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['big joe 18628502']
+Answer:  ['']
+Prediction: Big Joe, 1862850.25
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 2830 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['boca juniors']
+Answer:  ['']
+Prediction: BOCA JUNIORS
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.78s
+
+============================================================
+Query ID: 2831 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['dinamo minsk bate borisov']
+Answer:  ['']
+Prediction: DINAMO MINSK, BATE BORISOV
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.12s
+
+============================================================
+Query ID: 2832 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['italyserie 17']
+Answer:  ['']
+Prediction: ITALY>SERIE A, 17
+Reference: 
+Processing mix modality:  69%|██████▉   | 528/767 [21:27<08:25,  2.12s/it]Processing mix modality:  69%|██████▉   | 529/767 [21:29<08:51,  2.23s/it]Processing mix modality:  69%|██████▉   | 530/767 [21:30<07:30,  1.90s/it]Processing mix modality:  69%|██████▉   | 531/767 [21:32<06:50,  1.74s/it]Processing mix modality:  69%|██████▉   | 532/767 [21:33<05:58,  1.53s/it]Processing mix modality:  69%|██████▉   | 533/767 [21:34<05:27,  1.40s/it]Processing mix modality:  70%|██████▉   | 534/767 [21:35<04:46,  1.23s/it]Processing mix modality:  70%|██████▉   | 535/767 [21:36<04:18,  1.11s/it]Processing mix modality:  70%|██████▉   | 536/767 [21:36<03:57,  1.03s/it]Processing mix modality:  70%|███████   | 537/767 [21:37<03:57,  1.03s/it]Processing mix modality:  70%|███████   | 538/767 [21:38<03:51,  1.01s/it]Processing mix modality:  70%|███████   | 539/767 [21:39<03:39,  1.04it/s]Processing mix modality:  70%|███████   | 540/767 [21:40<03:32,  1.07it/s]Processing mix modality:  71%|███████   | 541/767 [21:41<03:22,  1.11it/s]Processing mix modality:  71%|███████   | 542/767 [21:42<03:18,  1.14it/s]Processing mix modality:  71%|███████   | 543/767 [21:43<03:41,  1.01it/s]Processing mix modality:  71%|███████   | 544/767 [21:44<03:56,  1.06s/it]Processing mix modality:  71%|███████   | 545/767 [21:45<04:07,  1.11s/it]Processing mix modality:  71%|███████   | 546/767 [21:46<04:01,  1.09s/it]Processing mix modality:  71%|███████▏  | 547/767 [21:47<03:36,  1.01it/s]Processing mix modality:  71%|███████▏  | 548/767 [21:49<04:19,  1.18s/it]Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.04s
+
+============================================================
+Query ID: 2833 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['argentinasuperliga argentina austriabundesliga']
+Answer:  ['']
+Prediction: ARGENTINA>SUPERLIGA ARGENTINA, AUSTRIA>BUNDESLIGA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.50s
+
+============================================================
+Query ID: 2834 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['112250']
+Answer:  ['']
+Prediction: 11225.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+Checkpoint saved: 530 queries processed
+
+============================================================
+Query ID: 2835 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['b2 732288']
+Answer:  ['']
+Prediction: B-2, 73228.8
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.36s
+
+============================================================
+Query ID: 2836 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['4 bob']
+Answer:  ['']
+Prediction: 4, BOB
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 2837 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['365 365']
+Answer:  ['']
+Prediction: 365, 365
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 2838 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['c']
+Answer:  ['']
+Prediction: C
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.84s
+
+============================================================
+Query ID: 2839 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.84s
+
+============================================================
+Query ID: 2840 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['#']
+Answer:  ['']
+Prediction: A
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.83s
+
+============================================================
+Query ID: 2841 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['product f product']
+Answer:  ['']
+Prediction: Product F, Product A
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2842 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['central west north east']
+Answer:  ['']
+Prediction: Central, West, North, East
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+
+============================================================
+Query ID: 2843 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['football 14']
+Answer:  ['']
+Prediction: Football, 14
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.85s
+
+============================================================
+Query ID: 2844 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1 3']
+Answer:  ['']
+Prediction: 1, 3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.87s
+Checkpoint saved: 540 queries processed
+
+============================================================
+Query ID: 2845 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['central north']
+Answer:  ['']
+Prediction: Central, North
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.80s
+
+============================================================
+Query ID: 2846 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['region commission override']
+Answer:  ['']
+Prediction: Region Commission Override
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.84s
+
+============================================================
+Query ID: 2847 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['salary territory and team personal led mbo']
+Answer:  ['']
+Prediction: Salary, Territory and Team, Personal Led, MBO
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2848 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['territory and team personal led salary mbo']
+Answer:  ['']
+Prediction: Territory and Team, Personal Led, Salary, MBO
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 2849 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['personal commission new rep quota mbos']
+Answer:  ['']
+Prediction: Personal Commission, New Rep Quota, MBO's
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 2850 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['navel mandrin red']
+Answer:  ['']
+Prediction: Navel, mandrin, Red
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2851 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.74s
+
+============================================================
+Query ID: 2852 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['81 73 45 44 41']
+Answer:  ['']
+Prediction: 81, 73, 45, 44, 41
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.65s
+
+============================================================
+Query ID: 2853 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['navel mandrin red']
+Answer:  ['']
+Prediction: Navel, mandrin, Red
+Processing mix modality:  72%|███████▏  | 549/767 [21:50<04:09,  1.14s/it]Processing mix modality:  72%|███████▏  | 550/767 [21:51<04:35,  1.27s/it]Processing mix modality:  72%|███████▏  | 551/767 [21:53<04:40,  1.30s/it]Processing mix modality:  72%|███████▏  | 552/767 [21:58<08:26,  2.35s/it]Processing mix modality:  72%|███████▏  | 553/767 [25:25<3:47:35, 63.81s/it]Processing mix modality:  72%|███████▏  | 554/767 [25:26<2:39:58, 45.06s/it]Processing mix modality:  72%|███████▏  | 555/767 [25:27<1:52:44, 31.91s/it]Processing mix modality:  72%|███████▏  | 556/767 [25:29<1:19:48, 22.69s/it]Processing mix modality:  73%|███████▎  | 557/767 [25:30<57:18, 16.37s/it]  Processing mix modality:  73%|███████▎  | 558/767 [25:31<41:09, 11.82s/it]Processing mix modality:  73%|███████▎  | 559/767 [25:33<30:11,  8.71s/it]Processing mix modality:  73%|███████▎  | 560/767 [25:35<22:49,  6.62s/it]Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2854 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['europe eur japan jpy']
+Answer:  ['']
+Prediction: Europe (EUR), Japan (JPY)
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.55s
+Checkpoint saved: 550 queries processed
+
+============================================================
+Query ID: 2855 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['asia pacific krw']
+Answer:  ['']
+Prediction: Asia Pacific (KRW)
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 2856 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['north america canada europe eur europe gbp europe chf europe dkk europe sek europe nok europe ils middle east sar middle east aed japan asia pacific twd asia pacific krw asia pacific hkd australia new zealand philippines']
+Answer:  ['']
+Prediction: North America, Canada, Europe (EUR), Europe (GBP), Europe (CHF), Europe (DKK), Europe (SEK), Europe (NOK), Europe (ILS), Middle East (SAR), Middle East (AED), Japan, Asia Pacific (TWD), Asia Pacific (...
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.82s
+
+============================================================
+Query ID: 2857 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['129 140 95 82 125 71 87 755 47 50 50 1500 380 13700 100 15 19 650 650 150 33700 250 105 19 46 650 650 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 380 930 150 150 38']
+Answer:  ['']
+Prediction: 12.95, 13.99, 9.5, 8.25, 12.5, 71, 87, 75.5, 47, 50, 50, 1500, 380, 13700, 100, 15, 19, 650, 650, 150, 33700, 250, 10.5, 19, 46, 650, 650, 150, 150, 380, 930, 150, 150, 380, 930, 150, 150, 380, 930, 1...
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 207.21s
+
+============================================================
+Query ID: 2858 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['224']
+Answer:  ['']
+Prediction: 22.40
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2859 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['179']
+Answer:  ['']
+Prediction: 17.90
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2860 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['daikon notops']
+Answer:  ['']
+Prediction: Daikon no/Tops
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 2861 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['117 152']
+Answer:  ['']
+Prediction: $11.70, $15.20
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.62s
+
+============================================================
+Query ID: 2862 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['23']
+Answer:  ['']
+Prediction: 2.3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 2863 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['23 30']
+Answer:  ['']
+Prediction: 2.3, 3.0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 2864 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['21 23 26']
+Answer:  ['']
+Prediction: 2.1, 2.3, 2.6
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.73s
+Checkpoint saved: 560 queries processed
+
+============================================================
+Processing mix modality:  73%|███████▎  | 561/767 [25:36<17:00,  4.96s/it]Processing mix modality:  73%|███████▎  | 562/767 [25:37<13:30,  3.96s/it]Processing mix modality:  73%|███████▎  | 563/767 [25:38<10:33,  3.11s/it]Processing mix modality:  74%|███████▎  | 564/767 [25:40<08:46,  2.59s/it]Processing mix modality:  74%|███████▎  | 565/767 [25:41<07:03,  2.09s/it]Query ID: 2865 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1']
+Answer:  ['']
+Prediction: 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 2866 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['147172 58963']
+Answer:  ['']
+Prediction: 147,172, 58,963
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.62s
+
+============================================================
+Query ID: 2867 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2015']
+Answer:  ['']
+Prediction: 2015
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 2868 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2015 2014']
+Answer:  ['']
+Prediction: 2015, 2014
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.39s
+
+============================================================
+Query ID: 2869 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['3']
+Answer:  ['']
+Prediction: 3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+
+============================================================
+Query ID: 2870 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10868 tokens) for image (3608, 2646)
+Processing mix modality:  74%|███████▍  | 566/767 [25:44<08:00,  2.39s/it]Predictions:  ['2966 2966 2966 2966']
+Answer:  ['']
+Prediction: 296.6, 296.6, 296.6, 296.6
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.08s
+
+============================================================
+Query ID: 2871 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10869 tokens) for image (3608, 2646)
+Processing mix modality:  74%|███████▍  | 567/767 [25:46<07:24,  2.22s/it]Predictions:  ['q4']
+Answer:  ['']
+Prediction: Q4
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.83s
+
+============================================================
+Query ID: 2872 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10869 tokens) for image (3608, 2646)
+Processing mix modality:  74%|███████▍  | 568/767 [25:48<07:10,  2.16s/it]Predictions:  ['220']
+Answer:  ['']
+Prediction: 22.03
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.03s
+
+============================================================
+Query ID: 2873 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (10870 tokens) for image (3608, 2646)
+Processing mix modality:  74%|███████▍  | 569/767 [25:51<08:19,  2.52s/it]Processing mix modality:  74%|███████▍  | 570/767 [25:52<06:54,  2.11s/it]Processing mix modality:  74%|███████▍  | 571/767 [25:54<06:08,  1.88s/it]Processing mix modality:  75%|███████▍  | 572/767 [25:55<06:10,  1.90s/it]Processing mix modality:  75%|███████▍  | 573/767 [25:56<05:15,  1.63s/it]Processing mix modality:  75%|███████▍  | 574/767 [25:58<05:32,  1.72s/it]Processing mix modality:  75%|███████▍  | 575/767 [26:01<05:53,  1.84s/it]Processing mix modality:  75%|███████▌  | 576/767 [26:02<05:51,  1.84s/it]Processing mix modality:  75%|███████▌  | 577/767 [26:04<05:43,  1.81s/it]Processing mix modality:  75%|███████▌  | 578/767 [26:05<04:58,  1.58s/it]Processing mix modality:  75%|███████▌  | 579/767 [26:06<04:26,  1.42s/it]Processing mix modality:  76%|███████▌  | 580/767 [26:07<04:09,  1.34s/it]Processing mix modality:  76%|███████▌  | 581/767 [26:09<03:58,  1.28s/it]Processing mix modality:  76%|███████▌  | 582/767 [26:10<03:49,  1.24s/it]Processing mix modality:  76%|███████▌  | 583/767 [26:11<03:48,  1.24s/it]Processing mix modality:  76%|███████▌  | 584/767 [26:12<04:01,  1.32s/it]Processing mix modality:  76%|███████▋  | 585/767 [26:14<04:04,  1.34s/it]Processing mix modality:  76%|███████▋  | 586/767 [26:15<03:37,  1.20s/it]Processing mix modality:  77%|███████▋  | 587/767 [26:16<03:21,  1.12s/it]Processing mix modality:  77%|███████▋  | 588/767 [26:16<03:02,  1.02s/it]Processing mix modality:  77%|███████▋  | 589/767 [26:17<02:46,  1.07it/s]Predictions:  ['commercial lender held ed federal loan servicers ed default management system guaranty agency held ed total and permanent disability servicer']
+Answer:  ['']
+Prediction: Commercial Lender Held, ED Federal Loan Servicers, ED Default Management System, Guaranty Agency Held, ED Total and Permanent Disability Servicer
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.36s
+
+============================================================
+Query ID: 2874 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1675']
+Answer:  ['']
+Prediction: 167.5
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+Checkpoint saved: 570 queries processed
+
+============================================================
+Query ID: 2875 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['fy2012 fy2009']
+Answer:  ['']
+Prediction: FY2012, FY2009
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 2876 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['fy2011 fy2012 fy2010 fy2009']
+Answer:  ['']
+Prediction: FY2011, FY2012, FY2010, FY2009
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.94s
+
+============================================================
+Query ID: 2877 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['47']
+Answer:  ['']
+Prediction: 4.7
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.00s
+
+============================================================
+Query ID: 2878 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2679763']
+Answer:  ['']
+Prediction: 2,679,763
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.93s
+
+============================================================
+Query ID: 2879 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['applied studies human medicine or dentistry applied studies veterinary medicine']
+Answer:  ['']
+Prediction: Applied studies - human medicine or dentistry, Applied studies - veterinary medicine
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.13s
+
+============================================================
+Query ID: 2880 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['464457']
+Answer:  ['']
+Prediction: 464,457
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 2881 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse rat guinea pig']
+Answer:  ['']
+Prediction: Mouse, Rat, Guinea pig
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.73s
+
+============================================================
+Query ID: 2882 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2883 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse']
+Answer:  ['']
+Prediction: Mouse
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2884 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse rat']
+Answer:  ['']
+Prediction: Mouse, Rat
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+Checkpoint saved: 580 queries processed
+
+============================================================
+Query ID: 2885 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse rat']
+Answer:  ['']
+Prediction: Mouse, Rat
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+
+============================================================
+Query ID: 2886 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse']
+Answer:  ['']
+Prediction: Mouse
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+
+============================================================
+Query ID: 2887 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['fundamental biological research']
+Answer:  ['']
+Prediction: Fundamental biological research
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2888 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1763474']
+Answer:  ['']
+Prediction: 1763474
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 2889 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['breeding of gm or hm']
+Answer:  ['']
+Prediction: Breeding of GM or HM
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 2890 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['150']
+Answer:  ['']
+Prediction: 150
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.87s
+
+============================================================
+Query ID: 2891 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1080']
+Answer:  ['']
+Prediction: 108.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 2892 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['5']
+Answer:  ['']
+Prediction: 5
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.78s
+
+============================================================
+Query ID: 2893 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['220']
+Answer:  ['']
+Prediction: 220
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.75s
+
+============================================================
+Processing mix modality:  77%|███████▋  | 590/767 [26:19<03:37,  1.23s/it]Processing mix modality:  77%|███████▋  | 591/767 [26:21<03:50,  1.31s/it]Processing mix modality:  77%|███████▋  | 592/767 [26:22<04:04,  1.39s/it]Processing mix modality:  77%|███████▋  | 593/767 [26:23<03:59,  1.38s/it]Processing mix modality:  77%|███████▋  | 594/767 [26:24<03:38,  1.26s/it]Processing mix modality:  78%|███████▊  | 595/767 [26:26<03:41,  1.29s/it]Processing mix modality:  78%|███████▊  | 596/767 [26:27<03:22,  1.18s/it]Processing mix modality:  78%|███████▊  | 597/767 [26:28<03:29,  1.23s/it]Processing mix modality:  78%|███████▊  | 598/767 [26:29<03:20,  1.19s/it]Processing mix modality:  78%|███████▊  | 599/767 [26:30<03:14,  1.16s/it]Processing mix modality:  78%|███████▊  | 600/767 [26:32<03:38,  1.31s/it]Processing mix modality:  78%|███████▊  | 601/767 [26:33<03:19,  1.20s/it]Processing mix modality:  78%|███████▊  | 602/767 [26:34<03:05,  1.12s/it]Processing mix modality:  79%|███████▊  | 603/767 [26:35<02:58,  1.09s/it]Processing mix modality:  79%|███████▊  | 604/767 [26:36<02:59,  1.10s/it]Processing mix modality:  79%|███████▉  | 605/767 [26:37<02:39,  1.01it/s]Processing mix modality:  79%|███████▉  | 606/767 [26:37<02:30,  1.07it/s]Processing mix modality:  79%|███████▉  | 607/767 [26:39<02:36,  1.02it/s]Processing mix modality:  79%|███████▉  | 608/767 [26:39<02:28,  1.07it/s]Processing mix modality:  79%|███████▉  | 609/767 [26:40<02:20,  1.13it/s]Processing mix modality:  80%|███████▉  | 610/767 [26:41<02:33,  1.02it/s]Processing mix modality:  80%|███████▉  | 611/767 [26:43<02:41,  1.03s/it]Query ID: 2894 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['40098 67020']
+Answer:  ['']
+Prediction: 40098, 67020
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.89s
+Checkpoint saved: 590 queries processed
+
+============================================================
+Query ID: 2895 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['kazakhstan kyrgyzstan']
+Answer:  ['']
+Prediction: Kazakhstan, Kyrgyzstan
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 2896 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['israel japan republic of korea']
+Answer:  ['']
+Prediction: Israel, Japan, Republic of Korea
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 2897 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['denmark']
+Answer:  ['']
+Prediction: Denmark
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2898 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['02']
+Answer:  ['']
+Prediction: 0.16
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.00s
+
+============================================================
+Query ID: 2899 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['02']
+Answer:  ['']
+Prediction: 0.215403247
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 2900 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['120']
+Answer:  ['']
+Prediction: 120
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.94s
+
+============================================================
+Query ID: 2901 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['02']
+Answer:  ['']
+Prediction: 0.206018519
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2902 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['07']
+Answer:  ['']
+Prediction: 0.66
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 2903 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['00']
+Answer:  ['']
+Prediction: 0.03
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 2904 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['537']
+Answer:  ['']
+Prediction: 53.670181539805
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.64s
+Checkpoint saved: 600 queries processed
+
+============================================================
+Query ID: 2905 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['7']
+Answer:  ['']
+Prediction: 7
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.94s
+
+============================================================
+Query ID: 2906 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['11235']
+Answer:  ['']
+Prediction: 1123.50
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.95s
+
+============================================================
+Query ID: 2907 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['333 390']
+Answer:  ['']
+Prediction: 333, 390
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.00s
+
+============================================================
+Query ID: 2908 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1376 333']
+Answer:  ['']
+Prediction: 1376, 333
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+
+============================================================
+Query ID: 2909 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse 3']
+Answer:  ['']
+Prediction: Mouse #3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.71s
+
+============================================================
+Query ID: 2910 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['275']
+Answer:  ['']
+Prediction: 275
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.82s
+
+============================================================
+Query ID: 2911 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['624 559']
+Answer:  ['']
+Prediction: 624, 559
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.09s
+
+============================================================
+Query ID: 2912 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['599']
+Answer:  ['']
+Prediction: 599
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.82s
+
+============================================================
+Query ID: 2913 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mouse 2']
+Answer:  ['']
+Prediction: Mouse #2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.78s
+
+============================================================
+Query ID: 2914 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['8675']
+Answer:  ['']
+Prediction: 867.50
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.17s
+Checkpoint saved: 610 queries processed
+
+============================================================
+Query ID: 2915 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['gland 2']
+Answer:  ['']
+Prediction: Gland 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.17s
+Processing mix modality:  80%|███████▉  | 612/767 [26:43<02:33,  1.01it/s]Processing mix modality:  80%|███████▉  | 613/767 [26:45<02:52,  1.12s/it]Processing mix modality:  80%|████████  | 614/767 [26:46<03:01,  1.19s/it]Processing mix modality:  80%|████████  | 615/767 [26:47<02:46,  1.10s/it]Processing mix modality:  80%|████████  | 616/767 [26:48<02:52,  1.14s/it]Processing mix modality:  80%|████████  | 617/767 [26:50<02:57,  1.18s/it]Processing mix modality:  81%|████████  | 618/767 [26:50<02:42,  1.09s/it]Processing mix modality:  81%|████████  | 619/767 [26:52<02:41,  1.09s/it]Processing mix modality:  81%|████████  | 620/767 [26:53<02:37,  1.07s/it]Processing mix modality:  81%|████████  | 621/767 [26:54<02:47,  1.15s/it]Processing mix modality:  81%|████████  | 622/767 [26:55<02:40,  1.11s/it]Processing mix modality:  81%|████████  | 623/767 [26:56<02:31,  1.06s/it]Processing mix modality:  81%|████████▏ | 624/767 [26:57<02:29,  1.05s/it]Processing mix modality:  81%|████████▏ | 625/767 [26:58<02:27,  1.04s/it]Processing mix modality:  82%|████████▏ | 626/767 [26:59<02:29,  1.06s/it]Processing mix modality:  82%|████████▏ | 627/767 [27:01<02:48,  1.20s/it]
+============================================================
+Query ID: 2916 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['lower']
+Answer:  ['']
+Prediction: lower
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.88s
+
+============================================================
+Query ID: 2917 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['00 00']
+Answer:  ['']
+Prediction: 0.01, 0.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 2918 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['756 303']
+Answer:  ['']
+Prediction: 75.6, 30.3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 2919 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.89s
+
+============================================================
+Query ID: 2920 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no 00']
+Answer:  ['']
+Prediction: No, 0.034*
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2921 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['031096']
+Answer:  ['']
+Prediction: 0,31-0,96
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 2922 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.88s
+
+============================================================
+Query ID: 2923 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['171']
+Answer:  ['']
+Prediction: 17,1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 2924 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['78']
+Answer:  ['']
+Prediction: 7,8
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+Checkpoint saved: 620 queries processed
+
+============================================================
+Query ID: 2925 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['012067']
+Answer:  ['']
+Prediction: 0,12-0,67
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2926 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['44']
+Answer:  ['']
+Prediction: 4.42
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 2927 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['expt2']
+Answer:  ['']
+Prediction: Expt2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+
+============================================================
+Query ID: 2928 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['05']
+Answer:  ['']
+Prediction: 0.45
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 2929 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['26']
+Answer:  ['']
+Prediction: 2.65
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+
+============================================================
+Query ID: 2930 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['cryptosporidium']
+Answer:  ['']
+Prediction: Cryptosporidium
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2931 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['cryptosporidium spp untreated onsite wastewater graywater']
+Answer:  ['']
+Prediction: Cryptosporidium spp., Untreated onsite wastewater, Graywater
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 2932 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  Processing mix modality:  82%|████████▏ | 628/767 [30:27<2:25:05, 62.63s/it]Processing mix modality:  82%|████████▏ | 629/767 [30:28<1:41:41, 44.22s/it]Processing mix modality:  82%|████████▏ | 630/767 [30:29<1:11:30, 31.32s/it]Processing mix modality:  82%|████████▏ | 631/767 [30:31<51:06, 22.55s/it]  Processing mix modality:  82%|████████▏ | 632/767 [30:32<36:24, 16.18s/it]Processing mix modality:  83%|████████▎ | 633/767 [30:34<26:07, 11.70s/it]Processing mix modality:  83%|████████▎ | 634/767 [30:35<19:03,  8.60s/it]Processing mix modality:  83%|████████▎ | 635/767 [30:36<14:01,  6.37s/it]Processing mix modality:  83%|████████▎ | 636/767 [30:38<10:46,  4.94s/it]Processing mix modality:  83%|████████▎ | 637/767 [30:39<08:18,  3.84s/it]Processing mix modality:  83%|████████▎ | 638/767 [30:40<06:35,  3.06s/it]Processing mix modality:  83%|████████▎ | 639/767 [30:41<05:12,  2.44s/it]Processing mix modality:  83%|████████▎ | 640/767 [30:43<04:25,  2.09s/it]['988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988 988']
+Answer:  ['']
+Prediction: 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98.8, 98...
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 205.94s
+
+============================================================
+Query ID: 2933 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['norovirus 35']
+Answer:  ['']
+Prediction: Norovirus, 3.5
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.26s
+
+============================================================
+Query ID: 2934 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['roof runoff 55']
+Answer:  ['']
+Prediction: Roof runoff, 5.5
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+Checkpoint saved: 630 queries processed
+
+============================================================
+Query ID: 2935 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['roof runoff stormwater 10 wastewater graywater untreated onsite wastewater untreated municipal wastewater']
+Answer:  ['']
+Prediction: Roof runoff, Stormwater (10% wastewater), Graywater, Untreated onsite wastewater, Untreated municipal wastewater
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.09s
+
+============================================================
+Query ID: 2936 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['glass day 0']
+Answer:  ['']
+Prediction: Glass, Day 0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2937 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['day 0']
+Answer:  ['']
+Prediction: Day 0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+
+============================================================
+Query ID: 2938 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['34']
+Answer:  ['']
+Prediction: 3.448
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.38s
+
+============================================================
+Query ID: 2939 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['escherichia coli']
+Answer:  ['']
+Prediction: Escherichia coli
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 2940 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['64 37']
+Answer:  ['']
+Prediction: 6.368, 3.727
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+
+============================================================
+Query ID: 2941 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['stainless steel abs plastic glass']
+Answer:  ['']
+Prediction: Stainless Steel, ABS Plastic, Glass
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2942 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['24']
+Answer:  ['']
+Prediction: 2.384
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2943 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['true']
+Answer:  ['']
+Prediction: True
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.00s
+
+============================================================
+Query ID: 2944 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['solar cult labplas']
+Answer:  ['']
+Prediction: Solar Cult, LabPlas
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+Checkpoint saved: 640 queries processed
+
+============================================================
+Query ID: 2945 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1']
+Answer:  ['']
+Prediction: 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing mix modality:  84%|████████▎ | 641/767 [30:44<03:41,  1.76s/it]Processing mix modality:  84%|████████▎ | 642/767 [30:46<03:49,  1.84s/it]Processing mix modality:  84%|████████▍ | 643/767 [30:47<03:25,  1.66s/it]Processing mix modality:  84%|████████▍ | 644/767 [30:48<03:05,  1.51s/it]Processing mix modality:  84%|████████▍ | 645/767 [30:49<02:59,  1.47s/it]Processing mix modality:  84%|████████▍ | 646/767 [30:50<02:42,  1.34s/it]Processing mix modality:  84%|████████▍ | 647/767 [30:52<02:45,  1.38s/it]Processing mix modality:  84%|████████▍ | 648/767 [30:53<02:37,  1.32s/it]Processing mix modality:  85%|████████▍ | 649/767 [30:54<02:31,  1.28s/it]Processing mix modality:  85%|████████▍ | 650/767 [30:55<02:21,  1.21s/it]Processing mix modality:  85%|████████▍ | 651/767 [30:57<02:24,  1.24s/it]Processing mix modality:  85%|████████▌ | 652/767 [30:58<02:20,  1.23s/it]Processing mix modality:  85%|████████▌ | 653/767 [30:59<02:14,  1.18s/it]Processing mix modality:  85%|████████▌ | 654/767 [31:00<02:26,  1.30s/it]Processing mix modality:  85%|████████▌ | 655/767 [31:02<02:47,  1.49s/it]Processing mix modality:  86%|████████▌ | 656/767 [31:04<02:37,  1.41s/it]Processing mix modality:  86%|████████▌ | 657/767 [31:05<02:36,  1.43s/it]Processing mix modality:  86%|████████▌ | 658/767 [31:07<02:38,  1.45s/it]Processing mix modality:  86%|████████▌ | 659/767 [31:08<02:30,  1.40s/it]Processing mix modality:  86%|████████▌ | 660/767 [31:09<02:25,  1.36s/it]Processing mix modality:  86%|████████▌ | 661/767 [31:10<02:17,  1.30s/it]Processing Time: 0.98s
+
+============================================================
+Query ID: 2946 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['133 240 323 183']
+Answer:  ['']
+Prediction: 13.3, 24.0, 32.3, 18.3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.02s
+
+============================================================
+Query ID: 2947 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mixed conifer burn 1']
+Answer:  ['']
+Prediction: Mixed conifer, Burn, 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2948 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['q4 octdec']
+Answer:  ['']
+Prediction: Q4 Oct-Dec
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+
+============================================================
+Query ID: 2949 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['q4 2020']
+Answer:  ['']
+Prediction: Q4, 2020
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.39s
+
+============================================================
+Query ID: 2950 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2']
+Answer:  ['']
+Prediction: 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2951 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['q4 octdec 1858']
+Answer:  ['']
+Prediction: Q4 Oct-Dec, 1858
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 2952 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['total imports total exports']
+Answer:  ['']
+Prediction: Total imports, Total exports
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 2953 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1004']
+Answer:  ['']
+Prediction: 1004
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 2954 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['0']
+Answer:  ['']
+Prediction: 0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+Checkpoint saved: 650 queries processed
+
+============================================================
+Query ID: 2955 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['great britain england scotland wales']
+Answer:  ['']
+Prediction: Great Britain, England, Scotland, Wales
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2956 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['none none']
+Answer:  ['']
+Prediction: None, None
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 2957 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['canada']
+Answer:  ['']
+Prediction: Canada
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 2958 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2016 2017']
+Answer:  ['']
+Prediction: 2016, 2017
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.56s
+
+============================================================
+Query ID: 2959 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['india indonesia ecuador thailand vietnam china mainland mexico other countries']
+Answer:  ['']
+Prediction: India, Indonesia, Ecuador, Thailand, Vietnam, China (Mainland), Mexico, Other countries
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.95s
+
+============================================================
+Query ID: 2960 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['skin and subcutaneous tissue']
+Answer:  ['']
+Prediction: Skin and subcutaneous tissue
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 2961 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2668 2316']
+Answer:  ['']
+Prediction: 2668, 2316
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 2962 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['61522 7867']
+Answer:  ['']
+Prediction: 61522, 7867
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.51s
+
+============================================================
+Query ID: 2963 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['bituminous 100']
+Answer:  ['']
+Prediction: Bituminous, 100
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 2964 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['bituminous 100']
+Answer:  ['']
+Prediction: Bituminous, 100
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.26s
+Checkpoint saved: 660 queries processed
+
+============================================================
+Query ID: 2965 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['01']
+Answer:  ['']
+Prediction: 0.081
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 2966 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (8651 tokens) for image (2662, 3170)
+Processing mix modality:  86%|████████▋ | 662/767 [31:12<02:35,  1.48s/it]Predictions:  ['colorado 7780']
+Answer:  ['']
+Prediction: Colorado, 7780
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.91s
+
+============================================================
+Query ID: 2967 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (8654 tokens) for image (2662, 3170)
+Processing mix modality:  86%|████████▋ | 663/767 [31:14<02:38,  1.52s/it]Predictions:  ['hawaii']
+Answer:  ['']
+Prediction: Hawaii
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 2968 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (8658 tokens) for image (2662, 3170)
+Processing mix modality:  87%|████████▋ | 664/767 [31:16<02:47,  1.62s/it]Processing mix modality:  87%|████████▋ | 665/767 [31:17<02:29,  1.47s/it]Processing mix modality:  87%|████████▋ | 666/767 [31:18<02:18,  1.38s/it]Processing mix modality:  87%|████████▋ | 667/767 [31:21<03:03,  1.83s/it]Processing mix modality:  87%|████████▋ | 668/767 [31:22<02:39,  1.62s/it]Processing mix modality:  87%|████████▋ | 669/767 [31:23<02:23,  1.46s/it]Processing mix modality:  87%|████████▋ | 670/767 [31:24<02:12,  1.36s/it]Processing mix modality:  87%|████████▋ | 671/767 [31:25<02:03,  1.29s/it]Processing mix modality:  88%|████████▊ | 672/767 [31:27<02:02,  1.29s/it]Processing mix modality:  88%|████████▊ | 673/767 [31:28<02:11,  1.40s/it]Processing mix modality:  88%|████████▊ | 674/767 [31:30<02:15,  1.45s/it]Processing mix modality:  88%|████████▊ | 675/767 [31:31<02:07,  1.38s/it]Processing mix modality:  88%|████████▊ | 676/767 [31:33<02:08,  1.41s/it]Processing mix modality:  88%|████████▊ | 677/767 [31:34<02:06,  1.41s/it]Processing mix modality:  88%|████████▊ | 678/767 [31:35<02:01,  1.37s/it]Processing mix modality:  89%|████████▊ | 679/767 [31:36<01:55,  1.31s/it]Processing mix modality:  89%|████████▊ | 680/767 [31:38<01:57,  1.35s/it]Processing mix modality:  89%|████████▉ | 681/767 [31:39<01:52,  1.31s/it]Processing mix modality:  89%|████████▉ | 682/767 [31:41<01:57,  1.39s/it]Processing mix modality:  89%|████████▉ | 683/767 [31:42<02:04,  1.48s/it]Processing mix modality:  89%|████████▉ | 684/767 [31:44<02:05,  1.51s/it]Processing mix modality:  89%|████████▉ | 685/767 [31:46<02:08,  1.56s/it]Predictions:  ['lake states corn belt']
+Answer:  ['']
+Prediction: Lake States, Corn Belt
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.86s
+
+============================================================
+Query ID: 2969 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['4800']
+Answer:  ['']
+Prediction: 4800
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 2970 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['netfosaa']
+Answer:  ['']
+Prediction: N-EtFOSAA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 2971 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['62 fts 63 ftca 73 ftca 53 ftca 83 ftca 33 ftca']
+Answer:  ['']
+Prediction: 6:2 FTS, 6:3 FTCA, 7:3 FTCA, 5:3 FTCA, 8:3 FTCA, 3:3 FTCA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.90s
+
+============================================================
+Query ID: 2972 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['pfda pfba']
+Answer:  ['']
+Prediction: PFDA, PFBA
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2973 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['not available']
+Answer:  ['']
+Prediction: Not available
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2974 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['0']
+Answer:  ['']
+Prediction: 0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+Checkpoint saved: 670 queries processed
+
+============================================================
+Query ID: 2975 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['0']
+Answer:  ['']
+Prediction: 0
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2976 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['pennsylvania ohio']
+Answer:  ['']
+Prediction: Pennsylvania, Ohio
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 2977 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1161467']
+Answer:  ['']
+Prediction: 1,161,467
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.66s
+
+============================================================
+Query ID: 2978 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['illinois 18273']
+Answer:  ['']
+Prediction: Illinois, 18273
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+
+============================================================
+Query ID: 2979 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+
+============================================================
+Query ID: 2980 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mississippi 246']
+Answer:  ['']
+Prediction: Mississippi, 24.6
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 2981 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['massachusetts 73']
+Answer:  ['']
+Prediction: Massachusetts, 7.3
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.41s
+
+============================================================
+Query ID: 2982 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['10']
+Answer:  ['']
+Prediction: 10
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 2983 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['99']
+Answer:  ['']
+Prediction: 99
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.18s
+
+============================================================
+Query ID: 2984 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['16 to 24 years']
+Answer:  ['']
+Prediction: 16 to 24 years
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.41s
+Checkpoint saved: 680 queries processed
+
+============================================================
+Query ID: 2985 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['586']
+Answer:  ['']
+Prediction: 586
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+
+============================================================
+Query ID: 2986 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['27 27']
+Answer:  ['']
+Prediction: 2.73, 2.73
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+
+============================================================
+Query ID: 2987 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['aircraft pilots and flight engineers']
+Answer:  ['']
+Prediction: Aircraft pilots and flight engineers
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.70s
+
+============================================================
+Query ID: 2988 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['15']
+Answer:  ['']
+Prediction: 15
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.58s
+
+============================================================
+Query ID: 2989 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['211']
+Answer:  ['']
+Prediction: 211
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.68s
+
+============================================================
+Processing mix modality:  89%|████████▉ | 686/767 [31:47<02:11,  1.63s/it]Processing mix modality:  90%|████████▉ | 687/767 [31:48<01:54,  1.44s/it]Processing mix modality:  90%|████████▉ | 688/767 [31:50<01:48,  1.37s/it]Processing mix modality:  90%|████████▉ | 689/767 [31:51<01:45,  1.36s/it]Processing mix modality:  90%|████████▉ | 690/767 [31:52<01:38,  1.28s/it]Processing mix modality:  90%|█████████ | 691/767 [31:56<02:33,  2.02s/it]Processing mix modality:  90%|█████████ | 692/767 [31:57<02:15,  1.81s/it]Processing mix modality:  90%|█████████ | 693/767 [31:58<02:03,  1.67s/it]Processing mix modality:  90%|█████████ | 694/767 [32:00<01:54,  1.57s/it]Processing mix modality:  91%|█████████ | 695/767 [32:01<01:43,  1.44s/it]Processing mix modality:  91%|█████████ | 696/767 [32:02<01:39,  1.41s/it]Processing mix modality:  91%|█████████ | 697/767 [32:04<01:38,  1.41s/it]Processing mix modality:  91%|█████████ | 698/767 [32:05<01:29,  1.29s/it]Processing mix modality:  91%|█████████ | 699/767 [32:05<01:19,  1.16s/it]Processing mix modality:  91%|█████████▏| 700/767 [32:07<01:16,  1.14s/it]Processing mix modality:  91%|█████████▏| 701/767 [32:08<01:17,  1.17s/it]Processing mix modality:  92%|█████████▏| 702/767 [32:09<01:14,  1.14s/it]Processing mix modality:  92%|█████████▏| 703/767 [32:10<01:14,  1.17s/it]Processing mix modality:  92%|█████████▏| 704/767 [32:12<01:24,  1.34s/it]Processing mix modality:  92%|█████████▏| 705/767 [32:13<01:24,  1.37s/it]Processing mix modality:  92%|█████████▏| 706/767 [32:15<01:36,  1.58s/it]Query ID: 2990 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['models demonstrators and product promoters']
+Answer:  ['']
+Prediction: Models, demonstrators, and product promoters
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.78s
+
+============================================================
+Query ID: 2991 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.99s
+
+============================================================
+Query ID: 2992 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['11313']
+Answer:  ['']
+Prediction: 11313
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+
+============================================================
+Query ID: 2993 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['25 to 34 years']
+Answer:  ['']
+Prediction: 25 to 34 years
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2994 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['37']
+Answer:  ['']
+Prediction: 37
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+Checkpoint saved: 690 queries processed
+
+============================================================
+Query ID: 2995 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['17958 1466 1996 2177 2242 1528 3254 3563 2535']
+Answer:  ['']
+Prediction: 17958, 1466, 1996, 2177, 2242, 1528, 3254, 3563, 2535
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.74s
+
+============================================================
+Query ID: 2996 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1049']
+Answer:  ['']
+Prediction: 1049
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2997 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['01']
+Answer:  ['']
+Prediction: 0.14
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.34s
+
+============================================================
+Query ID: 2998 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['257']
+Answer:  ['']
+Prediction: 257
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2999 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+
+============================================================
+Query ID: 3000 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['18']
+Answer:  ['']
+Prediction: 1.75
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 3001 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['65 years and older']
+Answer:  ['']
+Prediction: 65 years and older
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 3002 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['69']
+Answer:  ['']
+Prediction: 69
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+
+============================================================
+Query ID: 3003 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.85s
+
+============================================================
+Query ID: 3004 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2015']
+Answer:  ['']
+Prediction: 2015
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.06s
+Checkpoint saved: 700 queries processed
+
+============================================================
+Query ID: 3005 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['2012']
+Answer:  ['']
+Prediction: 2012
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 3006 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['5']
+Answer:  ['']
+Prediction: 5
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 3007 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['169']
+Answer:  ['']
+Prediction: 16.9
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 3008 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['288321']
+Answer:  ['']
+Prediction: 288,321
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.76s
+
+============================================================
+Query ID: 3009 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['no']
+Answer:  ['']
+Prediction: No
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 3010 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['327200 330200']
+Answer:  ['']
+Prediction: 327200, 330200
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.07s
+
+============================================================
+Query ID: 3011 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (9576 tokens) for image (4578, 1972)
+Processing mix modality:  92%|█████████▏| 707/767 [32:17<01:37,  1.63s/it]Predictions:  ['nodataavailable']
+Answer:  ['']
+Prediction: NoDataAvailable
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.73s
+
+============================================================
+Query ID: 3012 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (9562 tokens) for image (4578, 1972)
+Processing mix modality:  92%|█████████▏| 708/767 [32:19<01:39,  1.69s/it]Processing mix modality:  92%|█████████▏| 709/767 [32:20<01:34,  1.64s/it]Processing mix modality:  93%|█████████▎| 710/767 [32:21<01:23,  1.46s/it]Processing mix modality:  93%|█████████▎| 711/767 [32:23<01:19,  1.43s/it]Predictions:  ['2017']
+Answer:  ['']
+Prediction: 2017
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 3013 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['36894 641']
+Answer:  ['']
+Prediction: 36894, 641
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.52s
+
+============================================================
+Query ID: 3014 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.02s
+Checkpoint saved: 710 queries processed
+
+============================================================
+Query ID: 3015 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1007 yes']
+Answer:  ['']
+Prediction: 100.7, Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 3016 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (9990 tokens) for image (5324, 3252)
+Processing mix modality:  93%|█████████▎| 712/767 [32:25<01:24,  1.54s/it]Predictions:  ['yes']
+Answer:  ['']
+Prediction: Yes
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.82s
+
+============================================================
+Query ID: 3017 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (9976 tokens) for image (5324, 3252)
+Processing mix modality:  93%|█████████▎| 713/767 [32:27<01:35,  1.77s/it]Predictions:  ['2256938']
+Answer:  ['']
+Prediction: 225,693.78
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.31s
+
+============================================================
+Query ID: 3018 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (9982 tokens) for image (5324, 3252)
+Processing mix modality:  93%|█████████▎| 714/767 [32:29<01:40,  1.90s/it]Predictions:  ['102072']
+Answer:  ['']
+Prediction: 10207.22
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.20s
+
+============================================================
+Query ID: 3019 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11584 tokens) for image (5896, 3002)
+Processing mix modality:  93%|█████████▎| 715/767 [32:32<01:54,  2.21s/it]Predictions:  ['birmingham and solihull 12938 10773']
+Answer:  ['']
+Prediction: Birmingham and Solihull, 12938, 10773
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.92s
+
+============================================================
+Query ID: 3020 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11584 tokens) for image (5896, 3002)
+Processing mix modality:  93%|█████████▎| 716/767 [32:36<02:11,  2.58s/it]Predictions:  ['1234463 405085 281852 9119']
+Answer:  ['']
+Prediction: 1234463, 405085, 281852, 9119
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.46s
+
+============================================================
+Query ID: 3021 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11571 tokens) for image (5896, 3002)
+Processing mix modality:  93%|█████████▎| 717/767 [32:38<02:11,  2.63s/it]Predictions:  ['65267 1234463']
+Answer:  ['']
+Prediction: 65267, 1234463
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.73s
+
+============================================================
+Query ID: 3022 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11076 tokens) for image (5812, 2370)
+Processing mix modality:  94%|█████████▎| 718/767 [32:41<02:08,  2.61s/it]Predictions:  ['126646 201529']
+Answer:  ['']
+Prediction: 126646, 201529
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.58s
+
+============================================================
+Query ID: 3023 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11062 tokens) for image (5812, 2370)
+Processing mix modality:  94%|█████████▎| 719/767 [32:43<02:01,  2.53s/it]Predictions:  ['1234463']
+Answer:  ['']
+Prediction: 1,234,463
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.33s
+
+============================================================
+Query ID: 3024 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11071 tokens) for image (5812, 2370)
+Processing mix modality:  94%|█████████▍| 720/767 [32:46<02:08,  2.73s/it]Processing mix modality:  94%|█████████▍| 721/767 [32:48<01:43,  2.26s/it]Processing mix modality:  94%|█████████▍| 722/767 [32:49<01:27,  1.95s/it]Processing mix modality:  94%|█████████▍| 723/767 [32:50<01:20,  1.82s/it]Processing mix modality:  94%|█████████▍| 724/767 [32:52<01:14,  1.73s/it]Processing mix modality:  95%|█████████▍| 725/767 [32:54<01:18,  1.87s/it]Processing mix modality:  95%|█████████▍| 726/767 [32:55<01:11,  1.74s/it]Processing mix modality:  95%|█████████▍| 727/767 [32:58<01:13,  1.84s/it]Processing mix modality:  95%|█████████▍| 728/767 [32:58<01:01,  1.57s/it]Processing mix modality:  95%|█████████▌| 729/767 [32:59<00:52,  1.39s/it]Processing mix modality:  95%|█████████▌| 730/767 [33:01<00:50,  1.37s/it]Processing mix modality:  95%|█████████▌| 731/767 [33:02<00:49,  1.37s/it]Predictions:  ['439317 304634 72908 684']
+Answer:  ['']
+Prediction: 439317, 304634, 72908, 684
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.17s
+Checkpoint saved: 720 queries processed
+
+============================================================
+Query ID: 3025 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['36188']
+Answer:  ['']
+Prediction: 36,188
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 3026 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['493143']
+Answer:  ['']
+Prediction: 493,143
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.22s
+
+============================================================
+Query ID: 3027 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['36188 493143']
+Answer:  ['']
+Prediction: 36188, 493143
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.53s
+
+============================================================
+Query ID: 3028 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['accounting english life orientation mathematics physical sciences']
+Answer:  ['']
+Prediction: Accounting, English, Life Orientation, Mathematics, Physical Sciences
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.53s
+
+============================================================
+Query ID: 3029 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['accounting afrikaans 1st add language computer applic technology life orientation mathematics physical sciences']
+Answer:  ['']
+Prediction: Accounting, Afrikaans 1st Add Language, Computer Applic Technology, Life Orientation, Mathematics, Physical Sciences
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.21s
+
+============================================================
+Query ID: 3030 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['623 427']
+Answer:  ['']
+Prediction: 623, 427
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 3031 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['14 736']
+Answer:  ['']
+Prediction: 14, 73.57142857142857
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.09s
+
+============================================================
+Query ID: 3032 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['register']
+Answer:  ['']
+Prediction: Register
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 3033 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mobile department']
+Answer:  ['']
+Prediction: Mobile Department
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.97s
+
+============================================================
+Query ID: 3034 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['mobile department register other department register']
+Answer:  ['']
+Prediction: Mobile Department, Register, Other Department, Register
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+Checkpoint saved: 730 queries processed
+
+============================================================
+Query ID: 3035 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['141 1065']
+Answer:  ['']
+Prediction: 141, 1065
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.37s
+
+============================================================
+Query ID: 3036 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11206 tokens) for image (792, 4800)
+Processing mix modality:  95%|█████████▌| 732/767 [33:04<00:51,  1.48s/it]Predictions:  ['spain']
+Answer:  ['']
+Prediction: Spain
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.75s
+
+============================================================
+Query ID: 3037 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11212 tokens) for image (792, 4800)
+Processing mix modality:  96%|█████████▌| 733/767 [33:06<00:53,  1.59s/it]Predictions:  ['1']
+Answer:  ['']
+Prediction: 1
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.82s
+
+============================================================
+Query ID: 3038 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11204 tokens) for image (792, 4800)
+Processing mix modality:  96%|█████████▌| 734/767 [33:08<00:58,  1.79s/it]Predictions:  ['finance hr it legal sales travel']
+Answer:  ['']
+Prediction: Finance, HR, IT, Legal, Sales, Travel
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.26s
+
+============================================================
+Query ID: 3039 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+  Warning: Large input (11210 tokens) for image (792, 4800)
+Processing mix modality:  96%|█████████▌| 735/767 [33:10<00:58,  1.82s/it]Processing mix modality:  96%|█████████▌| 736/767 [33:11<00:48,  1.56s/it]Processing mix modality:  96%|█████████▌| 737/767 [33:12<00:42,  1.42s/it]Processing mix modality:  96%|█████████▌| 738/767 [33:13<00:37,  1.28s/it]Processing mix modality:  96%|█████████▋| 739/767 [33:14<00:31,  1.14s/it]Processing mix modality:  96%|█████████▋| 740/767 [33:15<00:29,  1.10s/it]Processing mix modality:  97%|█████████▋| 741/767 [33:15<00:26,  1.00s/it]Processing mix modality:  97%|█████████▋| 742/767 [33:17<00:25,  1.03s/it]Processing mix modality:  97%|█████████▋| 743/767 [33:17<00:23,  1.00it/s]Processing mix modality:  97%|█████████▋| 744/767 [33:19<00:25,  1.13s/it]Processing mix modality:  97%|█████████▋| 745/767 [33:20<00:27,  1.24s/it]Processing mix modality:  97%|█████████▋| 746/767 [33:22<00:26,  1.26s/it]Processing mix modality:  97%|█████████▋| 747/767 [33:23<00:25,  1.28s/it]Processing mix modality:  98%|█████████▊| 748/767 [33:24<00:22,  1.20s/it]Processing mix modality:  98%|█████████▊| 749/767 [33:25<00:21,  1.20s/it]Processing mix modality:  98%|█████████▊| 750/767 [33:26<00:19,  1.16s/it]Processing mix modality:  98%|█████████▊| 751/767 [33:28<00:22,  1.40s/it]Processing mix modality:  98%|█████████▊| 752/767 [33:29<00:19,  1.31s/it]Processing mix modality:  98%|█████████▊| 753/767 [33:30<00:17,  1.24s/it]Processing mix modality:  98%|█████████▊| 754/767 [33:31<00:14,  1.15s/it]Processing mix modality:  98%|█████████▊| 755/767 [33:32<00:13,  1.12s/it]Processing mix modality:  99%|█████████▊| 756/767 [33:34<00:12,  1.14s/it]Predictions:  ['20']
+Answer:  ['']
+Prediction: 20
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.90s
+
+============================================================
+Query ID: 3040 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['16']
+Answer:  ['']
+Prediction: 1.56
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+
+============================================================
+Query ID: 3041 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['tbooh before hd']
+Answer:  ['']
+Prediction: t-BOOH, before HD
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.09s
+
+============================================================
+Query ID: 3042 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['01']
+Answer:  ['']
+Prediction: 0.14
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+
+============================================================
+Query ID: 3043 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['before hd']
+Answer:  ['']
+Prediction: before HD
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.81s
+
+============================================================
+Query ID: 3044 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['03']
+Answer:  ['']
+Prediction: 0.35
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.98s
+Checkpoint saved: 740 queries processed
+
+============================================================
+Query ID: 3045 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['base']
+Answer:  ['']
+Prediction: base
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.79s
+
+============================================================
+Query ID: 3046 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['00']
+Answer:  ['']
+Prediction: 0.049
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+
+============================================================
+Query ID: 3047 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['control before hd']
+Answer:  ['']
+Prediction: control, before HD
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+
+============================================================
+Query ID: 3048 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['republic of korea']
+Answer:  ['']
+Prediction: Republic of Korea
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.43s
+
+============================================================
+Query ID: 3049 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['16']
+Answer:  ['']
+Prediction: 1.59
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.52s
+
+============================================================
+Query ID: 3050 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['bulgaria']
+Answer:  ['']
+Prediction: Bulgaria
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.30s
+
+============================================================
+Query ID: 3051 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['singapore']
+Answer:  ['']
+Prediction: Singapore
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 3052 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['japan']
+Answer:  ['']
+Prediction: Japan
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 3053 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['81']
+Answer:  ['']
+Prediction: 81%
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 3054 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['israel']
+Answer:  ['']
+Prediction: Israel
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+Checkpoint saved: 750 queries processed
+
+============================================================
+Query ID: 3055 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['bulgaria czech republic hungary poland republic of moldova romania russian federation ukraine']
+Answer:  ['']
+Prediction: Bulgaria, Czech Republic, Hungary, Poland, Republic of Moldova, Romania, Russian Federation, Ukraine
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.98s
+
+============================================================
+Query ID: 3056 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['321']
+Answer:  ['']
+Prediction: 32.15
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 3057 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['champion reefs']
+Answer:  ['']
+Prediction: CHAMPION REEFS
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 3058 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['17']
+Answer:  ['']
+Prediction: 17
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+
+============================================================
+Query ID: 3059 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['champion reefs']
+Answer:  ['']
+Prediction: CHAMPION REEFS
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 3060 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['226']
+Answer:  ['']
+Prediction: 22.65
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Processing mix modality:  99%|█████████▊| 757/767 [33:35<00:11,  1.17s/it]Processing mix modality:  99%|█████████▉| 758/767 [33:36<00:10,  1.18s/it]Processing mix modality:  99%|█████████▉| 759/767 [33:37<00:09,  1.23s/it]Processing mix modality:  99%|█████████▉| 760/767 [33:39<00:08,  1.21s/it]Processing mix modality:  99%|█████████▉| 761/767 [33:39<00:06,  1.10s/it]Processing mix modality:  99%|█████████▉| 762/767 [33:41<00:05,  1.10s/it]Processing mix modality:  99%|█████████▉| 763/767 [33:41<00:04,  1.06s/it]Processing mix modality: 100%|█████████▉| 764/767 [33:43<00:03,  1.07s/it]Processing mix modality: 100%|█████████▉| 765/767 [33:44<00:02,  1.03s/it]Processing mix modality: 100%|█████████▉| 766/767 [33:45<00:01,  1.03s/it]Processing mix modality: 100%|██████████| 767/767 [33:46<00:00,  1.08s/it]Processing mix modality: 100%|██████████| 767/767 [33:46<00:00,  2.64s/it]
+Query ID: 3061 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['157']
+Answer:  ['']
+Prediction: 15.69
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.23s
+
+============================================================
+Query ID: 3062 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['228']
+Answer:  ['']
+Prediction: 22.84
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 3063 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['set8 156']
+Answer:  ['']
+Prediction: Set8, 15.59
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 3064 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['24425']
+Answer:  ['']
+Prediction: 2442.52
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.15s
+Checkpoint saved: 760 queries processed
+
+============================================================
+Query ID: 3065 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['set6']
+Answer:  ['']
+Prediction: Set6
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.85s
+
+============================================================
+Query ID: 3066 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['1288']
+Answer:  ['']
+Prediction: 128.79
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 3067 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['expt2']
+Answer:  ['']
+Prediction: Expt-2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.97s
+
+============================================================
+Query ID: 3068 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['342']
+Answer:  ['']
+Prediction: 34.23
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 3069 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['set 2']
+Answer:  ['']
+Prediction: Set 2
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 3070 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['15']
+Answer:  ['']
+Prediction: 1.46
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 3071 | Type: Structure Comprehending | SubType: Structure Comprehending
+============================================================
+Predictions:  ['25760']
+Answer:  ['']
+Prediction: 2576.00
+Reference: 
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+Total queries: 767
+Duration: 2034.74s
+Results saved to: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_latex_a100_shard3/results_20260128_182843.json
+
+Aggregate Metrics by Question Type:
+  Fact Checking:
+    EM: 54.2553
+    F1: 65.5029
+    SacreBLEU: 6.3271
+    ROUGE-L: 65.6570
+  Visualization:
+    Pass: 0.8182
+    ECR: 0.9091
+  Data Analysis:
+    SacreBLEU: 13.9779
+    F1: 38.6125
+    ROUGE-L: 38.6125
+    EM: 0.0000
+  Numerical Reasoning:
+    EM: 15.4545
+    F1: 33.9035
+    SacreBLEU: 5.1535
+    ROUGE-L: 34.0600
+  Structure Comprehending:
+    EM: 0.0000
+    F1: 0.0000
+    SacreBLEU: 0.0000
+    ROUGE-L: 0.0000
+Checkpoint preserved at: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_latex_a100_shard3/checkpoint.json

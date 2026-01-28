@@ -1,0 +1,164 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: mix
+  Format: html
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 4/4
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 32768
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.51s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:02,  1.50s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.49s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.81s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:06<00:00,  1.69s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Shard 3/4: Processing queries 2305-3071 (767 queries)
+Processing mix modality:   0%|          | 0/767 [00:00<?, ?it/s]
+============================================================
+Query ID: 2305 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (21622 tokens) for image (5324, 3252)
+Processing mix modality:   0%|          | 1/767 [00:06<1:28:32,  6.93s/it]Predictions:  ['2256938']
+Answer:  ['2256938']
+Prediction: 225693.78
+Reference: 225693.78
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 6.93s
+
+============================================================
+Query ID: 2306 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (21628 tokens) for image (5324, 3252)
+Processing mix modality:   0%|          | 2/767 [00:10<1:04:25,  5.05s/it]Predictions:  ['10812']
+Answer:  ['19150']
+Prediction: 1081.24
+Reference: 1914.9769
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.74s
+
+============================================================
+Query ID: 2307 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large input (21716 tokens) for image (5324, 3252)
+Processing mix modality:   0%|          | 3/767 [00:29<2:22:55, 11.23s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+'PSE': [231646.15, 212232.82, 215113.12, 212095.27, 230575.05, 225693.78, 232827.00]
+}
+
+df = pd.DataFrame(data)
+
+# Plotting the bar chart
+plt.figure(figsize=(10, 6))
+plt.bar(df['Year'], df['PSE'], color='blue')
+plt.title('Producer Support Estimate (PSE) for Agriculture from 2014 to 2020')
+plt.xlabel('Year')
+plt.ylabel('PSE (US dollar, Millions)')
+plt.xticks(df['Year'])
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: [231646.15, 212232.82, 215113.12, 212095.27, 230575.05, 225693.78, 232827.0]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    'PSE': [231646.15, 212232.82, 215113.12, 212...
+Reference: [231646.1458, 212232.8219, 215113.116, 212095.2705, 230575.045, 225693.7759, 232827.0016]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 18.57s
+
+============================================================
+Query ID: 2308 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (21713 tokens) for image (5324, 3252)
+Processing mix modality:   1%|          | 4/767 [00:46<2:51:43, 13.50s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data
+data = {
+'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+'Market Price Support (MPS)': [92752.92, 89736.62, 94167.70, 93371.51, 93170.59, 88759.78, 87353.90]
+}
+
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(10, 5))
+plt.plot(df['Year'], df['Market Price Support (MPS)'], marker='o', linestyle='-', color='blue')
+plt.title('Change in Market Price Support (MPS) from 2014 to 2020')
+plt.xlabel('Year')
+plt.ylabel('Market Price Support (MPS) in US dollar, Millions')
+plt.grid(True)
+plt.xticks(df['Year'])
+plt.show()
+
+OUTPUT VALUE: [[92752.92, 89736.62, 94167.7, 93371.51, 93170.59, 88759.78, 87353.9]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data
+data = {
+    'Year': [2014, 2015, 2016, 2017, 2018, 2019, 2020],
+    'Market Price Support (MPS)': [92752.92, 89736.62, 94167.70...
+Reference: [[92752.9205, 94167.6954, 97052.1359, 93371.5051, 93170.5861, 88759.7753, 91255.6092]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 17.00s
+
+============================================================
+Query ID: 2309 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (32693 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 5/767 [00:52<2:17:17, 10.81s/it]Predictions:  ['34']
+Answer:  ['34']
+Prediction: 3.4
+Reference: 3.4
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 6.03s
+
+============================================================
+Query ID: 2310 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (32721 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 6/767 [00:57<1:54:42,  9.04s/it]Predictions:  ['31 32']
+Answer:  ['31']
+Prediction: 3.1, 3.2
+Reference: 3.135
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 5.62s
+
+============================================================
+Query ID: 2311 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (32694 tokens) for image (2822, 4268)
+Processing mix modality:   1%|          | 7/767 [01:03<1:41:16,  7.99s/it]Predictions:  ['2010 41']
+Answer:  ['2010 41']
+Prediction: 2010, 4.1
+Reference: 2010, 4.1
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 5.83s
+
+============================================================
+Query ID: 2312 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large input (32722 tokens) for image (2822, 4268)

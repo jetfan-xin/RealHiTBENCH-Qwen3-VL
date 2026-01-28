@@ -1,0 +1,287 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: mix
+  Format: html
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 3/4
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 32768
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.60s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.58s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.58s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.85s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:07<00:00,  1.75s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Shard 2/4: Processing queries 1537-2304 (768 queries)
+Processing mix modality:   0%|          | 0/768 [00:00<?, ?it/s]Processing mix modality:   0%|          | 1/768 [00:04<53:38,  4.20s/it]Processing mix modality:   0%|          | 2/768 [00:06<36:30,  2.86s/it]Processing mix modality:   0%|          | 3/768 [00:08<31:09,  2.44s/it]Processing mix modality:   1%|          | 4/768 [00:09<27:04,  2.13s/it]
+============================================================
+Query ID: 1537 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['09']
+Answer:  ['11']
+Prediction: 0.87
+Reference: 1.05
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.20s
+
+============================================================
+Query ID: 1538 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['08 08']
+Answer:  ['08']
+Prediction: 0.75, 0.75
+Reference: 0.75
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.92s
+
+============================================================
+Query ID: 1539 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['47 16']
+Answer:  ['15']
+Prediction: 4.70, 1.61
+Reference: 1.49
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.95s
+
+============================================================
+Query ID: 1540 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['25']
+Answer:  ['25']
+Prediction: 2.49
+Reference: 2.50
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.64s
+
+============================================================
+Query ID: 1541 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (17177 tokens) for image (3090, 5492)
+Processing mix modality:   1%|          | 5/768 [00:13<35:18,  2.78s/it]Predictions:  ['512']
+Answer:  ['512']
+Prediction: 51.2
+Reference: 51.20
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.93s
+
+============================================================
+Query ID: 1542 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (17190 tokens) for image (3090, 5492)
+Processing mix modality:   1%|          | 6/768 [00:16<36:15,  2.86s/it]Predictions:  ['478']
+Answer:  ['478']
+Prediction: 47.76
+Reference: 47.76
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.01s
+
+============================================================
+Query ID: 1543 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (17188 tokens) for image (3090, 5492)
+Processing mix modality:   1%|          | 7/768 [00:19<35:45,  2.82s/it]Predictions:  ['4']
+Answer:  ['5']
+Prediction: 4
+Reference: 5
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.75s
+
+============================================================
+Query ID: 1544 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (17178 tokens) for image (3090, 5492)
+Processing mix modality:   1%|          | 8/768 [00:22<35:38,  2.81s/it]Predictions:  ['fluoxetine']
+Answer:  ['fluoxetine']
+Prediction: Fluoxetine
+Reference: Fluoxetine
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.80s
+
+============================================================
+Query ID: 1545 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (17277 tokens) for image (3090, 5492)
+Processing mix modality:   1%|          | 9/768 [00:34<1:13:16,  5.79s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Group': ['Control', 'Control'],
+'Treatment': ['Vehicle', 'Fluoxetine'],
+'Time Immobile (s)': [51.2, 133.1]
+}
+
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.bar(df['Treatment'], df['Time Immobile (s)'], color=['blue', 'orange'])
+plt.title('Time Immobile Comparison: Control Group (Vehicle vs Fluoxetine)')
+plt.xlabel('Treatment')
+plt.ylabel('Time Immobile (s)')
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', linewidth=0.7, alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: []
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Group': ['Control', 'Control'],
+    'Treatment': ['Vehicle', 'Fluoxetine'],
+    'Time Immobile (s)'...
+Reference: [[10.0, 19.0, 20.0, 30.0, 33.0, 37.0, 56.0, 76.0, 111.0, 120.0], [66.0, 85.0, 104.0, 110.0, 133.0, 159.0, 161.0, 166.0, 172.0, 175.0]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 12.34s
+
+============================================================
+Query ID: 1546 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (19622 tokens) for image (3952, 5492)
+Processing mix modality:   1%|▏         | 10/768 [00:38<1:04:08,  5.08s/it]Predictions:  ['1098']
+Answer:  ['1098']
+Prediction: 109.83
+Reference: 109.83
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.47s
+Checkpoint saved: 10 queries processed
+
+============================================================
+Query ID: 1547 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (19631 tokens) for image (3952, 5492)
+Processing mix modality:   1%|▏         | 11/768 [00:41<57:16,  4.54s/it]  Predictions:  ['29']
+Answer:  ['29']
+Prediction: 2.91
+Reference: 2.91
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.32s
+
+============================================================
+Query ID: 1548 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (19627 tokens) for image (3952, 5492)
+Processing mix modality:   2%|▏         | 12/768 [00:44<51:54,  4.12s/it]Predictions:  ['5']
+Answer:  ['3']
+Prediction: 5
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.16s
+
+============================================================
+Query ID: 1549 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (19626 tokens) for image (3952, 5492)
+Processing mix modality:   2%|▏         | 13/768 [00:47<48:07,  3.83s/it]Predictions:  ['fluoxetine']
+Answer:  ['fluoxetine']
+Prediction: Fluoxetine
+Reference: Fluoxetine
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.15s
+
+============================================================
+Query ID: 1550 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (19716 tokens) for image (3952, 5492)
+Processing mix modality:   2%|▏         | 14/768 [00:59<1:19:57,  6.36s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the table
+data = {
+'Group': ['Control', 'Control'],
+'Treatment': ['Vehicle', 'Fluoxetine'],
+'Total Distance (m)': [7.4158, 9.2375]
+}
+
+df = pd.DataFrame(data)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.bar(df['Treatment'], df['Total Distance (m)'], color=['blue', 'green'])
+plt.title('Total Distance Comparison: Control Group (Vehicle vs Fluoxetine)')
+plt.xlabel('Treatment')
+plt.ylabel('Total Distance (m)')
+plt.xticks(rotation=45)
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: []
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the table
+data = {
+    'Group': ['Control', 'Control'],
+    'Treatment': ['Vehicle', 'Fluoxetine'],
+    'Total Distance (m)...
+Reference: [[2.519, 4.212, 5.399, 6.172, 7.345, 7.399, 8.089, 8.548, 12.2, 12.275], [7.65, 7.968, 7.991, 8.772, 8.918, 8.966, 9.235, 9.261, 10.766, 12.848]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 12.23s
+
+============================================================
+Query ID: 1551 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (17373 tokens) for image (2724, 5492)
+Processing mix modality:   2%|▏         | 15/768 [01:02<1:07:03,  5.34s/it]Predictions:  ['372']
+Answer:  ['372']
+Prediction: 37.24
+Reference: 37.24
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.98s
+
+============================================================
+Query ID: 1552 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (17388 tokens) for image (2724, 5492)
+Processing mix modality:   2%|▏         | 16/768 [01:05<57:45,  4.61s/it]  Predictions:  ['65']
+Answer:  ['65']
+Prediction: 6.47
+Reference: 6.47
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.90s
+
+============================================================
+Query ID: 1553 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (17378 tokens) for image (2724, 5492)
+Processing mix modality:   2%|▏         | 17/768 [01:08<50:39,  4.05s/it]Predictions:  ['5']
+Answer:  ['3']
+Prediction: 5
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.74s
+
+============================================================
+Query ID: 1554 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (17378 tokens) for image (2724, 5492)
+Processing mix modality:   2%|▏         | 18/768 [01:11<46:04,  3.69s/it]Predictions:  ['vehicle fluoxetine']
+Answer:  ['fluoxetine']
+Prediction: Vehicle, Fluoxetine
+Reference: Fluoxetine
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.84s
+
+============================================================
+Query ID: 1555 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large input (17473 tokens) for image (2724, 5492)

@@ -1,0 +1,174 @@
+{
+  "results": [
+    {
+      "id": 1537,
+      "FileName": "medical-table05",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "When Vv=0.15, what is the mean value of Y? (Accurate to two decimal places)",
+      "Reference": "1.05",
+      "Prediction": "0.87",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 4.2
+    },
+    {
+      "id": 1538,
+      "FileName": "medical-table05",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the difference between the maximum value of Y for Vv=0.1 and the maximum value of Y for Vv=0.05? (Accurate to two decimal places)",
+      "Reference": "0.75",
+      "Prediction": "0.75, 0.75",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.92
+    },
+    {
+      "id": 1539,
+      "FileName": "medical-table05",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the difference between the maximum and minimum capsule size for Vv=0.15? (Accurate to two decimal places)",
+      "Reference": "1.49",
+      "Prediction": "4.70, 1.61",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.95
+    },
+    {
+      "id": 1540,
+      "FileName": "medical-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "At which capsule size does Y reach 0.676589986 for Vv=0.1? (Accurate to two decimal places)",
+      "Reference": "2.50",
+      "Prediction": "2.49",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.64
+    },
+    {
+      "id": 1541,
+      "FileName": "environment-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average time immobile for the Control group treated with Vehicle?",
+      "Reference": "51.20",
+      "Prediction": "51.2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.93
+    },
+    {
+      "id": 1542,
+      "FileName": "environment-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation of latency to immobility for the Stress group treated with Fluoxetine? (Accurate to two decimal places)",
+      "Reference": "47.76",
+      "Prediction": "47.76",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.01
+    },
+    {
+      "id": 1543,
+      "FileName": "environment-table40",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many animals in the FGF2KO Stress group treated with Vehicle have a time immobile greater than 250 seconds?",
+      "Reference": "5",
+      "Prediction": "4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.75
+    },
+    {
+      "id": 1544,
+      "FileName": "environment-table40",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which treatment has a higher average latency to immobility for the Stress group?",
+      "Reference": "Fluoxetine",
+      "Prediction": "Fluoxetine",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.8
+    },
+    {
+      "id": 1545,
+      "FileName": "environment-table40",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Based on the table, draw a linear chart comparing the time immobile of Control group treated with Vehicle with that of Control group treated with Fluoxetine.",
+      "Reference": "[[10.0, 19.0, 20.0, 30.0, 33.0, 37.0, 56.0, 76.0, 111.0, 120.0], [66.0, 85.0, 104.0, 110.0, 133.0, 159.0, 161.0, 166.0, 172.0, 175.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the table\ndata = {\n    'Group': ['Control', 'Control'],\n    'Treatment': ['Vehicle', 'Fluoxetine'],\n    'Time Immobile (s)': [51.2, 133.1]\n}\n\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.bar(df['Treatment'], df['Time Immobile (s)'], color=['blue', 'orange'])\nplt.title('Time Immobile Comparison: Control Group (Vehicle vs Fluoxetine)')\nplt.xlabel('Treatment')\nplt.ylabel('Time Immobile (s)')\nplt.xticks(rotation=45)\nplt.grid(axis='y', linestyle='--', linewidth=0.7, alpha=0.7)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": false
+      },
+      "ProcessingTime": 12.34
+    },
+    {
+      "id": 1546,
+      "FileName": "environment-table41",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average time animals in the Control group spent in the open arms when treated with Vehicle?",
+      "Reference": "109.83",
+      "Prediction": "109.83",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.47
+    }
+  ],
+  "processed_ids": [
+    1537,
+    1538,
+    1539,
+    1540,
+    1541,
+    1542,
+    1543,
+    1544,
+    1545,
+    1546
+  ]
+}

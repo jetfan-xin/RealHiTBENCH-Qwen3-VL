@@ -465,7 +465,14 @@ python merge_shards.py \
     --model_name Qwen3-VL-8B-Instruct \
     --modality image \
     --num_shards 3
-
+---
+# A100 GPU
+python merge_shards_a100.py \
+    --output_dir ../result/qwen3vl_local_a100 \
+    --model_name Qwen3-VL-8B-Instruct \
+    --modality mix \
+    --format latex \
+    --num_shards 4
 # 查看合并结果
 cat ../result/qwen3vl_local/Qwen3-VL-8B-Instruct_image_merged/checkpoint_merged.json | jq '.aggregate_metrics'
 ```

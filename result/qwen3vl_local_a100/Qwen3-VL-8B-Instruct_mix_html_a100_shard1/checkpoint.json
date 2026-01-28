@@ -1,0 +1,340 @@
+{
+  "results": [
+    {
+      "id": 769,
+      "FileName": "economy-table42",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many times did the actual sales exceed the budgeted sales by more than 4 units in the UK?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.91
+    },
+    {
+      "id": 770,
+      "FileName": "economy-table42",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a descriptive summary of the table, including the main columns and key insights such as total sales per country and the differences between actual and budgeted sales?",
+      "Reference": "The table provides sales data for various countries, detailing actual and budgeted sales for different items. It includes columns for the country, item, budgeted sales, actual sales, and the variance between actual and budgeted sales. Notable insights include the USA and UK showing significant differences between actual and budgeted sales for some items, with the USA generally having a mix of both positive and negative variances, while the UK shows a more consistent pattern of actual sales exceeding budgeted sales. The largest variance appears to be in items with over-performance in actual sales, especially in the UK.",
+      "Prediction": "Sales Report, Item, Country, Budget, Actual, Variance, Absolute Variance, France had the largest negative variance (-65) for Pens, Spain had the largest positive variance (38) for Rulers, Germany had the highest budget for Pens (42) and Rulers (2), and the UK had the highest actual sales for Pencils (24)",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.42
+    },
+    {
+      "id": 771,
+      "FileName": "economy-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How many more short sleeves are needed than long sleeves for the \"IMD\" branch?",
+      "Reference": "False",
+      "Prediction": "1, 0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.72
+    },
+    {
+      "id": 772,
+      "FileName": "economy-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of items (both long sleeves and short sleeves) needed across all branches?",
+      "Reference": "43",
+      "Prediction": "43",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.06
+    },
+    {
+      "id": 773,
+      "FileName": "economy-table43",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the difference between the total number of long sleeves owned and the number of long sleeves needed for the \"PSC\" branch?",
+      "Reference": "2",
+      "Prediction": "2, 25",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.24
+    },
+    {
+      "id": 774,
+      "FileName": "economy-table43",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many branches need exactly 2 long sleeves?",
+      "Reference": "2",
+      "Prediction": "DOM, PSC",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.14
+    },
+    {
+      "id": 775,
+      "FileName": "economy-table43",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of short sleeves needed across all branches?",
+      "Reference": "18",
+      "Prediction": "18",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.06
+    },
+    {
+      "id": 776,
+      "FileName": "sport-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "How many times did the predicted winner match the actual winner for the teams in the first 3 rows?",
+      "Reference": "2",
+      "Prediction": "1",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.03
+    },
+    {
+      "id": 777,
+      "FileName": "sport-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "How many matches resulted in a tie according to the actual results column?",
+      "Reference": "5",
+      "Prediction": "6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.0
+    },
+    {
+      "id": 778,
+      "FileName": "sport-table06",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the total number of goals scored by Brazil in the matches listed.",
+      "Reference": "5",
+      "Prediction": "3, 1, 2, 0, 2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.68
+    },
+    {
+      "id": 779,
+      "FileName": "sport-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": " Identify the team with the highest goals scored in a single match and specify the number of goals.",
+      "Reference": "4",
+      "Prediction": "Venezuela, 4",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.13
+    },
+    {
+      "id": 780,
+      "FileName": "sport-table06",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the match results, what trend can be observed in the performance of Mexico across the games?",
+      "Reference": "Increasing trend",
+      "Prediction": "Stable performance, with consistent results in most matches",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.37
+    },
+    {
+      "id": 781,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What was the total planned production for U19.3 and U36 on 2017-01-30?",
+      "Reference": "21.25",
+      "Prediction": "21.25",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.86
+    },
+    {
+      "id": 782,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Based on actual production data, determine whether the actual production total on 2017-02-01 exceeded the planned total for that day.",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.48
+    },
+    {
+      "id": 783,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference between planned and actual production totals for U42 on 2017-02-05.",
+      "Reference": "0.42",
+      "Prediction": "0.58",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.7
+    },
+    {
+      "id": 784,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "On which date was the actual production total for U42 the highest, and what was its value?",
+      "Reference": "2017-02-06, 25.62",
+      "Prediction": "2017/2/6, 25.62",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.28
+    },
+    {
+      "id": 785,
+      "FileName": "manufacture-table08",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a brief summary of the table, highlighting its key columns and any notable trends in the planned and actual production totals.",
+      "Reference": "The table provides data on planned and actual production metrics across different units (U19.30, U36, U42) and their totals over various dates. Key observations include generally lower actual totals compared to planned totals and minor fluctuations in actual values across the recorded period, with U42 showing the highest actual production variability.",
+      "Prediction": "The table records daily planned and actual production (in MBPD) for three units (U19.3, U36, U42) from January 30 to March 30, 2017. Planned production remained constant at 46.25 MBPD until February 23, then decreased to 21.83 MBPD from February 24, and further reduced to 12.83 MBPD from March 5. Actual production fluctuated, starting at 43.63 MBPD, peaking at 46.15 MBPD on February 6, then dropping significantly after February 23, and stabilizing at 36.52 MBPD from March 27. Notable trends include a consistent planned production until mid-March, followed by a sharp decline, while actual production mirrored these changes with some variability.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 12.5
+    },
+    {
+      "id": 786,
+      "FileName": "labor-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total number of calls marked as “Abandon” in the N91 campaign?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.59
+    },
+    {
+      "id": 787,
+      "FileName": "labor-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Is the number of calls marked as “Hangup” greater than the calls marked as “Abandon” for the N91 campaign?",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.38
+    },
+    {
+      "id": 788,
+      "FileName": "labor-table11",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Verify if the total number of calls for all dispositions under the N91 campaign exceeds 200.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.36
+    }
+  ],
+  "processed_ids": [
+    769,
+    770,
+    771,
+    772,
+    773,
+    774,
+    775,
+    776,
+    777,
+    778,
+    779,
+    780,
+    781,
+    782,
+    783,
+    784,
+    785,
+    786,
+    787,
+    788
+  ]
+}
