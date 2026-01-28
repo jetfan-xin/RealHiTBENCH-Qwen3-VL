@@ -2939,9 +2939,1282 @@
         "SacreBLEU": 0.0
       },
       "ProcessingTime": 1.82
+    },
+    {
+      "id": 2495,
+      "FileName": "labor-table49",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What functions are included in Canada according to the table?",
+      "Reference": "Finance, HR, IT, Legal, Sales, Travel",
+      "Prediction": "Finance, HR, IT, Legal, Sales, Travel",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 2.27
+    },
+    {
+      "id": 2496,
+      "FileName": "labor-table49",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total number of employees working in the IT function across all listed countries?",
+      "Reference": "16",
+      "Prediction": "20",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.87
+    },
+    {
+      "id": 2497,
+      "FileName": "labor-table49",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Draw a line chart showing the total number of employees in each country based on the \"Total\" row for each country in the table. Ensure the x-axis represents the countries and the y-axis represents the total employees.",
+      "Reference": "[[20, 17, 15, 7, 19, 7, 12, 22, 20, 11]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the Excel file\ndf = pd.read_excel(\"table.xlsx\")\n\n# Extract country names and their total employees\ncountries = df[df['Country'].isin(['Australia Total', 'Brazil Total', 'Cannada Total', 'China Total', 'Germany Total', 'India Total', 'Russia Total', 'Spain Total', 'UK Total', 'USA Total'])]['Country']\ntotals = df[df['Country'].isin(['Australia Total', 'Brazil Total', 'Cannada Total', 'China Total', 'Germany Total', 'India Total', 'Russia Total', 'Spain Total', 'UK Total', 'USA Total'])]['Total']\n\n# Create a line chart\nplt.figure(figsize=(10, 6))\nplt.plot(countries, totals, marker='o', linestyle='-', color='blue')\nplt.title('Total Number of Employees by Country')\nplt.xlabel('Country')\nplt.ylabel('Total Employees')\nplt.xticks(rotation=45)\nplt.grid(True)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 12.67
+    },
+    {
+      "id": 2498,
+      "FileName": "labor-table50",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For Company 7, evaluate the change in Moody's company rating from 2012 to 2013. Was there an improvement, decline, or no change?",
+      "Reference": "Decline",
+      "Prediction": "Improvement",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 2499,
+      "FileName": "labor-table50",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the company ratings between Fitch and S&P for Company 3 in 2013. Which agency gave a better rating?",
+      "Reference": "S&P",
+      "Prediction": "Fitch, S&P",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.8
+    },
+    {
+      "id": 2500,
+      "FileName": "labor-table50",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Calculate the number of \"NORMAL\" ratings Fitch gave in January across all available years.",
+      "Reference": "1",
+      "Prediction": "3, 2, 1",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.97
+    },
+    {
+      "id": 2501,
+      "FileName": "labor-table50",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many companies received a \"GOOD\" rating from any agency in 2013?",
+      "Reference": "5",
+      "Prediction": "Company 1, Company 2, Company 3, Company 4, Company 5, Company 7, Company 8, Company 9, Company 10",
+      "Metrics": {
+        "F1": 10.53,
+        "EM": 0.0,
+        "ROUGE-L": 10.53,
+        "SacreBLEU": 2.15
+      },
+      "ProcessingTime": 3.43
+    },
+    {
+      "id": 2502,
+      "FileName": "labor-table50",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the ratings for all companies in 2012, including the types of audits and months for which they received each rating?",
+      "Reference": "The table summarizes the ratings and audit details for 2012 across Fitch, S&P, and Moody's. It includes audit types (FULL or SPOT), months (e.g., JANUARY, JULY), and ratings (GOOD, NORMAL, BAD) for 10 companies. Key observations are that most companies received FULL audits, NORMAL ratings were common, and there were significant differences in ratings among agencies.",
+      "Prediction": "Company 1: Fitch (March, Normal), S&P (July, Bad), Moody's (May, Good); Company 2: Fitch (August, Good), S&P (No audit), Moody's (No audit); Company 3: Fitch (February, Normal), S&P (July, Normal), Moody's (No audit); Company 4: Fitch (No audit), S&P (March, Good), Moody's (No audit); Company 5: Fitch (January, Normal), S&P (July, Normal), Moody's (No audit); Company 6: Fitch (June, Bad), S&P (February, Normal), Moody's (No audit); Company 7: Fitch (March, Normal), S&P (July, Good), Moody's (May, Good); Company 8: Fitch (May, Good), S&P (October, Bad), Moody's (No audit); Company 9: Fitch (No audit), S&P (May, Good), Moody's (No audit); Company 10: Fitch (No audit), S&P (February, Normal), Moody's (No audit)",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 13.12
+    },
+    {
+      "id": 2503,
+      "FileName": "labor-table51",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What does the \"Technical Skills\" category include based on the listed items in the table?",
+      "Reference": "Microsoft Access, Microsoft Outlook, Microsoft Excel, Microsoft Word, Microsoft PowerPoint, ARGOS, SQL, Programming (any language), Graphic design, Application development, Typing",
+      "Prediction": "Microsoft Access, Microsoft Outlook, Microsoft Excel, Microsoft Word, Microsoft PowerPoint, ARGOS, SQL, Programming (any language), Graphic design, Application development, Typing",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 3.38
+    },
+    {
+      "id": 2504,
+      "FileName": "labor-table51",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which technical skill under \"Technical Skills\" has the lowest score, and what is that score?",
+      "Reference": "Application development, 0",
+      "Prediction": "Application development, 0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.99
+    },
+    {
+      "id": 2505,
+      "FileName": "labor-table51",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which skill in the Communication Skills category has the second-highest score?",
+      "Reference": "Negotiating",
+      "Prediction": "Conflict Management, Negotiating",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.06
+    },
+    {
+      "id": 2506,
+      "FileName": "labor-table51",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many skills in the FA Specific Skills and Knowledge category have a score of 3?",
+      "Reference": "8",
+      "Prediction": "Multi-tasking, Federal Direct Loans, Federal Plus Loans, Federal Grants, State Grants, SAP, Verification, FAFSA",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.98
+    },
+    {
+      "id": 2507,
+      "FileName": "labor-table51",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the data, highlighting the key sections, their total scores, and any noticeable trends across the categories?",
+      "Reference": "The table presents a skills inventory divided into four sections: \"Technical Skills\" (total score: 21), \"FA Specific Skills and Knowledge\" (total score: 39), \"Communication Skills\" (total score: 21), and \"Coordinating Skills\" (total score: 21). Notable trends include the highest total score being in \"FA Specific Skills and Knowledge,\" indicating strong expertise in financial aid-specific areas, while other sections reflect balanced but slightly lower proficiency. Individual skill scores vary widely, with some skills scoring as low as 0 and others reaching a high of 6.",
+      "Prediction": "Technical Skills, Total: 21; FA Specific Skills and Knowledge, Total: 39; Communication Skills, Total: 21; Coordinating Skills, Total: 21. Noticeable trends: FA Specific Skills and Knowledge has the highest total score (39), indicating strong proficiency in financial aid-related knowledge. Communication and Coordinating Skills have equal totals (21), suggesting balanced competency in these areas. Technical Skills have the lowest total (21), with Application development scoring 0, indicating a potential area for improvement.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.17
+    },
+    {
+      "id": 2508,
+      "FileName": "science-table51",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for the 'base' condition in the 'control' group?",
+      "Reference": "1.56",
+      "Prediction": "1.56",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 2509,
+      "FileName": "science-table51",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which condition shows the highest mean value across all groups? (xxx in xxx)",
+      "Reference": "t-BOOH in control",
+      "Prediction": "t-BOOH, before HD",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2510,
+      "FileName": "science-table51",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation (SD) for the 't-BOOH' condition in the 'before HD' group?",
+      "Reference": "0.14",
+      "Prediction": "0.14",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 2511,
+      "FileName": "science-table51",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which group is the variability (as measured by SD) of the 'base' condition the highest?",
+      "Reference": "after HD",
+      "Prediction": "before HD",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.87
+    },
+    {
+      "id": 2512,
+      "FileName": "science-table51",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'control base' and 'after HD base'?",
+      "Reference": "Positive correlation",
+      "Prediction": "Weak positive correlation, 0.72",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 2513,
+      "FileName": "science-table52",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for the control group under the 'base' condition?",
+      "Reference": "2.30",
+      "Prediction": "2.30",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2514,
+      "FileName": "science-table52",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation for measurements in the '+H2O2' after HD?",
+      "Reference": "2.33",
+      "Prediction": "2.33",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 2515,
+      "FileName": "science-table52",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which treatment shows the highest mean value after HD?",
+      "Reference": "+H2O2",
+      "Prediction": "+H2O2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2516,
+      "FileName": "science-table52",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many measurements were taken for each condition?",
+      "Reference": "9",
+      "Prediction": "9, 9, 9",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 2517,
+      "FileName": "science-table52",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'before HD +H2O2' and 'after HD +H2O2'?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.92",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 2518,
+      "FileName": "science-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the mean value for the 'control' group under the 'base' condition?",
+      "Reference": "0.35",
+      "Prediction": "0.35",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 2519,
+      "FileName": "science-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which treatment shows the highest mean value in the 'after HD' phase?",
+      "Reference": "t-BOOH",
+      "Prediction": "base",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.77
+    },
+    {
+      "id": 2520,
+      "FileName": "science-table53",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "For the 'control' group, what is the difference between the highest and lowest 'base' measurement?",
+      "Reference": "0.049",
+      "Prediction": "0.05",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 2521,
+      "FileName": "science-table53",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which phase does the '+H2O2' treatment show the least variability as indicated by the SD?",
+      "Reference": "before HD",
+      "Prediction": "control, before HD",
+      "Metrics": {
+        "F1": 80.0,
+        "EM": 0.0,
+        "ROUGE-L": 80.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 2522,
+      "FileName": "science-table53",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the main columns of the table, focusing on treatment types and their effects on patient survival rates before and after HD. Highlight any notable trends.",
+      "Reference": "The table provides data on an unspecified metric related to patient outcomes for three treatment types ('base', 't-BOOH', '+H2O2') under control conditions and before and after HD. Notable trends include a consistent increase in the metric for 't-BOOH' from control to after HD, indicating a positive effect of the treatment combined with HD. Conversely, '+H2O2' shows a peak at control, suggesting it may not have a sustained positive impact when combined with HD.",
+      "Prediction": "control, before HD, after HD",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 2523,
+      "FileName": "science-table54",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What percentage does the standard deviation represent of the mean for '+H2O2' in the control group?",
+      "Reference": "10.0%",
+      "Prediction": "10.0",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.95
+    },
+    {
+      "id": 2524,
+      "FileName": "science-table54",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the standard deviation (SD) of 't-BOOH' in the 'after HD' group?",
+      "Reference": "0.31",
+      "Prediction": "0.31",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.93
+    },
+    {
+      "id": 2525,
+      "FileName": "science-table54",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which treatment shows the highest mean value after HD?",
+      "Reference": "base",
+      "Prediction": "base",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.74
+    },
+    {
+      "id": 2526,
+      "FileName": "science-table54",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How much lower is the average 't-BOOH' measurement after HD compared to before HD?",
+      "Reference": "0.9",
+      "Prediction": "0.90",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.94
+    },
+    {
+      "id": 2527,
+      "FileName": "science-table54",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the main columns of the table, focusing on treatment types and their effects on patient survival rates before and after HD. Highlight any notable trends.",
+      "Reference": "The table outlines various treatments including 'base', 't-BOOH', and '+H2O2', detailing their impact on patient survival rates both before and after Hemodialysis (HD). It provides mean values and standard deviations (SD) for each treatment type, indicating variability. Notable trends suggest that 'base' treatment has a relatively stable survival rate, while 't-BOOH' shows a decrease in survival rate after HD, and '+H2O2' also indicates a reduction post-HD. These observations imply that HD may have a differential effect on survival rates depending on the initial treatment type.",
+      "Prediction": "control, before HD, after HD",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 2528,
+      "FileName": "society-table78",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which country has the highest musculoskeletal disorders mortality rate for men?",
+      "Reference": "Republic of Korea",
+      "Prediction": "Republic of Korea",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.43
+    },
+    {
+      "id": 2529,
+      "FileName": "society-table78",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the women to men rate ratio for Japan?",
+      "Reference": "1.59",
+      "Prediction": "1.59",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.52
+    },
+    {
+      "id": 2530,
+      "FileName": "society-table78",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which European country has the lowest musculoskeletal disorders mortality rate for women?",
+      "Reference": "Bulgaria",
+      "Prediction": "Greece",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 2531,
+      "FileName": "society-table78",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which Asian country has the greatest difference in lower bounds between men and women's mortality rates?",
+      "Reference": "Singapore",
+      "Prediction": "Singapore",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 2532,
+      "FileName": "society-table78",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of musculoskeletal disorders mortality rates for men and women?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.92",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.72
+    },
+    {
+      "id": 2533,
+      "FileName": "society-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which country had the highest APC for men in the first trend period?",
+      "Reference": "Northern Ireland",
+      "Prediction": "Hong Kong SAR",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.54
+    },
+    {
+      "id": 2534,
+      "FileName": "society-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the APC change for women in Japan between 1993 and 1997?",
+      "Reference": "0.7",
+      "Prediction": "0.7",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 2535,
+      "FileName": "society-table79",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many countries in Asia had more than two trend periods identified for women?",
+      "Reference": "4",
+      "Prediction": "3",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 2536,
+      "FileName": "society-table79",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For which sex did England & Wales show a higher APC in the last trend period (2002-2011)?",
+      "Reference": "Men",
+      "Prediction": "Men",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 2537,
+      "FileName": "society-table79",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of trends observed in women's APC values over the periods given, highlighting any significant shifts or patterns.",
+      "Reference": "Trends in women's APC values show varied patterns across regions. Many regions experienced initial decreases followed by short-term increases before declining again. Notable is a trend toward generally lower APC values in later periods, indicating slowing rates of mortality change. Specific anomalies include rapid changes in certain Eastern European countries.",
+      "Prediction": "Women's APC values show varied trends across regions and time periods, with notable shifts including significant declines (e.g., -10.3* in Kyrgyzstan 2006-2011, -14.2 in Republic of Korea 2002-2006), sustained declines (e.g., -5.1* in Singapore 1986-2011), and periods of increase (e.g., +28.3* in Republic of Korea 1990-1994, +16.1* in Czech Republic 2004-2011). Patterns include initial declines followed by increases or vice versa, and some regions show consistent declines (e.g., Eastern Europe).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.33
+    },
+    {
+      "id": 2538,
+      "FileName": "society-table80",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which country had the highest percentage change due to population aging?",
+      "Reference": "Republic of Korea",
+      "Prediction": "Japan",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2539,
+      "FileName": "society-table80",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What was the actual change in musculoskeletal disorders deaths in Japan from 1986 to 2011?",
+      "Reference": "2584",
+      "Prediction": "81%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2540,
+      "FileName": "society-table80",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which Asian country did the musculoskeletal disorders deaths increase the most in absolute numbers?",
+      "Reference": "Japan",
+      "Prediction": "Israel",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 2541,
+      "FileName": "society-table80",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many countries in Eastern Europe showed a decrease in musculoskeletal disorders deaths from 1986 to 2011?",
+      "Reference": "5",
+      "Prediction": "Bulgaria, Czech Republic, Hungary, Poland, Republic of Moldova, Romania, Russian Federation, Ukraine",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.97
+    },
+    {
+      "id": 2542,
+      "FileName": "society-table80",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a brief overview of the table, highlighting the main columns related to population changes and any immediate insights regarding trends in musculoskeletal disorder mortality?",
+      "Reference": "The table outlines musculoskeletal disorder mortality across various countries, with main columns covering the number of deaths in 1986 and 2011, actual and percentage changes due to population growth, aging, and epidemiologic factors. Trends suggest a general increase in deaths, correlating with population growth and aging.",
+      "Prediction": "Table 4 presents actual and counterfactual changes in musculoskeletal disorders deaths from 1986 to 2011 across various regions and countries. Key columns include the number of deaths in 1986 and 2011, expected deaths under population growth and aging scenarios, and percentage changes due to population growth, aging, and epidemiologic factors. Immediate insights show that while population growth and aging generally contributed to increased mortality expectations, actual changes often diverged significantly due to epidemiologic shifts, with some countries experiencing substantial declines (e.g., Romania, Ukraine) and others substantial increases (e.g., Greece, Israel).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.49
+    },
+    {
+      "id": 2543,
+      "FileName": "science-table55",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "What is the marker located at the smallest position on Chr.4?",
+      "Reference": "MUSB0264",
+      "Prediction": "MUSB0264",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 2544,
+      "FileName": "science-table55",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many markers show a 'B' allele for MBI9170 on Chr.3?",
+      "Reference": "0",
+      "Prediction": "HAU0195B",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2545,
+      "FileName": "science-table55",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which marker on Chr.3 has an 'H' allele for MBI9476?",
+      "Reference": "HAU1022",
+      "Prediction": "HAU1022",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 2546,
+      "FileName": "science-table55",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many markers are there on Chr.7 with an 'A' allele for MBI9749?",
+      "Reference": "4",
+      "Prediction": "HAU1367, NAU2002, NAU1085, PGML03933",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.28
+    },
+    {
+      "id": 2547,
+      "FileName": "science-table55",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the rows of CGR5056B and MUSB0264?",
+      "Reference": "Positive correlation",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 2548,
+      "FileName": "science-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which chromosome does TMB0119a belong to?",
+      "Reference": "Chr.1",
+      "Prediction": "Chr.1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 2549,
+      "FileName": "science-table56",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many markers are listed under Chr.3?",
+      "Reference": "6",
+      "Prediction": "MUSS424, NAU1190, NAU0856, MUSB0087, NAU2297, HAU0195b",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.99
+    },
+    {
+      "id": 2550,
+      "FileName": "science-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the position of NAU3402 on its chromosome?",
+      "Reference": "205.1179154",
+      "Prediction": "205.1179154",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 2551,
+      "FileName": "science-table56",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which allele type does Gh082 exhibit most frequently across all strains?",
+      "Reference": "A",
+      "Prediction": "A",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 2552,
+      "FileName": "science-table56",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the rows of COT002 and DPL0847?",
+      "Reference": "Positive correlation",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.33
+    },
+    {
+      "id": 2553,
+      "FileName": "environment-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average lead concentration in OORGAUM soil during January to June 2023?",
+      "Reference": "32.15",
+      "Prediction": "32.15",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 2554,
+      "FileName": "environment-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which site had the highest lead concentration in December 2023?",
+      "Reference": "CHAMPION REEFS",
+      "Prediction": "CHAMPION REEFS",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.08
+    },
+    {
+      "id": 2555,
+      "FileName": "environment-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "How much did the lead concentration increase in BALGHAT from March to April 2023?",
+      "Reference": "17",
+      "Prediction": "17",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.04
+    },
+    {
+      "id": 2556,
+      "FileName": "environment-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which site showed the greatest decrease in lead concentration from September to October 2023?",
+      "Reference": "OORGAUM",
+      "Prediction": "CHAMPION REEFS",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.17
+    },
+    {
+      "id": 2557,
+      "FileName": "environment-table45",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of lead concentration in July and August for all sites?",
+      "Reference": "Positive correlation",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 2558,
+      "FileName": "environment-table46",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which location has the highest lead concentration in July 2023?",
+      "Reference": "CHAMPION REEFS",
+      "Prediction": "CHAMPION REEFS",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.19
+    },
+    {
+      "id": 2559,
+      "FileName": "environment-table46",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many times did the lead concentration exceed 0.9 mg/L in CHAMPION REEFS throughout 2023?",
+      "Reference": "1",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.99
+    },
+    {
+      "id": 2560,
+      "FileName": "environment-table46",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which location shows the least variation in lead concentration over the year 2023?",
+      "Reference": "BALGHAT",
+      "Prediction": "BALGHAT",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2561,
+      "FileName": "environment-table46",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average lead concentration in OORGAUM during January and December 2023?",
+      "Reference": "0.277",
+      "Prediction": "0.26, 0.26",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.47
+    },
+    {
+      "id": 2562,
+      "FileName": "environment-table46",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of lead concentration in July and December for TENANTS?",
+      "Reference": "Positive correlation",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 2563,
+      "FileName": "health-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which aspect of patient management showed the most significant change in 'Handling emergency/critical cases'?",
+      "Reference": "Decreased",
+      "Prediction": "Decreased",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 2564,
+      "FileName": "health-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which patient management area had no significant change according to the p-value?",
+      "Reference": "Handling non-complicated cases",
+      "Prediction": "Handling non-complicated cases",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 2565,
+      "FileName": "health-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "For 'Referral/Consultation liaison', what was the least common outcome with the highest severity of violence?",
+      "Reference": "Decreased",
+      "Prediction": "Decreased",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.89
+    },
+    {
+      "id": 2566,
+      "FileName": "health-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In which area did the increase in patient management match across all levels of violence?",
+      "Reference": "Handling emergency/critical cases",
+      "Prediction": "Referral/Consultation liaison",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.08
+    },
+    {
+      "id": 2567,
+      "FileName": "health-table45",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'Severity of Violence' and 'p-value'?",
+      "Reference": "No clear correlation",
+      "Prediction": "No correlation, 0.00",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 2568,
+      "FileName": "science-table57",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average CT value for Experiment 1 of CD40 in Set1? (Accurate to two decimal places)",
+      "Reference": "22.65",
+      "Prediction": "22.65",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 2569,
+      "FileName": "science-table57",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the CT value for b-actin in the second replication of Experiment 1 for Set5 (DC + Runx1 siRNA - LPS)? (Accurate to two decimal places)",
+      "Reference": "15.69",
+      "Prediction": "15.69",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 2570,
+      "FileName": "science-table57",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the maximum CT value observed for CD40 in Experiment 3 across all sets? (Accurate to two decimal places)",
+      "Reference": "23.15",
+      "Prediction": "22.84",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.27
+    },
+    {
+      "id": 2571,
+      "FileName": "science-table57",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which set shows the lowest CT value for b-actin in Experiment 2, and what is that value? (Accurate to two decimal places)",
+      "Reference": "Set1, 15.53",
+      "Prediction": "Set8, 15.59",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.37
+    },
+    {
+      "id": 2572,
+      "FileName": "science-table57",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please draw a line chart to compare the CD values of CD40 in the repli1 and repli2 columns of Expt1.",
+      "Reference": "[[22.7032928467, 18.3755455017, 22.3884754181, 18.0730781555, 22.4286556244, 20.0722255707, 22.2580242157, 20.1774120331, 22.3785133362, 20.5158157349], [22.5872383118, 18.1366615295, 22.1993160248, 17.815120697, 22.1702823639, 20.0523815155, 22.3723106384, 20.1038417816, 22.0580921173, 20.026096344]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n# Load the data from the table\ndata = {\n    'Set': ['Set1', 'Set2', 'Set3', 'Set4', 'Set5', 'Set6', 'Set7', 'Set8', 'Set9', 'Set10'],\n    'CD40_Expt1_repli1': [22.70329285, 18.3755455, 22.38847542, 18.07307816, 22.42865562, 20.07222557, 22.25802422, 20.17741203, 22.37851334, 20.51581573],\n    'CD40_Expt1_repli2': [22.58723831, 18.13666153, 22.19931602, 17.8151207, 22.17028236, 20.05238152, 22.37231064, 20.10384178, 22.05809212, 20.02609634]\n}\ndf = pd.DataFrame(data)\n\n# Plotting\nplt.figure(figsize=(10, 6))\nplt.plot(df['Set'], df['CD40_Expt1_repli1'], marker='o', label='repli1')\nplt.plot(df['Set'], df['CD40_Expt1_repli2'], marker='s', label='repli2')\nplt.title('CD40 CD values in Expt1 (repli1 vs repli2)')\nplt.xlabel('Set')\nplt.ylabel('CD Value')\nplt.legend()\nplt.grid(True)\nplt.xticks(rotation=45)\nplt.tight_layout()\nplt.show()",
+      "Metrics": {
+        "ECR": true,
+        "Pass": true
+      },
+      "ProcessingTime": 25.25
+    },
+    {
+      "id": 2573,
+      "FileName": "science-table58",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average CT value for Experiment 1 of CD40 in Set1? (Accurate to two decimal places)",
+      "Reference": "23.21",
+      "Prediction": "23.21, 23.20",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.8
+    },
+    {
+      "id": 2574,
+      "FileName": "science-table58",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the CT value for b-actin in the second replication of Experiment 1 for Set5? (Accurate to two decimal places)",
+      "Reference": "15.59",
+      "Prediction": "15.59",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
     }
   ],
   "processed_ids": [
+    2560,
+    2561,
+    2562,
+    2563,
+    2564,
+    2565,
+    2566,
+    2567,
+    2568,
+    2569,
+    2570,
+    2571,
+    2572,
+    2573,
+    2574,
     2305,
     2306,
     2307,
@@ -3131,6 +4404,71 @@
     2491,
     2492,
     2493,
-    2494
+    2494,
+    2495,
+    2496,
+    2497,
+    2498,
+    2499,
+    2500,
+    2501,
+    2502,
+    2503,
+    2504,
+    2505,
+    2506,
+    2507,
+    2508,
+    2509,
+    2510,
+    2511,
+    2512,
+    2513,
+    2514,
+    2515,
+    2516,
+    2517,
+    2518,
+    2519,
+    2520,
+    2521,
+    2522,
+    2523,
+    2524,
+    2525,
+    2526,
+    2527,
+    2528,
+    2529,
+    2530,
+    2531,
+    2532,
+    2533,
+    2534,
+    2535,
+    2536,
+    2537,
+    2538,
+    2539,
+    2540,
+    2541,
+    2542,
+    2543,
+    2544,
+    2545,
+    2546,
+    2547,
+    2548,
+    2549,
+    2550,
+    2551,
+    2552,
+    2553,
+    2554,
+    2555,
+    2556,
+    2557,
+    2558,
+    2559
   ]
 }

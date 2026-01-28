@@ -2198,3 +2198,630 @@ Processing Time: 3.38s
 Query ID: 2504 | Type: Fact Checking | SubType: Multi-hop Fact Checking
 ============================================================
   Warning: Large input (11178 tokens) for image (2160, 3132)
+Processing mix modality:  26%|██▌       | 200/767 [10:59<40:50,  4.32s/it]Predictions:  ['application development 0']
+Answer:  ['application development 0']
+Prediction: Application development, 0
+Reference: Application development, 0
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.99s
+Checkpoint saved: 200 queries processed
+
+============================================================
+Query ID: 2505 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (11172 tokens) for image (2160, 3132)
+Processing mix modality:  26%|██▌       | 201/767 [11:01<34:22,  3.64s/it]Predictions:  ['conflict management negotiating']
+Answer:  ['negotiating']
+Prediction: Conflict Management, Negotiating
+Reference: Negotiating
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 2.06s
+
+============================================================
+Query ID: 2506 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (11176 tokens) for image (2160, 3132)
+Processing mix modality:  26%|██▋       | 202/767 [11:04<32:25,  3.44s/it]Predictions:  ['multitasking federal direct loans federal plus loans federal grants state grants sap verification fafsa']
+Answer:  ['8']
+Prediction: Multi-tasking, Federal Direct Loans, Federal Plus Loans, Federal Grants, State Grants, SAP, Verification, FAFSA
+Reference: 8
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.98s
+
+============================================================
+Query ID: 2507 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (11183 tokens) for image (2160, 3132)
+Processing mix modality:  26%|██▋       | 203/767 [11:12<42:52,  4.56s/it]Processing mix modality:  27%|██▋       | 204/767 [11:13<32:41,  3.48s/it]Processing mix modality:  27%|██▋       | 205/767 [11:14<25:50,  2.76s/it]Processing mix modality:  27%|██▋       | 206/767 [11:15<20:47,  2.22s/it]Processing mix modality:  27%|██▋       | 207/767 [11:15<16:57,  1.82s/it]Processing mix modality:  27%|██▋       | 208/767 [11:17<15:19,  1.64s/it]Processing mix modality:  27%|██▋       | 209/767 [11:18<13:27,  1.45s/it]Processing mix modality:  27%|██▋       | 210/767 [11:19<12:04,  1.30s/it]Processing mix modality:  28%|██▊       | 211/767 [11:20<11:22,  1.23s/it]Processing mix modality:  28%|██▊       | 212/767 [11:21<11:01,  1.19s/it]Processing mix modality:  28%|██▊       | 213/767 [11:22<10:55,  1.18s/it]Processing mix modality:  28%|██▊       | 214/767 [11:23<10:20,  1.12s/it]Processing mix modality:  28%|██▊       | 215/767 [11:24<09:22,  1.02s/it]Processing mix modality:  28%|██▊       | 216/767 [11:25<09:13,  1.00s/it]Processing mix modality:  28%|██▊       | 217/767 [11:26<09:02,  1.01it/s]Processing mix modality:  28%|██▊       | 218/767 [11:27<09:00,  1.01it/s]Processing mix modality:  29%|██▊       | 219/767 [11:28<08:53,  1.03it/s]Processing mix modality:  29%|██▊       | 220/767 [11:29<08:46,  1.04it/s]Processing mix modality:  29%|██▉       | 221/767 [11:29<08:08,  1.12it/s]Processing mix modality:  29%|██▉       | 222/767 [11:30<08:15,  1.10it/s]Prediction: Technical Skills, Total: 21; FA Specific Skills and Knowledge, Total: 39; Communication Skills, Total: 21; Coordinating Skills, Total: 21. Noticeable trends: FA Specific Skills and Knowledge has the h...
+Reference: The table presents a skills inventory divided into four sections: "Technical Skills" (total score: 21), "FA Specific Skills and Knowledge" (total score: 39), "Communication Skills" (total score: 21), ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.17s
+
+============================================================
+Query ID: 2508 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['16']
+Answer:  ['16']
+Prediction: 1.56
+Reference: 1.56
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.97s
+
+============================================================
+Query ID: 2509 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['tbooh before hd']
+Answer:  ['tbooh in control']
+Prediction: t-BOOH, before HD
+Reference: t-BOOH in control
+Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 2510 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['01']
+Answer:  ['01']
+Prediction: 0.14
+Reference: 0.14
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.98s
+
+============================================================
+Query ID: 2511 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['before hd']
+Answer:  ['after hd']
+Prediction: before HD
+Reference: after HD
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 0.87s
+
+============================================================
+Query ID: 2512 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['weak positive correlation 07']
+Answer:  ['positive correlation']
+Prediction: Weak positive correlation, 0.72
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 2513 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['23']
+Answer:  ['23']
+Prediction: 2.30
+Reference: 2.30
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.99s
+
+============================================================
+Query ID: 2514 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['23']
+Answer:  ['23']
+Prediction: 2.33
+Reference: 2.33
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+Checkpoint saved: 210 queries processed
+
+============================================================
+Query ID: 2515 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['h2o2']
+Answer:  ['h2o2']
+Prediction: +H2O2
+Reference: +H2O2
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+
+============================================================
+Query ID: 2516 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['9 9 9']
+Answer:  ['9']
+Prediction: 9, 9, 9
+Reference: 9
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2517 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 09']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 0.92
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 2518 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['03']
+Answer:  ['03']
+Prediction: 0.35
+Reference: 0.35
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.98s
+
+============================================================
+Query ID: 2519 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['base']
+Answer:  ['tbooh']
+Prediction: base
+Reference: t-BOOH
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.77s
+
+============================================================
+Query ID: 2520 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['01']
+Answer:  ['00']
+Prediction: 0.05
+Reference: 0.049
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.97s
+
+============================================================
+Query ID: 2521 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['control before hd']
+Answer:  ['before hd']
+Prediction: control, before HD
+Reference: before HD
+Metrics: {'F1': 80.0, 'EM': 0.0, 'ROUGE-L': 80.0, 'SacreBLEU': 0.0}
+Processing Time: 0.94s
+
+============================================================
+Query ID: 2522 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: control, before HD, after HD
+Reference: The table provides data on an unspecified metric related to patient outcomes for three treatment types ('base', 't-BOOH', '+H2O2') under control conditions and before and after HD. Notable trends incl...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 0.98s
+
+============================================================
+Query ID: 2523 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['100']
+Answer:  ['100']
+Prediction: 10.0
+Reference: 10.0%
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.95s
+
+============================================================
+Query ID: 2524 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['03']
+Answer:  ['03']
+Prediction: 0.31
+Reference: 0.31
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.93s
+Checkpoint saved: 220 queries processed
+
+============================================================
+Query ID: 2525 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['base']
+Answer:  ['base']
+Prediction: base
+Reference: base
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.74s
+
+============================================================
+Query ID: 2526 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['09']
+Answer:  ['09']
+Prediction: 0.90
+Reference: 0.9
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.94s
+
+============================================================
+Query ID: 2527 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: control, before HD, after HD
+Processing mix modality:  29%|██▉       | 223/767 [11:31<08:13,  1.10it/s]Processing mix modality:  29%|██▉       | 224/767 [11:33<09:37,  1.06s/it]Processing mix modality:  29%|██▉       | 225/767 [11:34<10:50,  1.20s/it]Processing mix modality:  29%|██▉       | 226/767 [11:35<11:09,  1.24s/it]Processing mix modality:  30%|██▉       | 227/767 [11:37<11:23,  1.27s/it]Processing mix modality:  30%|██▉       | 228/767 [11:38<12:35,  1.40s/it]Processing mix modality:  30%|██▉       | 229/767 [11:40<12:56,  1.44s/it]Processing mix modality:  30%|██▉       | 230/767 [11:42<13:21,  1.49s/it]Processing mix modality:  30%|███       | 231/767 [11:43<13:19,  1.49s/it]Processing mix modality:  30%|███       | 232/767 [11:45<13:17,  1.49s/it]Processing mix modality:  30%|███       | 233/767 [11:54<34:11,  3.84s/it]Processing mix modality:  31%|███       | 234/767 [11:55<26:39,  3.00s/it]Processing mix modality:  31%|███       | 235/767 [11:56<21:49,  2.46s/it]Processing mix modality:  31%|███       | 236/767 [11:57<18:05,  2.04s/it]Processing mix modality:  31%|███       | 237/767 [11:59<17:51,  2.02s/it]Processing mix modality:  31%|███       | 238/767 [12:07<32:16,  3.66s/it]Processing mix modality:  31%|███       | 239/767 [12:08<25:31,  2.90s/it]Processing mix modality:  31%|███▏      | 240/767 [12:09<21:01,  2.39s/it]Processing mix modality:  31%|███▏      | 241/767 [12:10<17:39,  2.01s/it]Reference: The table outlines various treatments including 'base', 't-BOOH', and '+H2O2', detailing their impact on patient survival rates both before and after Hemodialysis (HD). It provides mean values and sta...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 0.90s
+
+============================================================
+Query ID: 2528 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['republic of korea']
+Answer:  ['republic of korea']
+Prediction: Republic of Korea
+Reference: Republic of Korea
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.43s
+
+============================================================
+Query ID: 2529 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['16']
+Answer:  ['16']
+Prediction: 1.59
+Reference: 1.59
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.52s
+
+============================================================
+Query ID: 2530 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['greece']
+Answer:  ['bulgaria']
+Prediction: Greece
+Reference: Bulgaria
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2531 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['singapore']
+Answer:  ['singapore']
+Prediction: Singapore
+Reference: Singapore
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2532 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 09']
+Answer:  ['positive correlation']
+Prediction: Strong positive correlation, 0.92
+Reference: Positive correlation
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.72s
+
+============================================================
+Query ID: 2533 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['hong kong sar']
+Answer:  ['northern ireland']
+Prediction: Hong Kong SAR
+Reference: Northern Ireland
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 2534 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['07']
+Answer:  ['07']
+Prediction: 0.7
+Reference: 0.7
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.60s
+Checkpoint saved: 230 queries processed
+
+============================================================
+Query ID: 2535 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['3']
+Answer:  ['4']
+Prediction: 3
+Reference: 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 2536 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['men']
+Answer:  ['men']
+Prediction: Men
+Reference: Men
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 2537 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Women's APC values show varied trends across regions and time periods, with notable shifts including significant declines (e.g., -10.3* in Kyrgyzstan 2006-2011, -14.2 in Republic of Korea 2002-2006), ...
+Reference: Trends in women's APC values show varied patterns across regions. Many regions experienced initial decreases followed by short-term increases before declining again. Notable is a trend toward generall...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.33s
+
+============================================================
+Query ID: 2538 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['japan']
+Answer:  ['republic of korea']
+Prediction: Japan
+Reference: Republic of Korea
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2539 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['81']
+Answer:  ['2584']
+Prediction: 81%
+Reference: 2584
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 2540 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['israel']
+Answer:  ['japan']
+Prediction: Israel
+Reference: Japan
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.07s
+
+============================================================
+Query ID: 2541 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['bulgaria czech republic hungary poland republic of moldova romania russian federation ukraine']
+Answer:  ['5']
+Prediction: Bulgaria, Czech Republic, Hungary, Poland, Republic of Moldova, Romania, Russian Federation, Ukraine
+Reference: 5
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.97s
+
+============================================================
+Query ID: 2542 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Table 4 presents actual and counterfactual changes in musculoskeletal disorders deaths from 1986 to 2011 across various regions and countries. Key columns include the number of deaths in 1986 and 2011...
+Reference: The table outlines musculoskeletal disorder mortality across various countries, with main columns covering the number of deaths in 1986 and 2011, actual and percentage changes due to population growth...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.49s
+
+============================================================
+Query ID: 2543 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['musb0264']
+Answer:  ['musb0264']
+Prediction: MUSB0264
+Reference: MUSB0264
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 2544 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['hau0195b']
+Answer:  ['0']
+Prediction: HAU0195B
+Reference: 0
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+Checkpoint saved: 240 queries processed
+
+============================================================
+Query ID: 2545 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['hau1022']
+Answer:  ['hau1022']
+Prediction: HAU1022
+Reference: HAU1022
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 2546 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['hau1367 nau2002 nau1085 pgml03933']
+Answer:  ['4']Processing mix modality:  32%|███▏      | 242/767 [12:12<18:18,  2.09s/it]Processing mix modality:  32%|███▏      | 243/767 [12:14<16:03,  1.84s/it]Processing mix modality:  32%|███▏      | 244/767 [12:15<14:06,  1.62s/it]Processing mix modality:  32%|███▏      | 245/767 [12:18<17:40,  2.03s/it]Processing mix modality:  32%|███▏      | 246/767 [12:19<16:15,  1.87s/it]Processing mix modality:  32%|███▏      | 247/767 [12:20<13:51,  1.60s/it]Processing mix modality:  32%|███▏      | 248/767 [12:22<13:08,  1.52s/it]Processing mix modality:  32%|███▏      | 249/767 [12:23<12:03,  1.40s/it]Processing mix modality:  33%|███▎      | 250/767 [12:24<11:14,  1.30s/it]Processing mix modality:  33%|███▎      | 251/767 [12:25<10:32,  1.23s/it]Processing mix modality:  33%|███▎      | 252/767 [12:26<10:23,  1.21s/it]Processing mix modality:  33%|███▎      | 253/767 [12:27<10:21,  1.21s/it]Processing mix modality:  33%|███▎      | 254/767 [12:28<10:16,  1.20s/it]Processing mix modality:  33%|███▎      | 255/767 [12:29<09:43,  1.14s/it]Processing mix modality:  33%|███▎      | 256/767 [12:30<09:28,  1.11s/it]Processing mix modality:  34%|███▎      | 257/767 [12:32<10:21,  1.22s/it]Processing mix modality:  34%|███▎      | 258/767 [12:33<10:35,  1.25s/it]Processing mix modality:  34%|███▍      | 259/767 [12:34<09:43,  1.15s/it]Processing mix modality:  34%|███▍      | 260/767 [12:35<09:28,  1.12s/it]Processing mix modality:  34%|███▍      | 261/767 [12:36<08:51,  1.05s/it]Processing mix modality:  34%|███▍      | 262/767 [12:37<08:55,  1.06s/it]
+Prediction: HAU1367, NAU2002, NAU1085, PGML03933
+Reference: 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.28s
+
+============================================================
+Query ID: 2547 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['no correlation 00']
+Answer:  ['positive correlation']
+Prediction: No correlation, 0.00
+Reference: Positive correlation
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 0.0}
+Processing Time: 1.25s
+
+============================================================
+Query ID: 2548 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['chr1']
+Answer:  ['chr1']
+Prediction: Chr.1
+Reference: Chr.1
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2549 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['muss424 nau1190 nau0856 musb0087 nau2297 hau0195b']
+Answer:  ['6']
+Prediction: MUSS424, NAU1190, NAU0856, MUSB0087, NAU2297, HAU0195b
+Reference: 6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.99s
+
+============================================================
+Query ID: 2550 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['2051']
+Answer:  ['2051']
+Prediction: 205.1179154
+Reference: 205.1179154
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 2551 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['#']
+Answer:  ['']
+Prediction: A
+Reference: A
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+
+============================================================
+Query ID: 2552 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['no correlation 00']
+Answer:  ['positive correlation']
+Prediction: No correlation, 0.00
+Reference: Positive correlation
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 0.0}
+Processing Time: 1.33s
+
+============================================================
+Query ID: 2553 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['321']
+Answer:  ['321']
+Prediction: 32.15
+Reference: 32.15
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 2554 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['champion reefs']
+Answer:  ['champion reefs']
+Prediction: CHAMPION REEFS
+Reference: CHAMPION REEFS
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+Checkpoint saved: 250 queries processed
+
+============================================================
+Query ID: 2555 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['17']
+Answer:  ['17']
+Prediction: 17
+Reference: 17
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 2556 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['champion reefs']
+Answer:  ['oorgaum']
+Prediction: CHAMPION REEFS
+Reference: OORGAUM
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.17s
+
+============================================================
+Query ID: 2557 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['no correlation 00']
+Answer:  ['positive correlation']
+Prediction: No correlation, 0.00
+Reference: Positive correlation
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 2558 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['champion reefs']
+Answer:  ['champion reefs']
+Prediction: CHAMPION REEFS
+Reference: CHAMPION REEFS
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.19s
+
+============================================================
+Query ID: 2559 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['2']
+Answer:  ['1']
+Prediction: 2
+Reference: 1
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.99s
+
+============================================================
+Query ID: 2560 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['balghat']
+Answer:  ['balghat']
+Prediction: BALGHAT
+Reference: BALGHAT
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+
+============================================================
+Query ID: 2561 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['03 03']
+Answer:  ['03']
+Prediction: 0.26, 0.26
+Reference: 0.277
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.47s
+
+============================================================
+Query ID: 2562 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['no correlation 00']
+Answer:  ['positive correlation']
+Prediction: No correlation, 0.00
+Reference: Positive correlation
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 2563 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['decreased']
+Answer:  ['decreased']
+Prediction: Decreased
+Reference: Decreased
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 2564 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['handling noncomplicated cases']
+Answer:  ['handling noncomplicated cases']
+Prediction: Handling non-complicated cases
+Reference: Handling non-complicated cases
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+Checkpoint saved: 260 queries processed
+
+============================================================
+Query ID: 2565 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['decreased']
+Answer:  ['decreased']
+Prediction: Decreased
+Reference: Decreased
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.89s
+
+============================================================
+Query ID: 2566 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['referralconsultation liaison']
+Answer:  ['handling emergencycritical cases']
+Prediction: Referral/Consultation liaison
+Reference: Handling emergency/critical cases
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.08s
+Processing mix modality:  34%|███▍      | 263/767 [12:38<09:15,  1.10s/it]Processing mix modality:  34%|███▍      | 264/767 [12:40<09:32,  1.14s/it]Processing mix modality:  35%|███▍      | 265/767 [12:41<09:42,  1.16s/it]Processing mix modality:  35%|███▍      | 266/767 [12:42<09:58,  1.19s/it]Processing mix modality:  35%|███▍      | 267/767 [12:43<10:23,  1.25s/it]Processing mix modality:  35%|███▍      | 268/767 [13:09<1:10:15,  8.45s/it]Processing mix modality:  35%|███▌      | 269/767 [13:10<53:34,  6.45s/it]  Processing mix modality:  35%|███▌      | 270/767 [13:12<40:25,  4.88s/it]Processing mix modality:  35%|███▌      | 271/767 [13:13<31:14,  3.78s/it]Processing mix modality:  35%|███▌      | 272/767 [13:14<25:13,  3.06s/it]

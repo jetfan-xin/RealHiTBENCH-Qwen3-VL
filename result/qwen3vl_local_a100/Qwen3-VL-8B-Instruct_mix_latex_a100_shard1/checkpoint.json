@@ -3408,9 +3408,794 @@
         "GPT_EVAL": "N/A (no eval_api_key)"
       },
       "ProcessingTime": 16.0
+    },
+    {
+      "id": 989,
+      "FileName": "labor-table28",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What types of transactions are available under the ATT carrier?",
+      "Reference": "NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE",
+      "Prediction": "NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.4
+    },
+    {
+      "id": 990,
+      "FileName": "labor-table28",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of transactions for all types combined under the VZW carrier?",
+      "Reference": "7369",
+      "Prediction": "1804, 450, 1946, 3169",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.67
+    },
+    {
+      "id": 991,
+      "FileName": "labor-table28",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which carrier has the longest average time for “NEW ACTIVATION” transactions, and what is that time?",
+      "Reference": "SPR, 20.60",
+      "Prediction": "SPR, 20.60",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 992,
+      "FileName": "labor-table28",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the combined average time for “ADD A LINE” across all carriers.",
+      "Reference": "14.35",
+      "Prediction": "11.52, 11.52",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.24
+    },
+    {
+      "id": 993,
+      "FileName": "labor-table28",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, including a description of the main columns and notable trends in transaction counts or times?",
+      "Reference": "The table presents transaction data for various carriers (ATT, SPR, VZW, and MTP), detailing transaction types, average times, and total transaction counts. Key trends include VZW leading in total transactions across most types, SPR having the longest average time for “NEW ACTIVATION,” and relatively low transaction counts and times for MTP.",
+      "Prediction": "The table summarizes transaction data across four carriers (ATT, SPR, VZW, MTP) categorized by types (NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE), showing average time spent and total transaction counts. ATT has the highest total transactions (1048+396+560+1330=3334), followed by VZW (1804+450+1946+3169=7369) and SPR (1127+146+100+1582=1955). MTP has the lowest with only 25 transactions. VZW also has the highest average time for NEW ACTIVATION (18.33) and UPGRADE (13.37), while MTP has zero transactions for UPGRADE.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.82
+    },
+    {
+      "id": 994,
+      "FileName": "labor-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "For “HARDWARE SWAP,” which carrier has the highest total transactions, and what is the corresponding total?",
+      "Reference": "DNAGO, 10048",
+      "Prediction": "DNAGO, 10048",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.38
+    },
+    {
+      "id": 995,
+      "FileName": "labor-table29",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "If you combine the total transactions for “UPGRADE” and “ADD A LINE” under MILANI, what is the combined total?",
+      "Reference": "24789",
+      "Prediction": "19824, 4965",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.52
+    },
+    {
+      "id": 996,
+      "FileName": "labor-table29",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many carriers recorded transaction data for “HARDWARE SWAP”?",
+      "Reference": "6",
+      "Prediction": "SPRESS, DNAGO, MILANI, BELANI, MERILI, PITALI",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.82
+    },
+    {
+      "id": 997,
+      "FileName": "labor-table29",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Which carrier has the highest total transactions for “NEW ACTIVATION,” and what is the corresponding total?",
+      "Reference": "MILANI, 2879",
+      "Prediction": "SPRESS, 2079",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 998,
+      "FileName": "labor-table29",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, describing the main columns and highlighting notable trends or patterns in transaction types and times?",
+      "Reference": "The table presents transaction data for various carriers, detailing transaction types, average times, and total transactions. Key patterns include “UPGRADE” having consistently high totals across carriers, while “PLAN CHANGE” tends to have lower totals and shorter average times. Notable carriers like MILANI and DNAGO dominate in high transaction counts for most categories.",
+      "Prediction": "The table details transaction types (HARDWARE SWAP, NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE) for various carriers (SPRESS, DNAGO, MILANI, DRUIPE, BELANI, MERILI, PITALI, CATI, MAXX, TMPO, ERGO, TRN, PETRO, MANIA) with corresponding time durations and totals. Notable trends include MILANI having the highest total (19824) and SPRESS having the highest time (15.5 for NEW ACTIVATION). Many carriers have incomplete data (empty cells) for time or total, and some carriers (like DRUIPE, CATI, TRN) have no totals or times recorded.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.39
+    },
+    {
+      "id": 999,
+      "FileName": "economy-table69",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the revenue for “Big Joe” in May.",
+      "Reference": "2622764.25",
+      "Prediction": "2622764.25",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.49
+    },
+    {
+      "id": 1000,
+      "FileName": "economy-table69",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "List all accounts that showed a revenue incline across all three months (April, May, and June), and provide their respective total revenues for June.",
+      "Reference": "Francois Chevalier, 860720.32; Global Bob, 1038881.22",
+      "Prediction": "Big Joe, Maria Calux, Giorgio Armani, Francois Chevalier, Global Bob, Vincenzo Fertino, Bob Bobitt, Ken Cascaval, Giuseppe Von Firenze",
+      "Metrics": {
+        "F1": 32.0,
+        "EM": 0.0,
+        "ROUGE-L": 32.0,
+        "SacreBLEU": 5.73
+      },
+      "ProcessingTime": 2.94
+    },
+    {
+      "id": 1001,
+      "FileName": "economy-table69",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many accounts experienced an “Incline” in revenue for both April and May?",
+      "Reference": "3",
+      "Prediction": "Big Joe, Maria Calux, Giorgio Armani, Francois Chevalier, Mia Martina, Tia Carrera, Feliciano Di Venturi, Global Bob, Vincenzo Fertino, Bob Bobitt, Ken Cascaval, Billy Joe, Giuseppe Von Firenze",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.88
+    },
+    {
+      "id": 1002,
+      "FileName": "economy-table69",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the revenues of “Big Joe” and “Maria Calux” in April. Who generated more revenue, and by how much?",
+      "Reference": "Big Joe, 1872830.25",
+      "Prediction": "Maria Calux, 100000.75",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.62
+    },
+    {
+      "id": 1003,
+      "FileName": "economy-table69",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a summary of the table, including the main columns and any notable patterns in revenue trends across accounts?",
+      "Reference": "The table provides revenue data for various accounts, including monthly revenues for April, May, and June, with corresponding trends (Incline or Decline). Key observations include consistent revenue inclines for accounts like Francois Chevalier and Global Bob across all months, while accounts such as Big Joe and Maria Calux exhibit mixed trends. Anomalies include missing data or abrupt changes in revenue for certain accounts.",
+      "Prediction": "ACCOUNT #, FULL NAME, Revenue APR, Revenue MAY, Revenue JUN, Notable patterns include varying revenue trends across months with some accounts showing consistent incline or decline patterns, and others showing mixed trends.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 2.87
+    },
+    {
+      "id": 1004,
+      "FileName": "sport-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Which home team ranked below 20 is competing in the ARGENTINA>SUPERLIGA ARGENTINA league against a team ranked higher than 10?",
+      "Reference": "ARGENTINOS JRS",
+      "Prediction": "ARGENTINOS JRS, BOCA JUNIORS",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 2.28
+    },
+    {
+      "id": 1005,
+      "FileName": "sport-table09",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "In BELARUS>DIVISION 1, is there any match where the sum of home and away team ranks is less than 10? If yes, name the teams.",
+      "Reference": "FC SLUTSK, SHAKHTER SOLIGORSK, DINAMO MINSK, BATE BORISOV",
+      "Prediction": "DINAMO MINSK, BATE BORISOV",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 36.79
+      },
+      "ProcessingTime": 2.11
+    },
+    {
+      "id": 1006,
+      "FileName": "sport-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "In which league does the match with the largest difference between home and away team ranks occur, and what is the rank difference?",
+      "Reference": "ARGENTINA>SUPERLIGA ARGENTINA, 23",
+      "Prediction": "ARGENTINA>SUPERLIGA ARGENTINA, 13",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.2
+    },
+    {
+      "id": 1007,
+      "FileName": "sport-table09",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare matches in ARGENTINA>SUPERLIGA ARGENTINA and AUSTRIA>BUNDESLIGA leagues to determine which league has more matches involving top-10 ranked teams.",
+      "Reference": "Equal, 2 matches each",
+      "Prediction": "ARGENTINA>SUPERLIGA ARGENTINA, AUSTRIA>BUNDESLIGA",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.5
+    },
+    {
+      "id": 1008,
+      "FileName": "sport-table09",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, highlighting its structure, the main columns, and any noticeable trends in team rankings or match timings.",
+      "Reference": "The table details football match schedules across multiple leagues, with columns for league names, match times, dates, home teams, away teams, and their respective ranks. Key trends include higher-ranked teams often being paired against lower-ranked opponents, and match timings vary significantly by league, with some leagues favoring early starts.",
+      "Prediction": "The table lists soccer matches across various leagues on 01/10/2017, detailing league, game time, date, home team, home position, away team, and away position. It includes leagues from Argentina, Austria, Belarus, Belgium, Brazil, Colombia, Denmark, England, Finland, France, Germany, Greece, Italy, Japan, Netherlands, Norway, Peru, Poland, Portugal, South Korea, Spain, Sweden, Switzerland, Turkey, and USA. Match timings span from 00:30 to 23:00, with most games occurring between 15:00 and 21:00. Team positions vary widely, indicating competitive standings, with some teams ranked as high as 1 (e.g., Napoli, Barcelona) and others as low as 24 (e.g., Chacarita Juniors). Notable trends include high-profile matches in top leagues like Serie A and Premier League, and a concentration of games in the afternoon and early evening.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 11.63
+    },
+    {
+      "id": 1009,
+      "FileName": "economy-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the average purchase cost of items in batch B-2 sold by Bob?",
+      "Reference": "15066.67",
+      "Prediction": "11275.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 1010,
+      "FileName": "economy-table71",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Which batch sold by Bob yielded the highest gain, and what was the gain amount?",
+      "Reference": "B-2, 73,228.80",
+      "Prediction": "B-2, 73228.80",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.3
+    },
+    {
+      "id": 1011,
+      "FileName": "economy-table71",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many transactions had a gain exceeding 50,000, and which seller completed the most such transactions?",
+      "Reference": "5, Bob",
+      "Prediction": "4, BOB",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 1012,
+      "FileName": "economy-table71",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average time interval, in days, between purchase date and sale date for Carol's transactions?",
+      "Reference": "383.33",
+      "Prediction": "365.00, 365.00, 365.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 1013,
+      "FileName": "economy-table71",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a descriptive summary of the table, including the key columns and any notable trends observed in purchase costs and sales values.",
+      "Reference": "The table details transactions involving various sellers, specifying purchase dates, costs, sales dates, values, and gains for different batches. Notable trends include consistently higher sales values than purchase costs, indicating positive gains across transactions. Larger quantities and older purchase dates generally correspond to higher gains.",
+      "Prediction": "The table details inventory transactions for two entities, BOB and Carol, showing quantities, batches, purchase dates, purchase costs, sale dates, sale values, and gains. Key columns include Name, Qty, Batch, Pur.Date, Purch.Cost, Sale Date, Sale Value, and Gain. Notable trends include consistently higher sale values compared to purchase costs, indicating profitable transactions. BOB's transactions show a significant gain from the sale of B-2 batch items, while Carol's transactions also show substantial gains, particularly from the sale of B-1 batch items. The table highlights the effectiveness of inventory management and pricing strategies in generating profit.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.87
+    },
+    {
+      "id": 1014,
+      "FileName": "economy-table72",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Identify the total revenue generated in Frankston by all team members combined for Weeks 1 and 3.",
+      "Reference": "36000",
+      "Prediction": "33000, 18000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 1015,
+      "FileName": "economy-table72",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Did any team member work on the same task in both Week 2 and Week 4, and if so, who?",
+      "Reference": "Bob, John",
+      "Prediction": "Bob, Holligan, Myrtleford",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 1016,
+      "FileName": "economy-table72",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the weeks by the total revenue generated, from highest to lowest.",
+      "Reference": "Week 1, Week 2, Week 4, Week 3, Week 5, Week 6",
+      "Prediction": "Week 1, Week 4, Week 2, Week 3, Week 5",
+      "Metrics": {
+        "F1": 90.91,
+        "EM": 0.0,
+        "ROUGE-L": 72.73,
+        "SacreBLEU": 44.75
+      },
+      "ProcessingTime": 1.75
+    },
+    {
+      "id": 1017,
+      "FileName": "economy-table72",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "Count the number of team members who worked on Frankston tasks across all weeks.",
+      "Reference": "2",
+      "Prediction": "Bill, Bob, John",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 1018,
+      "FileName": "economy-table72",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the table by describing the main columns, key entities, and notable trends in revenue across weeks.",
+      "Reference": "The table outlines a planned production schedule detailing weekly tasks, team members, locations, and revenue. Notable trends include Week 1's highest revenue ($33,000) and a decreasing revenue trend across subsequent weeks, with a significant drop in Week 6 ($0).",
+      "Prediction": "Planned production schedule for construction teams Bill, Bob, and John across Weeks 1 to 6, detailing projects, locations, sale months, and revenue; notable trends include peak revenue of $33,000 in Week 1, a drop to $18,000 in Week 3, and a recovery to $22,900 in Week 4, with Week 6 showing no planned revenue.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.03
+    },
+    {
+      "id": 1019,
+      "FileName": "labor-table31",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total value of cases reviewed on March 3 and March 16 combined?",
+      "Reference": "51255000",
+      "Prediction": "47550000, 23825000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.26
+    },
+    {
+      "id": 1020,
+      "FileName": "labor-table31",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the dates in March when the number of Hunter Checks exceeded 70.",
+      "Reference": "2017/3/6, 2017/3/17, 2017/3/21, 2017/3/22, 2017/3/23, 2017/3/24, 2017/3/25, 2017/3/26, 2017/3/27, 2017/3/28, 2017/3/29, 2017/3/30, 2017/3/31",
+      "Prediction": "2017/3/17, 2017/3/18, 2017/3/19, 2017/3/20, 2017/3/21, 2017/3/22, 2017/3/23, 2017/3/24, 2017/3/25, 2017/3/26, 2017/3/27, 2017/3/28, 2017/3/29, 2017/3/30, 2017/3/31",
+      "Metrics": {
+        "F1": 85.71,
+        "EM": 0.0,
+        "ROUGE-L": 85.71,
+        "SacreBLEU": 71.66
+      },
+      "ProcessingTime": 9.39
+    },
+    {
+      "id": 1021,
+      "FileName": "labor-table31",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the number of cases reviewed on March 10 and March 17. Which day had a higher count, and by how much?",
+      "Reference": "March 17, 10",
+      "Prediction": "March 17, 100000",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.92
+    },
+    {
+      "id": 1022,
+      "FileName": "labor-table31",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the average value of cases pending with CA over the first week of March.",
+      "Reference": "1191428.57",
+      "Prediction": "1280000, 1360000, 1210000, 250000, 250000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.39
+    },
+    {
+      "id": 1023,
+      "FileName": "labor-table31",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, including the key columns, their significance, and any observable trends in case numbers or values.",
+      "Reference": "The table tracks daily metrics for RCU MIS - March, including cases received, reviewed, pending, and flagged, along with quality assurance checks. Key trends show mid-March activity peaks, declining pending cases, consistent Hunter Checks, and occasional anomalies in flagged cases.",
+      "Prediction": "RCU MIS - March: The table tracks daily metrics for case management from March 1 to March 31, 2017, including Total Cases Received, Total Cases Reviewed, Cases Pending, Cases Pending with CA, Hunter Check, Red Flag, and Cases Rejected. Key trends show consistent high volumes of cases received and reviewed, with \"Cases Pending with CA\" and \"Hunter Check\" remaining stable or increasing over time. \"Red Flag\" cases show minor fluctuations, while \"Cases Rejected\" remain low and mostly stable. Overall, the system handles a substantial volume of cases daily, with slight variations in pending and rejected cases.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.65
+    },
+    {
+      "id": 1024,
+      "FileName": "labor-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "On March 1, which user covered the longest distance in a single trip, and how far did they travel?",
+      "Reference": "MAX, 2.10",
+      "Prediction": "MAX, 2.1",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 1025,
+      "FileName": "labor-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the departure and arrival times for Adam's trips on March 4. What was the shortest trip duration, and which trip does it correspond to?",
+      "Reference": "8:05, Trip1",
+      "Prediction": "7:54:34, 8:02:39",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 1026,
+      "FileName": "labor-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique users took trips on March 4, and who are they?",
+      "Reference": "4, ADAM, MAX, SAMRT, LUCAS.",
+      "Prediction": "ADAM, MAX, SAMRT, LUCAS",
+      "Metrics": {
+        "F1": 88.89,
+        "EM": 0.0,
+        "ROUGE-L": 88.89,
+        "SacreBLEU": 77.88
+      },
+      "ProcessingTime": 1.31
+    },
+    {
+      "id": 1027,
+      "FileName": "labor-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Based on the trip data for March 4, calculate the average distance traveled per trip by all users combined.",
+      "Reference": "9.50",
+      "Prediction": "8.45",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.01
+    },
+    {
+      "id": 1028,
+      "FileName": "labor-table32",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the key trends in trip durations for each user, highlighting the longest and shortest trips and any notable patterns?",
+      "Reference": "The table summarizes trip durations for users like OLIVER, SAMRT, MAX, ADAM, LUCAS, and LEWIS. OLIVER had the shortest trip at 3 minutes and 21 seconds, while LEWIS had the longest trip at 30 minutes. Notable patterns include shorter trips for OLIVER and SAMRT and longer trips for LEWIS and ADAM, indicating potential differences in trip purposes or destinations among users.",
+      "Prediction": "OLIVER had the shortest trip at 3 minutes and 21 seconds, SAMRT had a trip of 2 minutes and 44 seconds, MAX had the longest trip at 2 hours and 25 minutes, LUCAS had trips of 49 minutes and 43 seconds, ADAM had trips of 48 minutes and 5 seconds, and LEWIS had trips of 30 minutes and 4 seconds and 6 minutes and 36 seconds. Notable patterns include MAX consistently having the longest trips, while OLIVER and SAMRT had the shortest trips.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.64
+    },
+    {
+      "id": 1029,
+      "FileName": "health-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total calorie count for all items listed as “Food” during the “Evening” time period on Tue, Jan 03?",
+      "Reference": "250",
+      "Prediction": "260",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.89
+    },
+    {
+      "id": 1030,
+      "FileName": "health-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the food item with the highest protein content served during the “Afternoon” time period across all days.",
+      "Reference": "Roast Beef",
+      "Prediction": "Roast Beef",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.84
+    },
+    {
+      "id": 1031,
+      "FileName": "health-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many activities on Tue, Jan 03, involved a time duration of more than 20 minutes?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.79
+    },
+    {
+      "id": 1032,
+      "FileName": "health-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the days in descending order based on the total number of miles recorded across all activities.",
+      "Reference": "Wed, Jan 04, Tue, Jan 03, Mon, Jan 02",
+      "Prediction": "Wed, Jan 04, Tue, Jan 03, Mon, Jan 02",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 2.67
+    },
+    {
+      "id": 1033,
+      "FileName": "health-table12",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the key information from the table, including the main categories (e.g., Food, Activity), the metrics tracked (e.g., Calories, Miles), and any basic trends observed.",
+      "Reference": "The table records daily food consumption and physical activities, categorizing entries into Food and Activity. Key metrics include servings, calories (KCAL), macronutrient content (FAT, CARB, PROT), activity duration (MIN), and distance (MILES). Notable trends include higher calorie intake during the evening and limited high-mileage activities, primarily running.",
+      "Prediction": "Daily Tracker for Mon, Jan 02 to Wed, Jan 04, tracking Food (Calories, Fat, Carb, Protein), Activity (Minutes, Miles, Lbs, Reps, Sets), and Weight (Lbs), with daily totals showing increasing calorie intake and weight fluctuation from 220 lbs to 219 lbs to 0 lbs, and activity including weightlifting, running, walking, push-ups, yoga, and marathon.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.23
+    },
+    {
+      "id": 1034,
+      "FileName": "health-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What activities are recorded on 2017-02-02, list them all.",
+      "Reference": "Weightlifting",
+      "Prediction": "RUNNING, WEIGHTLIFTING",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.0
+    },
+    {
+      "id": 1035,
+      "FileName": "health-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "On which date was the highest amount of protein consumed during the “AFTERNOON,” and what was the protein value?",
+      "Reference": "2017-02-02, 21",
+      "Prediction": "Thu, Feb 02, 16",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.26
+    },
+    {
+      "id": 1036,
+      "FileName": "health-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total number of calories consumed during all “AFTERNOON” activities across all dates?",
+      "Reference": "545",
+      "Prediction": "5820",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.93
+    },
+    {
+      "id": 1037,
+      "FileName": "health-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the difference in total activity duration between Feb 2 and Feb 3?",
+      "Reference": "60",
+      "Prediction": "30, 60",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.05
+    },
+    {
+      "id": 1038,
+      "FileName": "health-table13",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the key columns in the table, explaining the main types of activities and food items tracked, and highlight any noticeable trends in calorie consumption.",
+      "Reference": "The table tracks activities and food items across dates, with key columns for activity types, food categories, calorie counts, and time periods (morning, afternoon, evening). It highlights metrics like protein, fat, and carbohydrate values. A noticeable trend is higher calorie consumption during afternoon activities compared to morning or evening, likely due to heavier meals or physical activity durations.",
+      "Prediction": "DATE, TIME, ACTION, ACTIVITY, DESCRIPTION, SERVING, KCAL, FAT (g), CARB (g), PROT (g), MIN, MILES, LBS, REPS, SETS, WEIGHT (LBS)",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 4.02
     }
   ],
   "processed_ids": [
+    1024,
+    1025,
+    1026,
+    1027,
+    1028,
+    1029,
+    1030,
+    1031,
+    1032,
+    1033,
+    1034,
+    1035,
+    1036,
+    1037,
+    1038,
     769,
     770,
     771,
@@ -3630,6 +4415,41 @@
     985,
     986,
     987,
-    988
+    988,
+    989,
+    990,
+    991,
+    992,
+    993,
+    994,
+    995,
+    996,
+    997,
+    998,
+    999,
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016,
+    1017,
+    1018,
+    1019,
+    1020,
+    1021,
+    1022,
+    1023
   ]
 }

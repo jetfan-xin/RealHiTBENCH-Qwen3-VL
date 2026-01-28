@@ -2214,4 +2214,521 @@ Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
 Processing Time: 1.47s
 
 ============================================================
-Processing mix modality:  29%|██▊       | 220/768 [10:50<57:14,  6.27s/it]Processing mix modality:  29%|██▉       | 221/768 [10:51<43:49,  4.81s/it]Processing mix modality:  29%|██▉       | 222/768 [10:53<35:10,  3.87s/it]Processing mix modality:  29%|██▉       | 223/768 [10:54<27:15,  3.00s/it]Processing mix modality:  29%|██▉       | 224/768 [10:55<22:24,  2.47s/it]
+Processing mix modality:  29%|██▊       | 220/768 [10:50<57:14,  6.27s/it]Processing mix modality:  29%|██▉       | 221/768 [10:51<43:49,  4.81s/it]Processing mix modality:  29%|██▉       | 222/768 [10:53<35:10,  3.87s/it]Processing mix modality:  29%|██▉       | 223/768 [10:54<27:15,  3.00s/it]Processing mix modality:  29%|██▉       | 224/768 [10:55<22:24,  2.47s/it]Processing mix modality:  29%|██▉       | 225/768 [11:05<42:18,  4.68s/it]Processing mix modality:  29%|██▉       | 226/768 [11:06<33:18,  3.69s/it]Processing mix modality:  30%|██▉       | 227/768 [11:08<27:22,  3.04s/it]Processing mix modality:  30%|██▉       | 228/768 [11:10<24:03,  2.67s/it]Processing mix modality:  30%|██▉       | 229/768 [11:11<20:22,  2.27s/it]Processing mix modality:  30%|██▉       | 230/768 [11:19<36:49,  4.11s/it]Processing mix modality:  30%|███       | 231/768 [11:21<29:42,  3.32s/it]Processing mix modality:  30%|███       | 232/768 [11:24<28:39,  3.21s/it]Processing mix modality:  30%|███       | 233/768 [11:28<30:24,  3.41s/it]Processing mix modality:  30%|███       | 234/768 [11:29<25:34,  2.87s/it]Processing mix modality:  31%|███       | 235/768 [11:32<25:31,  2.87s/it]Query ID: 988 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table details pricing for various subscription and load card products across multiple regions and currencies. Key columns include Currency, Product Name, Product Code, and Local Price. The primary...
+Reference: The table provides regional pricing data for subscription and load card products in different currencies, detailing product names, codes, and local prices. Key columns include “Currency,” “Product Nam...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 16.00s
+Checkpoint saved: 220 queries processed
+
+============================================================
+Query ID: 989 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['new activation add line plan change upgrade']
+Answer:  ['new activation add line plan change upgrade']
+Prediction: NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE
+Reference: NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 990 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['1804 450 1946 3169']
+Answer:  ['7369']
+Prediction: 1804, 450, 1946, 3169
+Reference: 7369
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.67s
+
+============================================================
+Query ID: 991 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['spr 206']
+Answer:  ['spr 206']
+Prediction: SPR, 20.60
+Reference: SPR, 20.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.98s
+
+============================================================
+Query ID: 992 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['115 115']
+Answer:  ['143']
+Prediction: 11.52, 11.52
+Reference: 14.35
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.24s
+
+============================================================
+Query ID: 993 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table summarizes transaction data across four carriers (ATT, SPR, VZW, MTP) categorized by types (NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE), showing average time spent and total transactio...
+Reference: The table presents transaction data for various carriers (ATT, SPR, VZW, and MTP), detailing transaction types, average times, and total transaction counts. Key trends include VZW leading in total tra...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.82s
+
+============================================================
+Query ID: 994 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['dnago 10048']
+Answer:  ['dnago 10048']
+Prediction: DNAGO, 10048
+Reference: DNAGO, 10048
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.38s
+
+============================================================
+Query ID: 995 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['19824 4965']
+Answer:  ['24789']
+Prediction: 19824, 4965
+Reference: 24789
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.52s
+
+============================================================
+Query ID: 996 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['spress dnago milani belani merili pitali']
+Answer:  ['6']
+Prediction: SPRESS, DNAGO, MILANI, BELANI, MERILI, PITALI
+Reference: 6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.82s
+
+============================================================
+Query ID: 997 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['spress 2079']
+Answer:  ['milani 2879']
+Prediction: SPRESS, 2079
+Reference: MILANI, 2879
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.32s
+
+============================================================
+Query ID: 998 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table details transaction types (HARDWARE SWAP, NEW ACTIVATION, ADD A LINE, PLAN CHANGE, UPGRADE) for various carriers (SPRESS, DNAGO, MILANI, DRUIPE, BELANI, MERILI, PITALI, CATI, MAXX, TMPO, ERG...
+Reference: The table presents transaction data for various carriers, detailing transaction types, average times, and total transactions. Key patterns include “UPGRADE” having consistently high totals across carr...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.39s
+Checkpoint saved: 230 queries processed
+
+============================================================
+Query ID: 999 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['26227642']
+Answer:  ['26227642']
+Prediction: 2622764.25
+Reference: 2622764.25
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.49s
+
+============================================================
+Query ID: 1000 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['big joe maria calux giorgio armani francois chevalier global bob vincenzo fertino bob bobitt ken cascaval giuseppe von firenze']
+Answer:  ['francois chevalier 8607203 global bob 10388812']
+Prediction: Big Joe, Maria Calux, Giorgio Armani, Francois Chevalier, Global Bob, Vincenzo Fertino, Bob Bobitt, Ken Cascaval, Giuseppe Von Firenze
+Reference: Francois Chevalier, 860720.32; Global Bob, 1038881.22
+Metrics: {'F1': 32.0, 'EM': 0.0, 'ROUGE-L': 32.0, 'SacreBLEU': 5.73}
+Processing Time: 2.94s
+
+============================================================
+Query ID: 1001 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['big joe maria calux giorgio armani francois chevalier mia martina tia carrera feliciano di venturi global bob vincenzo fertino bob bobitt ken cascaval billy joe giuseppe von firenze']
+Answer:  ['3']
+Prediction: Big Joe, Maria Calux, Giorgio Armani, Francois Chevalier, Mia Martina, Tia Carrera, Feliciano Di Venturi, Global Bob, Vincenzo Fertino, Bob Bobitt, Ken Cascaval, Billy Joe, Giuseppe Von Firenze
+Reference: 3
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.88s
+
+============================================================
+Query ID: 1002 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['maria calux 1000008']
+Answer:  ['big joe 18728302']
+Prediction: Maria Calux, 100000.75
+Reference: Big Joe, 1872830.25
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.62s
+
+============================================================
+Query ID: 1003 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: ACCOUNT #, FULL NAME, Revenue APR, Revenue MAY, Revenue JUN, Notable patterns include varying revenue trends across months with some accounts showing consistent incline or decline patterns, and others...
+Reference: The table provides revenue data for various accounts, including monthly revenues for April, May, and June, with corresponding trends (Incline or Decline). Key observations include consistent revenue i...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.87s
+Processing mix modality:  31%|███       | 236/768 [11:35<23:53,  2.70s/it]Processing mix modality:  31%|███       | 237/768 [11:37<22:18,  2.52s/it]Processing mix modality:  31%|███       | 238/768 [11:39<21:24,  2.42s/it]Processing mix modality:  31%|███       | 239/768 [11:41<21:33,  2.45s/it]Processing mix modality:  31%|███▏      | 240/768 [11:53<45:47,  5.20s/it]Processing mix modality:  31%|███▏      | 241/768 [11:54<34:54,  3.97s/it]Processing mix modality:  32%|███▏      | 242/768 [11:55<27:49,  3.17s/it]Processing mix modality:  32%|███▏      | 243/768 [11:56<21:51,  2.50s/it]Processing mix modality:  32%|███▏      | 244/768 [11:58<19:57,  2.28s/it]Processing mix modality:  32%|███▏      | 245/768 [12:05<31:54,  3.66s/it]Processing mix modality:  32%|███▏      | 246/768 [12:06<26:05,  3.00s/it]Processing mix modality:  32%|███▏      | 247/768 [12:08<21:22,  2.46s/it]Processing mix modality:  32%|███▏      | 248/768 [12:09<19:28,  2.25s/it]Processing mix modality:  32%|███▏      | 249/768 [12:10<16:21,  1.89s/it]Processing mix modality:  33%|███▎      | 250/768 [12:15<24:28,  2.83s/it]Processing mix modality:  33%|███▎      | 251/768 [12:18<22:57,  2.66s/it]
+============================================================
+Query ID: 1004 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['argentinos jrs boca juniors']
+Answer:  ['argentinos jrs']
+Prediction: ARGENTINOS JRS, BOCA JUNIORS
+Reference: ARGENTINOS JRS
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 2.28s
+
+============================================================
+Query ID: 1005 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['dinamo minsk bate borisov']
+Answer:  ['fc slutsk shakhter soligorsk dinamo minsk bate borisov']
+Prediction: DINAMO MINSK, BATE BORISOV
+Reference: FC SLUTSK, SHAKHTER SOLIGORSK, DINAMO MINSK, BATE BORISOV
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 36.79}
+Processing Time: 2.11s
+
+============================================================
+Query ID: 1006 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['argentinasuperliga argentina 13']
+Answer:  ['argentinasuperliga argentina 23']
+Prediction: ARGENTINA>SUPERLIGA ARGENTINA, 13
+Reference: ARGENTINA>SUPERLIGA ARGENTINA, 23
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.20s
+
+============================================================
+Query ID: 1007 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['argentinasuperliga argentina austriabundesliga']
+Answer:  ['equal 2 matches each']
+Prediction: ARGENTINA>SUPERLIGA ARGENTINA, AUSTRIA>BUNDESLIGA
+Reference: Equal, 2 matches each
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.50s
+
+============================================================
+Query ID: 1008 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table lists soccer matches across various leagues on 01/10/2017, detailing league, game time, date, home team, home position, away team, and away position. It includes leagues from Argentina, Aust...
+Reference: The table details football match schedules across multiple leagues, with columns for league names, match times, dates, home teams, away teams, and their respective ranks. Key trends include higher-ran...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 11.63s
+Checkpoint saved: 240 queries processed
+
+============================================================
+Query ID: 1009 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['112750']
+Answer:  ['150667']
+Prediction: 11275.00
+Reference: 15066.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.11s
+
+============================================================
+Query ID: 1010 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['b2 732288']
+Answer:  ['b2 732288']
+Prediction: B-2, 73228.80
+Reference: B-2, 73,228.80
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.30s
+
+============================================================
+Query ID: 1011 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['4 bob']
+Answer:  ['5 bob']
+Prediction: 4, BOB
+Reference: 5, Bob
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 0.92s
+
+============================================================
+Query ID: 1012 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['3650 3650 3650']
+Answer:  ['3833']
+Prediction: 365.00, 365.00, 365.00
+Reference: 383.33
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.79s
+
+============================================================
+Query ID: 1013 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table details inventory transactions for two entities, BOB and Carol, showing quantities, batches, purchase dates, purchase costs, sale dates, sale values, and gains. Key columns include Name, Qty...
+Reference: The table details transactions involving various sellers, specifying purchase dates, costs, sales dates, values, and gains for different batches. Notable trends include consistently higher sales value...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.87s
+
+============================================================
+Query ID: 1014 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['33000 18000']
+Answer:  ['36000']
+Prediction: 33000, 18000
+Reference: 36000
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 1015 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['bob holligan myrtleford']
+Answer:  ['bob john']
+Prediction: Bob, Holligan, Myrtleford
+Reference: Bob, John
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 1016 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['week 1 week 4 week 2 week 3 week 5']
+Answer:  ['week 1 week 2 week 4 week 3 week 5 week 6']
+Prediction: Week 1, Week 4, Week 2, Week 3, Week 5
+Reference: Week 1, Week 2, Week 4, Week 3, Week 5, Week 6
+Metrics: {'F1': 90.91, 'EM': 0.0, 'ROUGE-L': 72.73, 'SacreBLEU': 44.75}
+Processing Time: 1.75s
+
+============================================================
+Query ID: 1017 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['bill bob john']
+Answer:  ['2']
+Prediction: Bill, Bob, John
+Reference: 2
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.06s
+
+============================================================
+Query ID: 1018 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: Planned production schedule for construction teams Bill, Bob, and John across Weeks 1 to 6, detailing projects, locations, sale months, and revenue; notable trends include peak revenue of $33,000 in W...
+Reference: The table outlines a planned production schedule detailing weekly tasks, team members, locations, and revenue. Notable trends include Week 1's highest revenue ($33,000) and a decreasing revenue trend ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 5.03s
+Checkpoint saved: 250 queries processed
+
+============================================================
+Query ID: 1019 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['47550000 23825000']
+Answer:  ['51255000']
+Prediction: 47550000, 23825000
+Reference: 51255000
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.26s
+
+============================================================
+Query ID: 1020 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['2017317 2017318 2017319 2017320 2017321 2017322 2017323 2017324 2017325 2017326 2017327 2017328 2017329 2017330 2017331']
+Answer:  ['201736 2017317 2017321 2017322 2017323 2017324 2017325 2017326 2017327 2017328 2017329 2017330 2017331']
+Prediction: 2017/3/17, 2017/3/18, 2017/3/19, 2017/3/20, 2017/3/21, 2017/3/22, 2017/3/23, 2017/3/24, 2017/3/25, 2017/3/26, 2017/3/27, 2017/3/28, 2017/3/29, 2017/3/30, 2017/3/31
+Processing mix modality:  33%|███▎      | 252/768 [12:27<40:15,  4.68s/it]Processing mix modality:  33%|███▎      | 253/768 [12:29<33:03,  3.85s/it]Processing mix modality:  33%|███▎      | 254/768 [12:32<31:48,  3.71s/it]Processing mix modality:  33%|███▎      | 255/768 [12:40<41:51,  4.90s/it]Processing mix modality:  33%|███▎      | 256/768 [12:41<32:12,  3.78s/it]Processing mix modality:  33%|███▎      | 257/768 [12:43<26:35,  3.12s/it]Processing mix modality:  34%|███▎      | 258/768 [12:44<21:55,  2.58s/it]Processing mix modality:  34%|███▎      | 259/768 [12:45<17:53,  2.11s/it]Processing mix modality:  34%|███▍      | 260/768 [12:52<29:23,  3.47s/it]Reference: 2017/3/6, 2017/3/17, 2017/3/21, 2017/3/22, 2017/3/23, 2017/3/24, 2017/3/25, 2017/3/26, 2017/3/27, 2017/3/28, 2017/3/29, 2017/3/30, 2017/3/31
+Metrics: {'F1': 85.71, 'EM': 0.0, 'ROUGE-L': 85.71, 'SacreBLEU': 71.66}
+Processing Time: 9.39s
+
+============================================================
+Query ID: 1021 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['march 17 100000']
+Answer:  ['march 17 10']
+Prediction: March 17, 100000
+Reference: March 17, 10
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.92s
+
+============================================================
+Query ID: 1022 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['1280000 1360000 1210000 250000 250000']
+Answer:  ['11914286']
+Prediction: 1280000, 1360000, 1210000, 250000, 250000
+Reference: 1191428.57
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.39s
+
+============================================================
+Query ID: 1023 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: RCU MIS - March: The table tracks daily metrics for case management from March 1 to March 31, 2017, including Total Cases Received, Total Cases Reviewed, Cases Pending, Cases Pending with CA, Hunter C...
+Reference: The table tracks daily metrics for RCU MIS - March, including cases received, reviewed, pending, and flagged, along with quality assurance checks. Key trends show mid-March activity peaks, declining p...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.65s
+
+============================================================
+Query ID: 1024 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['max 21']
+Answer:  ['max 21']
+Prediction: MAX, 2.1
+Reference: MAX, 2.10
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 1025 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['75434 80239']
+Answer:  ['805 trip1']
+Prediction: 7:54:34, 8:02:39
+Reference: 8:05, Trip1
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.60s
+
+============================================================
+Query ID: 1026 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['adam max samrt lucas']
+Answer:  ['4 adam max samrt lucas']
+Prediction: ADAM, MAX, SAMRT, LUCAS
+Reference: 4, ADAM, MAX, SAMRT, LUCAS.
+Metrics: {'F1': 88.89, 'EM': 0.0, 'ROUGE-L': 88.89, 'SacreBLEU': 77.88}
+Processing Time: 1.31s
+
+============================================================
+Query ID: 1027 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['84']
+Answer:  ['95']
+Prediction: 8.45
+Reference: 9.50
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.01s
+
+============================================================
+Query ID: 1028 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: OLIVER had the shortest trip at 3 minutes and 21 seconds, SAMRT had a trip of 2 minutes and 44 seconds, MAX had the longest trip at 2 hours and 25 minutes, LUCAS had trips of 49 minutes and 43 seconds...
+Reference: The table summarizes trip durations for users like OLIVER, SAMRT, MAX, ADAM, LUCAS, and LEWIS. OLIVER had the shortest trip at 3 minutes and 21 seconds, while LEWIS had the longest trip at 30 minutes....
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.64s
+Checkpoint saved: 260 queries processed
+
+============================================================
+Query ID: 1029 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (10782 tokens) for image (3244, 1572)
+Processing mix modality:  34%|███▍      | 261/768 [12:54<25:19,  3.00s/it]Predictions:  ['260']
+Answer:  ['250']
+Prediction: 260
+Reference: 250
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.89s
+
+============================================================
+Query ID: 1030 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10775 tokens) for image (3244, 1572)
+Processing mix modality:  34%|███▍      | 262/768 [12:56<22:21,  2.65s/it]Predictions:  ['roast beef']
+Answer:  ['roast beef']
+Prediction: Roast Beef
+Reference: Roast Beef
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 1031 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large input (10774 tokens) for image (3244, 1572)
+Processing mix modality:  34%|███▍      | 263/768 [12:57<20:07,  2.39s/it]Predictions:  ['2']
+Answer:  ['2']
+Prediction: 2
+Reference: 2
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.79s
+
+============================================================
+Query ID: 1032 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large input (10769 tokens) for image (3244, 1572)
+Processing mix modality:  34%|███▍      | 264/768 [13:00<20:46,  2.47s/it]Predictions:  ['wed jan 04 tue jan 03 mon jan 02']
+Answer:  ['wed jan 04 tue jan 03 mon jan 02']
+Prediction: Wed, Jan 04, Tue, Jan 03, Mon, Jan 02
+Reference: Wed, Jan 04, Tue, Jan 03, Mon, Jan 02
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.67s
+
+============================================================
+Query ID: 1033 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (10789 tokens) for image (3244, 1572)
+Processing mix modality:  35%|███▍      | 265/768 [13:06<30:11,  3.60s/it]Prediction: Daily Tracker for Mon, Jan 02 to Wed, Jan 04, tracking Food (Calories, Fat, Carb, Protein), Activity (Minutes, Miles, Lbs, Reps, Sets), and Weight (Lbs), with daily totals showing increasing calorie i...
+Reference: The table records daily food consumption and physical activities, categorizing entries into Food and Activity. Key metrics include servings, calories (KCAL), macronutrient content (FAT, CARB, PROT), a...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.23s
+
+============================================================
+Query ID: 1034 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large input (10817 tokens) for image (3366, 1572)
+Processing mix modality:  35%|███▍      | 266/768 [13:08<26:06,  3.12s/it]Predictions:  ['running weightlifting']
+Answer:  ['weightlifting']
+Prediction: RUNNING, WEIGHTLIFTING
+Reference: Weightlifting
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.00s
+
+============================================================
+Query ID: 1035 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (10821 tokens) for image (3366, 1572)
+Processing mix modality:  35%|███▍      | 267/768 [13:10<23:54,  2.86s/it]Predictions:  ['thu feb 02 16']
+Answer:  ['20170202 21']
+Prediction: Thu, Feb 02, 16
+Reference: 2017-02-02, 21
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.26s
+
+============================================================
+Query ID: 1036 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large input (10816 tokens) for image (3366, 1572)
+Processing mix modality:  35%|███▍      | 268/768 [13:12<21:31,  2.58s/it]Predictions:  ['5820']
+Answer:  ['545']
+Prediction: 5820
+Reference: 545
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.93s
+
+============================================================
+Query ID: 1037 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large input (10812 tokens) for image (3366, 1572)
+Processing mix modality:  35%|███▌      | 269/768 [13:14<20:09,  2.42s/it]Predictions:  ['30 60']
+Answer:  ['60']
+Prediction: 30, 60
+Reference: 60
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 1038 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large input (10824 tokens) for image (3366, 1572)
+Processing mix modality:  35%|███▌      | 270/768 [13:18<24:06,  2.90s/it]Prediction: DATE, TIME, ACTION, ACTIVITY, DESCRIPTION, SERVING, KCAL, FAT (g), CARB (g), PROT (g), MIN, MILES, LBS, REPS, SETS, WEIGHT (LBS)
+Reference: The table tracks activities and food items across dates, with key columns for activity types, food categories, calorie counts, and time periods (morning, afternoon, evening). It highlights metrics lik...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 4.02s
+Checkpoint saved: 270 queries processed
+
+============================================================
+Query ID: 1039 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large input (10811 tokens) for image (3520, 1572)
+Processing mix modality:  35%|███▌      | 271/768 [13:20<21:11,  2.56s/it]Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.75s
+
+============================================================
+Query ID: 1040 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large input (10811 tokens) for image (3520, 1572)
