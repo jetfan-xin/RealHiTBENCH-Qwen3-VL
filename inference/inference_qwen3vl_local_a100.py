@@ -1619,6 +1619,8 @@ def main():
                         help='Path to QA JSON files directory (default: data_path/data/)')
     parser.add_argument('--use_long', action='store_true',
                         help='Use QA_long.json instead of QA_final.json')
+    parser.add_argument('--use_sc_filled', action='store_true',
+                        help='Use QA_final_sc_filled.json with updated structure comprehending data')
     parser.add_argument('--question_type', type=str, default=None,
                         choices=['Fact Checking', 'Numerical Reasoning', 
                                  'Data Analysis', 'Visualization', 'Structure Comprehending'],
