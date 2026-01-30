@@ -6,7 +6,7 @@ This directory contains scripts for re-running Structure Comprehending inference
 
 The updated QA data is in `/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data/QA_final_sc_filled.json`. This workflow:
 
-1. **Re-runs inference** for Structure Comprehending tasks only across 5 modalities
+1. **Re-runs inference** for Structure Comprehending tasks only across 9 modalities
 2. **Runs in parallel** on 4 GPUs (0, 1, 2, 3)
 3. **Merges new results** with existing checkpoint_merged.json files
 4. **Saves output** to results_sc_filled.json with updated SC items
@@ -25,6 +25,9 @@ This will:
 - Run **mix_csv** on GPU 1
 - Run **mix_html** on GPU 2
 - Run **mix_latex** on GPU 3, followed by **mix_markdown** on GPU 3 (sequential)
+- Then run **text_latex** and **text_markdown** on GPU 0 (sequential after image)
+- Then run **text_csv** on GPU 1 (sequential after mix_csv)
+- Then run **text_html** on GPU 2 (sequential after mix_html)
 
 Logs will be saved to: `../result/qwen3vl_local_a100/sc_rerun_logs/`
 
@@ -47,6 +50,10 @@ This will create `results_sc_filled.json` in each modality's merged folder.
 - `run_sc_mix_html.py` - Mix HTML modality
 - `run_sc_mix_latex.py` - Mix LaTeX modality
 - `run_sc_mix_markdown.py` - Mix Markdown modality
+- `run_sc_text_csv.py` - Text CSV modality
+- `run_sc_text_html.py` - Text HTML modality
+- `run_sc_text_latex.py` - Text LaTeX modality
+- `run_sc_text_markdown.py` - Text Markdown modality
 
 Each script:
 - Uses `--use_sc_filled` flag to read QA_final_sc_filled.json
@@ -64,12 +71,12 @@ Each script:
 
 ## GPU Allocation
 
-| GPU | Modality 1 | Modality 2 |
-|-----|-----------|-----------|
-| 0   | image     | -         |
-| 1   | mix_csv   | -         |
-| 2   | mix_html  | -         |
-| 3   | mix_latex | mix_markdown (sequential) |
+| GPU | Modality 1 | Modality 2 | Modality 3 |
+|-----|-----------|-----------|------------|
+| 0   | image     | text_latex | text_markdown (sequential) |
+| 1   | mix_csv   | text_csv   | - |
+| 2   | mix_html  | text_html  | - |
+| 3   | mix_latex | mix_markdown (sequential) | - |
 
 ## Input/Output Files
 
@@ -84,6 +91,10 @@ Each script:
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_html_a100_merged/checkpoint_merged.json`
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_latex_a100_merged/checkpoint_merged.json`
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_markdown_a100_merged/checkpoint_merged.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_csv_a100_merged/checkpoint_merged.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_html_a100_merged/checkpoint_merged.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_latex_a100_merged/checkpoint_merged.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_markdown_a100_merged/checkpoint_merged.json`
 
 ### Output Files
 
@@ -93,6 +104,10 @@ Each script:
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_html_a100/checkpoint.json`
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_latex_a100/checkpoint.json`
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_markdown_a100/checkpoint.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_csv_a100/checkpoint.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_html_a100/checkpoint.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_latex_a100/checkpoint.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_markdown_a100/checkpoint.json`
 
 2. **Merged Results** (created by merge script):
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_image_a100_merged/results_sc_filled.json`
@@ -100,6 +115,10 @@ Each script:
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_html_a100_merged/results_sc_filled.json`
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_latex_a100_merged/results_sc_filled.json`
    - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_mix_markdown_a100_merged/results_sc_filled.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_csv_a100_merged/results_sc_filled.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_html_a100_merged/results_sc_filled.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_latex_a100_merged/results_sc_filled.json`
+   - `../result/qwen3vl_local_a100/Qwen3-VL-8B-Instruct_text_markdown_a100_merged/results_sc_filled.json`
 
 3. **Logs**:
    - `../result/qwen3vl_local_a100/sc_rerun_logs/image_gpu0.log`
@@ -107,6 +126,10 @@ Each script:
    - `../result/qwen3vl_local_a100/sc_rerun_logs/mix_html_gpu2.log`
    - `../result/qwen3vl_local_a100/sc_rerun_logs/mix_latex_gpu3.log`
    - `../result/qwen3vl_local_a100/sc_rerun_logs/mix_markdown_gpu3.log`
+   - `../result/qwen3vl_local_a100/sc_rerun_logs/text_latex_gpu0.log`
+   - `../result/qwen3vl_local_a100/sc_rerun_logs/text_markdown_gpu0.log`
+   - `../result/qwen3vl_local_a100/sc_rerun_logs/text_csv_gpu1.log`
+   - `../result/qwen3vl_local_a100/sc_rerun_logs/text_html_gpu2.log`
 
 ## Merge Logic
 
@@ -129,6 +152,9 @@ CUDA_VISIBLE_DEVICES=0 python run_sc_image.py
 
 # Example: Run only mix_csv modality on GPU 1
 CUDA_VISIBLE_DEVICES=1 python run_sc_mix_csv.py
+
+# Example: Run only text_html modality on GPU 2
+CUDA_VISIBLE_DEVICES=2 python run_sc_text_html.py
 ```
 
 ## Troubleshooting
@@ -186,7 +212,7 @@ else:
 - **Batch size**: Default is 8, adjust if needed for memory constraints
 - **No sharding**: Each modality runs on a single GPU without data sharding
 - **Clean inference**: Uses `--no_resume` to ensure fresh inference with updated data
-- **Sequential on GPU 3**: mix_markdown waits for mix_latex to complete
+- **Sequential on GPU 0/1/2/3**: text_* runs after image/mix tasks on its assigned GPU; mix_markdown waits for mix_latex
 - **Metric recomputation**: Aggregate metrics are automatically recalculated after merge
 
 ## Expected Runtime

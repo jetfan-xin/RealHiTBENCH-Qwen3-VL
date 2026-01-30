@@ -1,10 +1,10 @@
 #!/bin/bash
-# Parallel launcher for Structure Comprehending re-inference across 5 modalities on 4 GPUs
+# Parallel launcher for Structure Comprehending re-inference across 9 modalities on 4 GPUs
 # GPU allocation:
-#   GPU 0: image
-#   GPU 1: mix_csv  
-#   GPU 2: mix_html
-#   GPU 3: mix_latex, then mix_markdown (sequential on same GPU)
+#   GPU 0: image -> text_latex -> text_markdown (sequential on same GPU)
+#   GPU 1: mix_csv -> text_csv (sequential on same GPU)
+#   GPU 2: mix_html -> text_html (sequential on same GPU)
+#   GPU 3: mix_latex -> mix_markdown (sequential on same GPU)
 
 set -e  # Exit on error
 
@@ -42,20 +42,32 @@ run_on_gpu() {
 echo "Launching parallel inference jobs..."
 echo ""
 
-# GPU 0: image
-run_on_gpu 0 "run_sc_image.py" "image" &
+# GPU 0: image -> text_latex -> text_markdown
+(
+    run_on_gpu 0 "run_sc_image.py" "image" && \
+    run_on_gpu 0 "run_sc_text_latex.py" "text_latex" && \
+    run_on_gpu 0 "run_sc_text_markdown.py" "text_markdown"
+) &
 PID_GPU0=$!
 
-# GPU 1: mix_csv
-run_on_gpu 1 "run_sc_mix_csv.py" "mix_csv" &
+# GPU 1: mix_csv -> text_csv
+(
+    run_on_gpu 1 "run_sc_mix_csv.py" "mix_csv" && \
+    run_on_gpu 1 "run_sc_text_csv.py" "text_csv"
+) &
 PID_GPU1=$!
 
-# GPU 2: mix_html
-run_on_gpu 2 "run_sc_mix_html.py" "mix_html" &
+# GPU 2: mix_html -> text_html
+(
+    run_on_gpu 2 "run_sc_mix_html.py" "mix_html" && \
+    run_on_gpu 2 "run_sc_text_html.py" "text_html"
+) &
 PID_GPU2=$!
 
 # GPU 3: mix_latex
-run_on_gpu 3 "run_sc_mix_latex.py" "mix_latex" &
+(
+    run_on_gpu 3 "run_sc_mix_latex.py" "mix_latex"
+) &
 PID_GPU3=$!
 
 # Wait for first 4 jobs to complete
@@ -77,15 +89,15 @@ STATUS_GPU3=$?
 # Check if any failed
 FAILED=0
 if [ $STATUS_GPU0 -ne 0 ]; then
-    echo "ERROR: image inference failed"
+    echo "ERROR: GPU0 sequence (image/text_latex/text_markdown) failed"
     FAILED=1
 fi
 if [ $STATUS_GPU1 -ne 0 ]; then
-    echo "ERROR: mix_csv inference failed"
+    echo "ERROR: GPU1 sequence (mix_csv/text_csv) failed"
     FAILED=1
 fi
 if [ $STATUS_GPU2 -ne 0 ]; then
-    echo "ERROR: mix_html inference failed"
+    echo "ERROR: GPU2 sequence (mix_html/text_html) failed"
     FAILED=1
 fi
 if [ $STATUS_GPU3 -ne 0 ]; then

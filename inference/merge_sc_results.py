@@ -33,7 +33,11 @@ MODALITIES = [
     "mix_csv", 
     "mix_html",
     "mix_latex",
-    "mix_markdown"
+    "mix_markdown",
+    "text_csv",
+    "text_html",
+    "text_latex",
+    "text_markdown"
 ]
 
 BASE_DIR = Path("/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100")
