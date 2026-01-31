@@ -1595,8 +1595,8 @@ def main():
                         help='Repetition penalty (1.0 = no penalty)')
     parser.add_argument('--presence_penalty', type=float, default=1.5,
                         help='Presence penalty (1.5 recommended for Instruct)')
-    parser.add_argument('--max_tokens', type=int, default=32768,
-                        help='Maximum tokens to generate (32768 recommended)')
+    parser.add_argument('--max_tokens', type=int, default=1024,
+                        help='Maximum tokens to generate (1024 recommended)')
     
     # Batch inference settings
     parser.add_argument('--batch_size', type=int, default=1,

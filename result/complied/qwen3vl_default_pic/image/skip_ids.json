@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_default_pic/image/results.json",
+    "config": "qwen3vl_default_pic",
+    "modality": "image",
+    "format": null,
+    "analysis_time": "2026-01-31T14:22:38.186407",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3070,
+    "success": 3070,
+    "error": 0,
+    "missing": 1,
+    "file_dependency_issues": 0,
+    "incomplete_runs": 1
+  },
+  "skip_ids": [
+    2219
+  ],
+  "error_ids": [],
+  "skip_reasons": {
+    "2219": "Incomplete run or processing error (files exist but task not processed)"
+  },
+  "categorized": {
+    "file_dependency_issues": [],
+    "incomplete_runs": [
+      2219
+    ]
+  }
+}

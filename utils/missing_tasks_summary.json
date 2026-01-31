@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "analysis_time": "2026-01-31T14:22:38.333048",
+    "total_result_files": 10,
+    "total_tasks_in_master_list": 3071
+  },
+  "overall_statistics": {
+    "total_completed_across_all_files": 30626,
+    "total_missing_across_all_files": 84,
+    "total_errors_across_all_files": 44,
+    "average_completion_rate": "99.73%"
+  },
+  "by_configuration": {
+    "qwen3vl_default_pic": {
+      "file_count": 3,
+      "avg_completion": 3067.0,
+      "avg_missing": 4.0
+    },
+    "qwen3vl_resize_pic": {
+      "file_count": 4,
+      "avg_completion": 3060.5,
+      "avg_missing": 10.5
+    },
+    "qwen3vl_text": {
+      "file_count": 3,
+      "avg_completion": 3061.0,
+      "avg_missing": 10.0
+    }
+  },
+  "by_modality": {
+    "image": {
+      "file_count": 2,
+      "avg_completion": 3070.0,
+      "avg_missing": 1.0
+    },
+    "mix": {
+      "file_count": 5,
+      "avg_completion": 3060.6,
+      "avg_missing": 10.4
+    },
+    "text": {
+      "file_count": 3,
+      "avg_completion": 3061.0,
+      "avg_missing": 10.0
+    }
+  },
+  "by_format": {
+    "html": {
+      "file_count": 3,
+      "avg_completion": 3054.6666666666665,
+      "avg_missing": 16.333333333333332
+    },
+    "latex": {
+      "file_count": 3,
+      "avg_completion": 3067.3333333333335,
+      "avg_missing": 3.6666666666666665
+    },
+    "csv": {
+      "file_count": 2,
+      "avg_completion": 3060.0,
+      "avg_missing": 11.0
+    }
+  },
+  "missing_task_patterns": {
+    "always_missing": [],
+    "frequently_missing": [
+      {
+        "task_id": 2960,
+        "missing_in_files": 8
+      },
+      {
+        "task_id": 2961,
+        "missing_in_files": 8
+      },
+      {
+        "task_id": 2962,
+        "missing_in_files": 8
+      },
+      {
+        "task_id": 2219,
+        "missing_in_files": 5
+      },
+      {
+        "task_id": 2216,
+        "missing_in_files": 3
+      },
+      {
+        "task_id": 2217,
+        "missing_in_files": 3
+      },
+      {
+        "task_id": 2218,
+        "missing_in_files": 3
+      },
+      {
+        "task_id": 2220,
+        "missing_in_files": 3
+      },
+      {
+        "task_id": 2963,
+        "missing_in_files": 3
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "issue": "9 tasks missing in 3+ result files",
+      "action": "Investigate file dependencies and consider format conversion"
+    },
+    {
+      "priority": "MEDIUM",
+      "issue": "Lowest completion: qwen3vl_resize_pic/mix_html/results.json (3038 tasks)",
+      "action": "Focus on completing 33 missing tasks"
+    }
+  ]
+}

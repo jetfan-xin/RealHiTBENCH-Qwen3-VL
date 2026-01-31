@@ -1,0 +1,16 @@
+{
+  "config": {
+    "model_dir": "/data/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "text",
+    "format": "markdown",
+    "data_path": "/data/pan/4xin/datasets/RealHiTBench",
+    "batch_size": 8,
+    "total_queries": 0,
+    "start_time": "2026-01-30T23:19:37.894582",
+    "end_time": "2026-01-30T23:19:51.998039",
+    "duration_seconds": 14.103457,
+    "throughput": 0
+  },
+  "aggregate_metrics": {},
+  "results": []
+}

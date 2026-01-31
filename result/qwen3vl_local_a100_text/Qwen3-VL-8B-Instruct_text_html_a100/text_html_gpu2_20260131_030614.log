@@ -1,0 +1,2071 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: html
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Data Parallel (DataParallel)
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using DATA PARALLELISM (DataParallel) - all GPUs compute simultaneously
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 43.18it/s]
+Model loaded with flash_attention_2 attention on cuda:0
+Single GPU detected, DataParallel not needed
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]
+============================================================
+Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (18086 tokens)
+Processing text modality:   0%|          | 1/3071 [00:05<4:37:46,  5.43s/it]Predictions:  ['1953 6260']
+Answer:  ['1955 62170']
+Prediction: 1953, 6260
+Reference: 1955, 62170
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 5.43s
+
+============================================================
+Query ID: 2 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (18092 tokens)
+Processing text modality:   0%|          | 2/3071 [00:08<3:33:16,  4.17s/it]Predictions:  ['1953']
+Answer:  ['1954']
+Prediction: 1953
+Reference: 1954
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.29s
+
+============================================================
+Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (18096 tokens)
+Processing text modality:   0%|          | 3/3071 [00:11<3:01:55,  3.56s/it]Predictions:  ['2022 2023']
+Answer:  ['1953']
+Prediction: 2022, 2023
+Reference: 1953
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.83s
+
+============================================================
+Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (18085 tokens)
+Processing text modality:   0%|          | 4/3071 [00:14<2:43:17,  3.19s/it]Predictions:  ['161037']
+Answer:  ['158772']
+Prediction: 161037
+Reference: 158772
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.64s
+
+============================================================
+Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (18105 tokens)
+Processing text modality:   0%|          | 5/3071 [00:17<2:36:35,  3.06s/it]Predictions:  ['55 16']
+Answer:  ['58 16']
+Prediction: 5.47, 1.56
+Reference: 5.80, 1.62
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 2.83s
+
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (18088 tokens)
+Processing text modality:   0%|          | 6/3071 [00:32<6:19:55,  7.44s/it]Prediction: The table presents annual U.S. household data from 1953 to 2023, focusing on the civilian noninstitutional population aged 16 and over. Key columns include: "Year" (time period), "Civilian noninstitut...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 15.93s
+
+============================================================
+Query ID: 7 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large text input (18153 tokens)
+Processing text modality:   0%|          | 7/3071 [00:35<5:00:41,  5.89s/it]Predictions:  ['562 increasing trend']
+Answer:  ['predicted percentage for 1965 551']
+Prediction: 56.2, Increasing trend
+Reference: Predicted percentage for 1965: 55.12%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.70s
+
+============================================================
+Query ID: 8 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large text input (18273 tokens)
+Processing text modality:   0%|          | 8/3071 [00:38<4:09:49,  4.89s/it]Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.99
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.76s
+
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (18075 tokens)
+Processing text modality:   0%|          | 9/3071 [00:42<3:54:49,  4.60s/it]Prediction: 1982, 1983, 2009, 2010, 2011, 2020
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 3.96s
+
+============================================================
+Query ID: 10 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (20092 tokens)
+Processing text modality:   0%|          | 10/3071 [00:45<3:37:02,  4.25s/it]Predictions:  ['1983']
+Answer:  ['1983']
+Prediction: 1983
+Reference: 1983
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 3.48s
+Checkpoint saved: 10 queries processed
+
+============================================================
+Query ID: 11 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (20101 tokens)
+Processing text modality:   0%|          | 11/3071 [00:48<3:11:28,  3.75s/it]Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.62s
+
+============================================================
+Query ID: 12 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (20091 tokens)
+Processing text modality:   0%|          | 12/3071 [00:51<3:06:26,  3.66s/it]Predictions:  ['4490 4101 3655']
+Answer:  ['39957']
+Prediction: 4490, 4101, 3655
+Reference: 3995.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.43s
+
+============================================================
+Query ID: 13 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (20096 tokens)
+Processing text modality:   0%|          | 13/3071 [00:54<2:50:16,  3.34s/it]Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.61s
+
+============================================================
+Query ID: 14 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (20098 tokens)
+Processing text modality:   0%|          | 14/3071 [00:57<2:42:26,  3.19s/it]Predictions:  ['1986']
+Answer:  ['1986']
+Prediction: 1986
+Reference: 1986
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.84s
+
+============================================================
+Query ID: 15 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (20196 tokens)
+Processing text modality:   0%|          | 15/3071 [01:09<4:53:46,  5.77s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+years = [1985, 1987, 1989]
+civilian_population = df[df['Year'].isin(years)]['Civilian noninstitutional population'].values
+employed_population = df[df['Year'].isin(years)]['Employed Total'].values
+plt.bar(years, civilian_population, label='Civilian Population', color='blue')
+plt.bar(years, employed_population, bottom=civilian_population, label='Employed Population', color='orange')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.title('Civilian Population vs Employed Population (1985, 1987, 1989)')
+plt.legend()
+plt.xticks(years)
+plt.show()
+
+Python Error: 'Civilian noninstitutional population'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ years = [1985, 1987, 1989]
+ civilian_population = df[df['Year'].isin(years)]['Civilian noninstitutional popula...
+Reference: [93736, 95853, 97630, 59891, 62107, 64315]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 11.75s
+
+============================================================
+Query ID: 16 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (20180 tokens)
+Processing text modality:   1%|          | 16/3071 [01:21<6:28:21,  7.63s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+df_men = df[df['Year'].isin(df['Year']) & (df['Year'].str.contains('Men'))]
+df_women = df[df['Year'].isin(df['Year']) & (df['Year'].str.contains('Women'))]
+df_total = pd.concat([df_men, df_women], ignore_index=True)
+df_total['Unemployment Rate'] = df_total['Unemployment Rate'].astype(float)
+df_total['Total Civilian Labor Force'] = df_total['Total Civilian Labor Force'].astype(float)
+plt.scatter(df_total['Unemployment Rate'], df_total['Total Civilian Labor Force'])
+plt.xlabel('Unemployment Rate')
+plt.ylabel('Total Civilian Labor Force')
+plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')
+plt.show()
+
+Python Error: 'Unemployment Rate'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ df_men = df[df['Year'].isin(df['Year']) & (df['Year'].str.contains('Men'))]
+ df_women = df[df['Year'].isin(df[...
+Reference: [[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 11.94s
+
+============================================================
+Query ID: 17 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (20184 tokens)
+Processing text modality:   1%|          | 17/3071 [01:32<7:25:52,  8.76s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx')
+data_1984 = df[df['Year'] == 1984]
+agriculture = data_1984.iloc[0, 6]  # Agriculture employment
+non_agriculture = data_1984.iloc[0, 7]  # Non-agriculture employment
+labels = ['Agriculture', 'Non-agriculture']
+sizes = [agriculture, non_agriculture]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title('Employment Distribution in 1984')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+OUTPUT VALUE: [0.05, 0.95]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ data_1984 = df[df['Year'] == 1984]
+ agriculture = data_1984.iloc[0, 6]  # Agriculture employment
+ non_agricult...
+Reference: [0.05, 0.95]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 11.39s
+
+============================================================
+Query ID: 18 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (20187 tokens)
+Processing text modality:   1%|          | 18/3071 [01:44<8:11:37,  9.66s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+df = df[df['Year'].between(1983, 1990)]
+df.set_index('Year', inplace=True)
+df[['Employed Total', 'Unemployed Total']] = df[['Total', 'Number']].apply(pd.to_numeric, errors='coerce')
+df[['Employed Total', 'Unemployed Total']] = df[['Employed Total', 'Unemployed Total']].fillna(method='ffill')
+df[['Employed Total', 'Unemployed Total']].plot(kind='line', marker='o')
+plt.title('Trends of Total Employed and Unemployed Population from 1983 to 1990')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.legend()
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+Python Error: '>=' not supported between instances of 'str' and 'int'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ df = df[df['Year'].between(1983, 1990)]
+ df.set_index('Year', inplace=True)
+ df[['Employed Total', 'Unemployed...
+Reference: [[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 30...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 11.76s
+
+============================================================
+Query ID: 19 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (49797 tokens)
+Processing text modality:   1%|          | 19/3071 [06:23<76:50:17, 90.63s/it]Predictions:  ['161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167116 161037 167']
+Answer:  ['161037']
+Prediction: 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, 167116, 161037, ...
+Reference: 161037
+Metrics: {'F1': 0.39, 'EM': 0.0, 'ROUGE-L': 0.39, 'SacreBLEU': 0.07}
+Processing Time: 279.26s
+
+============================================================
+Query ID: 20 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (49793 tokens)
+Processing text modality:   1%|          | 20/3071 [06:32<56:08:40, 66.25s/it]Predictions:  ['35 to 44 years 30 to 34 years']
+Answer:  ['35 to 39 years 35 to 44 years']
+Prediction: 35 to 44 years, 30 to 34 years
+Reference: 35 to 39 years, 35 to 44 years
+Metrics: {'F1': 75.0, 'EM': 0.0, 'ROUGE-L': 62.5, 'SacreBLEU': 38.26}
+Processing Time: 9.41s
+Checkpoint saved: 20 queries processed
+
+============================================================
+Query ID: 21 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (49787 tokens)
+Processing text modality:   1%|          | 21/3071 [06:42<41:37:06, 49.12s/it]Predictions:  ['167116 99826']
+Answer:  ['99826']
+Prediction: 167116, 99826
+Reference: 99826
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 9.20s
+
+============================================================
+Query ID: 22 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large text input (49795 tokens)
+Processing text modality:   1%|          | 22/3071 [06:51<31:24:01, 37.07s/it]Predictions:  ['626 36']
+Answer:  ['639']
+Prediction: 62.6, 3.6
+Reference: 63.90
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 8.98s
+
+============================================================
+Query ID: 23 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (49905 tokens)
+Processing text modality:   1%|          | 23/3071 [07:17<28:41:19, 33.88s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the HTML table
+df = pd.read_html('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table03.xlsx', header=0)[0]
+
+# Filter the data for '16 years and over' age group
+age_group = '16 years and over'
+row_index = df[df.iloc[:, 0] == age_group].index[0]
+
+# Extract the values for 'employed', 'unemployed', and 'not in the labor force'
+employed = df.iloc[row_index, 4]
+unemployed = df.iloc[row_index, 6]
+not_in_labor_force = df.iloc[row_index, 8]
+
+# Create a pie chart
+labels = ['Employed', 'Unemployed', 'Not in Labor Force']
+sizes = [employed, unemployed, not_in_labor_force]
+colors = ['lightgreen', 'lightcoral', 'lightblue']
+
+plt.figure(figsize=(8, 8))
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+plt.title('Distribution of Civilian Non-Institutional Population (16 years and over)')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+Python Error: 'utf-8' codec can't decode byte 0x87 in position 10: invalid start byte
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the HTML table
+df = pd.read_html('table.xlsx', header=0)[0]
+
+# Filter the data for '16 years and over' age group
+age_group ...
+Reference: [0.6, 0.02, 0.37]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 26.44s
+
+============================================================
+Query ID: 24 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (49881 tokens)
+Processing text modality:   1%|          | 24/3071 [08:03<31:39:06, 37.40s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the HTML table
+df = pd.read_html('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table03.xlsx', header=0)[0]
+
+# Extract relevant data for unemployment rates by age group
+# Filter for 'Unemployed' column and 'Percent of labor force' column
+unemployment_rates = df[df['Age, sex, and race'].isin(['16 years and over', '16 to 19 years', '18 to 19 years', '20 to 24 years', '25 to 54 years', '25 to 34 years', '30 to 34 years', '35 to 44 years', '35 to 39 years', '40 to 44 years', '45 to 54 years', '45 to 49 years', '50 to 54 years', '55 to 64 years', '55 to 59 years', '60 to 64 years', '65 years and over', '65 to 69 years', '70 to 74 years', '75 years and over'])]
+
+# Select only the rows that have 'Percent of labor force' under 'Unemployed' section
+unemployment_rates = unemployment_rates[unemployment_rates['Age, sex, and race'].isin(['16 years and over', '16 to 19 years', '18 to 19 years', '20 to 24 years', '25 to 54 years', '25 to 34 years', '30 to 34 years', '35 to 44 years', '35 to 39 years', '40 to 44 years', '45 to 54 years', '45 to 49 years', '50 to 54 years', '55 to 64 years', '55 to 59 years', '60 to 64 years', '65 years and over', '65 to 69 years', '70 to 74 years', '75 years and over'])]
+
+# Extract the age group and unemployment rate
+age_groups = unemployment_rates['Age, sex, and race']
+unemployment_rates = unemployment_rates['Percent of labor force']
+
+# Create a bar chart
+plt.figure(figsize=(14, 8))
+plt.bar(age_groups, unemployment_rates, color='skyblue')
+plt.xlabel('Age Group')
+plt.ylabel('Unemployment Rate (%)')
+plt.title('Unemployment Rates by Age Group')
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+
+plt.show()
+
+Python Error: 'utf-8' codec can't decode byte 0x87 in position 10: invalid start byte
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the HTML table
+df = pd.read_html('table.xlsx', header=0)[0]
+
+# Extract relevant data for unemployment rates by age group
+# ...
+Reference: [12.64, 12.016666666666666, 3.858333333333333, 12.0, 7.108333333333333, 4.841666666666667, 4.191666666666666, 3.341666666666667, 3.591666666666667, 3.091666666666667, 3.0416666666666665, 3.00833333333...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 45.59s
+
+============================================================
+Query ID: 25 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (14374 tokens)
+Processing text modality:   1%|          | 25/3071 [08:05<22:49:44, 26.98s/it]Predictions:  ['18 to 19 years 16 to 17 years']
+Answer:  ['16 to 17 years']
+Prediction: 18 to 19 years, 16 to 17 years
+Reference: 16 to 17 years
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 34.57}
+Processing Time: 2.68s
+
+============================================================
+Query ID: 26 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large text input (14359 tokens)
+Processing text modality:   1%|          | 26/3071 [08:13<17:56:44, 21.22s/it]Predictions:  ['15714 2892 1867 1026 1411 5034 1797 933 864 1694 855 839 1543 810 1961 841 1119 4416 1329 1145 1942']
+Answer:  ['101529']
+Prediction: 15714, 2892, 1867, 1026, 1411, 5034, 1797, 933, 864, 1694, 855, 839, 1543, 810, 1961, 841, 1119, 4416, 1329, 1145, 1942
+Reference: 101529
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 7.77s
+
+============================================================
+Query ID: 27 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (14365 tokens)
+Processing text modality:   1%|          | 27/3071 [08:21<14:39:11, 17.33s/it]Predictions:  ['25 to 54 years 35 to 44 years 40 to 44 years 30 to 34 years 25 to 34 years 45 to 54 years 20 to 24 years 18 to 19 years 16 to 19 years 16 to 17 years 55 to 64 years 65 years and over 75 years and over 70 to 74 years 65 to 69 years']
+Answer:  ['45 to 49 years 40 to 44 years 35 to 39 years 35 to 44 years 25 to 54 years']
+Prediction: 25 to 54 years, 35 to 44 years, 40 to 44 years, 30 to 34 years, 25 to 34 years, 45 to 54 years, 20 to 24 years, 18 to 19 years, 16 to 19 years, 16 to 17 years, 55 to 64 years, 65 years and over, 75 ye...
+Reference: 45 to 49 years, 40 to 44 years, 35 to 39 years, 35 to 44 years, 25 to 54 years
+Metrics: {'F1': 42.5, 'EM': 0.0, 'ROUGE-L': 32.5, 'SacreBLEU': 17.07}
+Processing Time: 8.26s
+
+============================================================
+Query ID: 28 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large text input (14369 tokens)
+Processing text modality:   1%|          | 28/3071 [08:23<10:46:26, 12.75s/it]Predictions:  ['66']
+Answer:  ['66']
+Prediction: 6.6
+Reference: 6.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 29 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (14399 tokens)
+Processing text modality:   1%|          | 29/3071 [08:26<8:08:04,  9.63s/it] Predictions:  ['188 126']
+Answer:  ['188 126']
+Prediction: 188, 12.6
+Reference: 188, 12.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.35s
+
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (14371 tokens)
+Processing text modality:   1%|          | 30/3071 [08:35<8:05:29,  9.58s/it]Prediction: The Hispanic or Latino population aged 16 and over shows higher labor force participation rates for men (75.1%) compared to women (58.7%). The employment rate is highest among men aged 25-54 (90.1%) a...
+Reference: The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.47s
+Checkpoint saved: 30 queries processed
+
+============================================================
+Query ID: 31 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11430 tokens)
+Processing text modality:   1%|          | 31/3071 [08:37<6:07:21,  7.25s/it]Predictions:  ['164287']
+Answer:  ['164287']
+Prediction: 164287
+Reference: 164287
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.82s
+
+============================================================
+Query ID: 32 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (11434 tokens)
+Processing text modality:   1%|          | 32/3071 [08:39<4:47:36,  5.68s/it]Predictions:  ['2023 2022']
+Answer:  ['2023']
+Prediction: 2023, 2022
+Reference: 2023
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.01s
+
+============================================================
+Query ID: 33 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (11434 tokens)
+Processing text modality:   1%|          | 33/3071 [08:41<3:47:31,  4.49s/it]Predictions:  ['2829']
+Answer:  ['2829']
+Prediction: 2829
+Reference: 2829
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.73s
+
+============================================================
+Query ID: 34 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (11444 tokens)
+Processing text modality:   1%|          | 34/3071 [08:42<3:02:38,  3.61s/it]Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.54s
+
+============================================================
+Query ID: 35 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (11524 tokens)
+Processing text modality:   1%|          | 35/3071 [08:49<3:55:59,  4.66s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table05.xlsx', sheet_name=0)
+data = df.iloc[3:5, 1:3].values
+years = ['2022', '2023']
+populations = data.flatten()
+plt.plot(years, populations, marker='o')
+plt.title('Trend in Total Civilian Noninstitutional Population from 2022 to 2023')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.xticks(years)
+plt.grid(True)
+plt.show()
+
+Python Error: x and y must have same first dimension, but have shapes (2,) and (4,)
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx', sheet_name=0)
+ data = df.iloc[3:5, 1:3].values
+ years = ['2022', '2023']
+ populations = data.flatten()
+ plt.plo...
+Reference: [[263973.0, 266942.0]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.13s
+
+============================================================
+Query ID: 36 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large text input (11993 tokens)
+Processing text modality:   1%|          | 36/3071 [08:51<3:12:17,  3.80s/it]Predictions:  ['543']
+Answer:  ['543']
+Prediction: 543
+Reference: 543
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.79s
+
+============================================================
+Query ID: 37 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (11994 tokens)
+Processing text modality:   1%|          | 37/3071 [08:54<2:50:38,  3.37s/it]Predictions:  ['men 16 years and over women 16 years and over']
+Answer:  ['men women']
+Prediction: Men, 16 years and over, Women, 16 years and over
+Reference: Men, Women
+Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 4.99}
+Processing Time: 2.38s
+
+============================================================
+Query ID: 38 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (11987 tokens)
+Processing text modality:   1%|          | 38/3071 [08:56<2:30:48,  2.98s/it]Predictions:  ['3926 3926']
+Answer:  ['4135']
+Prediction: 3926, 3926
+Reference: 4135
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.07s
+
+============================================================
+Query ID: 39 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large text input (11987 tokens)
+Processing text modality:   1%|▏         | 39/3071 [08:58<2:17:06,  2.71s/it]Predictions:  ['663 669']
+Answer:  ['1332']
+Prediction: 66.3, 66.9
+Reference: 133.2
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.08s
+
+============================================================
+Query ID: 40 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (12013 tokens)
+Processing text modality:   1%|▏         | 40/3071 [09:00<2:07:26,  2.52s/it]Predictions:  ['573 587']
+Answer:  ['mean 2022 622 median 2022 629 mean 2023 628 median 2023 640']
+Prediction: 57.3, 58.7
+Reference: Mean 2022: 62.25, Median 2022: 62.85, Mean 2023: 62.77, Median 2023: 64.00
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.08s
+Checkpoint saved: 40 queries processed
+
+============================================================
+Query ID: 41 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11985 tokens)
+Processing text modality:   1%|▏         | 41/3071 [09:14<5:02:55,  6.00s/it]Prediction: The table presents annual employment and labor force participation data for the Hispanic or Latino population in the U.S., segmented by sex, age, and ethnic subgroup (Mexican, Puerto Rican, Cuban) for...
+Reference: The dataset provides statistics on the employment status of the Hispanic or Latino population segmented by gender and year (2022 and 2023). The main columns include 'Category' (e.g., population, labor...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 14.11s
+
+============================================================
+Query ID: 42 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (11768 tokens)
+Processing text modality:   1%|▏         | 42/3071 [09:16<4:04:32,  4.84s/it]Predictions:  ['39357 24720']
+Answer:  ['39357']
+Prediction: 39357, 24720
+Reference: 39357
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.15s
+
+============================================================
+Query ID: 43 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11770 tokens)
+Processing text modality:   1%|▏         | 43/3071 [09:18<3:19:12,  3.95s/it]Predictions:  ['bachelors degree only associate degree']
+Answer:  ['associate degree']
+Prediction: Bachelor's degree only, Associate degree
+Reference: Associate degree
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 21.36}
+Processing Time: 1.86s
+
+============================================================
+Query ID: 44 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (11770 tokens)
+Processing text modality:   1%|▏         | 44/3071 [09:20<2:51:44,  3.40s/it]Predictions:  ['16796 17302']
+Answer:  ['7668']
+Prediction: 16796, 17302
+Reference: 7668
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.14s
+
+============================================================
+Query ID: 45 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (11767 tokens)
+Processing text modality:   1%|▏         | 45/3071 [09:22<2:28:56,  2.95s/it]Predictions:  ['women less than high school diploma']
+Answer:  ['women']
+Prediction: Women, Less than a high school diploma
+Reference: Women
+Metrics: {'F1': 28.57, 'EM': 0.0, 'ROUGE-L': 28.57, 'SacreBLEU': 8.12}
+Processing Time: 1.90s
+
+============================================================
+Query ID: 46 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11772 tokens)
+Processing text modality:   1%|▏         | 46/3071 [09:30<3:46:46,  4.50s/it]Prediction: The table presents 2023 employment status data for the U.S. civilian noninstitutional population aged 25 and over, segmented by education level (less than high school, high school graduate, some colle...
+Reference: The table provides data on the employment status of the civilian noninstitutional population aged 25 years and over in the United States, segmented by educational attainment, sex, race, and Hispanic o...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.10s
+
+============================================================
+Query ID: 47 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large text input (11818 tokens)
+Processing text modality:   2%|▏         | 47/3071 [09:32<3:05:27,  3.68s/it]Predictions:  ['increasing trend increasing trend']
+Answer:  ['increasing trend']
+Prediction: Increasing trend, Increasing trend
+Reference: Increasing trend
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 31.95}
+Processing Time: 1.77s
+
+============================================================
+Query ID: 48 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (13896 tokens)
+Processing text modality:   2%|▏         | 48/3071 [09:34<2:39:25,  3.16s/it]Predictions:  ['men women']
+Answer:  ['men']
+Prediction: Men, Women
+Reference: Men
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.96s
+
+============================================================
+Query ID: 49 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (13896 tokens)
+Processing text modality:   2%|▏         | 49/3071 [09:36<2:22:29,  2.83s/it]Predictions:  ['436']
+Answer:  ['436']
+Prediction: 43.6
+Reference: 43.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 50 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (13907 tokens)
+Processing text modality:   2%|▏         | 50/3071 [09:38<2:13:56,  2.66s/it]Predictions:  ['05 05']
+Answer:  ['07']
+Prediction: 0.5, 0.5
+Reference: 0.70
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.26s
+Checkpoint saved: 50 queries processed
+
+============================================================
+Query ID: 51 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (13927 tokens)
+Processing text modality:   2%|▏         | 51/3071 [09:40<2:08:58,  2.56s/it]Predictions:  ['478 481']
+Answer:  ['478']
+Prediction: 47.8, 48.1
+Reference: 47.80
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.33s
+
+============================================================
+Query ID: 52 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (13903 tokens)
+Processing text modality:   2%|▏         | 52/3071 [09:50<3:54:29,  4.66s/it]Prediction: The table presents the percent distribution of employed persons by occupation, race, Hispanic or Latino ethnicity, and sex for the years 2022 and 2023. Key columns include Occupation categories (e.g.,...
+Reference: The table provides employment distribution data by occupation, gender, and year (2022 and 2023). Key columns include 'Occupation,' 'Total 2022,' 'Total 2023,' 'Men 2022,' 'Men 2023,' 'Women 2022,' and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.55s
+
+============================================================
+Query ID: 53 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (9038 tokens)
+Processing text modality:   2%|▏         | 53/3071 [09:52<3:13:29,  3.85s/it]Predictions:  ['management professional and related occupations management occupations business and financial operations occupations']
+Answer:  ['management professional and related occupations management occupations business and financial operations occupations']
+Prediction: Management, professional, and related occupations, Management occupations, Business and financial operations occupations
+Reference: Management, professional, and related occupations, Management occupations, Business and financial operations occupations
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.95s
+
+============================================================
+Query ID: 54 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (9034 tokens)
+Processing text modality:   2%|▏         | 54/3071 [09:54<2:42:36,  3.23s/it]Predictions:  ['2067 33016']
+Answer:  ['2067']
+Prediction: 2067, 33016
+Reference: 2067
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.80s
+
+============================================================
+Query ID: 55 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (9113 tokens)
+Processing text modality:   2%|▏         | 55/3071 [10:01<3:43:58,  4.46s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table09.xlsx')
+men_2023 = df[df['Occupation'] != 'Total']['Men 2023'].values
+women_2023 = df[df['Occupation'] != 'Total']['Women 2023'].values
+plt.scatter(men_2023, women_2023)
+plt.xlabel('Men Employment in 2023')
+plt.ylabel('Women Employment in 2023')
+plt.title('Relationship between Men and Women Employment in 2023')
+plt.show()
+
+Python Error: 'Men 2023'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ men_2023 = df[df['Occupation'] != 'Total']['Men 2023'].values
+ women_2023 = df[df['Occupation'] != 'Total']['W...
+Reference: [[2987.0, 1769.0, 3063.0, 4414.0, 863.0, 4729.0, 7881.0, 2528.0, 658.0, 3021.0, 2426.0, 783.0, 4571.0, 909.0, 934.0, 12104.0, 16518.0, 33663.0, 13111.0, 4400.0, 961.0, 5675.0, 14435.0, 17145.0, 2306.0...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.31s
+
+============================================================
+Query ID: 56 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (9128 tokens)
+Processing text modality:   2%|▏         | 56/3071 [10:10<4:47:58,  5.73s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table09.xlsx')
+data_2023 = df[df['Occupation'].isin(['Management occupations', 'Business and financial operations occupations', 'Management, professional, and related occupations'])]
+data_2023 = data_2023[data_2023['2023'] != '']
+values = data_2023['2023'].astype(int).values
+labels = data_2023['Occupation'].values
+plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title('Proportion of Total Employment in 2023')
+plt.axis('equal')
+plt.show()
+
+Python Error: '2023'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ data_2023 = df[df['Occupation'].isin(['Management occupations', 'Business and financial operations occupations...
+Reference: [0.53, 0.23, 0.16, 0.07]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 8.71s
+
+============================================================
+Query ID: 57 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large text input (9037 tokens)
+Processing text modality:   2%|▏         | 57/3071 [10:12<3:48:46,  4.55s/it]Predictions:  ['24153 24246']
+Answer:  ['24165']
+Prediction: 24153, 24246
+Reference: 24165
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.81s
+
+============================================================
+Query ID: 58 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (20518 tokens)
+Processing text modality:   2%|▏         | 58/3071 [10:15<3:31:35,  4.21s/it]Predictions:  ['119454 26981']
+Answer:  ['134056 26981']
+Prediction: 119454, 26981
+Reference: 134056, 26981
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 3.42s
+
+============================================================
+Query ID: 59 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (20527 tokens)
+Processing text modality:   2%|▏         | 59/3071 [10:18<3:17:27,  3.93s/it]Predictions:  ['4945 1135']
+Answer:  ['3810']
+Prediction: 4945, 1135
+Reference: 3810
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.28s
+
+============================================================
+Query ID: 60 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (20527 tokens)
+Processing text modality:   2%|▏         | 60/3071 [10:22<3:07:30,  3.74s/it]Predictions:  ['1200 536']
+Answer:  ['parttime workers']
+Prediction: 1200, 536
+Reference: Part-time workers
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.27s
+Checkpoint saved: 60 queries processed
+
+============================================================
+Query ID: 61 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (20500 tokens)
+Processing text modality:   2%|▏         | 61/3071 [10:24<2:53:23,  3.46s/it]Prediction: No anomalies detected.
+Reference: No anomalies detected.
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.80s
+
+============================================================
+Query ID: 62 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (20512 tokens)
+Processing text modality:   2%|▏         | 62/3071 [10:42<6:24:58,  7.68s/it]Prediction: The table presents 2023 annual average employment data for the U.S., segmented by age, sex, race, and Hispanic or Latino ethnicity. Key trends include: total employed persons (134,056K) far exceed une...
+Reference: 2023 Employment Trends Summary
+
+The table provides data on employed individuals categorized by age, sex, race, and ethnicity for the year 2023.
+Key columns include the number of full-time workers (bot...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 17.52s
+
+============================================================
+Query ID: 63 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11081 tokens)
+Processing text modality:   2%|▏         | 63/3071 [10:44<4:54:52,  5.88s/it]Predictions:  ['5243']
+Answer:  ['5243']
+Prediction: 5243
+Reference: 5243
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.69s
+
+============================================================
+Query ID: 64 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (11089 tokens)
+Processing text modality:   2%|▏         | 64/3071 [10:45<3:50:17,  4.60s/it]Predictions:  ['white black']
+Answer:  ['white']
+Prediction: White, Black
+Reference: White
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.59s
+
+============================================================
+Query ID: 65 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (11098 tokens)
+Processing text modality:   2%|▏         | 65/3071 [10:47<3:06:40,  3.73s/it]Predictions:  ['17']
+Answer:  ['17']
+Prediction: 1.73
+Reference: 1.73
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.70s
+
+============================================================
+Query ID: 66 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large text input (11143 tokens)
+Processing text modality:   2%|▏         | 66/3071 [10:48<2:34:10,  3.08s/it]Predictions:  ['increasing trend']
+Answer:  ['stabilize']
+Prediction: Increasing trend
+Reference: Stabilize
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+
+============================================================
+Query ID: 67 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (11104 tokens)
+Processing text modality:   2%|▏         | 67/3071 [10:50<2:18:50,  2.77s/it]Predictions:  ['84203 74089']
+Answer:  ['79146']
+Prediction: 84203, 74089
+Reference: 79146
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.06s
+
+============================================================
+Query ID: 68 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (9787 tokens)
+Processing text modality:   2%|▏         | 68/3071 [10:52<2:05:41,  2.51s/it]Predictions:  ['17071 13271']
+Answer:  ['3800']
+Prediction: 17071, 13271
+Reference: 3800
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.90s
+
+============================================================
+Query ID: 69 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (9796 tokens)
+Processing text modality:   2%|▏         | 69/3071 [10:54<1:50:52,  2.22s/it]Predictions:  ['7414']
+Answer:  ['7414']
+Prediction: 7414
+Reference: 7414
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.53s
+
+============================================================
+Query ID: 70 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (9787 tokens)
+Processing text modality:   2%|▏         | 70/3071 [10:55<1:41:21,  2.03s/it]Predictions:  ['mexican puerto rican cuban']
+Answer:  ['mexican puerto rican cuban']
+Prediction: Mexican, Puerto Rican, Cuban
+Reference: Mexican, Puerto Rican, Cuban
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.58s
+Checkpoint saved: 70 queries processed
+
+============================================================
+Query ID: 71 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (9890 tokens)
+Processing text modality:   2%|▏         | 71/3071 [11:03<3:04:00,  3.68s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table14.xlsx")
+data = df.iloc[4:7, 1:3].values
+labels = ['Men 2022', 'Men 2023', 'Women 2022', 'Women 2023']
+values = [data[0][0], data[1][0], data[0][1], data[1][1]]
+plt.bar(labels, values)
+plt.title('Total Employment Numbers for Men and Women Among Hispanic or Latino Workers')
+plt.xlabel('Category')
+plt.ylabel('Number of Workers')
+plt.show()
+
+OUTPUT VALUE: [16654.0, 12646.0, 17071.0, 13271.0]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ data = df.iloc[4:7, 1:3].values
+ labels = ['Men 2022', 'Men 2023', 'Women 2022', 'Women 2023']
+ values = [data...
+Reference: [16654.0, 17071.0, 12646.0, 13271.0]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 7.54s
+
+============================================================
+Query ID: 72 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (9896 tokens)
+Processing text modality:   2%|▏         | 72/3071 [11:16<5:21:43,  6.44s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table14.xlsx')
+data = df[df['Category'].isin(['Management, professional, and related occupations'])]
+data = data[['Category', 'Men', 'Women']].dropna()
+data = data.set_index('Category')
+data.columns = ['2022', '2023']
+data = data.reset_index()
+data['Year'] = data['Year'].astype(str)
+data['Year'] = data['Year'].str.replace('2022', '2022')
+data['Year'] = data['Year'].str.replace('2023', '2023')
+data['Year'] = data['Year'].astype(int)
+data = data.sort_values('Year')
+data.set_index('Year', inplace=True)
+data.plot(kind='line', marker='o', figsize=(10, 6))
+plt.title('Trend of Employment Numbers in Management, Professional, and Related Occupations for Men and Women (2022-2023)')
+plt.xlabel('Year')
+plt.ylabel('Employment Numbers')
+plt.legend(['Men', 'Women'])
+plt.grid(True)
+plt.show()
+
+Python Error: "['Men', 'Women'] not in index"
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ data = df[df['Category'].isin(['Management, professional, and related occupations'])]
+ data = data[['Category'...
+Reference: [[4027.0, 4245.0], [773.0, 874.0]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 12.87s
+
+============================================================
+Query ID: 73 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (22870 tokens)
+Processing text modality:   2%|▏         | 73/3071 [11:19<4:34:38,  5.50s/it]Predictions:  ['1388']
+Answer:  ['2218']
+Prediction: 1388
+Reference: 2218
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.30s
+
+============================================================
+Query ID: 74 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (22866 tokens)
+Processing text modality:   2%|▏         | 74/3071 [11:22<4:01:19,  4.83s/it]Predictions:  ['wholesale and retail trade']
+Answer:  ['leisure and hospitality']
+Prediction: Wholesale and retail trade
+Reference: Leisure and hospitality
+Metrics: {'F1': 28.57, 'EM': 0.0, 'ROUGE-L': 28.57, 'SacreBLEU': 15.97}
+Processing Time: 3.28s
+
+============================================================
+Query ID: 75 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (22875 tokens)
+Processing text modality:   2%|▏         | 75/3071 [11:26<3:35:18,  4.31s/it]Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.10s
+
+============================================================
+Query ID: 76 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (22868 tokens)
+Processing text modality:   2%|▏         | 76/3071 [11:39<5:47:20,  6.96s/it]Prediction: The table presents 2023 annual average employment data for nonagricultural industries, categorized by age, sex, race, and Hispanic or Latino ethnicity. Primary columns include industry sectors: Mining...
+Reference: The table provides employment statistics across nonagricultural industries, broken down by demographic categories such as age (e.g., '16 to 19 years,' '20 years and over'), and specific industries (e....
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 13.13s
+
+============================================================
+Query ID: 77 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large text input (23061 tokens)
+Processing text modality:   3%|▎         | 77/3071 [11:42<4:56:25,  5.94s/it]Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.98
+Reference: Strong positive correlation, 0.99
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 3.56s
+
+============================================================
+Query ID: 78 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (9624 tokens)
+Processing text modality:   3%|▎         | 78/3071 [11:44<3:51:35,  4.64s/it]Predictions:  ['75 10']
+Answer:  ['65']
+Prediction: 75, 10
+Reference: 65
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.61s
+
+============================================================
+Query ID: 79 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large text input (9610 tokens)
+Processing text modality:   3%|▎         | 79/3071 [11:47<3:22:02,  4.05s/it]Predictions:  ['3520104236713681']
+Answer:  ['35']
+Prediction: 35,20,10,4,2,3,6,7,1,3,6,8,1
+Reference: 35
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.67s
+
+============================================================
+Query ID: 80 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (9609 tokens)
+Processing text modality:   3%|▎         | 80/3071 [11:48<2:50:20,  3.42s/it]Predictions:  ['128154 21538']
+Answer:  ['128154 21538']
+Prediction: 128154, 21538
+Reference: 128154, 21538
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.93s
+Checkpoint saved: 80 queries processed
+
+============================================================
+Query ID: 81 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (9707 tokens)
+Processing text modality:   3%|▎         | 81/3071 [12:03<5:36:01,  6.74s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the HTML table
+df = pd.read_html("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table16.xlsx")[0]
+
+# Filter for non-agricultural industries
+non_agricultural = df[df['Age and sex'].str.contains('Nonagricultural industries')]
+
+# Extract relevant columns for wage and salary workers and self-employed workers
+wage_salary_workers = non_agricultural.iloc[:, 6].astype(int)  # Total wage and salary workers
+self_employed_workers = non_agricultural.iloc[:, 11].astype(int)  # Self-employed workers
+
+# Extract age groups (excluding 'Total' and 'Men' and 'Women' rows)
+age_groups = non_agricultural.iloc[:, 0].str.replace('Total, 16 years and over', '').str.replace('Men, 16 years and over', '').str.replace('Women, 16 years and over', '').str.strip()
+
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(wage_salary_workers, self_employed_workers, alpha=0.7)
+plt.title('Relationship between Wage and Salary Workers and Self-Employed Workers in Non-Agricultural Industries')
+plt.xlabel('Wage and Salary Workers')
+plt.ylabel('Self-Employed Workers')
+plt.grid(True)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+Python Error: 'utf-8' codec can't decode byte 0x87 in position 10: invalid start byte
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the HTML table
+df = pd.read_html("table.xlsx")[0]
+
+# Filter for non-agricultural industries
+non_agricultural = df[df['Age a...
+Reference: [[128154.0, 5197.0, 2012.0, 3185.0, 13053.0, 29697.0, 27781.0, 24341.0, 20263.0, 7822.0, 69190.0, 2562.0, 936.0, 1626.0, 6670.0, 16054.0, 15279.0, 13339.0, 11045.0, 4241.0, 58964.0, 2634.0, 1076.0, 15...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 14.50s
+
+============================================================
+Query ID: 82 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (9703 tokens)
+Processing text modality:   3%|▎         | 82/3071 [12:13<6:26:08,  7.75s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table16.xlsx')
+data = df[df['Age and sex'] == 'Total, 16 years and over']
+private_industry = data.iloc[0, 7]  # Private industries total
+government = data.iloc[0, 10]       # Government total
+unpaid_family = data.iloc[0, 12]    # Unpaid family workers total
+labels = ['Private Industry Workers', 'Government Workers', 'Unpaid Family Workers']
+sizes = [private_industry, government, unpaid_family]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.title('Proportion of Workers by Sector for Individuals Aged 16 Years and Older')
+plt.show()
+
+OUTPUT VALUE: [0.86, 0.14, 0.0]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ data = df[df['Age and sex'] == 'Total, 16 years and over']
+ private_industry = data.iloc[0, 7]  # Private indu...
+Reference: [0.68, 0.31, 0.01]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 10.10s
+
+============================================================
+Query ID: 83 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (15535 tokens)
+Processing text modality:   3%|▎         | 83/3071 [12:15<5:06:05,  6.15s/it]Predictions:  ['590 11']
+Answer:  ['590']
+Prediction: 590, 11
+Reference: 590
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.40s
+
+============================================================
+Query ID: 84 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (15515 tokens)
+Processing text modality:   3%|▎         | 84/3071 [12:18<4:07:15,  4.97s/it]Predictions:  ['education and health services']
+Answer:  ['education and health services']
+Prediction: Education and health services
+Reference: Education and health services
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.21s
+
+============================================================
+Query ID: 85 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (15530 tokens)
+Processing text modality:   3%|▎         | 85/3071 [12:20<3:28:10,  4.18s/it]Predictions:  ['00']
+Answer:  ['01']
+Prediction: 0.0054
+Reference: 0.07%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.35s
+
+============================================================
+Query ID: 86 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large text input (15721 tokens)
+Processing text modality:   3%|▎         | 86/3071 [12:23<3:04:35,  3.71s/it]Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.99
+Reference: Strong positive correlation, 1.00.
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.61s
+
+============================================================
+Query ID: 87 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (15523 tokens)
+Processing text modality:   3%|▎         | 87/3071 [12:35<5:20:06,  6.44s/it]Prediction: The dataset presents employment distribution across nonagricultural industries in 2023, segmented by sex and worker classification (wage/salary, self-employed, unpaid family workers). Key insights inc...
+Reference: The dataset highlights the overall employment distribution across major industries, with private employment dominating and government roles contributing significantly in sectors like education and hea...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 12.80s
+
+============================================================
+Query ID: 88 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (46393 tokens)
+Processing text modality:   3%|▎         | 88/3071 [12:43<5:42:38,  6.89s/it]Predictions:  ['161037']
+Answer:  ['145345']
+Prediction: 161037
+Reference: 145345
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 7.95s
+
+============================================================
+Query ID: 89 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (46396 tokens)
+Processing text modality:   3%|▎         | 89/3071 [12:51<5:55:49,  7.16s/it]Predictions:  ['child day care services']
+Answer:  ['child day care services']
+Prediction: Child day care services
+Reference: Child day care services
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 7.78s
+
+============================================================
+Query ID: 90 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (46412 tokens)
+Processing text modality:   3%|▎         | 90/3071 [12:59<6:09:01,  7.43s/it]Predictions:  ['crop production forestry except logging']
+Answer:  ['crop production']
+Prediction: Crop production, Forestry, except logging
+Reference: Crop production
+Metrics: {'F1': 57.14, 'EM': 0.0, 'ROUGE-L': 57.14, 'SacreBLEU': 21.36}
+Processing Time: 8.05s
+Checkpoint saved: 90 queries processed
+
+============================================================
+Query ID: 91 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (46486 tokens)
+Processing text modality:   3%|▎         | 91/3071 [13:16<8:29:25, 10.26s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table19.xlsx")
+industry_data = df[df['Industry'] != 'Total, 16 years and over']
+industry_data = industry_data.reset_index(drop=True)
+industry_data = industry_data[['Industry', 'Total<br />employed']]
+industry_data = industry_data.sort_values('Industry')
+plt.figure(figsize=(14, 8))
+plt.plot(industry_data['Industry'], industry_data['Total<br />employed'], marker='o')
+plt.title('Total Number of Employed Individuals Across Different Industries')
+plt.xlabel('Industry')
+plt.ylabel('Total Employed')
+plt.xticks(rotation=90)
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+Python Error: "['Total<br />employed'] not in index"
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ industry_data = df[df['Industry'] != 'Total, 16 years and over']
+ industry_data = industry_data.reset_index(dr...
+Reference: [[1279.0, 10759.0, 1236.0, 617.0, 245.0, 1615.0, 6344.0, 617.0, 44.0, 1322.0, 33.0, 148.0, 2264.0, 734.0, 961.0, 105.0, 55.0, 139.0, 705.0, 434.0, 91.0, 1883.0, 3529.0, 1314.0, 180.0, 488.0, 1353.0, 2...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 16.86s
+
+============================================================
+Query ID: 92 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (31128 tokens)
+Processing text modality:   3%|▎         | 92/3071 [13:21<7:11:59,  8.70s/it]Predictions:  ['2854 590']
+Answer:  ['2264 590']
+Prediction: 2854, 590
+Reference: 2264, 590
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 5.07s
+
+============================================================
+Query ID: 93 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (31119 tokens)
+Processing text modality:   3%|▎         | 93/3071 [13:26<6:12:57,  7.51s/it]Predictions:  ['construction manufacturing agriculture']
+Answer:  ['manufacturing construction agriculture']
+Prediction: Construction, Manufacturing, Agriculture
+Reference: Manufacturing, Construction, Agriculture
+Metrics: {'F1': 100.0, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 4.75s
+
+============================================================
+Query ID: 94 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large text input (31121 tokens)
+Processing text modality:   3%|▎         | 94/3071 [13:31<5:35:17,  6.76s/it]Predictions:  ['220 220']
+Answer:  ['265']
+Prediction: 220, 220
+Reference: 265
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 4.99s
+
+============================================================
+Query ID: 95 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (31122 tokens)
+Processing text modality:   3%|▎         | 95/3071 [13:41<6:22:48,  7.72s/it]Prediction: The table presents 2023 annual average employment data by industry, sex, race, and occupation (in thousands). Key insights: Education and health services is the largest sector (36,378 employed), while...
+Reference: The table outlines employment statistics across various industries for 2023, highlighting categories like management, service, and sales roles. Manufacturing is the largest sector with 15,570 thousand...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.96s
+
+============================================================
+Query ID: 96 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large text input (31124 tokens)
+Processing text modality:   3%|▎         | 96/3071 [13:46<5:45:33,  6.97s/it]Processing text modality:   3%|▎         | 97/3071 [13:47<4:22:33,  5.30s/it]Processing text modality:   3%|▎         | 98/3071 [13:49<3:20:37,  4.05s/it]Processing text modality:   3%|▎         | 99/3071 [13:50<2:35:55,  3.15s/it]Processing text modality:   3%|▎         | 100/3071 [14:00<4:18:04,  5.21s/it]Processing text modality:   3%|▎         | 101/3071 [14:01<3:16:44,  3.97s/it]Processing text modality:   3%|▎         | 102/3071 [14:02<2:30:58,  3.05s/it]Processing text modality:   3%|▎         | 103/3071 [14:03<1:58:17,  2.39s/it]Processing text modality:   3%|▎         | 104/3071 [14:04<1:37:23,  1.97s/it]Processing text modality:   3%|▎         | 105/3071 [14:10<2:38:57,  3.22s/it]Processing text modality:   3%|▎         | 106/3071 [14:11<2:12:54,  2.69s/it]Processing text modality:   3%|▎         | 107/3071 [14:13<1:58:19,  2.40s/it]Processing text modality:   4%|▎         | 108/3071 [14:14<1:44:22,  2.11s/it]Processing text modality:   4%|▎         | 109/3071 [14:21<2:47:54,  3.40s/it]Predictions:  ['25533 wholesale and retail trade']
+Answer:  ['15825 leisure and hospitality']
+Prediction: 2553.33, Wholesale and retail trade
+Reference: 1582.47, Leisure and hospitality
+Metrics: {'F1': 22.22, 'EM': 0.0, 'ROUGE-L': 22.22, 'SacreBLEU': 10.68}
+Processing Time: 5.22s
+
+============================================================
+Query ID: 97 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['24492 24062']
+Answer:  ['24492 24062']
+Prediction: 24492, 24062
+Reference: 24492, 24062
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.40s
+
+============================================================
+Query ID: 98 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['377102']
+Answer:  ['377102']
+Prediction: 37710.2
+Reference: 37710.20
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.14s
+
+============================================================
+Query ID: 99 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['economic reasons noneconomic reasons']
+Answer:  ['4']
+Prediction: Economic reasons, Noneconomic reasons
+Reference: 4
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.04s
+
+============================================================
+Query ID: 100 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents 2023 annual averages of persons working 1 to 34 hours in all and nonagricultural industries, categorized by reason for working less than 35 hours (economic vs. noneconomic) and usua...
+Reference: The table summarizes the number of persons working 1 to 34 hours in 2023, categorized by reasons for working less than 35 hours and usual work status (full-time or part-time) across all industries and...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.03s
+Checkpoint saved: 100 queries processed
+
+============================================================
+Query ID: 101 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['48828']
+Answer:  ['48828']
+Prediction: 4882.8
+Reference: 4882.80
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.09s
+
+============================================================
+Query ID: 102 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['3390']
+Answer:  ['33695']
+Prediction: 3390
+Reference: 33695
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 0.90s
+
+============================================================
+Query ID: 103 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['134']
+Answer:  ['134']
+Prediction: 134
+Reference: 134
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.85s
+
+============================================================
+Query ID: 104 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['35 hours and over']
+Answer:  ['35 hours and over']
+Prediction: 35 hours and over
+Reference: 35 hours and over
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 0.99s
+
+============================================================
+Query ID: 105 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table21.xlsx")
+agriculture = df[df['Hours of work'] == 'Persons at work']['Agriculture and related industries'].values
+non_agricultural = df[df['Hours of work'] == 'Persons at work']['Nonagricultural industries'].values
+plt.scatter(agriculture, non_agricultural)
+plt.xlabel('Agriculture and related industries')
+plt.ylabel('Nonagricultural industries')
+plt.title('Relationship between persons working in agriculture and non-agricultural industries')
+plt.show()
+
+Python Error: 'Agriculture and related industries'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ agriculture = df[df['Hours of work'] == 'Persons at work']['Agriculture and related industries'].values
+ non_a...
+Reference: [[3.5, 11.0, 6.9, 77.5, 6.1, 49.3, 22.1, 7.9, 8.7, 5.6]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 6.12s
+
+============================================================
+Query ID: 106 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['14880 10054']
+Answer:  ['4826']
+Prediction: 14880, 10054
+Reference: 4826
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 107 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['total nonagricultural industries wage and salary workers1 education and health services']
+Answer:  ['7']
+Prediction: Total, nonagricultural industries, Wage and salary workers(1), Education and health services
+Reference: 7
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.71s
+
+============================================================
+Query ID: 108 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['wholesale and retail trade education and health services leisure and hospitality']
+Answer:  ['mining quarrying and oil and gas extraction unpaid family workers information']
+Prediction: Wholesale and retail trade, Education and health services, Leisure and hospitality
+Reference: Mining, quarrying, and oil and gas extraction, Unpaid family workers, Information
+Metrics: {'F1': 18.18, 'EM': 0.0, 'ROUGE-L': 18.18, 'SacreBLEU': 4.46}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 109 | Type: Visualization | SubType: PieChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table23.xlsx")
+industry_data = df[df['Industry and class of worker'].isin(['Manufacturing', 'Construction'])]
+values = industry_data.iloc[:, 1].values
+labels = industry_data['Industry and class of worker'].values
+plt.pie(values, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title("Proportion in 'Manufacturing' and 'Construction' industries in 2023")
+plt.axis('equal')
+plt.show()
+
+OUTPUT VALUE: [0.4, 0.6]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ industry_data = df[df['Industry and class of worker'].isin(['Manufacturing', 'Construction'])]
+ values = indus...
+Reference: [0.4, 0.6]
+Metrics: {'ECR': True, 'Pass': True}
+Processing Time: 6.41s
+
+============================================================
+Query ID: 110 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: Processing text modality:   4%|▎         | 110/3071 [14:29<3:54:34,  4.75s/it]import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table23.xlsx')
+industry_data = df[df['Industry and class of worker'] == 'Manufacturing']
+full_time_avg = industry_data.iloc[0]['Average hours']['Persons who usually work full time']
+part_time_avg = industry_data.iloc[0]['Average hours']['Persons who usually work part time']
+categories = ['Full Time', 'Part Time']
+avg_hours = [full_time_avg, part_time_avg]
+plt.plot(categories, avg_hours, marker='o')
+plt.title('Average Hours Worked by Workers in Manufacturing Industry')
+plt.xlabel('Work Category')
+plt.ylabel('Average Hours')
+plt.grid(True)
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+Python Error: 'Average hours'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ industry_data = df[df['Industry and class of worker'] == 'Manufacturing']
+ full_time_avg = industry_data.iloc[...
+Reference: [[791, 577]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.90s
+Checkpoint saved: 110 queries processed
+
+============================================================
+Query ID: 111 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11595 tokens)
+Processing text modality:   4%|▎         | 111/3071 [14:31<3:15:04,  3.95s/it]Predictions:  ['married spouse present1 418']
+Answer:  ['men 16 years and over married spouse present1 433']
+Prediction: Married, spouse present(1), 41.8
+Reference: Men, 16 years and over, Married, spouse present(1), 43.30
+Metrics: {'F1': 46.15, 'EM': 0.0, 'ROUGE-L': 46.15, 'SacreBLEU': 17.04}
+Processing Time: 2.09s
+
+============================================================
+Query ID: 112 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11598 tokens)
+Processing text modality:   4%|▎         | 112/3071 [14:33<2:49:23,  3.43s/it]Predictions:  ['34282 118705']
+Answer:  ['34282 118705']
+Prediction: 34282, 118705
+Reference: 34282, 118705
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.22s
+
+============================================================
+Query ID: 113 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11602 tokens)
+Processing text modality:   4%|▎         | 113/3071 [14:35<2:28:25,  3.01s/it]Predictions:  ['406 376']
+Answer:  ['406 376']
+Prediction: 40.6, 37.6
+Reference: 40.60, 37.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.02s
+
+============================================================
+Query ID: 114 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (11594 tokens)
+Processing text modality:   4%|▎         | 114/3071 [14:43<3:46:45,  4.60s/it]Prediction: The table presents 2023 annual average data on persons at work in nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include total...
+Reference: The table provides detailed employment data for nonagricultural industries, categorized by age, sex, race, Hispanic or Latino ethnicity, and marital status. Key columns include the total number of per...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 8.31s
+
+============================================================
+Query ID: 115 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (11588 tokens)
+Processing text modality:   4%|▎         | 115/3071 [14:45<3:05:51,  3.77s/it]Predictions:  ['152987']
+Answer:  ['152987']
+Prediction: 152987
+Reference: 152987
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 116 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (9325 tokens)
+Processing text modality:   4%|▍         | 116/3071 [14:47<2:37:05,  3.19s/it]Predictions:  ['25193 37780']
+Answer:  ['12587']
+Prediction: 25193, 37780
+Reference: 12587
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.83s
+
+============================================================
+Query ID: 117 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (9322 tokens)
+Processing text modality:   4%|▍         | 117/3071 [14:48<2:12:13,  2.69s/it]Predictions:  ['30091']
+Answer:  ['30091']
+Prediction: 30091
+Reference: 30091
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.51s
+
+============================================================
+Query ID: 118 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+  Warning: Large text input (9316 tokens)
+Predictions:  ['management business and financial operations occupations service occupations sales and office occupations production occupations transportation and material moving occupations office and administrative support occupations installation maintenance and repair occupations production transportation and material moving occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair occupations production occupations transportation and material moving occupations sales and related occupations office and administrative support occupations natural resources construction and maintenance occupations1 construction and extraction occupations installation maintenance and repair']Processing text modality:   4%|▍         | 118/3071 [18:04<49:43:02, 60.61s/it]
+Answer:  ['6']
+Prediction: Management, business, and financial operations occupations, Service occupations, Sales and office occupations, Production occupations, Transportation and material moving occupations, Office and admini...
+Reference: 6
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 195.77s
+
+============================================================
+Query ID: 119 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (10299 tokens)
+Processing text modality:   4%|▍         | 119/3071 [18:06<35:13:26, 42.96s/it]Predictions:  ['41 35']
+Answer:  ['41 35']
+Prediction: 4.1, 3.5
+Reference: 4.10, 3.50
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.76s
+
+============================================================
+Query ID: 120 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (10301 tokens)
+Processing text modality:   4%|▍         | 120/3071 [18:08<25:07:49, 30.66s/it]Predictions:  ['3218 2778']
+Answer:  ['men']
+Prediction: 3218, 2778
+Reference: Men
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.96s
+Checkpoint saved: 120 queries processed
+
+============================================================
+Query ID: 121 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (10303 tokens)
+Processing text modality:   4%|▍         | 121/3071 [18:09<17:58:18, 21.93s/it]Predictions:  ['135']
+Answer:  ['135']
+Prediction: 135
+Reference: 135
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+
+============================================================
+Query ID: 122 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large text input (10373 tokens)
+Processing text modality:   4%|▍         | 122/3071 [18:11<12:58:40, 15.84s/it]Predictions:  ['increase 65']
+Answer:  ['increasing trend']
+Prediction: Increase, 6.5
+Reference: Increasing trend
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.64s
+
+============================================================
+Query ID: 123 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large text input (10505 tokens)
+Processing text modality:   4%|▍         | 123/3071 [18:13<9:31:24, 11.63s/it] Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.98
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.80s
+
+============================================================
+Query ID: 124 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (10299 tokens)
+Processing text modality:   4%|▍         | 124/3071 [18:15<7:05:50,  8.67s/it]Predictions:  ['418 472']
+Answer:  ['418 472']
+Prediction: 418, 472
+Reference: 418, 472
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.76s
+
+============================================================
+Query ID: 125 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large text input (8046 tokens)
+Processing text modality:   4%|▍         | 125/3071 [18:16<5:16:38,  6.45s/it]Predictions:  ['31']
+Answer:  ['31']
+Prediction: 31
+Reference: 31
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+
+============================================================
+Query ID: 126 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (8048 tokens)
+Processing text modality:   4%|▍         | 126/3071 [18:18<4:06:21,  5.02s/it]Predictions:  ['25 24']
+Answer:  ['men 01']
+Prediction: 2.5, 2.4
+Reference: Men, 0.10%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.68s
+
+============================================================
+Query ID: 127 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+  Warning: Large text input (8041 tokens)
+Processing text modality:   4%|▍         | 127/3071 [18:19<3:13:16,  3.94s/it]Predictions:  ['20 20']
+Answer:  ['20']
+Prediction: 20, 20
+Reference: 20
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.42s
+
+============================================================
+Query ID: 128 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (8130 tokens)
+Processing text modality:   4%|▍         | 128/3071 [18:28<4:23:39,  5.38s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table27.xlsx')
+men_2023 = df[df['Occupation'] != 'Total, 16 years and over(1)']['Men 2023'].dropna()
+women_2023 = df[df['Occupation'] != 'Total, 16 years and over(1)']['Women 2023'].dropna()
+plt.scatter(men_2023, women_2023)
+plt.xlabel('Unemployment Rate for Men (2023)')
+plt.ylabel('Unemployment Rate for Women (2023)')
+plt.title('Correlation between Unemployment Rates for Men and Women in 2023')
+plt.grid(True)
+plt.show()
+
+Python Error: 'Men 2023'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ men_2023 = df[df['Occupation'] != 'Total, 16 years and over(1)']['Men 2023'].dropna()
+ women_2023 = df[df['Occ...
+Reference: [[3.5, 2.0, 2.0, 1.7, 2.4, 2.0, 2.1, 3.1, 1.5, 2.1, 1.4, 2.3, 3.6, 1.4, 4.4, 3.5, 4.0, 5.6, 5.1, 3.6, 3.6, 4.4, 3.1, 6.1, 7.4, 7.1, 2.5, 5.4, 4.6, 6.2]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 8.73s
+
+============================================================
+Query ID: 129 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (9149 tokens)
+Processing text modality:   4%|▍         | 129/3071 [18:29<3:26:17,  4.21s/it]Predictions:  ['142']
+Answer:  ['142']
+Prediction: 14.17
+Reference: 14.17
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 130 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (9134 tokens)
+Processing text modality:   4%|▍         | 130/3071 [18:34<3:33:18,  4.35s/it]Prediction: All items index increased from 171.015 in December 2024 to 171.910 in January 2024, while Food and beverages index increased from 185.095 in December 2024 to 186.148 in January 2024.
+Reference: All items (171.01 to 171.91), Food and beverages (185.09 to 186.15)
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 4.69s
+Checkpoint saved: 130 queries processed
+
+============================================================
+Query ID: 131 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (9134 tokens)
+Processing text modality:   4%|▍         | 131/3071 [18:36<2:54:27,  3.56s/it]Predictions:  ['shelter fuels and utilities household furnishings and operations']
+Answer:  ['shelter household furnishings and operations fuels and utilities']
+Prediction: Shelter, Fuels and utilities, Household furnishings and operations
+Reference: Shelter, Household furnishings and operations, Fuels and utilities
+Metrics: {'F1': 100.0, 'EM': 0.0, 'ROUGE-L': 62.5, 'SacreBLEU': 51.7}
+Processing Time: 1.71s
+
+============================================================
+Query ID: 132 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large text input (9139 tokens)
+Processing text modality:   4%|▍         | 132/3071 [18:38<2:29:37,  3.05s/it]Predictions:  ['1861 06']
+Answer:  ['1857']
+Prediction: 186.148, 0.6
+Reference: 185.70
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.87s
+
+============================================================
+Query ID: 133 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (9118 tokens)
+Processing text modality:   4%|▍         | 133/3071 [18:39<2:07:46,  2.61s/it]Predictions:  ['142']
+Answer:  ['142']
+Prediction: 14.166
+Reference: 14.166
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.57s
+
+============================================================
+Query ID: 134 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+  Warning: Large text input (9128 tokens)
+Processing text modality:   4%|▍         | 134/3071 [18:41<1:50:41,  2.26s/it]Predictions:  ['housing food and beverages']
+Answer:  ['housing']
+Prediction: Housing, Food and beverages
+Reference: Housing
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 40.0, 'SacreBLEU': 15.97}
+Processing Time: 1.45s
+
+============================================================
+Query ID: 135 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (13261 tokens)
+Processing text modality:   4%|▍         | 135/3071 [18:42<1:43:01,  2.11s/it]Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.74s
+
+============================================================
+Query ID: 136 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (13263 tokens)
+Processing text modality:   4%|▍         | 136/3071 [18:44<1:41:09,  2.07s/it]Predictions:  ['cereals and bakery products']
+Answer:  ['cereals and bakery products']
+Prediction: Cereals and bakery products
+Reference: Cereals and bakery products
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.98s
+
+============================================================
+Query ID: 137 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (13250 tokens)
+Processing text modality:   4%|▍         | 137/3071 [18:47<1:47:35,  2.20s/it]Predictions:  ['135 1000']
+Answer:  ['135']
+Prediction: 13.474, 100.000
+Reference: 13.47
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 2.51s
+
+============================================================
+Query ID: 138 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (13356 tokens)
+Processing text modality:   4%|▍         | 138/3071 [18:55<3:10:24,  3.90s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/economy-table137.xlsx', sheet_name=0)
+data = df[df['Expenditure category'] == 'All items']
+x = data['Unadjusted indexes'].iloc[0:3].index.tolist()
+y = data['Unadjusted indexes'].iloc[0:3].values.tolist()
+plt.plot(x, y, marker='o')
+plt.title('Trend in Unadjusted Indexes for All Items')
+plt.xlabel('Time')
+plt.ylabel('Unadjusted Indexes')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+OUTPUT VALUE: [[289.109]]
+
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx', sheet_name=0)
+ data = df[df['Expenditure category'] == 'All items']
+ x = data['Unadjusted indexes'].iloc[0:3].i...
+Reference: [[289.11, 301.84, 303.36]]
+Metrics: {'ECR': True, 'Pass': False}
+Processing Time: 7.85s
+
+============================================================
+Query ID: 139 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (13369 tokens)
+Processing text modality:   5%|▍         | 139/3071 [19:08<5:23:03,  6.61s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/economy-table137.xlsx', sheet_name=0)
+df = df[df['Expenditure category'].notna()]
+df = df[df['Unadjusted percent change (Apr 2022-Apr 2023)'].notna()]
+df = df[df['Unadjusted percent change (Mar 2023-Apr 2023)'].notna()]
+x = df['Unadjusted percent change (Apr 2022-Apr 2023)'].astype(float)
+y = df['Unadjusted percent change (Mar 2023-Apr 2023)'].astype(float)
+plt.scatter(x, y)
+plt.xlabel('Unadjusted Percent Change (Apr 2022-Apr 2023)')
+plt.ylabel('Unadjusted Percent Change (Mar 2023-Apr 2023)')
+plt.title('Relationship between Changes over April 2022-April 2023 and March 2023-April 2023')
+plt.grid(True)
+plt.show()
+
+Python Error: 'Unadjusted percent change (Apr 2022-Apr 2023)'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx', sheet_name=0)
+ df = df[df['Expenditure category'].notna()]
+ df = df[df['Unadjusted percent change (Apr 2022-Apr...
+Reference: [[1.5, 1.7, 2.0, 1.8, 1.6]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 12.95s
+
+============================================================
+Query ID: 140 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (13179 tokens)
+Processing text modality:   5%|▍         | 140/3071 [19:10<4:17:07,  5.26s/it]Predictions:  ['electricity utility piped gas service']
+Answer:  ['electricity']
+Prediction: Electricity, Utility (piped) gas service
+Reference: Electricity
+Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 10.68}
+Processing Time: 2.12s
+Checkpoint saved: 140 queries processed
+
+============================================================
+Query ID: 141 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (13198 tokens)
+Processing text modality:   5%|▍         | 141/3071 [19:12<3:26:49,  4.24s/it]Predictions:  ['motor vehicle insurance']
+Answer:  ['airline fares']
+Prediction: Motor vehicle insurance
+Reference: Airline fares
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.84s
+
+============================================================
+Query ID: 142 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (13181 tokens)
+Processing text modality:   5%|▍         | 142/3071 [19:13<2:52:50,  3.54s/it]Predictions:  ['tobacco and smoking products']
+Answer:  ['airline fares']
+Prediction: Tobacco and smoking products
+Reference: Airline fares
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.92s
+
+============================================================
+Query ID: 143 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (13260 tokens)
+Processing text modality:   5%|▍         | 143/3071 [19:25<4:43:18,  5.81s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/economy-table136.xlsx")
+food_at_home = df[df['Expenditure category'].str.contains('Food at home')]
+food_at_home = food_at_home[food_at_home['Indent Level'] == 2]
+food_at_home = food_at_home[['Expenditure category', 'Relative\nimportance\nSep.\n2024']]
+food_at_home = food_at_home.set_index('Expenditure category')
+food_at_home = food_at_home.sort_values('Relative\nimportance\nSep.\n2024', ascending=False)
+food_at_home.plot(kind='bar', figsize=(10, 6))
+plt.title('Relative Importance of Different Expenditure Categories under "Food at home" as of September 2024')
+plt.xlabel('Expenditure Category')
+plt.ylabel('Relative Importance')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+Python Error: Cannot mask with non-boolean array containing NA / NaN values
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ food_at_home = df[df['Expenditure category'].str.contains('Food at home')]
+ food_at_home = food_at_home[food_a...
+Reference: [1.044, 1.741, 0.732, 1.385, 1.016, 2.153]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 11.09s
+
+============================================================
+Query ID: 144 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (13259 tokens)
+Processing text modality:   5%|▍         | 144/3071 [19:38<6:28:06,  7.96s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/economy-table136.xlsx', sheet_name=0)
+food_at_home = df[df['Expenditure category'] == 'Food at home']
+sep_2024 = food_at_home[food_at_home['Indent Level'] == 2]
+sep_2024 = sep_2024[['Expenditure category', 'Relative<br />importance<br />Sep.<br />2024']]
+sep_2024 = sep_2024.set_index('Expenditure category')['Relative<br />importance<br />Sep.<br />2024']
+sep_2024 = sep_2024.dropna()
+labels = sep_2024.index.tolist()
+sizes = sep_2024.values.tolist()
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.axis('equal')
+plt.title('Proportion of Different Expenditure Categories under "Food at home" as of September 2024')
+plt.show()
+
+Python Error: "['Relative<br />importance<br />Sep.<br />2024'] not in index"
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx', sheet_name=0)
+ food_at_home = df[df['Expenditure category'] == 'Food at home']
+ sep_2024 = food_at_home[food_at...
+Reference: [0.8, 0.11, 0.06, 0.01, 0.01]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 12.97s
+
+============================================================
+Query ID: 145 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (39276 tokens)
+Processing text modality:   5%|▍         | 145/3071 [19:44<6:07:31,  7.54s/it]Predictions:  ['32 107']
+Answer:  ['139']
+Prediction: 3.2, 10.7
+Reference: 13.90
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 6.56s
+
+============================================================
+Query ID: 146 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (39264 tokens)
+Processing text modality:   5%|▍         | 146/3071 [19:50<5:45:54,  7.10s/it]Predictions:  ['logging workers']
+Answer:  ['logging workers']
+Prediction: Logging workers
+Reference: Logging workers
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 6.07s
+
+============================================================
+Query ID: 147 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (39278 tokens)
+Processing text modality:   5%|▍         | 147/3071 [19:56<5:30:09,  6.77s/it]Predictions:  ['no']
+Answer:  ['no']
+Prediction: No
+Reference: No
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 6.03s
+
+============================================================
+Query ID: 148 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (39277 tokens)

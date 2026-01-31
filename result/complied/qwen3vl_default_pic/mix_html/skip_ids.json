@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_default_pic/mix_html/results.json",
+    "config": "qwen3vl_default_pic",
+    "modality": "mix",
+    "format": "html",
+    "analysis_time": "2026-01-31T14:22:38.203825",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3063,
+    "success": 3046,
+    "error": 17,
+    "missing": 8,
+    "file_dependency_issues": 8,
+    "incomplete_runs": 0
+  },
+  "skip_ids": [
+    2216,
+    2217,
+    2218,
+    2219,
+    2220,
+    2960,
+    2961,
+    2962
+  ],
+  "error_ids": [
+    2747,
+    2748,
+    2749,
+    2750,
+    2751,
+    2758,
+    2759,
+    2760,
+    2761,
+    2762,
+    2763,
+    2966,
+    2967,
+    2968,
+    3019,
+    3020,
+    3021
+  ],
+  "skip_reasons": {
+    "2216": "Missing source file(s): labor-table68.html",
+    "2217": "Missing source file(s): labor-table68.html",
+    "2218": "Missing source file(s): labor-table68.html",
+    "2219": "Missing source file(s): labor-table68.html",
+    "2220": "Missing source file(s): labor-table68.html",
+    "2960": "Missing source file(s): society-table10_swap.html",
+    "2961": "Missing source file(s): society-table10_swap.html",
+    "2962": "Missing source file(s): society-table10_swap.html"
+  },
+  "categorized": {
+    "file_dependency_issues": [
+      2216,
+      2217,
+      2218,
+      2219,
+      2220,
+      2960,
+      2961,
+      2962
+    ],
+    "incomplete_runs": []
+  }
+}

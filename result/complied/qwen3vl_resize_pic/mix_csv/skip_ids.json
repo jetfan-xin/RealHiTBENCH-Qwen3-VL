@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_resize_pic/mix_csv/results_mix_csv_merged_with_sc.json",
+    "config": "qwen3vl_resize_pic",
+    "modality": "mix",
+    "format": "csv",
+    "analysis_time": "2026-01-31T14:22:38.254057",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3067,
+    "success": 3057,
+    "error": 10,
+    "missing": 4,
+    "file_dependency_issues": 3,
+    "incomplete_runs": 1
+  },
+  "skip_ids": [
+    2960,
+    2961,
+    2962,
+    2963
+  ],
+  "error_ids": [
+    1374,
+    1375,
+    1376,
+    1377,
+    1378,
+    1460,
+    1461,
+    1462,
+    1463,
+    1464
+  ],
+  "skip_reasons": {
+    "2960": "Missing source file(s): society-table10_swap.csv",
+    "2961": "Missing source file(s): society-table10_swap.csv",
+    "2962": "Missing source file(s): society-table10_swap.csv",
+    "2963": "Incomplete run or processing error (files exist but task not processed)"
+  },
+  "categorized": {
+    "file_dependency_issues": [
+      2960,
+      2961,
+      2962
+    ],
+    "incomplete_runs": [
+      2963
+    ]
+  }
+}

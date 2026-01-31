@@ -1,0 +1,16 @@
+{
+  "config": {
+    "model_dir": "/data/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "mix",
+    "format": "html",
+    "data_path": "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL",
+    "batch_size": 8,
+    "total_queries": 0,
+    "start_time": "2026-01-30T22:20:02.444736",
+    "end_time": "2026-01-30T22:22:03.930006",
+    "duration_seconds": 121.48527,
+    "throughput": 0
+  },
+  "aggregate_metrics": {},
+  "results": []
+}

@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_text/text_csv/results.json",
+    "config": "qwen3vl_text",
+    "modality": "text",
+    "format": "csv",
+    "analysis_time": "2026-01-31T14:22:38.300940",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3053,
+    "success": 3053,
+    "error": 0,
+    "missing": 18,
+    "file_dependency_issues": 3,
+    "incomplete_runs": 15
+  },
+  "skip_ids": [
+    1373,
+    1374,
+    1375,
+    1376,
+    1377,
+    1378,
+    1459,
+    1460,
+    1461,
+    1462,
+    1463,
+    1464,
+    2021,
+    2022,
+    2959,
+    2960,
+    2961,
+    2962
+  ],
+  "error_ids": [],
+  "skip_reasons": {
+    "1373": "Incomplete run or processing error (files exist but task not processed)",
+    "1374": "Incomplete run or processing error (files exist but task not processed)",
+    "1375": "Incomplete run or processing error (files exist but task not processed)",
+    "1376": "Incomplete run or processing error (files exist but task not processed)",
+    "1377": "Incomplete run or processing error (files exist but task not processed)",
+    "1378": "Incomplete run or processing error (files exist but task not processed)",
+    "1459": "Incomplete run or processing error (files exist but task not processed)",
+    "1460": "Incomplete run or processing error (files exist but task not processed)",
+    "1461": "Incomplete run or processing error (files exist but task not processed)",
+    "1462": "Incomplete run or processing error (files exist but task not processed)",
+    "1463": "Incomplete run or processing error (files exist but task not processed)",
+    "1464": "Incomplete run or processing error (files exist but task not processed)",
+    "2021": "Incomplete run or processing error (files exist but task not processed)",
+    "2022": "Incomplete run or processing error (files exist but task not processed)",
+    "2959": "Incomplete run or processing error (files exist but task not processed)",
+    "2960": "Missing source file(s): society-table10_swap.csv",
+    "2961": "Missing source file(s): society-table10_swap.csv",
+    "2962": "Missing source file(s): society-table10_swap.csv"
+  },
+  "categorized": {
+    "file_dependency_issues": [
+      2960,
+      2961,
+      2962
+    ],
+    "incomplete_runs": [
+      1373,
+      1374,
+      1375,
+      1376,
+      1377,
+      1378,
+      1459,
+      1460,
+      1461,
+      1462,
+      1463,
+      1464,
+      2021,
+      2022,
+      2959
+    ]
+  }
+}

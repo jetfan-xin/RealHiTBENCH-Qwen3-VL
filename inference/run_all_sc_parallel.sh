@@ -45,22 +45,22 @@ echo ""
 # GPU 0: image -> text_latex -> text_markdown
 (
     run_on_gpu 0 "run_sc_image.py" "image" && \
-    run_on_gpu 0 "run_sc_text_latex.py" "text_latex" && \
-    run_on_gpu 0 "run_sc_text_markdown.py" "text_markdown"
+    run_on_gpu 0 "run_text_latex.py" "text_latex" && \
+    run_on_gpu 0 "run_text_markdown.py" "text_markdown"
 ) &
 PID_GPU0=$!
 
 # GPU 1: mix_csv -> text_csv
 (
     run_on_gpu 1 "run_sc_mix_csv.py" "mix_csv" && \
-    run_on_gpu 1 "run_sc_text_csv.py" "text_csv"
+    run_on_gpu 1 "run_text_csv.py" "text_csv"
 ) &
 PID_GPU1=$!
 
 # GPU 2: mix_html -> text_html
 (
     run_on_gpu 2 "run_sc_mix_html.py" "mix_html" && \
-    run_on_gpu 2 "run_sc_text_html.py" "text_html"
+    run_on_gpu 2 "run_text_html.py" "text_html"
 ) &
 PID_GPU2=$!
 

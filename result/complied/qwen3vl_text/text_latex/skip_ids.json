@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_text/text_latex/results.json",
+    "config": "qwen3vl_text",
+    "modality": "text",
+    "format": "latex",
+    "analysis_time": "2026-01-31T14:22:38.332037",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3067,
+    "success": 3067,
+    "error": 0,
+    "missing": 4,
+    "file_dependency_issues": 3,
+    "incomplete_runs": 1
+  },
+  "skip_ids": [
+    2959,
+    2960,
+    2961,
+    2962
+  ],
+  "error_ids": [],
+  "skip_reasons": {
+    "2959": "Incomplete run or processing error (files exist but task not processed)",
+    "2960": "Missing source file(s): society-table10_swap.txt",
+    "2961": "Missing source file(s): society-table10_swap.txt",
+    "2962": "Missing source file(s): society-table10_swap.txt"
+  },
+  "categorized": {
+    "file_dependency_issues": [
+      2960,
+      2961,
+      2962
+    ],
+    "incomplete_runs": [
+      2959
+    ]
+  }
+}

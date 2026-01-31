@@ -457,10 +457,10 @@ def get_batch_text_response_local(
     Returns:
         List of generated responses
     """
-    # Build batch of messages
+    # Build batch of messages - must use proper content format for Qwen3-VL processor
     all_messages = []
     for msg_text in batch_messages:
-        messages = [{"role": "user", "content": msg_text}]
+        messages = [{"role": "user", "content": [{"type": "text", "text": msg_text}]}]
         all_messages.append(messages)
     
     # Tokenize all messages
@@ -1089,10 +1089,17 @@ def gen_solution_batch(opt):
     # Load dataset
     dataset_path = opt.data_path
     qa_path = opt.qa_path if opt.qa_path else f'{dataset_path}/data'
-    qa_file = 'QA_final.json' if not opt.use_long else 'QA_long.json'
+    # Choose QA file based on options: use_sc_filled takes priority over use_long
+    if opt.use_sc_filled:
+        qa_file = 'QA_final_sc_filled.json'
+    elif opt.use_long:
+        qa_file = 'QA_long.json'
+    else:
+        qa_file = 'QA_final.json'
     with open(f'{qa_path}/{qa_file}', 'r') as fp:
         dataset = json.load(fp)
         querys = dataset['queries']
+    print(f"Loaded QA file: {qa_file} ({len(querys)} queries)")
     
     # Filter by question type if specified
     if opt.question_type:
@@ -1297,10 +1304,17 @@ def gen_solution(opt):
     # Load dataset
     dataset_path = opt.data_path
     qa_path = opt.qa_path if opt.qa_path else f'{dataset_path}/data'
-    qa_file = 'QA_final.json' if not opt.use_long else 'QA_long.json'
+    # Choose QA file based on options: use_sc_filled takes priority over use_long
+    if opt.use_sc_filled:
+        qa_file = 'QA_final_sc_filled.json'
+    elif opt.use_long:
+        qa_file = 'QA_long.json'
+    else:
+        qa_file = 'QA_final.json'
     with open(f'{qa_path}/{qa_file}', 'r') as fp:
         dataset = json.load(fp)
         querys = dataset['queries']
+    print(f"Loaded QA file: {qa_file} ({len(querys)} queries)")
     
     # Filter by question type if specified
     if opt.question_type:
@@ -1595,8 +1609,8 @@ def main():
                         help='Repetition penalty (1.0 = no penalty)')
     parser.add_argument('--presence_penalty', type=float, default=1.5,
                         help='Presence penalty (1.5 recommended for Instruct)')
-    parser.add_argument('--max_tokens', type=int, default=32768,
-                        help='Maximum tokens to generate (32768 recommended)')
+    parser.add_argument('--max_tokens', type=int, default=1024,
+                        help='Maximum tokens to generate (1024 recommended for RealHiTBench, covers 99%% of answers)')
     
     # Batch inference settings
     parser.add_argument('--batch_size', type=int, default=1,

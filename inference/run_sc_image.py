@@ -16,10 +16,11 @@ def main():
     # Configuration
     modality = "image"
     question_type = "Structure Comprehending"
-    batch_size = 8
+    batch_size = 1  # Use batch_size=1 for SC task because _swap images are very large
     model_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
-    data_path = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
-    output_dir = f"/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100"
+    data_path = "/data/pan/4xin/datasets/RealHiTBench"
+    # QA JSON files are in the project's data directory
+    qa_path = os.path.join(os.path.dirname(script_dir), "data")
     
     # Build command
     cmd = [
@@ -28,11 +29,10 @@ def main():
         "--modality", modality,
         "--model_dir", model_dir,
         "--data_path", data_path,
-        "--output_dir", output_dir,
+        "--qa_path", qa_path,
         "--question_type", question_type,
         "--batch_size", str(batch_size),
-        "--use_sc_filled",  # Use updated QA data
-        "--no_resume"  # Start fresh for clean re-inference
+        "--use_sc_filled"  # Use QA_final_sc_filled.json for SC tasks (filenames have _swap suffix)
     ]
     
     print(f"Running Structure Comprehending inference for {modality}...")

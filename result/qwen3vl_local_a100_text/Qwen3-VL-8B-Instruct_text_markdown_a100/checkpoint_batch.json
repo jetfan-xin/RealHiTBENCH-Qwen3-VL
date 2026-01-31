@@ -1,0 +1,268 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 61179",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.34
+    },
+    {
+      "id": 2,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the year when the unemployment rate exceeded 5%, and the total civilian labor force was below 65,000.",
+      "Reference": "1954",
+      "Prediction": "1954, 1958",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.34
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "2022, 2023",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.42
+    },
+    {
+      "id": 4,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the employment in non-agricultural industries in the year with the highest civilian labor force total?",
+      "Reference": "158772",
+      "Prediction": "167116, 158772",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.42
+    },
+    {
+      "id": 5,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average unemployment rate across all years, and what is its standard deviation?",
+      "Reference": "5.80, 1.62",
+      "Prediction": "5.38, 1.68",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.78
+    },
+    {
+      "id": 6,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, highlighting the main columns, their purposes, and any basic insights or trends observed?",
+      "Reference": "The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nonagricultural Industries),' 'Unemployed (Number, Percent),' and 'Not in Labor Force.' Insights show trends in employment rates, shifts between agricultural and nonagricultural sectors, and unemployment percentages over time.",
+      "Prediction": "The table presents annual averages of U.S. household data from 1953 to 2023, focusing on employment status of the civilian noninstitutional population. Main columns include: Year, Civilian noninstitutional population (total), Civilian labor force (total), Employment rate (% of population), Employed (total and by sector), Unemployed (number and % of labor force), and Nonagricultural industries. Key trends: labor force participation and employment rates generally rose until the early 2000s, then slightly declined; unemployment rates fluctuated, peaking in 2020 (8.1%) and 2009 (9.3%); employment in nonagricultural sectors dominated, with agricultural employment consistently low; overall, employment levels increased steadily over time despite occasional dips during economic downturns.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 8.85
+    },
+    {
+      "id": 7,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trend in the percentage of the employed population between 1953 and 1963, what is the predicted percentage for 1965?",
+      "Reference": "Predicted percentage for 1965: 55.12%",
+      "Prediction": "56.2, Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 8,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation between the total civilian labor force and the total number of employed individuals across all years? Provide the correlation coefficient.",
+      "Reference": "Strong positive correlation, 1.00",
+      "Prediction": "Strong positive correlation, 0.98",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.86
+    },
+    {
+      "id": 10,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year with the highest unemployment rate between 1983 and 1990.",
+      "Reference": "1983",
+      "Prediction": "1983, 1984",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 9,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Are there any anomalies in the unemployment rates or employment figures that deviate significantly from the general trends in the data? If so, what are the years and their characteristics?",
+      "Reference": "4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployment 9.30% or Employment 139877.00 deviates significantly, Year 2010: Unemployment 9.600% or Employment 139064.00 deviates significantly",
+      "Prediction": "1975, 1982, 1983, 2020",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 1.98
+    },
+    {
+      "id": 11,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify whether the percentage of the civilian labor force employed in 1987 was greater than in 1983 with simply yse/no.",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.52
+    },
+    {
+      "id": 12,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Determine the average number of unemployed individuals from 1985 to 1987.",
+      "Reference": "3995.67",
+      "Prediction": "4744, 4530, 4101",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.52
+    },
+    {
+      "id": 13,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Was the proportion of the population employed in agriculture in 1984 greater than 5% of the total employed population?",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 14,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year when the civilian noninstitutional population crossed 85,000,000 for the first time.",
+      "Reference": "1986",
+      "Prediction": "2000",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.14
+    },
+    {
+      "id": 15,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "According to the table, draw a bar chart comparing the total civilian population and the total employed population for the years 1985, 1987, and 1989.",
+      "Reference": "[93736, 95853, 97630, 59891, 62107, 64315]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n years = [1985, 1987, 1989]\n data = df[df['Year'].isin(years)]\n data = data[['Year', 'Civilian noninstitu- tional population', 'Employed']]\n data = data.set_index('Year')\n data.plot(kind='bar', figsize=(10, 6))\n plt.title('Total Civilian Population vs Total Employed Population (1985, 1987, 1989)')\n plt.xlabel('Year')\n plt.ylabel('Population')\n plt.xticks(rotation=0)\n plt.legend(['Civilian noninstitu- tional population', 'Employed'])\n plt.tight_layout()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": false
+      },
+      "ProcessingTime": 8.71
+    },
+    {
+      "id": 16,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to visualize the relationship between the unemployment rate and the total civilian labor force for all years in the dataset.",
+      "Reference": "[[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3.7, 3.8, 9.2, 7.6, 7.4, 7.1, 6.2, 5.6, 5.4, 5.5, 6.4, 7.0, 6.6, 6.0, 5.6, 5.4, 5.0, 4.6, 4.3, 4.1, 4.7, 5.6, 5.7, 5.4, 5.1, 4.6, 4.5, 5.4, 8.1, 8.6, 8.5, 7.9, 7.1, 6.1, 5.2, 4.8, 4.3, 3.8, 3.6, 8.3, 5.2, 3.6, 3.5]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n # Extracting relevant columns for Men and Women\n men_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna()) & (df['Year'].astype(str).str.isdigit())]\n women_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna()) & (df['Year'].astype(str).str.isdigit())]\n # Extracting unemployment rate and total civilian labor force for Men\n men_unemployment_rate = men_data['Unemployed'].values\n men_total_labor_force = men_data['Civilian labor force'].values\n # Extracting unemployment rate and total civilian labor force for Women\n women_unemployment_rate = women_data['Unemployed'].values\n women_total_labor_force = women_data['Civilian labor force'].values\n # Creating scatter plot\n plt.figure(figsize=(10, 6))\n plt.scatter(men_total_labor_force, men_unemployment_rate, color='blue', label='Men')\n plt.scatter(women_total_labor_force, women_unemployment_rate, color='red', label='Women')\n plt.xlabel('Total Civilian Labor Force')\n plt.ylabel('Unemployment Rate')\n plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')\n plt.legend()\n plt.grid(True)\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": false
+      },
+      "ProcessingTime": 14.7
+    }
+  ],
+  "processed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}

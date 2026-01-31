@@ -1,0 +1,282 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: markdown
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Data Parallel (DataParallel)
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 2
+
+============================================================
+BATCH INFERENCE MODE (batch_size=2)
+============================================================
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using DATA PARALLELISM (DataParallel) - all GPUs compute simultaneously
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 41.28it/s]
+Model loaded with flash_attention_2 attention on cuda:0
+Single GPU detected, DataParallel not needed
+Processor configured with dynamic resolution: min_pixels=200704, max_pixels=1605632
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Pending queries after filtering: 3071
+Processing batches:   0%|          | 0/1536 [00:00<?, ?it/s]Processing batches:   0%|          | 1/1536 [00:04<2:05:36,  4.91s/it]Processing batches:   0%|          | 2/1536 [00:07<1:37:52,  3.83s/it]Processing batches:   0%|          | 3/1536 [00:18<2:58:31,  6.99s/it]Processing batches:   0%|          | 4/1536 [00:22<2:27:38,  5.78s/it]Processing batches:   0%|          | 5/1536 [00:26<2:08:17,  5.03s/it]Processing batches:   0%|          | 6/1536 [00:29<1:53:01,  4.43s/it]Processing batches:   0%|          | 7/1536 [00:32<1:36:58,  3.81s/it]
+============================================================
+Batch 1/1536: Processing 2 queries
+============================================================
+Predictions:  ['1953 61179', '1954 1958']
+Answer:  ['1955 62170', '1954']
+Predictions:  ['1953 61179']
+Answer:  ['1955 62170']
+  [Batch] Query 1: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (2.34s avg)
+Predictions:  ['1954 1958']
+Answer:  ['1954']
+  [Batch] Query 2: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0} (2.34s avg)
+Checkpoint saved: 2 queries processed
+
+============================================================
+Batch 2/1536: Processing 2 queries
+============================================================
+Predictions:  ['2022 2023', '167116 158772']
+Answer:  ['1953', '158772']
+Predictions:  ['2022 2023']
+Answer:  ['1953']
+  [Batch] Query 3: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.42s avg)
+Predictions:  ['167116 158772']
+Answer:  ['158772']
+  [Batch] Query 4: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0} (1.42s avg)
+Checkpoint saved: 4 queries processed
+
+============================================================
+Batch 3/1536: Processing 2 queries
+============================================================
+Predictions:  ['54 17']
+Answer:  ['58 16']
+Predictions:  ['54 17']
+Answer:  ['58 16']
+  [Batch] Query 5: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.78s avg)
+  [Single] Query 6: {'GPT_EVAL': 'N/A (no eval_api_key)'} (8.85s)
+Checkpoint saved: 6 queries processed
+
+============================================================
+Batch 4/1536: Processing 2 queries
+============================================================
+Predictions:  ['562 increasing trend', 'strong positive correlation 10']
+Answer:  ['predicted percentage for 1965 551', 'strong positive correlation 10']
+Predictions:  ['562 increasing trend']
+Answer:  ['predicted percentage for 1965 551']
+  [Batch] Query 7: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.86s avg)
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+  [Batch] Query 8: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0} (1.86s avg)
+Checkpoint saved: 8 queries processed
+
+============================================================
+Batch 5/1536: Processing 2 queries
+============================================================
+Predictions:  ['1983 1984']
+Answer:  ['1983']
+Predictions:  ['1983 1984']
+Answer:  ['1983']
+  [Batch] Query 10: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0} (1.60s avg)
+  [Single] Query 9: {'GPT_EVAL': 'N/A (no eval_api_key)'} (1.98s)
+Checkpoint saved: 10 queries processed
+
+============================================================
+Batch 6/1536: Processing 2 queries
+============================================================
+Predictions:  ['yes', '4744 4530 4101']
+Answer:  ['no', '39957']
+Predictions:  ['yes']
+Answer:  ['no']
+  [Batch] Query 11: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.52s avg)
+Predictions:  ['4744 4530 4101']
+Answer:  ['39957']
+  [Batch] Query 12: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.52s avg)
+Checkpoint saved: 12 queries processed
+
+============================================================
+Batch 7/1536: Processing 2 queries
+============================================================
+Predictions:  ['no', '2000']
+Answer:  ['yes', '1986']
+Predictions:  ['no']
+Answer:  ['yes']
+  [Batch] Query 13: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.14s avg)
+Predictions:  ['2000']
+Answer:  ['1986']
+  [Batch] Query 14: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0} (1.14s avg)
+Checkpoint saved: 14 queries processed
+
+============================================================
+Batch 8/1536: Processing 2 queries
+============================================================
+  Warning: Large text input (8266 tokens)
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+years = [1985, 1987, 1989]
+data = df[df['Year'].isin(years)]
+data = data[['Year', 'Civilian noninstitu- tional population', 'Employed']]
+data = data.set_index('Year')
+data.plot(kind='bar', figsize=(10, 6))
+plt.title('Total Civilian Population vs Total Employed Population (1985, 1987, 1989)')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.xticks(rotation=0)
+plt.legend(['Civilian noninstitu- tional population', 'Employed'])
+plt.tight_layout()
+plt.show()
+
+Python Error: "['Civilian noninstitu- tional population', 'Employed'] not in index"
+  [Single] Query 15: {'ECR': False, 'Pass': False} (8.71s)
+  Warning: Large text input (8250 tokens)
+Processing batches:   1%|          | 8/1536 [00:55<4:15:52, 10.05s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+# Extracting relevant columns for Men and Women
+men_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna()) & (df['Year'].astype(str).str.isdigit())]
+women_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna()) & (df['Year'].astype(str).str.isdigit())]
+# Extracting unemployment rate and total civilian labor force for Men
+men_unemployment_rate = men_data['Unemployed'].values
+men_total_labor_force = men_data['Civilian labor force'].values
+# Extracting unemployment rate and total civilian labor force for Women
+women_unemployment_rate = women_data['Unemployed'].values
+women_total_labor_force = women_data['Civilian labor force'].values
+# Creating scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(men_total_labor_force, men_unemployment_rate, color='blue', label='Men')
+plt.scatter(women_total_labor_force, women_unemployment_rate, color='red', label='Women')
+plt.xlabel('Total Civilian Labor Force')
+plt.ylabel('Unemployment Rate')
+plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+Python Error: 'Unemployed'
+  [Single] Query 16: {'ECR': False, 'Pass': False} (14.70s)
+Checkpoint saved: 16 queries processed
+
+============================================================
+Batch 9/1536: Processing 2 queries
+============================================================
+  Warning: Large text input (8254 tokens)
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx', sheet_name=0)
+data_1984 = df[df['Year'] == 1984]
+agriculture = data_1984.iloc[0]['Agri-culture']
+non_agriculture = data_1984.iloc[0]['Nonagri-cultural industries']
+labels = ['Agriculture', 'Non-Agriculture']
+sizes = [agriculture, non_agriculture]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title('Employment Distribution in 1984')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+Python Error: 'Agri-culture'
+  [Single] Query 17: {'ECR': False, 'Pass': False} (8.52s)
+  Warning: Large text input (8257 tokens)
+Processing batches:   1%|          | 8/1536 [02:55<9:18:41, 21.94s/it]
+Traceback (most recent call last):
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py", line 1702, in <module>
+    main()
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py", line 1696, in main
+    gen_solution_batch(opt)
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py", line 1186, in gen_solution_batch
+    batch_results = process_batch_queries(
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py", line 1003, in process_batch_queries
+    response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file)
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py", line 742, in get_final_answer_local
+    response = get_text_response_local(current_messages, model, processor, opt)
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py", line 250, in get_text_response_local
+    generated_ids = model.generate(**generate_kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2566, in generate
+    result = decoding_method(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2789, in _sample
+    outputs = model_forward(**model_inputs, return_dict=True)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1344, in forward
+    outputs = self.model(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1223, in forward
+    outputs = self.language_model(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 850, in forward
+    layer_outputs = decoder_layer(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 502, in forward
+    hidden_states, _ = self.self_attn(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 444, in forward
+    attn_output, attn_weights = attention_interface(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/integrations/flash_attention.py", line 66, in flash_attention_forward
+    attn_output = _flash_attention_forward(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/modeling_flash_attention_utils.py", line 664, in _flash_attention_forward
+    out = flash_fn(query_states, key_states, value_states, **flash_kwargs)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/flash_attn/flash_attn_interface.py", line 1196, in flash_attn_func
+    return FlashAttnFunc.apply(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/autograd/function.py", line 575, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/flash_attn/flash_attn_interface.py", line 834, in forward
+    out_padded, softmax_lse, S_dmask, rng_state = _wrapped_flash_attn_forward(
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/_ops.py", line 1158, in __call__
+    return self._op(*args, **(kwargs or {}))
+KeyboardInterrupt
+Running inference for text_markdown (all question types)...
+Command: /export/home/pan/miniconda3/envs/4xin-hit/bin/python /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/inference_qwen3vl_local_a100.py --modality text --format markdown --model_dir /data/pan/4xin/models/Qwen3-VL-8B-Instruct --data_path /data/pan/4xin/datasets/RealHiTBench --qa_path /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data --batch_size 2 --use_sc_filled
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/run_text_markdown.py", line 52, in <module>
+    main()
+  File "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/run_text_markdown.py", line 43, in main
+    result = subprocess.run(cmd, cwd=script_dir)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/subprocess.py", line 505, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/subprocess.py", line 1146, in communicate
+    self.wait()
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/subprocess.py", line 1209, in wait
+    return self._wait(timeout=timeout)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/subprocess.py", line 1959, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/export/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/subprocess.py", line 1917, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
