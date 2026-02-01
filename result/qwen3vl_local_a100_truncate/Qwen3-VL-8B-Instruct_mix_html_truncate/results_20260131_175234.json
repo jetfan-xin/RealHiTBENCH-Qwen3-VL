@@ -1,0 +1,294 @@
+{
+  "config": {
+    "model_dir": "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "mix",
+    "format": "html",
+    "data_path": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 17,
+    "start_time": "2026-01-31T17:26:58.991999",
+    "end_time": "2026-01-31T17:52:34.324670",
+    "duration_seconds": 1535.332671
+  },
+  "aggregate_metrics": {
+    "Structure Comprehending": {
+      "F1": 32.74529411764706,
+      "ROUGE-L": 32.74529411764706,
+      "EM": 23.529411764705884,
+      "SacreBLEU": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": 2747,
+      "FileName": "economy-table14_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the table, which sector had the highest employment for England in 2008?",
+      "Reference": "Craft",
+      "Prediction": "Music & the Visual & Performing Arts",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 91.29
+    },
+    {
+      "id": 2748,
+      "FileName": "economy-table14_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the total employment across two specified years in South West  and identify the year with higher employment.",
+      "Reference": "2006",
+      "Prediction": "2006, 2008",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 92.57
+    },
+    {
+      "id": 2749,
+      "FileName": "economy-table14_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Using the employment trend data, infer whether employment in the creative sector is growing or declining over the last five years.",
+      "Reference": "growing",
+      "Prediction": "Declining",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 91.35
+    },
+    {
+      "id": 2750,
+      "FileName": "society-table02_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which region had the highest participation in voluntary work in the “Arts” sector for the year 2007/08?",
+      "Reference": "South East",
+      "Prediction": "South East",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 94.47
+    },
+    {
+      "id": 2751,
+      "FileName": "society-table02_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the total voluntary work participation across all sectors between 2005/06 and 2007/08. Which year had higher total participation?",
+      "Reference": "2007/08",
+      "Prediction": "2007/08",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 94.76
+    },
+    {
+      "id": 2758,
+      "FileName": "employment-table30_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which sub-sector had the highest employment in 2009 for North East?",
+      "Reference": "Publishing",
+      "Prediction": "Publishing",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 68.95
+    },
+    {
+      "id": 2759,
+      "FileName": "employment-table30_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which sub-sector had the lowest employment in 2005 for North West?",
+      "Reference": "Video, Film & Photography",
+      "Prediction": "Video, Film & Photography",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 69.35
+    },
+    {
+      "id": 2760,
+      "FileName": "employment-table30_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the employment trends in “Advertising” and “Art & Antiques” in North East from 2005 to 2009. Which sub-sector saw a greater absolute change?",
+      "Reference": "Advertising",
+      "Prediction": "Art & Antiques, Advertising",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 69.67
+    },
+    {
+      "id": 2761,
+      "FileName": "employment-table30_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Determine the region with the largest employment change from 2005 to 2009 in the “Publishing” sub-sector.",
+      "Reference": "North East",
+      "Prediction": "East of England",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 40.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 69.4
+    },
+    {
+      "id": 2762,
+      "FileName": "business-table06_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What was the total number of businesses in the “Advertising” sub-sector for all regions in 2009?",
+      "Reference": "25900",
+      "Prediction": "1420, 1740",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 98.99
+    },
+    {
+      "id": 2763,
+      "FileName": "business-table06_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Identify the region with the highest number of businesses in the “Music & the Visual & Performing Arts” sub-sector in 2009.",
+      "Reference": "England",
+      "Prediction": "London",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 97.12
+    },
+    {
+      "id": 2966,
+      "FileName": "agriculture-table06_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which state in the Mountain region has the highest total land area for “Special-use areas” and what is its name?",
+      "Reference": "Nevada",
+      "Prediction": "[ERROR] OOM: Image too large ((2872, 4412))",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 91.7
+    },
+    {
+      "id": 2967,
+      "FileName": "agriculture-table06_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Determine the state in the Pacific region with the smallest “Grassland pasture and range” area. Provide the state’s name.",
+      "Reference": "Washington",
+      "Prediction": "[ERROR] OOM: Image too large ((2872, 4412))",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 103.52
+    },
+    {
+      "id": 2968,
+      "FileName": "agriculture-table06_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the total land area of “Urban areas” in the Lake States and the Corn Belt. Which region has a larger area? Provide the region name.",
+      "Reference": "Corn Belt",
+      "Prediction": "[ERROR] OOM: Image too large ((2872, 4412))",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 103.44
+    },
+    {
+      "id": 3019,
+      "FileName": "society-table68_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Compare the number of “Adverse decisions” in “Birmingham and Solihull” with “Black Country”. Which region had more adverse decisions, and by how many?",
+      "Reference": "Black Country, 13",
+      "Prediction": "[ERROR] OOM: Image too large ((7348, 3948))",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 101.84
+    },
+    {
+      "id": 3020,
+      "FileName": "society-table68_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Based on the data, what is the total number of decisions (adverse, non-adverse, reserved, and cancelled) recorded in “GREAT BRITAIN”?",
+      "Reference": "396769",
+      "Prediction": "[ERROR] OOM: Image too large ((7348, 3948))",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 96.75
+    },
+    {
+      "id": 3021,
+      "FileName": "society-table68_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "What is the proportion of “Reserved decisions” compared to the total number of decisions in “Central England”?",
+      "Reference": "0.11",
+      "Prediction": "[ERROR] OOM: Image too large ((7348, 3948))",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 94.45
+    }
+  ]
+}

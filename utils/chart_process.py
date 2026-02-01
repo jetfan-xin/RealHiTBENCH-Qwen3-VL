@@ -30,16 +30,16 @@ def exec_and_get_y_reference(code):
 
 def visualization_code_format(visualization_answer):
     
-    pattern1 = r"import pandas as pd.*?plt\.show\(\)"
-    pattern2 = r"import matplotlib.pyplot as plt.*?plt\.show\(\)"
+    pattern1 = r"import pandas as pd.*?plt\.show\(\)" # Match code blocks that use pandas for data handling
+    pattern2 = r"import matplotlib.pyplot as plt.*?plt\.show\(\)" # Match code blocks that directly use matplotlib without pandas
     try:
         matches1 = re.findall(pattern1, visualization_answer, flags=re.S)
         if matches1:
-            return matches1[-1]
+            return matches1[-1] # Return the last matched code block
         else:
             matches2 = re.findall(pattern2, visualization_answer, flags=re.S)
             if matches2:
-                return matches2[-1]
+                return matches2[-1] # Return the last matched code block
             else:
                 print(f"invalid visualization_answer: {visualization_answer}\n")
                 return ''

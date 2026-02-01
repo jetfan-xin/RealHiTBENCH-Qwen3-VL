@@ -95,6 +95,9 @@ def main():
         if args.modality != 'image':
             cmd.extend(["--format", args.format])
         
+        if args.use_sc_filled:
+            cmd.append("--use_sc_filled")
+        
         if args.resume:
             cmd.append("--resume")
         

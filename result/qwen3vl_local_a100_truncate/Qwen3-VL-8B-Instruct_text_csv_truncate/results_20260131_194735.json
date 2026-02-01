@@ -1,0 +1,280 @@
+{
+  "config": {
+    "model_dir": "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "text",
+    "format": "csv",
+    "data_path": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 15,
+    "start_time": "2026-01-31T19:05:13.574125",
+    "end_time": "2026-01-31T19:47:35.930334",
+    "duration_seconds": 2542.356209
+  },
+  "aggregate_metrics": {
+    "Data Analysis": {
+      "SacreBLEU": 10.65,
+      "F1": 22.223333333333333,
+      "EM": 0.0,
+      "ROUGE-L": 22.223333333333333
+    },
+    "Fact Checking": {
+      "SacreBLEU": 0.0,
+      "F1": 0.0,
+      "EM": 0.0,
+      "ROUGE-L": 0.0
+    },
+    "Numerical Reasoning": {
+      "SacreBLEU": 0.0,
+      "F1": 0.0,
+      "EM": 0.0,
+      "ROUGE-L": 0.0
+    },
+    "Structure Comprehending": {
+      "SacreBLEU": 14.92,
+      "F1": 70.59,
+      "EM": 0.0,
+      "ROUGE-L": 58.82
+    }
+  },
+  "results": [
+    {
+      "id": 1373,
+      "FileName": "society-table24",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the Infection fatality rate and age?",
+      "Reference": "Positive correlation",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 31.95
+      },
+      "ProcessingTime": 1.34
+    },
+    {
+      "id": 1374,
+      "FileName": "society-table25",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "How does the risk of transmission change when a clinic uses both PPE and temperature screening compared to no mitigation measures for a child and caretaker visiting for vaccination?",
+      "Reference": "Without mitigation measures: 0.07%, With PPE and temperature screening: 0.06%",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 195.86
+    },
+    {
+      "id": 1375,
+      "FileName": "society-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the prevalence of SARS-CoV-2 among community members on any given day?",
+      "Reference": "0.70%",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 196.2
+    },
+    {
+      "id": 1376,
+      "FileName": "society-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the probability of a SARS-CoV-2 infection for the whole household of a child who gets vaccinated?",
+      "Reference": "0.34%",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 196.04
+    },
+    {
+      "id": 1377,
+      "FileName": "society-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average number of transmission-relevant contacts a community member has per day?",
+      "Reference": "6",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 195.97
+    },
+    {
+      "id": 1378,
+      "FileName": "society-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many different types of effectiveness measures for health facility mitigation measures are there in the table?",
+      "Reference": "3",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 195.99
+    },
+    {
+      "id": 1459,
+      "FileName": "society-table44",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the average coverage rate for Vitamin A for treatment of measles and treatment from 2019 to 2021?",
+      "Reference": "89.66%",
+      "Prediction": "99.0%, 82.2%, 82.2%",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.67
+    },
+    {
+      "id": 1460,
+      "FileName": "society-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the expected number of children receiving vaccinations according to the table?",
+      "Reference": "200,000",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 196.03
+    },
+    {
+      "id": 1461,
+      "FileName": "society-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many types of Effectiveness of Health Facility Mitigation Measures are listed?",
+      "Reference": "3",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 195.87
+    },
+    {
+      "id": 1462,
+      "FileName": "society-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many types of Infection Fatality Rates (IFRs) are listed?",
+      "Reference": "3",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 196.3
+    },
+    {
+      "id": 1463,
+      "FileName": "society-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the probability for a SARS-CoV-2 infection for the whole household of a child who gets vaccinated?",
+      "Reference": "0.34%",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 196.37
+    },
+    {
+      "id": 1464,
+      "FileName": "society-table45",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'Probability of transmission given potentially infectious contact with health care provider' and 'Probability of transmission given potentially infectious contact with community members'?",
+      "Reference": "Positive correlation",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 694.34
+    },
+    {
+      "id": 2021,
+      "FileName": "agriculture-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Which state in the Northern Plains has the highest amount of idle cropland?",
+      "Reference": "Kansas",
+      "Prediction": "North Dakota",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 36.47
+    },
+    {
+      "id": 2022,
+      "FileName": "agriculture-table07",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Calculate the difference in total cropland between the Corn Belt and Southern Plains regions.",
+      "Reference": "48614",
+      "Prediction": "52557, 12433",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 37.53
+    },
+    {
+      "id": 2959,
+      "FileName": "biology-table05_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Rank the countries based on their shrimp import values in 2017 from highest to lowest.",
+      "Reference": "India, Indonesia, Thailand, Vietnam, Ecuador, Mexico, China (Mainland)",
+      "Prediction": "India, Indonesia, Ecuador, Thailand, Vietnam, Mexico, Peru, Other countries",
+      "Metrics": {
+        "F1": 70.59,
+        "EM": 0.0,
+        "ROUGE-L": 58.82,
+        "SacreBLEU": 14.92
+      },
+      "ProcessingTime": 1.23
+    }
+  ]
+}

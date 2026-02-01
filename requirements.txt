@@ -226,3 +226,39 @@ huggingface_hub
 #   "safetensors>=0.4"
 # python -m pip install "https://github.com/Dao-AILab/flash-attention/releases/download/v2.8.3/flash_attn-2.8.3+cu12torch2.7cxx11abiTRUE-cp310-cp310-linux_x86_64.whl"
 # python -m pip install -U hf_transfer
+
+# export HF_HUB_ENABLE_HF_TRANSFER=1
+# export HF_TOKEN="hf_xxx..." # （一定要设置，设置后限速没那么明显）
+# # 下载 RealHiTBench 数据集到指定路径
+# mkdir -p /mnt/data2/projects/pan/4xin/datasets/RealHiTBench
+
+# python - << 'PY'
+# import os
+# from huggingface_hub import snapshot_download
+
+# os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "1"
+
+# snapshot_download(
+#     repo_id="spzy/RealHiTBench",
+#     repo_type="dataset",
+#     local_dir="/mnt/data2/projects/pan/4xin/datasets/RealHiTBench",
+#     local_dir_use_symlinks=False,   # avoid symlink-to-cache surprises
+#     resume_download=True,           # continue if interrupted
+# )
+# print("✅ Download complete.")
+# PY
+
+# # 下载 Qwen3-VL-8B-Instruct 模型到指定路径
+# python - <<'PY'
+# import os
+# from huggingface_hub import snapshot_download
+
+# snapshot_download(
+#     repo_id="Qwen/Qwen3-VL-8B-Instruct",
+#     repo_type="model",
+#     local_dir="/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct",
+# )
+# print("✅ Model download complete.")
+# PY
+
+# pip install huggingface-hub==0.34.3

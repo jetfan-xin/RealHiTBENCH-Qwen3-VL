@@ -1,24 +1,26 @@
 #!/bin/bash
 #
-# 使用官方默认 processor 配置运行 5 个模态的实验
-# 模态: image, mix_html, mix_latex, mix_csv, mix_markdown
+# 使用官方默认 processor 配置运行实验
+# 模态: image, mix_html, mix_latex, mix_csv, mix_markdown,
+#       text_html, text_latex, text_csv, text_markdown
 # 数据: QA_final_sc_filled.json (SC-filled)
 #
 # ⚠️ 警告: 官方默认配置允许高达 ~16.8M 像素的图像
 #          可能导致 OOM，特别是大表格图像
 #
 # 使用方法:
-#   ./run_default_config_experiments.sh           # 顺序运行所有 5 个模态
+#   ./run_default_config_experiments.sh           # 顺序运行所有模态
 #   ./run_default_config_experiments.sh image     # 只运行 image 模态
 #   ./run_default_config_experiments.sh mix_html  # 只运行 mix_html 模态
+#   ./run_default_config_experiments.sh text_markdown 5  # 在 GPU 5 上运行 text_markdown
 #
 
 set -e
 
 # ==================== 配置 ====================
-MODEL_DIR="/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
-DATA_PATH="/data/pan/4xin/datasets/RealHiTBench"
-QA_PATH="/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
+MODEL_DIR="/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct"
+DATA_PATH="/mnt/data2/projects/pan/4xin/datasets/RealHiTBench"
+QA_PATH="/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOG_DIR="${SCRIPT_DIR}/../result/qwen3vl_local_a100_default/logs"
 INFERENCE_SCRIPT="${SCRIPT_DIR}/inference_qwen3vl_local_a100_default.py"
@@ -63,7 +65,7 @@ run_experiment() {
     else
         CUDA_VISIBLE_DEVICES=$gpu_id python "$INFERENCE_SCRIPT" \
             $COMMON_ARGS \
-            --modality mix \
+            --modality $modality \
             --format $format \
             2>&1 | tee "$log_file"
     fi
@@ -112,6 +114,18 @@ if [ $# -ge 1 ]; then
         mix_markdown)
             run_experiment "mix" "markdown" "mix_markdown" "${2:-0}"
             ;;
+        text_html)
+            run_experiment "text" "html" "text_html" "${2:-0}"
+            ;;
+        text_latex)
+            run_experiment "text" "latex" "text_latex" "${2:-0}"
+            ;;
+        text_csv)
+            run_experiment "text" "csv" "text_csv" "${2:-0}"
+            ;;
+        text_markdown)
+            run_experiment "text" "markdown" "text_markdown" "${2:-0}"
+            ;;
         all)
             # 运行所有模态
             run_experiment "image" "" "image" "0"
@@ -119,21 +133,37 @@ if [ $# -ge 1 ]; then
             run_experiment "mix" "latex" "mix_latex" "0"
             run_experiment "mix" "csv" "mix_csv" "0"
             run_experiment "mix" "markdown" "mix_markdown" "0"
+            run_experiment "text" "html" "text_html" "0"
+            run_experiment "text" "latex" "text_latex" "0"
+            run_experiment "text" "csv" "text_csv" "0"
+            run_experiment "text" "markdown" "text_markdown" "0"
             ;;
         *)
-            echo "Usage: $0 [image|mix_html|mix_latex|mix_csv|mix_markdown|all] [gpu_id]"
+            echo "Usage: $0 [modality] [gpu_id]"
+            echo ""
+            echo "Modalities:"
+            echo "  image         - Image only"
+            echo "  mix_html      - Image + HTML table"
+            echo "  mix_latex     - Image + LaTeX table"
+            echo "  mix_csv       - Image + CSV table"
+            echo "  mix_markdown  - Image + Markdown table"
+            echo "  text_html     - HTML table only (no image)"
+            echo "  text_latex    - LaTeX table only (no image)"
+            echo "  text_csv      - CSV table only (no image)"
+            echo "  text_markdown - Markdown table only (no image)"
+            echo "  all           - Run all modalities"
             echo ""
             echo "Examples:"
-            echo "  $0                  # Run all modalities sequentially"
-            echo "  $0 image            # Run image modality only"
-            echo "  $0 mix_html 1       # Run mix_html on GPU 1"
-            echo "  $0 all              # Run all modalities"
+            echo "  $0                     # Run all modalities sequentially"
+            echo "  $0 image               # Run image modality only"
+            echo "  $0 mix_html 1          # Run mix_html on GPU 1"
+            echo "  $0 text_markdown 5     # Run text_markdown on GPU 5"
             exit 1
             ;;
     esac
 else
     # 默认运行所有模态
-    echo "Running all 5 modalities sequentially..."
+    echo "Running all modalities sequentially..."
     echo ""
     
     run_experiment "image" "" "image" "0"
@@ -141,6 +171,10 @@ else
     run_experiment "mix" "latex" "mix_latex" "0"
     run_experiment "mix" "csv" "mix_csv" "0"
     run_experiment "mix" "markdown" "mix_markdown" "0"
+    run_experiment "text" "html" "text_html" "0"
+    run_experiment "text" "latex" "text_latex" "0"
+    run_experiment "text" "csv" "text_csv" "0"
+    run_experiment "text" "markdown" "text_markdown" "0"
 fi
 
 echo ""

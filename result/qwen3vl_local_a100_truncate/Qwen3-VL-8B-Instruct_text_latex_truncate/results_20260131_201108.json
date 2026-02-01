@@ -1,0 +1,38 @@
+{
+  "config": {
+    "model_dir": "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "text",
+    "format": "latex",
+    "data_path": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 1,
+    "start_time": "2026-01-31T20:11:00.787129",
+    "end_time": "2026-01-31T20:11:08.588269",
+    "duration_seconds": 7.80114
+  },
+  "aggregate_metrics": {
+    "Structure Comprehending": {
+      "SacreBLEU": 14.92,
+      "ROUGE-L": 58.82,
+      "EM": 0.0,
+      "F1": 70.59
+    }
+  },
+  "results": [
+    {
+      "id": 2959,
+      "FileName": "biology-table05_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Rank the countries based on their shrimp import values in 2017 from highest to lowest.",
+      "Reference": "India, Indonesia, Thailand, Vietnam, Ecuador, Mexico, China (Mainland)",
+      "Prediction": "India, Indonesia, Ecuador, Thailand, Vietnam, Mexico, Peru, Other countries",
+      "Metrics": {
+        "F1": 70.59,
+        "EM": 0.0,
+        "ROUGE-L": 58.82,
+        "SacreBLEU": 14.92
+      },
+      "ProcessingTime": 1.84
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "config": {
+    "model_dir": "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "mix",
+    "format": "latex",
+    "data_path": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 1,
+    "start_time": "2026-01-31T19:04:55.675124",
+    "end_time": "2026-01-31T19:05:04.020051",
+    "duration_seconds": 8.344927
+  },
+  "aggregate_metrics": {
+    "Structure Comprehending": {
+      "F1": 100.0,
+      "EM": 100.0,
+      "ROUGE-L": 100.0,
+      "SacreBLEU": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": 2963,
+      "FileName": "environment-table36_swap",
+      "QuestionType": "Structure Comprehending",
+      "SubQType": "Structure Comprehending",
+      "Question": "Which material and blend combination has the highest average SO2 value in inlet?",
+      "Reference": "Bituminous, 100",
+      "Prediction": "Bituminous, 100",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.3
+    }
+  ]
+}

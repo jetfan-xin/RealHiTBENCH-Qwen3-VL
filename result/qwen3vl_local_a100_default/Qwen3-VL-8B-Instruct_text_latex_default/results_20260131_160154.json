@@ -1,0 +1,14 @@
+{
+  "config": {
+    "model_dir": "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "text",
+    "format": "latex",
+    "data_path": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 0,
+    "start_time": "2026-01-31T16:01:49.832021",
+    "end_time": "2026-01-31T16:01:54.619470",
+    "duration_seconds": 4.787449
+  },
+  "aggregate_metrics": {},
+  "results": []
+}

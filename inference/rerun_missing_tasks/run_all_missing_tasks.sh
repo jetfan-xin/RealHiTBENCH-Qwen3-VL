@@ -28,7 +28,7 @@ echo "  任务数: 1 (incomplete: 1, error: 0)"
 echo "  使用truncate: False"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_default_pic_image_None.py
+python rerun_qwen3vl_default_pic_image_None.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_default_pic/image"
@@ -45,7 +45,7 @@ echo "  任务数: 17 (incomplete: 0, error: 17)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_default_pic_mix_html.py
+python rerun_qwen3vl_default_pic_mix_html.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_default_pic/mix_html"
@@ -62,7 +62,7 @@ echo "  任务数: 1 (incomplete: 1, error: 0)"
 echo "  使用truncate: False"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_resize_pic_image_None.py
+python rerun_qwen3vl_resize_pic_image_None.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_resize_pic/image"
@@ -79,7 +79,7 @@ echo "  任务数: 11 (incomplete: 1, error: 10)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_resize_pic_mix_csv.py
+python rerun_qwen3vl_resize_pic_mix_csv.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_resize_pic/mix_csv"
@@ -96,7 +96,7 @@ echo "  任务数: 25 (incomplete: 25, error: 0)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_resize_pic_mix_html.py
+python rerun_qwen3vl_resize_pic_mix_html.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_resize_pic/mix_html"
@@ -113,7 +113,7 @@ echo "  任务数: 1 (incomplete: 1, error: 0)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_resize_pic_mix_latex.py
+python rerun_qwen3vl_resize_pic_mix_latex.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_resize_pic/mix_latex"
@@ -130,7 +130,7 @@ echo "  任务数: 15 (incomplete: 15, error: 0)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_text_text_csv.py
+python rerun_qwen3vl_text_text_csv.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_text/text_csv"
@@ -147,7 +147,7 @@ echo "  任务数: 17 (incomplete: 0, error: 17)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_text_text_html.py
+python rerun_qwen3vl_text_text_html.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_text/text_html"
@@ -164,7 +164,7 @@ echo "  任务数: 1 (incomplete: 1, error: 0)"
 echo "  使用truncate: True"
 echo "------------------------------------------------------------------------"
 
-python inference/rerun_missing_tasks/rerun_qwen3vl_text_text_latex.py
+python rerun_qwen3vl_text_text_latex.py
 
 if [ $? -ne 0 ]; then
     echo "✗ 失败: qwen3vl_text/text_latex"

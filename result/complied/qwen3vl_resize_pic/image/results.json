@@ -48147,5 +48147,45 @@
       },
       "ProcessingTime": 0.79
     }
-  ]
+  ],
+  "aggregate_metrics": {
+    "by_question_type": {
+      "Fact Checking": {
+        "F1": 52.0,
+        "EM": 41.66,
+        "ROUGE-L": 52.02,
+        "SacreBLEU": 4.61
+      },
+      "Data Analysis": {
+        "EM": 12.46,
+        "ROUGE-L": 38.81,
+        "F1": 38.77,
+        "SacreBLEU": 15.83
+      },
+      "Visualization": {
+        "ECR": 46.75,
+        "Pass": 22.08
+      },
+      "Numerical Reasoning": {
+        "F1": 28.72,
+        "EM": 14.53,
+        "ROUGE-L": 27.91,
+        "SacreBLEU": 4.55
+      },
+      "Structure Comprehending": {
+        "F1": 43.92,
+        "EM": 31.06,
+        "ROUGE-L": 43.27,
+        "SacreBLEU": 4.81
+      }
+    },
+    "overall": {
+      "ECR": 2.35,
+      "EM": 29.11,
+      "Pass": 1.11,
+      "ROUGE-L": 42.34,
+      "F1": 42.66,
+      "SacreBLEU": 5.84
+    }
+  }
 }

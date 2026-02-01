@@ -1,15 +1,13 @@
 #!/usr/bin/env python3
-"""
-重新运行缺失的任务: qwen3vl_text/text_csv
+# 重新运行缺失的任务: qwen3vl_text/text_csv
 
-生成时间: 2026-01-31T14:22:58.775214
-任务来源: qwen3vl_text/text_csv/results.json
-需要重新运行的任务数: 15
-  - Incomplete runs: 15
-  - Error tasks: 0
+# 生成时间: 2026-01-31T14:22:58.775214
+# 任务来源: qwen3vl_text/text_csv/results.json
+# 需要重新运行的任务数: 15
+#   - Incomplete runs: 15
+#   - Error tasks: 0
 
 # 使用truncate版本防止OOM (error_ids: 0)
-"""
 
 import subprocess
 import sys
@@ -21,15 +19,16 @@ def main():
     modality = "text"
     format_type = "csv"
     batch_size = 1  # 使用batch_size=1避免OOM
-    model_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
-    data_path = "/data/pan/4xin/datasets/RealHiTBench"
-    qa_path = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
-    
+    # model_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
+    # data_path = "/data/pan/4xin/datasets/RealHiTBench"
+    # qa_path = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
+    model_dir = "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct"
+    data_path = "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench"
+    qa_path = "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"    
     # 需要重新运行的任务ID
     task_ids = [1373, 1374, 1375, 1376, 1377, 1378, 1459, 1460, 1461, 1462, 1463, 1464, 2021, 2022, 2959]
     
     print("=" * 80)
-    print(f"重新运行缺失任务: {modality}" + (f"_{format_type}" if format_type else ""))
     print("=" * 80)
     print(f"配置: qwen3vl_text")
     print(f"任务数量: {len(task_ids)}")
@@ -51,7 +50,6 @@ def main():
         "--use_sc_filled",
         "--batch_size", str(batch_size),
         "--task_ids", ",".join(map(str, task_ids)),  # 指定任务ID
-        "--resume"  # 使用resume模式，会加载已有checkpoint并合并
     ]
     
     if format_type:
@@ -67,7 +65,6 @@ def main():
     if result.returncode == 0:
         print()
         print("=" * 80)
-        print(f"✓ 成功完成 {modality}" + (f"_{format_type}" if format_type else "") + f" 的 {len(task_ids)} 个缺失任务")
         print("=" * 80)
     else:
         print()

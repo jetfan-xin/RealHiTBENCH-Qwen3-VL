@@ -10,33 +10,43 @@
     "duration_seconds": 12075.093271
   },
   "aggregate_metrics": {
-    "Fact Checking": {
-      "F1": 55.515024711696825,
-      "EM": 46.12850082372323,
-      "ROUGE-L": 55.48079077429979,
-      "SacreBLEU": 5.402199341021415
+    "by_question_type": {
+      "Fact Checking": {
+        "F1": 55.52,
+        "EM": 46.13,
+        "ROUGE-L": 55.48,
+        "SacreBLEU": 5.4
+      },
+      "Data Analysis": {
+        "EM": 9.72,
+        "ROUGE-L": 39.93,
+        "F1": 39.87,
+        "SacreBLEU": 16.62
+      },
+      "Visualization": {
+        "ECR": 27.92,
+        "Pass": 11.69
+      },
+      "Numerical Reasoning": {
+        "F1": 28.14,
+        "EM": 12.19,
+        "ROUGE-L": 26.99,
+        "SacreBLEU": 5.09
+      },
+      "Structure Comprehending": {
+        "F1": 41.37,
+        "EM": 29.01,
+        "ROUGE-L": 40.56,
+        "SacreBLEU": 4.94
+      }
     },
-    "Data Analysis": {
-      "EM": 9.722222222222221,
-      "ROUGE-L": 39.9265625,
-      "SacreBLEU": 16.62201388888886,
-      "F1": 39.87479166666667
-    },
-    "Visualization": {
-      "Pass": 0.11688311688311688,
-      "ECR": 0.2792207792207792
-    },
-    "Numerical Reasoning": {
-      "F1": 28.13588845654989,
-      "EM": 12.19195849546044,
-      "ROUGE-L": 26.9866277561608,
-      "SacreBLEU": 5.090713359273667
-    },
-    "Structure Comprehending": {
-      "F1": 41.37452926208651,
-      "EM": 29.00763358778626,
-      "ROUGE-L": 40.56478371501272,
-      "SacreBLEU": 4.943129770992368
+    "overall": {
+      "ECR": 1.4,
+      "EM": 29.86,
+      "Pass": 0.59,
+      "ROUGE-L": 43.36,
+      "F1": 43.82,
+      "SacreBLEU": 6.46
     }
   },
   "results": [

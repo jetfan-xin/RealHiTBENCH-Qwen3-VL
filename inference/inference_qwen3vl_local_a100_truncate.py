@@ -21,6 +21,11 @@ Usage:
 import sys
 import os
 
+# CRITICAL: Set cache directories to writable location BEFORE any imports
+os.environ['HF_HOME'] = os.path.expanduser('~/.cache/huggingface')
+os.environ['HF_DATASETS_CACHE'] = os.path.expanduser('~/.cache/huggingface/datasets')
+os.environ['TRANSFORMERS_CACHE'] = os.path.expanduser('~/.cache/huggingface/transformers')
+
 # CRITICAL: Disable PIL decompression bomb check BEFORE any other imports
 from PIL import Image
 Image.MAX_IMAGE_PIXELS = None  # Allow arbitrarily large images
@@ -64,7 +69,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 # Maximum input tokens allowed before truncation
 # Based on analysis of missing IDs, most tables are well below this limit
 # Only extreme outliers (like economy-table14_swap with 334K tokens) will be truncated
-MAX_INPUT_TOKENS = 100000  # Allow up to 100K tokens before truncation
+MAX_INPUT_TOKENS = 200000  # Allow up to 200K tokens before truncation
 
 # File extension mapping
 FILE_EXTENSIONS = {
@@ -171,14 +176,18 @@ def get_model_device(model):
         return next(model.parameters()).device
 
 
-def truncate_text_if_needed(messages_text: str, processor, max_tokens: int = MAX_INPUT_TOKENS):
+def truncate_text_if_needed(messages_text: str, processor, max_tokens: int = MAX_INPUT_TOKENS, 
+                            question: str = None, table_content: str = None):
     """
     Check text length and truncate if it exceeds max_tokens limit.
+    IMPROVED STRATEGY: Always preserve question, truncate table from middle (keep head + tail)
     
     Args:
-        messages_text: The input text
+        messages_text: The full prompt text (for token counting)
         processor: The processor for tokenization
         max_tokens: Maximum allowed tokens
+        question: The question text (always preserved)
+        table_content: The table content (can be truncated)
         
     Returns:
         (truncated_text, original_token_count, was_truncated)
@@ -202,7 +211,7 @@ def truncate_text_if_needed(messages_text: str, processor, max_tokens: int = MAX
             return_dict=True,
             return_tensors="pt"
         )
-        input_tokens = test_inputs.input_ids.shape[1]
+        input_tokens = test_inputs['input_ids'].shape[1]
         
         if input_tokens <= max_tokens:
             return messages_text, input_tokens, False
@@ -210,20 +219,79 @@ def truncate_text_if_needed(messages_text: str, processor, max_tokens: int = MAX
         # Text is too long, need to truncate
         print(f"  [TRUNCATE] Input too large ({input_tokens:,} tokens), truncating to {max_tokens:,}", flush=True)
         
-        # Calculate truncation ratio (leave 10% margin for safety)
-        char_ratio = (max_tokens / input_tokens) * 0.90
-        truncate_length = int(len(messages_text) * char_ratio)
-        
-        truncated_text = messages_text[:truncate_length]
-        truncated_text += "\n\n[...TEXT TRUNCATED DUE TO LENGTH LIMIT...]"
+        # IMPROVED STRATEGY: Preserve question, truncate table from middle
+        if question and table_content:
+            # Split table into lines for smarter truncation
+            table_lines = table_content.split('\n')
+            
+            # Keep first 30% and last 30% of table (remove middle 40%)
+            # This preserves structure info at both ends
+            keep_head_ratio = 0.35
+            keep_tail_ratio = 0.35
+            
+            num_lines = len(table_lines)
+            head_lines = int(num_lines * keep_head_ratio)
+            tail_lines = int(num_lines * keep_tail_ratio)
+            
+            truncated_table_lines = (
+                table_lines[:head_lines] + 
+                [f"\n... [{num_lines - head_lines - tail_lines} rows omitted] ...\n"] +
+                table_lines[-tail_lines:]
+            )
+            truncated_table = '\n'.join(truncated_table_lines)
+            
+            # Rebuild prompt with question + truncated table
+            # Extract prompt template parts (everything except table content)
+            # This assumes messages_text format: "TASK_PROMPT\nUSER_PROMPT with {Table} and {Question}"
+            truncated_text = messages_text.replace(table_content, truncated_table)
+        else:
+            # Fallback: simple truncation from start (old method)
+            char_ratio = (max_tokens / input_tokens) * 0.90
+            truncate_length = int(len(messages_text) * char_ratio)
+            truncated_text = messages_text[:truncate_length]
+            truncated_text += "\n\n[...TEXT TRUNCATED DUE TO LENGTH LIMIT...]"
         
         # Verify truncated length
         verify_messages = [{"role": "user", "content": [{"type": "text", "text": truncated_text}]}]
         verify_inputs = processor.apply_chat_template(
-            verify_messages, tokenize=True, add_generation_prompt=True, return_tensors="pt"
+            verify_messages, tokenize=True, add_generation_prompt=True, return_dict=True, return_tensors="pt"
         )
-        final_tokens = verify_inputs.input_ids.shape[1]
+        final_tokens = verify_inputs['input_ids'].shape[1]
+        
+        # If still too large, do iterative truncation
+        attempts = 0
+        max_attempts = 5
+        while final_tokens > max_tokens and attempts < max_attempts:
+            attempts += 1
+            # Reduce table content further
+            if question and table_content:
+                keep_head_ratio *= 0.8
+                keep_tail_ratio *= 0.8
+                head_lines = int(num_lines * keep_head_ratio)
+                tail_lines = int(num_lines * keep_tail_ratio)
+                
+                truncated_table_lines = (
+                    table_lines[:max(1, head_lines)] + 
+                    [f"\n... [{num_lines - max(1, head_lines) - max(1, tail_lines)} rows omitted] ...\n"] +
+                    table_lines[-max(1, tail_lines):]
+                )
+                truncated_table = '\n'.join(truncated_table_lines)
+                truncated_text = messages_text.replace(table_content, truncated_table)
+            else:
+                # Further reduce simple truncation
+                truncate_length = int(truncate_length * 0.8)
+                truncated_text = messages_text[:truncate_length]
+                truncated_text += "\n\n[...TEXT TRUNCATED DUE TO LENGTH LIMIT...]"
+            
+            verify_inputs = processor.apply_chat_template(
+                [{"role": "user", "content": [{"type": "text", "text": truncated_text}]}],
+                tokenize=True, add_generation_prompt=True, return_dict=True, return_tensors="pt"
+            )
+            final_tokens = verify_inputs['input_ids'].shape[1]
+        
         print(f"  [TRUNCATE] Result: {final_tokens:,} tokens (original: {input_tokens:,})", flush=True)
+        if question and table_content:
+            print(f"  [TRUNCATE] Strategy: Kept {keep_head_ratio*100:.1f}% head + {keep_tail_ratio*100:.1f}% tail of table", flush=True)
         
         return truncated_text, input_tokens, True
         
@@ -233,7 +301,8 @@ def truncate_text_if_needed(messages_text: str, processor, max_tokens: int = MAX
         return messages_text, -1, False
 
 
-def get_text_response_local(messages_text: str, model, processor, opt, max_tokens=4096):
+def get_text_response_local(messages_text: str, model, processor, opt, max_tokens=4096, 
+                           question: str = None, table_content: str = None):
     """
     Get response for text-only input with automatic truncation for large inputs.
     
@@ -243,14 +312,16 @@ def get_text_response_local(messages_text: str, model, processor, opt, max_token
         processor: Loaded processor
         opt: Options
         max_tokens: Maximum tokens to generate
+        question: The question text (for smart truncation)
+        table_content: The table content (for smart truncation)
         
     Returns:
         Response text, or error message starting with '[ERROR]' if processing fails
     """
     try:
-        # STEP 1: Truncate text if needed
+        # STEP 1: Truncate text if needed (with smart strategy)
         truncated_text, original_tokens, was_truncated = truncate_text_if_needed(
-            messages_text, processor, MAX_INPUT_TOKENS
+            messages_text, processor, MAX_INPUT_TOKENS, question, table_content
         )
         
         # STEP 2: Create messages with (potentially truncated) text
@@ -300,7 +371,7 @@ def get_text_response_local(messages_text: str, model, processor, opt, max_token
         
         # STEP 5: Decode output
         generated_ids_trimmed = [
-            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs['input_ids'], generated_ids)
         ]
         output_text = processor.batch_decode(
             generated_ids_trimmed, 
@@ -321,7 +392,8 @@ def get_text_response_local(messages_text: str, model, processor, opt, max_token
         return f"[ERROR] {str(e)}"
 
 
-def get_image_response_local(messages_text: str, image_file: str, model, processor, opt, max_tokens=4096):
+def get_image_response_local(messages_text: str, image_file: str, model, processor, opt, max_tokens=4096,
+                            question: str = None, table_content: str = None):
     """
     Get response for image input with text truncation support.
     
@@ -332,6 +404,8 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
         processor: Loaded processor
         opt: Options
         max_tokens: Maximum tokens to generate
+        question: The question text (for smart truncation)
+        table_content: The table content (for smart truncation)
         
     Returns:
         Response text, or error message starting with '[ERROR]' if processing fails
@@ -342,9 +416,9 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
         img_size = img.size
         img_pixels = img_size[0] * img_size[1]
         
-        # STEP 1: Truncate text if needed (for mix modality)
+        # STEP 1: Truncate text if needed (for mix modality, with smart strategy)
         truncated_text, original_tokens, was_truncated = truncate_text_if_needed(
-            messages_text, processor, MAX_INPUT_TOKENS
+            messages_text, processor, MAX_INPUT_TOKENS, question, table_content
         )
         
         # STEP 2: Create messages with image and (potentially truncated) text
@@ -352,7 +426,7 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
             {
                 "role": "user",
                 "content": [
-                    {"type": "image", "image": f"file://{image_file}"},
+                    {"type": "image", "image": image_file},
                     {"type": "text", "text": truncated_text}
                 ]
             }
@@ -391,7 +465,7 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
         
         # STEP 5: Decode output
         generated_ids_trimmed = [
-            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs.input_ids, generated_ids)
+            out_ids[len(in_ids):] for in_ids, out_ids in zip(inputs['input_ids'], generated_ids)
         ]
         output_text = processor.batch_decode(
             generated_ids_trimmed, 
@@ -416,8 +490,129 @@ def get_image_response_local(messages_text: str, image_file: str, model, process
         return f"[ERROR] {str(e)}"
 
 
+def build_messages(query, answer_format, opt):
+    """
+    Build prompt messages based on modality.
+    
+    Args:
+        query: Query dict containing question info
+        answer_format: Expected answer format
+        opt: Options including modality and format
+    """
+    question_type = query['QuestionType']
+    
+    # Select task prompt based on question type
+    if opt.modality == 'text':
+        Answer_Prompt = Answer_Prompt_Text
+        User_Prompt = User_Prompt_Text
+    elif opt.modality == 'image':
+        Answer_Prompt = Answer_Prompt_Image
+        User_Prompt = User_Prompt_Image
+    else:  # mix
+        Answer_Prompt = Answer_Prompt_Mix
+        User_Prompt = User_Prompt_Mix
+    
+    # Get task-specific prompt
+    if question_type == 'Data Analysis':
+        TASK_PROMPT = Answer_Prompt[query['SubQType']]
+    else:
+        TASK_PROMPT = Answer_Prompt[question_type]
+    
+    # For text-only mode, need to format the prompt with table format
+    if opt.modality == 'text':
+        TASK_PROMPT = TASK_PROMPT.format(format=opt.format)
+    
+    # Build user prompt
+    if opt.modality == 'image':
+        # Image-only: no table text in prompt
+        QUESTION_PROMPT = User_Prompt.format_map({
+            'Table': "[See the table image]",
+            'Question': query['Question'],
+            'Answer_format': answer_format
+        })
+    else:
+        # Text or Mix: include table content
+        file_path = f'{opt.data_path}/{opt.format}'
+        table_content = read_file(f'{file_path}/{query["FileName"]}.{FILE_EXTENSIONS[opt.format]}')
+        QUESTION_PROMPT = User_Prompt.format_map({
+            'Table': table_content,
+            'Question': query['Question'],
+            'Answer_format': answer_format
+        })
+    
+    messages = TASK_PROMPT + "\n" + QUESTION_PROMPT
+    return messages
+
+
+def get_answer_format(query):
+    """Determine expected answer format based on question type."""
+    if query['SubQType'] == 'Exploratory Analysis':
+        return "CorrelationRelation, CorrelationCoefficient"
+    elif query['QuestionType'] == 'Visualization':
+        return "import pandas as pd \n import matplotlib.pyplot as plt \n ... plt.show()"
+    else:
+        return "AnswerName1, AnswerName2..."
+
+
+@timeout(15)
+def execute(c):
+    exec(c)
+
+
+@timeout(20)
+def exec_and_get_y_reference(answer_code, chart_type):
+    """Execute visualization code and extract chart data for evaluation."""
+    ecr_1 = False
+    python_code, eval_code = build_eval_code(answer_code, chart_type)
+    print("Code:", python_code)
+    
+    if python_code == "":
+        return "", False
+    
+    try:
+        python_code = surround_pycode_with_main(python_code)
+        execute(python_code)
+        ecr_1 = True
+        plt.close('all')
+    except Exception as e:
+        print("Python Error:", e)
+        ecr_1 = False
+        return "", False
+    
+    if ecr_1:
+        pass
+    
+    try:
+        from io import StringIO
+        output = StringIO()
+        stdout = sys.stdout
+        try:
+            sys.stdout = output
+            chart_eval_code = surround_pycode_with_main(eval_code)
+            execute(chart_eval_code)
+        except Exception as e:
+            print("Eval Error:", e)
+            return "", True
+        finally:
+            sys.stdout = stdout
+        output_value = output.getvalue()
+        print("OUTPUT VALUE:", output_value)
+    except Exception as e:
+        print("Eval Error:", e)
+        output_value = ''
+    
+    if output_value != '':
+        parsed_prediction = output_value.strip()
+    else:
+        parsed_prediction = ''
+    
+    plt.close('all')
+    return parsed_prediction, ecr_1
+
+
 def get_final_answer_local(messages_text: str, answer_format: str, opt, model, processor,
-                           image_file: str = None, sleep_time=1, max_retry=3):
+                           image_file: str = None, question: str = None, table_content: str = None,
+                           sleep_time=1, max_retry=3):
     """
     Get final answer with retry logic.
     Uses truncation-enabled text/image response functions.
@@ -428,9 +623,11 @@ def get_final_answer_local(messages_text: str, answer_format: str, opt, model, p
     while retry < max_retry:
         try:
             if opt.modality == 'text':
-                response = get_text_response_local(current_messages, model, processor, opt)
+                response = get_text_response_local(current_messages, model, processor, opt,
+                                                  question=question, table_content=table_content)
             else:  # image or mix
-                response = get_image_response_local(current_messages, image_file, model, processor, opt)
+                response = get_image_response_local(current_messages, image_file, model, processor, opt,
+                                                   question=question, table_content=table_content)
             
             # Check for error responses
             if response.startswith("[ERROR]"):
@@ -703,7 +900,7 @@ def gen_solution_batch(opt):
     
     # Setup output directory (use separate folder for default config experiments)
     model_name = os.path.basename(opt.model_dir)
-    output_base = os.path.abspath(f'../result/qwen3vl_local_a100_default')
+    output_base = os.path.abspath(f'../result/qwen3vl_local_a100_truncate')
     if not os.path.exists(output_base):
         os.makedirs(output_base, exist_ok=True)
     
@@ -712,7 +909,7 @@ def gen_solution_batch(opt):
         modality_suffix += f"_{opt.format}"
     
     # Add shard suffix to output path for multi-process mode
-    output_file_path = f'{output_base}/{model_name}_{modality_suffix}_default'
+    output_file_path = f'{output_base}/{model_name}_{modality_suffix}_truncate'
     if opt.shard_id is not None:
         output_file_path = f'{output_file_path}_shard{opt.shard_id}'
     if not os.path.exists(output_file_path):
@@ -918,7 +1115,7 @@ def gen_solution(opt):
     
     # Setup output directory (use separate folder for default config experiments)
     model_name = os.path.basename(opt.model_dir)
-    output_base = os.path.abspath(f'../result/qwen3vl_local_a100_default')
+    output_base = os.path.abspath(f'../result/qwen3vl_local_a100_truncate')
     if not os.path.exists(output_base):
         os.makedirs(output_base, exist_ok=True)
     
@@ -927,7 +1124,7 @@ def gen_solution(opt):
         modality_suffix += f"_{opt.format}"
     
     # Add shard suffix to output path for multi-process mode
-    output_file_path = f'{output_base}/{model_name}_{modality_suffix}_default'
+    output_file_path = f'{output_base}/{model_name}_{modality_suffix}_truncate'
     if opt.shard_id is not None:
         output_file_path = f'{output_file_path}_shard{opt.shard_id}'
     if not os.path.exists(output_file_path):
@@ -966,12 +1163,21 @@ def gen_solution(opt):
             messages = build_messages(query, answer_format, opt)
             image_file = f'{image_file_path}/{query["FileName"]}.png'
             
+            # Extract question and table content for smart truncation
+            question = query['Question']
+            if opt.modality != 'image':
+                table_file = f'{file_path}/{query["FileName"]}.{FILE_EXTENSIONS[opt.format]}'
+                table_content = read_file(table_file)
+            else:
+                table_content = None
+            
             metric_scores = {}
             response = ""
             
             if question_type == 'Visualization':
                 # Visualization task: generate code and evaluate
-                response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file)
+                response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file,
+                                                 question=question, table_content=table_content)
                 reference = query['ProcessedAnswer']
                 chart_type = query['SubQType'].split()[0]
                 
@@ -1004,7 +1210,8 @@ def gen_solution(opt):
                 reference = query['FinalAnswer']
                 
                 if question_type == 'Data Analysis':
-                    response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file)
+                    response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file,
+                                                     question=question, table_content=table_content)
                     
                     # GPT evaluation for data analysis tasks
                     if query['SubQType'] in ['Summary Analysis', 'Anomaly Analysis']:
@@ -1029,7 +1236,8 @@ def gen_solution(opt):
                         metric_scores.update(scores)
                 else:
                     # Fact Checking, Numerical Reasoning, Structure Comprehending
-                    response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file)
+                    response = get_final_answer_local(messages, answer_format, opt, model, processor, image_file,
+                                                     question=question, table_content=table_content)
                     scores = qa_metric.compute(references=[reference], predictions=[response])
                     metric_scores.update(scores)
             

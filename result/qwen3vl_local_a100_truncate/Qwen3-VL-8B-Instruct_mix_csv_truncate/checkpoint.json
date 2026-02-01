@@ -1,0 +1,176 @@
+{
+  "results": [
+    {
+      "id": 1374,
+      "FileName": "society-table25",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "How does the risk of transmission change when a clinic uses both PPE and temperature screening compared to no mitigation measures for a child and caretaker visiting for vaccination?",
+      "Reference": "Without mitigation measures: 0.07%, With PPE and temperature screening: 0.06%",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 256.18
+    },
+    {
+      "id": 1375,
+      "FileName": "society-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the prevalence of SARS-CoV-2 among community members on any given day?",
+      "Reference": "0.70%",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 254.34
+    },
+    {
+      "id": 1376,
+      "FileName": "society-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the probability of a SARS-CoV-2 infection for the whole household of a child who gets vaccinated?",
+      "Reference": "0.34%",
+      "Prediction": "AnswerName1, AnswerName2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 165.62
+    },
+    {
+      "id": 1377,
+      "FileName": "society-table25",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the average number of transmission-relevant contacts a community member has per day?",
+      "Reference": "6",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 251.96
+    },
+    {
+      "id": 1378,
+      "FileName": "society-table25",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many different types of effectiveness measures for health facility mitigation measures are there in the table?",
+      "Reference": "3",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 782.92
+    },
+    {
+      "id": 1460,
+      "FileName": "society-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the expected number of children receiving vaccinations according to the table?",
+      "Reference": "200,000",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 254.2
+    },
+    {
+      "id": 1461,
+      "FileName": "society-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many types of Effectiveness of Health Facility Mitigation Measures are listed?",
+      "Reference": "3",
+      "Prediction": "AnswerName1, AnswerName2...",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 170.08
+    },
+    {
+      "id": 1462,
+      "FileName": "society-table45",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many types of Infection Fatality Rates (IFRs) are listed?",
+      "Reference": "3",
+      "Prediction": "[ERROR] Failed to get proper final answer format",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 786.53
+    },
+    {
+      "id": 1463,
+      "FileName": "society-table45",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the probability for a SARS-CoV-2 infection for the whole household of a child who gets vaccinated?",
+      "Reference": "0.34%",
+      "Prediction": "AnswerName1, AnswerName2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 166.41
+    },
+    {
+      "id": 1464,
+      "FileName": "society-table45",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "Is there any correlation between the columns of 'Probability of transmission given potentially infectious contact with health care provider' and 'Probability of transmission given potentially infectious contact with community members'?",
+      "Reference": "Positive correlation",
+      "Prediction": "CorrelationRelation, CorrelationCoefficient",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 167.11
+    }
+  ],
+  "processed_ids": [
+    1376,
+    1377,
+    1378,
+    1460,
+    1461,
+    1462,
+    1463,
+    1464,
+    1374,
+    1375
+  ]
+}
