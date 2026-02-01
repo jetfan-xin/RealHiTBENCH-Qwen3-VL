@@ -1,0 +1,827 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.",
+      "Reference": "1955, 62170",
+      "Prediction": "1953, 61179",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.1
+    },
+    {
+      "id": 2,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Identify the year when the unemployment rate exceeded 5%, and the total civilian labor force was below 65,000.",
+      "Reference": "1954",
+      "Prediction": "1954, 1958",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "2022, 2023",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.48
+    },
+    {
+      "id": 4,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the employment in non-agricultural industries in the year with the highest civilian labor force total?",
+      "Reference": "158772",
+      "Prediction": "167116, 158772",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.63
+    },
+    {
+      "id": 5,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average unemployment rate across all years, and what is its standard deviation?",
+      "Reference": "5.80, 1.62",
+      "Prediction": "5.55, 1.73",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.46
+    },
+    {
+      "id": 6,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, highlighting the main columns, their purposes, and any basic insights or trends observed?",
+      "Reference": "The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nonagricultural Industries),' 'Unemployed (Number, Percent),' and 'Not in Labor Force.' Insights show trends in employment rates, shifts between agricultural and nonagricultural sectors, and unemployment percentages over time.",
+      "Prediction": "The table presents annual averages of U.S. household data from 1953 to 2023, focusing on the civilian noninstitutional population aged 16 and over. Key columns include total civilian noninstitutional population, labor force, employment, unemployment, and sectoral breakdown (agriculture vs. nonagriculture). Trends show a steady increase in population and labor force, with employment rates fluctuating around 58-63%, and unemployment rates generally declining after 2009. The nonagricultural sector dominates employment, and labor force participation has remained relatively stable, with minor declines in recent years.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.27
+    },
+    {
+      "id": 7,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the trend in the percentage of the employed population between 1953 and 1963, what is the predicted percentage for 1965?",
+      "Reference": "Predicted percentage for 1965: 55.12%",
+      "Prediction": "56.2, Increasing trend",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.35
+    },
+    {
+      "id": 8,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Exploratory Analysis",
+      "Question": "What is the correlation between the total civilian labor force and the total number of employed individuals across all years? Provide the correlation coefficient.",
+      "Reference": "Strong positive correlation, 1.00",
+      "Prediction": "Strong positive correlation, 0.99",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 100.0
+      },
+      "ProcessingTime": 1.39
+    },
+    {
+      "id": 9,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Anomaly Analysis",
+      "Question": "Are there any anomalies in the unemployment rates or employment figures that deviate significantly from the general trends in the data? If so, what are the years and their characteristics?",
+      "Reference": "4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployment 9.30% or Employment 139877.00 deviates significantly, Year 2010: Unemployment 9.600% or Employment 139064.00 deviates significantly",
+      "Prediction": "1982, 1983, 2020",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 1.6
+    },
+    {
+      "id": 10,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year with the highest unemployment rate between 1983 and 1990.",
+      "Reference": "1983",
+      "Prediction": "1983",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.27
+    },
+    {
+      "id": 11,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Verify whether the percentage of the civilian labor force employed in 1987 was greater than in 1983 with simply yse/no.",
+      "Reference": "No",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 12,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Determine the average number of unemployed individuals from 1985 to 1987.",
+      "Reference": "3995.67",
+      "Prediction": "4744, 4530, 4101",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.76
+    },
+    {
+      "id": 13,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Was the proportion of the population employed in agriculture in 1984 greater than 5% of the total employed population?",
+      "Reference": "Yes",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.1
+    },
+    {
+      "id": 14,
+      "FileName": "employment-table02",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the year when the civilian noninstitutional population crossed 85,000,000 for the first time.",
+      "Reference": "1986",
+      "Prediction": "2010",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.28
+    },
+    {
+      "id": 15,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "According to the table, draw a bar chart comparing the total civilian population and the total employed population for the years 1985, 1987, and 1989.",
+      "Reference": "[93736, 95853, 97630, 59891, 62107, 64315]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n years = [1985, 1987, 1989]\n data = df[df['Year'].isin(years)]\n data = data[['Year', 'Civilian noninstitu- tional population', 'Employed']]\n data = data.set_index('Year')\n data.plot(kind='bar', figsize=(10,6))\n plt.title('Total Civilian Population vs Total Employed Population (1985, 1987, 1989)')\n plt.xlabel('Year')\n plt.ylabel('Population')\n plt.xticks(rotation=0)\n plt.legend(['Civilian noninstitu- tional population', 'Employed'])\n plt.tight_layout()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 7.9
+    },
+    {
+      "id": 16,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "ScatterChart Generation",
+      "Question": "Create a scatter plot to visualize the relationship between the unemployment rate and the total civilian labor force for all years in the dataset.",
+      "Reference": "[[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3.7, 3.8, 9.2, 7.6, 7.4, 7.1, 6.2, 5.6, 5.4, 5.5, 6.4, 7.0, 6.6, 6.0, 5.6, 5.4, 5.0, 4.6, 4.3, 4.1, 4.7, 5.6, 5.7, 5.4, 5.1, 4.6, 4.5, 5.4, 8.1, 8.6, 8.5, 7.9, 7.1, 6.1, 5.2, 4.8, 4.3, 3.8, 3.6, 8.3, 5.2, 3.6, 3.5]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel('table.xlsx')\n # Extract relevant columns for Men and Women\n men_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna())].copy()\n women_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna())].copy()\n # Extract unemployment rate and total civilian labor force for Men\n men_unemployment_rate = men_data[men_data['Year'].isin(men_data['Year']) & (men_data['Year'] != '') & (men_data['Year'].notna())]['Unemployed'].copy()\n men_total_labor_force = men_data[men_data['Year'].isin(men_data['Year']) & (men_data['Year'] != '') & (men_data['Year'].notna())]['Civilian labor force'].copy()\n # Extract unemployment rate and total civilian labor force for Women\n women_unemployment_rate = women_data[women_data['Year'].isin(women_data['Year']) & (women_data['Year'] != '') & (women_data['Year'].notna())]['Unemployed'].copy()\n women_total_labor_force = women_data[women_data['Year'].isin(women_data['Year']) & (women_data['Year'] != '') & (women_data['Year'].notna())]['Civilian labor force'].copy()\n # Combine data for plotting\n combined_data = pd.concat([men_data[['Year', 'Civilian labor force', 'Unemployed']], women_data[['Year', 'Civilian labor force', 'Unemployed']]], ignore_index=True)\n # Create scatter plot\n plt.figure(figsize=(10, 6))\n plt.scatter(combined_data['Civilian labor force'], combined_data['Unemployed'], alpha=0.7)\n plt.title('Scatter Plot of Unemployment Rate vs Total Civilian Labor Force')\n plt.xlabel('Total Civilian Labor Force')\n plt.ylabel('Unemployed')\n plt.grid(True)\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 18.46
+    },
+    {
+      "id": 17,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Using the data, draw a pie chart to illustrate the distribution of employment between agriculture and non-agriculture sectors in 1984.",
+      "Reference": "[0.05, 0.95]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel('table.xlsx')\n data_1984 = df[df['Year'] == 1984]\n agriculture = data_1984.iloc[0]['Agri-culture']\n non_agriculture = data_1984.iloc[0]['Nonagri-cultural industries']\n labels = ['Agriculture', 'Non-Agriculture']\n sizes = [agriculture, non_agriculture]\n plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)\n plt.title('Employment Distribution in 1984')\n plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 7.6
+    },
+    {
+      "id": 18,
+      "FileName": "employment-table02",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please help me create a line chart to compare the trends of total employed population and total unemployed population from 1983 to 1990.",
+      "Reference": "[[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 3046, 3003, 3140]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n years = df[df['Year'].between(1983, 1990)]['Year']\n employed = df[df['Year'].between(1983, 1990)]['Employed']\n unemployed = df[df['Year'].between(1983, 1990)]['Unemployed']\n plt.plot(years, employed, label='Employed')\n plt.plot(years, unemployed, label='Unemployed')\n plt.xlabel('Year')\n plt.ylabel('Population')\n plt.title('Trends of Total Employed and Unemployed Population from 1983 to 1990')\n plt.legend()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 7.35
+    },
+    {
+      "id": 19,
+      "FileName": "employment-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Based on the data, what is the total number of individuals aged 16 years and over in the civilian labor force who are employed?",
+      "Reference": "161037",
+      "Prediction": "161037, 85500, 75537, 103223, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 1",
+      "Metrics": {
+        "F1": 0.34,
+        "EM": 0.0,
+        "ROUGE-L": 0.34,
+        "SacreBLEU": 0.06
+      },
+      "ProcessingTime": 193.2
+    },
+    {
+      "id": 20,
+      "FileName": "employment-table03",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the age groups by the percentage of their population employed, starting from the highest percentage. Provide the top two age groups.",
+      "Reference": "35 to 39 years, 35 to 44 years",
+      "Prediction": "25 to 54 years, 25 to 34 years",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 7.81
+      },
+      "ProcessingTime": 3.24
+    },
+    {
+      "id": 21,
+      "FileName": "employment-table03",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total people not in the labor force across 16 years and over?",
+      "Reference": "99826",
+      "Prediction": "99826",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.71
+    },
+    {
+      "id": 22,
+      "FileName": "employment-table03",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "Considering individuals aged 16 years and over, calculate the total percentage of the civilian non-institutional population either employed or unemployed.",
+      "Reference": "63.90",
+      "Prediction": "100.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.76
+    },
+    {
+      "id": 23,
+      "FileName": "employment-table03",
+      "QuestionType": "Visualization",
+      "SubQType": "PieChart Generation",
+      "Question": "Based on the data, draw a pie chart to show the distribution of the civilian non-institutional population into the categories 'employed,' 'unemployed,' and 'not in the labor force' for the '16 years and over' age group.",
+      "Reference": "[0.6, 0.02, 0.37]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n\n# Load the data from the Excel file\ndf = pd.read_excel('table.xlsx')\n\n# Filter the data for '16 years and over' age group\nage_group = '16 years and over'\nrow_index = df[df.iloc[:, 0] == age_group].index[0]\n\n# Extract the relevant data for 'employed', 'unemployed', and 'not in the labor force'\nemployed = df.iloc[row_index + 1, 5]  # Employed count\nunemployed = df.iloc[row_index + 1, 7]  # Unemployed count\nnot_in_labor_force = df.iloc[row_index + 1, 9]  # Not in labor force count\n\n# Create a pie chart\nlabels = ['Employed', 'Unemployed', 'Not in Labor Force']\nsizes = [employed, unemployed, not_in_labor_force]\ncolors = ['green', 'red', 'blue']\n\nplt.figure(figsize=(8, 8))\nplt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)\nplt.title('Distribution of Civilian Non-Institutional Population (16 years and over)')\nplt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.\nplt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 15.39
+    },
+    {
+      "id": 24,
+      "FileName": "employment-table03",
+      "QuestionType": "Visualization",
+      "SubQType": "BarChart Generation",
+      "Question": "Generate a bar chart to compare the unemployment rates (percentage of the labor force unemployed) between different age groups as shown in the data.",
+      "Reference": "[12.64, 12.016666666666666, 3.858333333333333, 12.0, 7.108333333333333, 4.841666666666667, 4.191666666666666, 3.341666666666667, 3.591666666666667, 3.091666666666667, 3.0416666666666665, 3.0083333333333333, 2.8166666666666664, 2.716666666666667, 2.6083333333333334, 2.6750000000000003, 2.625, 2.5749999999999997, 2.841666666666667, 2.966666666666667, 3.0083333333333333, 3.408333333333333]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n # Filter the data for unemployment rates (percentage of labor force unemployed)\n # We need to extract data for \"Unemployed\" under \"Percent of labor force\" column\n # Group by age groups and extract the percentage values\n age_groups = df[df['Age, sex, and race'].isin(['TOTAL', 'Men', 'Women', 'WHITE', 'BLACK OR AFRICAN AMERICAN', 'ASIAN'])]\n # We need to extract unemployment rates for each age group\n # We will use the \"Unemployed\" column and \"Percent of labor force\" for each age group\n # We need to extract the percentage values for each age group\n # We will use the \"Unemployed\" column and \"Percent of labor force\" for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the percentage values for each age group\n # We will extract the",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 193.68
+    },
+    {
+      "id": 25,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the unemployment rates for individuals aged 16 to 17 years and 18 to 19 years. Which group has a higher unemployment rate?",
+      "Reference": "16 to 17 years",
+      "Prediction": "16 to 17 years, 18 to 19 years",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 34.57
+      },
+      "ProcessingTime": 1.5
+    },
+    {
+      "id": 26,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of individuals not in the labor force among all age groups combined?",
+      "Reference": "101529",
+      "Prediction": "15714",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.05
+    },
+    {
+      "id": 27,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the age groups by their employment rate (percent of employed individuals within the labor force). List them in descending order.",
+      "Reference": "45 to 49 years, 40 to 44 years, 35 to 39 years, 35 to 44 years, 25 to 54 years",
+      "Prediction": "25 to 54 years, 35 to 44 years, 45 to 54 years, 30 to 34 years, 25 to 34 years, 40 to 44 years, 35 to 39 years, 45 to 49 years, 50 to 54 years, 55 to 64 years, 65 years and over, 18 to 19 years, 20 to 24 years, 16 to 19 years, 16 to 17 years, 75 years and over, 70 to 74 years, 65 to 69 years, 60 to 64 years, 16 years and over",
+      "Metrics": {
+        "F1": 40.0,
+        "EM": 0.0,
+        "ROUGE-L": 32.0,
+        "SacreBLEU": 19.69
+      },
+      "ProcessingTime": 7.83
+    },
+    {
+      "id": 28,
+      "FileName": "employment-table04",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "If the unemployment rate for the 16 years and over group increases by 2 percentage points, what will be the new unemployment percentage?",
+      "Reference": "6.60",
+      "Prediction": "6.6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.96
+    },
+    {
+      "id": 29,
+      "FileName": "employment-table04",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the total number of unemployed individuals aged 16 to 19 years, and what percentage do they represent of the labor force in this age group?",
+      "Reference": "188, 12.60",
+      "Prediction": "188, 12.6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 30,
+      "FileName": "employment-table04",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the main trends in employment status for the Hispanic or Latino population aged 16 years and over, including the key metrics from the dataset.",
+      "Reference": "The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' 'Employed (thousands) and (%),' 'Unemployed (thousands) and (%),' and 'Not in Labor Force (thousands).' Insights reveal an overall labor force participation rate of 66.90%, an employment rate of 63.80%, and an unemployment rate of 4.60%. The dataset also highlights variations by age, with younger groups (16–19 years) showing lower participation and higher unemployment compared to the total population.",
+      "Prediction": "The Hispanic or Latino population aged 16 and over shows higher employment participation among those aged 25-54 (81% overall), with men (90.1%) significantly more likely to be in the labor force than women (71.4%). Employment rates peak in the 35-44 age group (78.6% employed) and decline sharply after age 65 (19.2% employed). Unemployment rates are lowest for those aged 35-44 (3.3%) and highest for 16-19 year-olds (12.6%). The total civilian labor force participation rate is 66.9%, with men (75.1%) and women (58.7%) showing distinct patterns.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.29
+    },
+    {
+      "id": 31,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What is the total civilian labor force for the year 2022, combining all demographic categories?",
+      "Reference": "164287",
+      "Prediction": "164287.0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.06
+    },
+    {
+      "id": 32,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Compare the participation rates for 2022 and 2023 and identify the year with the higher rate.",
+      "Reference": "2023",
+      "Prediction": "2023, Participation rate",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.03
+    },
+    {
+      "id": 33,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference in the civilian labor force between 2022 and 2023 for the total population.",
+      "Reference": "2829",
+      "Prediction": "2829.0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 34,
+      "FileName": "employment-table05",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Based on participation rates, infer whether the labor force's growth from 2022 to 2023 aligns with the trend in the total civilian population.",
+      "Reference": "Yes",
+      "Prediction": "Yes",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.74
+    },
+    {
+      "id": 35,
+      "FileName": "employment-table05",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Please generate a line chart to illustrate the trend in the total civilian noninstitutional population from 2022 to 2023.",
+      "Reference": "[[263973.0, 266942.0]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n data = df.iloc[3, 0:2].values\n years = [2022, 2023]\n plt.plot(years, data, marker='o')\n plt.title(\"Trend in Total Civilian Noninstitutional Population from 2022 to 2023\")\n plt.xlabel(\"Year\")\n plt.ylabel(\"Population\")\n plt.xticks(years)\n plt.grid(True)\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 4.95
+    },
+    {
+      "id": 36,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the difference between the total civilian labor force of men for “16 years and over” in 2023 and 2022?",
+      "Reference": "543",
+      "Prediction": "543, 543",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.13
+    },
+    {
+      "id": 37,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the civilian noninstitutional population of men and women for “16 years and over” in 2023. Provide the order from highest to lowest.",
+      "Reference": "Men, Women",
+      "Prediction": "Men, 16 years and over, Women, 16 years and over",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 4.99
+      },
+      "ProcessingTime": 1.41
+    },
+    {
+      "id": 38,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "How many more men were in the civilian labor force compared to women aged 16 years and over in 2022?",
+      "Reference": "4135",
+      "Prediction": "3995, 13233",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.2
+    },
+    {
+      "id": 39,
+      "FileName": "employment-table06",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "What is the total number of participation rates for total Civilian labor force in 2022 and 2023.",
+      "Reference": "133.2",
+      "Prediction": "66.3, 66.9",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 40,
+      "FileName": "employment-table06",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the mean and median of the civilian labor force participation rate for women in 2022 and 2023?",
+      "Reference": "Mean 2022: 62.25, Median 2022: 62.85, Mean 2023: 62.77, Median 2023: 64.00",
+      "Prediction": "57.3, 57.4",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.16
+    },
+    {
+      "id": 41,
+      "FileName": "employment-table06",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a summary of the data, including its main columns, and highlight any noticeable trends or significant differences in participation rates across genders.",
+      "Reference": "The dataset provides statistics on the employment status of the Hispanic or Latino population segmented by gender and year (2022 and 2023). The main columns include 'Category' (e.g., population, labor force, participation rate), and data for total, male, and female populations in both years. Key trends indicate that participation rates increased slightly from 2022 to 2023 across genders, with males consistently having higher rates than females.",
+      "Prediction": "The table presents annual averages of employment status for the Hispanic or Latino population by sex, age, and ethnic group (Mexican, Puerto Rican, Cuban) for 2022 and 2023. Key columns include civilian noninstitutional population, civilian labor force, participation rate, employed, unemployment rate, and not in labor force. Notable trends: Men across all age groups show higher participation rates than women (e.g., men aged 16+ at 75.2% vs. women at 57.3% in 2022). Among women, participation rates increase with age (e.g., 59.9% for women aged 20+ in 2022 vs. 57.3% for 16+). The unemployment rate for 16-19 year-olds is notably high (11.5% for both sexes in 2022), while older groups show lower rates. Ethnic disparities exist, with Mexican and Cuban populations showing higher participation rates than Puerto Ricans.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.57
+    },
+    {
+      "id": 42,
+      "FileName": "employment-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total number of people in the civilian labor force with a bachelor's degree only and an advanced degree?",
+      "Reference": "39357",
+      "Prediction": "64077, 32256",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.25
+    },
+    {
+      "id": 43,
+      "FileName": "employment-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the group in Men with the higher participation rate among individuals with 'Associate degree' and 'Bachelor's degree only'",
+      "Reference": "Associate degree",
+      "Prediction": "Bachelor's degree only, Associate degree",
+      "Metrics": {
+        "F1": 57.14,
+        "EM": 0.0,
+        "ROUGE-L": 57.14,
+        "SacreBLEU": 21.36
+      },
+      "ProcessingTime": 1.0
+    },
+    {
+      "id": 44,
+      "FileName": "employment-table07",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the difference between civilian noninstitutional population and civilian labor force for women with 'Some college, no degree'?",
+      "Reference": "7668",
+      "Prediction": "30105, 17302",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.23
+    },
+    {
+      "id": 45,
+      "FileName": "employment-table07",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare men and women to determine which one has the lower participation rate in “Less than a high school diploma”?",
+      "Reference": "Women",
+      "Prediction": "Women, Men",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.83
+    },
+    {
+      "id": 46,
+      "FileName": "employment-table07",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Provide a concise summary of the table, including its main columns, the demographics it represents, and any noticeable trends in employment status by education level.",
+      "Reference": "The table provides data on the employment status of the civilian noninstitutional population aged 25 years and over in the United States, segmented by educational attainment, sex, race, and Hispanic or Latino ethnicity. The main columns include:\n\nCivilian noninstitutional population: The total number of individuals in each demographic group.\n\nCivilian labor force: The number of individuals in the labor force, including both employed and unemployed.\n\nParticipation rate: The percentage of the population that is part of the labor force.\n\nEmployed: The number of individuals who are employed.\n\nEmployment-population ratio: The percentage of the population that is employed.\n\nUnemployed: The number of individuals who are unemployed.\n\nUnemployment rate: The percentage of the labor force that is unemployed.\n\nThe demographics represented include:\n\nSex: Men and Women\n\nRace: White, Black or African American, Asian\n\nHispanic or Latino ethnicity: Hispanic or Latino ethnicity\n\nNotable trends in employment status by education level include:\n\nHigher education levels generally correlate with higher participation rates, employment-population ratios, and lower unemployment rates.\n\nFor example, individuals with a Bachelor's degree or higher have the highest employment-population ratios and the lowest unemployment rates across all demographic groups.\n\nConversely, those with less than a high school diploma have the lowest employment-population ratios and the highest unemployment rates.\n\nOverall, the data suggests a strong positive relationship between educational attainment and employment outcomes.",
+      "Prediction": "The table presents 2023 employment status data for the U.S. civilian noninstitutional population aged 25+ by education level, sex, race, and Hispanic or Latino ethnicity. Main columns include population size, labor force participation, employment, unemployment, and unemployment rates across education tiers (less than high school, high school graduate, some college, bachelor’s degree and higher). Key trends show higher labor force participation and employment rates with increasing education levels, especially among women and minorities. Hispanic or Latino populations exhibit high participation rates, while Black or African American groups show higher unemployment rates despite strong participation.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 5.59
+    },
+    {
+      "id": 47,
+      "FileName": "employment-table07",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Predictive Analysis",
+      "Question": "Based on the participation rate across educational levels, what trend is observed as the level of education increases?",
+      "Reference": "Increasing trend",
+      "Prediction": "Increasing trend",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.8
+    },
+    {
+      "id": 48,
+      "FileName": "employment-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the total number of employed men and women in 2023 and determine which group is larger.",
+      "Reference": "Men",
+      "Prediction": "Men, Women",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 49,
+      "FileName": "employment-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What percentage of the total employed in 2023 belonged to management, professional, and related occupations?",
+      "Reference": "43.60",
+      "Prediction": "43.6",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.98
+    },
+    {
+      "id": 50,
+      "FileName": "employment-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "Calculate the difference in the percentage of employed persons in management, business, and financial operations occupations between 2022 and 2023 for women.",
+      "Reference": "0.70",
+      "Prediction": "0.7, 0.9",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.15
+    }
+  ],
+  "processed_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ]
+}

@@ -1,0 +1,916 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: markdown
+  Data path: /mnt/data2/projects/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.14s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.08s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.03s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Processing text modality:   0%|          | 0/3071 [00:00<?, ?it/s]Processing text modality:   0%|          | 1/3071 [00:02<1:47:35,  2.10s/it]Processing text modality:   0%|          | 2/3071 [00:03<1:28:41,  1.73s/it]Processing text modality:   0%|          | 3/3071 [00:05<1:22:45,  1.62s/it]Processing text modality:   0%|          | 4/3071 [00:06<1:23:02,  1.62s/it]Processing text modality:   0%|          | 5/3071 [00:08<1:20:02,  1.57s/it]Processing text modality:   0%|          | 6/3071 [00:14<2:41:41,  3.17s/it]Processing text modality:   0%|          | 7/3071 [00:15<2:11:15,  2.57s/it]Processing text modality:   0%|          | 8/3071 [00:17<1:51:58,  2.19s/it]Processing text modality:   0%|          | 9/3071 [00:18<1:42:30,  2.01s/it]
+============================================================
+Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['1953 61179']
+Answer:  ['1955 62170']
+Prediction: 1953, 61179
+Reference: 1955, 62170
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.10s
+
+============================================================
+Query ID: 2 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['1954 1958']
+Answer:  ['1954']
+Prediction: 1954, 1958
+Reference: 1954
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['2022 2023']
+Answer:  ['1953']
+Prediction: 2022, 2023
+Reference: 1953
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.48s
+
+============================================================
+Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['167116 158772']
+Answer:  ['158772']
+Prediction: 167116, 158772
+Reference: 158772
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.63s
+
+============================================================
+Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['55 17']
+Answer:  ['58 16']
+Prediction: 5.55, 1.73
+Reference: 5.80, 1.62
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.46s
+
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The table presents annual averages of U.S. household data from 1953 to 2023, focusing on the civilian noninstitutional population aged 16 and over. Key columns include total civilian noninstitutional ...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 6.27s
+
+============================================================
+Query ID: 7 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+Predictions:  ['562 increasing trend']
+Answer:  ['predicted percentage for 1965 551']
+Prediction: 56.2, Increasing trend
+Reference: Predicted percentage for 1965: 55.12%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.35s
+
+============================================================
+Query ID: 8 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.99
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 1.39s
+
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+Prediction: 1982, 1983, 2020
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 1.60s
+
+============================================================
+Query ID: 10 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (8162 tokens)
+Processing text modality:   0%|          | 10/3071 [00:20<1:30:47,  1.78s/it]Predictions:  ['1983']
+Answer:  ['1983']
+Prediction: 1983
+Reference: 1983
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.27s
+Checkpoint saved: 10 queries processed
+
+============================================================
+Query ID: 11 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (8171 tokens)
+Processing text modality:   0%|          | 11/3071 [00:21<1:20:06,  1.57s/it]Predictions:  ['yes']
+Answer:  ['no']
+Prediction: Yes
+Reference: No
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 12 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (8161 tokens)
+Processing text modality:   0%|          | 12/3071 [00:22<1:23:04,  1.63s/it]Predictions:  ['4744 4530 4101']
+Answer:  ['39957']
+Prediction: 4744, 4530, 4101
+Reference: 3995.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.76s
+
+============================================================
+Query ID: 13 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (8166 tokens)
+Processing text modality:   0%|          | 13/3071 [00:23<1:14:49,  1.47s/it]Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.10s
+
+============================================================
+Query ID: 14 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (8168 tokens)
+Processing text modality:   0%|          | 14/3071 [00:25<1:11:57,  1.41s/it]Predictions:  ['2010']
+Answer:  ['1986']
+Prediction: 2010
+Reference: 1986
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.28s
+
+============================================================
+Query ID: 15 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (8266 tokens)
+Processing text modality:   0%|          | 15/3071 [00:33<2:51:35,  3.37s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+years = [1985, 1987, 1989]
+data = df[df['Year'].isin(years)]
+data = data[['Year', 'Civilian noninstitu- tional population', 'Employed']]
+data = data.set_index('Year')
+data.plot(kind='bar', figsize=(10,6))
+plt.title('Total Civilian Population vs Total Employed Population (1985, 1987, 1989)')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.xticks(rotation=0)
+plt.legend(['Civilian noninstitu- tional population', 'Employed'])
+plt.tight_layout()
+plt.show()
+
+Python Error: "['Civilian noninstitu- tional population', 'Employed'] not in index"
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ years = [1985, 1987, 1989]
+ data = df[df['Year'].isin(years)]
+ data = data[['Year', 'Civilian noninstitu- tion...
+Reference: [93736, 95853, 97630, 59891, 62107, 64315]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.90s
+
+============================================================
+Query ID: 16 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (8250 tokens)
+Processing text modality:   1%|          | 16/3071 [00:51<6:42:49,  7.91s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx')
+# Extract relevant columns for Men and Women
+men_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna())].copy()
+women_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') & (df['Year'].notna())].copy()
+# Extract unemployment rate and total civilian labor force for Men
+men_unemployment_rate = men_data[men_data['Year'].isin(men_data['Year']) & (men_data['Year'] != '') & (men_data['Year'].notna())]['Unemployed'].copy()
+men_total_labor_force = men_data[men_data['Year'].isin(men_data['Year']) & (men_data['Year'] != '') & (men_data['Year'].notna())]['Civilian labor force'].copy()
+# Extract unemployment rate and total civilian labor force for Women
+women_unemployment_rate = women_data[women_data['Year'].isin(women_data['Year']) & (women_data['Year'] != '') & (women_data['Year'].notna())]['Unemployed'].copy()
+women_total_labor_force = women_data[women_data['Year'].isin(women_data['Year']) & (women_data['Year'] != '') & (women_data['Year'].notna())]['Civilian labor force'].copy()
+# Combine data for plotting
+combined_data = pd.concat([men_data[['Year', 'Civilian labor force', 'Unemployed']], women_data[['Year', 'Civilian labor force', 'Unemployed']]], ignore_index=True)
+# Create scatter plot
+plt.figure(figsize=(10, 6))
+plt.scatter(combined_data['Civilian labor force'], combined_data['Unemployed'], alpha=0.7)
+plt.title('Scatter Plot of Unemployment Rate vs Total Civilian Labor Force')
+plt.xlabel('Total Civilian Labor Force')
+plt.ylabel('Unemployed')
+plt.grid(True)
+plt.show()
+
+Python Error: 'Unemployed'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ # Extract relevant columns for Men and Women
+ men_data = df[df['Year'].isin(df['Year']) & (df['Year'] != '') &...
+Reference: [[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 18.46s
+
+============================================================
+Query ID: 17 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (8254 tokens)
+Processing text modality:   1%|          | 17/3071 [00:59<6:37:58,  7.82s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel('/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx')
+data_1984 = df[df['Year'] == 1984]
+agriculture = data_1984.iloc[0]['Agri-culture']
+non_agriculture = data_1984.iloc[0]['Nonagri-cultural industries']
+labels = ['Agriculture', 'Non-Agriculture']
+sizes = [agriculture, non_agriculture]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+plt.title('Employment Distribution in 1984')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+Python Error: 'Agri-culture'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel('table.xlsx')
+ data_1984 = df[df['Year'] == 1984]
+ agriculture = data_1984.iloc[0]['Agri-culture']
+ non_agriculture = data_19...
+Reference: [0.05, 0.95]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.60s
+
+============================================================
+Query ID: 18 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (8257 tokens)
+Processing text modality:   1%|          | 18/3071 [01:06<6:30:37,  7.68s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+years = df[df['Year'].between(1983, 1990)]['Year']
+employed = df[df['Year'].between(1983, 1990)]['Employed']
+unemployed = df[df['Year'].between(1983, 1990)]['Unemployed']
+plt.plot(years, employed, label='Employed')
+plt.plot(years, unemployed, label='Unemployed')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.title('Trends of Total Employed and Unemployed Population from 1983 to 1990')
+plt.legend()
+plt.show()
+
+Python Error: '>=' not supported between instances of 'str' and 'int'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ years = df[df['Year'].between(1983, 1990)]['Year']
+ employed = df[df['Year'].between(1983, 1990)]['Employed']
+...
+Reference: [[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 30...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 7.35s
+
+============================================================
+Query ID: 19 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (19117 tokens)
+Processing text modality:   1%|          | 19/3071 [04:19<53:44:52, 63.40s/it]Predictions:  ['161037 85500 75537 103223 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 10737 1']
+Answer:  ['161037']
+Prediction: 161037, 85500, 75537, 103223, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10737, 10...
+Reference: 161037
+Metrics: {'F1': 0.34, 'EM': 0.0, 'ROUGE-L': 0.34, 'SacreBLEU': 0.06}
+Processing Time: 193.20s
+
+============================================================
+Query ID: 20 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+  Warning: Large text input (19113 tokens)
+Processing text modality:   1%|          | 20/3071 [04:23<38:25:24, 45.34s/it]Predictions:  ['25 to 54 years 25 to 34 years']
+Answer:  ['35 to 39 years 35 to 44 years']
+Prediction: 25 to 54 years, 25 to 34 years
+Reference: 35 to 39 years, 35 to 44 years
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 7.81}
+Processing Time: 3.24s
+Checkpoint saved: 20 queries processed
+
+============================================================
+Query ID: 21 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (19107 tokens)
+Processing text modality:   1%|          | 21/3071 [04:25<27:34:15, 32.54s/it]Predictions:  ['99826']
+Answer:  ['99826']
+Prediction: 99826
+Reference: 99826
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.71s
+
+============================================================
+Query ID: 22 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+  Warning: Large text input (19115 tokens)
+Processing text modality:   1%|          | 22/3071 [04:28<19:59:32, 23.61s/it]Predictions:  ['1000']
+Answer:  ['639']
+Prediction: 100.00
+Reference: 63.90
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.76s
+
+============================================================
+Query ID: 23 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (19225 tokens)
+Processing text modality:   1%|          | 23/3071 [04:43<17:53:55, 21.14s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the data from the Excel file
+df = pd.read_excel('/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table03.xlsx')
+
+# Filter the data for '16 years and over' age group
+age_group = '16 years and over'
+row_index = df[df.iloc[:, 0] == age_group].index[0]
+
+# Extract the relevant data for 'employed', 'unemployed', and 'not in the labor force'
+employed = df.iloc[row_index + 1, 5]  # Employed count
+unemployed = df.iloc[row_index + 1, 7]  # Unemployed count
+not_in_labor_force = df.iloc[row_index + 1, 9]  # Not in labor force count
+
+# Create a pie chart
+labels = ['Employed', 'Unemployed', 'Not in Labor Force']
+sizes = [employed, unemployed, not_in_labor_force]
+colors = ['green', 'red', 'blue']
+
+plt.figure(figsize=(8, 8))
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+plt.title('Distribution of Civilian Non-Institutional Population (16 years and over)')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+Python Error: index 9 is out of bounds for axis 0 with size 9
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+
+# Load the data from the Excel file
+df = pd.read_excel('table.xlsx')
+
+# Filter the data for '16 years and over' age group
+age_group = '16 years ...
+Reference: [0.6, 0.02, 0.37]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 15.39s
+
+============================================================
+Query ID: 24 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (19201 tokens)
+invalid visualization_answer: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table03.xlsx")
+ # Filter the data for unemployment rates (percentage of labor force unemployed)
+ # We need to extract data for "Unemployed" under "Percent of labor force" column
+ # Group by age groups and extract the percentage values
+ age_groups = df[df['Age, sex, and race'].isin(['TOTAL', 'Men', 'Women', 'WHITE', 'BLACK OR AFRICAN AMERICAN', 'ASIAN'])]
+ # We need to extract unemployment rates for each age group
+ # We will use the "Unemployed" column and "Percent of labor force" for each age group
+ # We need to extract the percentage values for each age group
+ # We will use the "Unemployed" column and "Percent of labor force" for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the percentage values for each age group
+ # We will extract the
+Processing text modality:   1%|          | 24/3071 [07:57<61:42:46, 72.91s/it]Processing text modality:   1%|          | 25/3071 [07:59<43:33:51, 51.49s/it]Processing text modality:   1%|          | 26/3071 [08:00<30:45:00, 36.35s/it]Processing text modality:   1%|          | 27/3071 [08:07<23:30:16, 27.80s/it]Processing text modality:   1%|          | 28/3071 [08:08<16:41:31, 19.75s/it]Processing text modality:   1%|          | 29/3071 [08:10<11:59:10, 14.19s/it]Processing text modality:   1%|          | 30/3071 [08:17<10:14:09, 12.12s/it]Processing text modality:   1%|          | 31/3071 [08:18<7:25:54,  8.80s/it] Processing text modality:   1%|          | 32/3071 [08:19<5:27:40,  6.47s/it]Processing text modality:   1%|          | 33/3071 [08:20<4:04:25,  4.83s/it]Processing text modality:   1%|          | 34/3071 [08:21<3:02:19,  3.60s/it]Processing text modality:   1%|          | 35/3071 [08:26<3:22:46,  4.01s/it]Processing text modality:   1%|          | 36/3071 [08:27<2:39:05,  3.15s/it]Processing text modality:   1%|          | 37/3071 [08:28<2:12:38,  2.62s/it]Processing text modality:   1%|          | 38/3071 [08:29<1:51:00,  2.20s/it]Processing text modality:   1%|▏         | 39/3071 [08:31<1:35:16,  1.89s/it]
+Code: 
+
+Python Error: expected an indented block after 'if' statement on line 2 (<string>, line 3)
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ # Filter the data for unemployment rates (percentage of labor force unemployed)
+ # We need to extract data for...
+Reference: [12.64, 12.016666666666666, 3.858333333333333, 12.0, 7.108333333333333, 4.841666666666667, 4.191666666666666, 3.341666666666667, 3.591666666666667, 3.091666666666667, 3.0416666666666665, 3.00833333333...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 193.68s
+
+============================================================
+Query ID: 25 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['16 to 17 years 18 to 19 years']
+Answer:  ['16 to 17 years']
+Prediction: 16 to 17 years, 18 to 19 years
+Reference: 16 to 17 years
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 34.57}
+Processing Time: 1.50s
+
+============================================================
+Query ID: 26 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['15714']
+Answer:  ['101529']
+Prediction: 15714
+Reference: 101529
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.05s
+
+============================================================
+Query ID: 27 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['25 to 54 years 35 to 44 years 45 to 54 years 30 to 34 years 25 to 34 years 40 to 44 years 35 to 39 years 45 to 49 years 50 to 54 years 55 to 64 years 65 years and over 18 to 19 years 20 to 24 years 16 to 19 years 16 to 17 years 75 years and over 70 to 74 years 65 to 69 years 60 to 64 years 16 years and over']
+Answer:  ['45 to 49 years 40 to 44 years 35 to 39 years 35 to 44 years 25 to 54 years']
+Prediction: 25 to 54 years, 35 to 44 years, 45 to 54 years, 30 to 34 years, 25 to 34 years, 40 to 44 years, 35 to 39 years, 45 to 49 years, 50 to 54 years, 55 to 64 years, 65 years and over, 18 to 19 years, 20 to...
+Reference: 45 to 49 years, 40 to 44 years, 35 to 39 years, 35 to 44 years, 25 to 54 years
+Metrics: {'F1': 40.0, 'EM': 0.0, 'ROUGE-L': 32.0, 'SacreBLEU': 19.69}
+Processing Time: 7.83s
+
+============================================================
+Query ID: 28 | Type: Numerical Reasoning | SubType: Multi-hop Numerical Reasoning
+============================================================
+Predictions:  ['66']
+Answer:  ['66']
+Prediction: 6.6
+Reference: 6.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.96s
+
+============================================================
+Query ID: 29 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['188 126']
+Answer:  ['188 126']
+Prediction: 188, 12.6
+Reference: 188, 12.60
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 1.21s
+
+============================================================
+Query ID: 30 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: The Hispanic or Latino population aged 16 and over shows higher employment participation among those aged 25-54 (81% overall), with men (90.1%) significantly more likely to be in the labor force than ...
+Reference: The dataset provides an analysis of the employment status of the Hispanic or Latino population aged 16 years and over. Key columns include 'Population (thousands),' 'Labor Force (thousands) and (%),' ...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 7.29s
+Checkpoint saved: 30 queries processed
+
+============================================================
+Query ID: 31 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+Predictions:  ['1642870']
+Answer:  ['164287']
+Prediction: 164287.0
+Reference: 164287
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.06s
+
+============================================================
+Query ID: 32 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['2023 participation rate']
+Answer:  ['2023']
+Prediction: 2023, Participation rate
+Reference: 2023
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 1.03s
+
+============================================================
+Query ID: 33 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+Predictions:  ['28290']
+Answer:  ['2829']
+Prediction: 2829.0
+Reference: 2829
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.00s
+
+============================================================
+Query ID: 34 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+Predictions:  ['yes']
+Answer:  ['yes']
+Prediction: Yes
+Reference: Yes
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 0.74s
+
+============================================================
+Query ID: 35 | Type: Visualization | SubType: LineChart Generation
+============================================================
+Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/tables/employment-table05.xlsx")
+data = df.iloc[3, 0:2].values
+years = [2022, 2023]
+plt.plot(years, data, marker='o')
+plt.title("Trend in Total Civilian Noninstitutional Population from 2022 to 2023")
+plt.xlabel("Year")
+plt.ylabel("Population")
+plt.xticks(years)
+plt.grid(True)
+plt.show()
+
+Python Error: 'value' must be an instance of str or bytes, not a numpy.float64
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ data = df.iloc[3, 0:2].values
+ years = [2022, 2023]
+ plt.plot(years, data, marker='o')
+ plt.title("Trend in To...
+Reference: [[263973.0, 266942.0]]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 4.95s
+
+============================================================
+Query ID: 36 | Type: Numerical Reasoning | SubType: Calculation
+============================================================
+Predictions:  ['543 543']
+Answer:  ['543']
+Prediction: 543, 543
+Reference: 543
+Metrics: {'F1': 66.67, 'EM': 0.0, 'ROUGE-L': 66.67, 'SacreBLEU': 0.0}
+Processing Time: 1.13s
+
+============================================================
+Query ID: 37 | Type: Numerical Reasoning | SubType: Ranking
+============================================================
+Predictions:  ['men 16 years and over women 16 years and over']
+Answer:  ['men women']
+Prediction: Men, 16 years and over, Women, 16 years and over
+Reference: Men, Women
+Metrics: {'F1': 33.33, 'EM': 0.0, 'ROUGE-L': 33.33, 'SacreBLEU': 4.99}
+Processing Time: 1.41s
+
+============================================================
+Query ID: 38 | Type: Numerical Reasoning | SubType: Comparison
+============================================================
+Predictions:  ['3995 13233']
+Answer:  ['4135']
+Prediction: 3995, 13233
+Reference: 4135
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.20s
+
+============================================================
+Query ID: 39 | Type: Numerical Reasoning | SubType: Counting
+============================================================
+Predictions:  ['663 669']
+Answer:  ['1332']
+Prediction: 66.3, 66.9
+Reference: 133.2
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.16s
+
+============================================================
+Query ID: 40 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+Predictions:  ['573 574']
+Answer:  ['mean 2022 622 median 2022 629 mean 2023 628 median 2023 640']
+Prediction: 57.3, 57.4
+Processing text modality:   1%|▏         | 40/3071 [08:32<1:24:15,  1.67s/it]Processing text modality:   1%|▏         | 41/3071 [08:41<3:23:54,  4.04s/it]Processing text modality:   1%|▏         | 42/3071 [08:43<2:41:39,  3.20s/it]Processing text modality:   1%|▏         | 43/3071 [08:44<2:08:12,  2.54s/it]Processing text modality:   1%|▏         | 44/3071 [08:45<1:48:22,  2.15s/it]Processing text modality:   1%|▏         | 45/3071 [08:46<1:28:25,  1.75s/it]Processing text modality:   1%|▏         | 46/3071 [08:51<2:26:29,  2.91s/it]Processing text modality:   2%|▏         | 47/3071 [08:52<1:54:38,  2.27s/it]Processing text modality:   2%|▏         | 48/3071 [08:53<1:33:52,  1.86s/it]Processing text modality:   2%|▏         | 49/3071 [08:54<1:20:34,  1.60s/it]Processing text modality:   2%|▏         | 50/3071 [08:55<1:13:46,  1.47s/it]Processing text modality:   2%|▏         | 51/3071 [08:56<1:10:17,  1.40s/it]
