@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_text/text_markdown/results.json",
+    "config": "qwen3vl_text",
+    "modality": "text",
+    "format": "markdown",
+    "analysis_time": "2026-02-01T12:52:40.534789",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3068,
+    "success": 3040,
+    "error": 28,
+    "missing": 3,
+    "file_dependency_issues": 3,
+    "incomplete_runs": 0
+  },
+  "skip_ids": [
+    2960,
+    2961,
+    2962
+  ],
+  "error_ids": [
+    316,
+    317,
+    318,
+    319,
+    320,
+    1374,
+    1375,
+    1376,
+    1377,
+    1378,
+    1460,
+    1461,
+    1462,
+    1463,
+    1464,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2966,
+    2967,
+    2968
+  ],
+  "skip_reasons": {
+    "2960": "Missing source file(s): society-table10_swap.md",
+    "2961": "Missing source file(s): society-table10_swap.md",
+    "2962": "Missing source file(s): society-table10_swap.md"
+  },
+  "categorized": {
+    "file_dependency_issues": [
+      2960,
+      2961,
+      2962
+    ],
+    "incomplete_runs": []
+  }
+}

@@ -328,7 +328,8 @@ echo "========================================================================"
 
 
 def main():
-    workspace_root = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
+    workspace_root = "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
+    # workspace_root = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
     generator = MissingTaskInferenceGenerator(workspace_root)
     generator.run()
 

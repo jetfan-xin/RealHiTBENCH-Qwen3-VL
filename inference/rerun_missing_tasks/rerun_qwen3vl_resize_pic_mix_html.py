@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-# 重新运行缺失的任务: qwen3vl_resize_pic/mix_html
+"""
+重新运行缺失的任务: qwen3vl_resize_pic/mix_html
 
-# 生成时间: 2026-01-31T14:22:58.774733
-# 任务来源: qwen3vl_resize_pic/mix_html/results.json
-# 需要重新运行的任务数: 25
-#   - Incomplete runs: 25
-#   - Error tasks: 0
+生成时间: 2026-02-01T12:53:38.150827
+任务来源: qwen3vl_resize_pic/mix_html/results.json
+需要重新运行的任务数: 25
+  - Incomplete runs: 25
+  - Error tasks: 0
 
 # 使用truncate版本防止OOM (error_ids: 0)
+"""
 
 import subprocess
 import sys
@@ -19,16 +21,15 @@ def main():
     modality = "mix"
     format_type = "html"
     batch_size = 1  # 使用batch_size=1避免OOM
-    # model_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
-    # data_path = "/data/pan/4xin/datasets/RealHiTBench"
-    # qa_path = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
-    model_dir = "/mnt/data2/projects/pan/4xin/models/Qwen3-VL-8B-Instruct"
-    data_path = "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench"
-    qa_path = "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"    
+    model_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
+    data_path = "/data/pan/4xin/datasets/RealHiTBench"
+    qa_path = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
+    
     # 需要重新运行的任务ID
     task_ids = [2740, 2741, 2742, 2743, 2746, 2747, 2748, 2749, 2750, 2751, 2758, 2759, 2760, 2761, 2762, 2763, 2963, 2966, 2967, 2968, 2969, 3018, 3019, 3020, 3021]
     
     print("=" * 80)
+    print(f"重新运行缺失任务: {modality}" + (f"_{format_type}" if format_type else ""))
     print("=" * 80)
     print(f"配置: qwen3vl_resize_pic")
     print(f"任务数量: {len(task_ids)}")
@@ -50,6 +51,7 @@ def main():
         "--use_sc_filled",
         "--batch_size", str(batch_size),
         "--task_ids", ",".join(map(str, task_ids)),  # 指定任务ID
+        "--resume"  # 使用resume模式，会加载已有checkpoint并合并
     ]
     
     if format_type:
@@ -65,6 +67,7 @@ def main():
     if result.returncode == 0:
         print()
         print("=" * 80)
+        print(f"✓ 成功完成 {modality}" + (f"_{format_type}" if format_type else "") + f" 的 {len(task_ids)} 个缺失任务")
         print("=" * 80)
     else:
         print()

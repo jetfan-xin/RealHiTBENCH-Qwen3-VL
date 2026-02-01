@@ -1,12 +1,12 @@
 缺失任务推理摘要
 ================================================================================
-生成时间: 2026-01-31T14:22:58.778162
+生成时间: 2026-02-01T12:53:38.165545
 
 总体统计:
-  配置数量: 9
-  总任务数: 89
+  配置数量: 12
+  总任务数: 147
     - Incomplete runs: 45
-    - Error tasks: 44
+    - Error tasks: 102
 
 按配置详细信息:
 --------------------------------------------------------------------------------
@@ -18,12 +18,26 @@
   使用truncate: 否
   脚本: inference/rerun_missing_tasks/rerun_qwen3vl_default_pic_image_None.py
 
+配置: qwen3vl_default_pic/mix_csv
+  任务数: 2
+    - Incomplete: 0
+    - Error: 2
+  使用truncate: 是
+  脚本: inference/rerun_missing_tasks/rerun_qwen3vl_default_pic_mix_csv.py
+
 配置: qwen3vl_default_pic/mix_html
   任务数: 17
     - Incomplete: 0
     - Error: 17
   使用truncate: 是
   脚本: inference/rerun_missing_tasks/rerun_qwen3vl_default_pic_mix_html.py
+
+配置: qwen3vl_default_pic/mix_markdown
+  任务数: 28
+    - Incomplete: 0
+    - Error: 28
+  使用truncate: 是
+  脚本: inference/rerun_missing_tasks/rerun_qwen3vl_default_pic_mix_markdown.py
 
 配置: qwen3vl_resize_pic/image
   任务数: 1
@@ -73,3 +87,10 @@
     - Error: 0
   使用truncate: 是
   脚本: inference/rerun_missing_tasks/rerun_qwen3vl_text_text_latex.py
+
+配置: qwen3vl_text/text_markdown
+  任务数: 28
+    - Incomplete: 0
+    - Error: 28
+  使用truncate: 是
+  脚本: inference/rerun_missing_tasks/rerun_qwen3vl_text_text_markdown.py

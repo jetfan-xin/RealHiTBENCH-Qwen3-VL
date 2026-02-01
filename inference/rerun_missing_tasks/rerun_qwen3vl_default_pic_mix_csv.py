@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-重新运行缺失的任务: qwen3vl_text/text_csv
+重新运行缺失的任务: qwen3vl_default_pic/mix_csv
 
-生成时间: 2026-02-01T12:53:38.154779
-任务来源: qwen3vl_text/text_csv/results.json
-需要重新运行的任务数: 15
-  - Incomplete runs: 15
-  - Error tasks: 0
+生成时间: 2026-02-01T12:53:38.141243
+任务来源: qwen3vl_default_pic/mix_csv/results.json
+需要重新运行的任务数: 2
+  - Incomplete runs: 0
+  - Error tasks: 2
 
-# 使用truncate版本防止OOM (error_ids: 0)
+# 使用truncate版本防止OOM (error_ids: 2)
 """
 
 import subprocess
@@ -18,7 +18,7 @@ import json
 
 def main():
     # 配置
-    modality = "text"
+    modality = "mix"
     format_type = "csv"
     batch_size = 1  # 使用batch_size=1避免OOM
     model_dir = "/data/pan/4xin/models/Qwen3-VL-8B-Instruct"
@@ -26,12 +26,12 @@ def main():
     qa_path = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/data"
     
     # 需要重新运行的任务ID
-    task_ids = [1373, 1374, 1375, 1376, 1377, 1378, 1459, 1460, 1461, 1462, 1463, 1464, 2021, 2022, 2959]
+    task_ids = [1463, 1464]
     
     print("=" * 80)
     print(f"重新运行缺失任务: {modality}" + (f"_{format_type}" if format_type else ""))
     print("=" * 80)
-    print(f"配置: qwen3vl_text")
+    print(f"配置: qwen3vl_default_pic")
     print(f"任务数量: {len(task_ids)}")
     print(f"Inference脚本: inference_qwen3vl_local_a100_truncate_with_task_ids.py")
     print(f"使用文本截断: True")

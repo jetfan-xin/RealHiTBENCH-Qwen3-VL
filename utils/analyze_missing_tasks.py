@@ -37,7 +37,8 @@ class MissingTaskAnalyzer:
     def __init__(self, workspace_root: str):
         self.workspace_root = Path(workspace_root)
         self.qa_file = self.workspace_root / "data" / "QA_final_sc_filled.json"
-        self.data_path = Path("/data/pan/4xin/datasets/RealHiTBench")
+        self.data_path = Path("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench")
+        # self.data_path = Path("/data/pan/4xin/datasets/RealHiTBench")
         self.result_base = self.workspace_root / "result" / "complied"
         
         # 加载主任务列表
@@ -481,7 +482,8 @@ class MissingTaskAnalyzer:
 
 def main():
     """主函数"""
-    workspace_root = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
+    workspace_root = "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
+    # workspace_root = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
     
     analyzer = MissingTaskAnalyzer(workspace_root)
     analyzer.run()
