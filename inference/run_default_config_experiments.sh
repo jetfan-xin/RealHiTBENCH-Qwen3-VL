@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 # 使用官方默认 processor 配置运行实验
-# 模态: image, mix_html, mix_latex, mix_csv, mix_markdown,
-#       text_html, text_latex, text_csv, text_markdown
+# 模态: image, mix_html, mix_latex, mix_csv, mix_markdown, mix_json,
+#       text_html, text_latex, text_csv, text_markdown, text_json
 # 数据: QA_final_sc_filled.json (SC-filled)
 #
 # ⚠️ 警告: 官方默认配置允许高达 ~16.8M 像素的图像
@@ -12,7 +12,7 @@
 #   ./run_default_config_experiments.sh           # 顺序运行所有模态
 #   ./run_default_config_experiments.sh image     # 只运行 image 模态
 #   ./run_default_config_experiments.sh mix_html  # 只运行 mix_html 模态
-#   ./run_default_config_experiments.sh text_markdown 5  # 在 GPU 5 上运行 text_markdown
+#   ./run_default_config_experiments.sh text_json 2  # 在 GPU 2 上运行 text_json
 #
 
 set -e
@@ -114,6 +114,9 @@ if [ $# -ge 1 ]; then
         mix_markdown)
             run_experiment "mix" "markdown" "mix_markdown" "${2:-0}"
             ;;
+        mix_json)
+            run_experiment "mix" "json" "mix_json" "${2:-0}"
+            ;;
         text_html)
             run_experiment "text" "html" "text_html" "${2:-0}"
             ;;
@@ -126,6 +129,9 @@ if [ $# -ge 1 ]; then
         text_markdown)
             run_experiment "text" "markdown" "text_markdown" "${2:-0}"
             ;;
+        text_json)
+            run_experiment "text" "json" "text_json" "${2:-0}"
+            ;;
         all)
             # 运行所有模态
             run_experiment "image" "" "image" "0"
@@ -133,10 +139,12 @@ if [ $# -ge 1 ]; then
             run_experiment "mix" "latex" "mix_latex" "0"
             run_experiment "mix" "csv" "mix_csv" "0"
             run_experiment "mix" "markdown" "mix_markdown" "0"
+            run_experiment "mix" "json" "mix_json" "0"
             run_experiment "text" "html" "text_html" "0"
             run_experiment "text" "latex" "text_latex" "0"
             run_experiment "text" "csv" "text_csv" "0"
             run_experiment "text" "markdown" "text_markdown" "0"
+            run_experiment "text" "json" "text_json" "0"
             ;;
         *)
             echo "Usage: $0 [modality] [gpu_id]"
@@ -147,17 +155,19 @@ if [ $# -ge 1 ]; then
             echo "  mix_latex     - Image + LaTeX table"
             echo "  mix_csv       - Image + CSV table"
             echo "  mix_markdown  - Image + Markdown table"
+            echo "  mix_json      - Image + JSON table"
             echo "  text_html     - HTML table only (no image)"
             echo "  text_latex    - LaTeX table only (no image)"
             echo "  text_csv      - CSV table only (no image)"
             echo "  text_markdown - Markdown table only (no image)"
+            echo "  text_json     - JSON table only (no image)"
             echo "  all           - Run all modalities"
             echo ""
             echo "Examples:"
             echo "  $0                     # Run all modalities sequentially"
             echo "  $0 image               # Run image modality only"
             echo "  $0 mix_html 1          # Run mix_html on GPU 1"
-            echo "  $0 text_markdown 5     # Run text_markdown on GPU 5"
+            echo "  $0 text_json 2         # Run text_json on GPU 2"
             exit 1
             ;;
     esac
@@ -171,10 +181,12 @@ else
     run_experiment "mix" "latex" "mix_latex" "0"
     run_experiment "mix" "csv" "mix_csv" "0"
     run_experiment "mix" "markdown" "mix_markdown" "0"
+    run_experiment "mix" "json" "mix_json" "0"
     run_experiment "text" "html" "text_html" "0"
     run_experiment "text" "latex" "text_latex" "0"
     run_experiment "text" "csv" "text_csv" "0"
     run_experiment "text" "markdown" "text_markdown" "0"
+    run_experiment "text" "json" "text_json" "0"
 fi
 
 echo ""

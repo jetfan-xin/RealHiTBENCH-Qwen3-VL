@@ -65,7 +65,8 @@ FILE_EXTENSIONS = {
     "latex": "txt",
     "markdown": "md",
     "csv": "csv",
-    "html": "html"
+    "html": "html",
+    "json": "json"
 }
 
 # Global model and processor (loaded once)
@@ -1615,7 +1616,7 @@ def main():
                         choices=['image', 'text', 'mix'],
                         help='Input modality: image, text, or mix')
     parser.add_argument('--format', type=str, default='html',
-                        choices=['html', 'csv', 'markdown', 'latex'],
+                        choices=['html', 'csv', 'markdown', 'latex', 'json'],
                         help='Table format for text/mix modality')
     
     # Dataset settings
