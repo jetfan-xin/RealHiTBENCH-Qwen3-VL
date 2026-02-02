@@ -1,0 +1,344 @@
+================================================================================
+MODALITY INPUT TEST
+Time: 2026-02-02T14:06:42.016544
+================================================================================
+
+================================================================================
+QUERY INFORMATION
+================================================================================
+ID: 1
+FileName: employment-table01
+QuestionType: Fact Checking
+SubQType: Multi-hop Fact Checking
+Question: Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.
+FinalAnswer: 1955, 62170
+
+
+================================================================================
+MODALITY: text_latex
+================================================================================
+
+----------------------------------------
+TASK PROMPT:
+----------------------------------------
+
+# Role Play
+Suppose you are an expert in table analysis and your task is to provide answers to questions based on the content of the table.
+# Chain-of-thought
+Let’s think step by step as follows and make the most of your strengths as a table analysis expert：
+1、Fully understand the question and extract the necessary information from it.
+2、Clearly and comprehensively understanding the content of  the table, including the structure of the table, the meaning and formatting of each row and column header（Note: There is usually summative cell in the table, such as all, combine, total, sum, average, mean, etc. Please pay careful attention to the flag information in the row header and column header, this information can help you to skip many operations.）
+3、Based on the question, select the row and column headers in the table that are most relevant to it and find the corresponding cells based on them.
+4、According to the requirements of the question, perform statistical, calculation, ranking, or other operations on the cells you selected, and output of the answer in the format specified by the definition.
+# Output Control
+1、The final answer should be one-line and strictly follow the format: "[Final Answer]: AnswerName1, AnswerName2...". 
+2、Ensure the "AnswerName" is a number or entity name, as short as possible, without any explanation. Give the final answer to the question directly without any explanation. If the question is judgmental, please answer 'Yes' or 'No'.
+I will give you a table in latex format and a question, please use the table to answer the question in specified format: [Final Answer]: AnswerName1, AnswerName2...
+
+
+----------------------------------------
+USER PROMPT:
+----------------------------------------
+ 
+Let's get start! 
+# Table
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{lllllllllll}
+\multicolumn{11}{l}{\begin{tabular}[c]{@{}l@{}}HOUSEHOLD DATA\\ ANNUAL AVERAGES\\  1.  Employment status of the civilian noninstitutional population, 1953 to date\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\
+{[}Numbers in thousands{]}       &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                                   \\
+                                 &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                     ...
+
+----------------------------------------
+TABLE CONTENT (first 2000 chars):
+----------------------------------------
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{lllllllllll}
+\multicolumn{11}{l}{\begin{tabular}[c]{@{}l@{}}HOUSEHOLD DATA\\ ANNUAL AVERAGES\\  1.  Employment status of the civilian noninstitutional population, 1953 to date\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\
+{[}Numbers in thousands{]}       &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                                   \\
+                                 &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                                   \\
+\multirow{3...
+
+----------------------------------------
+MODEL INPUT STRUCTURE (text-only):
+----------------------------------------
+[
+  {
+    "role": "user",
+    "content": [
+      {"type": "text", "text": "<FULL_MESSAGES_TEXT>"}
+    ]
+  }
+]
+
+NOTE: NO IMAGE INPUT for text modality!
+
+----------------------------------------
+TOKENIZATION:
+----------------------------------------
+Input IDs shape: torch.Size([1, 6882])
+Total tokens: 6882
+Pixel values: None (text-only)
+
+----------------------------------------
+GENERATING RESPONSE...
+----------------------------------------
+ERROR: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 44.42 GiB of which 290.56 MiB is free. Process 39464 has 40.92 GiB memory in use. Including non-PyTorch memory, this process has 3.20 GiB memory in use. Of the allocated memory 2.08 GiB is allocated by PyTorch, and 824.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/test_modality_inputs.py", line 249, in test_single_modality
+    generated_ids = model.generate(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2566, in generate
+    result = decoding_method(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2786, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1362, in forward
+    logits = self.lm_head(hidden_states[:, slice_indices, :])
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 170, in new_forward
+    args, kwargs = module._hf_hook.pre_forward(module, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 360, in pre_forward
+    set_module_tensor_to_device(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 343, in set_module_tensor_to_device
+    new_value = value.to(device, non_blocking=non_blocking)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 44.42 GiB of which 290.56 MiB is free. Process 39464 has 40.92 GiB memory in use. Including non-PyTorch memory, this process has 3.20 GiB memory in use. Of the allocated memory 2.08 GiB is allocated by PyTorch, and 824.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+
+================================================================================
+MODALITY: image
+================================================================================
+
+----------------------------------------
+TASK PROMPT:
+----------------------------------------
+
+# Role Play
+Suppose you are an expert in table analysis and your task is to provide answers to questions based on the content of the table.
+# Chain-of-thought 
+Let’s think step by step as follows and make the most of your strengths as a table analysis expert：
+1、Fully understand the question and extract the necessary information from it.
+2、Clearly and comprehensively understanding the content of  the table, including the structure of the table, the meaning and formatting of each row and column header（Note: There is usually summative cell in the table, such as all, combine, total, sum, average, mean, etc. Please pay careful attention to the flag information in the row header and column header, this information can help you to skip many operations.）
+3、Based on the question, select the row and column headers in the table that are most relevant to it and find the corresponding cells based on them.
+4、According to the requirements of the question, perform statistical, calculation, ranking, or other operations on the cells you selected, and output of the answer in the format specified by the definition.
+# Output Control
+1、The final answer should be one-line and strictly follow the format: "[Final Answer]: AnswerName1, AnswerName2...". 
+2、Ensure the "AnswerName" is a number or entity name, as short as possible, without any explanation. Give the final answer to the question directly without any explanation. If the question is judgmental, please answer 'Yes' or 'No'.
+I will give you a table image and a question, please use the table to answer the question in specified format: [Final Answer]: AnswerName1, AnswerName2...
+
+
+----------------------------------------
+USER PROMPT:
+----------------------------------------
+ 
+Let's get start! 
+# Table
+[See the table image]
+# Question
+Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.
+Emphasize: you need to make sure your final answer is formatted in this way: [Final Answer]: AnswerName1, AnswerName2...
+
+
+----------------------------------------
+MODEL INPUT STRUCTURE (image):
+----------------------------------------
+[
+  {
+    "role": "user",
+    "content": [
+      {"type": "image", "image": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/image/employment-table01.png"},
+      {"type": "text", "text": "<FULL_MESSAGES_TEXT>"}
+    ]
+  }
+]
+
+IMAGE FILE: /mnt/data2/projects/pan/4xin/datasets/RealHiTBench/image/employment-table01.png
+IMAGE EXISTS: True
+IMAGE SIZE: (1814, 3920)
+
+----------------------------------------
+TOKENIZATION:
+----------------------------------------
+Input IDs shape: torch.Size([1, 7384])
+Total tokens: 7384
+Pixel values shape: torch.Size([27816, 1536])
+Image grid THW: tensor([[  1, 244, 114]])
+
+----------------------------------------
+GENERATING RESPONSE...
+----------------------------------------
+ERROR: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 44.42 GiB of which 938.56 MiB is free. Process 39464 has 40.92 GiB memory in use. Including non-PyTorch memory, this process has 2.57 GiB memory in use. Of the allocated memory 1.24 GiB is allocated by PyTorch, and 1.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/test_modality_inputs.py", line 249, in test_single_modality
+    generated_ids = model.generate(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2566, in generate
+    result = decoding_method(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2786, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1344, in forward
+    outputs = self.model(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1132, in forward
+    inputs_embeds = self.get_input_embeddings()(input_ids)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 170, in new_forward
+    args, kwargs = module._hf_hook.pre_forward(module, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 360, in pre_forward
+    set_module_tensor_to_device(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 343, in set_module_tensor_to_device
+    new_value = value.to(device, non_blocking=non_blocking)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 44.42 GiB of which 938.56 MiB is free. Process 39464 has 40.92 GiB memory in use. Including non-PyTorch memory, this process has 2.57 GiB memory in use. Of the allocated memory 1.24 GiB is allocated by PyTorch, and 1.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+
+================================================================================
+MODALITY: mix_latex
+================================================================================
+
+----------------------------------------
+TASK PROMPT:
+----------------------------------------
+
+# Role Play
+Suppose you are an expert in table analysis and your task is to provide answers to questions based on the content of the table.
+# Chain-of-thought 
+Let’s think step by step as follows and make the most of your strengths as a table analysis expert：
+1、Fully understand the question and extract the necessary information from it.
+2、Clearly and comprehensively understanding the content of  the table, including the structure of the table, the meaning and formatting of each row and column header（Note: There is usually summative cell in the table, such as all, combine, total, sum, average, mean, etc. Please pay careful attention to the flag information in the row header and column header, this information can help you to skip many operations.）
+3、Based on the question, select the row and column headers in the table that are most relevant to it and find the corresponding cells based on them.
+4、According to the requirements of the question, perform statistical, calculation, ranking, or other operations on the cells you selected, and output of the answer in the format specified by the definition.
+# Output Control
+1、The final answer should be one-line and strictly follow the format: "[Final Answer]: AnswerName1, AnswerName2...". 
+2、Ensure the "AnswerName" is a number or entity name, as short as possible, without any explanation. Give the final answer to the question directly without any explanation. If the question is judgmental, please answer 'Yes' or 'No'.
+I will give you a table in latex format with corresponding image and a question, please use the table to answer the question in specified format: [Final Answer]: AnswerName1, AnswerName2...
+
+
+----------------------------------------
+USER PROMPT:
+----------------------------------------
+ 
+Let's get start! 
+# Table
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{lllllllllll}
+\multicolumn{11}{l}{\begin{tabular}[c]{@{}l@{}}HOUSEHOLD DATA\\ ANNUAL AVERAGES\\  1.  Employment status of the civilian noninstitutional population, 1953 to date\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\
+{[}Numbers in thousands{]}       &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                                   \\
+                                 &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                     ...
+
+----------------------------------------
+TABLE CONTENT (first 2000 chars):
+----------------------------------------
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[]
+\begin{tabular}{lllllllllll}
+\multicolumn{11}{l}{\begin{tabular}[c]{@{}l@{}}HOUSEHOLD DATA\\ ANNUAL AVERAGES\\  1.  Employment status of the civilian noninstitutional population, 1953 to date\end{tabular}}                                                                                                                                                                                                                                                                                                                                                                                                                                                     \\
+{[}Numbers in thousands{]}       &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                                   \\
+                                 &                                                                                                       &                        &                                                                                  &        &                                                                 &                                                         &                                                                          &        &                                                                  &                                                                                   \\
+\multirow{3...
+
+----------------------------------------
+MODEL INPUT STRUCTURE (mix):
+----------------------------------------
+[
+  {
+    "role": "user",
+    "content": [
+      {"type": "image", "image": "/mnt/data2/projects/pan/4xin/datasets/RealHiTBench/image/employment-table01.png"},
+      {"type": "text", "text": "<FULL_MESSAGES_TEXT>"}
+    ]
+  }
+]
+
+IMAGE FILE: /mnt/data2/projects/pan/4xin/datasets/RealHiTBench/image/employment-table01.png
+IMAGE EXISTS: True
+IMAGE SIZE: (1814, 3920)
+
+----------------------------------------
+TOKENIZATION:
+----------------------------------------
+Input IDs shape: torch.Size([1, 13842])
+Total tokens: 13842
+Pixel values shape: torch.Size([27816, 1536])
+Image grid THW: tensor([[  1, 244, 114]])
+
+----------------------------------------
+GENERATING RESPONSE...
+----------------------------------------
+ERROR: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 44.42 GiB of which 938.56 MiB is free. Process 39464 has 40.92 GiB memory in use. Including non-PyTorch memory, this process has 2.57 GiB memory in use. Of the allocated memory 1.24 GiB is allocated by PyTorch, and 1.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL/inference/test_modality_inputs.py", line 249, in test_single_modality
+    generated_ids = model.generate(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2566, in generate
+    result = decoding_method(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/generation/utils.py", line 2786, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 175, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1344, in forward
+    outputs = self.model(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
+    outputs = func(self, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/transformers/models/qwen3_vl/modeling_qwen3_vl.py", line 1132, in forward
+    inputs_embeds = self.get_input_embeddings()(input_ids)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 170, in new_forward
+    args, kwargs = module._hf_hook.pre_forward(module, *args, **kwargs)
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/hooks.py", line 360, in pre_forward
+    set_module_tensor_to_device(
+  File "/ltstorage/home/pan/miniconda3/envs/4xin-hit/lib/python3.10/site-packages/accelerate/utils/modeling.py", line 343, in set_module_tensor_to_device
+    new_value = value.to(device, non_blocking=non_blocking)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.16 GiB. GPU 0 has a total capacity of 44.42 GiB of which 938.56 MiB is free. Process 39464 has 40.92 GiB memory in use. Including non-PyTorch memory, this process has 2.57 GiB memory in use. Of the allocated memory 1.24 GiB is allocated by PyTorch, and 1.01 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+
+================================================================================
+TEST COMPLETED
+================================================================================

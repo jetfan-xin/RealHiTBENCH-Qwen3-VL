@@ -1,0 +1,15 @@
+================================================================================
+MODALITY INPUT TEST
+Time: 2026-02-02T14:14:53.651481
+================================================================================
+
+================================================================================
+QUERY INFORMATION
+================================================================================
+ID: 1
+FileName: employment-table01
+QuestionType: Fact Checking
+SubQType: Multi-hop Fact Checking
+Question: Match the year where the employment in agriculture was the highest and state its corresponding total employed population in the year.
+FinalAnswer: 1955, 62170
+
