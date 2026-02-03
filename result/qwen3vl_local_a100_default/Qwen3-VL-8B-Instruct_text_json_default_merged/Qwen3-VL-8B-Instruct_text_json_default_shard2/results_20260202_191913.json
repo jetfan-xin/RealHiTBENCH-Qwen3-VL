@@ -1,0 +1,51 @@
+{
+  "config": {
+    "model_dir": "/data/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "text",
+    "format": "json",
+    "data_path": "/data/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 2,
+    "start_time": "2026-02-02T19:18:54.609529",
+    "end_time": "2026-02-02T19:19:13.253223",
+    "duration_seconds": 18.643694
+  },
+  "aggregate_metrics": {
+    "Data Analysis": {
+      "F1": 50.0,
+      "ROUGE-L": 50.0,
+      "SacreBLEU": 0.0,
+      "EM": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": 5,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Rudimentary Analysis",
+      "Question": "What is the average unemployment rate across all years, and what is its standard deviation?",
+      "Reference": "5.80, 1.62",
+      "Prediction": "5.50, 1.63",
+      "Metrics": {
+        "F1": 50.0,
+        "EM": 0.0,
+        "ROUGE-L": 50.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.86
+    },
+    {
+      "id": 6,
+      "FileName": "employment-table01",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you provide a concise summary of the table, highlighting the main columns, their purposes, and any basic insights or trends observed?",
+      "Reference": "The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nonagricultural Industries),' 'Unemployed (Number, Percent),' and 'Not in Labor Force.' Insights show trends in employment rates, shifts between agricultural and nonagricultural sectors, and unemployment percentages over time.",
+      "Prediction": "The table presents annual employment status data for the civilian noninstitutional population from 1953 to 2023, with key columns including total population, civilian labor force, employed, unemployed, and not in labor force (in thousands). It also breaks down labor force by agriculture and nonagricultural industries, along with employment percentages. Trends show steady growth in population and labor force over time, with fluctuations in unemployment rates (peaking in 2020) and a gradual decline in unemployment since 2020. Employment in agriculture has consistently declined, while nonagricultural industries dominate employment. The labor force participation rate has generally increased, peaking around 2023.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 9.05
+    }
+  ]
+}

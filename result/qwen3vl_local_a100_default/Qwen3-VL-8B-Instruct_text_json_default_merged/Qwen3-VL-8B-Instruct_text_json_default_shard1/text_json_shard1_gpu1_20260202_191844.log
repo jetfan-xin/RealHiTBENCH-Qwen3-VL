@@ -1,0 +1,77 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: json
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 2/3
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:03<00:03,  1.54s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.52s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.36s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Limited to 6 queries
+Shard 1/3: Processing queries 3-4 (2 queries)
+Resuming from checkpoint with 20 processed queries
+Processing text modality:   0%|          | 0/2 [00:00<?, ?it/s]
+============================================================
+Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (14393 tokens)
+Processing text modality:  50%|█████     | 1/2 [00:02<00:02,  2.62s/it]Predictions:  ['2022']
+Answer:  ['1953']
+Prediction: 2022
+Reference: 1953
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.62s
+
+============================================================
+Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (14382 tokens)
+Processing text modality: 100%|██████████| 2/2 [00:04<00:00,  2.40s/it]Processing text modality: 100%|██████████| 2/2 [00:04<00:00,  2.43s/it]
+Predictions:  ['167116']
+Answer:  ['158772']
+Prediction: 167116
+Reference: 158772
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.24s
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+Total queries: 22
+Duration: 11.99s
+Results saved to: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100_default/Qwen3-VL-8B-Instruct_text_json_default_shard1/results_20260202_191904.json
+
+Aggregate Metrics by Question Type:
+  Fact Checking:
+    F1: 33.3330
+    SacreBLEU: 0.0000
+    EM: 30.0000
+    ROUGE-L: 33.3330
+  Numerical Reasoning:
+    F1: 31.9450
+    SacreBLEU: 9.7350
+    EM: 12.5000
+    ROUGE-L: 31.9450
+  Data Analysis:
+  Visualization:
+    ECR: 0.0000
+Checkpoint preserved at: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100_default/Qwen3-VL-8B-Instruct_text_json_default_shard1/checkpoint.json

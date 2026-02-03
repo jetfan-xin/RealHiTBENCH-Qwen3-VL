@@ -1,0 +1,52 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: json
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 1/3
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.51s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.50s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.49s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.25s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.34s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Limited to 6 queries
+Shard 0/3: Processing queries 1-2 (2 queries)
+Resuming from checkpoint with 10 processed queries
+Processing text modality:   0%|          | 0/2 [00:00<?, ?it/s]Processing text modality: 100%|██████████| 2/2 [00:00<00:00, 72944.42it/s]
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+Total queries: 10
+Duration: 6.93s
+Results saved to: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100_default/Qwen3-VL-8B-Instruct_text_json_default_shard0/results_20260202_191857.json
+
+Aggregate Metrics by Question Type:
+  Fact Checking:
+    ROUGE-L: 40.0000
+    SacreBLEU: 0.0000
+    F1: 40.0000
+    EM: 40.0000
+  Data Analysis:
+    F1: 50.0000
+    EM: 33.3333
+    ROUGE-L: 50.0000
+    SacreBLEU: 33.3333
+Checkpoint preserved at: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100_default/Qwen3-VL-8B-Instruct_text_json_default_shard0/checkpoint.json

@@ -27,7 +27,8 @@ FILE_EXTENSIONS = {
     "latex": "txt",
     "markdown": "md",
     "csv": "csv",
-    "html": "html"
+    "html": "html",
+    "json": "json"
 }
 
 
@@ -37,8 +38,8 @@ class MissingTaskAnalyzer:
     def __init__(self, workspace_root: str):
         self.workspace_root = Path(workspace_root)
         self.qa_file = self.workspace_root / "data" / "QA_final_sc_filled.json"
-        self.data_path = Path("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench")
-        # self.data_path = Path("/data/pan/4xin/datasets/RealHiTBench")
+        # self.data_path = Path("/mnt/data2/projects/pan/4xin/datasets/RealHiTBench")
+        self.data_path = Path("/data/pan/4xin/datasets/RealHiTBench")
         self.result_base = self.workspace_root / "result" / "complied"
         
         # 加载主任务列表
@@ -75,10 +76,10 @@ class MissingTaskAnalyzer:
             format_type = None
         elif modality_format.startswith('mix_'):
             modality = 'mix'
-            format_type = modality_format.split('_', 1)[1]  # html, csv, latex
+            format_type = modality_format.split('_', 1)[1]  # html, csv, latex, json, markdown
         elif modality_format.startswith('text_'):
             modality = 'text'
-            format_type = modality_format.split('_', 1)[1]  # html, csv, latex
+            format_type = modality_format.split('_', 1)[1]  # html, csv, latex, json, markdown
         else:
             raise ValueError(f"Unknown modality/format pattern: {modality_format}")
         
@@ -482,8 +483,8 @@ class MissingTaskAnalyzer:
 
 def main():
     """主函数"""
-    workspace_root = "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
-    # workspace_root = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
+    # workspace_root = "/ltstorage/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
+    workspace_root = "/export/home/pan/4xin/RealHiTBENCH-Qwen3-VL"
     
     analyzer = MissingTaskAnalyzer(workspace_root)
     analyzer.run()

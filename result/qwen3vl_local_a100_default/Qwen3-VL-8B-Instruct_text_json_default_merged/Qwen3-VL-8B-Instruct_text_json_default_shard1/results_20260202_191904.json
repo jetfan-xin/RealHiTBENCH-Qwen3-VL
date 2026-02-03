@@ -1,0 +1,373 @@
+{
+  "config": {
+    "model_dir": "/data/pan/4xin/models/Qwen3-VL-8B-Instruct",
+    "modality": "text",
+    "format": "json",
+    "data_path": "/data/pan/4xin/datasets/RealHiTBench",
+    "total_queries": 22,
+    "start_time": "2026-02-02T19:18:52.527618",
+    "end_time": "2026-02-02T19:19:04.514444",
+    "duration_seconds": 11.986826
+  },
+  "aggregate_metrics": {
+    "Fact Checking": {
+      "F1": 33.333,
+      "SacreBLEU": 0.0,
+      "EM": 30.0,
+      "ROUGE-L": 33.333
+    },
+    "Numerical Reasoning": {
+      "F1": 31.945,
+      "SacreBLEU": 9.735,
+      "EM": 12.5,
+      "ROUGE-L": 31.945
+    },
+    "Data Analysis": {},
+    "Visualization": {
+      "ECR": 0.0
+    }
+  },
+  "results": [
+    {
+      "id": 1025,
+      "FileName": "labor-table32",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Compare the departure and arrival times for Adam's trips on March 4. What was the shortest trip duration, and which trip does it correspond to?",
+      "Reference": "8:05, Trip1",
+      "Prediction": "2017-03-04 07:54:34, 2017-03-04 08:02:39",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.25
+    },
+    {
+      "id": 1026,
+      "FileName": "labor-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique users took trips on March 4, and who are they?",
+      "Reference": "4, ADAM, MAX, SAMRT, LUCAS.",
+      "Prediction": "ADAM, MAX, SAMRT, LUCAS",
+      "Metrics": {
+        "F1": 88.89,
+        "EM": 0.0,
+        "ROUGE-L": 88.89,
+        "SacreBLEU": 77.88
+      },
+      "ProcessingTime": 1.11
+    },
+    {
+      "id": 1027,
+      "FileName": "labor-table32",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "Based on the trip data for March 4, calculate the average distance traveled per trip by all users combined.",
+      "Reference": "9.50",
+      "Prediction": "7.60",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.9
+    },
+    {
+      "id": 1028,
+      "FileName": "labor-table32",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Can you summarize the key trends in trip durations for each user, highlighting the longest and shortest trips and any notable patterns?",
+      "Reference": "The table summarizes trip durations for users like OLIVER, SAMRT, MAX, ADAM, LUCAS, and LEWIS. OLIVER had the shortest trip at 3 minutes and 21 seconds, while LEWIS had the longest trip at 30 minutes. Notable patterns include shorter trips for OLIVER and SAMRT and longer trips for LEWIS and ADAM, indicating potential differences in trip purposes or destinations among users.",
+      "Prediction": "OLIVER had the shortest trip (3 minutes, 21 seconds) from A1 to DU3, while LEWIS had the longest trip (30 minutes, 4 seconds) from an unspecified location to another, covering 23 km; MAX showed consistent medium-length trips (average ~10-15 minutes); SAMRT had varied durations with a notably short trip (8 minutes, 44 seconds) covering only 0.2 km; LUCAS had two trips with similar durations (~11 minutes) covering 7.9 km each; ADAM had trips of 8 minutes, 1 minute, and 8 minutes, covering 7.6 km each.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.53
+    },
+    {
+      "id": 1029,
+      "FileName": "health-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What is the total calorie count for all items listed as “Food” during the “Evening” time period on Tue, Jan 03?",
+      "Reference": "250",
+      "Prediction": "125, 125",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.32
+    },
+    {
+      "id": 1030,
+      "FileName": "health-table12",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Identify the food item with the highest protein content served during the “Afternoon” time period across all days.",
+      "Reference": "Roast Beef",
+      "Prediction": "Roast Beef",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.02
+    },
+    {
+      "id": 1031,
+      "FileName": "health-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many activities on Tue, Jan 03, involved a time duration of more than 20 minutes?",
+      "Reference": "2",
+      "Prediction": "2",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.97
+    },
+    {
+      "id": 1032,
+      "FileName": "health-table12",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Ranking",
+      "Question": "Rank the days in descending order based on the total number of miles recorded across all activities.",
+      "Reference": "Wed, Jan 04, Tue, Jan 03, Mon, Jan 02",
+      "Prediction": "2017-01-04 00:00:00, 2017-01-03 00:00:00, 2017-01-02 00:00:00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 3.94
+    },
+    {
+      "id": 1033,
+      "FileName": "health-table12",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the key information from the table, including the main categories (e.g., Food, Activity), the metrics tracked (e.g., Calories, Miles), and any basic trends observed.",
+      "Reference": "The table records daily food consumption and physical activities, categorizing entries into Food and Activity. Key metrics include servings, calories (KCAL), macronutrient content (FAT, CARB, PROT), activity duration (MIN), and distance (MILES). Notable trends include higher calorie intake during the evening and limited high-mileage activities, primarily running.",
+      "Prediction": "Daily nutrition and activity logs for January 2-4, 2017, tracking food intake (KCAL, FAT, CARB, PROT), physical activities (MIN, MILES, REPS, SETS), and weight; key trends: high-calorie intake on Jan 4 (6180 KCAL), significant activity on Jan 4 (220 MIN, 26.2 MILES), weight drop from 220 to 219 lbs over two days, and varied meal patterns across days.",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 6.3
+    },
+    {
+      "id": 1034,
+      "FileName": "health-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What activities are recorded on 2017-02-02, list them all.",
+      "Reference": "Weightlifting",
+      "Prediction": "WEIGHTLIFTING",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.07
+    },
+    {
+      "id": 1035,
+      "FileName": "health-table13",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "On which date was the highest amount of protein consumed during the “AFTERNOON,” and what was the protein value?",
+      "Reference": "2017-02-02, 21",
+      "Prediction": "2017-02-03, 6",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.57
+    },
+    {
+      "id": 1036,
+      "FileName": "health-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Calculation",
+      "Question": "What is the total number of calories consumed during all “AFTERNOON” activities across all dates?",
+      "Reference": "545",
+      "Prediction": "0, 0, 0",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.26
+    },
+    {
+      "id": 1037,
+      "FileName": "health-table13",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Multi-hop Numerical Reasoning",
+      "Question": "What is the difference in total activity duration between Feb 2 and Feb 3?",
+      "Reference": "60",
+      "Prediction": "30, 60",
+      "Metrics": {
+        "F1": 66.67,
+        "EM": 0.0,
+        "ROUGE-L": 66.67,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.22
+    },
+    {
+      "id": 1038,
+      "FileName": "health-table13",
+      "QuestionType": "Data Analysis",
+      "SubQType": "Summary Analysis",
+      "Question": "Summarize the key columns in the table, explaining the main types of activities and food items tracked, and highlight any noticeable trends in calorie consumption.",
+      "Reference": "The table tracks activities and food items across dates, with key columns for activity types, food categories, calorie counts, and time periods (morning, afternoon, evening). It highlights metrics like protein, fat, and carbohydrate values. A noticeable trend is higher calorie consumption during afternoon activities compared to morning or evening, likely due to heavier meals or physical activity durations.",
+      "Prediction": "Daily nutrition intake (KCAL, FAT, CARB, PROT), physical activities (MIN, MILES, LBS, REPS, SETS), and weight tracking; key food items include fruits, grains, meats, oils, and beverages; key activities include weightlifting, running, walking, yoga, and push-ups; noticeable trend: calorie consumption spikes on 2017-02-03 (5710 kcal) due to high-calorie food intake, while 2017-02-04 shows a significant drop in calorie intake (70 kcal) despite high activity (220 min) and weight loss (220 to 0 lbs).",
+      "Metrics": {
+        "GPT_EVAL": "N/A (no eval_api_key)"
+      },
+      "ProcessingTime": 7.88
+    },
+    {
+      "id": 1039,
+      "FileName": "health-table14",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Inference-based Fact Checking",
+      "Question": "Was the total calorie intake on Mar 3 higher than the total on Mar 2?",
+      "Reference": "No",
+      "Prediction": "No",
+      "Metrics": {
+        "F1": 100.0,
+        "EM": 100.0,
+        "ROUGE-L": 100.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 0.92
+    },
+    {
+      "id": 1040,
+      "FileName": "health-table14",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "What was the average duration of all physical activities across Mar 2 and Mar 3?",
+      "Reference": "67.50",
+      "Prediction": "30, 30",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.21
+    },
+    {
+      "id": 1041,
+      "FileName": "health-table14",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Counting",
+      "Question": "How many unique activities were recorded on Mar 2, and how many on Mar 3?",
+      "Reference": "1, 3",
+      "Prediction": "2, 2",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.12
+    },
+    {
+      "id": 1042,
+      "FileName": "health-table14",
+      "QuestionType": "Numerical Reasoning",
+      "SubQType": "Comparison",
+      "Question": "Compare the total protein intake between Mar 2 and Mar 4. Which date had a higher protein intake, and by how much?",
+      "Reference": "Mar 4, 53",
+      "Prediction": "2017-03-02, 30.00",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 1.77
+    },
+    {
+      "id": 1043,
+      "FileName": "health-table14",
+      "QuestionType": "Visualization",
+      "SubQType": "LineChart Generation",
+      "Question": "Using the table, create a line chart to show the trend of total calories consumed per day over the recorded dates.",
+      "Reference": "[[2800, 810, 6180]]\n",
+      "Prediction": "import pandas as pd \n import matplotlib.pyplot as plt \n df = pd.read_excel(\"table.xlsx\")\n daily_totals = df[df[\"Unnamed: 2\"] == \"DAILY TOTALS\"]\n dates = daily_totals[\"DAILY TRACKER\"].dropna().astype(str).str.split(\" \").str[0]\n kcal = daily_totals[\"Unnamed: 6\"].dropna().astype(int)\n plt.figure(figsize=(10, 6))\n plt.plot(dates, kcal, marker='o', linestyle='-', color='blue')\n plt.title('Total Calories Consumed Per Day')\n plt.xlabel('Date')\n plt.ylabel('Total Calories (Kcal)')\n plt.xticks(rotation=45)\n plt.grid(True)\n plt.tight_layout()\n plt.show()",
+      "Metrics": {
+        "ECR": false,
+        "Pass": "None"
+      },
+      "ProcessingTime": 8.21
+    },
+    {
+      "id": 1044,
+      "FileName": "sport-table10",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "Find the player who achieved a first-place finish in the week of 2013-09-16 and check if they were in the top 5 overall.",
+      "Reference": "Steve Griggs, Yes",
+      "Prediction": "Dot Clark, Yes",
+      "Metrics": {
+        "F1": 33.33,
+        "EM": 0.0,
+        "ROUGE-L": 33.33,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.56
+    },
+    {
+      "id": 3,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Multi-hop Fact Checking",
+      "Question": "In which year did the number of unemployed individuals drop below 2,000 while the total employed percentage of the population was above 57%?",
+      "Reference": "1953",
+      "Prediction": "2022",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.62
+    },
+    {
+      "id": 4,
+      "FileName": "employment-table01",
+      "QuestionType": "Fact Checking",
+      "SubQType": "Value-Matching",
+      "Question": "What was the employment in non-agricultural industries in the year with the highest civilian labor force total?",
+      "Reference": "158772",
+      "Prediction": "167116",
+      "Metrics": {
+        "F1": 0.0,
+        "EM": 0.0,
+        "ROUGE-L": 0.0,
+        "SacreBLEU": 0.0
+      },
+      "ProcessingTime": 2.24
+    }
+  ]
+}

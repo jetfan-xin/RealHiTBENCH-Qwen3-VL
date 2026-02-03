@@ -2,7 +2,7 @@
 """
 重新运行缺失的任务: qwen3vl_text/text_csv
 
-生成时间: 2026-02-01T12:53:38.154779
+生成时间: 2026-02-03T02:04:02.377524
 任务来源: qwen3vl_text/text_csv/results.json
 需要重新运行的任务数: 15
   - Incomplete runs: 15

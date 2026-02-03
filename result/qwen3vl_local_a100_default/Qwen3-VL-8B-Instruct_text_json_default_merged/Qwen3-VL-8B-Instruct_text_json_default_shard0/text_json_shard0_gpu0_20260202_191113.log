@@ -1,0 +1,312 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: json
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 1/3
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:21<01:04, 21.58s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:42<00:42, 21.38s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:04<00:21, 21.73s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:16<00:00, 17.74s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:16<00:00, 19.15s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Shard 0/3: Processing queries 1-1024 (1024 queries)
+Processing text modality:   0%|          | 0/1024 [00:00<?, ?it/s]
+============================================================
+Query ID: 1 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (14383 tokens)
+Processing text modality:   0%|          | 1/1024 [00:03<51:43,  3.03s/it]Predictions:  ['1953 61179']
+Answer:  ['1955 62170']
+Prediction: 1953, 61179
+Reference: 1955, 62170
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 3.03s
+
+============================================================
+Query ID: 2 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (14389 tokens)
+Processing text modality:   0%|          | 2/1024 [00:05<42:20,  2.49s/it]Predictions:  ['1954']
+Answer:  ['1954']
+Prediction: 1954
+Reference: 1954
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.10s
+
+============================================================
+Query ID: 3 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (14393 tokens)
+Processing text modality:   0%|          | 3/1024 [00:07<39:20,  2.31s/it]Predictions:  ['2022']
+Answer:  ['1953']
+Prediction: 2022
+Reference: 1953
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.11s
+
+============================================================
+Query ID: 4 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (14382 tokens)
+Processing text modality:   0%|          | 4/1024 [00:09<38:31,  2.27s/it]Predictions:  ['167116']
+Answer:  ['158772']
+Prediction: 167116
+Reference: 158772
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.20s
+
+============================================================
+Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (14402 tokens)
+Processing text modality:   0%|          | 5/1024 [00:11<39:19,  2.32s/it]Predictions:  ['58 17']
+Answer:  ['58 16']
+Prediction: 5.78, 1.72
+Reference: 5.80, 1.62
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 2.40s
+
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (14385 tokens)
+Processing text modality:   1%|          | 6/1024 [00:22<1:28:45,  5.23s/it]Prediction: The table presents annual averages of employment status for the civilian noninstitutional population from 1953 to 2023. Key columns include: "Civilian noninstitutional population" (total population 16...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 10.89s
+
+============================================================
+Query ID: 7 | Type: Data Analysis | SubType: Predictive Analysis
+============================================================
+  Warning: Large text input (14450 tokens)
+Processing text modality:   1%|          | 7/1024 [00:24<1:12:10,  4.26s/it]Predictions:  ['562 increasing trend']
+Answer:  ['predicted percentage for 1965 551']
+Prediction: 56.2, Increasing trend
+Reference: Predicted percentage for 1965: 55.12%
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.26s
+
+============================================================
+Query ID: 8 | Type: Data Analysis | SubType: Exploratory Analysis
+============================================================
+  Warning: Large text input (14570 tokens)
+Processing text modality:   1%|          | 8/1024 [00:27<1:01:37,  3.64s/it]Predictions:  ['strong positive correlation 10']
+Answer:  ['strong positive correlation 10']
+Prediction: Strong positive correlation, 0.99
+Reference: Strong positive correlation, 1.00
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 100.0}
+Processing Time: 2.31s
+
+============================================================
+Query ID: 9 | Type: Data Analysis | SubType: Anomaly Analysis
+============================================================
+  Warning: Large text input (14372 tokens)
+Processing text modality:   1%|          | 9/1024 [00:43<2:10:22,  7.71s/it]Prediction: 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 20...
+Reference: 4 anomalies detected - Year 1982: Unemployment 9.70% or Employment 99526.00 deviates significantly, Year 1983: Unemployment 9.600% or Employment 100834.00 deviates significantly, Year 2009: Unemployme...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 16.65s
+
+============================================================
+Query ID: 10 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (14004 tokens)
+Processing text modality:   1%|          | 10/1024 [00:46<1:40:49,  5.97s/it]Predictions:  ['1983']
+Answer:  ['1983']
+Prediction: 1983
+Reference: 1983
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.07s
+Checkpoint saved: 10 queries processed
+
+============================================================
+Query ID: 11 | Type: Fact Checking | SubType: Multi-hop Fact Checking
+============================================================
+  Warning: Large text input (14013 tokens)
+Processing text modality:   1%|          | 11/1024 [00:47<1:19:33,  4.71s/it]Predictions:  ['yes']
+Answer:  ['no']
+Prediction: Yes
+Reference: No
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.87s
+
+============================================================
+Query ID: 12 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (14003 tokens)
+Processing text modality:   1%|          | 12/1024 [00:50<1:08:57,  4.09s/it]Predictions:  ['4744 4101 3655']
+Answer:  ['39957']
+Prediction: 4744, 4101, 3655
+Reference: 3995.67
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 2.66s
+
+============================================================
+Query ID: 13 | Type: Fact Checking | SubType: Inference-based Fact Checking
+============================================================
+  Warning: Large text input (14008 tokens)
+Processing text modality:   1%|▏         | 13/1024 [00:52<57:30,  3.41s/it]  Predictions:  ['no']
+Answer:  ['yes']
+Prediction: No
+Reference: Yes
+Metrics: {'F1': 0.0, 'EM': 0.0, 'ROUGE-L': 0.0, 'SacreBLEU': 0.0}
+Processing Time: 1.86s
+
+============================================================
+Query ID: 14 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (14010 tokens)
+Processing text modality:   1%|▏         | 14/1024 [00:54<50:30,  3.00s/it]Predictions:  ['1986']
+Answer:  ['1986']
+Prediction: 1986
+Reference: 1986
+Metrics: {'F1': 100.0, 'EM': 100.0, 'ROUGE-L': 100.0, 'SacreBLEU': 0.0}
+Processing Time: 2.05s
+
+============================================================
+Query ID: 15 | Type: Visualization | SubType: BarChart Generation
+============================================================
+  Warning: Large text input (14108 tokens)
+Processing text modality:   1%|▏         | 15/1024 [01:04<1:26:43,  5.16s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+years = [1985, 1987, 1989]
+data = df[df["Year"].isin(years)]
+population = data["Civilian\nnoninstitu-\ntional\npopulation"].astype(int)
+employed = data["Unnamed: 4"].astype(int)
+plt.bar(years, population, label="Civilian noninstitutional population")
+plt.bar(years, employed, bottom=population, label="Employed")
+plt.xlabel("Year")
+plt.ylabel("Population")
+plt.title("Civilian noninstitutional population and Employed population for 1985, 1987, and 1989")
+plt.legend()
+plt.show()
+
+Python Error: shape mismatch: objects cannot be broadcast to a single shape.  Mismatch is between arg 0 with shape (3,) and arg 1 with shape (6,).
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ years = [1985, 1987, 1989]
+ data = df[df["Year"].isin(years)]
+ population = data["Civilian\nnoninstitu-\ntiona...
+Reference: [93736, 95853, 97630, 59891, 62107, 64315]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 10.15s
+
+============================================================
+Query ID: 16 | Type: Visualization | SubType: ScatterChart Generation
+============================================================
+  Warning: Large text input (14092 tokens)
+Processing text modality:   2%|▏         | 16/1024 [01:19<2:17:56,  8.21s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+df_men = df[df['Year'].isin(['Men'])].dropna(subset=['Year'])
+df_women = df[df['Year'].isin(['Women'])].dropna(subset=['Year'])
+df = df[~df['Year'].isin(['Men', 'Women'])]
+df = df[df['Civilian labor force'].notna()]
+df = df[df['Unemployed'].notna()]
+df['Unemployment Rate'] = df['Unemployed'] / df['Civilian labor force'] * 100
+df = df[df['Unemployment Rate'] > 0]
+df = df[df['Civilian labor force'] > 0]
+df = df.sort_values('Year')
+df['Civilian labor force'] = pd.to_numeric(df['Civilian labor force'], errors='coerce')
+df['Unemployment Rate'] = pd.to_numeric(df['Unemployment Rate'], errors='coerce')
+plt.scatter(df['Civilian labor force'], df['Unemployment Rate'], alpha=0.7)
+plt.xlabel('Total Civilian Labor Force')
+plt.ylabel('Unemployment Rate (%)')
+plt.title('Relationship between Unemployment Rate and Total Civilian Labor Force')
+plt.grid(True)
+plt.show()
+
+Python Error: 'Unemployed'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ df_men = df[df['Year'].isin(['Men'])].dropna(subset=['Year'])
+ df_women = df[df['Year'].isin(['Women'])].dropn...
+Reference: [[9.9, 7.4, 7.0, 6.9, 6.2, 5.5, 5.2, 5.7, 7.2, 7.9, 7.2, 6.2, 5.6, 5.4, 4.9, 4.4, 4.1, 3.9, 4.8, 5.9, 6.3, 5.6, 5.1, 4.6, 4.7, 6.1, 10.3, 10.5, 9.4, 8.2, 7.6, 6.3, 5.4, 4.9, 4.4, 3.9, 3.7, 7.8, 5.5, 3...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 15.30s
+
+============================================================
+Query ID: 17 | Type: Visualization | SubType: PieChart Generation
+============================================================
+  Warning: Large text input (14096 tokens)
+Processing text modality:   2%|▏         | 17/1024 [01:29<2:26:07,  8.71s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+data_1984 = df[df["Year"] == "1984"]
+agriculture = data_1984.iloc[0]["Unnamed: 6"]
+non_agriculture = data_1984.iloc[0]["Unnamed: 7"]
+labels = ['Agriculture', 'Non-agriculture']
+sizes = [agriculture, non_agriculture]
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=90)
+plt.title('Employment Distribution in 1984')
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.show()
+
+Python Error: single positional indexer is out-of-bounds
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ data_1984 = df[df["Year"] == "1984"]
+ agriculture = data_1984.iloc[0]["Unnamed: 6"]
+ non_agriculture = data_19...
+Reference: [0.05, 0.95]
+
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 9.86s
+
+============================================================
+Query ID: 18 | Type: Visualization | SubType: LineChart Generation
+============================================================
+  Warning: Large text input (14099 tokens)
+Processing text modality:   2%|▏         | 18/1024 [01:41<2:40:22,  9.57s/it]Code: import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/employment-table02.xlsx")
+df_filtered = df[(df['Year'] >= '1983') & (df['Year'] <= '1990')]
+df_filtered = df_filtered[df_filtered['Civilian labor force'] == 'Total']
+df_filtered = df_filtered[['Year', 'Unnamed: 4', 'Unnamed: 8']]
+df_filtered.columns = ['Year', 'Employed', 'Unemployed']
+df_filtered['Year'] = pd.to_numeric(df_filtered['Year'])
+df_filtered.set_index('Year', inplace=True)
+df_filtered.plot(kind='line', marker='o')
+plt.title('Trends of Total Employed and Unemployed Population (1983-1990)')
+plt.xlabel('Year')
+plt.ylabel('Population')
+plt.legend(['Employed', 'Unemployed'])
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+Python Error: '>=' not supported between instances of 'int' and 'str'
+Prediction: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("table.xlsx")
+ df_filtered = df[(df['Year'] >= '1983') & (df['Year'] <= '1990')]
+ df_filtered = df_filtered[df_filtered['Civi...
+Reference: [[56787, 59091, 59891, 60892, 62107, 63273, 64315, 65104], [6260, 4744, 4521, 4530, 4101, 3655, 3525, 3906], [44047, 45915, 47259, 48706, 50334, 51696, 53027, 53689], [4457, 3794, 3791, 3707, 3324, 30...
+Metrics: {'ECR': False, 'Pass': 'None'}
+Processing Time: 11.56s
+
+============================================================
+Query ID: 19 | Type: Fact Checking | SubType: Value-Matching
+============================================================
+  Warning: Large text input (34116 tokens)

@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "result_file": "qwen3vl_default_pic/mix_json/results.json",
+    "config": "qwen3vl_default_pic",
+    "modality": "mix",
+    "format": "json",
+    "analysis_time": "2026-02-03T02:00:46.149531",
+    "master_task_list": "data/QA_final_sc_filled.json"
+  },
+  "statistics": {
+    "total_tasks": 3071,
+    "completed": 3063,
+    "success": 3063,
+    "error": 0,
+    "missing": 8,
+    "file_dependency_issues": 8,
+    "incomplete_runs": 0
+  },
+  "skip_ids": [
+    577,
+    578,
+    579,
+    580,
+    581,
+    2960,
+    2961,
+    2962
+  ],
+  "error_ids": [],
+  "skip_reasons": {
+    "577": "Missing source file(s): health-table09.json",
+    "578": "Missing source file(s): health-table09.json",
+    "579": "Missing source file(s): health-table09.json",
+    "580": "Missing source file(s): health-table09.json, health-table09.xlsx",
+    "581": "Missing source file(s): health-table09.json, health-table09.xlsx",
+    "2960": "Missing source file(s): society-table10_swap.json",
+    "2961": "Missing source file(s): society-table10_swap.json",
+    "2962": "Missing source file(s): society-table10_swap.json"
+  },
+  "categorized": {
+    "file_dependency_issues": [
+      577,
+      578,
+      579,
+      580,
+      581,
+      2960,
+      2961,
+      2962
+    ],
+    "incomplete_runs": []
+  }
+}

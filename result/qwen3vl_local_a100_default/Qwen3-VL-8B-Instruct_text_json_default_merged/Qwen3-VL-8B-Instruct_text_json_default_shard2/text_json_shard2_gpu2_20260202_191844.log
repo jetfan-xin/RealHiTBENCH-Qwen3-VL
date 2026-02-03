@@ -1,0 +1,66 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: json
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 3/3
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:04,  1.46s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.45s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:04<00:01,  1.44s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.21s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:05<00:00,  1.30s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Limited to 6 queries
+Shard 2/3: Processing queries 5-6 (2 queries)
+Processing text modality:   0%|          | 0/2 [00:00<?, ?it/s]
+============================================================
+Query ID: 5 | Type: Data Analysis | SubType: Rudimentary Analysis
+============================================================
+  Warning: Large text input (14402 tokens)
+Processing text modality:  50%|█████     | 1/2 [00:02<00:02,  2.86s/it]Predictions:  ['55 16']
+Answer:  ['58 16']
+Prediction: 5.50, 1.63
+Reference: 5.80, 1.62
+Metrics: {'F1': 50.0, 'EM': 0.0, 'ROUGE-L': 50.0, 'SacreBLEU': 0.0}
+Processing Time: 2.86s
+
+============================================================
+Query ID: 6 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+  Warning: Large text input (14385 tokens)
+Processing text modality: 100%|██████████| 2/2 [00:11<00:00,  6.50s/it]Processing text modality: 100%|██████████| 2/2 [00:11<00:00,  5.95s/it]
+Prediction: The table presents annual employment status data for the civilian noninstitutional population from 1953 to 2023, with key columns including total population, civilian labor force, employed, unemployed...
+Reference: The table provides employment data for the civilian noninstitutional population from 1953 onward. Main columns include 'Year,' 'Civilian Population,' 'Labor Force,' 'Employed (Total, Agriculture, Nona...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 9.05s
+
+============================================================
+EVALUATION COMPLETE
+============================================================
+Total queries: 2
+Duration: 18.64s
+Results saved to: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100_default/Qwen3-VL-8B-Instruct_text_json_default_shard2/results_20260202_191913.json
+
+Aggregate Metrics by Question Type:
+  Data Analysis:
+    F1: 50.0000
+    ROUGE-L: 50.0000
+    SacreBLEU: 0.0000
+    EM: 0.0000
+Checkpoint preserved at: /export/home/pan/4xin/RealHiTBENCH-Qwen3-VL/result/qwen3vl_local_a100_default/Qwen3-VL-8B-Instruct_text_json_default_shard2/checkpoint.json

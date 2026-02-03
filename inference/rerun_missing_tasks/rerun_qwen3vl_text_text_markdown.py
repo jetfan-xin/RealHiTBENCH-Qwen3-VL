@@ -2,7 +2,7 @@
 """
 重新运行缺失的任务: qwen3vl_text/text_markdown
 
-生成时间: 2026-02-01T12:53:38.161171
+生成时间: 2026-02-03T02:04:02.378358
 任务来源: qwen3vl_text/text_markdown/results.json
 需要重新运行的任务数: 28
   - Incomplete runs: 0

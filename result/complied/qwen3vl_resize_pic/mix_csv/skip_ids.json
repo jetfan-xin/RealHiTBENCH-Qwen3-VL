@@ -4,7 +4,7 @@
     "config": "qwen3vl_resize_pic",
     "modality": "mix",
     "format": "csv",
-    "analysis_time": "2026-02-01T12:52:40.446165",
+    "analysis_time": "2026-02-03T02:00:46.218502",
     "master_task_list": "data/QA_final_sc_filled.json"
   },
   "statistics": {

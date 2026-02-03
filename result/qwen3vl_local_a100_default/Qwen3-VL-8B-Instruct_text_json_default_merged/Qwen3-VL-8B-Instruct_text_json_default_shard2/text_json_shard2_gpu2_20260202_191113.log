@@ -1,0 +1,196 @@
+`torch_dtype` is deprecated! Use `dtype` instead!
+Configuration:
+  Model: /data/pan/4xin/models/Qwen3-VL-8B-Instruct
+  Modality: text
+  Format: json
+  Data path: /data/pan/4xin/datasets/RealHiTBench
+  Use Flash Attention: True
+  Multi-GPU Mode: Model Parallel (device_map=auto)
+  Sharding: Shard 3/3
+  Generation Settings (Qwen3-VL Instruct Recommended):
+    Temperature: 0.7
+    Top-p: 0.8
+    Top-k: 20
+    Repetition Penalty: 1.0
+    Presence Penalty: 1.5
+    Max Tokens: 1024
+  Batch size: 1
+
+Loading Qwen3-VL model from /data/pan/4xin/models/Qwen3-VL-8B-Instruct...
+Available GPUs: 1
+Using MODEL PARALLELISM (device_map='auto') - layers distributed across GPUs
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:20<01:01, 20.55s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:41<00:41, 20.95s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:03<00:21, 21.39s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:14<00:00, 17.40s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:14<00:00, 18.74s/it]
+Model loaded with flash_attention_2 attention
+Model distributed across devices: {0}
+Processor configured with OFFICIAL DEFAULT settings (no pixel restrictions)
+  Note: Official defaults allow up to ~16.8M pixels per image
+Successfully loaded F1, EM, ROUGE, SacreBLEU
+Loaded QA file: QA_final_sc_filled.json (3071 queries)
+Shard 2/3: Processing queries 2049-3071 (1023 queries)
+Processing text modality:   0%|          | 0/1023 [00:00<?, ?it/s]Processing text modality:   0%|          | 1/1023 [00:02<35:59,  2.11s/it]
+============================================================
+Query ID: 2049 | Type: Data Analysis | SubType: Summary Analysis
+============================================================
+Prediction: No table data provided for unemployment trends from 2011 to 2015.
+Reference: The table shows a gradual decline in the unemployment rate from 2011 to 2015, with some monthly fluctuations. The rate decreased from around 7% in 2011 to between 6.6% and 7.2% by 2015, indicating a s...
+Metrics: {'GPT_EVAL': 'N/A (no eval_api_key)'}
+Processing Time: 2.11s
+
+============================================================
+Query ID: 2050 | Type: Visualization | SubType: LineChart Generation
+============================================================
+invalid visualization_answer: import pandas as pd 
+ import matplotlib.pyplot as plt 
+ df = pd.read_excel("/data/pan/4xin/datasets/RealHiTBench/tables/labor-table01.xlsx")
+ df = df.iloc[1:, :]  # Skip header row
+ df = df.dropna(subset=["DAILY MORNING DISCUSSION"])  # Remove rows with missing job description
+ df["Job Description"] = df["DAILY MORNING DISCUSSION"].str.strip()
+ df["Status"] = df["Meeting.# 01"].str.strip()
+ df["Expected Time to Complete"] = df["Expected Time to Complete"].str.strip()
+ df["Expected Time to Complete"] = df["Expected Time to Complete"].replace("1 Hour", "1")
+ df["Expected Time to Complete"] = df["Expected Time to Complete"].replace("2 hours", "2")
+ df["Expected Time to Complete"] = df["Expected Time to Complete"].replace("1 day", "1")
+ df["Expected Time to Complete"] = df["Expected Time to Complete"].replace("2 days", "2")
+ df["Expected Time to Complete"] = pd.to_numeric(df["Expected Time to Complete"], errors="coerce")
+ df = df[df["Expected Time to Complete"].notna()]
+ df = df[df["Status"] != "Work in Progress"]
+ df = df.reset_index(drop=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'\s+', ' ', regex=True)
+ df["Job Description"] = df["Job Description"].str.strip()
+ df["Job Description"] = df["Job Description"].str.replace(r'[\n\r]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\t]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x7F-\x9F]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x00-\x09]', '', regex=True)
+ df["Job Description"] = df["Job Description"].str.replace(r'[\x0B-\x1F]', '', regex
+Processing text modality:   0%|          | 2/1023 [03:19<33:05:47, 116.70s/it]Processing text modality:   0%|          | 3/1023 [03:19<18:03:09, 63.72s/it] Processing text modality:   0%|          | 4/1023 [03:20<11:01:18, 38.94s/it]Processing text modality:   0%|          | 5/1023 [03:21<7:06:30, 25.14s/it] Processing text modality:   1%|          | 6/1023 [03:21<4:45:04, 16.82s/it]

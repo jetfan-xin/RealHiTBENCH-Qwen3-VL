@@ -2,7 +2,7 @@
 """
 重新运行缺失的任务: qwen3vl_resize_pic/mix_csv
 
-生成时间: 2026-02-01T12:53:38.148993
+生成时间: 2026-02-03T02:04:02.376719
 任务来源: qwen3vl_resize_pic/mix_csv/results_mix_csv_merged_with_sc.json
 需要重新运行的任务数: 11
   - Incomplete runs: 1
