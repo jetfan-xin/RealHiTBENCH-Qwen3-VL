@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering
+\caption{Performance of Qwen3-VL on RealHiTBench across different input modalities}
+\label{tab:qwen3vl_results}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llccccccccccc}
+\toprule
+\textbf{Model} & \textbf{Input} & \multicolumn{2}{c}{\textbf{Fact Checking}} & \multicolumn{2}{c}{\textbf{Numerical Reasoning}} & \multicolumn{2}{c}{\textbf{Structure Comprehending}} & \multicolumn{3}{c}{\textbf{Data Analysis}} & \multicolumn{2}{c}{\textbf{Visualization}} \\
+ & & \textbf{F1} & \textbf{EM} & \textbf{F1} & \textbf{EM} & \textbf{F1} & \textbf{EM} & \textbf{ROUGE-L} & \textbf{F1} & \textbf{EM} & \textbf{ECR} & \textbf{Pass} \\
+\midrule
+\multirow{11}{*}{\textbf{Qwen3-VL}} & Text (LaTeX) & 57.91 & 48.23 & 29.35 & 12.45 & 46.21 & 31.89 & 38.88 & 38.83 & 11.07 & 27.92 & 12.99 \\
+ & Text (HTML) & 55.52 & 46.13 & 28.14 & 12.19 & 41.37 & 29.01 & 39.93 & 39.87 & 9.72 & 27.92 & 11.69 \\
+ & Text (Markdown) & 52.09 & 41.99 & 27.74 & 11.54 & 42.92 & 28.75 & 37.56 & 37.51 & 9.34 & 35.71 & 12.99 \\
+ & Text (JSON) & 54.25 & 45.36 & 27.27 & 11.85 & 44.55 & 31.81 & 38.86 & 38.77 & 11.07 & 52.63 & 18.42 \\
+ & Text (CSV) & 53.38 & 43.85 & 28.69 & 13.19 & 44.25 & 31.89 & 39.10 & 39.04 & 10.84 & 9.74 & 3.25 \\
+ & Image & 56.38 & 46.43 & 31.74 & 17.51 & 45.49 & 33.84 & 41.24 & 41.20 & 12.80 & 55.19 & 25.97 \\
+ & Mix (LaTeX) & 60.56 & 51.27 & 35.85 & 20.10 & 50.00 & 37.15 & 40.76 & 40.66 & 12.80 & 72.08 & 33.77 \\
+ & Mix (HTML) & 59.01 & 50.33 & 35.66 & 19.97 & 47.77 & 35.37 & 40.05 & 39.96 & 11.46 & 61.04 & 31.82 \\
+ & Mix (Markdown) & 59.76 & 50.94 & 34.65 & 18.29 & 47.14 & 34.86 & 38.83 & 38.78 & 12.11 & 66.23 & 31.17 \\
+ & Mix (JSON) & 60.35 & 51.27 & 34.20 & 18.49 & 47.71 & 34.86 & 40.84 & 40.79 & 13.49 & 62.50 & 29.61 \\
+ & Mix (CSV) & 60.97 & 52.34 & 36.27 & 20.62 & 49.88 & 37.66 & 41.51 & 41.46 & 14.19 & 64.94 & 31.17 \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
